@@ -1,0 +1,9 @@
+# Large data files (keep scripts, not raw data)
+data/*.json
+data/*.csv
+data/edgar/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
