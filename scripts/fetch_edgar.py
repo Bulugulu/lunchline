@@ -27,7 +27,7 @@ HEADERS = {
 }
 
 CANDIDATE_TICKERS = [
-    "DH", "MCHX", "MNDO", "DOMO", "EGAN", "SMSI", "IDN", "LPSN", "VERI", "GVP", "CODA",
+    # Populated after framework-driven screening — see docs/selection-framework.md
 ]
 
 TICKER_TO_CIK = {}

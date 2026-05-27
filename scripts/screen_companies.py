@@ -20,17 +20,7 @@ DATA_DIR = Path(__file__).parent.parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
 CANDIDATE_TICKERS = [
-    "DH",     # Definitive Healthcare
-    "MCHX",   # Marchex
-    "MNDO",   # MIND C.T.I.
-    "DOMO",   # Domo
-    "EGAN",   # eGain
-    "SMSI",   # Smith Micro Software
-    "IDN",    # Intellicheck
-    "LPSN",   # LivePerson
-    "VERI",   # Veritone
-    "GVP",    # GSE Systems
-    "CODA",   # Coda Octopus
+    # Populated after framework-driven screening — see docs/selection-framework.md
 ]
 
 SUMMARY_FIELDS = [
