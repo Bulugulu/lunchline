@@ -8,10 +8,11 @@ This file routes to domain-specific docs. Read the relevant doc before working o
 
 | Task | Doc | What's There |
 |------|-----|-------------|
+| Changelog & status | [CHANGELOG.md](CHANGELOG.md) | What's been done, next steps |
 | Case requirements & email | [docs/case-overview.md](docs/case-overview.md) | Full brief, deliverables, evaluation criteria |
-| Part 1: Public company pitch | [docs/public-company-pitch.md](docs/public-company-pitch.md) | Screening criteria, candidate companies, research status |
+| Part 1: Public company pitch | [docs/public-company-pitch.md](docs/public-company-pitch.md) | Selection framework, scoring, screening filters |
 | Part 2: Market mapping | [docs/market-mapping.md](docs/market-mapping.md) | End market selection, vendor stack, automation map |
-| Company screening research | [docs/screening-research.md](docs/screening-research.md) | Detailed screening results, sources, EV data |
+| Company screening research | [docs/screening-research.md](docs/screening-research.md) | Screening process, data sources, results |
 | Aviv's relevant background | [docs/background-context.md](docs/background-context.md) | Sectors of expertise, competitive advantages |
 | Prompt log (required appendix) | [docs/prompt-log.md](docs/prompt-log.md) | Running log of AI prompts and their outcomes |
 
