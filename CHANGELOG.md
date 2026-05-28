@@ -2,6 +2,58 @@
 
 All notable changes to the Lunchline Partners case study project.
 
+## 2026-05-28 (late late) — Pipeline restructure + framework diagnostic + 3 new candidates
+
+### Calibration runs on CDLX + NRDY
+Ran full v2 pipeline (6 specialists + adversarial + model) on both. Both landed in the same 2.85-2.95 post-adversarial band as EXFY (2.65) and SCOR (2.85). Notable specialist findings:
+- **CDLX (2.85):** Messiness 5.0 (BofA exit, Bridg divestiture, CEO/CFO turnover, $49M goodwill impairment on core platform). Adversarial caught Value Creation specialist's ACPU math error (cited $0.50→$0.65; actual Q1 2026 is $0.10 — 5x off due to deprecated MAU denominator). IR-vs-SEC found BofA non-renewal known April 22, 2025 but undisclosed on calls until Q4. Lender LOOSENED minimum cash covenant $25M → $20M in Q1 2026 (covenant relief signal). Model: blended $1.36 vs $0.74, +22.6% IRR (right at hurdle).
+- **NRDY (2.95):** CEO Cohn purchased ~1.81M shares Dec 3-16, 2025 at $1.20-$1.35 (11 sequential Form 4s). +1,500bps margin expansion, -22% headcount, V3 AI platform shipped March 2026. Adversarial caught the CHGG bear inversion: specialist cited CHGG as positive precedent, but CHGG ran the SAME AI cost reset while revenue collapsed -48% — that's the bear case, not the bull. True runway ~15 months under Hercules covenants, not 2-3 years. Cohn's $2.3M open-market purchase is 3% of his ~$77M paper stake (optics, not conviction). Model: $1.56 vs $0.84, ~+20% IRR.
+
+### Framework discrimination diagnostic (FAST as control)
+Pattern observation: every candidate in our screened pool scored 2.65-2.95 post-adversarial. Possible interpretations: (a) framework is broken, (b) pool is genuinely homogeneous, (c) something else. Ran FAST (Fastenal) through the full pipeline as a control — clean profitable compounder, categorical opposite of Lunchline's mandate.
+
+Result: **the framework discriminates strongly across archetypes; our pool is just self-similar.** FAST per-criterion fingerprint was nearly INVERSE to the messy pool: Messiness 3.0 vs 4.5-5.0; Value Creation 1.5 vs 3.5; Data 5.0 vs 4.5; Contrarianism 1.0 vs 3.5; IR-SEC 4.0 vs 2.5-2.8; PE Realism 1.0 vs 2.0. FAST weighted pre-adversarial: 2.58. The framework correctly placed FAST below every messy candidate without ever seeing CDLX/NRDY/SCOR.
+
+Per-criterion range across the FAST + messy comparison: 1.5-2.5 points. Strong discrimination capability. The 0.30-point within-pool spread was correct — pool homogeneity, not framework failure.
+
+### Findings-mode pipeline (lighter, sharper)
+Built `build_findings_prompts(ticker)` in `scripts/agent_prompts.py` — 3 specialists (Lever Ideation, Mispricing Diagnosis, IR-vs-SEC) + findings-mode adversarial. Each specialist outputs 5 bull + 5 bear findings with filing anchors, NO 1-5 score. Adversarial outputs 3 most material attacks + kill criteria, NO weighted score. Compute is ~50% of calibration mode.
+
+Why drop the criteria we dropped:
+- **Messiness scoring:** every screened candidate scores 4.5-5.0. Constant.
+- **Data Availability scoring:** every public candidate with full SEC filings scores 4.5-5.0. Constant.
+- **PE Realism scoring:** every small-cap messy name scores ~2.0 (LBO math fails). Constant.
+- **Weighted aggregation:** compresses to 2.7 ± 0.15 regardless of inputs.
+
+Why keep what we kept:
+- **Lever Ideation, Mispricing Diagnosis, IR-vs-SEC** generate the specific, anchored, named findings that actually feed pitch construction.
+- **Adversarial** is the most cost-effective layer (per dollar of compute, produces the most pitch-shaping insight — BZFD board capture, THRY ABL collision, CDLX ACPU error, all came from adversarials).
+
+### Three new candidates scored under findings-mode: THRY, BZFD, AENT
+- **THRY (unpitchable):** SEC Division of Enforcement investigation into "Company's previously publicly announced strategic conversion of clients from Digital marketing services solutions platform to its SaaS solutions platform" disclosed in 10-K Item 1A — NEVER mentioned on any of the last 4 earnings calls. Same mechanic mgmt sells on every call. Plus: Seasoned NRR 96%→98%→94%→93% (sub-100% is not a compounder), $253.8M SaaS goodwill being interim-impairment-tested, ABL maturity May 2028 collides with print publication end (Lever #1 + Lever #5 collapse simultaneously). Marketing Center platform "being replaced very soon" — the 30% growth asset bull thesis hangs on is being torn out.
+- **BZFD (unpitchable):** Allen Family Digital closed $120M PIPE May 26, 2026 (TWO DAYS before case due) taking 51% voting + 6 of 9 board seats for $20M real cash ($100M is 5-year PIK note secured only by BZFD shares Allen just bought — circular collateral). Operator-investor thesis structurally evaporated. "BF Island AI-native platform" anchored 4 straight quarters of calls — appears ZERO times in 10-K. Going-concern language, Nasdaq sub-$1 noncompliance, four 8-K amendments to extend a single $5M payment. Q4 2025 and Q1 2026 earnings calls took no Q&A.
+- **AENT (pitchable but bounded):** Paramount (Jan 2025) + MGM (Jan 2026) exclusive licensing real (movie rev +37%, ASP +18.8%, GM +170bps); Handmade by Robots collectibles roll-up working. BUT: adj EBITDA +47% vs OCF -55% (inventory absorbed $24M to support studio model); sector-reclassification variant fails op-margin test (AENT 1.4% op margin → CORE/AVT/ARW commoditized band 0.11-0.38x, not FAST/GWW/MSM value-add band 0.5-1.2x). Walker/Ogilvie founder control 75% eliminates activist catalyst. Bounded 30-50% upside on Class E dilution self-cancellation + clean-audit anniversary, NOT 2-3x.
+
+### Final viable candidate slate
+Four real survivors for pitch tournament: **CDLX, NRDY, SCOR, AENT**. Each has a distinct adversarial fingerprint — pick on story, not on score.
+
+### Bug fix: deal_status acquirer/target weighting
+Fixed false positive that nearly dropped THRY for the wrong reason. THRY's Oct 2024 acquisition of Keap triggered a "definitive merger agreement" hit; the script now suppresses target-side flags when every definitive_hit comes from a file that also contains an acquirer_signal. Regression-safe (LPSN still correctly flagged CLOSED).
+
+### Selection framework restructure (removed Layer 3)
+Updated `docs/public-company-pitch.md` § 2 to replace the 6-criterion weighted scoring framework with an explicit 2-layer filter + fundamental analysis on every survivor. No Layer 3 ranking by sector / EV size / signal density — each of those was either (a) institutional bias the brief explicitly rejects (size floor for "credibility" contradicts the $10-500M EV mandate), (b) anti-correlated with the under-followed goal (high signal density = visible catalyst = other analysts saw it), or (c) better applied at the END as a tiebreaker (sector fit / Aviv's edge zones). The framework now mirrors the actual selection logic we converged on.
+
+Also reframed § 4 "Sector Filters" as **universe-scope** decision (which sectors Finviz pulls from), explicitly NOT a candidate-level filter. Aviv's edge fit moved to post-findings tiebreaker.
+
+### Files modified
+- `scripts/agent_prompts.py`: added `build_findings_prompts`, `lever_findings_prompt`, `mispricing_findings_prompt`, `findings_adversarial_prompt`
+- `scripts/check_deal_status.py`: acquirer/target weighting fix
+- `docs/pipeline.md`: documented two modes + diagnostic narrative
+- `docs/public-company-pitch.md`: Layer 3 removed; Sector Filters reframed as universe scope; Selection Criteria Summary rewritten as ordered process
+- `TODO.md`: synced candidate landscape + funnel state (42 → 11 mechanical out → 10 evaluated → 21 to evaluate)
+
+---
+
 ## 2026-05-28 (late night) — Multi-Agent Scoring Pipeline v2
 
 ### Per-Company Dossier System

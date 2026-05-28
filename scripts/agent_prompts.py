@@ -743,6 +743,272 @@ Each entry must be DATED + MONITORABLE + SOURCED. Not narrative.
 """
 
 
+# ---------------- Findings-mode prompts ----------------
+#
+# Findings-mode is a lighter pipeline that drops the 1-5 per-criterion scoring
+# layer and only asks specialists to produce structured findings (5 bear + 5
+# bull each, with filing anchors). Rationale: the calibration runs (EXFY, SCOR,
+# CDLX, NRDY, FAST) showed that the scoring layer compresses every candidate in
+# our pre-screened pool to 2.65-2.95 and adds little information beyond what
+# the screen + structural filters already encode. The FINDINGS (e.g., CDLX's
+# ACPU math error, NRDY's CHGG bear inversion, SCOR's Cerberus standstill) are
+# what actually feed the pitch — the scores are decoration on top.
+#
+# Findings-mode specialists:
+#   - lever_findings (replaces value_creation): 5 named comp-proven levers + 5 lever blockers
+#   - mispricing_findings (replaces contrarianism): 9-row rule-ins + structural persistence diagnosis
+#   - ir_sec_triangulation (unchanged from full mode — already gap-report style)
+# Plus:
+#   - findings_adversarial: prioritized 3 most material attacks, no score adjustment
+#
+# Skipped vs full mode: messiness, data_availability, pe_realism, model.
+# Rationale: messiness/data are derivable from screen + dossier inspection; PE
+# realism floors at 2 for our pool (constant, not a discriminator); model agent
+# can still be run separately when a pitch advances.
+
+
+def lever_findings_prompt(ctx: dict) -> str:
+    return _shared_header(ctx) + f"""
+
+## YOUR TASK: Lever Ideation — FINDINGS MODE (no numeric score)
+
+Produce a structured findings report on operator-investor value-creation levers
+for {ctx['ticker']}. **You are NOT producing a 1-5 score.** You are producing
+the inputs the pitch needs: specific, named, quantified levers + the honest
+counter-evidence for each.
+
+### Required output structure
+
+```
+LEVER FINDINGS — {ctx['ticker']}
+
+BULL FINDINGS (5 named, comp-proven levers):
+
+1. <Lever name>
+   - Category: <M&A / capital structure / operations / marketing / digital ops>
+   - Mechanism: <how it creates value, 1 sentence>
+   - Quantified impact: <$ EBITDA delta or % margin / multiple delta with math>
+   - Comp-proven by: <Peer ticker, date, what they did, outcome, source URL or filing>
+   - Comp-proven by: <Second peer ticker, date, what they did, outcome>
+   - {ctx['ticker']}-specific applicability: <why this works here, anchored to a filing or transcript quote>
+
+2. <Lever name>
+   ... [same structure]
+
+(continue to 5)
+
+BEAR FINDINGS (5 reasons the levers above may not execute):
+
+1. <Blocker>
+   - Affects which lever(s) above: <numbered>
+   - Evidence: <file path + quoted text>
+   - Implication: <what this does to the value-creation thesis>
+
+(continue to 5)
+
+THEMES (2-3 sentences):
+- The structural pattern across the levers and blockers — is this a "levers
+  exist but governance blocks them" name, a "levers exist and are already being
+  executed by management" name, a "no levers, just hope" name, or something else?
+
+CONFIDENCE: <low | medium | high>
+```
+
+### Discipline
+- Every lever must cite 2 prior comparable transitions (per methodology #3).
+  Use the peer table above as the first place to look; augment with named PE
+  / activist / industry transformations you can defend.
+- Generic "cut SG&A" or "grow international" without a comp does not count.
+- For each bear finding, an explicit filing anchor with quoted text.
+- If you cannot find 5 bull or 5 bear findings, produce fewer but explain why
+  in the THEMES section. Don't pad.
+
+### Primary evidence files
+- `edgar/filings/*_10-K_*.htm` — Item 7 MD&A, Item 1 Business
+- `transcripts/*.txt` — mgmt commentary on strategy, capital allocation
+- `peers/peer_table.json` + `data/research/{ctx['ticker'].lower()}/peer_benchmarks.csv` — peer benchmarks
+- `voting_structure.json` — does governance block any lever?
+- `deal_status.json` — is a process already underway that resolves levers?
+"""
+
+
+def mispricing_findings_prompt(ctx: dict) -> str:
+    return _shared_header(ctx) + f"""
+
+## YOUR TASK: Mispricing Diagnosis — FINDINGS MODE (no numeric score)
+
+Diagnose WHY {ctx['ticker']} is mispriced (if it is) using the methodology's
+9-row checklist, and produce a structured findings report. **You are NOT
+producing a 1-5 score.** You are producing the inputs the pitch needs:
+specific structural reasons mispricing persists + honest counter-evidence.
+
+### 9-row mispricing checklist
+1. Zero/low sell-side coverage
+2. Post-SPAC overhang
+3. Forced selling (index deletion, structural)
+4. Sector misclassification
+5. Recent accounting noise / restatement
+6. Pending event creating uncertainty (lawsuit, deal, going-concern)
+7. Management transition / governance crisis
+8. Working capital cycle anomaly
+9. Capital structure complexity (debt covenants, prefs, warrants)
+
+### Required output structure
+
+```
+MISPRICING DIAGNOSIS — {ctx['ticker']}
+
+9-ROW WALKTHROUGH (each row: RULE-IN / RULE-OUT / INDETERMINATE + evidence):
+
+Row 1 — Sell-side coverage: <status>
+   Evidence: <file/source + specific data>
+
+Row 2 — Post-SPAC overhang: <status>
+   Evidence: ...
+
+(continue all 9 rows)
+
+BULL FINDINGS (the structural reasons mispricing persists — minimum 3):
+
+1. <Reason, anchored to a specific rule-in row>
+   - Evidence: <filing/source + quoted text>
+   - Why this is durable: <what would have to change for it to close>
+
+(continue for each major persistence reason)
+
+BEAR FINDINGS (the reasons consensus may be right — minimum 3):
+
+1. <Reason consensus has it right>
+   - Evidence: <filing/source + quoted text>
+   - What this means for the variant perception: ...
+
+(continue)
+
+VARIANT PERCEPTION (2 sentences max):
+- Market sees: ...
+- We see: ... because ... [structural reason, anchored to rule-in row]
+
+THEMES (2-3 sentences):
+- Is this "consensus is right, no variant available," "consensus is right but
+  structural mispricing creates time arbitrage," "consensus is wrong on a
+  measurable fact," or "consensus is wrong on a forward-looking judgment"?
+
+CONFIDENCE: <low | medium | high>
+```
+
+### Discipline
+- Don't manufacture rule-ins. INDETERMINATE is a valid answer for any row.
+- Variant perception cannot be "company is cheap on EV/Rev" — that's a price
+  observation, not a variant view. It must explain WHY the price is wrong.
+- If the variant perception just restates the company's own IR narrative,
+  flag that as a bear finding ("our variant perception is consensus").
+
+### Primary evidence files
+- `analyst.json` — coverage count, estimate dispersion, target distribution
+- `edgar/filings/*_10-K_*.htm` — Item 1A Risk Factors
+- `edgar/filings/*_DEF_14A_*.htm` — proxy (governance, holdings)
+- `edgar/filings/*_8-K_*.htm` — recent material events
+- `transcripts/*.txt` — mgmt commentary on perception gaps
+- `news.json` — catalyst flow
+- `seeking_alpha.json` — retail/research density (obviousness proxy)
+"""
+
+
+def findings_adversarial_prompt(ctx: dict, specialist_summaries: str = "") -> str:
+    return _shared_header(ctx) + f"""
+
+## YOUR TASK: Adversarial Review — FINDINGS MODE (no score adjustment)
+
+You have read the three specialist findings reports (Lever Ideation, Mispricing
+Diagnosis, IR-vs-SEC Triangulation). Your job: identify the **3 most material
+attacks** against the pitch as it stands. Prioritized. Each attack should be
+specific enough to change the pitch's structure if true.
+
+You are NOT producing a 1-5 score. The full-pipeline adversarial role of
+compressing everyone to ~2.7 is exactly what we're trying to avoid.
+
+### Specialist findings to attack
+{specialist_summaries if specialist_summaries else "(paste the 3 findings reports here when dispatching)"}
+
+### Required output structure
+
+```
+ADVERSARIAL REVIEW — {ctx['ticker']}
+
+THE 3 MOST MATERIAL ATTACKS (ordered by impact on the pitch):
+
+Attack 1: <Specific claim being attacked from which specialist>
+- The attack: <what's wrong, in 1-2 sentences>
+- Evidence (filing/transcript + quoted text): ...
+- Impact on pitch: <does this kill a lever? invert a bull into a bear? change the variant perception? require a kill criterion?>
+- Severity: <thesis-breaking | requires-restructure | requires-disclosure>
+
+Attack 2: ...
+Attack 3: ...
+
+CROSS-CUTTING FRAME APPLIED (pick the single most useful frame from these):
+- "Value trap" frame
+- "Structurally compressing economics" frame
+- "Consensus is right" frame
+- "Look-through to peer outcome" frame
+- "Operator's curse" frame (lever already executed)
+- "Friendly transaction trap" frame (controller will capture the premium)
+- "Capitalized expense inflating cash earnings" frame
+- "IR/SEC narrative gap" frame
+- "Catalyst is illusory" frame
+
+Application to {ctx['ticker']}: ...
+
+WHAT WOULD KILL THE THESIS (2 specific, dated, monitorable thresholds):
+1. <Metric / threshold / data source / next data point>
+2. ...
+
+WHAT WOULD UPGRADE THE THESIS (1-2 specific, dated thresholds):
+1. ...
+
+FINAL CALL:
+- Strongest single attack (one sentence): ...
+- Most pitchable variant after attacks (one sentence): ...
+- Confidence: <low | medium | high>
+```
+
+### Discipline
+- Attacks must be SPECIFIC, not generic. "Edtech is hard" is not an attack;
+  "DUOL has $7B market cap and 72.7% GM at scale, NRDY has $91M and 38% GM
+  with -11.9% op margin — these are categorically different unit economics
+  and the peer comp invalidates the lever" IS an attack.
+- Every attack needs a filing/transcript anchor with quoted text.
+- Be willing to AGREE with a specialist if they're right. The job is finding
+  errors and weak claims, not blanket attacking.
+- Do NOT compute a weighted score. That's what we're getting rid of.
+"""
+
+
+def build_findings_prompts(ticker: str, specialist_summaries: str = "") -> dict:
+    """Build the lighter findings-mode prompts for a candidate ticker.
+
+    Returns 4 prompts: lever_findings, mispricing_findings,
+    ir_sec_triangulation (reused from full mode), findings_adversarial.
+
+    Use this instead of build_prompts() for candidates after the framework has
+    been calibrated. The 6-criterion scoring ceremony is dropped — only the
+    evidence-generating layers remain.
+
+    Args:
+        ticker: e.g. "TTGT"
+        specialist_summaries: paste the 3 findings reports here for the
+            adversarial prompt. Leave empty when dispatching specialists.
+    """
+    ctx = _context_block(ticker)
+    return {
+        "lever_findings": lever_findings_prompt(ctx),
+        "mispricing_findings": mispricing_findings_prompt(ctx),
+        "ir_sec_triangulation": ir_sec_triangulation_prompt(ctx),
+        "findings_adversarial": findings_adversarial_prompt(ctx, specialist_summaries),
+        "_context": ctx,
+    }
+
+
 def build_prompts(ticker: str, specialist_summaries: str = "", scoring_summary: str = "") -> dict:
     """Build all 8 agent prompts for a candidate ticker.
 

@@ -73,25 +73,36 @@ A name is "obvious" in micro/nano-cap if:
 
 ---
 
-### 2. Candidate Scoring Framework
+### 2. Candidate Selection Process
 
-**Weighted criteria for selecting the ideal company (100 points total):**
+The original version of this section was a 6-criterion weighted scoring framework (Situation Complexity 20%, Value Creation 25%, Sector Fit 15%, Data 15%, Contrarianism 15%, PE Realism 10%). We ran 8 candidates through it (EXFY, SCOR, CDLX, NRDY, THRY, BZFD, AENT, plus FAST as a control) and discovered that every candidate from our pre-screened pool landed in a 2.65-2.95 band post-adversarial — the scoring layer compressed to noise *within* the pool, even though it discriminated sharply *across* archetypes (FAST 2.58 with inverse fingerprint). See `CHANGELOG.md` 2026-05-28 (late late) for the diagnostic.
 
-| Criterion | Weight | Scoring Anchors (1-5 scale) |
-|---|---|---|
-| **Situation Complexity / Messiness** | 20% | 1 = Clean story, no drama. 3 = One clear issue (e.g., margin pressure). 5 = 2-3 overlapping issues creating analytical richness (strategic review + management transition + model pivot) |
-| **Credible Value Creation Angle** | 25% | 1 = No obvious levers. 3 = Generic cost cuts possible. 5 = Specific, named operational + commercial + capital structure levers that an operator could execute within 2-3 years |
-| **Sector Expertise Match** | 15% | 1 = Zero relevant experience. 3 = Moderate knowledge, can be credible. 5 = Deep domain expertise (gaming, AI/ML, SaaS, consumer) allows original product/market insight no generic analyst would have |
-| **Data Availability / Modelability** | 15% | 1 = Minimal public filings, no transcripts. 3 = Standard 10-K/10-Q available. 5 = Rich SEC filings + earnings transcripts + segment data + insider transaction data + peer comps readily available |
-| **Thesis Contrarianism** | 15% | 1 = Consensus agrees it's cheap (already priced in). 3 = Some bears, you disagree on one point. 5 = Market consensus is strongly negative; your thesis requires seeing something the market demonstrably misunderstands |
-| **PE/Search Fund Realism** | 10% | 1 = No PE buyer would touch this (wrong industry, wrong structure). 3 = Conceivable take-private. 5 = Exactly the type of business a search fund or PE sponsor would acquire (recurring revenue, B2B, fragmented market, operational upside) |
+**Replaced with a 2-layer filter (no Layer 3 ranking):**
 
-**Score calculation:** Sum of (criterion score x weight) across all 6 dimensions. Maximum = 5.0. Minimum viable candidate = 3.0.
+**Layer 1 — Mechanical exclusion.** Reject candidates that violate the framework on their face:
+- Foreign issuer (20-F regime, different disclosure depth)
+- Operating margin < -100% (zombie cash burn, not a value play)
+- EV/Revenue > 3x (not value-priced; framework demands < 1.5x as the messiness signal)
 
-**Tiebreaker criteria (when scores are close):**
-1. Catalyst clarity — does a specific, dated event force value realization within 12 months?
-2. Asymmetry of risk/reward — is downside limited (cash floor, asset backing) while upside is 2-3x?
-3. Narrative coherence — can the full pitch be summarized in one compelling sentence?
+**Layer 2 — Structural exclusion.** Reject candidates where governance or deal status forecloses the operator-investor thesis:
+- `check_voting_structure.py` → reject DEAL_BREAKER (founder super-voting majority blocks any hostile catalyst and captures all premium in friendly transactions)
+- `check_deal_status.py` → reject CLOSED or DEFINITIVE target-side
+- Keep MEDIUM / HIGH / EXPLORING but flag in evaluation
+
+**No Layer 3 — fundamentals on all structural survivors.** We deliberately do NOT rank survivors by sector fit, signal density, or EV size before fundamental analysis:
+- **Sector fit** is applied at the END as a tiebreaker. Filtering on it up-front means we'd reject great non-edge-zone ideas before evaluating them.
+- **Signal density** (number of visible 8-K events, news catalysts) directly contradicts the "under-followed" goal. High signal density = visible catalyst = other analysts already saw it.
+- **EV size floor** (e.g., "Rev > $40M for institutional credibility") directly contradicts the case's $10-500M EV mandate, which explicitly includes nano-cap.
+
+Instead, every Layer-2 survivor gets the findings-mode pipeline (`build_findings_prompts`). The selection emerges from the *findings*: which candidate has the sharpest variant perception, the most pitchable bear case absorption, the most concrete catalyst? That's a fundamental-analysis judgment after evidence is in, not a screening shortcut.
+
+**Tiebreaker order (applied AFTER findings are complete):**
+1. **Aviv's edge fit** — primary research is realistic in gaming/AI/SaaS/data/consumer; not in industries he can't add operator value to
+2. **Catalyst clarity** — does a specific, dated event force value realization within 12 months?
+3. **Asymmetry of risk/reward** — is downside limited (cash floor, asset backing) while upside is 2-3x?
+4. **Narrative coherence** — can the full pitch be summarized in one compelling sentence?
+
+**Calibration scoring is still used during pipeline calibration** (see `pipeline.md` § Calibration mode). It runs ONCE per archetype to teach the system what good/bad looks like in this pool. For routine candidate evaluation, the lighter findings-mode pipeline is the standard.
 
 ---
 
@@ -165,16 +176,20 @@ Lunchline's own philosophy ("be willing to get your hands dirty," "constantly re
 | Insider buying | Net insider purchases in trailing 6 months | Contrarian signal from people with information |
 | Short interest | > 10% of float | Market betting against; creates squeeze potential if thesis is right |
 
-#### Sector Filters (Aviv's Edge Zones)
+#### Sector Filters — initial universe scope, not candidate-level filtering
 
-| Include (Strong Expertise) | Include (Moderate) | Exclude |
-|---|---|---|
-| Application Software | EdTech | Oil & Gas |
-| SaaS / Cloud | Data Analytics | Mining / Materials |
-| AI / Machine Learning | Digital Media | Biotech / Pharma |
-| Gaming / Interactive Entertainment | Marketing Technology | Banks / Insurance |
-| Consumer Internet / Mobile | Enterprise Software (broad) | REITs |
-| Conversational AI / CX | Vertical SaaS (non-healthcare) | Utilities |
+The Finviz pull is scoped to Tech + Communication Services sectors. This is a **universe-level** scope decision (which sectors to pull from), not a candidate-level filter (which we deliberately do NOT apply per Layer 3 rationale above). Within the included sectors, we do not further discriminate by Aviv's edge fit during selection — that's a tiebreaker applied at the end.
+
+| Universe Includes | Universe Excludes |
+|---|---|
+| Application Software, SaaS/Cloud, AI/ML | Oil & Gas |
+| Gaming / Interactive Entertainment | Mining / Materials |
+| Internet Content & Information | Biotech / Pharma |
+| Advertising Agencies / Marketing Tech | Banks / Insurance |
+| Publishing, Entertainment | REITs, Utilities |
+| EdTech, Data Analytics | Semiconductors / Hardware (already excluded by industry filter) |
+
+**Aviv's edge zones for the post-findings tiebreaker** (NOT applied during filtering): gaming, AI/ML, SaaS, consumer software, data/analytics, enterprise sales. Where Aviv can do primary research credibly, the pitch is stronger; where he can't, it falls back to public-data-only analysis. This matters at the tiebreaker stage, not the screening stage.
 
 #### Data Availability Requirements
 
@@ -198,15 +213,29 @@ Lunchline's own philosophy ("be willing to get your hands dirty," "constantly re
 
 ---
 
-## Selection Criteria (Summary)
+## Selection Process (Summary)
+
+**Hard requirements (Layer 1 — case mandate + framework hygiene):**
 1. NYSE or Nasdaq listed
-2. Enterprise Value $10M-$500M (prefer $30M-$250M sweet spot)
-3. Messy, mispriced, or under-followed (see framework above for precise definitions)
-4. Sector where Aviv has competitive advantage (gaming, AI/ML, SaaS, consumer software, data/analytics)
-5. Enough public data to build a credible 10-12 page deck with financial model
-6. Clear value creation levers an operator-investor could pull
-7. Contrarian thesis available (market consensus is wrong for identifiable reason)
-8. Catalyst within 12 months that forces value recognition
+2. Enterprise Value $10M-$500M (per case brief; no internal sweet-spot bias)
+3. US-headquartered (US filing regime)
+4. Operating margin > -100% (zombie cash burn excluded)
+5. EV/Revenue < 3x (value-priced)
+6. Universe scope: Tech + Communication Services sectors (where Aviv can credibly think about businesses)
+
+**Structural exclusion (Layer 2 — automated filters):**
+7. `check_voting_structure.py` ≠ DEAL_BREAKER (no founder super-voting majority)
+8. `check_deal_status.py` ≠ CLOSED or DEFINITIVE target-side
+
+**Evaluation (no Layer 3 filtering):**
+9. Run findings-mode pipeline on every Layer-2 survivor — lever findings + mispricing diagnosis + IR-vs-SEC triangulation + adversarial review
+10. Selection emerges from the *findings*: variant perception clarity, bear case absorption, catalyst concreteness — fundamental analysis, not screening shortcut
+
+**Tiebreaker (only if multiple candidates tie on fundamentals):**
+11. Aviv's edge fit (primary research is realistic in gaming/AI/SaaS/data/consumer)
+12. Catalyst within 12 months that forces value recognition
+13. Asymmetry of risk/reward (cash floor, 2-3x upside)
+14. Narrative coherence (one-sentence thesis)
 
 ## Top Candidates
 

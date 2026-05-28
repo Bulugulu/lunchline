@@ -254,10 +254,28 @@ def analyze(ticker: str):
     # and few/no other definitive signals, it might just be that THIS company
     # is acquiring others (not being acquired). Heuristic: if acquirer signals
     # are >=3x other definitive hits, treat as acquirer-mode and downgrade.
+    #
+    # Stronger check: if EVERY definitive_hit comes from a file that also has an
+    # acquirer_signal, the "definitive merger agreement" language is describing
+    # an acquisition the subject company is making — not one targeting it.
+    # This caught THRY's Oct-2024 Keap acquisition being misflagged as a deal.
+    definitive_files = {h["file"] for h in findings["signals"]["definitive_hits"]}
+    acquirer_files = {h["file"] for h in findings["signals"]["acquirer_signals"]}
+    definitive_in_acquirer_files = (
+        definitive_files and definitive_files.issubset(acquirer_files)
+    )
+
     if has_acquirer_signal and not has_definitive:
         status = "NONE_ACQUIRER_MODE"
         risk = "LOW"
         reasoning = ["Company is acquiring others, not being acquired. No target-of-deal signals."]
+    elif definitive_in_acquirer_files:
+        status = "NONE_ACQUIRER_MODE"
+        risk = "LOW"
+        reasoning = [
+            f"All {len(definitive_files)} definitive deal mention(s) co-occur in 8-Ks where the "
+            "subject company is the acquirer (not the target). Treating as acquirer-mode."
+        ]
     elif has_closed:
         status = "CLOSED"
         risk = "DEAL_BREAKER"
