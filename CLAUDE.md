@@ -8,13 +8,15 @@ This file routes to domain-specific docs. Read the relevant doc before working o
 
 | Task | Doc | What's There |
 |------|-----|-------------|
-| Changelog & status | [CHANGELOG.md](CHANGELOG.md) | What's been done, next steps |
+| Open work items (next steps) | [TODO.md](TODO.md) | Active queue: pitch tournament, build items, blocking decisions |
+| Changelog & status | [CHANGELOG.md](CHANGELOG.md) | What's been done; per-session notes |
 | Case requirements & email | [docs/case-overview.md](docs/case-overview.md) | Full brief, deliverables, evaluation criteria |
-| Part 1: Public company pitch | [docs/public-company-pitch.md](docs/public-company-pitch.md) | Selection framework, scoring, screening filters, deliverables checklist |
+| Part 1: Public company pitch | [docs/public-company-pitch.md](docs/public-company-pitch.md) | Selection framework, scoring, screening filters |
+| Per-candidate scoring pipeline | [docs/pipeline.md](docs/pipeline.md) | v2 multi-agent pipeline: 6-step script sequence + supporting tools |
 | Analytical methodology | [docs/methodology.md](docs/methodology.md) | Six lessons from exemplar decks; sequenced workstreams; AI usage map |
 | Deck structure & design | [docs/deck-structure.md](docs/deck-structure.md) | Slide scaffolds; locked design system (Direction 1); exemplar sources |
 | Part 2: Market mapping | [docs/market-mapping.md](docs/market-mapping.md) | End market selection, vendor stack, automation map |
-| Company screening research | [docs/screening-research.md](docs/screening-research.md) | Screening process, data sources, results |
+| Data sources for screening | [docs/screening-research.md](docs/screening-research.md) | yfinance / EDGAR / Finviz reference table |
 | Aviv's relevant background | [docs/background-context.md](docs/background-context.md) | Sectors of expertise, competitive advantages |
 | Prompt log (required appendix) | [docs/prompt-log.md](docs/prompt-log.md) | Running log of AI prompts and their outcomes |
 

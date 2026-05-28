@@ -208,77 +208,19 @@ Lunchline's own philosophy ("be willing to get your hands dirty," "constantly re
 7. Contrarian thesis available (market consensus is wrong for identifiable reason)
 8. Catalyst within 12 months that forces value recognition
 
-## Top Candidates — Scored Against Framework
+## Top Candidates
 
-See [screening-research.md](screening-research.md) for full details.
+The pre-framework manual scoring (DOMO 4.35, LPSN 4.25, DH 4.00, MCHX 3.70, EGAN 3.00, MNDO 2.20) is **superseded** and not reproduced here. Several of those candidates have since failed structural filters (LPSN closed in SoundHound deal; DOMO/BBGI/SKLZ founder-controlled DEAL_BREAKERs) or scored differently under the v2 multi-agent pipeline (EXFY 2.65, SCOR 2.85 — both below 3.0 viability threshold).
 
-### Scoring Key
-Each criterion scored 1-5. Weighted score = sum of (score x weight).
+**Current candidate slate and pitch tournament queue:** see [TODO.md § Pitch Tournament](../TODO.md).
 
-| Criterion | Weight |
-|---|---|
-| Situation Complexity / Messiness | 20% |
-| Credible Value Creation Angle | 25% |
-| Sector Expertise Match | 15% |
-| Data Availability / Modelability | 15% |
-| Thesis Contrarianism | 15% |
-| PE/Search Fund Realism | 10% |
-
-### Candidate Scores
-
-| Company | Ticker | EV | Messy (20%) | Value Creation (25%) | Sector Fit (15%) | Data (15%) | Contrarian (15%) | PE Realism (10%) | **Weighted Score** |
-|---------|--------|-----|---|---|---|---|---|---|---|
-| Domo | DOMO | ~$250M | 5 (strategic review + margin issues + competitive pressure) | 4 (product rationalization, AI pivot, cost structure) | 5 (BI/analytics, direct domain) | 5 (public transcripts, segment data, peer comps) | 4 (market says "dead," thesis = platform has value) | 3 (larger EV, but take-private candidate) | **4.35** |
-| LivePerson | LPSN | ~$319M EV | 5 (debt overhang + CEO departure + revenue decline + once $4B) | 4 (product focus, cost cuts, debt restructuring) | 5 (conversational AI, direct domain) | 5 (extensive filings, transcripts, analyst coverage history) | 5 (maximum negativity, contrarian if you believe core AI has value) | 2 (debt makes PE complex) | **4.25** |
-| Definitive Healthcare | DH | ~$100-150M | 4 (revenue/EV disconnect + growth deceleration + PE overhang) | 4 (GTM optimization, product bundling, vertical expansion) | 3 (healthcare data - moderate knowledge, not core) | 5 (very detailed filings, was recently larger-cap) | 4 (market sees declining growth, but platform stickiness may be undervalued) | 4 (classic PE target: recurring revenue B2B SaaS) | **4.00** |
-| Marchex | MCHX | ~$70M | 3 (priced as legacy, slow pivot to AI) | 4 (product repositioning, AI upsell, channel expansion) | 5 (AI analytics, conversational data, direct domain) | 3 (smaller company, less rich filings) | 3 (some bears, but not extreme consensus negativity) | 4 (right size, B2B SaaS, recurring) | **3.70** |
-| eGain | EGAN | ~$115M | 2 (profitable, cash-rich, relatively clean) | 3 (limited operational improvement needed - already profitable) | 4 (AI/customer engagement SaaS) | 4 (good filings, profitable history) | 2 (not strongly contrarian - market fairly values) | 4 (profitable SaaS, right size) | **3.00** |
-| MIND C.T.I. | MNDO | ~$25M | 2 (cheap but not complex situation) | 2 (limited levers - already efficient, small TAM) | 2 (telecom billing - not core domain) | 2 (Israeli company, limited US filings depth) | 2 (cheap = obvious to value screens) | 3 (right size but wrong geography/market) | **2.20** |
-
-### Preliminary Ranking
-
-1. **DOMO (4.35)** — Maximum analytical richness. Active strategic review = hard catalyst. BI/AI platform = deep sector knowledge. Challenge: higher EV, competitive positioning vs. Tableau/Power BI needs nuanced argument.
-
-2. **LPSN (4.25)** — Most contrarian. Maximum messiness. Fallen angel narrative is compelling. Challenge: debt load makes PE angle complex; need to convince reader the core AI has standalone value.
-
-3. **DH (4.00)** — Cleanest PE target profile. Recurring revenue SaaS with operational improvement levers. Challenge: healthcare data is not Aviv's core expertise; need to demonstrate credible product insight.
-
-4. **MCHX (3.70)** — Strong sector fit, manageable complexity. Good PE target size. Challenge: less analytically rich situation; may read as less ambitious a pick.
-
-5. **EGAN (3.00)** — Too clean. Profitable and cash-rich = less room to show value creation thinking. Would make a weaker case study.
-
-6. **MNDO (2.20)** — Too simple and too small. Limited levers, limited data, limited sector relevance.
+**v2 scoring pipeline:** see [pipeline.md](pipeline.md).
 
 ## Selected Company
-**TBD** — awaiting Aviv's input on preferred candidate
+**TBD** — pending pitch tournament outcome
 
 ## Deliverables
 
-### Analytical Workstreams
-Per [methodology.md](methodology.md), the analytical sequence after company selection is:
-
-- [ ] **Company selection** (narrow 45 ultra-sweet-spot → top 5-8 → pick 1)
-- [ ] **Mispricing diagnosis** — why-it-persists checklist with evidence (1-2 days)
-- [ ] **Consensus baseline dossier** — Street numbers + peer multiples + retail narrative + earnings Q&A themes (1 day)
-- [ ] **Operating model v0** — Excel: historicals + 3-yr forward, lever-driven, scenario-capable (3-5 days)
-- [ ] **Comparable transitions library** — 3-5 prior comps per proposed lever, quantified and sourced (2-3 days)
-- [ ] **Primary research outreach** — 5-10 calls / customer refs / ethnographic finds (1-2 wks, parallel from week 1)
-- [ ] **IR-vs-SEC triangulation** — documented claim gaps from last 4 transcripts vs. 10-K (0.5 day)
-- [ ] **Thesis synthesis + 1-paragraph compression test** — compressed thesis + thesis monitor sheet + kill criteria (1 day)
-
-### Final Deck Artifacts
-Per [deck-structure.md](deck-structure.md):
-
-- [ ] Cover slide
-- [ ] Business Overview (2-3 slides)
-- [ ] End Market Overview (1 slide)
-- [ ] Competitive Positioning (1 slide)
-- [ ] Investment Thesis (1-2 slides)
-- [ ] Investment Risks (1 slide)
-- [ ] Value Creation Plan (2-3 slides)
-- [ ] Financial Review (1-2 slides)
-- [ ] AI disclosure appendix (1 slide)
-- [ ] Supporting financial/returns model (Excel)
-- [ ] HTML → python-pptx export pipeline
-
-**Critical path:** Selection → Mispricing diagnosis → Consensus dossier → Operating model → Thesis synthesis → Deck. Primary research, comp library, and IR-vs-SEC triangulation run parallel.
+- **Analytical workstreams** (post-selection): see [methodology.md § Sequenced Analytical Workstream](methodology.md).
+- **Deck artifacts** (slide-by-slide scaffolds): see [deck-structure.md](deck-structure.md).
+- **Critical path:** Selection → Mispricing diagnosis → Consensus dossier → Operating model → Thesis synthesis → Deck. Primary research, comp library, and IR-vs-SEC triangulation run parallel.
