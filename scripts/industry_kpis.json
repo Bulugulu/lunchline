@@ -1,0 +1,229 @@
+{
+  "_doc": "Maps yfinance industry strings to canonical KPIs that scoring agents should look for in the dossier. Used by agent_prompts.py to inject industry-specific guidance into specialist prompts.",
+  "_last_updated": "2026-05-28",
+
+  "Software - Application": {
+    "category": "SaaS",
+    "kpis": [
+      "Net Revenue Retention (NRR) / Net Dollar Retention",
+      "Gross Logo Retention",
+      "Annual Recurring Revenue (ARR) / billings",
+      "Rule of 40 (revenue growth % + FCF margin %)",
+      "CAC payback period (months)",
+      "Magic Number (net new ARR / S&M spend)",
+      "ARR per employee",
+      "Gross margin (target 70-80% for SaaS)",
+      "Customer count and ARPU",
+      "Mix: SMB vs mid-market vs enterprise"
+    ],
+    "peer_benchmarks": {
+      "gross_margin": "70-80%",
+      "gross_logo_retention": "85-95%",
+      "net_dollar_retention": "100-120%",
+      "rule_of_40": "30-40 acceptable, 40+ strong"
+    }
+  },
+
+  "Software - Infrastructure": {
+    "category": "SaaS",
+    "kpis": [
+      "Net Revenue Retention (NRR)",
+      "ARR / billings growth",
+      "Rule of 40",
+      "Gross margin (target 65-75% — lower than apps due to compute)",
+      "CAC payback period",
+      "Land-and-expand metric (% growth from existing accounts)",
+      "Free-to-paid conversion rate (if PLG model)",
+      "Customer count and ARPU"
+    ],
+    "peer_benchmarks": {
+      "gross_margin": "65-75%",
+      "net_dollar_retention": "110-130%",
+      "rule_of_40": "30-40 acceptable"
+    }
+  },
+
+  "Internet Content & Information": {
+    "category": "Internet/Media/Marketplace",
+    "kpis": [
+      "DAU/MAU and DAU/MAU ratio (engagement)",
+      "ARPU by region and user type",
+      "Revenue mix: ads vs subscription vs transaction",
+      "Take rate (if marketplace)",
+      "Gross merchandise value (GMV) if applicable",
+      "User acquisition cost vs LTV",
+      "Time spent per user / session length",
+      "Content cost as % of revenue"
+    ],
+    "peer_benchmarks": {
+      "gross_margin": "varies widely 30-80%",
+      "user_growth": "negative or low for mature; >20% for emerging"
+    }
+  },
+
+  "Advertising Agencies": {
+    "category": "Adtech / Marketing",
+    "kpis": [
+      "Net revenue retention by advertiser",
+      "Take rate (publisher revenue retained)",
+      "Customer concentration (% from top 10)",
+      "Revenue per impression / RPM",
+      "Sales cycle length",
+      "Margin trend (programmatic compresses, premium expands)",
+      "Mix: programmatic vs direct"
+    ],
+    "peer_benchmarks": {
+      "take_rate": "10-30% typical for SSPs/DSPs",
+      "customer_concentration": "<20% top-10 ideal"
+    }
+  },
+
+  "Electronic Gaming & Multimedia": {
+    "category": "Gaming",
+    "kpis": [
+      "DAU / MAU and stickiness ratio",
+      "ARPU / ARPDAU (average revenue per daily active user)",
+      "Player conversion rate (free to paying)",
+      "Lifetime value (LTV) of paying users",
+      "Live service / live-ops revenue % of total",
+      "Cohort retention curves",
+      "User acquisition cost",
+      "Pipeline visibility (next 2 game launches)"
+    ],
+    "peer_benchmarks": {
+      "gross_margin": "60-75% for digital-first publishers",
+      "stickiness": "DAU/MAU >0.20 strong, >0.30 exceptional"
+    }
+  },
+
+  "Information Technology Services": {
+    "category": "Services",
+    "kpis": [
+      "Bill rate / utilization rate",
+      "Customer concentration",
+      "Multi-year contracts as % of revenue",
+      "Onshore vs nearshore vs offshore mix",
+      "Employee count and revenue per employee",
+      "Gross margin (services typically 25-40%)",
+      "Backlog growth"
+    ],
+    "peer_benchmarks": {
+      "gross_margin": "25-40%",
+      "utilization": "75-85% target",
+      "revenue_per_employee": "$150-300K typical"
+    }
+  },
+
+  "Broadcasting": {
+    "category": "Media",
+    "kpis": [
+      "Audience metrics (households reached, demos)",
+      "Ad load (minutes per hour)",
+      "Subscriber count and ARPU (if cable/digital)",
+      "Retrans / carriage fees as % of revenue",
+      "Cost per programming hour",
+      "Cord-cutting impact on subscriber trajectory"
+    ],
+    "peer_benchmarks": {
+      "gross_margin": "30-50%"
+    }
+  },
+
+  "Entertainment": {
+    "category": "Media/Content",
+    "kpis": [
+      "Subscriber count and net adds",
+      "ARPU by region",
+      "Churn rate",
+      "Content amortization / cost of content",
+      "Engagement (hours watched, %tile)",
+      "Licensing vs original mix"
+    ],
+    "peer_benchmarks": {
+      "churn_monthly": "2-5% typical for SVOD",
+      "content_cost_pct": "40-60% of revenue"
+    }
+  },
+
+  "Publishing": {
+    "category": "Media/Content",
+    "kpis": [
+      "Subscriber/membership count",
+      "Subscription vs advertising mix",
+      "Print vs digital revenue mix",
+      "Ad rate cards / CPMs",
+      "Cost per subscriber acquired"
+    ],
+    "peer_benchmarks": {}
+  },
+
+  "Telecom Services": {
+    "category": "Telecom / Communications",
+    "kpis": [
+      "ARPU",
+      "Subscriber count and net adds",
+      "Churn rate",
+      "Capex as % of revenue",
+      "EBITDA margin (target 30-40%)",
+      "Spectrum / asset footprint"
+    ],
+    "peer_benchmarks": {
+      "ebitda_margin": "30-40%"
+    }
+  },
+
+  "Scientific & Technical Instruments": {
+    "category": "Industrial Tech",
+    "kpis": [
+      "Recurring revenue (consumables, service) % of total",
+      "Installed base growth",
+      "Average system price",
+      "Gross margin (instruments 40-50%, consumables 60-70%)",
+      "R&D as % of revenue"
+    ],
+    "peer_benchmarks": {
+      "recurring_revenue_pct": ">40% strong for instruments"
+    }
+  },
+
+  "Education & Training Services": {
+    "category": "EdTech / Services",
+    "kpis": [
+      "Student / learner count",
+      "Course completion rate",
+      "ARPU per learner",
+      "Enrollment growth",
+      "Marketing spend per enrollment",
+      "Recurring vs one-time mix"
+    ],
+    "peer_benchmarks": {}
+  },
+
+  "Consulting Services": {
+    "category": "Services",
+    "kpis": [
+      "Utilization rate",
+      "Bill rate",
+      "Customer concentration",
+      "Multi-year contracts %",
+      "Revenue per consultant"
+    ],
+    "peer_benchmarks": {
+      "utilization": "70-85%"
+    }
+  },
+
+  "_default": {
+    "category": "Generic",
+    "kpis": [
+      "Revenue growth (YoY)",
+      "Gross margin trend",
+      "Operating margin / EBITDA margin",
+      "FCF margin and FCF conversion",
+      "Customer count / customer concentration",
+      "Recurring vs non-recurring revenue mix",
+      "Employee count and revenue per employee"
+    ],
+    "peer_benchmarks": {}
+  }
+}

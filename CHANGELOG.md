@@ -2,6 +2,95 @@
 
 All notable changes to the Lunchline Partners case study project.
 
+## 2026-05-28 (late night) — Multi-Agent Scoring Pipeline v2
+
+### Per-Company Dossier System
+Built end-to-end dossier builder (`scripts/build_dossier.py`) that produces a full research package in ~25 seconds per ticker. Pulls and consolidates:
+
+- **EDGAR filings** (extended `fetch_edgar.py`) — 10-K, 10-Q, 8-K, DEF 14A, Form 4 with content download (not just metadata). Per-form download caps so 30 Form 4s don't blow up disk.
+- **Earnings call transcripts** (`fetch_transcripts.py`) — scrapes roic.ai for last 4-8 quarters. Heuristic to skip nav/listing text and keep transcript body only.
+- **News headlines** (`fetch_news.py`) — yfinance `.news` attribute, 10 recent items normalized to a consistent schema.
+- **Analyst data** (`fetch_analyst.py`) — recommendations rolling, upgrade/downgrade history (48-event depth on EXFY), price target distribution, earnings/revenue estimates.
+- **Seeking Alpha coverage** (`fetch_seeking_alpha.py`) — DuckDuckGo `site:seekingalpha.com TICKER` search to count articles for the "obviousness" check. Flaky but useful as a soft signal.
+- **yfinance snapshot** (166 fields) + human-readable `summary.md` for quick scan.
+
+Output structure: `data/dossiers/<ticker>/` with `summary.md`, `edgar/`, `transcripts/`, `news.json`, `analyst.json`, `seeking_alpha.json`, `yfinance_info.json`.
+
+### Voting Structure Check (`scripts/check_voting_structure.py`)
+Surfaces dual/triple-class share structures, voting trusts, and controlled-company status from DEF 14A + 10-K cap stock notes BEFORE deep scoring. Risk classifications: LOW / MEDIUM / HIGH / DEAL_BREAKER.
+
+Discovered an extremely common pattern in our 7/7 candidate pool — **founder-controlled super-voting structures**:
+- EXFY: 84.7% Voting Trust with 50/10-vote LT shares
+- DOMO: 95.9% via 40-vote Class A
+- SKLZ: 87.0% via 20-vote Class B
+- BBGI: 92.0% via 10-vote Class B (spelled "ten" in proxy)
+
+NRDY correctly downgraded to LOW after detecting multi-class but 1:1 voting (capital structure complexity only; no take-private blocker).
+
+Pipeline cleanliness pass caught: NBSP-duplicate class names, missing word-number vote ratios ("ten votes per share"), misleading reasoning strings.
+
+### Deal-In-Progress Filter (`scripts/check_deal_status.py`)
+Detects merger/acquisition/strategic-review status. Classifies as NONE / EXPLORING / TENDER_OFFER / DEFINITIVE / CLOSED. Critical to filter BEFORE expensive scoring — caught:
+- **LPSN** = CLOSED (SoundHound all-stock deal Apr 2026)
+- **KPLT** = CLOSED (Aaron's + CCF merger agreement Dec 2025)
+- **SCOR, DOMO, BBGI, SKLZ** = EXPLORING (active strategic alternatives processes)
+- **EXFY** = TENDER_OFFER (Dutch auction — company self-buyback, OK)
+- **CDLX, NRDY** = NONE
+
+Pipeline cleanliness pass added: debt-tender exclusion (BBGI 2027 PIK Notes was false TENDER_OFFER), asset-sale negator (SCOR Movies divestiture was false DEFINITIVE), transcript scanning for "evaluating strategic alternatives" (SKLZ's Q1 call wasn't in 8-Ks).
+
+### Peer Set Builder (`scripts/build_peer_set.py`)
+Identifies real-world peers via (a) 10-K Item 1 Competition parse, (b) DDG web search, (c) yfinance enrichment, (d) manual `--add TICKERS` augmentation for WebSearch-sourced peers (the canonical workflow).
+
+Dual-writes both `data/dossiers/<ticker>/peers/peer_table.json` (light schema) AND `data/research/<ticker>/peer_benchmarks.csv` (the format `valuation.py` reads, with subject anchor row + primary/secondary/excluded inclusion tags).
+
+Cleanliness pass: industry sanity check (POWL = Powell Industries was accidentally added to NRDY's edtech peers — now auto-skipped with reason), delisted-ticker handling (SUMO was taken private 2023, returns no yfinance data — now gracefully skipped), `--force` flag to override when intentional.
+
+### Industry-Aware Agent Prompts (`scripts/agent_prompts.py` + `industry_kpis.json`)
+Configurable per-criterion prompts that auto-inject the candidate's industry KPIs (SaaS: NRR / Rule of 40 / CAC payback; adtech: take rate / RPM; gaming: DAU/MAU / ARPDAU; etc.), the peer table, voting structure findings, and private-peers notes.
+
+`build_prompts(ticker)` returns 8 ready-to-dispatch prompts:
+- **6 specialists in parallel**: Messiness, Value Creation, Data Availability, Contrarianism (with mispricing-diagnosis 9-row checklist), PE Realism, IR-vs-SEC Triangulation (the highest-leverage AI task per methodology)
+- **Adversarial reviewer** (sees all 6, attacks with real investment logic using 9 named frames)
+- **Model agent** (invokes `scripts/valuation.py` 7-method engine — no more reinventing back-of-envelope models)
+
+Methodology v2 disciplines baked into prompts:
+- Value Creation now REQUIRES 2-3 comp-proven transitions per lever (lesson #3)
+- Contrarianism requires the 9-row mispricing diagnosis (lesson #6 — score capped at 2 if zero rule-ins)
+- IR-vs-SEC triangulation as 6th specialist (Structural Discipline)
+- Model agent outputs explicit kill criteria with dated thresholds (lesson #5)
+
+### Calibration Runs
+
+**EXFY** (calibration anchor 1):
+- v1 specialists: 3.35/5 rescaled
+- After adversarial: **2.65/5** — adversarial caught the 83.6% Voting Trust standstill ban, capitalized software inflating "FCF," $14M F1 movie sponsorship signal, migration thesis stalling
+
+**SCOR** (calibration anchor 2):
+- v1 specialists: 3.65/5 rescaled — initially looked stronger than EXFY
+- After adversarial: **2.85/5** — adversarial caught $22.4M capitalized internal-use software (kills the "20% cash yield" math), Stockholders Agreement explicitly bans Cerberus from publicly soliciting take-private, Q1 2026 Blue Torch covenant waiver, cross-platform Q4 growth decelerated to ~10%, Q4 2025 net income $103.9M was non-cash extinguishment gain
+
+Both anchors landed below the framework's 3.0 minimum viability threshold. Lightweight model on SCOR: expected IRR 25-30% at face but only ~17% when probability-reweighted to the post-adversarial score — qualitative and quantitative views are in tension.
+
+### Structural Filter Sweep on 5 Untested Candidates
+Built dossier + ran voting + deal status on DOMO, SKLZ, CDLX, BBGI, NRDY:
+- **CDLX** — LOW voting (single class), LOW deal status — clean
+- **NRDY** — LOW (multi-class but 1:1 voting), LOW — clean
+- **DOMO, SKLZ, BBGI** — all DEAL_BREAKER on voting (founder-controlled super-voting Class A/B)
+
+Surfaced conceptual gap: founder-controlled-with-active-strategic-review (DOMO, BBGI) is a *friendly transaction* setup, not a hostile-PE-attack setup. Current framework conservatively flags as deal-breaker; this is a known scoring limitation worth revisiting.
+
+### Files Added / Modified
+New: `scripts/build_dossier.py`, `fetch_transcripts.py`, `fetch_news.py`, `fetch_analyst.py`, `fetch_seeking_alpha.py`, `check_voting_structure.py`, `check_deal_status.py`, `build_peer_set.py`, `agent_prompts.py`, `industry_kpis.json`, `score_all_candidates.py`, `filter_and_rescore.py`, `model_scor.py`.
+
+Modified: `fetch_edgar.py` (multi-filing-type support + content download).
+
+### Next Steps
+- Run pitch tournament on remaining clean candidates (see TODO.md "Pitch Tournament" section)
+- Decide framework treatment of friendly-transaction setups (founder-led strategic review)
+
+---
+
 ## 2026-05-28 (evening) — Deck Structure, Design System, Methodology
 
 ### Deck Format Decision
@@ -50,6 +139,55 @@ Total elapsed with parallelism: ~2.5–3 weeks from company selection to draft.
 ### Next Steps
 - **Still blocking everything:** company selection. Narrow 45 ultra-sweet-spot → top 5-8 via full 6-criterion scoring + obviousness check + 8-K event search.
 - After selection: kick off mispricing diagnosis + consensus dossier in parallel.
+
+---
+
+## 2026-05-28 (later)
+
+### FinRobot Method Borrow — Analyzer, FMP, Valuation
+Reviewed the FinRobot repo (https://github.com/AI4Finance-Foundation/FinRobot) and decided against installing the framework — AutoGen orchestration, OpenAI API cost, and originality risk make it net-negative for a buyside case study. Instead ported three high-leverage methods into our pipeline:
+
+- **`scripts/analyze_10k.py`** — generates seven ready-to-paste 10-K analysis prompts (income, balance sheet, cash flow, segment, business highlights, company description, risk). Each pairs a financial table (yfinance) with the matching 10-K section (local EDGAR HTML) and a tightly-scoped instruction ported from FinRobot's `analyzer.py`. Includes a BS4 + regex section extractor with TOC-discrimination heuristic. Verified on EXFY's 2026 10-K — all three Items (1, 1A, 7) start at the real section heading.
+- **`scripts/fetch_fmp.py`** — Financial Modeling Prep wrapper for analyst price targets (consensus min/max/median), historical market cap, BVPS, single-company financial metrics, and competitor comps. Fixed a Revenue Growth bug in the original FinRobot code (off-by-one when `year_offset==0` wraps to oldest year). Requires `FMP_API_KEY` env var.
+- **`scripts/valuation.py`** — three-method valuation (EV/EBITDA, peer comp, 10-yr DCF with two-phase growth + perpetuity terminal) with football-field chart and 2D sensitivity matrix (revenue × margin). Pure numpy/pandas/matplotlib — no LLM. All DCF assumptions exposed as CLI flags. Sanity-checked on AAPL.
+
+Updated `requirements.txt`: added `beautifulsoup4`, `numpy`, `matplotlib`. Updated `docs/prompt-log.md` with sessions 6-9 (FinRobot synthesis + the three ports).
+
+### Pre-EBITDA Valuation Methods
+Researched institutional standard practice for valuing companies with negative TTM EBITDA (common in our sweet-spot pool — broken-SaaS, fallen-angel growth tech). Key finding: the cleanest triangulation is EV/FCF + Rule of 40-anchored EV/Revenue + Path-to-Profitability DCF, with Damodaran-style survival-probability haircut. Meritech's standard is EV/Gross Profit, not EV/Revenue. SBC fault line: value/PE camp (Lunchline's lens) treats SBC as a cash cost; growth-equity camp adds it back. Sources: Damodaran (NYU Stern), Morningstar methodology PDF, Bessemer Cloud Index, Meritech benchmarking.
+
+Extended `scripts/valuation.py` with four additional methods (now seven total):
+- **EV/FCF** — primary for pre-EBITDA-but-FCF-positive names; bypasses SBC debate. Confidence 0.60.
+- **EV/Gross Profit** — Meritech's preferred SaaS metric. Vertical SaaS ~11x GP, horizontal ~5x.
+- **Rule of 40 → EV/Rev band** — computes growth + FCF margin, applies band-based EV/Rev multiple (Bessemer/Meritech calibration). Defaults: bands at 0/20/40/60/80% → 1.0/2.0/3.5/5.5/7.5/10.0x EV/Rev.
+- **Path-to-Profitability DCF** — 5-year explicit forecast with revenue growth path + EBITDA margin path (negative→positive crossover), terminal at year 5 via EV/EBITDA multiple, equity value haircut by P(survive). Confidence 0.40.
+
+Method routing: `--methods auto` picks `ev_ebitda+dcf` for positive-EBITDA names (unchanged) and `ev_fcf+ev_gp+rule40+path_dcf` for pre-EBITDA. All assumptions exposed as CLI flags. Sensitivity matrix now picks EBITDA or FCF mode based on EBITDA sign.
+
+EXFY test: blended target $3.86 vs current $1.15 (+236%). All four methods bracket $2.50-$4.92, consistent with EXFY's net-cash position making effective EV/FCF ~2.4x trailing — the deep-value broken-SaaS story.
+
+### Open items
+- FMP /v4 price-target endpoint likely requires the paid Starter plan; need to either get an API key or skip the consensus signal.
+- Path-to-Profitability DCF defaults (15/12/10/8/6% revenue growth, -5/0/5/10/15% margin path) are sector-generic — should be tuned per-company before defending in the pitch.
+- Per-sector EV/GP and EV/FCF multiple defaults are calibrated for SaaS; broadcasters, ad tech, and gaming may need different bands.
+
+### Per-Company Peer Benchmarks (replaces hardcoded multiples)
+Removed all hardcoded multiple defaults from `valuation.py`. Multiples now come from one of three sources, with explicit labeling in the output:
+1. **Peer benchmarks CSV** at `data/research/<ticker>/peer_benchmarks.csv` — read by `load_peer_benchmarks`, target/low/high computed as median/min/max across `primary` peers (with `secondary` fallback if <3 primaries).
+2. **CLI override** (`--target-multiple X`, `--fcf-target-multiple Y`, etc.) — for one-off use without the CSV.
+3. **None** → method skips with a clear message.
+
+When `valuation.py` runs on a ticker with no peer file AND no CLI override, it writes an empty schema template (with the subject's own multiples pre-populated as the anchor row) and prints detailed research instructions to the agent. This is the "comp-proven not theoretical" discipline from `docs/methodology.md` #3 enforced in code.
+
+Replaced `value_rule40` band-lookup method with `value_ev_revenue` (peer-derived multiple) + `compute_rule40` (diagnostic-only). The Rule of 40 score is reported alongside the EV/Rev valuation as context, not used to pick a multiple from a hardcoded table.
+
+`path_dcf` terminal y5 multiple also auto-resolves from peer EV/EBITDA when the CSV has data; falls back to CLI flag.
+
+Added agent instruction to `CLAUDE.md`: when researching peers during a session, persist findings to the per-company CSV so future sessions don't re-do the work.
+
+Created `TODO.md` capturing build/research/decision items including: operator-investor value creation lever framework (needs research first), IR-vs-SEC triangulation tool, consensus dossier tool, mispricing diagnosis tool, and the per-company peer CSV refactor (done in this session).
+
+EXFY validation: with 3 hypothetical primary peers (BILL, DOCN, AMPL) → blended target $5.74 vs $1.16 current (+397%). AAPL regression: identical outputs to pre-refactor when CLI overrides match prior defaults ($173 EV/EBITDA, $110 DCF, $145 blended).
 
 ---
 

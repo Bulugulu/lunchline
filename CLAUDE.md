@@ -25,3 +25,5 @@ This file routes to domain-specific docs. Read the relevant doc before working o
 - **Citations:** Every claim needs a source with an active hyperlink
 - **Tone:** Original thinking, specificity over polish, clear POV defended with evidence
 - **AI disclosure:** Log every significant prompt interaction in prompt-log.md
+- **No hardcoded benchmarks:** Per-company multiples come from peer research, not from sector-generic defaults. When you research peers for a candidate, **persist findings** to `data/research/<ticker>/peer_benchmarks.csv` (schema in `scripts/valuation.py` docstring) and write peer-selection rationale to `data/research/<ticker>/peer_notes.md`. Future sessions read these files instead of re-doing research. Mark each peer as `primary` / `secondary` / `excluded` with notes.
+- **TODO and CHANGELOG:** Open work items live in `TODO.md`. Completed work moves to `CHANGELOG.md`. Per-candidate workstreams (mispricing diagnosis, consensus dossier, etc., per `docs/methodology.md`) live in `data/research/<ticker>/`, not in TODO.

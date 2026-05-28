@@ -1,9 +1,15 @@
-# Large data files (keep scripts, not raw data)
-data/*.json
-data/*.csv
-data/edgar/
+# Large data files (keep scripts, not raw data — everything in data/ is reproducible)
+data/
 
 # Python
 __pycache__/
 *.pyc
 .venv/
+
+# Local env / secrets
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
