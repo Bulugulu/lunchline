@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Direction 2 — Modern Operator</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap');
+  :root {
+    --ink: #0F1115;
+    --bone: #F5F2EC;
+    --paper-warm: #FAF7F1;
+    --graphite: #3A3F47;
+    --orange: #D9531E;
+    --rule: #D8D2C4;
+    --rule-soft: #E8E2D4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px;
+    background: #d8d2c4;
+    font-family: 'Source Serif 4', Georgia, serif;
+    color: var(--ink);
+  }
+  .topbar {
+    max-width: 1280px;
+    margin: 0 auto 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #555;
+    font-family: 'Inter', sans-serif;
+  }
+  .topbar a { color: #2563eb; text-decoration: none; }
+  .slide {
+    width: 1280px;
+    height: 720px;
+    background: var(--bone);
+    margin: 0 auto 32px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    position: relative;
+    padding: 56px 72px;
+    display: flex;
+    flex-direction: column;
+  }
+  .slide-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 28px;
+  }
+  .firm {
+    font-size: 12px;
+    color: var(--ink);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .firm .dot { color: var(--orange); margin: 0 6px; }
+  .slide-num {
+    font-size: 11px;
+    color: var(--graphite);
+    letter-spacing: 0.08em;
+    font-weight: 500;
+  }
+  .headline {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.18;
+    color: var(--ink);
+    margin: 0 0 12px;
+    max-width: 90%;
+    letter-spacing: -0.025em;
+  }
+  .subhead {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 16px;
+    color: var(--graphite);
+    font-style: italic;
+    margin-bottom: 32px;
+    font-weight: 400;
+    max-width: 80%;
+    line-height: 1.45;
+  }
+  .body { flex-grow: 1; display: flex; gap: 56px; }
+  .col-main { flex: 1.5; }
+  .col-side { flex: 1; padding-top: 6px; }
+  .variant {
+    border-left: 2px solid var(--orange);
+    padding: 4px 0 4px 18px;
+    margin-bottom: 24px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  .variant .label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--orange);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .variant .market { color: var(--graphite); }
+  .variant em { font-style: italic; }
+  .pillars { padding: 0; margin: 0; list-style: none; }
+  .pillar {
+    padding: 16px 0;
+    border-top: 1px solid var(--rule-soft);
+    font-size: 15px;
+    line-height: 1.5;
+    display: flex;
+    gap: 18px;
+  }
+  .pillar:last-child { border-bottom: 1px solid var(--rule-soft); }
+  .pillar-num {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: var(--orange);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    width: 28px;
+    flex-shrink: 0;
+    padding-top: 3px;
+  }
+  .pillar-text strong {
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .pillar-text .proof {
+    font-family: 'Inter', sans-serif;
+    color: var(--graphite);
+    display: block;
+    margin-top: 5px;
+    font-size: 12.5px;
+    line-height: 1.55;
+  }
+  .compare-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--graphite);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .compare {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+  }
+  .compare table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  .compare th, .compare td {
+    padding: 9px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    text-align: right;
+    font-weight: 400;
+  }
+  .compare th:first-child, .compare td:first-child {
+    text-align: left;
+    color: var(--graphite);
+    font-weight: 400;
+  }
+  .compare thead th {
+    border-bottom: 1px solid var(--ink);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .compare tr:last-child td {
+    border-bottom: none;
+    font-weight: 600;
+    color: var(--orange);
+    padding-top: 12px;
+  }
+  .compare .delta { color: var(--orange); font-weight: 600; }
+  .footer {
+    font-family: 'Inter', sans-serif;
+    border-top: 1px solid var(--rule-soft);
+    padding-top: 12px;
+    font-size: 10.5px;
+    color: var(--graphite);
+    line-height: 1.55;
+    margin-top: 24px;
+  }
+  .footer .src { font-weight: 600; color: var(--ink); }
+
+  /* VCP slide */
+  .bridge {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+    padding: 32px 0 56px;
+  }
+  .bar-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bar-val {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 10px;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+  }
+  .bar-val.pos { color: var(--orange); }
+  .bar {
+    width: 100px;
+    background: var(--ink);
+  }
+  .bar.delta { background: var(--orange); }
+  .bar.target { background: var(--ink); }
+  .bar-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: var(--graphite);
+    margin-top: 12px;
+    text-align: center;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+  }
+  .bar-label strong { color: var(--ink); display: block; font-weight: 600; font-size: 12px; margin-bottom: 2px; }
+  .levers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    padding-top: 12px;
+  }
+  .lever {
+    font-family: 'Source Serif 4', Georgia, serif;
+    border-top: 1px solid var(--ink);
+    padding-top: 12px;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  .lever .lnum {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    color: var(--orange);
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .lever .lname {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 8px;
+    font-size: 14px;
+    letter-spacing: -0.01em;
+  }
+  .lever .lmeta {
+    font-family: 'Inter', sans-serif;
+    font-size: 10.5px;
+    color: var(--graphite);
+    margin-top: 8px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div>Direction 2 — Modern Operator (Recommended)</div>
+    <a href="index.html">← Back to all directions</a>
+  </div>
+
+  <!-- Slide 1: Investment Thesis -->
+  <div class="slide">
+    <div class="slide-meta">
+      <span class="firm">Halcyon Interactive<span class="dot">·</span>HLYN</span>
+      <span class="slide-num">06 / 12 · Investment Thesis</span>
+    </div>
+    <h1 class="headline">Halcyon's $90M EV prices in studio decline; we see a $35M live-ops base earning 40% segment margins.</h1>
+    <div class="subhead">Variant perception, supported by three pillars and a quantified gap to consensus.</div>
+    <div class="body">
+      <div class="col-main">
+        <div class="variant">
+          <div class="label">Market sees → We see</div>
+          <span class="market"><em>Market:</em> a one-hit wonder rolling off post-launch.</span><br>
+          <em>We see:</em> a hit-driven publisher with three production-ready titles and underestimated live-ops economics.
+        </div>
+        <ul class="pillars">
+          <li class="pillar">
+            <div class="pillar-num">01</div>
+            <div class="pillar-text">
+              <strong>Live-ops earnings are real and underestimated.</strong>
+              <span class="proof">$35M ARR base · 40% segment gross margin · 18-month average cohort tail per company filings (Q3 2026 10-Q).</span>
+            </div>
+          </li>
+          <li class="pillar">
+            <div class="pillar-num">02</div>
+            <div class="pillar-text">
+              <strong>Three unreleased titles de-risked by genre and team validation.</strong>
+              <span class="proof">Comparable peer publishers (Embracer, Devolver) ship 60%+ hit rate from validated genre pivots; team retention 92% YoY.</span>
+            </div>
+          </li>
+          <li class="pillar">
+            <div class="pillar-num">03</div>
+            <div class="pillar-text">
+              <strong>Capital allocation creates a hard floor.</strong>
+              <span class="proof">$40M net cash + $20M buyback authorization = implied floor at $60M EV. Current EV $90M means $30M downside vs. $140M+ upside.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-side">
+        <div class="compare-label">Our view vs. consensus</div>
+        <div class="compare">
+          <table>
+            <thead><tr><th></th><th>Street '27E</th><th>Our '27E</th></tr></thead>
+            <tbody>
+              <tr><td>Revenue ($M)</td><td>72</td><td>118</td></tr>
+              <tr><td>EBITDA ($M)</td><td>9</td><td>32</td></tr>
+              <tr><td>EBITDA margin</td><td>12%</td><td>27%</td></tr>
+              <tr><td>EV / EBITDA</td><td>10.0×</td><td>2.8×</td></tr>
+              <tr><td>Implied IRR</td><td>—</td><td class="delta">34%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="src">Sources:</span> HLYN 10-Q Q3 2026 (SEC EDGAR) · FactSet consensus pull 2026-05-15 · Embracer / Devolver pipeline disclosures, 2024–2026 annual reports · Our model (returns.xlsx).
+    </div>
+  </div>
+
+  <!-- Slide 2: Value Creation Plan -->
+  <div class="slide">
+    <div class="slide-meta">
+      <span class="firm">Halcyon Interactive<span class="dot">·</span>HLYN</span>
+      <span class="slide-num">09 / 12 · Value Creation Plan</span>
+    </div>
+    <h1 class="headline">Three operator levers move Halcyon from $90M to $230M EV by FY28.</h1>
+    <div class="subhead">Live-ops deepening, pipeline execution, and a multiple re-rate as growth returns. Each lever owned, sequenced, and quantified.</div>
+    <div class="bridge">
+      <div class="bar-col">
+        <div class="bar-val">$90M</div>
+        <div class="bar" style="height: 200px;"></div>
+        <div class="bar-label"><strong>Current EV</strong>FY26</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-val pos">+$50M</div>
+        <div class="bar delta" style="height: 95px;"></div>
+        <div class="bar-label"><strong>Live-ops deepening</strong>Battle pass + seasonal</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-val pos">+$60M</div>
+        <div class="bar delta" style="height: 115px;"></div>
+        <div class="bar-label"><strong>Pipeline launches</strong>3 titles × $15M rev</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-val pos">+$30M</div>
+        <div class="bar delta" style="height: 65px;"></div>
+        <div class="bar-label"><strong>Multiple re-rate</strong>2.5× → 4.5× EV/EBITDA</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-val">$230M</div>
+        <div class="bar target" style="height: 460px;"></div>
+        <div class="bar-label"><strong>Target EV</strong>FY28E</div>
+      </div>
+    </div>
+    <div class="levers">
+      <div class="lever">
+        <div class="lnum">LEVER 01</div>
+        <div class="lname">Live-ops deepening</div>
+        Battle pass plus four seasonal events per year. Comparable studios drove 20–30% ARPU lift inside 12 months (Roblox, Take-Two's Zynga unit).
+        <div class="lmeta">COO · Q1–Q4 FY27 · +$8M EBITDA</div>
+      </div>
+      <div class="lever">
+        <div class="lnum">LEVER 02</div>
+        <div class="lname">Pipeline execution</div>
+        Ship three titles already in soft launch. Genre-validated, 92% team retention. Net new $45M ARR by FY28.
+        <div class="lmeta">Studio heads · FY27–FY28 · +$13M EBITDA</div>
+      </div>
+      <div class="lever">
+        <div class="lnum">LEVER 03</div>
+        <div class="lname">Capital + multiple re-rate</div>
+        Complete $20M buyback at sub-$80M EV. Re-rate as growth returns: 2.5× → 4.5× EV/EBITDA.
+        <div class="lmeta">Board / CFO · FY26–FY28 · +$30M EV</div>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="src">Sources:</span> Roblox, Take-Two FY25 segment disclosures · HLYN soft-launch metrics (investor presentation 2026-Q1) · Peer EV/EBITDA from Capital IQ pull 2026-05-15 · Returns model.
+    </div>
+  </div>
+</body>
+</html>

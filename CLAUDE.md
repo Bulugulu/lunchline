@@ -10,7 +10,9 @@ This file routes to domain-specific docs. Read the relevant doc before working o
 |------|-----|-------------|
 | Changelog & status | [CHANGELOG.md](CHANGELOG.md) | What's been done, next steps |
 | Case requirements & email | [docs/case-overview.md](docs/case-overview.md) | Full brief, deliverables, evaluation criteria |
-| Part 1: Public company pitch | [docs/public-company-pitch.md](docs/public-company-pitch.md) | Selection framework, scoring, screening filters |
+| Part 1: Public company pitch | [docs/public-company-pitch.md](docs/public-company-pitch.md) | Selection framework, scoring, screening filters, deliverables checklist |
+| Analytical methodology | [docs/methodology.md](docs/methodology.md) | Six lessons from exemplar decks; sequenced workstreams; AI usage map |
+| Deck structure & design | [docs/deck-structure.md](docs/deck-structure.md) | Slide scaffolds; locked design system (Direction 1); exemplar sources |
 | Part 2: Market mapping | [docs/market-mapping.md](docs/market-mapping.md) | End market selection, vendor stack, automation map |
 | Company screening research | [docs/screening-research.md](docs/screening-research.md) | Screening process, data sources, results |
 | Aviv's relevant background | [docs/background-context.md](docs/background-context.md) | Sectors of expertise, competitive advantages |

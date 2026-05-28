@@ -2,6 +2,57 @@
 
 All notable changes to the Lunchline Partners case study project.
 
+## 2026-05-28 (evening) — Deck Structure, Design System, Methodology
+
+### Deck Format Decision
+- **Authoring pipeline:** HTML + CSS for drafting (fast iteration, version-controlled), python-pptx for final `.pptx` export (Lunchline brief requires PowerPoint), PDF as backup deliverable.
+- **Rationale:** HTML lets us iterate visually with real text reflow; python-pptx makes the Excel returns model the source of truth for slide numbers ("render model to deck," not "type numbers into PowerPoint").
+
+### Deck Structure Research (two parallel subagents)
+- **Content/structure agent:** Researched best-in-class equity investment pitch decks across activist, MBA stock-pitch competition, and search-fund canon. Per-section world-class patterns, anti-patterns, and exemplars for all 7 slide sections.
+- **Design system agent:** Researched typography, color, layout conventions across institutional pitches. Returned 3 candidate directions with concrete specs.
+- Top exemplar references: Trian "Restore the Magic" Disney white paper, Pershing Square Challenge 2019 Hertz winner, Pershing Square 2025 Annual Presentation, Starboard Value deck library, Stanford GSB Search Fund Primer, IESE "First 100 Days."
+- Captured in `docs/deck-structure.md` with cross-cutting principles (takeaway headlines not topic labels, variant perception structure, operator framing, institutional density).
+
+### Design System — LOCKED to Direction 1 (Institutional Classic)
+- Built HTML mockups in `mockups/` (index.html + d1/d2/d3.html) served via `python -m http.server 8765`.
+- Five sample slides for Direction 1: Cover, Business Overview (KPI dashboard), Investment Thesis, Investment Risks (multi-column table), Value Creation Plan (value bridge + lever cards).
+- Aviv picked **Direction 1** after preview. Spec: Inter typography (one family, 3 weights), navy `#0A2540` + ink + slate, red `#C8102E` accent for thesis emphasis only, dense 12-col grid matching Pershing/Trian institutional canon.
+
+### Analytical Methodology (new doc: `docs/methodology.md`)
+Distilled six lessons from the exemplar decks that change how we work:
+1. **Operating model first, deck second** — every slide number reconciles to the Excel model
+2. **Consensus baseline before variant perception** — quantify what consensus says before disagreeing
+3. **Comp-proven levers** — every VCP lever cites a peer that already executed
+4. **Primary research is the actual differentiator** — 5-10 expert/customer/ex-employee calls, the one thing AI can't fake
+5. **Kill criteria as part of the thesis** — specific, dated, monitorable thresholds
+6. **Diagnose WHY mispricing persists** — structural reason is part of the variant perception
+
+Plus two disciplines: IR-vs-SEC triangulation (highest-leverage AI use case) and 1-paragraph compression test before deck draft.
+
+### Sequenced Analytical Workstream
+Replaced ad-hoc "next steps" with structured sequence in `public-company-pitch.md` deliverables:
+1. Mispricing diagnosis (1-2 days)
+2. Consensus baseline dossier (1 day)
+3. Operating model v0 (3-5 days) — critical path
+4. Comparable transitions library (2-3 days)
+5. Primary research outreach (1-2 wks, parallel from week 1)
+6. IR-vs-SEC triangulation (0.5 day)
+7. Thesis synthesis + 1-para compression test (1 day)
+8. Deck draft, HTML → pptx (2-3 days)
+
+Total elapsed with parallelism: ~2.5–3 weeks from company selection to draft.
+
+### Doc Updates
+- `CLAUDE.md` router updated with new entries for methodology.md and deck-structure.md.
+- `public-company-pitch.md` deliverables checklist restructured: Analytical Workstreams (pre-deck) + Final Deck Artifacts (post-deck).
+
+### Next Steps
+- **Still blocking everything:** company selection. Narrow 45 ultra-sweet-spot → top 5-8 via full 6-criterion scoring + obviousness check + 8-K event search.
+- After selection: kick off mispricing diagnosis + consensus dossier in parallel.
+
+---
+
 ## 2026-05-28
 
 ### Framework Validation — Sanity Checks

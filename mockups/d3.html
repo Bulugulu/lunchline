@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Direction 3 — Search Fund Minimal</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+  :root {
+    --black: #000000;
+    --paper: #FFFFFF;
+    --gray: #888888;
+    --rule: #E5E5E5;
+    --rule-strong: #000000;
+    --blue: #2D5A87;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px;
+    background: #d8d8d8;
+    font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+    color: var(--black);
+  }
+  .topbar {
+    max-width: 1280px;
+    margin: 0 auto 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #555;
+  }
+  .topbar a { color: #2563eb; text-decoration: none; }
+  .slide {
+    width: 1280px;
+    height: 720px;
+    background: var(--paper);
+    margin: 0 auto 32px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    position: relative;
+    padding: 72px 88px;
+    display: flex;
+    flex-direction: column;
+  }
+  .slide-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 10px;
+    color: var(--gray);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 12px;
+  }
+  .firm { font-weight: 500; color: var(--black); }
+  .headline {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--black);
+    margin: 40px 0 8px;
+    max-width: 88%;
+    letter-spacing: -0.01em;
+  }
+  .subhead {
+    font-size: 13px;
+    color: var(--gray);
+    font-weight: 400;
+    margin-bottom: 44px;
+    letter-spacing: 0.01em;
+  }
+  .body { flex-grow: 1; display: flex; gap: 64px; }
+  .col-main { flex: 1.4; }
+  .col-side { flex: 1; }
+  .variant {
+    margin-bottom: 32px;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+  .variant .label {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  .variant .market-line, .variant .we-line {
+    display: block;
+    margin-bottom: 2px;
+  }
+  .variant .market-label, .variant .we-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--gray);
+    margin-right: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .variant .we-label { color: var(--blue); }
+  .pillars { padding: 0; margin: 0; list-style: none; }
+  .pillar {
+    padding: 14px 0;
+    border-top: 1px solid var(--rule);
+    font-size: 13px;
+    line-height: 1.55;
+    display: flex;
+    gap: 20px;
+  }
+  .pillar:last-child { border-bottom: 1px solid var(--rule); }
+  .pillar-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--gray);
+    font-weight: 500;
+    width: 32px;
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+  .pillar-text strong { font-weight: 500; color: var(--black); }
+  .pillar-text .proof {
+    color: var(--gray);
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 1.55;
+  }
+  .compare-label {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+  .compare {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+  }
+  .compare table { width: 100%; border-collapse: collapse; }
+  .compare th, .compare td {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--rule);
+    text-align: right;
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+  }
+  .compare th:first-child, .compare td:first-child {
+    text-align: left;
+    color: var(--gray);
+    font-weight: 400;
+  }
+  .compare thead th {
+    border-bottom: 1px solid var(--black);
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    color: var(--black);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .compare tr:last-child td {
+    border-bottom: none;
+    color: var(--blue);
+    font-weight: 500;
+    padding-top: 12px;
+  }
+  .footer {
+    border-top: 1px solid var(--rule);
+    padding-top: 12px;
+    font-size: 9px;
+    color: var(--gray);
+    line-height: 1.6;
+    margin-top: 28px;
+    letter-spacing: 0.02em;
+  }
+  .footer .src { color: var(--black); font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; }
+
+  /* VCP slide */
+  .bridge {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+    padding: 40px 0 56px;
+    gap: 12px;
+  }
+  .bar-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bar-val {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 12px;
+    font-variant-numeric: tabular-nums;
+  }
+  .bar-val.pos { color: var(--blue); }
+  .bar {
+    width: 100%;
+    max-width: 88px;
+    background: var(--black);
+  }
+  .bar.delta { background: var(--blue); }
+  .bar.target { background: var(--black); }
+  .bar-label {
+    font-size: 10px;
+    color: var(--gray);
+    margin-top: 14px;
+    text-align: center;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+  .bar-label strong {
+    color: var(--black);
+    display: block;
+    font-weight: 500;
+    font-size: 11px;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .levers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding-top: 8px;
+  }
+  .lever {
+    border-top: 1px solid var(--rule-strong);
+    padding-top: 14px;
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--black);
+  }
+  .lever .lnum {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--gray);
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+  }
+  .lever .lname {
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 10px;
+    font-size: 14px;
+    letter-spacing: -0.005em;
+  }
+  .lever .lmeta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--gray);
+    margin-top: 10px;
+    letter-spacing: 0.03em;
+  }
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div>Direction 3 — Search Fund Minimal</div>
+    <a href="index.html">← Back to all directions</a>
+  </div>
+
+  <!-- Slide 1: Investment Thesis -->
+  <div class="slide">
+    <div class="slide-meta">
+      <span class="firm">Halcyon Interactive · HLYN</span>
+      <span>06 / 12 · Investment Thesis</span>
+    </div>
+    <h1 class="headline">Halcyon's $90M EV prices in studio decline; we see a $35M live-ops base earning 40% segment margins.</h1>
+    <div class="subhead">Variant perception, supported by three pillars and a quantified gap to consensus.</div>
+    <div class="body">
+      <div class="col-main">
+        <div class="variant">
+          <div class="label">Variant perception</div>
+          <div class="market-line"><span class="market-label">Market</span> A one-hit wonder rolling off post-launch.</div>
+          <div class="we-line"><span class="we-label">We see</span> A hit-driven publisher with three production-ready titles and underestimated live-ops economics.</div>
+        </div>
+        <ul class="pillars">
+          <li class="pillar">
+            <div class="pillar-num">01.</div>
+            <div class="pillar-text">
+              <strong>Live-ops earnings are real and underestimated.</strong>
+              <span class="proof">$35M ARR base; 40% segment gross margin; 18-month average cohort tail per company filings (Q3 2026 10-Q).</span>
+            </div>
+          </li>
+          <li class="pillar">
+            <div class="pillar-num">02.</div>
+            <div class="pillar-text">
+              <strong>Three unreleased titles de-risked by genre and team validation.</strong>
+              <span class="proof">Comparable peer publishers (Embracer, Devolver) ship 60%+ hit rate from validated genre pivots; team retention 92% YoY.</span>
+            </div>
+          </li>
+          <li class="pillar">
+            <div class="pillar-num">03.</div>
+            <div class="pillar-text">
+              <strong>Capital allocation creates a hard floor.</strong>
+              <span class="proof">$40M net cash plus $20M buyback authorization implies a floor at $60M EV; current EV $90M means $30M downside vs. $140M+ upside.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-side">
+        <div class="compare-label">Our view vs. consensus</div>
+        <div class="compare">
+          <table>
+            <thead><tr><th></th><th>Street '27E</th><th>Our '27E</th></tr></thead>
+            <tbody>
+              <tr><td>Revenue ($M)</td><td>72</td><td>118</td></tr>
+              <tr><td>EBITDA ($M)</td><td>9</td><td>32</td></tr>
+              <tr><td>EBITDA margin</td><td>12%</td><td>27%</td></tr>
+              <tr><td>EV / EBITDA</td><td>10.0×</td><td>2.8×</td></tr>
+              <tr><td>Implied IRR</td><td>—</td><td>34%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="src">Sources</span> &nbsp; HLYN 10-Q Q3 2026 (SEC EDGAR); FactSet consensus pull 2026-05-15; Embracer and Devolver pipeline disclosures, 2024–2026 annual reports; Our model (returns.xlsx).
+    </div>
+  </div>
+
+  <!-- Slide 2: Value Creation Plan -->
+  <div class="slide">
+    <div class="slide-meta">
+      <span class="firm">Halcyon Interactive · HLYN</span>
+      <span>09 / 12 · Value Creation Plan</span>
+    </div>
+    <h1 class="headline">Three operator levers move Halcyon from $90M to $230M EV by FY28.</h1>
+    <div class="subhead">Live-ops deepening, pipeline execution, and a multiple re-rate as growth returns. Each lever owned, sequenced, and quantified.</div>
+    <div class="bridge">
+      <div class="bar-col">
+        <div class="bar-val">$90M</div>
+        <div class="bar" style="height: 180px;"></div>
+        <div class="bar-label"><strong>Current EV</strong>FY26</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-val pos">+$50M</div>
+        <div class="bar delta" style="height: 90px;"></div>
+        <div class="bar-label"><strong>Live-ops</strong>Battle pass + seasonal</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-val pos">+$60M</div>
+        <div class="bar delta" style="height: 110px;"></div>
+        <div class="bar-label"><strong>Pipeline</strong>3 titles × $15M rev</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-val pos">+$30M</div>
+        <div class="bar delta" style="height: 60px;"></div>
+        <div class="bar-label"><strong>Multiple</strong>2.5× → 4.5× EV/EBITDA</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-val">$230M</div>
+        <div class="bar target" style="height: 420px;"></div>
+        <div class="bar-label"><strong>Target EV</strong>FY28E</div>
+      </div>
+    </div>
+    <div class="levers">
+      <div class="lever">
+        <div class="lnum">01.</div>
+        <div class="lname">Live-ops deepening</div>
+        Battle pass plus four seasonal events per year. Comparable studios drove 20–30% ARPU lift inside 12 months (Roblox, Take-Two's Zynga unit).
+        <div class="lmeta">COO &nbsp;·&nbsp; Q1–Q4 FY27 &nbsp;·&nbsp; +$8M EBITDA</div>
+      </div>
+      <div class="lever">
+        <div class="lnum">02.</div>
+        <div class="lname">Pipeline execution</div>
+        Ship three titles already in soft launch. Genre-validated, team retention 92%. Net new $45M ARR by FY28.
+        <div class="lmeta">Studio heads &nbsp;·&nbsp; FY27–FY28 &nbsp;·&nbsp; +$13M EBITDA</div>
+      </div>
+      <div class="lever">
+        <div class="lnum">03.</div>
+        <div class="lname">Capital + multiple re-rate</div>
+        Complete $20M buyback at sub-$80M EV. Re-rate as growth returns: 2.5× → 4.5× EV/EBITDA.
+        <div class="lmeta">Board / CFO &nbsp;·&nbsp; FY26–FY28 &nbsp;·&nbsp; +$30M EV</div>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="src">Sources</span> &nbsp; Roblox and Take-Two FY25 segment disclosures; HLYN soft-launch metrics (investor presentation 2026-Q1); Peer EV/EBITDA from Capital IQ pull 2026-05-15; Returns model.
+    </div>
+  </div>
+</body>
+</html>

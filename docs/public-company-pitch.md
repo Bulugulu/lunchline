@@ -253,7 +253,23 @@ Each criterion scored 1-5. Weighted score = sum of (score x weight).
 **TBD** — awaiting Aviv's input on preferred candidate
 
 ## Deliverables
-- [ ] Company selection
+
+### Analytical Workstreams
+Per [methodology.md](methodology.md), the analytical sequence after company selection is:
+
+- [ ] **Company selection** (narrow 45 ultra-sweet-spot → top 5-8 → pick 1)
+- [ ] **Mispricing diagnosis** — why-it-persists checklist with evidence (1-2 days)
+- [ ] **Consensus baseline dossier** — Street numbers + peer multiples + retail narrative + earnings Q&A themes (1 day)
+- [ ] **Operating model v0** — Excel: historicals + 3-yr forward, lever-driven, scenario-capable (3-5 days)
+- [ ] **Comparable transitions library** — 3-5 prior comps per proposed lever, quantified and sourced (2-3 days)
+- [ ] **Primary research outreach** — 5-10 calls / customer refs / ethnographic finds (1-2 wks, parallel from week 1)
+- [ ] **IR-vs-SEC triangulation** — documented claim gaps from last 4 transcripts vs. 10-K (0.5 day)
+- [ ] **Thesis synthesis + 1-paragraph compression test** — compressed thesis + thesis monitor sheet + kill criteria (1 day)
+
+### Final Deck Artifacts
+Per [deck-structure.md](deck-structure.md):
+
+- [ ] Cover slide
 - [ ] Business Overview (2-3 slides)
 - [ ] End Market Overview (1 slide)
 - [ ] Competitive Positioning (1 slide)
@@ -261,4 +277,8 @@ Each criterion scored 1-5. Weighted score = sum of (score x weight).
 - [ ] Investment Risks (1 slide)
 - [ ] Value Creation Plan (2-3 slides)
 - [ ] Financial Review (1-2 slides)
+- [ ] AI disclosure appendix (1 slide)
 - [ ] Supporting financial/returns model (Excel)
+- [ ] HTML → python-pptx export pipeline
+
+**Critical path:** Selection → Mispricing diagnosis → Consensus dossier → Operating model → Thesis synthesis → Deck. Primary research, comp library, and IR-vs-SEC triangulation run parallel.
