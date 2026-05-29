@@ -2,7 +2,9 @@
 
 End-to-end workflow to evaluate a candidate ticker. Each script writes to `data/dossiers/<ticker>/` or `data/research/<ticker>/`.
 
-**Two scoring modes:**
+> **⚠️ SUPERSEDED (2026-05-29) — the shallow scoring/findings verdict is retired.** The dossier + structural-gate scripts (steps 1–3 below) are still used, but candidate *evaluation* no longer uses the 6-criterion or findings-mode scoring — those produced wrong conclusions (USNA was scored a "value trap"; the deep flow reversed it). **Use the Deep Flow instead:** `docs/methodology.md` § The Deep Flow (SOTP + operating/driver model + DCF on cash taxes + Porter's + sensitivity tornado + consensus + VCP + kill criteria + known-unknowns, run as agent-builds → lead-reviews → iterate). The "scoring modes" below are retained for historical context only.
+
+**Two scoring modes (historical — superseded by the Deep Flow):**
 - **Calibration mode** (`build_prompts`) — original 6-criterion + adversarial + model. Use ONCE per archetype to calibrate what good/bad looks like. Heavy: 7-8 agents per candidate.
 - **Findings mode** (`build_findings_prompts`) — lighter 3-specialist + adversarial. Use for any candidate AFTER the archetype is calibrated. Drops the 1-5 scoring layer that compressed every candidate in our screened pool to 2.65-2.95 (see CHANGELOG 2026-05-28 late for the diagnostic). Outputs structured findings (5 bull + 5 bear per specialist, file-anchored) instead of scores.
 

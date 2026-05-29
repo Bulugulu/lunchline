@@ -4,6 +4,56 @@ Distilled from the exemplar decks identified in [deck-structure.md](deck-structu
 
 ---
 
+## Sourcing discipline: lead with the discount driver, then falsify the bear (added 2026-05-29)
+
+A low multiple is an embedded market judgment, not a free lunch. "Cheap + profitable + under-followed" produces a list of *suspects*, never a thesis. The edge is never "this is good and cheap" — if that were both true and obvious, the gap would close. The edge is: **the market discounts this for a specific reason, and that reason is wrong, overblown, mismeasured, temporary, or simply un-analyzed.**
+
+So we invert the research. For every screened candidate:
+
+1. **State the single load-bearing bear** — the one reason the market discounts it; what the price *implies* the market believes. Not five bear points: *the* one.
+2. **Classify the discount driver** — only one bin is fatal:
+   - *Misperception* (wrong tag, hidden segment, accounting optics, one-time read as structural) → opportunity (bear is wrong)
+   - *Temporary / cyclical* (down-cycle, transitory cost, integration year) → opportunity if the recovery is underwritable
+   - *Neglect* (too small/illiquid/orphaned; nobody did the work) → opportunity *only with a catalyst*
+   - *Permanent impairment* (secular decline w/ no offset, fraud, terminal governance, fake cheapness) → **value trap, avoid**
+3. **Adversarially try to VALIDATE the bear** — build the strongest case that the scary thing is real and permanent (attack the bull, not the bear, to avoid confirmation bias). If the bear *survives* → trap, pass. If you genuinely *cannot* validate it → **the failure-to-validate IS the thesis.**
+4. **Require a catalyst** — a disconfirmed bear with no catalyst just stays cheap. Full structure: *discount driver × is it actually true? × what forces the re-rate?*
+5. **Rebuild the load-bearing numbers from filings, never data-vendor aggregates** — the "cheap" hook itself is often a data artifact (e.g., "net cash" that is customer float or already-spent; "16% margin" that is a non-GAAP / stock-comp-reversal figure).
+
+The pitch then writes itself in the case's own voice: **"Market prices in [bear]. [Bear] is wrong/overblown because [evidence we could not break]. Re-rates on [catalyst]."**
+
+This is the organizing step — it runs *before* the bull-case findings, and the `mispricing_diagnosis` RULE-IN/RULE-OUT tool is its instrument. **Validated 2026-05-29:** of three non-SaaS leads, the bear *survived* for **USNA** (accelerating MLM customer decline) and **MTRX** ("net cash" is customer float; 7 straight years of operating losses) → both cut as traps; the bear *failed* for **HCKT** (AI is raising its delivery margins, not disintermediating it) → advanced as the one genuine mispricing.
+
+**Refinement (2026-05-29): the shallow pass produces false negatives — escalate to the deep flow on three setups.** Re-running USNA through the full post-vetting flow (SOTP + DCF, `data/research/usna/model.md`) *reversed* the shallow "value trap" call. The screen / one-bear pass had two hard errors — it called Hiya loss-making (it earned +$3.4M FY25 segment EBIT) and treated the 72% tax rate as structural (it's a valuation-allowance artifact, guided to 55–60%) — and it skipped the SOTP that shows net cash + the Hiya stake ≈ the entire market cap, leaving a profitable Core implied at ~0.4× EBITDA. Lesson: the screen is *systematically* wrong on (i) a **recently consolidated acquisition** distorting blended numbers, (ii) **net cash that is a large fraction of market cap**, and (iii) a **control-holder** structure. **On any candidate with one of these three flags, run the deep flow (SOTP/DCF) before ruling it out** — shallow, consolidated reading misprices exactly these.
+
+---
+
+## The Deep Flow — the standard (and only) candidate-evaluation process (encoded 2026-05-29)
+
+**Decision (2026-05-29): the shallow analytical verdict is retired.** The screen-plus-single-bear "value trap / keep" call produced wrong conclusions — it labeled USNA a value trap, and modeling it reversed the verdict (then disciplined it). Going forward there is **no shallow verdict**: the mechanical screen (`framework_screen.py`) only *generates suspects*, and **every candidate we actually evaluate goes through the full deep flow below.** A buy/avoid conclusion is only ever the output of the deep flow.
+
+*(One unavoidable bit of triage: we can't deep-flow thousands of names, so we still **prioritize** which screened suspects get the deep flow — but that prioritization is neutral (cheapness, under-followed, the three escalation flags), never a shallow buy/sell judgment.)*
+
+**The deep flow, as run (USNA was the template — see CHANGELOG 2026-05-29):**
+
+1. **Dossier** — `build_dossier.py <ticker>` (10-K/10-Q/8-K/DEF 14A + transcripts) and the structural gates `check_voting_structure.py` / `check_deal_status.py` (a gate, not a verdict — and double-check its flags: USNA's "deal CLOSED" was a false acquirer-side trigger).
+2. **A deep-analysis agent builds the full package from the FILINGS** — never vendor aggregates (yfinance EV/cash/FCF/margins are unreliable on dual-class, earnout, acquisition, and contract-liability structures):
+   - **Sum-of-the-parts** — decompose into segments/businesses + net cash and value each separately. This is the move the screen is structurally blind to; it flipped USNA (net cash + the Hiya stake ≈ the whole market cap → the profitable core implied near-free).
+   - **Operating / driver model** — a driver tree to the *real* operating inputs (e.g., active customers by region × revenue/customer; subscribers × ARPU × churn × CAC) so we understand how the business runs and what moves it.
+   - **DCF** — scenario-based, explicit assumptions; **tax from the cash-flow statement's "income taxes paid," not the book rate** (the USNA tax error — a fixed foreign cash tax, not the 72% book rate or a reversible artifact); WACC; terminal reconciled to the driver model.
+   - **Sensitivity tornado** — rank drivers by their swing on equity value; know which 2–3 assumptions the answer hangs on (for USNA, the value rested most on the Hiya mark — the asset we had least data on).
+   - **Porter's Five Forces** — per competitive arena, tied back to margin durability / terminal value / the multiple.
+   - **Consensus baseline** — Street estimates + what the price implies, to locate the variant.
+   - **Value-creation plan** (commercial / operations / capital structure / M&A) and **kill criteria** (monitorable thresholds).
+   - **Known-unknowns** — what the data *cannot* tell us and what it would take to close (primary research / alt-data). Maps the data floor so we know when we've gone as deep as the data allows.
+   - **Verdict** framed as the discount driver: is the market's reason for the discount right? + the catalyst.
+3. **Review loop (mandatory)** — the lead reviews the build against everything known, challenges every estimate-vs-cited number and every internal contradiction, and the agent reconciles/iterates **until the lead is satisfied we've extracted everything the data allows.** A single pass is not trusted: USNA v1 carried its own errors (over-marked a contracting Hiya, under-taxed it); the review caught them and v2 corrected the base case down.
+4. **Persist** — `data/research/<ticker>/model.md`, `peer_benchmarks.csv`, `peer_notes.md`.
+
+**Disciplines proven on USNA:** rebuild load-bearing numbers from filings; resolve internal contradictions explicitly (the tax decomposition); **depth is for *accuracy*, not optimism** (it both rescued USNA from a false "trap" and deflated a false "+43%" to a calibrated ~+9% IRR with the error bars drawn); the review loop is non-optional.
+
+---
+
 ## Six Core Lessons
 
 ### 1. Operating model first, deck second

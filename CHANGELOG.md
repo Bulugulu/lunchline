@@ -2,6 +2,32 @@
 
 All notable changes to the Lunchline Partners case study project.
 
+## 2026-05-29 (process change) — Shallow analytical verdict retired; the Deep Flow is now the standard
+
+Decision: stop producing shallow buy/avoid verdicts (the screen-plus-single-bear "trap/keep" call), because they reached wrong conclusions (USNA labeled a value trap; deep modeling reversed it). Encoded the change: the mechanical screen now only *generates suspects* and produces no verdict; **every candidate we evaluate goes through the full Deep Flow** (SOTP + operating/driver model + DCF on cash taxes + sensitivity tornado + Porter's Five Forces + consensus baseline + value-creation plan + kill criteria + known-unknowns), run as an agent-builds → lead-reviews → iterate loop. Documented in `CLAUDE.md` (Working Conventions + router), `docs/methodology.md` (§ The Deep Flow — the step-by-step as run on USNA), and a SUPERSEDED banner on `docs/pipeline.md`. Which suspects get the deep flow is neutral prioritization (cheapness / under-followed / the three escalation flags), never a shallow judgment.
+
+## 2026-05-29 (latest) — Deep-flow test: depth flipped a shallow "value-trap" kill (USNA)
+
+Tested whether our shallow screen/one-bear pass produces false negatives by running ONE ruled-out name (USNA) through the full post-vetting methodology — SOTP + DCF, scenario returns, consensus baseline, value-creation plan, kill criteria (`data/research/usna/model.md`; peers persisted). It **reversed the verdict.** The shallow pass had two hard errors (called Hiya loss-making — it earned +$3.4M FY25 segment EBIT; treated the 72% tax rate as structural — it's a valuation-allowance artifact) and skipped the SOTP: net cash (~$149M) + 78.8% Hiya stake (~$164M at USANA's own transaction price) ≈ $313M vs a $342M market cap, implying the profitable Core (~$54M EBITDA) at ~0.4× EBITDA. SOTP $26.42 / DCF $26.93 base (+43–45%). Deep flow also corrected the *bull* (Hiya is now contracting, subs 224k→186k). Verdict: partial-flip leaning flip; USNA reinstated as "mispriced, own sized for the bear."
+
+Process refinement (in `methodology.md`): the screen is systematically wrong on three setups — recently-consolidated acquisition, net-cash-heavy, control-holder — so **escalate to the deep flow before ruling out any candidate carrying one of those flags.** Live non-SaaS set now: USNA, SWAG, AENT, MIND, HCKT.
+
+## 2026-05-29 (later still) — Dropped the sector constraint; re-screened ALL sectors for non-SaaS
+
+Caught a major scoping error: the Finviz universe pull was scoped to Technology + Communication Services only, which turned Aviv's edge-fit (meant to be an *end-stage tiebreaker*) into a hard universe filter — producing a SaaS-heavy, structurally-problematic pool. Aviv clarified he wants to **AVOID SaaS**, not supplement it.
+
+Fix: added `--all-sectors` to `framework_screen.py` (Country=USA). Re-pulled the universe: **2,912** US small-caps across all 11 sectors (vs 622 in two sectors). Excluded non-operating instrument types (financials/closed-end funds, SPACs/shells, pre-rev biotech) → **1,539** operating cos enriched → **512** clear EV $10–500M + revenue → **445 non-SaaS**, of which **57** are cheap+profitable+under-followed (EV/Rev<1.5x, ≤3 analysts, +op margin, +FCF) and **17** also net-cash-heavy or down >40%. AENT and MIND both surfaced in the screen, validating it.
+
+Corrected `docs/public-company-pitch.md` (sector scope = all operating sectors; edge-fit demoted to end-stage tiebreaker) and saved the lesson to memory (`feedback_sector_not_universe_filter`). Backups: `data/*_2sector.csv`, `data/universe_raw_allsector_full.csv`.
+
+Triage: all six survived the structural gate (USNA's "CLOSED" flag was a false acquirer-side trigger — it *bought* Hiya). Then ran a new **inverted bear-falsification** pass on the top three (state the single load-bearing bear → adversarially try to VALIDATE it → keep only if it fails; baked into `docs/methodology.md`). Result: **USNA and MTRX cut** (bears validated — USNA's MLM customer base declining double-digits; MTRX's "net cash > EV" is customer float atop 7 straight years of operating losses), **HCKT advanced** (bear failed — AI is lifting its delivery margins +500bps, not disintermediating it; an AI *beneficiary* mispriced for AI-fear, though a turnaround on a binary Q3-FY26 catalyst now carrying ~$73M net debt). Verification caught major screen-data errors (USNA net cash stale, MTRX "cash" is customer advances, HCKT is net debt not net cash, HCKT "16% margin" is really ~7.7% GAAP). Live non-SaaS set: SWAG, AENT, MIND + HCKT. Bench: STRT, NATR.
+
+## 2026-05-29 (later) — Pitch tournament cleanup (11 → 7)
+
+Worked the bracket down in a live review session. **Eliminated 4:** IZEA (capital-return-only, ~0% IRR), ACCS (no-moat SaaS — divested its regulated/high-switching compliance business, revenue −2% and now operating-loss-making), NRDY (AI-displacement / Chegg inversion with no offsetting moat), UPLD (melting-SaaS roll-up; declined the preferred/takeout financial-engineering bet). **7 active:** RSSS, SWAG, AENT, SCOR, CDLX, MIND, UONE.
+
+Articulated the governing filter for small SaaS: uninteresting unless (1) proprietary data or (2) regulated-niche high-switching workflow — because AI makes generic SaaS tooling table-stakes. **RSSS kept on a rewritten thesis** (AI-infrastructure / rights-managed entitlement-delivery for the long tail of publishers via API/MCP; B2B-driven organic growth; consumer Scite tier repurposed as a B2C→B2B funnel). Diligence this session: pulled SWAG segment margins (core promo ~33% GM > loyalty/SLS ~21%; consolidated loss is a ~$5.2M public-company-cost artifact → take-private is the unmodeled lever), ACCS revenue mix (~54% recurring, transition <18 months, declining), and RSSS transcripts/analyst actions (Maxim/Lake Street held Buy but cut PT $5→$4 on the Q3 FY26 print).
+
 ## 2026-05-29 — Memo system + 16-candidate expansion + 11 verified pitch memos
 
 ### Memo voice/principles system (the reusable template)

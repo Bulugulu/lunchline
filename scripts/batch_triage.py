@@ -21,8 +21,10 @@ ROOT = Path(__file__).parent.parent
 DATA = ROOT / "data"
 DOSSIERS = DATA / "dossiers"
 RESEARCH = DATA / "research"
-LOG = RESEARCH / "layer2_triage_2026-05-28.log"
-TABLE = RESEARCH / "layer2_triage_2026-05-28.md"
+_args = [a for a in sys.argv[1:] if not a.startswith("-")]
+TAG = next((a.split("=", 1)[1] for a in sys.argv[1:] if a.startswith("--tag=")), "2026-05-28")
+LOG = RESEARCH / f"layer2_triage_{TAG}.log"
+TABLE = RESEARCH / f"layer2_triage_{TAG}.md"
 
 # Full 21-candidate slate. Tickers already with dossiers will be skipped at
 # the dossier-build step but still get triage-table rows from existing data.
@@ -31,6 +33,9 @@ TICKERS = [
     "SWAG", "SURG", "GIFT", "SNAL", "GAME", "MIND", "HIT",
     "CNVS", "CTM", "RSSS", "FLNT", "UPLD", "XBP", "BKKT",
 ]
+
+if _args:
+    TICKERS = [t.upper() for t in _args]
 
 PY = sys.executable
 

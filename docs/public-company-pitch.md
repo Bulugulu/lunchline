@@ -176,20 +176,20 @@ Lunchline's own philosophy ("be willing to get your hands dirty," "constantly re
 | Insider buying | Net insider purchases in trailing 6 months | Contrarian signal from people with information |
 | Short interest | > 10% of float | Market betting against; creates squeeze potential if thesis is right |
 
-#### Sector Filters — initial universe scope, not candidate-level filtering
+#### Sector scope — ALL operating sectors (corrected 2026-05-29)
 
-The Finviz pull is scoped to Tech + Communication Services sectors. This is a **universe-level** scope decision (which sectors to pull from), not a candidate-level filter (which we deliberately do NOT apply per Layer 3 rationale above). Within the included sectors, we do not further discriminate by Aviv's edge fit during selection — that's a tiebreaker applied at the end.
+**Prior error (fixed):** the Finviz pull was scoped to Tech + Communication Services only. That turned Aviv's edge-fit — which is meant to be an **end-stage tiebreaker** — into a hard universe filter, producing a SaaS-heavy, structurally-problematic pool and hiding the messy, under-followed, operator-fixable small-caps (industrials, consumer, business services) that best fit the case mandate. **The universe now spans all sectors** (`framework_screen.py --all-sectors`).
 
-| Universe Includes | Universe Excludes |
+The ONLY universe-level exclusions are **instrument-type**, not sector/edge — i.e., things you cannot write a "commercial / operations / capital structure / M&A" value-creation plan for:
+
+| Universe includes | Universe excludes (instrument-type, NOT edge) |
 |---|---|
-| Application Software, SaaS/Cloud, AI/ML | Oil & Gas |
-| Gaming / Interactive Entertainment | Mining / Materials |
-| Internet Content & Information | Biotech / Pharma |
-| Advertising Agencies / Marketing Tech | Banks / Insurance |
-| Publishing, Entertainment | REITs, Utilities |
-| EdTech, Data Analytics | Semiconductors / Hardware (already excluded by industry filter) |
+| All operating businesses across every sector | Financials: banks, insurers, asset managers, **closed-end funds** (EV/Rev + value-creation framework don't apply) |
+| Industrials, Consumer, Business Services, Energy, Materials, Healthcare services/devices | Shell companies / SPACs / blank-check |
+| Software, internet, gaming, media (the original scope) | Pre-revenue Biotechnology (binary clinical risk; fails the revenue floor anyway) |
+| | Semiconductors / hardware / solar (capital-intensive; existing industry filter) |
 
-**Aviv's edge zones for the post-findings tiebreaker** (NOT applied during filtering): gaming, AI/ML, SaaS, consumer software, data/analytics, enterprise sales. Where Aviv can do primary research credibly, the pitch is stronger; where he can't, it falls back to public-data-only analysis. This matters at the tiebreaker stage, not the screening stage.
+**Aviv's edge zones** (gaming, AI/ML, SaaS, consumer software, data/analytics, enterprise sales) are applied ONLY as a **post-findings tiebreaker** — never as a screen. Where Aviv can do primary research credibly the pitch is stronger; where he can't, it falls back to public-data analysis. This matters at the tiebreaker stage, not the screening stage.
 
 #### Data Availability Requirements
 
@@ -221,15 +221,15 @@ The Finviz pull is scoped to Tech + Communication Services sectors. This is a **
 3. US-headquartered (US filing regime)
 4. Operating margin > -100% (zombie cash burn excluded)
 5. EV/Revenue < 3x (value-priced)
-6. Universe scope: Tech + Communication Services sectors (where Aviv can credibly think about businesses)
+6. Universe scope: ALL sectors of operating businesses (corrected 2026-05-29 — sector/edge-fit is an end-stage tiebreaker, NOT a universe filter). Excludes only non-operating instrument types: financials/funds, SPACs/shells, pre-revenue biotech, capital-intensive hardware/semis.
 
 **Structural exclusion (Layer 2 — automated filters):**
 7. `check_voting_structure.py` ≠ DEAL_BREAKER (no founder super-voting majority)
 8. `check_deal_status.py` ≠ CLOSED or DEFINITIVE target-side
 
-**Evaluation (no Layer 3 filtering):**
-9. Run findings-mode pipeline on every Layer-2 survivor — lever findings + mispricing diagnosis + IR-vs-SEC triangulation + adversarial review
-10. Selection emerges from the *findings*: variant perception clarity, bear case absorption, catalyst concreteness — fundamental analysis, not screening shortcut
+**Evaluation (no Layer 3 filtering) — the Deep Flow is the only verdict-producing step:**
+9. Prioritize which structural survivors get the Deep Flow on neutral grounds (cheapness, under-followed, the three escalation flags: recent acquisition / net-cash-heavy / control-holder). This is queue-sorting, not a buy/avoid judgment.
+10. Run the **Deep Flow** on each (`docs/methodology.md` § The Deep Flow): SOTP + operating/driver model + DCF (on cash taxes) + Porter's + sensitivity tornado + consensus + value-creation plan + kill criteria + known-unknowns, as an agent-builds → lead-reviews → iterate loop. The buy/avoid conclusion is the *output of the Deep Flow*, framed as the discount driver (is the market's reason for the discount wrong?) + catalyst. The old shallow findings-mode / 6-criterion scoring verdict is **retired** (it produced wrong conclusions — see CHANGELOG 2026-05-29).
 
 **Tiebreaker (only if multiple candidates tie on fundamentals):**
 11. Aviv's edge fit (primary research is realistic in gaming/AI/SaaS/data/consumer)

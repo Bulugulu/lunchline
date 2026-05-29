@@ -12,8 +12,9 @@ This file routes to domain-specific docs. Read the relevant doc before working o
 | Changelog & status | [CHANGELOG.md](CHANGELOG.md) | What's been done; per-session notes |
 | Case requirements & email | [docs/case-overview.md](docs/case-overview.md) | Full brief, deliverables, evaluation criteria |
 | Part 1: Public company pitch | [docs/public-company-pitch.md](docs/public-company-pitch.md) | Selection framework, scoring, screening filters |
-| Per-candidate scoring pipeline | [docs/pipeline.md](docs/pipeline.md) | v2 multi-agent pipeline: 6-step script sequence + supporting tools |
-| Analytical methodology | [docs/methodology.md](docs/methodology.md) | Six lessons from exemplar decks; sequenced workstreams; AI usage map |
+| Per-candidate **evaluation = THE DEEP FLOW** | [docs/methodology.md](docs/methodology.md) § The Deep Flow | **The standard (and only) verdict-producing process.** SOTP + operating/driver model + DCF (on cash taxes) + Porter's + sensitivity tornado + consensus + VCP + kill criteria + known-unknowns, run as agent-builds → lead-reviews → iterate. |
+| Dossier + structural scripts (scoring SUPERSEDED) | [docs/pipeline.md](docs/pipeline.md) | Dossier + voting/deal-status scripts (still used). The 6-criterion / findings-mode *scoring* is retired — it produced wrong conclusions; use the Deep Flow. |
+| Analytical methodology | [docs/methodology.md](docs/methodology.md) | The Deep Flow; six lessons from exemplar decks; sourcing discipline (lead with the discount driver); sequenced workstreams |
 | Deck structure & design | [docs/deck-structure.md](docs/deck-structure.md) | Slide scaffolds; locked design system (Direction 1); exemplar sources |
 | Memo principles (what to include + checklist) | [docs/memo-principles.md](docs/memo-principles.md) | Required content blocks, voice rules, forbidden moves, drafting checklist |
 | Memo voice & exemplar research | [docs/memo-voice.md](docs/memo-voice.md) | Buffett/Marks/Einhorn voice patterns, plain-English vocabulary, annotated excerpts, full skeleton |
@@ -25,6 +26,7 @@ This file routes to domain-specific docs. Read the relevant doc before working o
 
 ## Working Conventions
 
+- **Candidate evaluation = the Deep Flow only — no shallow verdicts:** The mechanical screen (`framework_screen.py`) only *generates suspects*; it produces NO buy/avoid verdict. Every candidate we actually evaluate goes through the full **Deep Flow** (SOTP + operating/driver model + DCF on *cash* taxes from the cash-flow statement + sensitivity tornado + Porter's Five Forces + consensus baseline + value-creation plan + kill criteria + known-unknowns), run as an **agent-builds → lead-reviews → iterate** loop until we've extracted everything the data allows. The shallow single-bear "trap/keep" pass is **retired** — it produced wrong conclusions (it called USNA a value trap; the deep flow reversed it, then disciplined it to a calibrated answer). Spec: `docs/methodology.md` § The Deep Flow. Choosing *which* screened suspects get the deep flow is neutral prioritization (cheapness, under-followed, the three escalation flags — recent acquisition / net-cash-heavy / control-holder), never a shallow judgment.
 - **Subagent delegation:** Use subagents for research, critiquing drafts, and independent analysis to maintain objectivity
 - **Verification:** All financial data must be cross-referenced against current sources (SEC filings, earnings reports)
 - **Citations:** Every claim needs a source with an active hyperlink

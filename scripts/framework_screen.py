@@ -32,6 +32,22 @@ INCLUDE_SECTORS_FINVIZ = [
     "Communication Services",
 ]
 
+# Full Finviz sector list — used with --all-sectors to drop the sector constraint
+# (sector/edge-fit is meant to be an END-STAGE tiebreaker, NOT a universe filter).
+ALL_SECTORS = [
+    "Basic Materials",
+    "Communication Services",
+    "Consumer Cyclical",
+    "Consumer Defensive",
+    "Energy",
+    "Financial",
+    "Healthcare",
+    "Industrials",
+    "Real Estate",
+    "Technology",
+    "Utilities",
+]
+
 # More granular: industries within those sectors that match our framework
 INCLUDE_INDUSTRIES = [
     "Software - Application",
@@ -68,10 +84,11 @@ MAX_ANALYSTS = 3
 EV_REV_THRESHOLD = 1.5
 
 
-def step1_pull_universe():
+def step1_pull_universe(sectors=None, country=None):
     """Pull universe from Finviz screener via finvizfinance."""
     from finvizfinance.screener.overview import Overview
 
+    sectors = sectors or INCLUDE_SECTORS_FINVIZ
     all_results = []
 
     for cap_label, cap_filter in [
@@ -79,7 +96,7 @@ def step1_pull_universe():
         ("Micro", "Micro ($50mln to $300mln)"),
         ("Small", "Small ($300mln to $2bln)"),
     ]:
-        for sector in INCLUDE_SECTORS_FINVIZ:
+        for sector in sectors:
             print(f"  Fetching {cap_label} cap / {sector}...", end=" ", flush=True)
             try:
                 foverview = Overview()
@@ -87,6 +104,8 @@ def step1_pull_universe():
                     "Market Cap.": cap_filter,
                     "Sector": sector,
                 }
+                if country:
+                    filters_dict["Country"] = country
                 foverview.set_filter(filters_dict=filters_dict)
                 df = foverview.screener_view()
                 if df is not None and not df.empty:
@@ -431,6 +450,7 @@ def main():
     parser.add_argument("--step1-only", action="store_true", help="Only pull universe from Finviz")
     parser.add_argument("--sanity", type=str, help="Sanity check a specific ticker")
     parser.add_argument("--from-cache", action="store_true", help="Use cached universe_raw.csv instead of re-fetching")
+    parser.add_argument("--all-sectors", action="store_true", help="Drop the sector constraint: pull ALL Finviz sectors (USA-listed)")
     args = parser.parse_args()
 
     if args.sanity:
@@ -444,7 +464,10 @@ def main():
         universe = pd.read_csv(cache_path)
         print(f"Loaded {len(universe)} companies")
     else:
-        universe = step1_pull_universe()
+        if args.all_sectors:
+            universe = step1_pull_universe(sectors=ALL_SECTORS, country="USA")
+        else:
+            universe = step1_pull_universe()
 
     if universe.empty:
         print("No universe data. Exiting.")
