@@ -138,3 +138,23 @@ Running log of AI interactions for the Lunchline Partners case study.
 - Pre-EBITDA companies (e.g. EXFY current TTM) trigger an early-exit warning recommending EV/Sales or SOTP — DCF is uninformative when base FCF is negative.
 **Where AI helped:** Surfaced that the framework's many sweet-spot candidates are pre-EBITDA, which forces a methodological choice (multi-method valuation per-candidate vs. one method for all).
 **Where AI may have gaps:** Football-field chart is matplotlib-default styling — fine for working artifacts, may want a designer pass before the final deck.
+
+## Session 6: Memo system, candidate expansion, and a numbers audit (2026-05-29)
+**Tool:** Claude Code (Claude Opus 4.8, 1M context)
+
+### Prompt: build an investment-memo voice guide from exemplars
+**Purpose:** The project had a design system but no *writing* guidance; Aviv cited Buffett's letters as the reference. Dispatched a research subagent over Berkshire letters, Howard Marks memos, and an Einhorn writeup.
+**Output:** `docs/memo-voice.md` (8 voice principles with verbatim exemplar sentences, plain-English vocabulary table, inline-sourcing patterns, narrative-arc templates, annotated 1-page skeleton) + `docs/memo-principles.md` (checklist + forbidden moves).
+**Where AI helped:** Extracted concrete, imitable patterns rather than generic "write clearly" advice.
+**Where AI may have gaps:** Two source PDFs were binary-locked and substituted; noted in the doc.
+
+### Prompt: triage the 21 unevaluated Layer-2 candidates, then build pitch memos
+**Approach:** A batch script ran dossier + voting + deal-status on all 21 (16 survived); 8 parallel subagents produced findings on the 16; 10 parallel subagents drafted one-page HTML memos against the template. 11 memos total in `mockups/pitches/`.
+**Where AI helped:** Parallel fan-out turned a multi-day sweep into a single session.
+**Where AI HURT — important disclosure:** the memo-drafting agents inherited unverified numbers from the findings stage and, in places, fabricated plausible figures. A follow-up audit (below) found at least one wrong load-bearing number in **every** memo.
+
+### Prompt: verify every memo's numbers against filings (the audit)
+**Purpose:** After catching a 7x adjusted-EBITDA error in IZEA by hand, ran one verification subagent per memo — GAAP vs XBRL, non-GAAP vs the 10-K reconciliation table, derived figures recomputed.
+**Key outputs:** Four repeatable failure modes documented (data-vendor aggregate fields, non-GAAP inherited not sourced, conflation of similar-magnitude figures, period/share-count slips). Thesis-altering corrections on CDLX, MIND, SCOR, IZEA, UONE; RSSS/UPLD/SWAG/AENT survived clean. Lesson encoded in `docs/memo-principles.md`.
+**Where AI helped:** The verification pass is the most valuable single step in the session — it caught errors that read as plausible and would have survived a human read-through.
+**Where AI may have gaps / lesson:** LLM agents will state a confident specific number that is wrong; treat any agent-produced figure as unverified until checked against the primary filing. yfinance `enterpriseValue`/`marketCap`/`freeCashFlow` are especially unreliable for dual-class/earnout/preferred structures — compute from the balance sheet instead.

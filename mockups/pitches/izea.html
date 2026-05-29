@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>IZEA — Investment Memo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  :root {
+    --navy: #0A2540; --ink: #111; --paper: #FFF; --slate: #6B7280;
+    --rule: #E5E7EB; --rule-soft: #F1F3F5; --red: #C8102E; --tint: #FEF7F7;
+    --link: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #d0d5dc; font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink); font-feature-settings: "tnum" 1;
+    line-height: 1.55;
+  }
+  a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--link); }
+  a:hover { border-bottom-style: solid; }
+
+  .topbar { max-width: 880px; margin: 24px auto 16px; padding: 0 24px;
+    display: flex; justify-content: space-between; font-size: 12px; color: #555; }
+  .page { max-width: 880px; margin: 0 auto 60px; background: var(--paper);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10); padding: 48px 64px; }
+
+  /* HEADER */
+  .firm { font-size: 11px; letter-spacing: 0.2em; color: var(--navy);
+    font-weight: 700; text-transform: uppercase; }
+  .meta-row { display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 2px solid var(--navy); padding-bottom: 10px; margin-bottom: 22px; }
+  .meta-row .date { font-size: 11px; color: var(--slate); letter-spacing: 0.08em; text-transform: uppercase; }
+  .ticker { font-size: 12px; letter-spacing: 0.22em; color: var(--red); font-weight: 700; margin-bottom: 4px; }
+  .ticker a { color: var(--red); border-bottom: none; }
+  .name { font-size: 28px; font-weight: 500; color: var(--navy);
+    letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 14px; }
+
+  /* HEADLINE THESIS */
+  .headline { font-size: 15px; line-height: 1.55; color: var(--ink);
+    background: var(--tint); border-left: 3px solid var(--red);
+    padding: 14px 18px; margin: 0 0 22px; }
+  .headline .lbl { font-size: 9px; letter-spacing: 0.16em;
+    color: var(--red); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .headline p { margin: 0; }
+
+  /* KPI STRIP */
+  .kpi-strip { display: grid; grid-template-columns: repeat(6, 1fr);
+    gap: 12px; margin-bottom: 24px; }
+  .kpi { border-top: 2px solid var(--navy); padding-top: 7px; }
+  .kpi .lbl { font-size: 9px; letter-spacing: 0.1em; color: var(--slate);
+    text-transform: uppercase; font-weight: 600; margin-bottom: 3px; }
+  .kpi .val { font-size: 17px; font-weight: 600; color: var(--ink);
+    font-variant-numeric: tabular-nums; line-height: 1; }
+  .kpi .sub { font-size: 10px; color: var(--slate); margin-top: 3px; line-height: 1.3; }
+
+  /* SECTIONS */
+  h2 { font-size: 11px; letter-spacing: 0.18em; color: var(--slate);
+    text-transform: uppercase; font-weight: 700; margin: 24px 0 8px;
+    border-bottom: 1px solid var(--rule); padding-bottom: 4px; }
+  p { font-size: 13.5px; line-height: 1.65; margin: 0 0 10px; }
+  p:last-child { margin-bottom: 0; }
+
+  /* VALUE CREATION 2x2 */
+  .vcp { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+  .vcp-cell { border: 1px solid var(--rule); padding: 12px 14px; }
+  .vcp-cell .lever { font-size: 9px; letter-spacing: 0.14em;
+    color: var(--navy); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .vcp-cell p { font-size: 12.5px; line-height: 1.55; margin: 0; }
+
+  /* IRR TABLE */
+  table.calc { width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 10px 0; }
+  table.calc th, table.calc td { padding: 7px 11px;
+    border-bottom: 1px solid var(--rule-soft);
+    font-variant-numeric: tabular-nums; }
+  table.calc th { background: var(--navy); color: white;
+    text-align: right; font-size: 10px; letter-spacing: 0.08em;
+    text-transform: uppercase; font-weight: 600; }
+  table.calc td { text-align: right; }
+  table.calc th:first-child, table.calc td:first-child { text-align: left; }
+  table.calc td:first-child { font-weight: 500; }
+  table.calc tr.total td { background: var(--tint); font-weight: 700; color: var(--navy); }
+
+  /* RISKS as numbered */
+  .risks { padding-left: 20px; margin: 6px 0 0; }
+  .risks li { font-size: 13px; line-height: 1.6; margin-bottom: 8px; }
+  .risks li:last-child { margin-bottom: 0; }
+  .risks li strong { color: var(--ink); }
+
+  /* SOURCES */
+  .sources { font-size: 11px; line-height: 1.55; color: var(--slate);
+    margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--rule); }
+  .sources strong { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span><strong>Lunchline Partners</strong> — case study memo</span>
+  <span><a href="index.html">← layout options</a></span>
+</div>
+
+<div class="page">
+
+  <div class="firm">Lunchline Partners · Case Study</div>
+  <div class="meta-row">
+    <div></div>
+    <div class="date">May 28, 2026</div>
+  </div>
+
+  <div class="ticker"><a href="https://finance.yahoo.com/quote/IZEA/" target="_blank">NASDAQ : IZEA</a></div>
+  <h1 class="name">IZEA Worldwide, Inc.</h1>
+
+  <div class="headline">
+    <div class="lbl">Thesis</div>
+    <p>IZEA trades at $3.71 against $2.65 of net cash per share, so the market is valuing the operating business at $18.5 million on $29.8 million of trailing revenue and 48.2% gross margin (per the <a href="https://www.sec.gov/Archives/edgar/data/1495231/000149523126000010/" target="_blank">fiscal 2025 annual report filed March 17, 2026</a>). The activist that already holds the price floor — Brazil's GP Investments, with 17.6% of the shares (3,002,036 shares per the October 2025 proxy), two board seats, and the chair of a new Strategy & Capital Allocation Committee under the <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001495231&type=8-K&dateb=&owner=include&count=40&search_text=" target="_blank">September 6, 2024 Cooperation Agreement</a> — has already doubled the share repurchase authorization from $5 million to $10 million and seen its first tender offer fail at $2.80 in a bullish way: an $8.7 million offer cleared only 38,682 shares. The operating business does not carry the thesis on a multiple basis (adjusted EBITDA was $666 thousand in fiscal 2025 and at the marketing-services peer multiple of 8 times the operating stub is worth roughly $0.30 a share); the bull case is mechanical capital return at the floor — the $10 million buyback authorization can retire approximately 19% of shares outstanding at a $3.00 average, returning capital at a multiple of book and structurally re-rating the per-share math on the remaining cash plus the operating tail.</p>
+  </div>
+
+  <div class="kpi-strip">
+    <div class="kpi"><div class="lbl">Share price</div><div class="val">$3.71</div><div class="sub">May 27, 2026</div></div>
+    <div class="kpi"><div class="lbl">Enterprise value</div><div class="val">$18.5M</div><div class="sub">$65M cap − $46.5M cash, no debt</div></div>
+    <div class="kpi"><div class="lbl">Revenue (TTM)</div><div class="val">$29.8M</div><div class="sub">−17.5% vs prior year</div></div>
+    <div class="kpi"><div class="lbl">Net income swing</div><div class="val">+$18.9M</div><div class="sub">FY24 loss to FY25 profit</div></div>
+    <div class="kpi"><div class="lbl">Float</div><div class="val">13.2M</div><div class="sub">17.5M shares out; 25% insider</div></div>
+    <div class="kpi"><div class="lbl">Analysts</div><div class="val">0</div><div class="sub">No bulge-bracket; 1 paid IR</div></div>
+  </div>
+
+  <h2>The business</h2>
+  <p>IZEA generated $29.8 million of revenue in the trailing twelve months ended March 31, 2026 as a managed-services influencer-marketing agency that runs end-to-end paid-creator campaigns for enterprise brands including Warner Brothers, Coursera, Nestlé, Danone, Georgia-Pacific, and Stellantis (<a href="https://www.sec.gov/Archives/edgar/data/1495231/000149523126000017/" target="_blank">quarterly report filed May 12, 2026</a>; chief executive opening remarks on the <a href="https://www.sec.gov/Archives/edgar/data/1495231/000149523126000015/" target="_blank">Q1 fiscal 2026 earnings call, May 12, 2026</a>). The chief executive, Patrick Venetucci, joined the board in 2018 and was elevated from director to CEO on September 6, 2024 — the same day the founder, Ted Murphy, and the president, Ryan Schram, departed and GP Investments signed its cooperation agreement; from 2018 to 2024 Venetucci ran MERGE, a private-equity-backed marketing-services firm (FY2025 10-K, Item 10, page 283). The financial fingerprint — 99.3% managed services and 0.7% software-as-a-service (SaaS) revenue, 48.2% gross margin, $46.5 million of cash with zero debt — is identical to a small marketing agency, not the Internet Content & Information label that <a href="https://finance.yahoo.com/quote/IZEA/" target="_blank">Yahoo Finance</a> still assigns.</p>
+
+  <h2>Why this is a non-obvious pick</h2>
+  <p>By Lunchline's three tests, the situation is all three. <strong>Messy:</strong> the founder was replaced eighteen months ago concurrent with an activist cooperation agreement, the calendar-2024 financials carried a $1.9 million loss on the divestiture of a thirteen-month Australian acquisition (Hoozu, acquired December 2023 and divested December 18, 2024 for cash proceeds of $73,529 per the FY2025 10-K Note 2) on top of a separate $4.0 million goodwill impairment on the legacy IZEA reporting unit, and a second signed acquisition (The Reiman Agency) was terminated within nine weeks. <strong>Mispriced:</strong> $46.5 million of cash and no debt produces net cash of $2.65 a share against a $3.71 share price, so the market is valuing the underlying services business at $1.06 a share — about $18.5 million on $29.8 million of trailing revenue. The operating turnaround is real: fiscal 2025 net income of $42 thousand (essentially breakeven) and adjusted earnings before interest, taxes, depreciation, and amortization (EBITDA) of $666,449 are both small numbers, but they represent an $18.9 million swing in net income and an $11.75 million swing in adjusted EBITDA from the prior year's $18.85 million loss and $11.08 million adjusted EBITDA loss (FY2025 10-K, non-GAAP reconciliation). The direction is right; the absolute magnitude is small. <strong>Under-followed:</strong> no major sell-side bank covers the stock, the lone "buy" recommendation comes from Ladenburg Thalmann — the same broker the company hired to run its repurchase plan under the <a href="https://www.sec.gov/Archives/edgar/data/1495231/000149523125000123/" target="_blank">June 16, 2025 Rule 10b5-1 agreement</a> — daily dollar volume is roughly $240,000, and only two analysts asked questions on the May 12, 2026 call (neither from a bulge-bracket).</p>
+
+  <h2>What the market sees</h2>
+  <p>The screens read declining revenue: consolidated revenue fell 12.9% in fiscal 2025 to $31.2 million, the trailing twelve-month figure is down 17.5% (per <a href="https://finance.yahoo.com/quote/IZEA/key-statistics/" target="_blank">Yahoo Finance trailing data</a>), and the May 12, 2026 quarterly report disclosed a fifth straight quarter of year-over-year revenue declines. The May 13, 2025 modified Dutch auction tender offer for up to $8.7 million at a price band of $2.80 to $3.30 cleared only 38,682 shares at $2.80 (FY2025 10-K, page 245), which a passive reader treats as a thin liquidity signal rather than a price-anchor read. Customer concentration is rising, not falling: two customers accounted for 13.4% and 13.8% of revenue in 2025 versus 10.3% and 12.8% in 2024 (FY2025 10-K, revenue concentration note). The composite picture priced into the stock is a no-coverage micro-cap whose revenue is shrinking, whose buyback machinery has stalled, and whose cash will be consumed by a chief executive whose acquisition track record at the company consists of one thirteen-month write-down (Hoozu) and one nine-week terminated agreement (Reiman).</p>
+
+  <h2>What we see</h2>
+  <p>The same declining revenue line is the deliberate output of the strategic reset GP Investments forced in September 2024: management has retired one-third of the customer roster to focus on enterprise accounts, gross margin expanded from 40.9% to 48.1% (FY2025 10-K MD&A, page 154), operating expenses fell roughly $10 million or 40% year over year (Q4 FY2025 earnings call, March 17, 2026, Peter Biere's prepared remarks), and managed-services revenue ex-Hoozu declined only 2.1%. The Dutch auction did not fail — it set a floor: holders of 99.6% of the offered shares declined to sell at $2.80, which is the most expensive price-discovery exercise the company will ever run for free, and the chief financial officer disclosed on the May 12, 2026 call that the existing Rule 10b5-1 plan expires May 15, 2026 and "we expect to adopt a new plan with updated purchase parameters based on market conditions." The disclosed adjusted earnings before interest, taxes, depreciation, and amortization (EBITDA) of $666 thousand for fiscal 2025 (FY2025 10-K non-GAAP reconciliation) puts the $18.5 million operating-stub enterprise value at 28 times that figure — above the 7 to 9 times multiple at which marketing-services peers such as <a href="https://finance.yahoo.com/quote/OMC/" target="_blank">Omnicom</a> and <a href="https://finance.yahoo.com/quote/IPG/" target="_blank">Interpublic</a> trade per their <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000029989&type=10-K" target="_blank">2024 annual reports</a>, and above the roughly 8 times where the closest private comp, <a href="https://finance.yahoo.com/quote/STGW/" target="_blank">Stagwell</a> (Mark Penn's roll-up of small marketing agencies), trades. The operating-multiple leg of the variant view does not survive the actual adjusted EBITDA print; what survives is the capital-return mechanic — at $3.00 average buyback price, the $10 million authorization retires roughly 3.3 million shares (about 19% of shares outstanding) and shrinks the share count from 17.5 million to roughly 14.2 million against $36.5 million of remaining cash — note that repurchasing at $3.00 sits above the $2.65 of net cash per share, so the buyback is mildly dilutive to per-share cash (it slips to roughly $2.57) and only creates value to the extent it is executed below the operating business's intrinsic worth, with the operating tail as the upside if EBITDA continues to grow from the FY2025 base. The structural reasons the gap persists are the same reasons it is durable for a patient holder: the share count is too small for most quantitative liquidity screens, the trailing screens still book 2024's $5.9 million of write-downs — the $4.0 million legacy-IZEA goodwill impairment plus the $1.9 million Hoozu divestiture loss — as recent operating history, and the activist that ought to close the discount cannot move at a small-fund's velocity because its standstill provision in the cooperation agreement runs through 2026.</p>
+
+  <h2>What management says versus what the filings disclose</h2>
+  <p>On the May 12, 2026 quarterly call the chief executive described the customer base as "predominantly composed of large enterprise brands, including Warner Brothers, Coursera, Nestle, Danone, Georgia Pacific, and Stellantis" and noted that the company has "meaningfully reduced our total number of accounts by more than one-third." The same FY2025 10-K that anchors the prepared remarks discloses, in the revenue-concentration note, that the two largest customers accounted for 13.4% and 13.8% of revenue in 2025 against 10.3% and 12.8% in 2024 — concentration is rising as the customer count falls. The chief executive also said on the March 17, 2026 fiscal-year call that the board has been "proponents of buybacks" and described an ongoing capital-return philosophy; the FY2025 10-K at page 245 discloses that the May 2025 Dutch auction for $8.7 million returned $108,000 of stock and that cumulative repurchases under the $10 million authorization left $8.675 million still available at year-end — meaning roughly $1.3 million, or thirteen percent, had been deployed sixteen months in. On the May 12, 2026 call the chief executive again described the company as "highly active in the M&A market, engaging with a number of potential acquisition targets"; the same filing shows the prior administration's track record on the only two transactions Venetucci was on the board for — Hoozu (acquired December 2023, fully written down and divested December 2024) and The Reiman Agency (signed July 24, 2024, terminated September 30, 2024). In each case the language describing the trajectory is accurate; the language describing the trailing record understates what the filings disclose.</p>
+
+  <h2>What an operator-investor would do</h2>
+  <div class="vcp">
+    <div class="vcp-cell">
+      <div class="lever">Commercial</div>
+      <p>Quantify and disclose enterprise-account growth as a separate line. Management has said five enterprise accounts each grew past $1 million with "double or triple-digit growth" (Q4 FY2025 call), but the consolidated print buries the rate. Breaking out enterprise revenue as Stagwell does in its <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001819394&type=10-K" target="_blank">2024 10-K</a> would let screens read the +15% line that is currently hidden inside the −13% consolidated line.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Operations</div>
+      <p>Either productize the ZED operations platform as enterprise software-as-a-service or stop describing it as a product. SaaS revenue fell from 2.3% to 0.7% of total in 2025 (FY2025 10-K, Item 1 Business);<!-- UNVERIFIED: original cited "page 37246" which is not a valid page; the 2.3%→0.7% split is confirmed in the FY2025 10-K Business section --> the IR language anchors a SaaS multiple the financials do not support. Compare: <a href="https://finance.yahoo.com/quote/SPT/" target="_blank">Sprout Social</a> built a $2 billion software business out of an adjacent agency-tools angle by externalizing the platform — IZEA's option is to do that or to drop the framing.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Capital structure</div>
+      <p>Reauthorize the Rule 10b5-1 plan above the failed-tender ceiling. The May 2025 auction proved no marginal seller exists at $2.80 (FY2025 10-K, page 245). A successor plan with a $4.50 to $5.00 ceiling deploys the remaining $8.7 million of authorization into a 1.7 to 1.9 million-share retirement — roughly 10% of outstanding — and either reprices the float or, failing that, telegraphs to GP Investments that a special dividend is the next mechanic. Comparable: Vector Group's 2014–2015 sequenced specials at sub-$20.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Mergers and acquisitions</div>
+      <p>Publish acquisition criteria the way Buffett did in the 1991 Berkshire letter — six lines, each operationally testable — and refuse to deploy capital outside them. The Hoozu/Reiman record (one full write-down, one terminated deal in nine weeks) is the reason every dollar of M&A capital is currently discounted by the market. The comparable transaction is not the Stagwell roll-up Venetucci references; it is Stagwell's published target screen, which the company discloses in its <a href="https://stagwellglobal.com/investors/" target="_blank">investor presentations</a>.</p>
+    </div>
+  </div>
+  <p style="margin-top:10px;">The first three are in management's stated hand. The fourth is the one the prior twelve months have not given the market a reason to trust.</p>
+
+  <h2>What it is worth</h2>
+  <table class="calc">
+    <thead><tr><th>Three-year scenario</th><th>FY2028 adj. EBITDA</th><th>Multiple</th><th>Enterprise value</th><th>Share price</th><th>Return per year</th></tr></thead>
+    <tbody>
+      <tr><td>Bear — operating stalls at FY2025 run-rate</td><td>$0.7M</td><td>4.0x</td><td>$3M</td><td>$2.82</td><td>−9%</td></tr>
+      <tr class="total"><td>Base — modest scale to $2M, peer multiple, $10M buyback at $3</td><td>$2.0M</td><td>8.0x</td><td>$16M</td><td>$3.70</td><td>0%</td></tr>
+      <tr><td>Bull — M&A roll-up scales EBITDA to $5M, 10x exit</td><td>$5.0M</td><td>10.0x</td><td>$50M</td><td>$6.10</td><td>+18%</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:11.5px; color:var(--slate);">Share price = (enterprise value + remaining net cash) divided by shares outstanding. Base and bull assume the existing $10 million repurchase authorization is executed at roughly $3.00 average, retiring approximately 3.3 million shares and leaving 14.2 million outstanding against $36.5 million of remaining cash. <strong>Read carefully:</strong> the base case is no better than today's price even with EBITDA tripling to $2 million, because the operating stub is small relative to the cash, and the cash-return mechanic only adds per-share value if the buyback is executed below intrinsic — the bull case requires both successful operating scale and a sale-process exit multiple, not a public re-rating alone.</p>
+
+  <h2>What would have to go wrong</h2>
+  <ol class="risks">
+    <li>If either of the two 13%-customers does not renew at the end of its current commitment window, fiscal 2026 revenue takes a roughly $4 million hit on a $30 million base — and given the seven-month average bookings-to-revenue cycle the chief financial officer described on the May 12, 2026 call, replacement revenue lags by two to three quarters. The top-2 concentration figure to watch is the revenue-concentration disclosure in the FY2025 10-K: the two largest customers were 13.4% and 13.8% in 2025 (27.2% combined), up from 10.3% and 12.8% in 2024 (23.1% combined).<!-- UNVERIFIED: 27.2%/23.1% are summed from the disclosed 13.4%+13.8% and 10.3%+12.8%; the filing discloses each customer separately, not the combined total. Specific page numbers cited elsewhere (245, 154, 209, 283) are navigation references not verifiable against the flat HTML, though the underlying figures are all confirmed. --></li>
+    <li>If the successor Rule 10b5-1 plan adopted after May 15, 2026 prices at or below the failed-tender clearing level of $2.80, the buyback functions as a price floor rather than a closure mechanic, and the cash-versus-cap discount persists for the full standstill period. The CFO said on the May 12, 2026 call that a new plan is being designed with "updated purchase parameters"; the ceiling is the variable to watch.</li>
+    <li>If the next acquisition closes at more than roughly one times revenue or fails diligence within twelve months — the trajectory of Hoozu, a roughly $2.5 million acquisition ($595,411 cash, 726,210 shares worth $1.75 million, and $175,000 of deferred consideration) that the company purchased in December 2023 and divested thirteen months later in December 2024 for cash proceeds of $73,529, booking a $1.9 million net loss on the sale (FY2025 10-K, Note 2) — the cash cushion that anchors the entire thesis erodes without a re-rating, and the variant view collapses into the consensus view at a worse entry price.</li>
+  </ol>
+
+  <h2>What would confirm it</h2>
+  <p>Three observations across the next four quarterly filings would confirm the case, and the failure of any one of them would dismantle it cleanly. First, the successor Rule 10b5-1 plan disclosed after May 15, 2026 prices its repurchase ceiling above $4.00 — anything below that level signals the board is not yet willing to use the cash to close the discount it has identified. Second, the second-half fiscal 2026 quarterly print shows year-over-year revenue growth on the consolidated line, confirming that the strategic reset Venetucci described on the May 12, 2026 call ("the completion of our exit from the SMB model and the full transition to an enterprise focused business") has translated to the income statement and not just the press release. Third, at least one acquisition closes inside published criteria, or — equally informative — GP Investments files an amended Schedule 13D disclosing the standstill expiry or any negotiated extension, which would name the window in which a take-private bid becomes procedurally available. Each item is verifiable from public filings or earnings transcripts. Whether the disclosed reset is enough, and whether the activist's playbook closes the gap inside an investor's holding period, is a judgment the reader can make from the same documents we did.</p>
+
+  <div class="sources">
+    <strong>Sources:</strong> <a href="https://www.sec.gov/Archives/edgar/data/1495231/000149523126000010/" target="_blank">FY2025 10-K</a> (March 17, 2026) · <a href="https://www.sec.gov/Archives/edgar/data/1495231/000149523126000017/" target="_blank">Q1 FY2026 10-Q</a> (May 12, 2026) · <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001495231&type=DEF+14A" target="_blank">2025 proxy statement</a> (October 29, 2025) · <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001495231&type=8-K" target="_blank">Cooperation Agreement 8-K</a> (September 10, 2024) · Q1 FY2026 / Q4 FY2025 / Q3 FY2025 earnings call transcripts (internal: <code>data/dossiers/izea/transcripts/</code>) · <a href="https://finance.yahoo.com/quote/IZEA/" target="_blank">Yahoo Finance quote page</a>
+  </div>
+
+</div>
+
+</body>
+</html>

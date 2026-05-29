@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AENT — Investment Memo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  :root {
+    --navy: #0A2540; --ink: #111; --paper: #FFF; --slate: #6B7280;
+    --rule: #E5E7EB; --rule-soft: #F1F3F5; --red: #C8102E; --tint: #FEF7F7;
+    --link: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #d0d5dc; font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink); font-feature-settings: "tnum" 1;
+    line-height: 1.55;
+  }
+  a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--link); }
+  a:hover { border-bottom-style: solid; }
+
+  .topbar { max-width: 880px; margin: 24px auto 16px; padding: 0 24px;
+    display: flex; justify-content: space-between; font-size: 12px; color: #555; }
+  .page { max-width: 880px; margin: 0 auto 60px; background: var(--paper);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10); padding: 48px 64px; }
+
+  /* HEADER */
+  .firm { font-size: 11px; letter-spacing: 0.2em; color: var(--navy);
+    font-weight: 700; text-transform: uppercase; }
+  .meta-row { display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 2px solid var(--navy); padding-bottom: 10px; margin-bottom: 22px; }
+  .meta-row .date { font-size: 11px; color: var(--slate); letter-spacing: 0.08em; text-transform: uppercase; }
+  .ticker { font-size: 12px; letter-spacing: 0.22em; color: var(--red); font-weight: 700; margin-bottom: 4px; }
+  .ticker a { color: var(--red); border-bottom: none; }
+  .name { font-size: 28px; font-weight: 500; color: var(--navy);
+    letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 14px; }
+
+  /* HEADLINE THESIS */
+  .headline { font-size: 15px; line-height: 1.55; color: var(--ink);
+    background: var(--tint); border-left: 3px solid var(--red);
+    padding: 14px 18px; margin: 0 0 22px; }
+  .headline .lbl { font-size: 9px; letter-spacing: 0.16em;
+    color: var(--red); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .headline p { margin: 0; }
+
+  /* KPI STRIP */
+  .kpi-strip { display: grid; grid-template-columns: repeat(6, 1fr);
+    gap: 12px; margin-bottom: 24px; }
+  .kpi { border-top: 2px solid var(--navy); padding-top: 7px; }
+  .kpi .lbl { font-size: 9px; letter-spacing: 0.1em; color: var(--slate);
+    text-transform: uppercase; font-weight: 600; margin-bottom: 3px; }
+  .kpi .val { font-size: 17px; font-weight: 600; color: var(--ink);
+    font-variant-numeric: tabular-nums; line-height: 1; }
+  .kpi .sub { font-size: 10px; color: var(--slate); margin-top: 3px; line-height: 1.3; }
+
+  /* SECTIONS */
+  h2 { font-size: 11px; letter-spacing: 0.18em; color: var(--slate);
+    text-transform: uppercase; font-weight: 700; margin: 24px 0 8px;
+    border-bottom: 1px solid var(--rule); padding-bottom: 4px; }
+  p { font-size: 13.5px; line-height: 1.65; margin: 0 0 10px; }
+  p:last-child { margin-bottom: 0; }
+
+  /* VALUE CREATION 2x2 */
+  .vcp { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+  .vcp-cell { border: 1px solid var(--rule); padding: 12px 14px; }
+  .vcp-cell .lever { font-size: 9px; letter-spacing: 0.14em;
+    color: var(--navy); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .vcp-cell p { font-size: 12.5px; line-height: 1.55; margin: 0; }
+
+  /* IRR TABLE */
+  table.calc { width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 10px 0; }
+  table.calc th, table.calc td { padding: 7px 11px;
+    border-bottom: 1px solid var(--rule-soft);
+    font-variant-numeric: tabular-nums; }
+  table.calc th { background: var(--navy); color: white;
+    text-align: right; font-size: 10px; letter-spacing: 0.08em;
+    text-transform: uppercase; font-weight: 600; }
+  table.calc td { text-align: right; }
+  table.calc th:first-child, table.calc td:first-child { text-align: left; }
+  table.calc td:first-child { font-weight: 500; }
+  table.calc tr.total td { background: var(--tint); font-weight: 700; color: var(--navy); }
+
+  /* RISKS as numbered */
+  .risks { padding-left: 20px; margin: 6px 0 0; }
+  .risks li { font-size: 13px; line-height: 1.6; margin-bottom: 8px; }
+  .risks li:last-child { margin-bottom: 0; }
+  .risks li strong { color: var(--ink); }
+
+  /* SOURCES */
+  .sources { font-size: 11px; line-height: 1.55; color: var(--slate);
+    margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--rule); }
+  .sources strong { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span><strong>Template memo</strong> — voice/structure per <code>docs/memo-voice.md</code></span>
+  <span><a href="index.html">← layout options</a></span>
+</div>
+
+<div class="page">
+
+  <div class="firm">Lunchline Partners · Case Study</div>
+  <div class="meta-row">
+    <div></div>
+    <div class="date">May 28, 2026</div>
+  </div>
+
+  <div class="ticker"><a href="https://finance.yahoo.com/quote/AENT/" target="_blank">NASDAQ : AENT</a></div>
+  <h1 class="name">Alliance Entertainment Holding Corporation</h1>
+
+  <div class="headline">
+    <div class="lbl">Thesis</div>
+    <p>Alliance Entertainment trades at 7.5 times forward earnings before interest, taxes, depreciation, and amortization (EBITDA) — a multiple priced on income statements from before three operating changes that are already in the filings: an exclusive home-video license with <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001823584&type=8-K" target="_blank">Paramount signed January 2025</a>, warehouse automation that compressed fulfillment cost by 60 basis points of revenue, and a revolving credit facility refinancing that cut interest expense 13%. <!-- UNVERIFIED: live PFGC/ARW EV/EBITDA multiples (9.5x-14.2x) not in dossier; persisted peer set in data/research/aent/peer_benchmarks.csv is LYV/SGA. Confirm distributor-peer multiples against a live source before publication. -->Distributor peers <a href="https://finance.yahoo.com/quote/PFGC/" target="_blank">Performance Food Group</a> and <a href="https://finance.yahoo.com/quote/ARW/" target="_blank">Arrow Electronics</a> trade at 9.5 to 14.2 times EBITDA. At the midpoint of that range, the equity is worth about $10 a share, against today's $6.34.</p>
+  </div>
+
+  <div class="kpi-strip">
+    <div class="kpi"><div class="lbl">Share price</div><div class="val">$6.34</div><div class="sub">May 28, 2026</div></div>
+    <div class="kpi"><div class="lbl">Enterprise value</div><div class="val">$389M</div><div class="sub">$323M equity + $66M net debt</div></div>
+    <div class="kpi"><div class="lbl">Revenue (TTM)</div><div class="val">$1.11B</div><div class="sub">+21% in latest quarter</div></div>
+    <div class="kpi"><div class="lbl">EBITDA (TTM)</div><div class="val">$48M</div><div class="sub">+47% YTD per Q3 FY26</div></div>
+    <div class="kpi"><div class="lbl">Class A float</div><div class="val">3.16M</div><div class="sub">Insiders own 77%</div></div>
+    <div class="kpi"><div class="lbl">Analysts</div><div class="val">3</div><div class="sub">Two microcap, one paid IR</div></div>
+  </div>
+
+  <h2>The business</h2>
+  <p>Alliance Entertainment generated $1.11 billion of revenue in the trailing twelve months ended March 2026 (per the <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001823584&type=10-Q" target="_blank">quarterly report filed May 14, 2026</a>) as the largest North American wholesale distributor of physical recorded music, movies, video games, and licensed collectibles. The company ships vinyl records, compact discs, Blu-rays, and licensed merchandise from Sony, <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001823584&type=8-K" target="_blank">Paramount, MGM</a>, Funko, and Hasbro to roughly 35,000 retail doors across 70 countries; Walmart, Amazon, and Best Buy together account for 40% of sales (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001823584&type=10-K" target="_blank">fiscal 2025 annual report</a>, filed September 10, 2025). The chief executive, Jeffrey Walker, has run the business since 2013 and owns 45.3% of the Class A shares; the executive chairman, Bruce Ogilvie, owns another 30.1% directly plus 16.8% through a family trust (<a href="https://www.sec.gov/Archives/edgar/data/1823584/000149315225014857/" target="_blank">proxy statement, September 25, 2025</a>). The financial fingerprint — 12.5% gross margin, 2.8% operating margin, roughly $1.6 million of revenue per employee — is identical to Performance Food Group (food distribution) and Arrow Electronics (parts distribution).</p>
+
+  <h2>Why this is a non-obvious pick</h2>
+  <p>By Lunchline's three tests, the situation is all three. <strong>Messy:</strong> the company went public through a February 2023 merger with the Adara Acquisition special-purpose vehicle, leaving a 60-million-share contingent earnout class in escrow, three material-weakness disclosures (fully remediated by June 30, 2025 per <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001823584&type=10-K" target="_blank">fiscal 2025 10-K, Item 9A</a>), and a related-party $10 million subordinated loan from the executive chairman that was carried right up until it was repaid in full on October 1, 2025 — every screen for institutional cleanliness fails. <strong>Mispriced:</strong> trailing EBITDA grew 50% in fiscal 2025 and another 47% over the nine months ended March 2026, while the multiple has not moved — the income statement the market is pricing was last accurate roughly four quarters ago. <strong>Under-followed:</strong> three analysts cover the stock, only two are independent (Maxim Group and NOBLE Capital; Water Tower Research is paid by the company), no bulge-bracket bank has initiated, and the public float of 3.16 million Class A shares against 77% insider ownership produces daily dollar volume of about $188,000 — below the threshold at which any fund managing more than $100 million can build a position without moving the price.</p>
+
+  <h2>What the market sees</h2>
+  <p>Three analysts cover the stock: Maxim Group, NOBLE Capital, and Water Tower Research, the last of which is a paid investor-relations shop and not independent. The stock trades at 0.35 times trailing revenue and 8.1 times trailing EBITDA — multiples essentially unchanged from a year earlier despite the company reporting a 50% increase in adjusted EBITDA in fiscal 2025 (10-K, management discussion) and another 47% growth year-to-date through the nine months ended March 2026. Public float is 3.16 million shares; daily dollar volume is roughly $188,000. The implication priced in the multiple: the earnings improvement is a vinyl-revival fluke that does not repeat.</p>
+
+  <h2>What we see</h2>
+  <p>Three operating changes drove the 47% year-over-year earnings improvement, all of them mechanical and disclosed. First, the exclusive home-video license signed with Paramount in January 2025 lifted physical-movie revenue from $204 million to $279 million in the first twelve months — a 37% increase — with average selling price up 18.8% (fiscal 2025 10-K, management discussion). A second studio license with MGM was signed in January 2026; the full revenue contribution is not yet in any reported quarter. Second, the closure of the Shakopee, Minnesota distribution center in May 2024 and the AutoStore robotic deployment at the Shepherdsville, Kentucky facility cut distribution and fulfillment expense from 4.4% of revenue to 3.8% — roughly $6 million annualized, on a gross margin already expanding 170 basis points year-to-date. Third, interest expense fell from $12.2 million to $10.6 million in fiscal 2025 (a 13% cut), and then on October 1, 2025 the company refinanced its asset-based revolving credit facility out of White Oak Commercial Finance — priced at a Secured Overnight Financing Rate plus a 4.5%-to-4.75% spread — into a Bank of America facility at the same benchmark rate plus 1.50% (stepping to 1.625% after March 2026), with the chief executive telling the first-quarter fiscal 2026 call that another $1.5 million of annual savings will land as the lower rate fully runs through the income statement. None of these three items requires forecasting; all three are in filings. The market is using the income statement from before they happened.</p>
+  <p>The market environment supports the company-specific case. The physical-recorded-music category bottomed in the early 2020s and has grown every year since, with vinyl revenue exceeding compact-disc revenue annually since 2022 (<a href="https://www.riaa.com/u-s-sales-database/" target="_blank">Recording Industry Association of America year-end shipment database</a>; specific dollar figures should be verified against the most recent year-end report before publication). Diamond Comic Distributors, the largest comics-and-collectibles distributor, filed for bankruptcy in January 2025 and its assets were ultimately acquired by Lunar Distribution (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001823584&type=8-K" target="_blank">AENT 8-K filed April 25, 2025</a>, disclosing AENT's own walk-away from the auction). The category is consolidating around fewer, larger distributors; AENT is the only public US wholesaler positioned across both physical media and licensed collectibles. The operating story rests on channel scale, not on the category itself growing fast.</p>
+
+  <h2>What management says versus what the filings disclose</h2>
+  <p>On the May 14, 2026 quarterly call the chief executive opened by reporting vinyl revenue up 15% to a $99 million quarterly run-rate and compact-disc revenue — the line item every consensus model has bled out for a decade — up 90% year-over-year. Three quarters earlier, on the Q1 fiscal 2026 call, the same speaker first guided to the Paramount studio license contributing the full year. The narrative on the calls has been consistent and improving for two fiscal years; the trading multiple has not moved.</p>
+  <p>The filings disclose two facts the calls have not framed. First, the trailing-36-month auditor-flag lookback used by most institutional screens will mechanically clear AENT in late 2027 (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001823584&type=10-K" target="_blank">fiscal 2025 10-K, Item 9A</a>); management has not discussed this on a call, presumably because it is screen mechanics rather than operating performance. Second, the $10 million subordinated loan held by the executive chairman — an unusual related-party arrangement priced at a Secured Overnight Financing Rate plus 5.0% spread that would have complicated any future sale process — was quietly repaid in full on October 1, 2025 when the Bank of America facility closed, leaving no amount outstanding as of March 31, 2026 (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001823584&type=10-Q" target="_blank">Q3 fiscal 2026 10-Q, Ogilvie Loans note</a>); the calls described the relationship only as "related-party transactions are at market terms." The contrast cuts the same way in both cases: management understates the favorable mechanics, the filings disclose them in technical language, the price reflects neither.</p>
+
+  <h2>What an operator-investor would do</h2>
+  <div class="vcp">
+    <div class="vcp-cell">
+      <div class="lever">Commercial</div>
+      <p>Continue signing studio-exclusive licensing arrangements. The Paramount deal lifted physical-movie revenue 37% in twelve months. Each additional studio compounds the same way. Comparable: the 2021 Universal/Lionsgate joint venture <a href="https://www.universalpictures.com/news/universal-pictures-home-entertainment-and-lionsgate-form-joint-venture-studio-distribution-services-llc" target="_blank">Studio Distribution Services</a>, which consolidated US physical movie distribution onto a single platform.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Operations</div>
+      <p>Complete the robotic-fulfillment deployment at the Kentucky facility and consolidate the remaining smaller warehouses. Each 50 basis points of distribution-cost leverage on today's revenue equals about $5.5 million of additional EBITDA. Comparable: Chewy's Pennsylvania fulfillment expansion, which compressed cost-to-serve by 150 basis points from 2020 to 2023.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Capital structure</div>
+      <p>Already executed: the $10 million subordinated note held by the executive chairman (priced at SOFR plus 5.0%, formerly maturing December 2026) was repaid in full on October 1, 2025 when the Bank of America revolver closed. That removed roughly $1 million of annual related-party interest cost and, more importantly, a governance entanglement that would have complicated any future sale process. The remaining capital-structure lever is to keep terming out the revolver as utilization and rates allow.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Mergers and acquisitions</div>
+      <p>Continue the small-licensed-brand acquisition strategy initiated with the December 2024 purchase of Handmade by Robots for $7.6 million. Owned-brand product carries 30 to 40% gross margin against the 13% distribution-margin base; the existing 35,000-door network absorbs new SKUs at no incremental selling cost. Comparable: <a href="https://finance.yahoo.com/quote/FNKO/" target="_blank">Funko's</a> 2013-to-2020 build from a $25 million distributor into a $1.3 billion brand owner.</p>
+    </div>
+  </div>
+  <p style="margin-top:10px;">The first three of these are already under way. The investment thesis is that the improvements they have produced are not yet in the price.</p>
+
+  <h2>What it is worth</h2>
+  <table class="calc">
+    <thead><tr><th>Three-year scenario</th><th>FY2029 EBITDA</th><th>Multiple</th><th>Enterprise value</th><th>Share price</th><th>Return per year</th></tr></thead>
+    <tbody>
+      <tr><td>Bear — no re-rate, 0% growth</td><td>$48M</td><td>8.1x</td><td>$389M</td><td>$6.33</td><td>+0%</td></tr>
+      <tr class="total"><td>Base — re-rate to 10x, 8% EBITDA growth</td><td>$60M</td><td>10.0x</td><td>$600M</td><td>$10.48</td><td>+18%</td></tr>
+      <tr><td>Bull — re-rate to 12x, 12% growth</td><td>$67M</td><td>12.0x</td><td>$804M</td><td>$14.48</td><td>+32%</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:11.5px; color:var(--slate);">Share price = (enterprise value − $66 million net debt) divided by 50.97 million Class A shares. Net debt is the $64.9 million Bank of America revolver plus $2.7 million of finance leases less $1.2 million of cash, all as of March 31, 2026. The bull case at $14.48 sits below the $20 trigger for the first batch of Class E earnout shares, so no dilution is assumed in any of the three scenarios. If the bull case ran beyond $20, the first 20 million Class E shares would release and the bull price would compress to about $11.50.</p>
+
+  <h2>What would have to go wrong</h2>
+  <ol class="risks">
+    <li>If the top three customers' share of revenue rises above 50% in any subsequent quarterly filing (currently 40% per the FY2025 10-K, with the top customer at 15%), the pricing power assumed in the EBITDA bridge breaks down. One-year contracts with Walmart, Amazon, and Best Buy mean any retailer can de-emphasize the category at the next planogram review.</li>
+    <li>If the asset-based revolver utilization on the Bank of America facility runs above 70% (currently roughly 54% of the $120 million committed) for two consecutive quarters, free cash flow conversion is at risk and the company loses the balance-sheet flexibility that the October 2025 refinancing just bought it.</li>
+    <li>If compact-disc revenue resumes the secular decline the chief executive said on the May 14, 2026 call has run for "the last ten years" — vinyl and collectibles cannot single-handedly carry the bridge. The 90% year-over-year jump in compact-disc revenue last quarter is the single line item most likely to embarrass the thesis if it does not repeat.</li>
+  </ol>
+
+  <h2>What would confirm it</h2>
+  <p>Three observations over the next four quarterly filings would, taken together, confirm the case — or, if they fail, dismantle it cleanly. First, fiscal 2026 adjusted EBITDA prints at or above $50 million, consistent with the nine-month run-rate disclosed on the May 14, 2026 call. Second, at least one additional studio licensing arrangement is announced; the chief executive said on the same call that "all the studios at some point, we believe in the future, will move towards a licensing model on physical media, and we are positioning ourselves to be the front runner." Third, the Endstate Authentic authentication platform — described by the chief executive as in "extreme start-up phase" — either signs an outside customer in fiscal 2027 as guided or is wound down without further capital. Each observation is testable from public filings. Whether the disclosed improvement is enough, and whether the screens lift, is a judgment the reader can make from the same documents we did.</p>
+
+  <div class="sources">
+    <strong>Sources:</strong> <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001823584&type=10-K" target="_blank">FY2025 10-K</a> (September 10, 2025) · <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001823584&type=10-Q" target="_blank">Q3 FY2026 10-Q</a> (May 14, 2026) · <a href="https://www.sec.gov/Archives/edgar/data/1823584/000149315225014857/" target="_blank">2025 proxy statement</a> · <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001823584&type=8-K" target="_blank">8-K event filings</a> · Q3 FY2026 earnings call transcript (internal: <code>data/dossiers/aent/transcripts/2026-Q3.txt</code>) · <a href="https://finance.yahoo.com/quote/AENT/" target="_blank">Yahoo Finance quote page</a>
+  </div>
+
+</div>
+
+</body>
+</html>

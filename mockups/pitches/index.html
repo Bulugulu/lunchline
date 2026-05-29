@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pitch Tournament — Bracket</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  :root {
+    --navy: #0A2540; --ink: #111; --paper: #FFF; --slate: #6B7280;
+    --rule: #E5E7EB; --rule-soft: #F1F3F5; --red: #C8102E; --tint: #FEF7F7;
+    --good: #1F7A4D; --bad: #B53F2A; --link: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #d0d5dc; font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink); font-feature-settings: "tnum" 1;
+  }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .page { max-width: 1360px; margin: 24px auto 60px; background: var(--paper);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10); padding: 40px 48px; }
+
+  .firm { font-size: 11px; letter-spacing: 0.2em; color: var(--navy);
+    font-weight: 700; text-transform: uppercase; }
+  .head { display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 2px solid var(--navy); padding-bottom: 12px; margin-bottom: 24px; }
+  .head .date { font-size: 11px; color: var(--slate); letter-spacing: 0.08em; text-transform: uppercase; }
+  h1 { font-size: 28px; font-weight: 500; color: var(--navy);
+    letter-spacing: -0.02em; line-height: 1.1; margin: 18px 0 6px; }
+  .sub { font-size: 13.5px; color: var(--slate); margin: 0 0 28px; max-width: 90%; line-height: 1.55; }
+
+  h2 { font-size: 11px; letter-spacing: 0.18em; color: var(--slate);
+    text-transform: uppercase; font-weight: 700; margin: 28px 0 12px;
+    border-bottom: 1px solid var(--rule); padding-bottom: 5px; }
+
+  /* BRACKET TABLE */
+  table.bracket { width: 100%; border-collapse: collapse;
+    font-size: 12.5px; margin-bottom: 28px; }
+  table.bracket th { background: var(--navy); color: white; padding: 9px 10px;
+    text-align: left; font-size: 10px; letter-spacing: 0.08em;
+    text-transform: uppercase; font-weight: 600; vertical-align: bottom; }
+  table.bracket th.num { text-align: right; }
+  table.bracket td { padding: 12px 10px; border-bottom: 1px solid var(--rule);
+    vertical-align: top; font-variant-numeric: tabular-nums; line-height: 1.45; }
+  table.bracket td.num { text-align: right; }
+  table.bracket td.tk { font-weight: 700; color: var(--navy); white-space: nowrap; }
+  table.bracket td.tk a { color: var(--navy); }
+  table.bracket td.tk .name { display: block; font-weight: 400; color: var(--slate);
+    font-size: 10.5px; margin-top: 2px; }
+  table.bracket td.thesis { font-size: 12px; line-height: 1.5; max-width: 360px; }
+  table.bracket td.risk { font-size: 11.5px; color: var(--slate);
+    line-height: 1.45; max-width: 220px; }
+  table.bracket td .irr { font-weight: 700; }
+  table.bracket td .irr.pos { color: var(--good); }
+  table.bracket td .irr.neg { color: var(--bad); }
+  table.bracket td .archetype {
+    display: inline-block; font-size: 9px; letter-spacing: 0.1em;
+    text-transform: uppercase; font-weight: 700; color: var(--paper);
+    background: var(--navy); padding: 2px 6px; border-radius: 2px;
+    margin-top: 4px;
+  }
+  table.bracket td .archetype.cash-trap { background: #1F7A4D; }
+  table.bracket td .archetype.takeout { background: #6B21A8; }
+  table.bracket td .archetype.compounder { background: #0E7490; }
+  table.bracket td .archetype.bond { background: #4338CA; }
+  table.bracket td .archetype.misclass { background: #C8102E; }
+  table.bracket td .archetype.distress { background: var(--bad); }
+  table.bracket td .archetype.turnaround { background: #B45309; }
+  table.bracket td .archetype.inflection { background: #047857; }
+  table.bracket td .archetype.activist { background: #7C2D12; }
+
+  table.bracket td.action a {
+    color: var(--link); font-size: 11.5px; font-weight: 600;
+    white-space: nowrap;
+  }
+
+  /* MULTIPLES MATRIX */
+  table.matrix { width: 100%; border-collapse: collapse;
+    font-size: 12px; margin-top: 14px; }
+  table.matrix th { background: var(--navy); color: white;
+    padding: 8px 9px; font-size: 10px; letter-spacing: 0.08em;
+    text-transform: uppercase; font-weight: 600; text-align: right; }
+  table.matrix th:first-child { text-align: left; }
+  table.matrix td { padding: 8px 9px; border-bottom: 1px solid var(--rule-soft);
+    font-variant-numeric: tabular-nums; text-align: right; font-size: 12px; }
+  table.matrix td:first-child { text-align: left; font-weight: 600; color: var(--navy); }
+  table.matrix tr:nth-child(even) { background: var(--rule-soft); }
+
+  .legend { font-size: 11px; color: var(--slate); line-height: 1.5; margin-top: 10px; }
+  .legend strong { color: var(--ink); }
+
+  /* ARCHETYPE LEGEND */
+  .archetype-legend { display: flex; flex-wrap: wrap; gap: 8px 12px;
+    margin: 6px 0 22px; font-size: 11px; }
+  .archetype-legend span { display: inline-flex; align-items: center; gap: 5px;
+    color: var(--ink); }
+  .archetype-legend span::before { content: ""; display: inline-block;
+    width: 10px; height: 10px; border-radius: 2px; }
+  .leg-cash::before { background: #1F7A4D; }
+  .leg-takeout::before { background: #6B21A8; }
+  .leg-comp::before { background: #0E7490; }
+  .leg-bond::before { background: #4338CA; }
+  .leg-mis::before { background: #C8102E; }
+  .leg-turn::before { background: #B45309; }
+  .leg-infl::before { background: #047857; }
+  .leg-act::before { background: #7C2D12; }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="firm">Lunchline Partners · Case Study</div>
+  <div class="head">
+    <h1 style="margin:0;">Pitch Tournament — Bracket</h1>
+    <div class="date">As of May 28, 2026</div>
+  </div>
+
+  <p class="sub">Eleven candidates survived structural triage and findings dispatch. Each ticker has a full one-page memo following the canonical template (voice and structure per <code><a href="../../docs/memo-voice.md">docs/memo-voice.md</a></code>). Below: cross-comparison table grouped by investment archetype, then side-by-side multiples matrix.</p>
+
+  <h2>Bracket — 11 candidates by archetype</h2>
+
+  <div class="archetype-legend">
+    <span class="leg-cash">Cash trap (net cash &gt; market cap)</span>
+    <span class="leg-takeout">Takeout / preferred clock</span>
+    <span class="leg-comp">Compounder</span>
+    <span class="leg-bond">Bond-paper rerate</span>
+    <span class="leg-mis">Sector / classification mispricing</span>
+    <span class="leg-turn">Turnaround / inflection</span>
+    <span class="leg-infl">Operating inflection</span>
+    <span class="leg-act">Activist / strategic-review</span>
+  </div>
+
+  <table class="bracket">
+    <thead>
+      <tr>
+        <th>Ticker</th>
+        <th>One-line thesis</th>
+        <th class="num">EV</th>
+        <th class="num">Base IRR</th>
+        <th>Headline risk</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td class="tk"><a href="izea.html">IZEA</a><span class="name">IZEA Worldwide</span>
+          <div class="archetype cash-trap">cash trap</div></td>
+        <td class="thesis">Net cash ($46.5M) exceeds market cap by ~$25M with zero debt; GP Investments holds 17.4% with two board seats and chairs a new Strategy &amp; Capital Allocation Committee per Sept 2024 Cooperation Agreement; failed May 2025 Dutch auction proved no marginal sellers at $2.80. <strong>But FY2025 adjusted EBITDA was only $666 thousand</strong> — operating multiple is above peer range, not below; thesis collapses to capital return + sale optionality, not public re-rate.</td>
+        <td class="num">$18M</td>
+        <td class="num"><span class="irr">0%</span></td>
+        <td class="risk">Operating stub too small for peer-multiple uplift; bull case needs M&amp;A roll-up to scale EBITDA to $5M+ and a sale exit.</td>
+        <td class="action"><a href="izea.html">Open memo →</a></td>
+      </tr>
+
+      <tr>
+        <td class="tk"><a href="upld.html">UPLD</a><span class="name">Upland Software</span>
+          <div class="archetype takeout">takeout clock</div></td>
+        <td class="thesis">Equity is structurally hostage to HGGC Series A Preferred ($135M LP, 4.5% paid-in-kind rising to 7% after Aug 2029, $172M change-of-control put). CEO transition April 30, 2026 — founder McDonald → Sean Nathaniel (ex-DryvIQ, sponsor CV) — sets up take-private in 18-24 months.</td>
+        <td class="num">$370M</td>
+        <td class="num"><span class="irr pos">+28%</span></td>
+        <td class="risk">Covenant trip at 6x leverage; HGGC could push terms lower.</td>
+        <td class="action"><a href="upld.html">Open memo →</a></td>
+      </tr>
+
+      <tr>
+        <td class="tk"><a href="rsss.html">RSSS</a><span class="name">Research Solutions</span>
+          <div class="archetype comp">compounder</div></td>
+        <td class="thesis">STM vertical SaaS mis-tagged as "Software-Application" with single-digit headline growth, but Platforms segment +14% at 88% gross margin and B2C-to-B2B pipeline grew 20x in 12 months at zero customer-acquisition cost. Rule-of-40 at 34, progressing to 40.</td>
+        <td class="num">$64M</td>
+        <td class="num"><span class="irr pos">+24%</span></td>
+        <td class="risk">Net retention 91-93% (still sub-100%); blocks premium SaaS multiples until clears 100%.</td>
+        <td class="action"><a href="rsss.html">Open memo →</a></td>
+      </tr>
+
+      <tr>
+        <td class="tk"><a href="option-a-scroll.html">AENT</a><span class="name">Alliance Entertainment</span>
+          <div class="archetype infl">operating inflection</div></td>
+        <td class="thesis">Wholesale distributor trading at 7.5x forward EBITDA on income statements from before three operating changes already in filings: Paramount license (Jan 2025), warehouse automation (-60 basis points fulfillment cost), revolver refinance (-13% interest). Distributor peers PFGC/ARW at 9.5-14.2x.</td>
+        <td class="num">$389M</td>
+        <td class="num"><span class="irr pos">+25%</span></td>
+        <td class="risk">Variant overlaps mgmt's own IR pitch; physical media secular drag.</td>
+        <td class="action"><a href="option-a-scroll.html">Open memo →</a></td>
+      </tr>
+
+      <tr>
+        <td class="tk"><a href="mind.html">MIND</a><span class="name">MIND Technology</span>
+          <div class="archetype mis">misclassification</div></td>
+        <td class="thesis">Mis-tagged "Tech / Scientific Instruments" — actually a marine seismic OEM with 60% recurring aftermarket revenue (disclosed in the 10-K) supporting the $46M EV at industrial-aftermarket peer multiples. CEO-led M&amp;A-as-BUYER intent + reverse-merger optionality via a $27.2M deferred-tax / NOL valuation allowance (NOT a sale process despite triage misclassification).</td>
+        <td class="num">$46M</td>
+        <td class="num"><span class="irr pos">+19%</span></td>
+        <td class="risk">Revenue down 13% in FY26; top-4 customer concentration 63%; CEO age 71 without succession plan.</td>
+        <td class="action"><a href="mind.html">Open memo →</a></td>
+      </tr>
+
+      <tr>
+        <td class="tk"><a href="cdlx.html">CDLX</a><span class="name">Cardlytics</span>
+          <div class="archetype turn">distressed turnaround</div></td>
+        <td class="thesis">Equity is a near-out-of-the-money call option on a $172.5M convertible due April 2029; Bank of America non-renewal notice received April 2025 and named in the April 28 2025 8-K, but framed on calls as "content restrictions" — a disclosure-tone gap, now closed. Activist Cliff Sosin / CAS at 9.4% per April 2026 proxy.</td>
+        <td class="num">$191M*</td>
+        <td class="num"><span class="irr pos">+38%</span></td>
+        <td class="risk">Convert covenant breach; ACPU below $0.10 unit economics break.</td>
+        <td class="action"><a href="cdlx.html">Open memo →</a></td>
+      </tr>
+
+      <tr>
+        <td class="tk"><a href="scor.html">SCOR</a><span class="name">comScore</span>
+          <div class="archetype act">strategic review</div></td>
+        <td class="thesis">Goldman Sachs engaged August 2025; Sept 2025 Cerberus/Charter/Liberty Stockholders Agreement caps public solicitation but holds block at the table. May 27, 2026 catalyst: $70M Movies divestiture + $40M Blue Torch debt payoff leaves ~$41M net cash. ($22.4M capitalized software turns $22.7M operating cash flow into ~−$0.7M true free cash flow.)</td>
+        <td class="num">$219M</td>
+        <td class="num"><span class="irr">+22%†</span></td>
+        <td class="risk">Per-share upside overstated until rebuilt on fully-diluted ~27.7M shares (Series C at $18.85); FCF quality.</td>
+        <td class="action"><a href="scor.html">Open memo →</a></td>
+      </tr>
+
+      <tr>
+        <td class="tk"><a href="uone.html">UONE</a><span class="name">Urban One (UONEK)</span>
+          <div class="archetype bond">bond rerate</div></td>
+        <td class="thesis">Stub equity option on bond complex, not an operating story. December 2025 debt exchange pushed maturity from Feb 2028 to 2030/2031; net leverage 6.14x on $56.7M FY25 EBITDA ($70M was a prior FY26 target, not reaffirmed). $237M cumulative sub-par buybacks proven playbook. Publicly traded Class D has zero voting rights — Hughes family 75% control via Class B.</td>
+        <td class="num">$482M</td>
+        <td class="num"><span class="irr">+30%‡</span></td>
+        <td class="risk">FY26 EBITDA below $55M trips refi path; TV One subs bleeding. IRR rests on a 2031-note price not in the dossier.</td>
+        <td class="action"><a href="uone.html">Open memo →</a></td>
+      </tr>
+
+      <tr>
+        <td class="tk"><a href="swag.html">SWAG</a><span class="name">Stran &amp; Company</span>
+          <div class="archetype infl">operating inflection</div></td>
+        <td class="thesis">$118M revenue promotional-products distributor at 0.22x EV/Sales — 40% of enterprise value is net cash. Q1 2026 profitability inflection ($744K NI vs $(393)K prior year), though FY25 ran an operating loss. Gander Group acquisition (Aug 2024 Article 9 UCC sale for $1.1M cash, now $34M revenue annualized) is a repeatable playbook.</td>
+        <td class="num">$26M</td>
+        <td class="num"><span class="irr pos">+20%</span></td>
+        <td class="risk">Two unremediated material weaknesses; CEO Shape's shares pledged to Chairman, forced-action timeline May 24, 2027.</td>
+        <td class="action"><a href="swag.html">Open memo →</a></td>
+      </tr>
+
+      <tr>
+        <td class="tk"><a href="accs.html">ACCS</a><span class="name">ACCESS Newswire</span>
+          <div class="archetype mis">misclassification</div></td>
+        <td class="thesis">76% gross-margin, 60%-subscription investor-relations communications-tech SaaS mis-tagged "Advertising Agencies" — trades at 1.07x EV/Sales / 19.0x EV/EBITDA vs DFIN, Q4 Inc., Notified, Meltwater at 2.5x revenue. Honest framing: search-fund / private-equity target, NOT public re-rate. Float 2.01M shares, $87K daily dollar volume.</td>
+        <td class="num">$24M</td>
+        <td class="num"><span class="irr pos">+15%</span></td>
+        <td class="risk">Public re-rate mechanically impossible without corporate action; Lake Street has cut PT 3x.</td>
+        <td class="action"><a href="accs.html">Open memo →</a></td>
+      </tr>
+
+      <tr>
+        <td class="tk"><a href="nrdy.html">NRDY</a><span class="name">Nerdy, Inc.</span>
+          <div class="archetype turn">conflicted turnaround</div></td>
+        <td class="thesis">AI cost reset already delivered +1500 basis points margin expansion in execution; founder Chuck Cohn's recent buy = ~4% of his paper stake ($2.5M, Dec 2025, meaningful for someone deeply underwater). But Chegg ran the same AI playbook and revenue collapsed 48% — the bear inversion is the dominant risk. 12-15 month true runway.</td>
+        <td class="num">$137M</td>
+        <td class="num"><span class="irr pos">+22%</span></td>
+        <td class="risk">Active Members declining; FCF margin worse than -5% triggers raise + dilution.</td>
+        <td class="action"><a href="nrdy.html">Open memo →</a></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <h2>Side-by-side multiples</h2>
+  <table class="matrix">
+    <thead>
+      <tr>
+        <th>Metric</th>
+        <th>IZEA</th><th>UPLD</th><th>RSSS</th><th>AENT</th><th>MIND</th>
+        <th>CDLX</th><th>SCOR</th><th>UONE</th><th>SWAG</th><th>ACCS</th><th>NRDY</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Enterprise value</td>
+        <td>$18M</td><td>$370M</td><td>$64M</td><td>$389M</td><td>$46M</td>
+        <td>$191M*</td><td>$219M</td><td>$482M</td><td>$26M</td><td>$24M</td><td>$137M</td></tr>
+      <tr><td>TTM revenue</td>
+        <td>$30M</td><td>$202M</td><td>$49M</td><td>$1,109M</td><td>$41M</td>
+        <td>$211M</td><td>$357M</td><td>$374M</td><td>$119M</td><td>$22M</td><td>$180M</td></tr>
+      <tr><td>EV / Revenue</td>
+        <td>0.62x</td><td>1.83x</td><td>1.31x</td><td>0.35x</td><td>1.12x</td>
+        <td>0.91x</td><td>0.61x</td><td>1.29x</td><td>0.22x</td><td>1.07x</td><td>0.76x</td></tr>
+      <tr><td>EV / EBITDA (TTM)</td>
+        <td>n/m</td><td>6.4x</td><td>12.3x</td><td>8.1x</td><td>n/m</td>
+        <td>n/m</td><td>n/m</td><td>8.5x</td><td>n/m</td><td>19.0x</td><td>n/m</td></tr>
+      <tr><td>Gross margin</td>
+        <td>48%</td><td>72%</td><td>47%</td><td>12.5%</td><td>46%</td>
+        <td>39%</td><td>52%</td><td>43%</td><td>26%</td><td>76%</td><td>66%</td></tr>
+      <tr><td>Operating margin</td>
+        <td>4%</td><td>10%</td><td>9%</td><td>2.8%</td><td>-8%</td>
+        <td>-15%</td><td>1.3%</td><td>10%</td><td>-0.7%</td><td>1%</td><td>-31%</td></tr>
+      <tr><td>Revenue growth (last Q)</td>
+        <td>+12%</td><td>0%</td><td>+2%</td><td>+21%</td><td>+10%</td>
+        <td>-39%</td><td>-1%</td><td>-3%</td><td>+9%</td><td>+8%</td><td>+2%</td></tr>
+      <tr><td>Net cash / (debt)</td>
+        <td>+$47M</td><td>-$209M</td><td>+$11M</td><td>-$66M</td><td>+$18M</td>
+        <td>-$168M*</td><td>+$41M</td><td>-$453M</td><td>+$11M</td><td>+$0.5M</td><td>+$23M</td></tr>
+      <tr><td>Float (M shares)</td>
+        <td>16</td><td>29</td><td>27</td><td>3.2</td><td>10</td>
+        <td>48</td><td>9.4</td><td>3.4 (Class D)</td><td>11</td><td>2.0</td><td>180</td></tr>
+      <tr><td>Sell-side analysts</td>
+        <td>1</td><td>3</td><td>3</td><td>3</td><td>1</td>
+        <td>4</td><td>2</td><td>0</td><td>1</td><td>1</td><td>5</td></tr>
+    </tbody>
+  </table>
+  <p class="legend">All figures as of May 28, 2026, <strong>verified against SEC filings and XBRL</strong> in the numbers-audit pass (each memo carries inline source citations). EV/EBITDA shown as "n/m" (not meaningful) where TTM EBITDA is negative. Enterprise value and net cash/debt are computed from each company's filed balance sheet, NOT from data-vendor aggregates — the vendor "enterprise value" / "market cap" / "free cash flow" fields proved unreliable for dual-class and earnout structures (they overstated AENT's market cap via 60M escrowed Class E shares and understated NRDY's EV by ~$46M). <strong>*CDLX</strong>: $191M is the data-vendor EV on stale cash; computed from the Q1 2026 balance sheet (cash $35.7M, debt $204M) net debt is ~$168M and true EV ~$210M. Per-share math uses each company's economic share count, which differs from headline shares-outstanding for UONE (non-voting Class D = the listed UONEK), AENT (Class A only, excludes 60M escrowed Class E), UPLD (excludes HGGC Series A conversion), and SCOR (fully-diluted ~27.7M incl. Series C at the $18.85 mandatory-conversion price — the SCOR per-share targets in its memo are flagged for rebuild on this larger count).</p>
+
+  <p class="legend" style="margin-top:10px;"><strong>Verification caveats by name:</strong> <strong>UONE</strong> — the entire bond-rerate IRR rests on the 2031 notes' current trading price (~55¢ assumed), which is not in the dossier and needs a live quote. <strong>SCOR</strong> — valuation is overstated until per-share targets are rebuilt on the fully-diluted ~27.7M share count. <strong>CDLX</strong> — the "Bank of America non-renewal was not disclosed" framing is wrong (the April 28, 2025 8-K named the bank); the surviving point is a disclosure-tone gap. <strong>MIND</strong> — the 60% aftermarket mix is already disclosed in the 10-K (not a hidden fact), and the federal NOL is a $27.2M valuation allowance, not a stated $24.8M figure. <strong>IZEA</strong> — operating EBITDA is only $0.7M, so the thesis is capital-return + sale optionality, not a multiple re-rate.</p>
+
+  <p class="legend" style="margin-top:14px;"><strong>How to use this page:</strong> open each memo in a separate tab, attack the thesis (where is it weakest, which kill criterion is most likely to trigger, did the bear case kill the pitch). Iterate until one candidate survives with a defensible thesis. The four mandated content blocks — non-obvious, thesis, risks, value creation across commercial/operations/capital structure/M&amp;A — appear in the same order in every memo for direct comparison.</p>
+
+</div>
+
+</body>
+</html>

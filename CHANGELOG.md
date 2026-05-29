@@ -2,6 +2,32 @@
 
 All notable changes to the Lunchline Partners case study project.
 
+## 2026-05-29 — Memo system + 16-candidate expansion + 11 verified pitch memos
+
+### Memo voice/principles system (the reusable template)
+Built the writing layer the project was missing. Three artifacts:
+- `docs/memo-voice.md` — exemplar research (Buffett 1977/89/91/2001, Howard Marks *Sea Change* + *On Bubble Watch*, Einhorn TWTR, Trian) → 8 voice principles, plain-English vocabulary table, inline-sourcing patterns, 3 narrative-arc templates, annotated excerpts, full annotated 1-page skeleton.
+- `docs/memo-principles.md` — project checklist: required content blocks (non-obvious / thesis / risks / value-creation across commercial-ops-capital-M&A / forward "what would confirm it"), voice rules, **forbidden moves** (the "wrong industry tag" trick that Aviv killed on AENT), 12-item drafting checklist, and a **number-verification section** (added after the audit below).
+- `mockups/pitches/option-a-scroll.html` — canonical AENT memo demonstrating the voice. Layout chosen from a 3-option bake-off (A=scroll, B=tabs, C=index); A won. Plain English, inline hyperlinks (no footnotes), IR-vs-SEC contrast as a narrative element.
+
+Voice/style preference also persisted to auto-memory (`feedback_memo_voice.md`).
+
+### Layer-2 expansion: 21 candidates → 16 structural survivors
+Ran `build_dossier` + `check_voting_structure` + `check_deal_status` on all 21 unevaluated Layer-2 names (new helper: `scripts/batch_triage.py`). Triage table at `data/research/layer2_triage_2026-05-28.md`. **16 survived, 5 killed:** ZDGE/SNAL/HIT (super-voting founder lockdown), GIFT (TakeOut7 merger signed), BKKT (NewCo merger closed). Findings-mode dispatched on all 16 (new helper: `scripts/dump_findings_prompts.py` writes per-ticker `findings_prompts.json`); 3 specialist findings files written per ticker under `data/dossiers/<t>/findings/`.
+
+### 11 pitch memos built (the tournament bracket)
+Selected 11 viable candidates and built one-page memos for each in `mockups/pitches/`: **CDLX, NRDY, SCOR, AENT** (original 4) + **UPLD, IZEA, RSSS, UONE, MIND, ACCS, SWAG** (new). Bracket index at `mockups/pitches/index.html` (cross-comparison table by archetype + side-by-side multiples matrix). Distressed/blocked names (DRCT, CISO, SURG, CETX, XBP, CTM, FLNT, CNVS, GAME) documented as findings-mode passes.
+
+### Numbers-verification audit (11 parallel agents) — every memo had ≥1 wrong load-bearing number
+After catching three fabricated/conflated figures in IZEA by hand (net income $1.2M→$42K; adjusted EBITDA $5.3M→$0.7M, a 7x error that inverted the valuation; Hoozu "write-down" $5.3M→~$2.5M, conflated with an unrelated $4.0M impairment), ran a dedicated verification agent per memo: GAAP vs XBRL, non-GAAP vs the 10-K/10-Q reconciliation table, derived figures recomputed. Findings:
+- **Four repeatable failure modes:** (1) data-vendor aggregate fields (yfinance `enterpriseValue`/`marketCap`/`freeCashFlow`/`totalCash`) broke on dual-class/earnout/preferred structures — AENT phantom $704M cap, NRDY EV $91M→$137M, UPLD FCF $36M→$26M; (2) non-GAAP inherited from findings, not the filing; (3) conflation of two similar-magnitude figures; (4) period / share-count inconsistency.
+- **Thesis-altering corrections:** CDLX — the "BofA non-renewal wasn't disclosed" pillar is false (named in the April 28 2025 8-K). MIND — the "60% aftermarket is hidden" lever evaporated (it's in the 10-K); the $24.8M NOL is actually a $27.2M valuation allowance; "revenue fell 35%" was 13%. SCOR — per-share targets overstated until rebuilt on fully-diluted ~27.7M shares (Series C at $18.85). IZEA — $0.7M EBITDA makes it a capital-return/sale story, not a re-rate. UONE — IRR rests on a 2031-note price not in the dossier.
+- **Survived clean with thesis intact:** RSSS (cleanest), UPLD, SWAG, AENT (marginally stronger — the chairman loan was already repaid).
+- Lesson encoded as the number-verification section of `docs/memo-principles.md`.
+
+### Next step
+User to review each memo, attack the theses, and pick a company (tournament round). See TODO § Selection Process.
+
 ## 2026-05-28 (late late) — Pipeline restructure + framework diagnostic + 3 new candidates
 
 ### Calibration runs on CDLX + NRDY

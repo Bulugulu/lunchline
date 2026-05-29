@@ -1,6 +1,9 @@
 # Large data files (keep scripts, not raw data — everything in data/ is reproducible)
 data/
 
+# Scratch / working files (agent-extracted filing text, throwaway)
+tmp/
+
 # Python
 __pycache__/
 *.pyc

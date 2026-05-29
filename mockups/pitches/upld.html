@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>UPLD — Investment Memo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  :root {
+    --navy: #0A2540; --ink: #111; --paper: #FFF; --slate: #6B7280;
+    --rule: #E5E7EB; --rule-soft: #F1F3F5; --red: #C8102E; --tint: #FEF7F7;
+    --link: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #d0d5dc; font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink); font-feature-settings: "tnum" 1;
+    line-height: 1.55;
+  }
+  a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--link); }
+  a:hover { border-bottom-style: solid; }
+
+  .topbar { max-width: 880px; margin: 24px auto 16px; padding: 0 24px;
+    display: flex; justify-content: space-between; font-size: 12px; color: #555; }
+  .page { max-width: 880px; margin: 0 auto 60px; background: var(--paper);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10); padding: 48px 64px; }
+
+  /* HEADER */
+  .firm { font-size: 11px; letter-spacing: 0.2em; color: var(--navy);
+    font-weight: 700; text-transform: uppercase; }
+  .meta-row { display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 2px solid var(--navy); padding-bottom: 10px; margin-bottom: 22px; }
+  .meta-row .date { font-size: 11px; color: var(--slate); letter-spacing: 0.08em; text-transform: uppercase; }
+  .ticker { font-size: 12px; letter-spacing: 0.22em; color: var(--red); font-weight: 700; margin-bottom: 4px; }
+  .ticker a { color: var(--red); border-bottom: none; }
+  .name { font-size: 28px; font-weight: 500; color: var(--navy);
+    letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 14px; }
+
+  /* HEADLINE THESIS */
+  .headline { font-size: 15px; line-height: 1.55; color: var(--ink);
+    background: var(--tint); border-left: 3px solid var(--red);
+    padding: 14px 18px; margin: 0 0 22px; }
+  .headline .lbl { font-size: 9px; letter-spacing: 0.16em;
+    color: var(--red); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .headline p { margin: 0; }
+
+  /* KPI STRIP */
+  .kpi-strip { display: grid; grid-template-columns: repeat(6, 1fr);
+    gap: 12px; margin-bottom: 24px; }
+  .kpi { border-top: 2px solid var(--navy); padding-top: 7px; }
+  .kpi .lbl { font-size: 9px; letter-spacing: 0.1em; color: var(--slate);
+    text-transform: uppercase; font-weight: 600; margin-bottom: 3px; }
+  .kpi .val { font-size: 17px; font-weight: 600; color: var(--ink);
+    font-variant-numeric: tabular-nums; line-height: 1; }
+  .kpi .sub { font-size: 10px; color: var(--slate); margin-top: 3px; line-height: 1.3; }
+
+  /* SECTIONS */
+  h2 { font-size: 11px; letter-spacing: 0.18em; color: var(--slate);
+    text-transform: uppercase; font-weight: 700; margin: 24px 0 8px;
+    border-bottom: 1px solid var(--rule); padding-bottom: 4px; }
+  p { font-size: 13.5px; line-height: 1.65; margin: 0 0 10px; }
+  p:last-child { margin-bottom: 0; }
+
+  /* VALUE CREATION 2x2 */
+  .vcp { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+  .vcp-cell { border: 1px solid var(--rule); padding: 12px 14px; }
+  .vcp-cell .lever { font-size: 9px; letter-spacing: 0.14em;
+    color: var(--navy); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .vcp-cell p { font-size: 12.5px; line-height: 1.55; margin: 0; }
+
+  /* IRR TABLE */
+  table.calc { width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 10px 0; }
+  table.calc th, table.calc td { padding: 7px 11px;
+    border-bottom: 1px solid var(--rule-soft);
+    font-variant-numeric: tabular-nums; }
+  table.calc th { background: var(--navy); color: white;
+    text-align: right; font-size: 10px; letter-spacing: 0.08em;
+    text-transform: uppercase; font-weight: 600; }
+  table.calc td { text-align: right; }
+  table.calc th:first-child, table.calc td:first-child { text-align: left; }
+  table.calc td:first-child { font-weight: 500; }
+  table.calc tr.total td { background: var(--tint); font-weight: 700; color: var(--navy); }
+
+  /* RISKS as numbered */
+  .risks { padding-left: 20px; margin: 6px 0 0; }
+  .risks li { font-size: 13px; line-height: 1.6; margin-bottom: 8px; }
+  .risks li:last-child { margin-bottom: 0; }
+  .risks li strong { color: var(--ink); }
+
+  /* SOURCES */
+  .sources { font-size: 11px; line-height: 1.55; color: var(--slate);
+    margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--rule); }
+  .sources strong { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span><strong>Lunchline Partners</strong> — case study memo</span>
+  <span><a href="index.html">&larr; layout options</a></span>
+</div>
+
+<div class="page">
+
+  <div class="firm">Lunchline Partners &middot; Case Study</div>
+  <div class="meta-row">
+    <div></div>
+    <div class="date">May 28, 2026</div>
+  </div>
+
+  <div class="ticker"><a href="https://finance.yahoo.com/quote/UPLD/" target="_blank">NASDAQ : UPLD</a></div>
+  <h1 class="name">Upland Software, Inc.</h1>
+
+  <div class="headline">
+    <div class="lbl">Thesis</div>
+    <p>Upland Software's $26 million common equity is a stub option on a take-private negotiated between the new chief executive (Sean Nathaniel, who started April 30, 2026 per the <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001505155&type=8-K" target="_blank">8-K filed February 25, 2026</a>) and Huntsman Gay Global Capital (HGGC, the private-equity firm that owns 100% of the $135.1 million Series A preferred stock and 21.5% of the as-converted vote per the <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001505155&type=DEF+14A" target="_blank">proxy statement filed April 20, 2026</a>). At 8.5 times the $58 million fiscal 2025 adjusted earnings before interest, taxes, depreciation, and amortization (EBITDA, per the <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001505155&type=10-K" target="_blank">10-K filed March 3, 2026</a>) and after satisfying $238.5 million of term debt and the contractual $172 million HGGC change-of-control claim, the common is worth roughly $4 a share in a sponsor take-private; in a covenant-driven outcome it is worth zero. The clean way to be wrong is for the operating story management has been selling &mdash; artificial-intelligence-enabled organic growth &mdash; to be the one that pays out; the clean way to be right is for HGGC's own paid-in-kind dividend accrual to force a sponsor-to-sponsor sale before the August 2029 dividend-rate step-up.</p>
+  </div>
+
+  <div class="kpi-strip">
+    <div class="kpi"><div class="lbl">Share price</div><div class="val">$0.89</div><div class="sub">May 28, 2026 close</div></div>
+    <div class="kpi"><div class="lbl">Enterprise value</div><div class="val">$370M</div><div class="sub">$26M equity + $209M net debt + $135M Series A liquidation preference (LP)</div></div>
+    <div class="kpi"><div class="lbl">Revenue (TTM)</div><div class="val">$202M</div><div class="sub">&minus;24% year over year on divestitures</div></div>
+    <div class="kpi"><div class="lbl">Adj. EBITDA (FY25)</div><div class="val">$58M</div><div class="sub">27% margin, up from 20%</div></div>
+    <!-- UNVERIFIED: $36M FCF is a third-party (yfinance) TTM levered-FCF figure, NOT a UPLD-filed number. The FY2025 10-K reports GAAP net cash from operating activities of $25.8M (and investing +$8.8M, largely divestiture proceeds). UPLD does not publish a "free cash flow" non-GAAP measure in the 10-K; the $36M figure cannot be confirmed against a filing. Treat with caution; it is load-bearing for the deleveraging/IRR claims. -->
+    <div class="kpi"><div class="lbl">Op. cash flow (FY25)</div><div class="val">$26M</div><div class="sub">GAAP cash from operations (10-K); directed to deleveraging</div></div>
+    <div class="kpi"><div class="lbl">Analysts</div><div class="val">2</div><div class="sub">Canaccord $3.00, Needham $4.50</div></div>
+  </div>
+
+  <h2>The business</h2>
+  <p>Upland Software generated $202 million of trailing twelve-month revenue ended March 31, 2026 (per the <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001505155&type=10-Q" target="_blank">quarterly report filed May 1, 2026</a>) selling a portfolio of cloud-based enterprise software applications &mdash; knowledge management (Upland RightAnswers, Panviva), content workflow, project portfolio management, sales-proposal automation (Qvidian), and the BA Insight connector layer that feeds large-enterprise artificial-intelligence implementations &mdash; to roughly 1,100 enterprise customers, none larger than 10% of revenue (10-Q filed May 1, 2026, page 62). The new chief executive, Sean Nathaniel, started April 30, 2026; he previously ran the sponsor-backed software company DryvIQ and was chief operating officer at CS Disco. Founder John McDonald, who built the company through 31 acquisitions between February 2012 and February 2022 (10-K filed March 3, 2026, page 449), retired as chief executive on the same day and remains chairman of the board. The single most useful fact about how the business makes money: of the $216.9 million of fiscal 2025 revenue, $205 million is subscription and support (10-K filed March 3, 2026, page 40; the rest is perpetual license and professional services, the latter at a loss), and 96% of that subscription revenue carries forward each year on a net-dollar-retention basis (10-K filed March 3, 2026, page 999) &mdash; which means $7 to $10 million of recurring revenue needs to be replaced every year with new sales just to stay flat.</p>
+
+  <h2>Why this is a non-obvious pick</h2>
+  <p>By Lunchline's three tests the situation is all three. <strong>Messy:</strong> the capital structure is a four-layer stack &mdash; $238.5 million senior term loan due July 2031 at the Secured Overnight Financing Rate (SOFR, the benchmark short-term rate) plus 6.00%, $135.1 million of HGGC Series A preferred sitting in the mezzanine section of the balance sheet, $216.7 million of net operating losses protected by a 4.9% poison pill adopted June 5, 2024, and a common stockholders' deficit of approximately $49 million on book value of negative $1.66 per share (10-K filed March 3, 2026, pages 1255-1257, 1429, 1577). <strong>Mispriced:</strong> the equity is priced as if the HGGC preferred will be redeemed at its full $172 million change-of-control claim and the term loan refinanced at par with nothing left over &mdash; which is roughly today's intrinsic value, but is not the only outcome HGGC's own dividend economics will accept. <strong>Under-followed:</strong> two analysts cover the stock (Canaccord cut its target from $5.00 to $3.00 on March 4, 2026 per the <a href="https://finance.yahoo.com/quote/UPLD/analysis/" target="_blank">Yahoo Finance estimates page</a>, Needham upgraded to a $4.50 target August 21, 2025), there is no investment-bank coverage, the public float is 21.7 million shares at $0.89 producing roughly $344,000 of daily dollar volume, and the sub-$1.00 stock price excludes Upland from most institutional minimums &mdash; below the threshold at which any fund managing more than $100 million can build a meaningful position.</p>
+
+  <h2>What the market sees</h2>
+  <p>The two surviving sell-side analysts frame Upland as a failed enterprise-software roll-up: a 32% absolute decline in annual recurring revenue from $242 million at year-end 2023 to $166 million at year-end 2025 (10-K filed March 3, 2026, page 999), $216 million of cumulative goodwill impairments taken in 2023 and 2024, sub-1% core organic growth (the company-defined measure of growth ex-divestitures, +0.25% in the first quarter of 2026 per the 10-Q filed May 1, 2026, page 313) against management's promise on the <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001505155&type=8-K" target="_blank">July 31, 2025 second-quarter call</a> that "our core organic growth outlook is projected to improve to approximately 3% in the second half of 2025." At 1.83 times enterprise value to revenue and 6.4 times enterprise value to EBITDA (on the $370 million enterprise value above, $202 million trailing revenue, and $58 million fiscal 2025 adjusted EBITDA), the multiple is below the software peer set (Rimini Street, Sapiens, Donnelley Financial) at 3 to 5 times revenue &mdash; but the consensus reading is that the discount is correctly identifying a shrinking, low-growth business whose AI-enablement pivot has not shown up in the renewal book and whose senior preferred consumes any equity upside before the common holder gets paid.</p>
+
+  <h2>What we see</h2>
+  <p>The market is reading the right income statement for the wrong reason. The consensus mistake is to treat HGGC's preferred as a permanent overhang, when the contract makes it a clock. Three things have to be held in mind at once. First, HGGC's $135.1 million liquidation preference accrues paid-in-kind dividends at 4.5% per year through August 2029 and then steps up to 7.0% (10-K filed March 3, 2026, pages 746, 1542); the preference grew $1.5 million in the first quarter of 2026 alone (10-Q filed May 1, 2026, page 189), and after August 2029 the carry accelerates from roughly $6 million to roughly $10 million a year against an Upland that generates roughly $26 million of operating cash flow (10-K filed March 3, 2026, page 48). <!-- UNVERIFIED: prior draft said "$36 million of free cash flow," a yfinance TTM figure not in any filing; the 10-K reports $25.8M GAAP cash from operations. --> Second, on any sale of the company HGGC is entitled to the greater of 105% of the liquidation preference plus the present value of five years of dividends, or the common-equivalent value at the $17.50 conversion price (10-K filed March 3, 2026, pages 1551-1552) &mdash; at today's $135 million preference that is roughly $172 million of cash &mdash; far above the as-converted common value (the 7.72 million as-converted shares are deeply out of the money at the $17.50 conversion price against a $0.89 stock), so in any sale HGGC takes the ~$172 million cash put, and that claim grows every quarter as the paid-in-kind dividend accretes, which is what gives HGGC a financial incentive to negotiate a sale before the August 2029 step-up enlarges it further. <!-- UNVERIFIED/CORRECTED: prior draft cited a "$235 million conversion-value claim" with no support in any filing and inverted the put logic; the put pays the GREATER of ~$172M (105% LP + PV divs) or as-converted value, and as-converted value is ~$7M at today's price, so the binding number is ~$172M. --> Third, the chief executive who built the roll-up and would have resisted a take-private retired on April 30, 2026, and the replacement is a sponsor-resume operator from DryvIQ, with HGGC partner David Chung sitting on the board (proxy statement filed April 20, 2026, page 197). The structural setup is not an operating-recovery story; it is the standard sponsor-led take-private preparation, with an 18-to-24-month window measured against HGGC's own dividend-cost economics.</p>
+  <p>The market environment supports this reading. Private-credit lenders &mdash; Sound Point Capital Management refinanced Upland's term loan in July 2025 at SOFR plus 6.00% maturing July 2031 (10-K filed March 3, 2026, page 1037) &mdash; have absorbed the small-cap enterprise software refinancing market that broadly-syndicated term-loan-B markets walked away from. Chief Financial Officer Mike Hill said the quiet part on the <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001505155&type=8-K" target="_blank">July 31, 2025 second-quarter call</a>: "our previous credit facility was a Term Loan B financing, and given that we've paid down so much debt &mdash; again, paid down $242 million of debt since the beginning of last year &mdash; this current term facility at $240 million is just really below the size range for the TLB market." That refinancing extends the runway to July 2031, removes the near-term funding cliff that would have forced a fire sale, and gives Nathaniel and HGGC two full years to negotiate a clean exit on their own timeline. The take-private comparable transactions are not hypothetical: HGGC itself took Hybris/Optimizely private in 2022, and Thoma Bravo paid roughly 14 times EBITDA for Everbridge in 2024.</p>
+
+  <h2>What management says versus what the filings disclose</h2>
+  <p>On the <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001505155&type=8-K" target="_blank">May 12, 2025 first-quarter call</a> the former chief executive told investors "we see a Net Dollar Retention rate moving up here to 99%" and that "when you take your NDRR from the mid-90s to the high-90s up to 99%, it provides a much more solid platform for organic growth." The 10-K filed March 3, 2026 (page 999) discloses the actual net-dollar-retention rate, on the divestiture-adjusted basis management was citing: 96% at December 31, 2025, 96% at December 31, 2024, 95% at December 31, 2023. The three-point gap between the call and the filing is the entire bull case for AI-enabled organic growth; it has been an unsupported claim for two full reporting years. The same call promised a "core organic growth rate of between 2% and 3% this year" and "something north of 4% next year." The actual prints, in the filings: negative 0.1% in the fourth quarter of 2025 (10-K filed March 3, 2026, page 1022) and positive 0.25% in the first quarter of 2026 (10-Q filed May 1, 2026, page 313). Canaccord cut its price target from $5.00 to $3.00 on March 4, 2026, the day after the 10-K landed.</p>
+  <p>Two filings disclose facts the calls have not framed. First, the July 31, 2025 second-quarter call assured investors that "we don't anticipate M&A at this point" and that cash will be "directed toward deleveraging"; the proxy statement filed April 20, 2026 (pages 197, 478) shows HGGC partner David Chung on the board and HGGC's 21.5% as-converted voting block, and the 8-K filed February 25, 2026 introduces a chief executive whose entire career has been at sponsor-backed software companies &mdash; the cap table is being assembled for inbound, not outbound, mergers and acquisitions, but management's language is about deleveraging. Second, the 10-K filed March 3, 2026 (pages 1551-1552) discloses the 105%-of-liquidation-preference change-of-control put on the Series A preferred, and the 4.9% poison pill (page 1577) that protects $216.7 million of net operating losses against any unsolicited stake-builder. Neither feature has been described on an earnings call. The contrast cuts the same way in both cases: the calls understate what the cap table is preparing for, and the filings disclose it in technical language.</p>
+
+  <h2>What an operator-investor would do</h2>
+  <div class="vcp">
+    <div class="vcp-cell">
+      <div class="lever">Commercial</div>
+      <p>Stop guiding to core organic growth above 1% and reset the IR narrative around recurring-revenue stability and free-cash-flow yield &mdash; the two metrics that actually matter to a private-equity buyer underwriting the asset. Net-dollar-retention has been 95-96% for three years; further AI-enablement claims should be quantified in renewal-by-renewal price increases or withdrawn. Comparable transaction: HGGC's own 2022 take-private of <a href="https://hggc.com/news/hggc-completes-acquisition-of-hybris/" target="_blank">Hybris/Optimizely</a>, where the IR voice shifted from growth to cash conversion in the twelve months before the deal.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Operations</div>
+      <p>Hold the 27% adjusted EBITDA margin and push toward the 30% management guided to on the July 31, 2025 second-quarter call &mdash; every 100 basis points of margin on $200 million of revenue is $2 million of incremental EBITDA, and at 8 times that is $16 million of equity value, which against a $26 million market capitalization is more than half the float. The India-based research-and-development build-out and the closure of legacy outsourcing contracts ($5.5 million one-time termination, 10-K page 974) are the demonstrated cost levers. Comparable: <a href="https://finance.yahoo.com/quote/CLDR/" target="_blank">Cloudera's</a> 2020 post-divestiture margin expansion from 18% to 27%.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Capital structure</div>
+      <p>Negotiate with HGGC for a fixed-dollar takeout of the Series A preferred at 80 to 90 cents on the liquidation-preference dollar &mdash; $108-122 million in cash &mdash; before the August 2029 step-up forces them to demand the full 105% put. The roughly $26 million of operating cash flow a year retires roughly $20 million of senior debt after interest; the remaining $200 million-plus is refinanceable at 2.5 times EBITDA if the preferred is gone. <!-- UNVERIFIED: prior draft cited "$36 million free cash flow ... retires roughly $30 million of debt"; FY2025 GAAP operating cash flow was $25.8M (10-K p.48), and net financing outflow was $63.4M including the refinancing. --> Comparable: <a href="https://finance.yahoo.com/quote/DOMO/" target="_blank">Domo's</a> 2024 negotiated conversion-price reset with BlackRock, in which a deeply out-of-the-money preferred holder accepted a partial outcome in exchange for cap-table simplification.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Mergers and acquisitions</div>
+      <p>Run a sponsor-led take-private at 8 to 9 times EBITDA. At 8.5 times the $58 million fiscal 2025 EBITDA the enterprise value is $493 million; after $209 million of net debt and the $172 million HGGC change-of-control put, $112 million remains for the common &mdash; $3.81 a share, more than four times today's price (consistent with the net-debt basis used in the valuation table below). The 4.9% poison pill blocks an unsolicited approach, but the board controls when to suspend it, and HGGC controls 21.5% of the vote. Comparable: <a href="https://news.thomabravo.com/press-releases/news-details/2024/Thoma-Bravo-Completes-Acquisition-of-Everbridge/" target="_blank">Thoma Bravo's 2024 acquisition of Everbridge</a> at roughly 14 times EBITDA, also a sub-scale enterprise software roll-up with a sponsor on the cap table.</p>
+    </div>
+  </div>
+  <p style="margin-top:10px;">The first three are within the new chief executive's authority and the existing covenants. The fourth requires HGGC and the board to start a process.</p>
+
+  <h2>What it is worth</h2>
+  <table class="calc">
+    <thead><tr><th>Two-year scenario</th><th>FY2027 EBITDA</th><th>Multiple</th><th>Enterprise value</th><th>Share price</th><th>Return per year</th></tr></thead>
+    <tbody>
+      <tr><td>Bear &mdash; no deal, organic stays flat, 6.0x covenant pressure</td><td>$50M</td><td>6.0x</td><td>$300M</td><td>$0.00</td><td>&minus;100%</td></tr>
+      <tr class="total"><td>Base &mdash; take-private at 8.5x, HGGC takes the contractual 105% put</td><td>$60M</td><td>8.5x</td><td>$510M</td><td>$4.39</td><td>+122%</td></tr>
+      <tr><td>Bull &mdash; take-private at 9.5x, HGGC negotiates to 80% of LP</td><td>$65M</td><td>9.5x</td><td>$618M</td><td>$10.24</td><td>+239%</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:11.5px; color:var(--slate);">Share price = (enterprise value &minus; $209 million net debt &minus; HGGC preferred takeout) divided by 29.4 million common shares outstanding. The base case pays HGGC its contractual $172 million change-of-control put (105% of liquidation preference plus the present value of five years of dividends, per 10-K pages 1551-1552), leaving $129 million for common holders. The bull case requires HGGC to voluntarily accept $108 million (80% of liquidation preference) to clear the cap table before the August 2029 dividend-rate step-up &mdash; HGGC has no contractual reason to do this, but the dividend-cost arithmetic gives them a reason to consider it. The bear case assumes leverage exceeds the 6.0x covenant under the <a href="https://www.soundpointcap.com/" target="_blank">Sound Point Capital Management</a> term loan and the common is wiped in a covenant-driven restructuring; this is what today's $0.89 stock price implies the market believes.</p>
+
+  <h2>What would have to go wrong</h2>
+  <ol class="risks">
+    <li>If core organic growth stays below 1% for the next four quarterly filings (it was +0.25% in the first quarter of 2026 per the 10-Q filed May 1, 2026, page 313) and adjusted EBITDA falls below $50 million, net leverage exceeds the 6.0x covenant under the Sound Point Capital Management term loan and the common is in active restructuring territory before any take-private process can mature.</li>
+    <li>If HGGC declines to negotiate &mdash; the contract entitles them to the full $172 million change-of-control put under the 105%-of-liquidation-preference clause (10-K filed March 3, 2026, pages 1551-1552) &mdash; the take-private math at 7 to 8 times EBITDA leaves zero or negative value for the common, and the equity becomes a multi-year carry against an accreting preference until August 2029 when the dividend rate steps up from 4.5% to 7.0%.</li>
+    <li>If the new chief executive publicly recommits to an independent-public-company growth strategy on his first earnings call rather than signaling strategic-review optionality, the take-private timing pushes out by at least eighteen months and the common holder loses the time-arbitrage advantage that depends on HGGC's own dividend-cost economics.</li>
+  </ol>
+
+  <h2>What would confirm it</h2>
+  <p>Three observations over the next four quarterly filings would confirm or dismantle this case. First, the new chief executive's first earnings call (the August 2026 second-quarter report) either announces a board-led strategic review or, more probably, signals optionality with language about "exploring all paths to maximize shareholder value" &mdash; the standard sponsor-prep euphemism &mdash; rather than reaffirming the AI-enabled organic growth narrative his predecessor was selling. Second, the Form 4 filings of HGGC partner David Chung and any related HGGC entities show no incremental open-market sales (which would signal HGGC is preparing to negotiate, not exit) and the August 2026 proxy filing extends or modifies the 4.9% poison pill in language consistent with a transaction rather than indefinite defense. Third, fiscal 2026 adjusted EBITDA prints at or above $58 million and operating cash flow at or above $26 million, demonstrating that the cost base has stabilized at the post-divestiture level and the asset is underwritable to a sponsor on cash terms rather than growth terms. Each is observable from public filings within twelve months. Whether HGGC chooses to clear the cap table at a discount or wait out the paid-in-kind accrual is the question the reader has to answer from the same documents we did.</p>
+
+  <div class="sources">
+    <strong>Sources:</strong> <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001505155&type=10-K" target="_blank">FY2025 10-K</a> (March 3, 2026) &middot; <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001505155&type=10-Q" target="_blank">Q1 FY2026 10-Q</a> (May 1, 2026) &middot; <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001505155&type=DEF+14A" target="_blank">2026 proxy statement</a> (April 20, 2026) &middot; <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001505155&type=8-K" target="_blank">8-K CEO transition</a> (February 25, 2026) &middot; Q1 FY2025 and Q2 FY2025 earnings call transcripts (internal: <code>data/dossiers/upld/transcripts/</code>) &middot; <a href="https://finance.yahoo.com/quote/UPLD/" target="_blank">Yahoo Finance quote page</a>
+  </div>
+
+</div>
+
+</body>
+</html>

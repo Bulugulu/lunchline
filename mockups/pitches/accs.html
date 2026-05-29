@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ACCS — Investment Memo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  :root {
+    --navy: #0A2540; --ink: #111; --paper: #FFF; --slate: #6B7280;
+    --rule: #E5E7EB; --rule-soft: #F1F3F5; --red: #C8102E; --tint: #FEF7F7;
+    --link: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #d0d5dc; font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink); font-feature-settings: "tnum" 1;
+    line-height: 1.55;
+  }
+  a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--link); }
+  a:hover { border-bottom-style: solid; }
+
+  .topbar { max-width: 880px; margin: 24px auto 16px; padding: 0 24px;
+    display: flex; justify-content: space-between; font-size: 12px; color: #555; }
+  .page { max-width: 880px; margin: 0 auto 60px; background: var(--paper);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10); padding: 48px 64px; }
+
+  /* HEADER */
+  .firm { font-size: 11px; letter-spacing: 0.2em; color: var(--navy);
+    font-weight: 700; text-transform: uppercase; }
+  .meta-row { display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 2px solid var(--navy); padding-bottom: 10px; margin-bottom: 22px; }
+  .meta-row .date { font-size: 11px; color: var(--slate); letter-spacing: 0.08em; text-transform: uppercase; }
+  .ticker { font-size: 12px; letter-spacing: 0.22em; color: var(--red); font-weight: 700; margin-bottom: 4px; }
+  .ticker a { color: var(--red); border-bottom: none; }
+  .name { font-size: 28px; font-weight: 500; color: var(--navy);
+    letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 14px; }
+
+  /* HEADLINE THESIS */
+  .headline { font-size: 15px; line-height: 1.55; color: var(--ink);
+    background: var(--tint); border-left: 3px solid var(--red);
+    padding: 14px 18px; margin: 0 0 22px; }
+  .headline .lbl { font-size: 9px; letter-spacing: 0.16em;
+    color: var(--red); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .headline p { margin: 0; }
+
+  /* KPI STRIP */
+  .kpi-strip { display: grid; grid-template-columns: repeat(6, 1fr);
+    gap: 12px; margin-bottom: 24px; }
+  .kpi { border-top: 2px solid var(--navy); padding-top: 7px; }
+  .kpi .lbl { font-size: 9px; letter-spacing: 0.1em; color: var(--slate);
+    text-transform: uppercase; font-weight: 600; margin-bottom: 3px; }
+  .kpi .val { font-size: 17px; font-weight: 600; color: var(--ink);
+    font-variant-numeric: tabular-nums; line-height: 1; }
+  .kpi .sub { font-size: 10px; color: var(--slate); margin-top: 3px; line-height: 1.3; }
+
+  /* SECTIONS */
+  h2 { font-size: 11px; letter-spacing: 0.18em; color: var(--slate);
+    text-transform: uppercase; font-weight: 700; margin: 24px 0 8px;
+    border-bottom: 1px solid var(--rule); padding-bottom: 4px; }
+  p { font-size: 13.5px; line-height: 1.65; margin: 0 0 10px; }
+  p:last-child { margin-bottom: 0; }
+
+  /* VALUE CREATION 2x2 */
+  .vcp { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+  .vcp-cell { border: 1px solid var(--rule); padding: 12px 14px; }
+  .vcp-cell .lever { font-size: 9px; letter-spacing: 0.14em;
+    color: var(--navy); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .vcp-cell p { font-size: 12.5px; line-height: 1.55; margin: 0; }
+
+  /* IRR TABLE */
+  table.calc { width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 10px 0; }
+  table.calc th, table.calc td { padding: 7px 11px;
+    border-bottom: 1px solid var(--rule-soft);
+    font-variant-numeric: tabular-nums; }
+  table.calc th { background: var(--navy); color: white;
+    text-align: right; font-size: 10px; letter-spacing: 0.08em;
+    text-transform: uppercase; font-weight: 600; }
+  table.calc td { text-align: right; }
+  table.calc th:first-child, table.calc td:first-child { text-align: left; }
+  table.calc td:first-child { font-weight: 500; }
+  table.calc tr.total td { background: var(--tint); font-weight: 700; color: var(--navy); }
+
+  /* RISKS as numbered */
+  .risks { padding-left: 20px; margin: 6px 0 0; }
+  .risks li { font-size: 13px; line-height: 1.6; margin-bottom: 8px; }
+  .risks li:last-child { margin-bottom: 0; }
+  .risks li strong { color: var(--ink); }
+
+  /* SOURCES */
+  .sources { font-size: 11px; line-height: 1.55; color: var(--slate);
+    margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--rule); }
+  .sources strong { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span><strong>ACCS memo</strong> — voice/structure per <code>docs/memo-voice.md</code></span>
+  <span><a href="index.html">← layout options</a></span>
+</div>
+
+<div class="page">
+
+  <div class="firm">Lunchline Partners · Case Study</div>
+  <div class="meta-row">
+    <div></div>
+    <div class="date">May 28, 2026</div>
+  </div>
+
+  <div class="ticker"><a href="https://finance.yahoo.com/quote/ACCS/" target="_blank">NYSE AMERICAN : ACCS</a></div>
+  <h1 class="name">ACCESS Newswire Inc.</h1>
+
+  <div class="headline">
+    <div class="lbl">Thesis</div>
+    <p>ACCESS Newswire is a 75%-gross-margin, 60%-subscription investor-relations communications-technology business priced at 1.07 times revenue and 19.0 times trailing earnings before interest, taxes, depreciation, and amortization (EBITDA) — multiples set by a peer set of advertising agencies (WPP, Interpublic) that share none of the company's economics. On the correct investor-relations-technology software-as-a-service peer set — Donnelley Financial Solutions (<a href="https://finance.yahoo.com/quote/DFIN/" target="_blank">DFIN</a>) at 2.5 times revenue, <a href="https://www.businesswire.com/news/home/20240522516988/en/Sumeru-Equity-Partners-Completes-Acquisition-of-Q4-Inc." target="_blank">Q4 Inc.</a> taken private in May 2024 at 7.5 times revenue — fair value is roughly $12 to $14 a share against today's $6.32. The mechanical problem is that a 2.01-million-share float with $87,000 of daily dollar volume cannot absorb institutional buying. This is not a public re-rating; it is a search-fund or private-equity target priced inside the public-market window.</p>
+  </div>
+
+  <div class="kpi-strip">
+    <div class="kpi"><div class="lbl">Share price</div><div class="val">$6.32</div><div class="sub">May 28, 2026 close</div></div>
+    <div class="kpi"><div class="lbl">Enterprise value</div><div class="val">$24.0M</div><div class="sub">$24.5M cap − $0.5M net cash</div></div>
+    <div class="kpi"><div class="lbl">Revenue (TTM)</div><div class="val">$22.5M</div><div class="sub">down 2% year-over-year</div></div>
+    <div class="kpi"><div class="lbl">Adj. EBITDA (FY25)</div><div class="val">$3.2M</div><div class="sub">14% margin; GAAP $1.25M</div></div>
+    <div class="kpi"><div class="lbl">Float</div><div class="val">2.01M</div><div class="sub">52% of 3.88M outstanding</div></div>
+    <div class="kpi"><div class="lbl">Daily $ volume</div><div class="val">$87K</div><div class="sub">13,731 shares × $6.32</div></div>
+  </div>
+
+  <h2>The business</h2>
+  <p>ACCESS Newswire generated $22.5 million of revenue in the twelve months ended March 2026 (per the <a href="https://www.sec.gov/Archives/edgar/data/843006/000168316826003723/0001683168-26-003723-index.htm" target="_blank">quarterly report filed May 12, 2026</a>) distributing press releases, hosting investor-relations webcasts, and running a media-monitoring and pitching platform for 12,802 customers across public and private companies. Subscription revenue is 60% of the total at $12.2 million in annual recurring revenue from 974 subscribers as of December 31, 2025, growing to 1,119 subscribers by the end of the first quarter of 2026 (<a href="https://www.sec.gov/Archives/edgar/data/843006/000168316826002018/0001683168-26-002018-index.htm" target="_blank">fiscal 2025 annual report, filed March 19, 2026</a>; Q1 2026 earnings call). The founder and chief executive, Brian Balbirnie, has run the company since incorporating it in 1988, owns 16.05% of shares outstanding, and is paid $285,000 a year (<a href="https://www.sec.gov/Archives/edgar/data/843006/000168316826003382/0001683168-26-003382-index.htm" target="_blank">proxy statement filed April 30, 2026</a>); three other holders — Topline Capital Management at 18.27%, Yorkmont Capital at 6.89%, and 2717 Partners at 5.44% — bring identified holders above 5% to 46.6% of shares outstanding. The financial fingerprint — 75.6% gross margin, 60% subscription mix, $247,000 of revenue per employee on 91 employees — is identical to investor-relations-technology peers DFIN and the former public-company Q4 Inc., and shares nothing with the advertising-agency peer group the Yahoo Finance tag routes consensus toward.</p>
+
+  <h2>Why this is a non-obvious pick</h2>
+  <p>By the Lunchline tests, this is mostly <em>under-followed</em> and <em>mispriced on the wrong peer set</em>; it is only mildly messy. <strong>Messy:</strong> the company divested its Compliance segment to Equiniti for $12.5 million in February 2025 and recorded a $14.15 million impairment on the Newswire trademark in fiscal 2024 (<a href="https://www.sec.gov/Archives/edgar/data/843006/000168316826002018/0001683168-26-002018-index.htm" target="_blank">fiscal 2025 10-K, Note on impairment</a>), leaving two years of discontinued-operations footnotes and one large optical loss in the trailing earnings — every screen that filters on auditor flags, discontinued operations, or a five-year clean net-income line excludes it. <strong>Mispriced:</strong> the Yahoo Finance industry tag is "Advertising Agencies" against a 75.6% gross margin and a 60% recurring-revenue mix that describe an investor-relations-technology software business, not an agency — DFIN trades at 2.5 times revenue (<a href="https://finance.yahoo.com/quote/DFIN/" target="_blank">Yahoo Finance quote page</a>); Q4 Inc. was taken private by Sumeru Equity Partners in May 2024 at C$257 million on roughly C$35 million of revenue, or 7.5 times revenue (<a href="https://www.businesswire.com/news/home/20240522516988/en/Sumeru-Equity-Partners-Completes-Acquisition-of-Q4-Inc." target="_blank">May 22, 2024 transaction press release</a>); ACCS trades at 1.07 times revenue, roughly 40% of the DFIN benchmark. <strong>Under-followed:</strong> two analysts publish on the stock (Lake Street and Northland Securities), neither at a bulge-bracket firm, and the public float of 2.01 million shares produces $87,000 of daily dollar volume — below the threshold at which any fund managing more than $25 million in deployable capital can build a position without moving the price several percent on entry.</p>
+
+  <h2>What the market sees</h2>
+  <p>Two analysts cover the stock. Lake Street's Jacob Stephan initiated coverage on April 24, 2025 at a $15 price target, cut to $14 in August 2025, and cut again to $12 on May 13, 2026 — three downward revisions in thirteen months, with the next-fiscal-year earnings-per-share estimate cut from $0.80 to $0.44 over the same window. Northland Securities' Mike Grondahl publishes more sporadically and was the only sell-side voice on the fourth-quarter 2025 call. The stock trades at 1.07 times trailing revenue and 19.0 times trailing GAAP EBITDA (<a href="https://finance.yahoo.com/quote/ACCS/key-statistics" target="_blank">Yahoo Finance key statistics</a>) — both numbers essentially unchanged from a year earlier despite the divestiture of Compliance and the rebrand to ACCESS Newswire, and against a 36% twelve-month price decline. The implication priced in: a sub-scale newswire competitor in a "fragmented and extremely competitive" industry (the 10-K's own phrase) that is shrinking in volume terms, with a trademark impairment in the recent past and a sell-side that keeps lowering the target.</p>
+
+  <h2>What we see</h2>
+  <p>The income statement the market is grading was produced by a public-company cost structure that is too small to amortize and a sector tag that routes valuation to the wrong peer set. First, the gross margin is 75.6% on a 60%-subscription revenue mix — the economics of a software business, not the 20%-to-25%-gross-margin services economics of the WPP and Interpublic peer group implied by the "Advertising Agencies" classification. Second, fiscal 2025 GAAP EBITDA of $1.25 million is suppressed by roughly $1.5 million of public-company overhead — Securities and Exchange Commission compliance, listing fees, audit, directors-and-officers insurance, and the cost of running an investor-relations function for a $24 million-enterprise-value company — and by $864,000 of disclosed non-recurring expense; the adjusted EBITDA management reported for fiscal 2025 was $3.2 million (<a href="https://www.sec.gov/Archives/edgar/data/843006/000168316826002018/0001683168-26-002018-index.htm" target="_blank">FY25 10-K, management discussion</a>). Applying the DFIN multiple of 2.5 times revenue to today's $22.5 million revenue yields $56 million of enterprise value, or roughly $14.50 a share after the $0.5 million of net cash; applying the Q4 Inc. take-private multiple of 7.5 times revenue yields a number that is not relevant here because no public buyer would pay it. The honest number sits inside the DFIN-range — call it $11 to $14.</p>
+  <p>But the float of 2.01 million shares against $87,000 of daily dollar volume is the mechanical problem. The four identified holders above 5% own 46.6% of shares outstanding (proxy statement, April 30, 2026), and none of them — Balbirnie, Topline Capital, Yorkmont, 2717 Partners — has registered shares for sale. Topline's 18.27% position represents roughly seven months of average trading volume at today's pace. A fund that wanted to build even a $1 million position would move the price several percent on entry and could not exit at all without a block trade. The right multiple cannot be expressed in the public stock price because the public stock price is set by retail order flow and a two-analyst Lake Street/Northland coverage seat. The unlock is a corporate action — either a take-private at a $9 to $10 price (mechanically feasible: the four top holders plus an arms-length premium tender clears 90%) or a sponsor-funded recapitalization that uses ACCS as a roll-up platform for the dispersed long-tail of newswire competitors. This is the search-fund framing the title implies; it is not a public re-rate.</p>
+
+  <h2>What management says versus what the filings disclose</h2>
+  <p>On the May 12, 2026 first-quarter call, Balbirnie said the company is "neck and neck, literally like 0.1% with Business Wire and us in the third position" by U.S. newswire volume and that "Globe and PR Newswire still are the top 1 and 2 in that space" (Q1 2026 earnings call transcript, internal copy). The fiscal 2025 10-K says only that "the communications industry remains both fragmented and extremely competitive" and names no competitor (Item 1, Business). The IR framing of "#3" understates that the third-place slot is contested with a Berkshire Hathaway-owned incumbent — Business Wire — that has effectively unlimited capacity to defend share. On margin guidance, Balbirnie told the fourth-quarter 2025 call he expected "adjusted EBITDA margins into the mid- to high-teens by the second half of this year"; first-quarter 2026 actual adjusted EBITDA was $564,000, or 11% of revenue, down sequentially from 15% in the fourth quarter — the bridge to a mid-teens margin requires a 600-basis-point step-up in two quarters from a declining base. And on artificial-intelligence positioning, the 10-K states that the company's ACCESS Verified verification tool, described by Balbirnie on the Q1 2026 call as a "competitive differentiator that not any other wire service can match in this depth," is "available at no additional cost to customers" — meaning it is a defensive retention feature, not a revenue lever. None of these is a misrepresentation; each cuts the same way — IR-aspirational, filings-cautious — and a careful reader gets a meaningfully different picture from the 10-K than from the call.</p>
+
+  <h2>What an operator-investor would do</h2>
+  <div class="vcp">
+    <div class="vcp-cell">
+      <div class="lever">Commercial</div>
+      <p>Convert the 11,683 transactional (pay-per-release) customers — the 12,802 active accounts less the 1,119 current subscribers per the Q1 2026 call — to subscription at the existing $12,800 average annual recurring revenue per subscriber. A 10% conversion equals 1,170 new subscribers and roughly $11.7 million of additional recurring revenue at 75% gross margin, against $1 of incremental sales cost per dollar of conversion. Comparable: Meltwater's 2020-to-2023 pivot from pay-per-use to subscription, taking gross margin from 73% to 82% before going private at a 95% subscription mix.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Operations</div>
+      <p>Close the gap between the current 84% operating-expense-to-revenue ratio and the 60% to 65% level investor-relations-technology peers carry at scale. The Raleigh headquarters lease was sublet in December 2025 for $320,000 of annual savings; closing the remaining 1,500 basis points of operating-expense leverage on a $22 million revenue base equals roughly $3.3 million of additional EBITDA. Comparable: DFIN's adjusted-EBITDA margin moved from 14% to 22% over 2016 to 2023 after the spin from RR Donnelley, executed without revenue growth.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Capital structure</div>
+      <p>Take the company private at $9 to $10 a share (a 40% to 60% premium to today's $6.32) to eliminate roughly $1.5 million of public-company overhead — closing the gap between $1.25 million of GAAP EBITDA and the implied software-business margin — and to clear the float problem that prevents any public-market re-rating. The four holders above 5% own 46.6% of shares; a tender at this premium plus the existing $837,000 unfilled buyback gets a sponsor over 90% mechanically. Comparable: Q4 Inc. taken private by Sumeru Equity Partners in May 2024 at 7.5 times revenue, a transaction that explicitly removed public-company costs from a sub-scale investor-relations-technology software business.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Mergers and acquisitions</div>
+      <p>Use the ACCS distribution backbone as a roll-up platform for the dispersed long-tail of newswire competitors created by the Cision / PR Newswire ownership churn — Cision taken private by Platinum Equity in January 2020, Notified spun out in 2024 — and the January 2025 Diamond Comic Distributors bankruptcy in adjacent distribution. Five $5 million-revenue targets at 0.6 times revenue equals $15 million of consideration absorbed onto the fixed editorial and distribution stack at 70%-plus incremental gross margin. The $14.15 million Newswire trademark impairment in fiscal 2024 is the cautionary mark: the first roll-up move (Newswire.com, 2022) was overpaid. The next campaign needs sponsor balance sheet — ACCS's $1.5 million revolver and $3 million of cash cannot fund it.</p>
+    </div>
+  </div>
+  <p style="margin-top:10px;">The Operations and Commercial moves are already under way at management's pace. The Capital Structure move is the one that resolves the mispricing.</p>
+
+  <h2>What it is worth</h2>
+  <table class="calc">
+    <thead><tr><th>Three-year scenario</th><th>FY28 adj. EBITDA</th><th>Multiple basis</th><th>Enterprise value</th><th>Share price</th><th>Return per year</th></tr></thead>
+    <tbody>
+      <tr><td>Bear — no action, multiple stays at ad-agency peer level</td><td>$3.2M</td><td>1.0x revenue</td><td>$22M</td><td>$5.85</td><td>−2%</td></tr>
+      <tr class="total"><td>Base — sponsor take-private at DFIN-equivalent multiple</td><td>$4.7M</td><td>2.0x revenue</td><td>$45M</td><td>$11.75</td><td>+23%</td></tr>
+      <tr><td>Bull — take-private plus first roll-up tuck-in at peer cost base</td><td>$7.5M</td><td>9.0x EBITDA</td><td>$68M</td><td>$17.55</td><td>+41%</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:11.5px; color:var(--slate);">Share price = (enterprise value + $0.5 million net cash) divided by 3.88 million shares outstanding. The bear case holds today's revenue flat and applies the WPP / Interpublic advertising-agency revenue multiple. The base case removes $1.5 million of public-company overhead (adjusted EBITDA $3.2M to $4.7M) and applies the DFIN revenue multiple of 2.0 to 2.5 times. The bull case adds roughly $20 million of acquired revenue at 70% gross margin and applies a private-market EBITDA multiple in the DFIN range; the bull return per year assumes a three-year hold. All three cases assume no equity issuance — any sponsor-financed roll-up would dilute, and the per-share figures would be lower.</p>
+
+  <h2>What would have to go wrong</h2>
+  <ol class="risks">
+    <li>If first-half 2026 adjusted EBITDA margin does not step up from the 11% reported for Q1 to the mid-teens management guided on the Q4 2025 call, the $3.2 million adjusted EBITDA base disappears and the base case ($4.7 million after public-co-cost removal) becomes $3 million — the take-private math gets thinner, not impossible, but the buyer pool shrinks.</li>
+    <li>If revenue declines another 5% or more in fiscal 2026 (against down 2% in fiscal 2025 and down 6% in fiscal 2024 per the 10-K), the "shrinking pie" framing becomes the dominant narrative and the comparison to DFIN — which is growing — stops holding. The 10-K admits the industry data underpinning the $5.5 to $6.0 billion total-addressable-market figure is from "early 2023" Burton-Taylor data; the underlying market may already be smaller.</li>
+    <li>If none of the four identified holders above 5% engages with a take-private process — Topline, Yorkmont, and 2717 Partners are activist-style holders who could either initiate or block — the float problem cannot be solved by a third-party sponsor alone, and the stock remains a "fair value cannot be expressed in the public price" name indefinitely. Lake Street has cut the price target from $15 to $14 to $12 in thirteen months; without a corporate action, the path of least resistance is another cut.</li>
+  </ol>
+
+  <h2>What would confirm it</h2>
+  <p>Three observations over the next four quarterly filings would, taken together, support the case — and one is a red line. First, second-quarter 2026 adjusted EBITDA prints at $750,000 or above (a 13%-plus margin), confirming the bridge management described on the fourth-quarter 2025 call to a mid-teens second-half margin. Second, a Schedule 13D filing — from Topline, from a new sponsor, or from a financial-buyer consortium — naming a corporate action; absent a 13D, the structural-discount thesis remains academic. Third, fiscal 2026 revenue declines no more than 2%, holding the floor under the DFIN-multiple comparison; a steeper decline forces a different peer set. The honest framing for this name is that it is a search-fund or private-equity target whose fair value sits roughly $4 to $7 above where it trades, but where the resolution mechanism runs through an event we cannot observe from the outside. Whether to hold while waiting — given Lake Street's downward path and the absence of catalyst on the calendar — is a judgment the reader can make from the same filings we did.</p>
+
+  <div class="sources">
+    <strong>Sources:</strong> <a href="https://www.sec.gov/Archives/edgar/data/843006/000168316826002018/0001683168-26-002018-index.htm" target="_blank">FY25 10-K</a> (March 19, 2026) · <a href="https://www.sec.gov/Archives/edgar/data/843006/000168316826003723/0001683168-26-003723-index.htm" target="_blank">Q1 FY26 10-Q</a> (May 12, 2026) · <a href="https://www.sec.gov/Archives/edgar/data/843006/000168316826003382/0001683168-26-003382-index.htm" target="_blank">2026 proxy statement</a> (April 30, 2026) · <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000843006&type=8-K&dateb=&owner=include&count=40" target="_blank">8-K event filings</a> · Q1 2026 / Q4 2025 / Q1 2025 earnings call transcripts (internal: <code>data/dossiers/accs/transcripts/</code>) · <a href="https://finance.yahoo.com/quote/ACCS/" target="_blank">Yahoo Finance quote page</a> · <a href="https://finance.yahoo.com/quote/DFIN/" target="_blank">DFIN quote page</a> · <a href="https://www.businesswire.com/news/home/20240522516988/en/Sumeru-Equity-Partners-Completes-Acquisition-of-Q4-Inc." target="_blank">Q4 Inc. take-private (May 22, 2024)</a>
+  </div>
+
+</div>
+
+</body>
+</html>

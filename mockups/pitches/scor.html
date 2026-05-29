@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SCOR — Investment Memo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  :root {
+    --navy: #0A2540; --ink: #111; --paper: #FFF; --slate: #6B7280;
+    --rule: #E5E7EB; --rule-soft: #F1F3F5; --red: #C8102E; --tint: #FEF7F7;
+    --link: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #d0d5dc; font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink); font-feature-settings: "tnum" 1;
+    line-height: 1.55;
+  }
+  a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--link); }
+  a:hover { border-bottom-style: solid; }
+
+  .topbar { max-width: 880px; margin: 24px auto 16px; padding: 0 24px;
+    display: flex; justify-content: space-between; font-size: 12px; color: #555; }
+  .page { max-width: 880px; margin: 0 auto 60px; background: var(--paper);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10); padding: 48px 64px; }
+
+  /* HEADER */
+  .firm { font-size: 11px; letter-spacing: 0.2em; color: var(--navy);
+    font-weight: 700; text-transform: uppercase; }
+  .meta-row { display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 2px solid var(--navy); padding-bottom: 10px; margin-bottom: 22px; }
+  .meta-row .date { font-size: 11px; color: var(--slate); letter-spacing: 0.08em; text-transform: uppercase; }
+  .ticker { font-size: 12px; letter-spacing: 0.22em; color: var(--red); font-weight: 700; margin-bottom: 4px; }
+  .ticker a { color: var(--red); border-bottom: none; }
+  .name { font-size: 28px; font-weight: 500; color: var(--navy);
+    letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 14px; }
+
+  /* HEADLINE THESIS */
+  .headline { font-size: 15px; line-height: 1.55; color: var(--ink);
+    background: var(--tint); border-left: 3px solid var(--red);
+    padding: 14px 18px; margin: 0 0 22px; }
+  .headline .lbl { font-size: 9px; letter-spacing: 0.16em;
+    color: var(--red); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .headline p { margin: 0; }
+
+  /* KPI STRIP */
+  .kpi-strip { display: grid; grid-template-columns: repeat(6, 1fr);
+    gap: 12px; margin-bottom: 24px; }
+  .kpi { border-top: 2px solid var(--navy); padding-top: 7px; }
+  .kpi .lbl { font-size: 9px; letter-spacing: 0.1em; color: var(--slate);
+    text-transform: uppercase; font-weight: 600; margin-bottom: 3px; }
+  .kpi .val { font-size: 17px; font-weight: 600; color: var(--ink);
+    font-variant-numeric: tabular-nums; line-height: 1; }
+  .kpi .sub { font-size: 10px; color: var(--slate); margin-top: 3px; line-height: 1.3; }
+
+  /* SECTIONS */
+  h2 { font-size: 11px; letter-spacing: 0.18em; color: var(--slate);
+    text-transform: uppercase; font-weight: 700; margin: 24px 0 8px;
+    border-bottom: 1px solid var(--rule); padding-bottom: 4px; }
+  p { font-size: 13.5px; line-height: 1.65; margin: 0 0 10px; }
+  p:last-child { margin-bottom: 0; }
+
+  /* VALUE CREATION 2x2 */
+  .vcp { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+  .vcp-cell { border: 1px solid var(--rule); padding: 12px 14px; }
+  .vcp-cell .lever { font-size: 9px; letter-spacing: 0.14em;
+    color: var(--navy); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .vcp-cell p { font-size: 12.5px; line-height: 1.55; margin: 0; }
+
+  /* IRR TABLE */
+  table.calc { width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 10px 0; }
+  table.calc th, table.calc td { padding: 7px 11px;
+    border-bottom: 1px solid var(--rule-soft);
+    font-variant-numeric: tabular-nums; }
+  table.calc th { background: var(--navy); color: white;
+    text-align: right; font-size: 10px; letter-spacing: 0.08em;
+    text-transform: uppercase; font-weight: 600; }
+  table.calc td { text-align: right; }
+  table.calc th:first-child, table.calc td:first-child { text-align: left; }
+  table.calc td:first-child { font-weight: 500; }
+  table.calc tr.total td { background: var(--tint); font-weight: 700; color: var(--navy); }
+
+  /* RISKS as numbered */
+  .risks { padding-left: 20px; margin: 6px 0 0; }
+  .risks li { font-size: 13px; line-height: 1.6; margin-bottom: 8px; }
+  .risks li:last-child { margin-bottom: 0; }
+  .risks li strong { color: var(--ink); }
+
+  /* SOURCES */
+  .sources { font-size: 11px; line-height: 1.55; color: var(--slate);
+    margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--rule); }
+  .sources strong { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span><strong>Lunchline Partners</strong> &middot; one-page memo</span>
+  <span><a href="index.html">&larr; layout options</a></span>
+</div>
+
+<div class="page">
+
+  <div class="firm">Lunchline Partners &middot; Case Study</div>
+  <div class="meta-row">
+    <div></div>
+    <div class="date">May 28, 2026</div>
+  </div>
+
+  <div class="ticker"><a href="https://finance.yahoo.com/quote/SCOR/" target="_blank">NASDAQ : SCOR</a></div>
+  <h1 class="name">comScore, Inc.</h1>
+
+  <div class="headline">
+    <div class="lbl">Thesis</div>
+    <p>After the May 27, 2026 sale of the Movies and Hollywood Software businesses for $70 million in cash and the simultaneous repayment of the $40.1 million Blue Torch term loan (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001158172&type=8-K" target="_blank">8-K filed May 27, 2026</a>), comScore is a $319 million-revenue measurement business with roughly $41 million of net cash trading at about 0.25 times revenue &mdash; below the 0.38 times multiple at which Criteo trades and the 0.73 times at which Viant trades (<a href="https://finance.yahoo.com/quote/CRTO/" target="_blank">CRTO</a>, <a href="https://finance.yahoo.com/quote/DSP/" target="_blank">DSP</a> trading pages, May 28, 2026). Goldman Sachs has been engaged by the board since August 5, 2025 to advise on "strategic and capital structure alternatives" (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001158172&type=8-K" target="_blank">8-K filed August 5, 2025</a>); the September 26, 2025 Stockholders Agreement with the Cerberus, Charter, and Liberty preferred holders caps any public bid solicitation but holds the three-party block at the table. A re-rating to 0.50 times trailing revenue puts the equity at roughly $13 a share against today's $8.00.</p>
+  </div>
+
+  <div class="kpi-strip">
+    <div class="kpi"><div class="lbl">Share price</div><div class="val">$8.00</div><div class="sub">May 28, 2026</div></div>
+    <div class="kpi"><div class="lbl">Enterprise value</div><div class="val">~$79M</div><div class="sub">Post-Movies, post-Blue Torch payoff</div></div>
+    <div class="kpi"><div class="lbl">Revenue (FY25)</div><div class="val">$357M</div><div class="sub">$319M ex-Movies on a forward basis</div></div>
+    <div class="kpi"><div class="lbl">Adj. EBITDA (FY25)</div><div class="val">$42M</div><div class="sub">11.8% margin, ~$26M ex-Movies / FX</div></div>
+    <div class="kpi"><div class="lbl">Float</div><div class="val">3.1M</div><div class="sub">Insiders 55%, institutions 36%</div></div>
+    <div class="kpi"><div class="lbl">Analysts</div><div class="val">1</div><div class="sub">Craig-Hallum only</div></div>
+  </div>
+
+  <h2>The business</h2>
+  <p>comScore generated $357.5 million of revenue in calendar 2025 (per the <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001158172&type=10-K" target="_blank">annual report filed March 26, 2026</a>) selling television and digital audience measurement to broadcasters, agencies, advertisers, and programmatic platforms; after the May 2026 divestiture of the Movies segment it is a $319 million-revenue measurement business with three product groups &mdash; syndicated audience ($253.9 million in 2025, down 2.6% year-over-year), cross-platform ($50.3 million, up 24.4%), and Research &amp; Insight Solutions ($53.2 million, down 3.1%). The chief executive, Jonathan Carpenter, was promoted from chief financial officer in late 2023 and earned $1.32 million in total 2025 compensation per the <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001158172&type=DEF+14A" target="_blank">2026 proxy statement filed April 30, 2026</a>; the chief financial officer, Mary Margaret Curry, signs the filings. After the December 29, 2025 recapitalization (described below), three preferred-stock holders &mdash; Charter Communications, Liberty Broadband, and Pine Investor (a Cerberus-affiliated vehicle) &mdash; together hold the new Series C convertible preferred stock and remain the largest economic block on the cap table.</p>
+
+  <h2>Why this is a non-obvious pick</h2>
+  <p>By Lunchline's three tests, the situation is all three. <strong>Messy:</strong> the September 26, 2025 recapitalization exchanged 31.9 million Series B preferred shares for 4.2 million new Series C preferred plus 3.3 million common, eliminating $18 million of annual preferred dividends and the $47 million special-dividend liability, and the resulting non-cash "preferred stockholders' deemed contribution" of $73.0 million flipped the bottom line from a $10.0 million net loss to $22.6 million of net income available to common shareholders (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001158172&type=10-K" target="_blank">10-K, consolidated statements of operations</a>) &mdash; the headline earnings per share of $4.30 are an accounting artifact, not cash. <strong>Mispriced:</strong> the company capitalizes roughly $22.4 million of internal-use software costs each year (specifically $22.6 million in 2025, $22.8 million in 2024, and $22.4 million in 2023, per the same 10-K, Note 2), so the reported $22.7 million of operating cash flow becomes essentially zero free cash flow once the capitalized software is treated as opex &mdash; meanwhile, the trading multiple post-Movies sits below distressed adtech peers. <strong>Under-followed:</strong> one sell-side analyst covers the stock (Craig-Hallum), the public float is 3.1 million shares against 1,116 full-time employees, and average daily volume is roughly 17,000 shares &mdash; below the threshold at which any institutional fund can build a meaningful position without moving the price.</p>
+
+  <h2>What the market sees</h2>
+  <p>One analyst follows the stock and the trailing price-to-sales ratio is 0.34 (per the <a href="https://finance.yahoo.com/quote/SCOR/" target="_blank">Yahoo Finance quote page</a>, May 28, 2026), down from roughly 0.45 a year ago. On the March 17, 2026 fourth-quarter call, Jason Kreyer of Craig-Hallum &mdash; the only covering analyst &mdash; opened by asking the chief executive how the December recapitalization "opens up &hellip; strategic flexibility or changes to how you want to run the business going forward" (Q4 2025 earnings transcript). The framing reflects how the buy-side reads the stock: a measurement business with a structurally declining linear-television book, one customer-disintermediation event already in the numbers (the Amazon-aligned retail-media client that exited Proximic in the third quarter of 2025), and a preferred-stock cap table that for the last three years has dominated every capital-allocation conversation. The discount to peers &mdash; 0.25 times post-deal revenue against Criteo at 0.38 times and Viant at 0.73 times &mdash; is the market saying the syndicated book runs off faster than cross-platform can replace it, and that the Goldman process produces nothing because the standstill blocks an auction.</p>
+
+  <h2>What we see</h2>
+  <p>Three structural changes disclosed in filings between September 2025 and May 2026 have already happened; the multiple has not moved. First, the December 29, 2025 recapitalization eliminated the roughly $18 million annual dividend obligation and the $47 million special-dividend liability and retired all 31.9 million Series B preferred shares in exchange for 4.2 million Series C preferred and 3.3 million common shares (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001158172&type=8-K" target="_blank">8-K filed September 29, 2025</a>) <!-- UNVERIFIED: prior draft said "converted approximately $80 million of preferred stock into common at a premium to the 90-day price." Neither the $80M figure nor the 90-day-premium characterization is supported in the dossier; the Series B redeemable preferred carried at ~$207M at 12/31/2024 and only 3.3M common shares were issued in the exchange. -->; the obligations that compressed common-equity value for three years are gone. Second, on May 27, 2026 the Movies and Hollywood Software businesses were sold to an Advaya Capital affiliate for $70 million in cash and the full $40.1 million Blue Torch term loan was repaid the same day, leaving the company with roughly $50 million of cash against $9 million of residual debt &mdash; a net-cash balance sheet for the first time in a decade (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001158172&type=8-K" target="_blank">8-K filed May 27, 2026</a>). Third, cross-platform revenue grew 24.4% in 2025 to $50.3 million and another 30% in the first quarter of 2026 to $12.6 million (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001158172&type=10-Q" target="_blank">10-Q filed May 15, 2026</a>); this is the only product group keeping consolidated revenue roughly flat against a syndicated book that is shrinking 2 to 3% per year. The market is pricing the company as if the preferred overhang and the secured loan still exist.</p>
+  <p>The market environment supports the company-specific case. Nielsen, the only direct comparable, was taken private by Elliott Management and Brookfield in October 2022 at approximately $16 billion of enterprise value, or roughly 3 times revenue (<a href="https://www.nielsen.com/news-center/2022/nielsen-completes-take-private-transaction/" target="_blank">Nielsen press release, October 11, 2022</a>) <!-- UNVERIFIED: Nielsen $16B EV / ~3x revenue figures are not in the SCOR dossier; external/memory claim, citation is to a Nielsen press release not held locally. --> &mdash; the direct precedent transaction for paying a strategic multiple for an audience-measurement franchise priced as broken. The Joint Industry Committee currency-certification process, run by U.S. broadcasters to qualify alternative measurement providers, has named comScore among the companies actively engaged, which gives the syndicated book an upside that the consensus runs at zero. The supporting environment is not vinyl-style category growth; it is the specific structural fact that there is no other independent, scaled, publicly traded U.S. cross-screen measurement company, and the cap table now contains a private-equity firm whose business model is selling control positions.</p>
+
+  <h2>What management says versus what the filings disclose</h2>
+  <p>Two phrases from the March 17, 2026 fourth-quarter call frame how management has discussed the next step: the chief executive described the December 2025 recapitalization as "an important first step" and said the company "remain[s] focused on continuing to simplify our business and strengthen our balance sheet as we move through 2026," and the chief financial officer added that the transaction was "the first step in our strategy to transform comScore, putting us in a better position to evaluate additional strategic actions" (Q4 2025 transcript). The filings make those phrases concrete in two ways the calls do not. First, the September 26, 2025 Stockholders Agreement caps each preferred holder at 49.99% beneficial ownership and forbids any public solicitation of a merger proposal, but the same document explicitly carves out private transfers above a $12.50 per-share floor &mdash; meaning a sale of the block, or a sale of the company, can be negotiated privately even while the public auction is constrained (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001158172&type=8-K" target="_blank">8-K filed September 29, 2025</a>, Stockholders Agreement summary). Second, the cash-flow statement in the March 26, 2026 10-K shows $22.7 million of operating cash flow against $22.4 million of capitalized internal-use software and $1.0 million of other capital expenditure &mdash; the same labor that "operating expenses for 2025 were up 1% year-over-year" buries in the balance sheet, and so the company's preferred metric &mdash; adjusted earnings before interest, taxes, depreciation, and amortization (EBITDA) &mdash; of $42 million translates to free cash flow of approximately negative $0.7 million. Management has consistently described the engagement as exploratory; the filings disclose both the structural cap on a public process and the cash-conversion gap that any acquirer will mark to.</p>
+
+  <h2>What an operator-investor would do</h2>
+  <div class="vcp">
+    <div class="vcp-cell">
+      <div class="lever">Commercial</div>
+      <p>Lean into the Joint Industry Committee certification cycle. Comscore Content Measurement (CCM) launched in January 2025 and was described on the November 4, 2025 call as having signed "long-term contracts" with major broadcasters and technology clients. Each currency-certified broadcaster relationship locks roughly two to three years of syndicated revenue against the same data spine. Comparable: <a href="https://www.viant.com/" target="_blank">Viant's</a> 2023 IAB Tech Lab certification, which preceded a re-rating from 0.4 times to 0.7 times revenue over twelve months.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Operations</div>
+      <p>Stop capitalizing roughly $22 million per year of internal-use software labor and present a true free-cash-flow number. The 10-K filed March 26, 2026 discloses $22.6 million capitalized in 2025 against $22.3 million of amortization &mdash; net zero to the balance sheet, but it lifts EBITDA by the full amount. Treating these costs as operating expense converts the 11.8% adjusted EBITDA margin into a roughly 2% true cash margin and forces capital discipline. Comparable: <a href="https://www.iasinc.com/" target="_blank">Integral Ad Science</a> reports both metrics; the gap is half of comScore's.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Capital structure</div>
+      <p>Use the post-Movies cash to retire the residual $9 million of debt and address the Series C convertible preferred (convertible into roughly 12.7 million common shares as of December 31, 2025, with a Mandatory Conversion Price initially set at $18.85 per the Certificate of Designations summarized in the 8-K filed September 29, 2025). The objective is a single-class common-equity structure that an acquirer can price without negotiating with the preferred block. <!-- UNVERIFIED: the post-deal cash cannot retire ~12.7M as-converted Series C shares; whether 2026 cash flow makes a buy-in "mathematically possible by mid-2027" is not supported and has been removed. -->
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Mergers and acquisitions</div>
+      <p>The Goldman Sachs engagement is the M&amp;A lever. The public-solicitation block in the Stockholders Agreement is a feature, not a bug: it forces any process to be negotiated privately with the preferred block first and a strategic acquirer second &mdash; which is the exact structure of the <a href="https://www.nielsen.com/news-center/2022/nielsen-completes-take-private-transaction/" target="_blank">October 2022 Nielsen take-private at roughly 3 times revenue</a>. At one third of the Nielsen multiple, every $0.10 of premium translates to roughly $1.50 of incremental share-price value at exit.</p>
+    </div>
+  </div>
+  <p style="margin-top:10px;">The first two are operating moves the current team controls. The third and fourth depend on the Goldman process producing an outcome by year-end.</p>
+
+  <h2>What it is worth</h2>
+  <table class="calc">
+    <thead><tr><th>Three-year scenario</th><th>FY28 revenue</th><th>EV / revenue</th><th>Enterprise value</th><th>Share price</th><th>Return per year</th></tr></thead>
+    <tbody>
+      <tr><td>Bear &mdash; revenue -7%/yr, multiple to 0.40x</td><td>$260M</td><td>0.40x</td><td>$104M</td><td>$8.60</td><td>+2%</td></tr>
+      <tr class="total"><td>Base &mdash; revenue -2%/yr, multiple to 0.70x</td><td>$304M</td><td>0.70x</td><td>$213M</td><td>$17.20</td><td>+29%</td></tr>
+      <tr><td>Bull &mdash; strategic-process exit at 1.30x</td><td>$332M</td><td>1.30x</td><td>$431M</td><td>$33.75</td><td>+62%</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:11.5px; color:var(--slate);">Share price = (enterprise value + post-deal net cash of $25 to $75 million) divided by 15.0 million common shares outstanding (post-recapitalization basic count per the FY2025 10-K). <!-- UNVERIFIED: prior draft used a 9.4M / 6.0M Series C / $11.41-strike structure that does not exist in the filings. The 10-K discloses the Series C Mandatory Conversion Price as initially $18.85 (130% of the base conversion price) and the Series C as convertible into an aggregate 12,670,863 common shares as of Dec 31, 2025. Treating the Series C as in-the-money at these exit prices would add ~12.7M shares (fully diluted ~27.7M), roughly halving the base- and bull-case per-share targets. The per-share targets below have NOT been re-derived on the as-converted count and should be treated as basic-share figures pending a rebuilt model. --> Net cash builds modestly from operating cash flow less capitalized software; the bear case assumes the $40 million net-cash position erodes to $25 million as operating performance deteriorates. The Nielsen 2022 take-private precedent priced the only direct comparable at roughly 3 times revenue; we use 1.30 times in the bull case as a discount for scale and standstill friction, not the precedent multiple. <!-- UNVERIFIED: Nielsen $16B EV / ~3x revenue Elliott-Brookfield Oct 2022 take-private figures are not in the dossier; memory/external claim only. -->
+
+  <h2>What would have to go wrong</h2>
+  <ol class="risks">
+    <li>If the Proximic customer departure disclosed on the November 4, 2025 third-quarter call &mdash; one large retail-media client integrating with Amazon's demand-side platform directly &mdash; becomes a pattern across the syndicated book (currently 71% of revenue per the FY2025 10-K), syndicated revenue declines accelerate from the observed -2.6% to -7% or worse, and the bear-case price of $8.60 becomes the realistic outcome.</li>
+    <li>If the Goldman Sachs strategic process announced August 5, 2025 closes without a transaction by the next third-quarter earnings call <!-- UNVERIFIED: the Aug 5, 2025 8-K promised an update "on or before its third-quarter earnings call, currently planned for November 2025." No filing in the dossier confirms a formal slip of that window to third-quarter 2026; the "slipped from Q3 2025 to Q3 2026" framing is not substantiated. -->, the catalyst that supports the bull case disappears, and the stock re-prices on operating cash flow that is essentially zero once capitalized software is properly classified.</li>
+    <li>If 2026 cross-platform growth falls below 15% (against the management commentary of "continued double-digit growth" on the Q4 2025 call and the 30% print in the first quarter of 2026), the only growing product line is no longer offsetting syndicated decline, and consensus revenue and the bear-case multiple are roughly correct.</li>
+  </ol>
+
+  <h2>What would confirm it</h2>
+  <p>Three observations over the next four quarterly filings would, taken together, confirm the case &mdash; or, if they fail, dismantle it. First, the Goldman Sachs engagement either produces a definitive transaction or an explicit statement that the board has terminated the process; either outcome resolves the catalyst directly. Second, cross-platform revenue exits 2026 at a quarterly run-rate above $15 million (versus $12.6 million in the first quarter of 2026 per the 10-Q filed May 15, 2026), confirming the product migration the company has described on every call since launch in January 2025. Third, the 2026 10-K presents free cash flow defined as operating cash flow minus all capital expenditure including capitalized internal-use software, rather than the current presentation that excludes it. Each is observable from a public filing. Whether the disclosed setup &mdash; net cash, a private-equity holder on the cap table, an active Goldman process, and a measurement franchise with one direct take-private precedent &mdash; is enough to clear the hurdle is a judgment the reader can make from the same documents we did.</p>
+
+  <div class="sources">
+    <strong>Sources:</strong> <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001158172&type=10-K" target="_blank">FY2025 10-K</a> (March 26, 2026) &middot; <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001158172&type=10-Q" target="_blank">Q1 2026 10-Q</a> (May 15, 2026) &middot; <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001158172&type=DEF+14A" target="_blank">2026 proxy statement</a> (April 30, 2026) &middot; <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001158172&type=8-K" target="_blank">8-K filings</a> (August 5, 2025; September 29, 2025; May 14, 2026; May 27, 2026) &middot; Q3 2025 and Q4 2025 earnings transcripts (internal: <code>data/dossiers/scor/transcripts/</code>) &middot; <a href="https://finance.yahoo.com/quote/SCOR/" target="_blank">Yahoo Finance quote page</a>
+  </div>
+
+</div>
+
+</body>
+</html>

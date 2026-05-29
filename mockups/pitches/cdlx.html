@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CDLX — Investment Memo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  :root {
+    --navy: #0A2540; --ink: #111; --paper: #FFF; --slate: #6B7280;
+    --rule: #E5E7EB; --rule-soft: #F1F3F5; --red: #C8102E; --tint: #FEF7F7;
+    --link: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #d0d5dc; font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink); font-feature-settings: "tnum" 1;
+    line-height: 1.55;
+  }
+  a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--link); }
+  a:hover { border-bottom-style: solid; }
+
+  .topbar { max-width: 880px; margin: 24px auto 16px; padding: 0 24px;
+    display: flex; justify-content: space-between; font-size: 12px; color: #555; }
+  .page { max-width: 880px; margin: 0 auto 60px; background: var(--paper);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10); padding: 48px 64px; }
+
+  /* HEADER */
+  .firm { font-size: 11px; letter-spacing: 0.2em; color: var(--navy);
+    font-weight: 700; text-transform: uppercase; }
+  .meta-row { display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 2px solid var(--navy); padding-bottom: 10px; margin-bottom: 22px; }
+  .meta-row .date { font-size: 11px; color: var(--slate); letter-spacing: 0.08em; text-transform: uppercase; }
+  .ticker { font-size: 12px; letter-spacing: 0.22em; color: var(--red); font-weight: 700; margin-bottom: 4px; }
+  .ticker a { color: var(--red); border-bottom: none; }
+  .name { font-size: 28px; font-weight: 500; color: var(--navy);
+    letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 14px; }
+
+  /* HEADLINE THESIS */
+  .headline { font-size: 15px; line-height: 1.55; color: var(--ink);
+    background: var(--tint); border-left: 3px solid var(--red);
+    padding: 14px 18px; margin: 0 0 22px; }
+  .headline .lbl { font-size: 9px; letter-spacing: 0.16em;
+    color: var(--red); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .headline p { margin: 0; }
+
+  /* KPI STRIP */
+  .kpi-strip { display: grid; grid-template-columns: repeat(6, 1fr);
+    gap: 12px; margin-bottom: 24px; }
+  .kpi { border-top: 2px solid var(--navy); padding-top: 7px; }
+  .kpi .lbl { font-size: 9px; letter-spacing: 0.1em; color: var(--slate);
+    text-transform: uppercase; font-weight: 600; margin-bottom: 3px; }
+  .kpi .val { font-size: 17px; font-weight: 600; color: var(--ink);
+    font-variant-numeric: tabular-nums; line-height: 1; }
+  .kpi .sub { font-size: 10px; color: var(--slate); margin-top: 3px; line-height: 1.3; }
+
+  /* SECTIONS */
+  h2 { font-size: 11px; letter-spacing: 0.18em; color: var(--slate);
+    text-transform: uppercase; font-weight: 700; margin: 24px 0 8px;
+    border-bottom: 1px solid var(--rule); padding-bottom: 4px; }
+  p { font-size: 13.5px; line-height: 1.65; margin: 0 0 10px; }
+  p:last-child { margin-bottom: 0; }
+
+  /* VALUE CREATION 2x2 */
+  .vcp { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+  .vcp-cell { border: 1px solid var(--rule); padding: 12px 14px; }
+  .vcp-cell .lever { font-size: 9px; letter-spacing: 0.14em;
+    color: var(--navy); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .vcp-cell p { font-size: 12.5px; line-height: 1.55; margin: 0; }
+
+  /* IRR TABLE */
+  table.calc { width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 10px 0; }
+  table.calc th, table.calc td { padding: 7px 11px;
+    border-bottom: 1px solid var(--rule-soft);
+    font-variant-numeric: tabular-nums; }
+  table.calc th { background: var(--navy); color: white;
+    text-align: right; font-size: 10px; letter-spacing: 0.08em;
+    text-transform: uppercase; font-weight: 600; }
+  table.calc td { text-align: right; }
+  table.calc th:first-child, table.calc td:first-child { text-align: left; }
+  table.calc td:first-child { font-weight: 500; }
+  table.calc tr.total td { background: var(--tint); font-weight: 700; color: var(--navy); }
+
+  /* RISKS as numbered */
+  .risks { padding-left: 20px; margin: 6px 0 0; }
+  .risks li { font-size: 13px; line-height: 1.6; margin-bottom: 8px; }
+  .risks li:last-child { margin-bottom: 0; }
+  .risks li strong { color: var(--ink); }
+
+  /* SOURCES */
+  .sources { font-size: 11px; line-height: 1.55; color: var(--slate);
+    margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--rule); }
+  .sources strong { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span><strong>Investment memo</strong> — Cardlytics, Inc.</span>
+  <span><a href="index.html">&larr; layout options</a></span>
+</div>
+
+<div class="page">
+
+  <div class="firm">Lunchline Partners &middot; Case Study</div>
+  <div class="meta-row">
+    <div></div>
+    <div class="date">May 28, 2026</div>
+  </div>
+
+  <div class="ticker"><a href="https://finance.yahoo.com/quote/CDLX/" target="_blank">NASDAQ : CDLX</a></div>
+  <h1 class="name">Cardlytics, Inc.</h1>
+
+  <div class="headline">
+    <div class="lbl">Thesis</div>
+    <p>Cardlytics carries an enterprise value of $191 million against $172.5 million of 4.25% convertible notes due April 2029 and $40.1 million drawn on a bank revolver — a capital structure in which the equity is being priced as a near-out-of-the-money call option on a default that has not yet been triggered. The disclosure that anchors the trade is in the <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001666071&type=10-K" target="_blank">annual report filed March 4, 2026</a>: the largest financial-institution partner, Bank of America, delivered a written non-renewal notice on April 22, 2025, but on the May 7 and August 6, 2025 earnings calls management framed the resulting revenue loss as "content restrictions" and did not walk through the non-renewal mechanism in transcript form until the March 2026 cycle — even as the bank was named in a terse 8-K filed April 28, 2025 — a disclosure-tone gap that has now closed. With the largest outside holder, Cliff Sosin's CAS Investment Partners, on a Schedule 13D at 9.4% as of <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001666071&type=DEF+14A" target="_blank">the April 9, 2026 proxy</a>, the trade is an equity stub priced for restructuring against a maturity that is three years away.</p>
+  </div>
+
+  <div class="kpi-strip">
+    <div class="kpi"><div class="lbl">Share price</div><div class="val">$0.73</div><div class="sub">May 28, 2026</div></div>
+    <div class="kpi"><div class="lbl">Enterprise value</div><div class="val">$191M</div><div class="sub">$42M equity + $149M net debt</div></div><!-- UNVERIFIED: $191M EV / $149M net debt is the Yahoo Finance bridge (cash $59.8M, debt $210.0M). Filing-based net debt is higher at ~$168M because the Q1 2026 10-Q (3/31/26) shows cash of $35.7M against $204.2M total debt; the $149M figure uses a stale, higher cash balance. -->
+    <div class="kpi"><div class="lbl">Revenue (TTM)</div><div class="val">$211M</div><div class="sub">&minus;39% in Q1 2026</div></div>
+    <div class="kpi"><div class="lbl">2029 convert</div><div class="val">$172.5M</div><div class="sub">4.25% coupon; strike $18.02</div></div>
+    <div class="kpi"><div class="lbl">CAS stake</div><div class="val">9.4%</div><div class="sub">Schedule 13D, Aug 20, 2025</div></div>
+    <div class="kpi"><div class="lbl">Analysts</div><div class="val">4</div><div class="sub">Zero Q&amp;A on Q1 2026 call</div></div>
+  </div>
+
+  <h2>The business</h2>
+  <p>Cardlytics generated $211 million of revenue in the trailing twelve months ended March 2026 (per the <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001666071&type=10-Q" target="_blank">quarterly report filed May 7, 2026</a>) by selling card-linked offers — advertisements that appear inside a bank's mobile application or website and pay a marketer only when a customer makes a qualifying purchase on that bank's debit or credit card. The economics flow through a fixed split with the bank, called Partner Share; in 2025, the company's top three financial-institution partners accounted for more than 80% of the total Partner Share paid (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001666071&type=10-K" target="_blank">fiscal 2025 annual report</a>, Item 1, Business). The chief executive, Amit Gupta, was appointed August 16, 2024; the chief financial officer, David Evans, returned to the role on January 12, 2026 after holding it from 2014 to 2020 (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001666071&type=DEF+14A" target="_blank">2026 proxy statement</a>, filed April 9, 2026). The second platform, Bridg — a point-of-sale data product acquired in 2021 — was sold to <a href="https://finance.yahoo.com/quote/PAR/" target="_blank">PAR Technology Corporation</a> on March 24, 2026 for 1,810,222 PAR shares, which the company liquidated and applied to the bank revolver (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001666071&type=8-K" target="_blank">8-K filed March 24, 2026</a>).</p>
+
+  <h2>Why this is a non-obvious pick</h2>
+  <p>By Lunchline's three tests &mdash; messy, mispriced, under-followed &mdash; this situation passes all three. <strong>Messy:</strong> the top financial-institution partner exited mid-cycle, the second platform was sold to a buyer that paid in its own micro-cap stock, both the chief executive and chief financial officer turned over in the last eighteen months, the company took a $49.1 million goodwill impairment against the Cardlytics platform in 2025 and a $117.8 million impairment against Bridg in 2024, and a reverse stock split of one-for-five to one-for-fifteen was on the May 2026 annual-meeting ballot to avoid Nasdaq's minimum-bid-price delisting rule (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001666071&type=DEF+14A" target="_blank">2026 proxy</a>, Proposal 4). <strong>Mispriced:</strong> the equity capitalization of $42 million sits below $172.5 million of convertible debt that does not mature until April 2029, which forces the marginal seller to price the stock with an option-pricing model that assumes a near-term default the maturity calendar does not support. <strong>Under-followed:</strong> four sell-side firms cover the stock and not one has a Buy rating; the May 7, 2026 first-quarter earnings call took <strong>zero</strong> analyst questions during the question-and-answer session (call transcript, May 7, 2026); and Schedule 13D filings show that CAS Investment Partners (Cliff Sosin) holds 9.4% in active rather than passive form, against insider ownership of 5.9% and three sell-side downgrades in the prior twelve months.</p>
+
+  <h2>What the market sees</h2>
+  <p>Four analysts cover the stock — Lake Street, Needham, Evercore ISI, and Craig-Hallum — and the consensus price target is $1.08 against a current price of $0.73, with no Buy rating in the panel (Yahoo Finance analyst data, May 28, 2026). The framing on every recent sell-side note is the same: a card-linked-offer utility that has just lost its largest financial-institution partner, sells advertising in a category whose monetization per qualified user fell from $0.14 in the second quarter of 2025 to $0.10 in the first quarter of 2026 (call transcripts dated August 6, 2025 and May 7, 2026), and carries $210 million of total debt against negative book value of negative twelve cents per share (fiscal 2025 annual report, balance sheet: total stockholders' deficit of $6.5 million on 54.5 million shares). The implication priced into the multiple of 0.91 times trailing revenue: the convertible notes will need to be restructured or settled with equity inside the three-year window, and the equity holder is the residual.</p>
+
+  <h2>What we see</h2>
+  <p>Three facts in the filings push against the residual-equity framing. First, the convertible notes do not mature until April 2029, carry a cash coupon of only 4.25%, and on free cash flow of $19 million over the trailing twelve months (Yahoo Finance, May 28, 2026), the annual interest of roughly $7.3 million is covered with room — the maturity wall is real but is three years away, not three quarters. Second, the Bridg divestiture closed March 24, 2026 for stock consideration that the company sold and used to pay down the bank revolver (8-K filed March 24, 2026), which removes a loss-making asset, lifts the adjusted contribution margin to a reported 60.6% in the first quarter of 2026 from prior-period levels in the high-50s (May 7, 2026 earnings call), and resets the cost base. Third, on April 22, 2025, the company received a written non-renewal notice from Bank of America, disclosed in an 8-K filed April 28, 2025; yet on the May 7, 2025 first-quarter call and the August 6, 2025 second-quarter call, management discussed the loss of volume on the earnings calls as "content restrictions" imposed by its largest partner, and the non-renewal mechanism was not walked through in transcript form until the fourth-quarter 2025 / March 2026 reporting cycle (fiscal 2025 annual report, Item 1, Agreements with Bank of America). The gap between the terse 8-K naming and the earnings-call framing of the loss is the kind of disclosure-tone gap that prices into the equity once and does not need to price again.</p>
+  <p>The market environment supports the framing. Card-linked offers are an advertising format whose underlying inventory — qualified bank deposit accounts — is structurally concentrated among five or six United States banks. In the same period the company lost Bank of America, the chief executive disclosed on the November 5, 2025 third-quarter call that the workforce had been reduced by 30%, with $50 million of annualized cash cost taken out over three reductions across 2025 (third-quarter 2025 call transcript). Adjusted earnings before interest, taxes, depreciation, and amortization (EBITDA) grew from $2.5 million in 2024 to $10.1 million in 2025 against a 16% revenue decline (fiscal 2025 annual report, non-GAAP reconciliation) — the operating cost lever has already been pulled.</p>
+
+  <h2>What management says versus what the filings disclose</h2>
+  <p>On the March 4, 2026 fourth-quarter call the chief executive described the Bank of America departure as "a valued partner" whose "program structure and future direction did not align with our long-term objectives" (call transcript). The fiscal 2025 annual report, in Item 1 under Agreements with Bank of America, discloses that on April 22, 2025, the company received a written non-renewal notice from Bank of America and that the bank requested continued uninterrupted operations through a transition period that ended February 16, 2026. A vendor framing a customer firing it as a vendor walking away on principle is the kind of gap that a question-and-answer session would normally surface; the May 7, 2026 first-quarter call recorded zero analyst questions in its question-and-answer session (call transcript).</p>
+  <p>A second gap. Management has anchored its narrative on "self-sustainability" and on adjusted EBITDA of $10.1 million for 2025 (fourth-quarter 2025 call, March 4, 2026). The annual report's own free-cash-flow reconciliation in the management discussion and analysis section subtracts capitalized software development costs of $15.3 million from operating cash flow of $9.3 million and reports free cash flow of negative $6.5 million for fiscal 2025. The Yahoo Finance summary that headlines $19 million of trailing free cash flow is a snapshot from before the March 2026 reporting cycle, and the first-quarter 2026 print of negative $7.9 million of free cash flow (May 7, 2026 quarterly report) is consistent with the annual-report number. The thesis works only if a reader anchors on the convertible maturity calendar and the cost structure post-reductions — not on the headline screen.</p>
+
+  <h2>What an operator-investor would do</h2>
+  <div class="vcp">
+    <div class="vcp-cell">
+      <div class="lever">Commercial</div>
+      <p>Sign at least one replacement financial-institution partner of meaningful scale. The Cardlytics Rewards Platform, announced on the May 7, 2026 first-quarter call, is the company's vehicle for adding non-bank publishers (sports teams, neobanks, OpenTable). Comparable: Affinity Solutions' 2023 buildout of non-bank publisher relationships, which expanded its monetizable footprint without paying Partner Share to a top-four United States bank.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Operations</div>
+      <p>Finish the platform consolidation onto Databricks announced on the March 4, 2026 fourth-quarter call. Management reported that 2025 infrastructure changes cut hosting cost 40% and accelerated feature delivery by 20%; an incoming operator inherits the architecture, not the migration. Comparable: <a href="https://finance.yahoo.com/quote/IAS/" target="_blank">Integral Ad Science</a>'s 2022 to 2024 measurement-stack rebuild, which lifted gross margin from the low-70s to 77.4%.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Capital structure</div>
+      <p>Open a discounted exchange on the $172.5 million convertible notes. With the stock at $0.73 against a $18.02 conversion price, the right to convert into stock is roughly 25 times out of the money and effectively worthless to the holder; a refinancing into a senior secured facility with warrants, executed before the April 2029 maturity becomes the binding constraint, would reset the capital structure. Comparable: Cardlytics' own April 2024 issuance of the current $172.5 million notes, which retired the 2020 convertibles and produced a $13 million gain on debt extinguishment (fiscal 2025 annual report, results of operations).</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Mergers and acquisitions</div>
+      <p>Sell or carve out the United Kingdom business, which grew 35% year-over-year in the fourth quarter of 2025 and 21% in the first quarter of 2026 against a United States business shrinking by a third (call transcripts, March 4 and May 7, 2026). United Kingdom commerce-media buyers (Tesco's Clubcard data business, Nectar360, a major United Kingdom retail bank) are the logical acquirers. Comparable: <a href="https://finance.yahoo.com/quote/CRTO/" target="_blank">Criteo</a>'s 2023 sale of non-core retargeting assets, which let it concentrate capital on the commerce-media platform.</p>
+    </div>
+  </div>
+  <p style="margin-top:10px;">The first two are under way. The investment thesis is that the last two, if executed inside the convertible maturity window, are what closes the gap between the $42 million equity and a recapitalized enterprise.</p>
+
+  <h2>What it is worth</h2>
+  <table class="calc">
+    <thead><tr><th>Three-year scenario</th><th>2028 revenue</th><th>EV / revenue</th><th>Enterprise value</th><th>Share price</th><th>Return per year</th></tr></thead>
+    <tbody>
+      <tr><td>Bear &mdash; covenant test fails 2027, equity raise dilutes</td><td>$140M</td><td>0.40x</td><td>$56M</td><td>$0.30</td><td>&minus;26%</td></tr>
+      <tr class="total"><td>Base &mdash; revenue flat at $210M, peer-mid multiple, convert refinanced</td><td>$210M</td><td>0.95x</td><td>$200M</td><td>$1.36</td><td>+23%</td></tr>
+      <tr><td>Bull &mdash; revenue inflects to 8% growth, peer DSP multiple, convert exchanged at par</td><td>$245M</td><td>1.30x</td><td>$319M</td><td>$3.50</td><td>+68%</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:11.5px; color:var(--slate);">The enterprise-value column is the EV/revenue cross-check (2028 revenue &times; multiple). The share-price column is the blended scenario output of the valuation model (<code>data/dossiers/cdlx/scoring/model.md</code>), which weights the EV/revenue, EV/gross-profit, and path-to-profitability methods and nets against approximately $167 million of net debt over 57.6 million shares; the bear case of $0.30 is a recovery-value floor reflecting wipeout risk, not a going-concern multiple. <!-- UNVERIFIED: bear $0.30 / base $1.36 / bull $3.50 are model-blended outputs, not a single EV-minus-net-debt line; the EV column and the share-price column therefore do not reconcile via one arithmetic step. Returns/yr (-26%/+23%/+68%) do reconcile to these prices as 3-yr CAGRs from $0.73. --> Peer multiples drawn from the working peer file at <code>data/research/cdlx/peer_benchmarks.csv</code>: Criteo at 0.38 times revenue, Viant Technology at 0.73 times, Fluent at 0.43 times, Integral Ad Science at 2.76 times, DoubleVerify at 1.84 times. The base case does not assume re-rating to the measurement-software cohort (DoubleVerify, Integral Ad Science), whose gross margins above 75% the company does not produce.</p>
+
+  <h2>What would have to go wrong</h2>
+  <ol class="risks">
+    <li>If a second top-three financial-institution partner — Chase or Wells Fargo, each disclosed at more than 15% of Partner Share in the fiscal 2025 annual report — delivers a written non-renewal notice in any subsequent 8-K filing through 2027, the post-Bank-of-America revenue base cannot stabilize and the convertible refinancing window closes. Each remaining partner is terminable on 90 days' written notice (fiscal 2025 annual report, Item 1A risk factors).</li>
+    <li>If the minimum-unrestricted-cash covenant on the 2018 bank line of credit, which was reduced from $25 million to $20 million in the first-quarter 2026 quarterly report filed May 7, 2026, is reduced again or restructured into an adjusted-EBITDA test in any subsequent filing, the lender is signaling distress acceleration rather than incremental relief and the base-case equity recovery breaks down.</li>
+    <li>If adjusted monetization per qualified user, which fell from $0.14 in the second quarter of 2025 to $0.10 in the first quarter of 2026 (call transcripts), continues lower in either the second-quarter or third-quarter 2026 print, the engagement-based pricing model that management has positioned as the post-Bank-of-America revenue lever has not taken hold and the bull-case revenue path of $245 million by 2028 is wrong.</li>
+  </ol>
+
+  <h2>What would confirm it</h2>
+  <p>Three observations over the next four quarterly filings would, taken together, confirm the case &mdash; or, if they fail, dismantle it cleanly. First, second-quarter 2026 adjusted EBITDA prints at the high end of the guided range of negative $2.7 million to positive $1.3 million (May 7, 2026 call), with billings above $61 million, confirming the post-Bank-of-America business stabilizes at the reduced cost base. Second, CAS Investment Partners files a Schedule 13D amendment with a public letter or a board-seat demand, lifting the 9.4% position from a quiet hold into a stated campaign on the convertible workout. Third, an 8-K discloses either a Chase or Wells Fargo contract extension naming specific term, or the commencement of a strategic-alternatives review. Each observation is testable from public filings. Whether a stub equity priced at $42 million can earn back the path to a recapitalized $200 million enterprise is a judgment the reader can make from the same documents we did.</p>
+
+  <div class="sources">
+    <strong>Sources:</strong> <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001666071&type=10-K" target="_blank">FY2025 10-K</a> (March 4, 2026) &middot; <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001666071&type=10-Q" target="_blank">Q1 2026 10-Q</a> (May 7, 2026) &middot; <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001666071&type=DEF+14A" target="_blank">2026 proxy statement</a> (April 9, 2026) &middot; <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001666071&type=8-K" target="_blank">8-K event filings</a> (Bank of America non-renewal, April 28, 2025; Bridg sale agreement, January 26, 2026; Bridg sale close, March 24, 2026; CFO transition, December 5 and 18, 2025) &middot; Q4 2025 and Q1 2026 earnings call transcripts (internal: <code>data/dossiers/cdlx/transcripts/</code>) &middot; <a href="https://finance.yahoo.com/quote/CDLX/" target="_blank">Yahoo Finance quote page</a>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>NRDY — Investment Memo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  :root {
+    --navy: #0A2540; --ink: #111; --paper: #FFF; --slate: #6B7280;
+    --rule: #E5E7EB; --rule-soft: #F1F3F5; --red: #C8102E; --tint: #FEF7F7;
+    --link: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #d0d5dc; font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink); font-feature-settings: "tnum" 1;
+    line-height: 1.55;
+  }
+  a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--link); }
+  a:hover { border-bottom-style: solid; }
+
+  .topbar { max-width: 880px; margin: 24px auto 16px; padding: 0 24px;
+    display: flex; justify-content: space-between; font-size: 12px; color: #555; }
+  .page { max-width: 880px; margin: 0 auto 60px; background: var(--paper);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10); padding: 48px 64px; }
+
+  /* HEADER */
+  .firm { font-size: 11px; letter-spacing: 0.2em; color: var(--navy);
+    font-weight: 700; text-transform: uppercase; }
+  .meta-row { display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 2px solid var(--navy); padding-bottom: 10px; margin-bottom: 22px; }
+  .meta-row .date { font-size: 11px; color: var(--slate); letter-spacing: 0.08em; text-transform: uppercase; }
+  .ticker { font-size: 12px; letter-spacing: 0.22em; color: var(--red); font-weight: 700; margin-bottom: 4px; }
+  .ticker a { color: var(--red); border-bottom: none; }
+  .name { font-size: 28px; font-weight: 500; color: var(--navy);
+    letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 14px; }
+
+  /* HEADLINE THESIS */
+  .headline { font-size: 15px; line-height: 1.55; color: var(--ink);
+    background: var(--tint); border-left: 3px solid var(--red);
+    padding: 14px 18px; margin: 0 0 22px; }
+  .headline .lbl { font-size: 9px; letter-spacing: 0.16em;
+    color: var(--red); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .headline p { margin: 0; }
+
+  /* KPI STRIP */
+  .kpi-strip { display: grid; grid-template-columns: repeat(6, 1fr);
+    gap: 12px; margin-bottom: 24px; }
+  .kpi { border-top: 2px solid var(--navy); padding-top: 7px; }
+  .kpi .lbl { font-size: 9px; letter-spacing: 0.1em; color: var(--slate);
+    text-transform: uppercase; font-weight: 600; margin-bottom: 3px; }
+  .kpi .val { font-size: 17px; font-weight: 600; color: var(--ink);
+    font-variant-numeric: tabular-nums; line-height: 1; }
+  .kpi .sub { font-size: 10px; color: var(--slate); margin-top: 3px; line-height: 1.3; }
+
+  /* SECTIONS */
+  h2 { font-size: 11px; letter-spacing: 0.18em; color: var(--slate);
+    text-transform: uppercase; font-weight: 700; margin: 24px 0 8px;
+    border-bottom: 1px solid var(--rule); padding-bottom: 4px; }
+  p { font-size: 13.5px; line-height: 1.65; margin: 0 0 10px; }
+  p:last-child { margin-bottom: 0; }
+
+  /* VALUE CREATION 2x2 */
+  .vcp { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+  .vcp-cell { border: 1px solid var(--rule); padding: 12px 14px; }
+  .vcp-cell .lever { font-size: 9px; letter-spacing: 0.14em;
+    color: var(--navy); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .vcp-cell p { font-size: 12.5px; line-height: 1.55; margin: 0; }
+
+  /* IRR TABLE */
+  table.calc { width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 10px 0; }
+  table.calc th, table.calc td { padding: 7px 11px;
+    border-bottom: 1px solid var(--rule-soft);
+    font-variant-numeric: tabular-nums; }
+  table.calc th { background: var(--navy); color: white;
+    text-align: right; font-size: 10px; letter-spacing: 0.08em;
+    text-transform: uppercase; font-weight: 600; }
+  table.calc td { text-align: right; }
+  table.calc th:first-child, table.calc td:first-child { text-align: left; }
+  table.calc td:first-child { font-weight: 500; }
+  table.calc tr.total td { background: var(--tint); font-weight: 700; color: var(--navy); }
+
+  /* RISKS as numbered */
+  .risks { padding-left: 20px; margin: 6px 0 0; }
+  .risks li { font-size: 13px; line-height: 1.6; margin-bottom: 8px; }
+  .risks li:last-child { margin-bottom: 0; }
+  .risks li strong { color: var(--ink); }
+
+  /* SOURCES */
+  .sources { font-size: 11px; line-height: 1.55; color: var(--slate);
+    margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--rule); }
+  .sources strong { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span><strong>NRDY memo</strong> — voice/structure per <code>docs/memo-voice.md</code></span>
+  <span><a href="index.html">← layout options</a></span>
+</div>
+
+<div class="page">
+
+  <div class="firm">Lunchline Partners · Case Study</div>
+  <div class="meta-row">
+    <div></div>
+    <div class="date">May 28, 2026</div>
+  </div>
+
+  <div class="ticker"><a href="https://finance.yahoo.com/quote/NRDY/" target="_blank">NYSE : NRDY</a></div>
+  <h1 class="name">Nerdy, Inc.</h1>
+
+  <div class="headline">
+    <div class="lbl">Thesis</div>
+    <p>Nerdy trades at 0.76 times trailing revenue on a market that has priced it for liquidation; the same artificial-intelligence cost reset that delivered 1,500 basis points of adjusted earnings-before-interest-taxes-depreciation-and-amortization (EBITDA) margin expansion on flat revenue (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001819404&type=10-K" target="_blank">fiscal 2025 annual report</a>, filed February 26, 2026) was also the playbook <a href="https://finance.yahoo.com/quote/CHGG/" target="_blank">Chegg</a> ran while its revenue collapsed 48%. The case is not whether margins improved — they did — but whether the active-member base stops shrinking before the 15 months of usable cash runs out. At today's $0.84, the bull case worth $2.00 and the bear case worth $0.30 are both on the table; the trade is whether the next two quarterly prints clear the question.</p>
+  </div>
+
+  <div class="kpi-strip">
+    <div class="kpi"><div class="lbl">Share price</div><div class="val">$0.84</div><div class="sub">May 28, 2026; 52-wk range $0.75–$1.90</div></div>
+    <div class="kpi"><div class="lbl">Enterprise value</div><div class="val">$137M</div><div class="sub">$160M cap − $23M net cash</div></div>
+    <div class="kpi"><div class="lbl">Revenue (TTM)</div><div class="val">$180M</div><div class="sub">−2% year-over-year (TTM); +2% in Q1</div></div>
+    <div class="kpi"><div class="lbl">True free cash flow</div><div class="val">–$24M</div><div class="sub">Operating cash −$18.8M; capex −$5.4M</div></div>
+    <div class="kpi"><div class="lbl">Insider ownership</div><div class="val">50.8%</div><div class="sub">Founder Cohn ≈48.5%</div></div>
+    <div class="kpi"><div class="lbl">Analysts</div><div class="val">3</div><div class="sub">Median price target $2.00</div></div>
+  </div>
+
+  <h2>The business</h2>
+  <p>Nerdy generated $180.1 million of revenue in the trailing twelve months ended March 2026 (per the <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001819404&type=10-Q" target="_blank">first-quarter 2026 quarterly report</a>, filed May 7, 2026) operating Varsity Tutors, a live online learning marketplace where students pay a Learning Membership averaging $374 per month to be matched with human tutors; 84% of revenue is consumer subscription, 15% is the Varsity Tutors for Schools (VT4S) institutional channel sold to school districts. The founder, Charles Cohn, age 38, has run the business since 2007 and beneficially owns 48.5% of the Class A common stock assuming conversion of his Class B (per the <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001819404&type=DEF+14A" target="_blank">proxy statement filed March 10, 2026</a>); his cash salary is $1 and his Founder Performance Award vests only if the stock reaches $18 to $42 a share before September 2028. The unit economic that matters: there were 33,200 Active Members at year-end 2025 against 40,500 at the end of the first quarter of 2025 — an 18% decline from peak — and the entire investment case turns on whether that line stops falling.</p>
+
+  <h2>Why this is a non-obvious pick</h2>
+  <p>By Lunchline's three tests, the situation is all three, but the labels overlap in the same direction. <strong>Messy:</strong> a special-purpose-acquisition-company merger with TPG Pace closed in September 2021 at a $10 reference price; the stock now trades at $0.84, drawing a New York Stock Exchange Section 802.01C continued-listing notice on <a href="https://www.sec.gov/Archives/edgar/data/1819404/000181940426000024/" target="_blank">March 5, 2026</a> with management openly contemplating a reverse split; the chief financial officer was replaced five weeks after signing the <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001819404&type=10-K" target="_blank">fiscal 2025 annual report</a> via an <a href="https://www.sec.gov/Archives/edgar/data/1819404/000181940426000035/" target="_blank">8-K filed April 6, 2026</a>; and the prior "Live+AI" software platform was written down by $7.8 million in the fourth quarter of 2025. <strong>Mispriced:</strong> the stock trades at 0.76 times revenue against Stride at 1.40 times and Strategic Education at 1.32 times (peer benchmarks, May 28, 2026), even after adjusted EBITDA inflected positive in the fourth quarter of 2025 and held positive through the first quarter of 2026 (<a href="https://www.sec.gov/Archives/edgar/data/1819404/000119312526211882/" target="_blank">earnings release filed May 7, 2026</a>). <strong>Under-followed:</strong> three analysts cover the stock, the first-quarter 2026 earnings call drew two analyst questioners (Northland and JPMorgan) versus four in the same quarter a year earlier (transcript, <a href="https://www.sec.gov/Archives/edgar/data/1819404/000119312526211882/" target="_blank">May 7, 2026 earnings call</a>), and institutional ownership is 17.6% — extraordinarily low for a five-year-public listing. The honest version of the Lunchline angle: all three labels describe a single underlying story — a failed post-SPAC transformation now running a second transformation under capital duress.</p>
+
+  <h2>What the market sees</h2>
+  <p>The market sees a 2010s-vintage human-tutoring consumer subscription whose total addressable market is being eaten by ChatGPT and Khanmigo at $20 a month, with Active Members down 18% from the Q1 2025 peak (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001819404&type=10-K" target="_blank">fiscal 2025 annual report</a>, Key Metrics) and an institutional bookings line that collapsed 73% year-over-year in the first quarter of 2026 to $1.1 million (transcript, <a href="https://www.sec.gov/Archives/edgar/data/1819404/000119312526211882/" target="_blank">May 7, 2026 earnings call</a>) as the federal Elementary and Secondary School Emergency Relief (ESSER) funding cycle expired. The price chart says retail has capitulated: shares are 94% below the all-time high of $13.49 and 56% below the 52-week high of $1.90. Three of four covering analysts rate the stock Hold or Sell; the JPMorgan Underweight rating from November 2024 has not been revised.<!-- UNVERIFIED: JPMorgan Underweight / Nov-2024 date not confirmable from analyst.json (JPM price-target field blank); rating-history detail unsupported by dossier --> The implied story in the multiple: this is the next Chegg.</p>
+
+  <h2>What we see</h2>
+  <p>Three things the consensus framing under-weights, each anchored in the filings. First, the AI-driven cost reset is in the cash numbers, not just the non-generally-accepted-accounting-principles (non-GAAP) numbers: fixed headcount was cut roughly 22% year-over-year through December 31, 2025 (transcript, <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001819404&type=10-K" target="_blank">Q4 2025 earnings call</a>), gross margin moved from 58% in the first quarter of 2025 to 66.2% in the first quarter of 2026 (transcript, May 7, 2026 earnings call), and stock-based compensation fell from $41 million to $27.8 million over the same period (fiscal 2025 10-K cash flow statement). Second, the founder is buying at scale relative to his liquid position: Charles Cohn purchased approximately 1.81 million shares across 11 sequential Code-P open-market trades from December 3 to December 16, 2025, at $1.22 to $1.44 per share (volume-weighted $1.36) — about $2.5 million of personal capital, or roughly 4% of his paper stake (per <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001819404&type=4" target="_blank">Form 4 filings, December 2025</a>); for a founder whose other equity is in deeply-underwater performance shares, an open-market buy of this size is unusual. Third, the entire variant case is bounded by cash arithmetic the company has disclosed but not framed: $44.7 million of cash less a $15 million Hercules Capital qualified-cash floor leaves $29.7 million of usable liquidity against true free cash flow of negative $24.2 million in 2025 — 12 to 15 months of effective runway, not the "multiple years" the IR language implies (Hercules term loan terms, <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001819404&type=10-K" target="_blank">fiscal 2025 10-K, Note 9</a>).</p>
+  <p>The peer context cuts both ways. <a href="https://finance.yahoo.com/quote/DUOL/" target="_blank">Duolingo</a> took operating margin from −16% in 2021 to +15% on the back of artificial-intelligence-driven content automation while growing revenue; that is the bull comparable.<!-- UNVERIFIED: DUOL 2021 −16% → +15% operating-margin figures not checked against DUOL filings; no DUOL filing in dossier --> <a href="https://finance.yahoo.com/quote/CHGG/" target="_blank">Chegg</a> ran a 22% workforce reduction<!-- UNVERIFIED: CHGG 22% workforce reduction is a CHGG-specific operational claim; no CHGG filing in dossier. CHGG −47.9% revenue and 11.4% FCF margin ARE verified vs data/dossiers/nrdy/peers/peer_table.json --> and reached an 11.4% free-cash-flow margin while revenue collapsed 48% post-ChatGPT (<a href="https://finance.yahoo.com/quote/CHGG/" target="_blank">Chegg Q2 2024 transcript</a> and subsequent prints); that is the bear comparable. The honest read of the data so far — three sequential quarters of "narrowing" decline in Active Members (−14%, −11%, −9% year-over-year), with the comparison base itself eroding — is that we do not yet know which comp wins.</p>
+
+  <h2>What management says versus what the filings disclose</h2>
+  <p>On the May 7, 2026 first-quarter earnings call, Cohn opened by reporting 1,500 basis points of adjusted EBITDA margin expansion on roughly flat revenue and said "operating leverage is structural, not cyclical." The same call walked past two facts disclosed in the fiscal 2025 10-K filed three months earlier. First, operating cash flow worsened to negative $18.8 million in 2025 from negative $15.6 million in 2024 and negative $7.6 million in 2023 (10-K cash flow statement) — the "near-term path to profitability" referenced on every call for six consecutive quarters has coexisted with a cash-burn trajectory that has more than doubled. Second, the $7.8 million abandonment charge recorded at year-end 2025 wrote off the same Live+AI capitalized software that the May 8, 2025 second-quarter call described as "meaningful progress on our Live+AI vision," with the 10-K explicitly warning: "In the future, we may convert additional parts of our technology stack to entirely new codebases written with AI, which upon completion will require us to incur additional write-downs."</p>
+  <p>The same gap repeats with the active-member guidance. On the August 7, 2025 second-quarter call the then-chief financial officer Jason Pello guided to 38,000 Active Members at the end of the third quarter and 40,000 at year-end. The reported year-end print was 33,200 — a 17% miss never reconciled on a subsequent call. Pello signed the fiscal 2025 annual report on February 27, 2026; he was notified of his termination on March 31, 2026 and replaced effective April 6, 2026 (<a href="https://www.sec.gov/Archives/edgar/data/1819404/000181940426000035/" target="_blank">8-K filed April 6, 2026</a>). The Q1 2026 transcript treats the handoff as routine.</p>
+
+  <h2>What an operator-investor would do</h2>
+  <div class="vcp">
+    <div class="vcp-cell">
+      <div class="lever">Commercial</div>
+      <p>Rebuild Varsity Tutors for Schools as a multi-year district subscription anchored on the AI Counselor product (top-ten-district pilot already underway per the May 7, 2026 call), not on one-time tutoring contracts. Comparable: Stride built a $2.5 billion business on district and state contracts at a 20.8% operating margin (<a href="https://finance.yahoo.com/quote/LRN/" target="_blank">Stride fiscal 2025 10-K</a>) on the same B2B-to-district playbook.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Operations</div>
+      <p>Finish migrating the remaining ~27,000 legacy consumers to the V3 platform (10,000 of 37,000 migrated as of the May 7, 2026 call); each additional 200 basis points of gross margin on $180 million of revenue equals $3.6 million of incremental EBITDA. Comparable: Duolingo's "Birdbrain" AI personalization and Roy/Lily AI characters compressed live content costs while growing revenue 5x from 2019 to 2024.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Capital structure</div>
+      <p>Trade the 10.75% Hercules Capital term loan signed November 3, 2025 ($20 million drawn, $15 million qualified-cash covenant floor — fiscal 2025 10-K, Note 9) for a working-capital revolver or a strategic equity check before the runway window narrows further. Comparable: Chegg used its 2024 capital plan to extend runway and execute a buyback at distressed prices; Nerdy's net-cash position is similar but the cost of debt is double.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Mergers and acquisitions</div>
+      <p>The Tax Receivable Agreement accelerates at change of control and owes 85% of net cash tax savings to legacy Nerdy LLC holders (fiscal 2025 10-K, page 1858) — a poison-pill in fact. The realistic move is the reverse of M&A: clean up the Up-C / TRA stack first, then negotiate a Cohn-partnered take-private at $1.50 to $2.00 a share, comparable to Thoma Bravo's 2019 Instructure (Canvas LMS) take-private at a similar EBITDA-pre-inflection profile.</p>
+    </div>
+  </div>
+  <p style="margin-top:10px;">The first two of these are in execution. The capital-structure move is the gating constraint: until the cash runway extends past the AI-substitution question, none of the operating levers create equity value.</p>
+
+  <h2>What it is worth</h2>
+  <table class="calc">
+    <thead><tr><th>Three-year scenario</th><th>FY28 revenue</th><th>EV / Revenue</th><th>Enterprise value</th><th>Share price</th><th>Return per year</th></tr></thead>
+    <tbody>
+      <tr><td>Bear — Chegg-style substitution; rev −10% per year</td><td>$131M</td><td>0.30x</td><td>$39M</td><td>$0.49</td><td>−16%</td></tr>
+      <tr class="total"><td>Base — flat revenue, re-rate to Stride 1.0x</td><td>$180M</td><td>1.0x</td><td>$180M</td><td>$1.55</td><td>+23%</td></tr>
+      <tr><td>Bull — VT4S re-accel +12%, re-rate to 2.0x</td><td>$200M</td><td>2.0x</td><td>$400M</td><td>$3.30</td><td>+58%</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:11.5px; color:var(--slate);">Share price = (enterprise value + $23 million net cash) divided by 126.4 million Class A shares outstanding. Probability-weighting 35% bear / 45% base / 20% bull yields an expected share price of $1.53 and a roughly +22% annualized internal rate of return from $0.84 — clears a 20% search-fund hurdle with no margin of safety. Dilution from a future capital raise (likely if the runway question goes the wrong way) would compress all three cases by approximately 15 to 25%; this is not modeled above but is the largest unmodeled risk.</p>
+
+  <h2>What would have to go wrong</h2>
+  <ol class="risks">
+    <li>If trailing-twelve-month free cash flow margin stays worse than −5% through the fiscal 2026 print (the February 2027 annual report), the path-to-profitability case is dead and the bear comparable wins; at the 2025 free-cash burn rate of $24 million per year, usable cash above the $15 million Hercules covenant floor runs out roughly mid-2027.</li>
+    <li>If Active Members come in below 36,000 in either the Q2 2026 or Q3 2026 print, the "rate of decline narrowing" framing reverses and the Chegg-style member-attrition story locks in; this is the single most-cited operating metric and the one Jason Pello guided to 40,000 four quarters ago at the August 7, 2025 call.</li>
+    <li>If a second capitalized-software write-down is recorded in any 2026 quarterly filing — explicitly warned in the fiscal 2025 10-K risk factors — the AI-cost-reset narrative shifts from "structural" to "ongoing capital destruction," and the V3 platform follows the Live+AI platform to abandonment.</li>
+  </ol>
+
+  <h2>What would confirm it</h2>
+  <p>Three observations from the next two quarterly filings would, taken together, confirm the case — and would dismantle it cleanly if they fail. First, the Q2 2026 print (expected August 2026) shows operating cash flow flat-to-positive on a cash basis, not on a non-GAAP adjusted EBITDA basis. Second, Active Members come in at or above the Q1 2026 level of 36,900 sequentially, with the founder buying program either continuing or paused without insider sales offsetting it (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001819404&type=4" target="_blank">Form 4 tape</a>). Third, the Hercules covenant ratio — currently a black box that the fiscal 2025 10-K references but does not quantify — gets disclosed, either by management on the Q2 call or by a covenant amendment 8-K, with at least six months of headroom against TTM Contribution Margin. Each of these is observable in the public filings. The honest summary is that Nerdy is a more conflicted thesis than its multiple alone suggests; the AI cost reset is real, Cohn's buying is real, and so is the 15-month runway and the Chegg precedent. Whether 0.76 times revenue compensates the reader for that conflict is a judgment the reader can make from the same documents we did.</p>
+
+  <div class="sources">
+    <strong>Sources:</strong> <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001819404&type=10-K" target="_blank">Fiscal 2025 10-K</a> (February 26, 2026) · <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001819404&type=10-Q" target="_blank">Q1 2026 10-Q</a> (May 7, 2026) · <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001819404&type=DEF+14A" target="_blank">2026 proxy statement</a> (March 10, 2026) · <a href="https://www.sec.gov/Archives/edgar/data/1819404/000181940426000024/" target="_blank">NYSE deficiency 8-K</a> (March 6, 2026) · <a href="https://www.sec.gov/Archives/edgar/data/1819404/000181940426000035/" target="_blank">CFO change 8-K</a> (April 6, 2026) · <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001819404&type=4" target="_blank">Cohn Form 4 cluster</a> (December 3-16, 2025) · Q1 2026 earnings call transcript (internal: <code>data/dossiers/nrdy/transcripts/2026-Q1.txt</code>) · <a href="https://finance.yahoo.com/quote/NRDY/" target="_blank">Yahoo Finance quote page</a>
+  </div>
+
+</div>
+
+</body>
+</html>

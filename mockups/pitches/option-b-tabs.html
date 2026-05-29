@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Option B — Memo + Tabs · AENT</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  :root {
+    --navy: #0A2540; --ink: #111; --paper: #FFF; --slate: #6B7280;
+    --rule: #E5E7EB; --rule-soft: #F1F3F5; --red: #C8102E; --tint: #FEF7F7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #d0d5dc; font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink); font-feature-settings: "tnum" 1;
+  }
+  .topbar { max-width: 1080px; margin: 24px auto 16px; padding: 0 24px;
+    display: flex; justify-content: space-between; font-size: 12px; color: #555; }
+  .topbar a { color: #2563eb; text-decoration: none; }
+  .page { max-width: 1080px; margin: 0 auto 60px; background: var(--paper);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10); }
+
+  /* HEADER */
+  .header { padding: 40px 56px 24px; border-bottom: 1px solid var(--rule); }
+  .firm { font-size: 11px; letter-spacing: 0.2em; color: var(--navy);
+    font-weight: 700; text-transform: uppercase; margin-bottom: 12px; }
+  .ticker { font-size: 12px; letter-spacing: 0.22em; color: var(--red); font-weight: 700; margin-bottom: 6px; }
+  .name { font-size: 32px; font-weight: 500; color: var(--navy);
+    letter-spacing: -0.025em; line-height: 1.1; margin: 0; }
+  .date { font-size: 11px; color: var(--slate); letter-spacing: 0.08em; text-transform: uppercase; }
+  .h-flex { display: flex; justify-content: space-between; align-items: flex-start; }
+
+  /* MEMO CARD (always visible) */
+  .memo { padding: 32px 56px; background: #FBFCFD; border-bottom: 1px solid var(--rule); }
+  .one-line { font-size: 16px; line-height: 1.5; font-style: italic;
+    color: var(--ink); max-width: 95%; margin: 0 0 24px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin-bottom: 24px; }
+  .kpi { border-top: 2px solid var(--navy); padding-top: 8px; }
+  .kpi .lbl { font-size: 9px; letter-spacing: 0.12em; color: var(--slate);
+    text-transform: uppercase; font-weight: 600; margin-bottom: 4px; }
+  .kpi .val { font-size: 18px; font-weight: 600; color: var(--ink);
+    font-variant-numeric: tabular-nums; }
+
+  .memo-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; }
+  .variant { background: var(--paper); border-left: 3px solid var(--red);
+    padding: 14px 18px; font-size: 13px; line-height: 1.55; border-top: 1px solid var(--rule);
+    border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .variant .lbl { font-size: 9px; letter-spacing: 0.15em; color: var(--red);
+    font-weight: 700; text-transform: uppercase; margin-bottom: 3px; }
+  .variant p { margin: 0 0 5px; } .variant p:last-child { margin: 0; }
+  .pillars { margin: 0; padding: 0; list-style: none; }
+  .pillar { display: flex; gap: 12px; margin-bottom: 12px;
+    font-size: 13px; line-height: 1.5; }
+  .pillar-num { font-size: 12px; color: var(--navy); font-weight: 700;
+    flex-shrink: 0; width: 18px; }
+  .pillar strong { color: var(--ink); }
+
+  /* IRR SNAPSHOT */
+  .irr-snap { display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 12px; margin-top: 18px; }
+  .irr-cell { border: 1px solid var(--rule); padding: 10px 14px; }
+  .irr-cell .lbl { font-size: 9px; letter-spacing: 0.1em;
+    color: var(--slate); font-weight: 600; text-transform: uppercase; margin-bottom: 6px; }
+  .irr-cell .val { font-size: 18px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .irr-cell.base { background: var(--tint); border-color: var(--red); }
+  .irr-cell.base .val { color: var(--red); }
+
+  /* TABS */
+  .tab-bar { display: flex; gap: 0; border-bottom: 2px solid var(--navy);
+    padding: 0 56px; background: var(--paper); }
+  .tab { padding: 16px 24px 14px; font-size: 12px; font-weight: 600;
+    letter-spacing: 0.06em; color: var(--slate); text-transform: uppercase;
+    cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; }
+  .tab.active { color: var(--navy); border-bottom-color: var(--navy); }
+  .tab:hover { color: var(--ink); }
+
+  .panel { padding: 32px 56px 48px; display: none; }
+  .panel.active { display: block; }
+  .panel h3 { font-size: 11px; letter-spacing: 0.18em; color: var(--slate);
+    text-transform: uppercase; font-weight: 700; margin: 0 0 14px;
+    border-bottom: 1px solid var(--rule); padding-bottom: 6px; }
+
+  /* TABLES */
+  table.calc, table.peer { width: 100%; border-collapse: collapse;
+    font-size: 13px; margin: 14px 0; }
+  table.calc th, table.calc td, table.peer th, table.peer td {
+    padding: 9px 12px; border-bottom: 1px solid var(--rule-soft);
+    font-variant-numeric: tabular-nums; }
+  table.calc th, table.peer th { background: var(--navy); color: white;
+    text-align: right; font-size: 10px; letter-spacing: 0.08em;
+    text-transform: uppercase; font-weight: 600; }
+  table.calc td, table.peer td { text-align: right; }
+  table.calc th:first-child, table.peer th:first-child,
+  table.peer th:nth-child(2), table.calc td:first-child,
+  table.peer td:first-child, table.peer td:nth-child(2) { text-align: left; }
+  table.calc td:first-child { font-weight: 500; }
+  table.calc tr.total td { background: #F8FAFC; font-weight: 700; color: var(--navy); }
+  table.peer tr.subj { background: var(--tint); }
+  table.peer tr.subj td:first-child { color: var(--red); font-weight: 700; }
+
+  .counter { background: var(--tint); border-left: 3px solid var(--navy);
+    padding: 16px 20px; margin: 12px 0; font-size: 13px; line-height: 1.55; }
+  .counter .lbl { font-size: 10px; letter-spacing: 0.15em; color: var(--navy);
+    font-weight: 700; text-transform: uppercase; margin-bottom: 4px; }
+  .counter .rebut::before { content: "Rebuttal — ";
+    color: var(--red); font-weight: 700; letter-spacing: 0.05em; font-size: 11px; }
+
+  .kills { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+  .kill-card { border: 1px solid var(--rule); padding: 14px 16px; }
+  .kill-card .lbl { font-size: 9px; letter-spacing: 0.14em;
+    color: var(--red); font-weight: 700; text-transform: uppercase; margin-bottom: 6px; }
+  .kill-card .body { font-size: 13px; line-height: 1.55; }
+
+  .sources { font-size: 11.5px; line-height: 1.7; color: var(--slate); }
+  .sources a { color: #2563eb; text-decoration: none; }
+  .chart-placeholder { background: var(--rule-soft); height: 220px; margin: 14px 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; color: var(--slate); letter-spacing: 0.1em; }
+  p { font-size: 13.5px; line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span><strong>Option B:</strong> Memo card always visible (top); valuation / peers / counter / sources in tabs.</span>
+  <span><a href="option-a-scroll.html">← Option A (scroll)</a> · <a href="option-c-index.html">→ Option C (index)</a></span>
+</div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="firm">Lunchline Partners · Case Study</div>
+    <div class="h-flex">
+      <div>
+        <div class="ticker">NASDAQ : AENT</div>
+        <h1 class="name">Alliance Entertainment Holding</h1>
+      </div>
+      <div class="date">As of 2026-05-28</div>
+    </div>
+  </div>
+
+  <!-- MEMO CARD -->
+  <div class="memo">
+    <p class="one-line">A mis-tagged industrial distributor priced as a dying-physical-media reseller, with a self-cancelling dilution overhang and a clean-audit penalty box rolling off — re-rates 2–3x on the right comp set, independent of the IR collectibles story.</p>
+
+    <div class="kpi-strip">
+      <div class="kpi"><div class="lbl">Price</div><div class="val">$6.34</div></div>
+      <div class="kpi"><div class="lbl">EV</div><div class="val">$410M</div></div>
+      <div class="kpi"><div class="lbl">TTM Rev</div><div class="val">$1.11B</div></div>
+      <div class="kpi"><div class="lbl">EV / Rev</div><div class="val">0.37x</div></div>
+      <div class="kpi"><div class="lbl">Op Margin</div><div class="val">1.4%</div></div>
+      <div class="kpi"><div class="lbl">Float</div><div class="val">3.16M</div></div>
+    </div>
+
+    <div class="memo-grid">
+      <div>
+        <ol class="pillars">
+          <li class="pillar"><span class="pillar-num">1</span><span><strong>GICS misclassification routes consensus to wrong comps.</strong> Industrial distributors at 0.5–1.2x EV/Rev vs. AENT's 0.37x on "Comm Services" tag (LYV/SGA).</span></li>
+          <li class="pillar"><span class="pillar-num">2</span><span><strong>60M Class E dilution is self-cancelling.</strong> Triggers at $20/$30/$50 require 215–688% rally. Class A-only EV/Rev = 0.29x.</span></li>
+          <li class="pillar"><span class="pillar-num">3</span><span><strong>Material-weakness penalty box rolls off late 2027.</strong> 36-month quant lookbacks clear AENT on a mechanical schedule.</span></li>
+        </ol>
+        <div class="irr-snap">
+          <div class="irr-cell"><div class="lbl">Bear 3yr</div><div class="val">+2%</div></div>
+          <div class="irr-cell base"><div class="lbl">Base 3yr</div><div class="val">+25%</div></div>
+          <div class="irr-cell"><div class="lbl">Bull 3yr</div><div class="val">+42%</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="variant">
+          <div class="lbl">Market sees</div>
+          <p>Penny-stock-adjacent physical-media reseller; 0.37x is fair given dilution math + sector decline.</p>
+          <div class="lbl" style="margin-top:10px;">We see</div>
+          <p>Founder-controlled distributor mis-tagged Comm Services, growing 5–21%, with self-cancelling Class E and a clean-audit anniversary catalyst. Discount is structural, not fundamental.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB BAR -->
+  <div class="tab-bar">
+    <div class="tab active" onclick="show(0)">Valuation</div>
+    <div class="tab" onclick="show(1)">Peer Comps</div>
+    <div class="tab" onclick="show(2)">Counter &amp; Risks</div>
+    <div class="tab" onclick="show(3)">IR vs. Filings</div>
+    <div class="tab" onclick="show(4)">Sources</div>
+  </div>
+
+  <!-- PANELS -->
+  <div class="panel active">
+    <h3>3-Year IRR Math</h3>
+    <p>Base case: re-rate from 0.37x to 0.55x EV/Rev (mid-point of distributor band), revenue grows from $1.11B to ~$1.35B FY29 (5% CAGR — deliberately discounted vs. current 21% Q3 print). Bull case assumes mix shift to collectibles compresses to 0.75x.</p>
+    <table class="calc">
+      <thead><tr><th>Scenario</th><th>FY29E Rev</th><th>Target EV/Rev</th><th>Target EV</th><th>Implied Price</th><th>3yr IRR</th></tr></thead>
+      <tbody>
+        <tr><td>Bear (no re-rate)</td><td>$1.20B</td><td>0.37x</td><td>$444M</td><td>$6.80</td><td>+2%</td></tr>
+        <tr class="total"><td>Base (comp fix)</td><td>$1.35B</td><td>0.55x</td><td>$743M</td><td>$12.40</td><td>+25%</td></tr>
+        <tr><td>Bull (mix re-rate)</td><td>$1.42B</td><td>0.75x</td><td>$1.07B</td><td>$18.20</td><td>+42%</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:var(--slate);">Bull at $18.20 sits just below the $20 Class E tranche-1 trigger, so first-tranche dilution is excluded. At full conversion of tranche 1 (20M shares), bull price → $13.10.</p>
+    <h3 style="margin-top:32px;">Kill Criteria</h3>
+    <div class="kills">
+      <div class="kill-card"><div class="lbl">Kill 1 — Concentration shock</div><div class="body">Top-3 customer share <strong>above 50%</strong> in any 10-Q (currently 40%). Implies retailer planogram squeeze.</div></div>
+      <div class="kill-card"><div class="lbl">Kill 2 — FCF/EBITDA collapse</div><div class="body">FCF conversion <strong>below 5%</strong> for two consecutive quarters (currently 11%). Watch White Oak ABL utilization.</div></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Peer Benchmarks — Current vs. Reframe</h3>
+    <p>Current peer file uses GICS-tagged peers (LYV, SGA). Thesis depends on contention that <em>right</em> peers are industrial distributors.</p>
+    <table class="peer">
+      <thead><tr><th>Ticker</th><th>Name</th><th>EV/Rev</th><th>EV/EBITDA</th><th>Gross Mgn</th><th>Rev Gr</th></tr></thead>
+      <tbody>
+        <tr class="subj"><td>AENT</td><td>Alliance Entertainment</td><td>0.37x</td><td>8.6x</td><td>13.8%</td><td>+21%</td></tr>
+        <tr><td>LYV</td><td>Live Nation (current peer)</td><td>1.63x</td><td>28.0x</td><td>25.9%</td><td>+12%</td></tr>
+        <tr><td>SGA</td><td>Saga Communications</td><td>0.38x</td><td>22.0x</td><td>14.5%</td><td>-6%</td></tr>
+        <tr><td colspan="6" style="padding-top:14px; color:var(--slate); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; border-bottom:1px solid var(--navy);">Proposed reframe — industrial / specialty distributors</td></tr>
+        <tr><td>PFGC</td><td>Performance Food Group</td><td>0.35x</td><td>14.2x</td><td>11.8%</td><td>+8%</td></tr>
+        <tr><td>ARW</td><td>Arrow Electronics</td><td>0.30x</td><td>9.5x</td><td>11.6%</td><td>-3%</td></tr>
+        <tr><td>FAST</td><td>Fastenal</td><td>5.20x</td><td>26.0x</td><td>45.0%</td><td>+5%</td></tr>
+        <tr><td>GWW</td><td>Grainger</td><td>3.10x</td><td>18.5x</td><td>39.0%</td><td>+4%</td></tr>
+      </tbody>
+    </table>
+    <div class="chart-placeholder">[CHART: AENT EV/Rev vs. peer set, 5-year]</div>
+  </div>
+
+  <div class="panel">
+    <h3>Strongest Counter &amp; Rebuttal</h3>
+    <div class="counter">
+      <div class="lbl">Bear: "Your variant IS the IR deck"</div>
+      <p>Management explicitly pitches collectibles / Alliance Authentic / Endstate NFC on every call. Redchip runs investor webinars on this exact thesis. A variant that mirrors management framing is distribution of consensus, not variant perception.</p>
+      <p class="rebut">The thesis does not require the operational story. Pillars 1–3 are <em>structural</em>. Management cannot pitch "you're using the wrong GICS code" or "quants will clear us in 14 months." Collectibles is upside optionality, not the base case.</p>
+    </div>
+    <h3 style="margin-top:32px;">Other risks (from adversarial)</h3>
+    <ul>
+      <li><strong>Distributor moat is thin.</strong> 13.8% GM, 0.5% FCF margin — even on the right comp, ceiling is 0.4–0.6x EV/Rev, not 1x.</li>
+      <li><strong>Customer concentration in 3 names.</strong> Walmart/Amazon/Best Buy = 40% of sales; planogram reviews quarterly.</li>
+      <li><strong>Dilution math at upside.</strong> Bull case at $20 implies 70.97M shares (vs. 50.97M today); the "3x off $6.34" headline is actually 2x including dilution.</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <h3>IR Pitch vs. SEC Filings — Triangulation</h3>
+    <table class="calc">
+      <thead><tr><th>Topic</th><th>Mgmt says (call)</th><th>10-K / 10-Q says</th></tr></thead>
+      <tbody>
+        <tr><td>Business identity</td><td>"We are in the Collectibles business" — Q3 FY26</td><td>"Wholesaler and e-commerce provider"</td></tr>
+        <tr><td>Material weaknesses</td><td>Not discussed Q1–Q3 FY26 calls</td><td>"Fully remediated" — FY25 10-K (Sept 2025) only</td></tr>
+        <tr><td>Dilution overhang</td><td>Not framed; mgmt refers to "50M shares"</td><td>60M Class E in escrow; 9.9M warrants @ $11.50</td></tr>
+        <tr><td>Diamond Comic walk-away</td><td>"Disciplined capital allocation"</td><td>8-K 2025-04-25 — terminated APA</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="panel">
+    <h3>Sources &amp; Files</h3>
+    <div class="sources">
+      <p><strong>[1]</strong> AENT FY25 10-K (filed 2025-09-10). <a href="#">SEC →</a></p>
+      <p><strong>[2]</strong> AENT 2025 DEF 14A (filed 2025-09-25). <a href="#">Proxy →</a></p>
+      <p><strong>[3]</strong> FY24/FY25 10-K Item 9A (MW remediation). <a href="#">Item 9A →</a></p>
+      <p><strong>[4]</strong> Q3 FY26 earnings transcript. <code>data/dossiers/aent/transcripts/2026-Q3.txt</code></p>
+      <p><strong>[5]</strong> Internal dossier: <code>data/dossiers/aent/findings/</code></p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function show(i) {
+    document.querySelectorAll('.tab').forEach((t,j)=>t.classList.toggle('active',i===j));
+    document.querySelectorAll('.panel').forEach((p,j)=>p.classList.toggle('active',i===j));
+  }
+</script>
+
+</body>
+</html>

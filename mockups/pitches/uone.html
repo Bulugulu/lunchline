@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>UONE — Investment Memo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  :root {
+    --navy: #0A2540; --ink: #111; --paper: #FFF; --slate: #6B7280;
+    --rule: #E5E7EB; --rule-soft: #F1F3F5; --red: #C8102E; --tint: #FEF7F7;
+    --link: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #d0d5dc; font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink); font-feature-settings: "tnum" 1;
+    line-height: 1.55;
+  }
+  a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--link); }
+  a:hover { border-bottom-style: solid; }
+
+  .topbar { max-width: 880px; margin: 24px auto 16px; padding: 0 24px;
+    display: flex; justify-content: space-between; font-size: 12px; color: #555; }
+  .page { max-width: 880px; margin: 0 auto 60px; background: var(--paper);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10); padding: 48px 64px; }
+
+  /* HEADER */
+  .firm { font-size: 11px; letter-spacing: 0.2em; color: var(--navy);
+    font-weight: 700; text-transform: uppercase; }
+  .meta-row { display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 2px solid var(--navy); padding-bottom: 10px; margin-bottom: 22px; }
+  .meta-row .date { font-size: 11px; color: var(--slate); letter-spacing: 0.08em; text-transform: uppercase; }
+  .ticker { font-size: 12px; letter-spacing: 0.22em; color: var(--red); font-weight: 700; margin-bottom: 4px; }
+  .ticker a { color: var(--red); border-bottom: none; }
+  .name { font-size: 28px; font-weight: 500; color: var(--navy);
+    letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 14px; }
+
+  /* HEADLINE THESIS */
+  .headline { font-size: 15px; line-height: 1.55; color: var(--ink);
+    background: var(--tint); border-left: 3px solid var(--red);
+    padding: 14px 18px; margin: 0 0 22px; }
+  .headline .lbl { font-size: 9px; letter-spacing: 0.16em;
+    color: var(--red); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .headline p { margin: 0; }
+
+  /* KPI STRIP */
+  .kpi-strip { display: grid; grid-template-columns: repeat(6, 1fr);
+    gap: 12px; margin-bottom: 24px; }
+  .kpi { border-top: 2px solid var(--navy); padding-top: 7px; }
+  .kpi .lbl { font-size: 9px; letter-spacing: 0.1em; color: var(--slate);
+    text-transform: uppercase; font-weight: 600; margin-bottom: 3px; }
+  .kpi .val { font-size: 17px; font-weight: 600; color: var(--ink);
+    font-variant-numeric: tabular-nums; line-height: 1; }
+  .kpi .sub { font-size: 10px; color: var(--slate); margin-top: 3px; line-height: 1.3; }
+
+  /* SECTIONS */
+  h2 { font-size: 11px; letter-spacing: 0.18em; color: var(--slate);
+    text-transform: uppercase; font-weight: 700; margin: 24px 0 8px;
+    border-bottom: 1px solid var(--rule); padding-bottom: 4px; }
+  p { font-size: 13.5px; line-height: 1.65; margin: 0 0 10px; }
+  p:last-child { margin-bottom: 0; }
+
+  /* VALUE CREATION 2x2 */
+  .vcp { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+  .vcp-cell { border: 1px solid var(--rule); padding: 12px 14px; }
+  .vcp-cell .lever { font-size: 9px; letter-spacing: 0.14em;
+    color: var(--navy); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .vcp-cell p { font-size: 12.5px; line-height: 1.55; margin: 0; }
+
+  /* IRR TABLE */
+  table.calc { width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 10px 0; }
+  table.calc th, table.calc td { padding: 7px 11px;
+    border-bottom: 1px solid var(--rule-soft);
+    font-variant-numeric: tabular-nums; }
+  table.calc th { background: var(--navy); color: white;
+    text-align: right; font-size: 10px; letter-spacing: 0.08em;
+    text-transform: uppercase; font-weight: 600; }
+  table.calc td { text-align: right; }
+  table.calc th:first-child, table.calc td:first-child { text-align: left; }
+  table.calc td:first-child { font-weight: 500; }
+  table.calc tr.total td { background: var(--tint); font-weight: 700; color: var(--navy); }
+
+  /* RISKS as numbered */
+  .risks { padding-left: 20px; margin: 6px 0 0; }
+  .risks li { font-size: 13px; line-height: 1.6; margin-bottom: 8px; }
+  .risks li:last-child { margin-bottom: 0; }
+  .risks li strong { color: var(--ink); }
+
+  /* SOURCES */
+  .sources { font-size: 11px; line-height: 1.55; color: var(--slate);
+    margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--rule); }
+  .sources strong { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span><strong>Lunchline Partners case study</strong> — voice/structure per <code>docs/memo-voice.md</code></span>
+  <span><a href="index.html">← layout options</a></span>
+</div>
+
+<div class="page">
+
+  <div class="firm">Lunchline Partners · Case Study</div>
+  <div class="meta-row">
+    <div></div>
+    <div class="date">May 28, 2026</div>
+  </div>
+
+  <div class="ticker"><a href="https://finance.yahoo.com/quote/UONEK/" target="_blank">NASDAQ : UONEK</a> <span style="color:var(--slate); font-weight: 500;">(non-voting Class D; Class A trades as UONE)</span></div>
+  <h1 class="name">Urban One, Inc.</h1>
+
+  <div class="headline">
+    <div class="lbl">Thesis</div>
+    <p>Urban One is not an operating story; it is a $28 million equity stub sitting on top of $373 million of debt whose price is set in the bond market, not the equity market. The December 18, 2025 <a href="https://www.sec.gov/Archives/edgar/data/1041657/000104165725000070/" target="_blank">refinancing</a> pushed the maturity wall from February 2028 to April 2030 and July 2031, leaving the publicly traded Class D shares (ticker UONEK) priced as if that exchange had not happened. The 7.625% second-lien notes due 2031 trade at roughly 55 cents on the dollar;<!-- UNVERIFIED: 2031 note trading price — no current secondary-market quote in the dossier; the most recent verifiable mark is ~49.5–52¢ on the Q1 2025 call (May 2025); the ~55¢ figure used here for May 2026 is an estimate the entire IRR table depends on --> if those notes rerate to 75 cents on a year of $60–70 million of earnings before interest, taxes, depreciation and amortization (EBITDA) — against the $70 million FY26 EBITDA figure management gave on a prior call and, on the <a href="https://www.sec.gov/Archives/edgar/data/1041657/000104165726000010/" target="_blank">March 17, 2026 8-K</a>, explicitly declined to reaffirm pending Q1 results — roughly $58 million of asset-side value crosses the capital-structure waterfall into a $28 million equity stub split across 4.5 million economic shares. That is the entire investment case. The reader should weigh it against the fact that the controlling family owns 75%+ of voting power via 10-vote Class B shares (FY25 10-K, Item 1A) and is under no obligation to ever sell the company.</p>
+  </div>
+
+  <div class="kpi-strip">
+    <div class="kpi"><div class="lbl">Share price</div><div class="val">$6.23</div><div class="sub">May 28, 2026 (post 1:10 split Jan 22)</div></div>
+    <div class="kpi"><div class="lbl">Enterprise value</div><div class="val">$482M</div><div class="sub">$28M equity + $479M gross debt &amp; leases − $26M cash (Yahoo Finance)</div></div>
+    <div class="kpi"><div class="lbl">Net leverage</div><div class="val">6.14x</div><div class="sub">$347.9M net debt / $56.7M FY25 EBITDA</div></div>
+    <div class="kpi"><div class="lbl">FY26 EBITDA target</div><div class="val">$70M</div><div class="sub">Prior guide; not reaffirmed on Mar 17 call</div></div>
+    <div class="kpi"><div class="lbl">Class D float</div><div class="val">1.93M</div><div class="sub">Non-voting; Hughes/Liggins hold 75%+ of voting power via Class B</div></div>
+    <div class="kpi"><div class="lbl">Equity analysts</div><div class="val">0</div><div class="sub">Three credit-desk analysts cover the bonds</div></div>
+  </div>
+
+  <h2>The business</h2>
+  <p>Urban One generated $374.4 million of revenue in fiscal 2025 across four segments — Radio Broadcasting ($139.1 million), Reach Media ($31.1 million), Digital iOne ($47.8 million), and TV One Cable Television ($159.0 million) — per the <a href="https://www.sec.gov/Archives/edgar/data/1041657/000104165726000016/" target="_blank">fiscal 2025 annual report (10-K) filed March 20, 2026</a>. The company is the largest African-American-targeted multi-media operator in the United States: 54 radio stations across 13 markets, the TV One and CLEO TV cable networks reaching 30.2 million Nielsen-measured households at year-end 2025, the Reach Media syndicated audio network (Rickey Smiley, DL Hughley, Erica Campbell), and the iOne Digital portfolio (Bossip, HipHopWired, MadameNoire). Catherine Hughes, age 78, founded the company in 1979 and is Chairperson; her son Alfred Liggins III, age 60, has been CEO since 1997 and ran the December 2025 refinancing and the 1-for-10 reverse split that took the Class D shares back over Nasdaq's $1.00 minimum bid on January 22, 2026 (<a href="https://www.sec.gov/Archives/edgar/data/1041657/000104165726000002/" target="_blank">8-K, January 20, 2026</a>). The single fact that determines whether the equity is worth anything is on page 1 of the 10-K's capital-structure note: $11.8 million of 7.375% notes due February 2028, $60.6 million of 10.5% first-lien notes due April 2030, $291.0 million of 7.625% second-lien notes due July 2031, and a $75 million asset-based revolving credit facility that matures December 2030 (<a href="https://www.sec.gov/Archives/edgar/data/1041657/000104165726000016/" target="_blank">FY25 10-K, Item 7</a>).</p>
+
+  <h2>Why this is a non-obvious pick</h2>
+  <p>By Lunchline's three tests — messy, mispriced, under-followed — this name passes all three: 75 percent voting control sits with two family members, the equity is a stub option on $373 million of bonds whose price the equity market does not appear to track, and zero equity sell-side analysts cover the name (per yfinance and the Q&A roster of the last four earnings calls). <strong>Messy:</strong> the company is a "controlled company" under Nasdaq listing rules (FY25 10-K, Item 1A), runs a four-class share structure in which the publicly traded Class D ticker UONEK has zero voting rights (10-K, Note on Common Stock), is still operating under an unremediated material weakness in internal controls over financial reporting as of December 31, 2025 (10-K, Item 9A), and just executed a 1-for-10 reverse split to retain Nasdaq listing. <strong>Mispriced:</strong> the equity is mathematically a stub option on the bond complex — every one-percentage-point movement in the trading price of the $291 million 7.625% second-lien notes due 2031 changes the implied asset-side value by roughly $2.9 million, against a total equity market capitalization of $28 million across all four share classes; the bonds traded near 50 cents in mid-2025 (per the Q1 2025 earnings call, <a href="https://www.urban1.com/investors/news-events/events" target="_blank">May 13, 2025</a>) and the equity has not been priced for them moving toward par as the refinancing settles. <strong>Under-followed:</strong> the yfinance analyst count is zero, the most recent earnings call (March 17, 2026) closed with the operator saying "we have no questions at this time," and the three professionals who have asked questions on Urban One calls over the past two years — Ben Briggs (StoneX), Aaron Watts (Deutsche Bank), and Ken Silver (Stifel) — all cover the bonds from credit desks, not the equity.</p>
+
+  <h2>What the market sees</h2>
+  <p>Urban One's Class D shares (UONEK) trade at 0.08 times trailing revenue on an equity-value basis — a $28 million market capitalization against $374 million of revenue — and the $482 million enterprise value is 8.5 times trailing adjusted EBITDA, against a fiscal 2025 in which consolidated revenue fell 16.7 percent year-over-year and the company posted a $146.9 million net loss (FY25 10-K, statement of operations). The consensus framing on the bond desks is straightforward: TV One subscribers fell from 34.1 million at the end of the third quarter to 30.2 million at the end of the fourth (per Liggins on the <a href="https://www.urban1.com/investors/news-events/events" target="_blank">March 17, 2026 fiscal-fourth-quarter call</a>); Reach Media revenue collapsed 34 percent in fiscal 2025 as the post-2024-election diversity-and-inclusion ad-spend evaporated (10-K, segment results); first-quarter 2026 radio pacings are running 5 percent below the prior year (same March 17, 2026 call); and the December 2025 refinancing extended the maturity wall but tightened the covenants on asset sales, mergers and acquisitions, and restricted-payment baskets (10-K, Note 9). Standard & Poor's continues to rate the company speculative-grade (10-K, Item 1A). Translated: the bonds price a roughly 55–65 percent recovery in a managed restructuring; the equity prices effectively zero residual value after the bondholders are paid.</p>
+
+  <h2>What we see</h2>
+  <p>The December 18, 2025 exchange retired $185 million of the 2028 notes at 60 cents on the dollar, issued $291 million of new 7.625% second-lien notes due July 2031, issued $60.6 million of new 10.5% first-lien notes due April 2030, and extended the revolver to December 2030 (FY25 10-K, Item 7, debt schedule). The consensus framing is correct on direction of the operating decline and wrong on what the refinancing changed. Before the exchange, the equity was priced against a February 2028 wall less than 30 months away. After the exchange, the earliest meaningful maturity is 54 months out. In the intervening period, Liggins has repurchased $237 million of par debt at an average of roughly 70 cents on the dollar across 2024 and 2025 — $140.4 million of 2028 notes at 82.3 cents in fiscal 2024 and $96.7 million at 53.6 cents in fiscal 2025 (10-K, debt-extinguishment footnote), generating $67.3 million of cumulative gain-on-retirement that is not in the cash earnings line but is in the equity-value waterfall. On the <a href="https://www.urban1.com/investors/news-events/events" target="_blank">first-quarter 2025 call (May 13, 2025)</a>, Liggins put the playbook in plain language: "we deliberately are opportunistic, right? Like, we don't like it when we announce... we're in, we're out... buying back debt at a discount for those funds that want to sell ultimately helps the company." The 2030 first-lien indenture explicitly permits a 10 percent par redemption per year at a 105 percent premium (10-K, Note 9), which preserves the at-discount retirement path even under the new covenants.</p>
+  <p>The cross-reference that earns the variant view: <a href="https://finance.yahoo.com/quote/IHRT/" target="_blank">iHeartMedia</a> ran the same playbook between June 2024 and early 2025 — the same kind of distressed exchange, the same kind of maturity-wall extension into 2029–2031 — and the equity rerated roughly four times off its lows once the bond market accepted that the runway had moved. The Urban One bonds today trade where the iHeartMedia bonds traded in May 2024, before the rerate. The mechanic is not subtle; it is just slow, and slow is the reason no equity analyst has initiated coverage. The point of the trade is not that management does anything heroic. The point is that management buys back its own discount paper with operating cash flow, the bond price gradually catches up to the new maturity profile, and the equity captures the residual because the debt is the senior claim and the debt is already in. The May 1, 2026 announcement of the Dallas radio swap — acquiring KKDA and KRNB from Service Broadcasting Group while simultaneously selling KZMJ to Fuzion (<a href="https://www.sec.gov/Archives/edgar/data/1041657/000104165726000025/" target="_blank">8-K, May 4, 2026</a>) — is the first transaction post-refinancing in which "any transactions we look to do would be transactions that are also delevering" (Liggins, March 17, 2026 call) can be measured against the closing terms. The terms are not yet disclosed.</p>
+
+  <h2>What management says versus what the filings disclose</h2>
+  <p>On the March 17, 2026 fiscal-fourth-quarter call, Liggins described the post-refinancing capital structure as "a much more stabilized position" — on the same call that confirmed 6.14 times net leverage against $56.7 million of trailing EBITDA and continued speculative-grade credit rating (S&P, per FY25 10-K, Item 1A; speculative-grade meaning rated below BBB-, where institutional bond mandates typically cut off). The FY25 10-K, filed three days later on March 20, 2026, discloses the trade-off the IR phrasing skips: the 2030 and 2031 indentures now contain covenants limiting the company's ability to "incur additional indebtedness... make certain investments or acquisitions; sell, transfer or otherwise convey certain assets... prepay certain kinds of indebtedness... and consummate certain liability management transactions" (FY25 10-K, Item 7, indenture summary). The exchange bought time and gave up flexibility. The equity holder benefits from the time; the bondholder benefits from the flexibility surrender.</p>
+  <p>Two filing-level facts the calls have not framed at all. First, the Class D shares — the publicly traded UONEK ticker the retail investor actually buys — carry zero voting rights (FY25 10-K, common stock note); the Class B shares held by Hughes and Liggins carry ten votes each and represent the 75 percent voting block. Second, Nasdaq's listing rules now prohibit a second reverse split as a cure for any future minimum-bid breach within twelve months of the January 22, 2026 split (FY25 10-K, Item 1A, listing rules disclosure) — a fiscal-2026 EBITDA miss large enough to push the equity back below $1.00 on a 10-times-adjusted basis (roughly a 35 percent drop from today) would trigger immediate delisting with no grace period. Neither fact is hidden; both are in the same document the "stabilized" framing came from.</p>
+
+  <h2>What an operator-investor would do</h2>
+  <div class="vcp">
+    <div class="vcp-cell">
+      <div class="lever">Commercial</div>
+      <p>Lean into the 2026 midterm election cycle at Reach Media. Reach Media revenue fell from $47.3 million in fiscal 2024 to $31.1 million in fiscal 2025 as the post-election diversity-and-inclusion advertising line evaporated (FY25 10-K, segment results). Issue-advocacy spend targeting the African-American voter — voter mobilization, healthcare, civil-rights litigation — is what fiscal 2026 brings back. Comparable: <a href="https://finance.yahoo.com/quote/IHRT/" target="_blank">iHeartMedia</a>'s 2024 political-cycle uplift, roughly $200 million against the 2023 baseline (iHeartMedia FY24 10-K, segment commentary).</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Operations</div>
+      <p>Execute the third cost-reduction tranche Liggins telegraphed but has not yet quantified. The first two rounds (announced on the <a href="https://www.urban1.com/investors/news-events/events" target="_blank">May 13, 2025 and November 14, 2025 calls</a>) delivered $5 million and $3 million of annualized savings respectively. A third tranche of comparable size would add roughly $5 million of EBITDA on a base where every $5 million is 0.5x of leverage. Comparable: <a href="https://finance.yahoo.com/quote/BBGI/" target="_blank">Beasley Broadcast</a>'s 2024 general-and-administrative consolidation delivered a sustained ~10 percent reduction by Q1 2025.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Capital structure</div>
+      <p>Continue at-discount second-lien retirement using the 10 percent annual permitted basket under the 2030 first-lien indenture. Every $25 million of 2031 par retired at 55 cents costs $13.8 million of cash, removes $1.9 million of annual interest expense, and adds roughly $11.2 million of gain-on-retirement to the equity-value waterfall. Comparable: <a href="https://finance.yahoo.com/quote/IHRT/" target="_blank">iHeartMedia</a>'s 2023–2025 tender activity on the 8.375% notes, which removed roughly $1.4 billion of par at average mid-60s pricing per the iHeartMedia FY24 10-K.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Mergers and acquisitions</div>
+      <p>Run more swap-structure trades like the May 1, 2026 Dallas transaction — acquire scale stations from private operators at sub-5x EBITDA, divest non-strategic owned stations at 7-8x to delevering counterparties. The Federal Communications Commission (FCC) 2025 Notice of Proposed Rule-Making on local-ownership caps is the macro tailwind; Urban One is below the cap in most of its 13 markets, which gives it offensive optionality the larger radio groups do not have. Comparable: <a href="https://finance.yahoo.com/quote/SGA/" target="_blank">Saga Communications</a>' 2024 acquisition of Brown Broadcasting at high-single-digit EBITDA multiples.</p>
+    </div>
+  </div>
+  <p style="margin-top:10px;">All four levers are management-controlled. None requires Hughes-family consent for a change-of-control transaction. The investment case does not need a sale of the company; it needs management to keep doing what it has been doing for two years.</p>
+
+  <h2>What it is worth</h2>
+  <table class="calc">
+    <thead><tr><th>Three-year scenario</th><th>FY28 EBITDA</th><th>2031 notes price</th><th>Implied EV uplift</th><th>Share price</th><th>Return per year</th></tr></thead>
+    <tbody>
+      <tr><td>Bear — guide miss, FY26 EBITDA ≤ $55M, bonds stay at 50¢</td><td>$50M</td><td>50¢</td><td>−$15M</td><td>$2.90</td><td>−22%</td></tr>
+      <tr class="total"><td>Base — guide hit, bonds rerate to 75¢ on $65M EBITDA</td><td>$65M</td><td>75¢</td><td>+$58M</td><td>$19.10</td><td>+45%</td></tr>
+      <tr><td>Bull — sustained $70M+ EBITDA, bonds rerate to 90¢</td><td>$72M</td><td>90¢</td><td>+$102M</td><td>$28.80</td><td>+66%</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:11.5px; color:var(--slate);">The implied enterprise-value uplift in each scenario is the change in market value of the $291 million 7.625% second-lien notes due July 2031 as the trading price moves from today's ~55 cents on the dollar.<!-- UNVERIFIED: 2031 note trading price — current secondary-market quote for the 7.625% notes due 2031 is not in the dossier; the ~55¢ entry mark and all derived IRR/share-price outputs depend on it --> That uplift flows entirely to equity because the bonds are the senior claim and the equity is the residual; the first-lien notes and asset-based revolver are held at par in all three scenarios. Share price is (current equity value plus EV uplift) divided by the 4,514,850 economic shares outstanding across Classes A (615,021), B (286,183), C (204,501), and D (3,409,145) per the FY25 10-K cover page (shares outstanding at March 18, 2026); on a fully-diluted basis including unvested awards the count is approximately 4.5 million (weighted-average diluted shares were 4,458,325 for FY25). None of the three scenarios assumes a sale of TV One, an activist intervention, or a Hughes-family transaction. The implied option premium against the current $6.23 price is paid into a structure where the controlling family decides the timing.</p>
+
+  <h2>What would have to go wrong</h2>
+  <ol class="risks">
+    <li>If fiscal 2026 adjusted EBITDA prints below $55 million — roughly $1.5 million below fiscal 2025's $56.7 million reported number — the 6.14x net leverage moves above 6.5x, the speculative-grade rating risks a further downgrade, and the 2031 notes are unlikely to rerate above 60 cents. The −5 percent first-quarter 2026 radio pacing flagged on the March 17, 2026 call is the data point to watch; one more quarter at that pace and the FY26 guide is no longer credible.</li>
+    <li>If TV One's Nielsen-measured subscriber count continues to fall at the 11.4 percent sequential rate observed between September 30 and December 31, 2025 (FY25 10-K, segment commentary), three of the largest carriage renewals in the queue — Charter in fiscal fourth-quarter 2026, Verizon and NCTC in fiscal 2026, DIRECTV/AT&T/Comcast in fiscal 2027 (per Liggins on the <a href="https://www.urban1.com/investors/news-events/events" target="_blank">May 13, 2025 call</a>) — reprice lower; cable-affiliate revenue falls below the $130 million floor and the cost-out cannot bridge the gap.</li>
+    <li>If the Class D stock price falls below $1.00 within twelve months of the January 22, 2026 reverse split — roughly a 35 percent decline from today, well within a single quarter's reasonable EBITDA-miss range — Nasdaq's listing rules provide for immediate delisting with no grace period and no second-reverse-split cure (FY25 10-K, Item 1A). The bond-rerate thesis survives a delisting; the equity-side trading mechanism does not.</li>
+  </ol>
+
+  <h2>What would confirm it</h2>
+  <p>Three observations over the next four quarterly filings would, taken together, confirm the case — or, if they fail, dismantle it cleanly. First, the 7.625% second-lien notes due July 2031 trade above 65 cents on the dollar for two consecutive quarter-end marks; the bond-desk analysts at StoneX, Deutsche Bank, and Stifel are the leading indicator, since their published recovery models are what set the marks. Second, the closing terms of the May 1, 2026 Dallas swap are filed in a subsequent 8-K and show net leverage held flat or lower at close — the first measurable test of the "any transactions we look to do would be transactions that are also delevering" commitment. Third, fiscal 2026 adjusted EBITDA prints inside the $65–70 million range; below $60 million the case breaks. Each observation is testable from public filings; none requires private channel checks. The reader is being asked to take a position in a non-voting class of stock in a controlled company that has not been visited by an equity analyst in years. That is what the price reflects, and that is the judgment the reader has to make on their own.</p>
+
+  <div class="sources">
+    <strong>Sources:</strong> <a href="https://www.sec.gov/Archives/edgar/data/1041657/000104165726000016/" target="_blank">FY2025 10-K</a> (March 20, 2026) · <a href="https://www.sec.gov/Archives/edgar/data/1041657/000104165725000070/" target="_blank">December 2025 Refinancing 8-K</a> (December 18, 2025) · <a href="https://www.sec.gov/Archives/edgar/data/1041657/000104165726000002/" target="_blank">Reverse Split 8-K</a> (January 20, 2026) · <a href="https://www.sec.gov/Archives/edgar/data/1041657/000104165726000010/" target="_blank">Q4 2025 Earnings 8-K</a> (March 17, 2026) · <a href="https://www.sec.gov/Archives/edgar/data/1041657/000104165726000025/" target="_blank">Dallas Swap 8-K</a> (May 4, 2026) · <a href="https://www.sec.gov/Archives/edgar/data/1041657/000104165726000030/" target="_blank">2026 Proxy</a> (May 8, 2026) · Q4 2025 / Q3 2025 / Q1 2025 earnings call transcripts (internal: <code>data/dossiers/uone/transcripts/</code>) · <a href="https://finance.yahoo.com/quote/UONEK/" target="_blank">Yahoo Finance quote page</a> · iHeartMedia FY24 10-K (peer cross-reference)
+  </div>
+
+</div>
+
+</body>
+</html>

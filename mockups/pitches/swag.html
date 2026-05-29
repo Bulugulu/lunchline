@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SWAG — Investment Memo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  :root {
+    --navy: #0A2540; --ink: #111; --paper: #FFF; --slate: #6B7280;
+    --rule: #E5E7EB; --rule-soft: #F1F3F5; --red: #C8102E; --tint: #FEF7F7;
+    --link: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #d0d5dc; font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink); font-feature-settings: "tnum" 1;
+    line-height: 1.55;
+  }
+  a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--link); }
+  a:hover { border-bottom-style: solid; }
+
+  .topbar { max-width: 880px; margin: 24px auto 16px; padding: 0 24px;
+    display: flex; justify-content: space-between; font-size: 12px; color: #555; }
+  .page { max-width: 880px; margin: 0 auto 60px; background: var(--paper);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10); padding: 48px 64px; }
+
+  /* HEADER */
+  .firm { font-size: 11px; letter-spacing: 0.2em; color: var(--navy);
+    font-weight: 700; text-transform: uppercase; }
+  .meta-row { display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 2px solid var(--navy); padding-bottom: 10px; margin-bottom: 22px; }
+  .meta-row .date { font-size: 11px; color: var(--slate); letter-spacing: 0.08em; text-transform: uppercase; }
+  .ticker { font-size: 12px; letter-spacing: 0.22em; color: var(--red); font-weight: 700; margin-bottom: 4px; }
+  .ticker a { color: var(--red); border-bottom: none; }
+  .name { font-size: 28px; font-weight: 500; color: var(--navy);
+    letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 14px; }
+
+  /* HEADLINE THESIS */
+  .headline { font-size: 15px; line-height: 1.55; color: var(--ink);
+    background: var(--tint); border-left: 3px solid var(--red);
+    padding: 14px 18px; margin: 0 0 22px; }
+  .headline .lbl { font-size: 9px; letter-spacing: 0.16em;
+    color: var(--red); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .headline p { margin: 0; }
+
+  /* KPI STRIP */
+  .kpi-strip { display: grid; grid-template-columns: repeat(6, 1fr);
+    gap: 12px; margin-bottom: 24px; }
+  .kpi { border-top: 2px solid var(--navy); padding-top: 7px; }
+  .kpi .lbl { font-size: 9px; letter-spacing: 0.1em; color: var(--slate);
+    text-transform: uppercase; font-weight: 600; margin-bottom: 3px; }
+  .kpi .val { font-size: 17px; font-weight: 600; color: var(--ink);
+    font-variant-numeric: tabular-nums; line-height: 1; }
+  .kpi .sub { font-size: 10px; color: var(--slate); margin-top: 3px; line-height: 1.3; }
+
+  /* SECTIONS */
+  h2 { font-size: 11px; letter-spacing: 0.18em; color: var(--slate);
+    text-transform: uppercase; font-weight: 700; margin: 24px 0 8px;
+    border-bottom: 1px solid var(--rule); padding-bottom: 4px; }
+  p { font-size: 13.5px; line-height: 1.65; margin: 0 0 10px; }
+  p:last-child { margin-bottom: 0; }
+
+  /* VALUE CREATION 2x2 */
+  .vcp { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+  .vcp-cell { border: 1px solid var(--rule); padding: 12px 14px; }
+  .vcp-cell .lever { font-size: 9px; letter-spacing: 0.14em;
+    color: var(--navy); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .vcp-cell p { font-size: 12.5px; line-height: 1.55; margin: 0; }
+
+  /* IRR TABLE */
+  table.calc { width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 10px 0; }
+  table.calc th, table.calc td { padding: 7px 11px;
+    border-bottom: 1px solid var(--rule-soft);
+    font-variant-numeric: tabular-nums; }
+  table.calc th { background: var(--navy); color: white;
+    text-align: right; font-size: 10px; letter-spacing: 0.08em;
+    text-transform: uppercase; font-weight: 600; }
+  table.calc td { text-align: right; }
+  table.calc th:first-child, table.calc td:first-child { text-align: left; }
+  table.calc td:first-child { font-weight: 500; }
+  table.calc tr.total td { background: var(--tint); font-weight: 700; color: var(--navy); }
+
+  /* RISKS as numbered */
+  .risks { padding-left: 20px; margin: 6px 0 0; }
+  .risks li { font-size: 13px; line-height: 1.6; margin-bottom: 8px; }
+  .risks li:last-child { margin-bottom: 0; }
+  .risks li strong { color: var(--ink); }
+
+  /* SOURCES */
+  .sources { font-size: 11px; line-height: 1.55; color: var(--slate);
+    margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--rule); }
+  .sources strong { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span><strong>Stran &amp; Company</strong> — voice/structure per <code>docs/memo-voice.md</code></span>
+  <span><a href="index.html">← layout options</a></span>
+</div>
+
+<div class="page">
+
+  <div class="firm">Lunchline Partners · Case Study</div>
+  <div class="meta-row">
+    <div></div>
+    <div class="date">May 28, 2026</div>
+  </div>
+
+  <div class="ticker"><a href="https://finance.yahoo.com/quote/SWAG/" target="_blank">NASDAQ : SWAG</a></div>
+  <h1 class="name">Stran &amp; Company, Inc.</h1>
+
+  <div class="headline">
+    <div class="lbl">Thesis</div>
+    <p>Stran &amp; Company is a $118 million-revenue promotional-products distributor trading at 0.22 times enterprise value to sales — a multiple at which 40% of enterprise value is net cash and the operating business is worth roughly $16 million. The business just printed its first profitable quarter, with $744,000 of net income in the three months ended March 31, 2026 versus a $393,000 loss in the prior-year quarter (<a href="https://www.sec.gov/Archives/edgar/data/1872525/000121390026055112/" target="_blank">Q1 2026 10-Q filed May 12, 2026</a>). Two non-financial frictions — two unremediated material weaknesses disclosed in the FY2025 annual report and a $675,000 secured promissory note from the chief executive to the executive chairman maturing May 24, 2027 — are the reasons it is priced this way. Both are bounded in time, and the closer comparable transaction — Stran's own August 2024 purchase of Gander Group out of a Uniform Commercial Code Article 9 foreclosure — sets the operator-investor playbook.</p>
+  </div>
+
+  <div class="kpi-strip">
+    <div class="kpi"><div class="lbl">Share price</div><div class="val">$1.97</div><div class="sub">May 28, 2026</div></div>
+    <div class="kpi"><div class="lbl">Enterprise value</div><div class="val">$26.5M</div><div class="sub">$37M equity − $10.6M net cash</div></div>
+    <div class="kpi"><div class="lbl">Revenue (TTM)</div><div class="val">$118.7M</div><div class="sub">+8.9% latest quarter</div></div>
+    <div class="kpi"><div class="lbl">Q1 2026 net income</div><div class="val">$744K</div><div class="sub">vs. $(393)K prior-year quarter</div></div>
+    <div class="kpi"><div class="lbl">Insider ownership</div><div class="val">49.1%</div><div class="sub">Stranberg 29.3% + Shape 19.8%</div></div>
+    <div class="kpi"><div class="lbl">Analysts</div><div class="val">0</div><div class="sub">Zacks "Neutral" Jan 2026 only</div></div>
+  </div>
+
+  <h2>The business</h2>
+  <p>Stran &amp; Company generated $118.7 million of revenue in the trailing twelve months ended March 31, 2026 (per the <a href="https://www.sec.gov/Archives/edgar/data/1872525/000121390026055112/" target="_blank">quarterly report filed May 12, 2026</a>) as an outsourced marketing-services and promotional-products distributor — branded apparel, drinkware, point-of-sale displays, employee-recognition merchandise, and loyalty-program reward catalogs — sold through two reporting segments (Stran &amp; Company and Stran Loyalty Solutions, or SLS). Top ten customers accounted for 35.7% of revenue and the largest single customer accounted for 7.2% in fiscal 2025 (<a href="https://www.sec.gov/Archives/edgar/data/1872525/000121390026034104/" target="_blank">FY2025 10-K filed March 25, 2026</a>); the customer base is more diversified than a typical $100 million business-to-business services company. The chief executive, Andrew Shape, has run the business since co-founding it in 1994; the executive chairman, Andrew Stranberg, also co-founded the company and remains its largest individual shareholder. The unit economic that most clarifies the business: each acquired-revenue dollar from a distressed-distributor purchase costs Stran roughly $0.20 of enterprise value, against the $1.00 of enterprise value that the same revenue dollar trades at in the public peer 4imprint Group.</p>
+
+  <h2>Why this is a non-obvious pick</h2>
+  <p>By Lunchline's three tests, the situation is all three: messy, mispriced, and under-followed — and the 0.22 times sales multiple is the sum of those three frictions, not any one of them. <strong>Messy:</strong> the FY2025 10-K (filed March 25, 2026) discloses two unremediated material weaknesses in internal control over financial reporting — one over the review and approval of journal entries, one over information-technology general controls covering user access, vendor management, and change management — and the audit firm CBIZ inherited the engagement after the prior auditor BF Borgers was barred by the Securities and Exchange Commission in May 2024, forcing a multi-year reaudit. <strong>Mispriced:</strong> the enterprise trades at 0.22 times sales while the publicly listed pure-play peer, 4imprint Group, trades at roughly 1.0 times sales at 8 to 10% operating margins, and Stran's Q1 2026 inflection — $744,000 of net income on revenue up 8.9% year-over-year — has not yet moved the multiple. <strong>Under-followed:</strong> EF Hutton dropped coverage in 2023 after maintaining a $4.50 price target through April of that year, Zacks initiated a "Neutral" rating in January 2026, and the Q1 2026 earnings call had zero analyst questions ("Right, so it doesn't look like we have any questions. So thank you," chief executive Andrew Shape closed, on the May 12, 2026 conference call).</p>
+
+  <h2>What the market sees</h2>
+  <p>Average daily dollar volume is roughly $113,000 against a public float of 9.75 million shares, and institutional ownership sits at 16.7% (<a href="https://finance.yahoo.com/quote/SWAG/" target="_blank">Yahoo Finance quote page, May 28, 2026</a>). The stock has traded between $1.05 and $3.50 over the last fifty-two weeks despite revenue growing 40.6% in fiscal 2025 — the FY2025 10-K discloses the two new material weaknesses, the Q3 2025 transcript discloses a roughly $1 million direct tariff hit Stran could not pass on to customers, and the absence of sell-side coverage means no published estimates anchor a forward multiple. The consensus implication priced in 0.22 times sales: this is a thin-margin, control-weak distributor whose first profitable quarter could prove to be one quarter, the next tariff round can erase the operating margin again, and there is no mechanism — no analyst initiation, no index inclusion, no clean audit attestation — to force the stock to re-rate inside the next twelve months.</p>
+
+  <h2>What we see</h2>
+  <p>Three facts in the same filings change the conclusion. First, the August 2024 purchase of Gander Group — completed through a Uniform Commercial Code Article 9 secured-party sale, the legal mechanism by which a lender forecloses on a borrower's assets — cost Stran $1.1 million in cash plus $5.5 million of assumed liabilities for an asset that generated $34 million of revenue in its first full year under Stran ownership and produced $532,000 of operating income in Q1 2026 versus a $462,000 operating loss in the prior-year quarter (<a href="https://www.sec.gov/Archives/edgar/data/1872525/000121390026055112/" target="_blank">Q1 2026 10-Q</a>, segment commentary). That is an acquisition multiple of about 0.2 times revenue; the promotional-products distribution market has more than 22,000 active distributors per the Promotional Products Association International industry register, and the same legal mechanic that delivered Gander is available on the next dozen distressed sellers. Second, the operating-margin gap to the right peer set is wider than the sector tag implies — 4imprint Group, the largest direct-to-business promotional-products distributor in the United States, runs 8 to 10% operating margins on $1.4 billion of revenue (<a href="https://www.4imprint.co.uk/investor-relations" target="_blank">4imprint Group 2024 annual report</a>); Stran's roughly 2.1% Q1 2026 operating margin — its first positive quarterly operating margin after a full-year operating loss in fiscal 2025 — sits below the private comparables Halo Branded Solutions and Geiger, each of which carries mid-single-digit margins per industry trade press. Third, the balance sheet does the work that the income statement does not: $12.8 million of cash, cash equivalents, and investments against $2.2 million of debt leaves $10.6 million of net cash — 40% of enterprise value — sitting unused while the buyback authorization has $6.6 million remaining and the chief executive said on the May 12, 2026 call that Stran views repurchases "as an attractive and disciplined use of capital."</p>
+
+  <h2>What management says versus what the filings disclose</h2>
+  <p>On the May 12, 2026 quarterly call, chief executive Andrew Shape opened with the Q1 inflection — "$744,000 [of net income] compared to a net loss of $393,000 in the prior year period" — and described internal-controls work only as the completion of the historical reaudit ("operating expenses... decreased... primarily driven by lower legal and accounting-related expenses due to the reaudit"). The FY2025 10-K, filed eight weeks earlier on March 25, 2026, discloses the opposite: "Our management has identified the following material weaknesses in our internal control over financial reporting" — one over journal-entry review controls, one over information-technology general controls — and notes that remediation has commenced but "may not fully address the material weaknesses." Two unremediated weaknesses, identified in fiscal 2025, were not mentioned on the subsequent earnings call.</p>
+  <p>The filings disclose a second structural fact the earnings calls do not surface. In May 2021, Stranberg transferred 3,400,000 shares to Shape at $0.1985 per share — a roughly $675,000 purchase paid by Shape's delivery of a secured promissory note back to Stranberg, with the 3,400,000 shares pledged as collateral and the note maturing on its sixth anniversary, May 24, 2027 (<a href="https://www.sec.gov/Archives/edgar/data/1872525/000121390026034104/" target="_blank">FY2025 10-K</a>; the 3,400,000-share pledge is also itemized in the <a href="https://www.sec.gov/Archives/edgar/data/1872525/000121390025062961/" target="_blank">DEF 14A filed July 11, 2025</a>). The same instrument transferred 800,000 shares to former executive officer Randolph Birney on the same terms. The economic implication: of Shape's 3.72 million-share stake, 3.4 million shares — roughly 91% of his economic interest — sit as security for a payable to the executive chairman, and the maturity falls inside the next twelve months. Combined, Shape and Stranberg control 49.1% of the voting stock as outright shareholders; once the collateral pledge is layered in, Stranberg holds either his own shares or a senior claim on Shape's, which approximates the controlling-shareholder position the brief describes.</p>
+
+  <h2>What an operator-investor would do</h2>
+  <div class="vcp">
+    <div class="vcp-cell">
+      <div class="lever">Commercial</div>
+      <p>Build out Stran Digital Solutions, the proprietary software platform launched in Q1 2026, into a paid module attached to existing client-services contracts. A modest 100 enterprise adopters at $30,000 per year of recurring software revenue equals $3 million of annual recurring revenue at software-style gross margins; at the 5x revenue multiple Halo Branded Solutions' platform carries inside Audax Group's portfolio (Audax 2024 portfolio review), that is $15 million of incremental enterprise value attached to a $26.5 million enterprise.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Operations</div>
+      <p>Move SLS-segment sourcing — casino-loyalty merchandise, currently heavily China-origin — to United States and Mexico manufacturing partners over 18 to 24 months. Q3 2025 tariff impact was disclosed at "just over a million dollars for direct costs that we were not able to pass on to our customers" (<a href="https://www.sec.gov/Archives/edgar/data/1872525/000121390025109289/" target="_blank">Q3 2025 transcript via 10-Q filed November 12, 2025</a>); 4imprint Group's 2024 annual report describes a comparable diversification post-2018 that protected its 8 to 10% operating margin through subsequent tariff rounds.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Capital structure</div>
+      <p>Pay off the $675,000 Shape-to-Stranberg promissory note (collateral on 3,400,000 shares, maturing May 24, 2027) and restart the buyback against the $6.6 million remaining authorization. The note is too small to negotiate; settling it removes the founder-collateral overhang and clears the path to a future sale process. At $2 a share, $6.6 million of buyback retires 17% of the 9.75 million-share float and turns the 40%-of-enterprise-value cash position into per-share value rather than balance-sheet decoration.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Mergers and acquisitions</div>
+      <p>Repeat the Gander Group playbook on three to four more distressed distributors. Gander cost $1.1 million in cash plus $5.5 million of assumed liabilities and produced $34 million of first-year revenue and $532,000 of Q1 2026 operating income — an acquisition multiple of about 0.2 times revenue against an industry where the Halo Branded Solutions and Geiger comparables transact at 0.7 to 1.0 times revenue. The Promotional Products Association International registers more than 22,000 distributors; consolidation is accelerating post-COVID and post-tariff. At $20 to $30 million deployed against $120 to $200 million of acquired revenue, the platform would clear the threshold at which sell-side coverage initiates.</p>
+    </div>
+  </div>
+  <p style="margin-top:10px;">Three of the four are within management's stated strategy; the capital-structure move requires either Stranberg's consent or a sponsor's balance sheet.</p>
+
+  <h2>What it is worth</h2>
+  <table class="calc">
+    <thead><tr><th>Three-year scenario</th><th>FY2029 revenue</th><th>Multiple</th><th>Enterprise value</th><th>Share price</th><th>Return per year</th></tr></thead>
+    <tbody>
+      <tr><td>Bear — material weaknesses persist, no re-rate</td><td>$130M</td><td>0.22x EV/Sales</td><td>$29M</td><td>$2.11</td><td>+2%</td></tr>
+      <tr class="total"><td>Base — clean FY26 audit, 0.5x EV/Sales</td><td>$165M</td><td>0.50x EV/Sales</td><td>$83M</td><td>$4.98</td><td>+36%</td></tr>
+      <tr><td>Bull — Gander playbook repeats, peer multiple</td><td>$220M</td><td>0.85x EV/Sales</td><td>$187M</td><td>$10.53</td><td>+75%</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:11.5px; color:var(--slate);">Share price = (enterprise value + $10.6 million net cash) divided by 18.77 million shares outstanding. The 4imprint Group multiple is approximately 1.0 times revenue at 8 to 10% operating margins per the 2024 annual report; the bull case applies a 15% discount to that multiple to reflect Stran's smaller scale and unproven Stran Digital Solutions monetization. The base case assumes the Gander integration holds at current run-rate but no incremental acquisitions; the bull case assumes two additional Article 9 acquisitions at sub-0.25x revenue. None of the scenarios assumes a take-private outcome.</p>
+
+  <h2>What would have to go wrong</h2>
+  <ol class="risks">
+    <li>If the FY2026 10-K (expected March 2027) discloses a third material weakness, or fails to remediate either of the two existing weaknesses, the institutional penalty box extends another full audit cycle and the base-case re-rate slips by 24 months — pushing the bear-case 0.22x EV/Sales multiple as the operative one through 2028.</li>
+    <li>If chief executive Andrew Shape is forced to sell collateral shares before May 24, 2027 to repay the $675,000 promissory note to executive chairman Andrew Stranberg, the resulting supply against a 9.75 million-share float at roughly $113,000 of daily dollar volume would compress the stock — and the same disclosure would signal to outside investors that the founder-equity alignment thesis was thinner than the proxy statement implied.</li>
+    <li>If trailing-twelve-month operating margin fails to clear 4% by the FY2026 10-K — half the 8% mark 4imprint Group runs at — the peer-multiple comparison breaks and the bull case worth $10.53 per share collapses back to the bear case worth roughly current price. The Q1 2026 operating-margin print was 2.1%; two more quarters at that level or below, and the inflection narrative does not survive.</li>
+  </ol>
+
+  <h2>What would confirm it</h2>
+  <p>Three observations over the next four quarterly filings would, taken together, confirm the case — or dismantle it cleanly. First, fiscal 2026 net income prints above zero on a full-year basis, consistent with the Q1 inflection and the Q1 2026 management commentary that the Stran Loyalty Solutions segment has reached structural profitability. Second, the chief executive discusses the remediation status of the two material weaknesses on a public earnings call by name, lifting the disclosure from buried filing language to investor-relations narrative. Third, either the Shape-to-Stranberg promissory note is refinanced or settled before its May 24, 2027 maturity, or the company discloses one additional Article 9-style acquisition at a sub-0.25x revenue multiple — either is a public signal that the operator-investor playbook is active. Each is observable from public filings or earnings calls within the next twelve months. Whether the disclosed inflection is durable, and whether the gating frictions clear in time to matter, is a judgment the reader can make from the same documents we did.</p>
+
+  <div class="sources">
+    <strong>Sources:</strong> <a href="https://www.sec.gov/Archives/edgar/data/1872525/000121390026034104/" target="_blank">FY2025 10-K</a> (March 25, 2026) · <a href="https://www.sec.gov/Archives/edgar/data/1872525/000121390026055112/" target="_blank">Q1 2026 10-Q</a> (May 12, 2026) · <a href="https://www.sec.gov/Archives/edgar/data/1872525/000121390025062961/" target="_blank">DEF 14A proxy statement</a> (July 11, 2025) · <a href="https://www.sec.gov/Archives/edgar/data/1872525/000121390025109289/" target="_blank">Q3 2025 10-Q</a> (November 12, 2025) · Q1 2026 earnings call transcript (internal: <code>data/dossiers/swag/transcripts/2026-Q1.txt</code>) · <a href="https://www.4imprint.co.uk/investor-relations" target="_blank">4imprint Group 2024 annual report</a> · <a href="https://finance.yahoo.com/quote/SWAG/" target="_blank">Yahoo Finance quote page</a>
+  </div>
+
+</div>
+
+</body>
+</html>

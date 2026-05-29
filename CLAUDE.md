@@ -15,6 +15,9 @@ This file routes to domain-specific docs. Read the relevant doc before working o
 | Per-candidate scoring pipeline | [docs/pipeline.md](docs/pipeline.md) | v2 multi-agent pipeline: 6-step script sequence + supporting tools |
 | Analytical methodology | [docs/methodology.md](docs/methodology.md) | Six lessons from exemplar decks; sequenced workstreams; AI usage map |
 | Deck structure & design | [docs/deck-structure.md](docs/deck-structure.md) | Slide scaffolds; locked design system (Direction 1); exemplar sources |
+| Memo principles (what to include + checklist) | [docs/memo-principles.md](docs/memo-principles.md) | Required content blocks, voice rules, forbidden moves, drafting checklist |
+| Memo voice & exemplar research | [docs/memo-voice.md](docs/memo-voice.md) | Buffett/Marks/Einhorn voice patterns, plain-English vocabulary, annotated excerpts, full skeleton |
+| Canonical memo template | [mockups/pitches/option-a-scroll.html](mockups/pitches/option-a-scroll.html) | AENT memo written to demonstrate the voice principles — use as starting point for every new candidate memo |
 | Part 2: Market mapping | [docs/market-mapping.md](docs/market-mapping.md) | End market selection, vendor stack, automation map |
 | Data sources for screening | [docs/screening-research.md](docs/screening-research.md) | yfinance / EDGAR / Finviz reference table |
 | Aviv's relevant background | [docs/background-context.md](docs/background-context.md) | Sectors of expertise, competitive advantages |

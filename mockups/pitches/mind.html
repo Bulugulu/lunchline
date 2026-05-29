@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MIND — Investment Memo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  :root {
+    --navy: #0A2540; --ink: #111; --paper: #FFF; --slate: #6B7280;
+    --rule: #E5E7EB; --rule-soft: #F1F3F5; --red: #C8102E; --tint: #FEF7F7;
+    --link: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #d0d5dc; font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink); font-feature-settings: "tnum" 1;
+    line-height: 1.55;
+  }
+  a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--link); }
+  a:hover { border-bottom-style: solid; }
+
+  .topbar { max-width: 880px; margin: 24px auto 16px; padding: 0 24px;
+    display: flex; justify-content: space-between; font-size: 12px; color: #555; }
+  .page { max-width: 880px; margin: 0 auto 60px; background: var(--paper);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10); padding: 48px 64px; }
+
+  /* HEADER */
+  .firm { font-size: 11px; letter-spacing: 0.2em; color: var(--navy);
+    font-weight: 700; text-transform: uppercase; }
+  .meta-row { display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 2px solid var(--navy); padding-bottom: 10px; margin-bottom: 22px; }
+  .meta-row .date { font-size: 11px; color: var(--slate); letter-spacing: 0.08em; text-transform: uppercase; }
+  .ticker { font-size: 12px; letter-spacing: 0.22em; color: var(--red); font-weight: 700; margin-bottom: 4px; }
+  .ticker a { color: var(--red); border-bottom: none; }
+  .name { font-size: 28px; font-weight: 500; color: var(--navy);
+    letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 14px; }
+
+  /* HEADLINE THESIS */
+  .headline { font-size: 15px; line-height: 1.55; color: var(--ink);
+    background: var(--tint); border-left: 3px solid var(--red);
+    padding: 14px 18px; margin: 0 0 22px; }
+  .headline .lbl { font-size: 9px; letter-spacing: 0.16em;
+    color: var(--red); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .headline p { margin: 0; }
+
+  /* KPI STRIP */
+  .kpi-strip { display: grid; grid-template-columns: repeat(6, 1fr);
+    gap: 12px; margin-bottom: 24px; }
+  .kpi { border-top: 2px solid var(--navy); padding-top: 7px; }
+  .kpi .lbl { font-size: 9px; letter-spacing: 0.1em; color: var(--slate);
+    text-transform: uppercase; font-weight: 600; margin-bottom: 3px; }
+  .kpi .val { font-size: 17px; font-weight: 600; color: var(--ink);
+    font-variant-numeric: tabular-nums; line-height: 1; }
+  .kpi .sub { font-size: 10px; color: var(--slate); margin-top: 3px; line-height: 1.3; }
+
+  /* SECTIONS */
+  h2 { font-size: 11px; letter-spacing: 0.18em; color: var(--slate);
+    text-transform: uppercase; font-weight: 700; margin: 24px 0 8px;
+    border-bottom: 1px solid var(--rule); padding-bottom: 4px; }
+  p { font-size: 13.5px; line-height: 1.65; margin: 0 0 10px; }
+  p:last-child { margin-bottom: 0; }
+
+  /* VALUE CREATION 2x2 */
+  .vcp { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+  .vcp-cell { border: 1px solid var(--rule); padding: 12px 14px; }
+  .vcp-cell .lever { font-size: 9px; letter-spacing: 0.14em;
+    color: var(--navy); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .vcp-cell p { font-size: 12.5px; line-height: 1.55; margin: 0; }
+
+  /* IRR TABLE */
+  table.calc { width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 10px 0; }
+  table.calc th, table.calc td { padding: 7px 11px;
+    border-bottom: 1px solid var(--rule-soft);
+    font-variant-numeric: tabular-nums; }
+  table.calc th { background: var(--navy); color: white;
+    text-align: right; font-size: 10px; letter-spacing: 0.08em;
+    text-transform: uppercase; font-weight: 600; }
+  table.calc td { text-align: right; }
+  table.calc th:first-child, table.calc td:first-child { text-align: left; }
+  table.calc td:first-child { font-weight: 500; }
+  table.calc tr.total td { background: var(--tint); font-weight: 700; color: var(--navy); }
+
+  /* RISKS as numbered */
+  .risks { padding-left: 20px; margin: 6px 0 0; }
+  .risks li { font-size: 13px; line-height: 1.6; margin-bottom: 8px; }
+  .risks li:last-child { margin-bottom: 0; }
+  .risks li strong { color: var(--ink); }
+
+  /* SOURCES */
+  .sources { font-size: 11px; line-height: 1.55; color: var(--slate);
+    margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--rule); }
+  .sources strong { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span><strong>Investment memo</strong> — voice/structure per <code>docs/memo-voice.md</code></span>
+  <span><a href="index.html">&larr; layout options</a></span>
+</div>
+
+<div class="page">
+
+  <div class="firm">Lunchline Partners &middot; Case Study</div>
+  <div class="meta-row">
+    <div></div>
+    <div class="date">May 28, 2026</div>
+  </div>
+
+  <div class="ticker"><a href="https://finance.yahoo.com/quote/MIND/" target="_blank">NASDAQ : MIND</a></div>
+  <h1 class="name">MIND Technology, Inc.</h1>
+
+  <div class="headline">
+    <div class="lbl">Thesis</div>
+    <p>MIND Technology trades at 1.1 times trailing revenue and an enterprise value of $46 million on the assumption that it is a small, cyclical scientific-instruments company facing a printed revenue decline in fiscal 2027. The <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000926423&type=10-K" target="_blank">fiscal 2026 annual report filed April 20, 2026</a> discloses that 60% of revenue is aftermarket spares and service on a 25-year installed base &mdash; a recurring stream of roughly $24 million at gross margins above the corporate average. Capitalized at the 9 to 10 times earnings before interest, taxes, depreciation, and amortization (EBITDA) multiple that listed industrial-services peers carry, the aftermarket annuity alone covers today&rsquo;s entire enterprise value; the cyclical original equipment manufacturer (OEM) revenue, the United States federal net operating loss (NOL) carryforwards behind a $27.2 million deferred-tax valuation allowance, and the unencumbered Huntsville, Texas real estate are paid for at zero.</p>
+  </div>
+
+  <div class="kpi-strip">
+    <div class="kpi"><div class="lbl">Share price</div><div class="val">$6.91</div><div class="sub">May 28, 2026 close</div></div>
+    <div class="kpi"><div class="lbl">Enterprise value</div><div class="val">$46M</div><div class="sub">$63M cap &minus; $18M net cash</div></div>
+    <div class="kpi"><div class="lbl">Revenue (FY26)</div><div class="val">$40.9M</div><div class="sub">Year ended Jan 31, 2026</div></div>
+    <div class="kpi"><div class="lbl">Aftermarket mix</div><div class="val">60%</div><div class="sub">Per Q4 FY26 call, April 16, 2026</div></div>
+    <div class="kpi"><div class="lbl">Float</div><div class="val">8.92M</div><div class="sub">98% of 9.09M outstanding</div></div>
+    <div class="kpi"><div class="lbl">Analysts</div><div class="val">1</div><div class="sub">Zacks; quant aggregator</div></div>
+  </div>
+
+  <h2>The business</h2>
+  <p>MIND Technology generated $40.9 million of revenue in the fiscal year ended January 31, 2026 (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000926423&type=10-K" target="_blank">10-K filed April 20, 2026</a>) selling marine seismic and oceanographic equipment &mdash; air guns, source controllers, towed streamers, and underwater positioning systems &mdash; to a global base of survey companies, navies, and academic research institutes through its Seamap product line. The chief executive, Robert P. Capps, age 71, has run the business since 2020, when he completed the divestiture of the legacy Mitcham Industries seismic-leasing fleet and renamed the company; the chief financial officer, Mark Cox, age 65, has been with the company in finance roles since the mid-1990s. The single most useful fact about how MIND makes money is that in fiscal 2026 the aftermarket business &mdash; spare parts, repairs, training, and service for the installed base &mdash; was 60% of revenue (Capps, <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000926423&type=8-K" target="_blank">Q4 fiscal 2026 earnings call, April 16, 2026</a>) at gross margins better than the corporate 46%.</p>
+
+  <h2>Why this is a non-obvious pick</h2>
+  <p>By Lunchline&rsquo;s three tests, the situation is all three. <strong>Messy:</strong> 20 months ago, on September 4, 2024, the 9.00% Series A cumulative preferred stock outstanding since 2013 was converted into approximately 6.6 million common shares, retiring the dividend obligation (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000926423&type=10-K" target="_blank">fiscal 2026 10-K, Note 8</a>); pre-conversion screen data still misrepresents the share count by roughly 75%. <strong>Mispriced:</strong> Yahoo Finance tags MIND as &ldquo;Technology &mdash; Scientific &amp; Technical Instruments,&rdquo; a sector whose listed comparables are lab-instrument companies trading on recurring-revenue multiples; that recurring profile is in fact in MIND&rsquo;s numbers, but it is buried inside a one-segment industrial OEM reporting structure that the multiple does not credit. <strong>Under-followed:</strong> one analyst covers the stock &mdash; Zacks, a quantitative aggregator, downgraded to Neutral on April 28, 2026 &mdash; with a single $10 price target. The Q&amp;A on the last four earnings calls has been carried by two small-cap value funds, Ross Taylor of <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001129618&type=13F-HR" target="_blank">ARS Investment Partners</a> and Tyson Bauer of Casey Capital. With an 8.92-million-share float and average daily dollar volume near $1.2 million, any fund managing more than $100 million is mechanically excluded.</p>
+
+  <h2>What the market sees</h2>
+  <p>Headline revenue fell 13% in fiscal 2026, from $46.9 million to $40.9 million; backlog declined 18% year over year, from $16.9 million at January 31, 2025 to $13.9 million at January 31, 2026, and had peaked at $26.2 million as recently as October 31, 2024 (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000926423&type=10-K" target="_blank">fiscal 2026 10-K, Item 7</a>); and on the April 16, 2026 earnings call the chief executive guided that &ldquo;our results for fiscal 2027 to be down when compared to fiscal 2026.&rdquo; In the eight months between September 2025 and the end of fiscal 2026 the company issued 1.1 million shares through an at-the-market (ATM) program at an average price of approximately $10.60, raising $11.7 million of cash but signaling that management views the upside in the equity as bounded near that level. The implication priced into 1.1 times revenue and 12 times trailing EBITDA: a sub-$70-million-cap industrial OEM with concentrated customers, declining backlog, no debt, and a competent steward &mdash; fairly priced for what it is.</p>
+
+  <h2>What we see</h2>
+  <p>On the April 16, 2026 earnings call Capps said that &ldquo;in fiscal 2026, aftermarket business accounted for about 60% of our total revenues. Margins for this business also tend to be better than large system sales that might attract discounts.&rdquo; The figure is not only call color: the fiscal 2026 10-K Management&rsquo;s Discussion and Analysis itself states that &ldquo;in fiscal 2026 and fiscal 2025, approximately 60% and 37%, respectively, of our revenue related to these [spare-parts, repair, and field-service] activities,&rdquo; while noting that gross margin &ldquo;remained essentially flat&rdquo; year over year (45% in fiscal 2025 to 46% in fiscal 2026). The arithmetic: $40.9 million of revenue times the disclosed 60% aftermarket share equals roughly $24.5 million of recurring spares-and-service revenue against an installed base built over 25 years of Seamap shipments. At an aftermarket gross margin in the low 50s and the company&rsquo;s disclosed $13 million annual operating cost base, the aftermarket business alone produces $4 to $5 million of run-rate EBITDA. Capitalized at the 9 to 10 times EBITDA at which listed industrial-aftermarket peers <a href="https://finance.yahoo.com/quote/GEOS/" target="_blank">Geospace Technologies</a> (seismic and energy sensors, fiscal 2025 10-K) and <a href="https://finance.yahoo.com/quote/MSA/" target="_blank">MSA Safety</a> (industrial gas detection, fiscal 2024 10-K) trade, the aftermarket annuity supports $40 to $50 million of enterprise value &mdash; essentially the entire current $46 million enterprise value. The cyclical OEM book, the federal net operating loss carryforwards behind the $27.2 million deferred-tax valuation allowance (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000926423&type=10-K" target="_blank">fiscal 2026 10-K, income-tax note</a>; the filing does not disclose a single federal-only NOL figure), the $5.0 million appraised Huntsville real estate held unencumbered (same filing, Properties), and the $18 million of net cash on the balance sheet are paid for at zero.</p>
+  <p>The sector tag amplifies the mispricing. The Yahoo Finance industry classification &ldquo;Scientific &amp; Technical Instruments&rdquo; is a lab-instrument bucket dominated by names with 50% recurring revenue and EBITDA margins north of 20%; quantitative screens benchmark MIND against those peers on the trailing 9% EBITDA margin and the negative revenue growth, and reject it. The underlying business is a marine equipment OEM whose direct listed comparables were taken private, restructured, or wound down between 2018 and 2024 &mdash; <a href="https://en.wikipedia.org/wiki/Petroleum_Geo-Services" target="_blank">PGS</a> (taken private 2024), <a href="https://en.wikipedia.org/wiki/CGG_(company)" target="_blank">CGG / Viridien</a> (recapitalized 2018), <a href="https://en.wikipedia.org/wiki/ION_Geophysical" target="_blank">ION Geophysical</a> (bankrupt 2022) &mdash; leaving MIND as the only listed pure-play in the niche. Re-tagging by itself is worth a few points of multiple, not 50%; the structural fact is that the same income statement, presented with the aftermarket broken out as a disclosed line, is the same business an industrial-aftermarket investor would re-rate on the next quarterly release.</p>
+
+  <h2>What management says versus what the filings disclose</h2>
+  <p>On the April 16, 2026 call Capps spoke for 18 minutes about capital deployment and used the phrase &ldquo;various levers for growth&rdquo; that include &ldquo;mergers and acquisitions, investments in organic growth opportunities such as the expansion of existing product lines, and strategic alliances with other industry partners.&rdquo; In the Q&amp;A he was specific: &ldquo;We are a bit of a unicorn for small public companies&hellip; no debt, a pristine capital structure and balance sheet. That enables us to do some things that I think make us an attractive vehicle for some entities to monetize what they have. Maybe there is a venture capital firm who has an investment they would like to monetize and this is a way they could do that.&rdquo; A keyword-driven screen would read this and the April 2025 call&rsquo;s reference to &ldquo;pursue various strategic alternatives as we strive for growth&rdquo; as code for a Lazard-mandated sale process. The filings disclose no such process: there is no Schedule 14D-9, no 8-K announcing engagement of a sell-side financial advisor, no Special Committee formation, and no disclosure of a strategic-alternatives review in any filing within the trailing 24 months. What Capps is pitching is MIND as the buyer or the public vehicle in a marine-tech roll-up &mdash; a slower, more contingent thesis than a takeover trade.</p>
+  <p>On the same call the chief executive said the Seamap business &ldquo;continues to enjoy a strong market position, even a dominant position in some cases&rdquo; (Q3 fiscal 2026 call, December 10, 2025). The fiscal 2026 10-K Note on revenue concentration reads: &ldquo;During the fiscal year ended January 31, 2026, four Seamap customers individually exceeded 10% of total revenue in the amounts of approximately $7.4 million, $7.1 million, $6.7 million and $4.8 million.&rdquo; That is $26 million of $40.9 million &mdash; 63.5% of revenue in four names, up from 58% in two names a year earlier ($16.9 million and $10.1 million of fiscal 2025 revenue). The contrast cuts the same way in both cases: the IR language emphasizes strength and optionality; the filings quantify the constraints inside that strength.</p>
+
+  <h2>What an operator-investor would do</h2>
+  <div class="vcp">
+    <div class="vcp-cell">
+      <div class="lever">Commercial</div>
+      <p>Break out aftermarket revenue and gross margin as a disclosed line in the next quarterly release. The number is already in the call commentary at 60%. Publishing it on the income statement is the cheapest re-rating lever available. Comparable: <a href="https://finance.yahoo.com/quote/ROP/" target="_blank">Roper Technologies</a>&rsquo; 2015 disclosure shift on network-software recurring revenue, which preceded multiple expansion from roughly 10 to 18 times EBITDA over four years (Roper 2014 and 2018 10-Ks).</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Operations</div>
+      <p>Shift sales coverage from operators to vessel-builder OEMs &mdash; Damen Shipyards, <a href="https://finance.yahoo.com/quote/VARD.OL/" target="_blank">Vard</a>, <a href="https://finance.yahoo.com/quote/ASB.AX/" target="_blank">Austal</a>, <a href="https://finance.yahoo.com/quote/CAT/" target="_blank">Caterpillar Marine</a> &mdash; to be specified onto new-build research and survey vessels. Each new-build specification carries roughly $3 to $5 million of equipment revenue plus a 10-to-15-year aftermarket annuity. Comparable: Caterpillar Marine&rsquo;s spec-engineering program through the 2010s, the standard mechanic for an industrial OEM selling into a fragmented downstream operator base.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Capital structure</div>
+      <p>Mortgage or sale-leaseback the Huntsville, Texas property &mdash; disclosed in the fiscal 2026 10-K as unencumbered with an appraised value of $5.0 million &mdash; to fund a bolt-on acquisition without re-engaging the $13.3 million of remaining at-the-market issuance capacity. A $3 to $4 million mortgage at current rates funds half a small acquisition with zero share dilution. Comparable: Spirit AeroSystems&rsquo; 2019 to 2021 property monetizations during the 737 MAX cash-flow window.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Mergers and acquisitions</div>
+      <p>Deploy $10 to $15 million of the $19.1 million cash balance into one or two private marine-tech product-line acquisitions &mdash; subsea sensors, autonomous underwater vehicle (AUV) sub-systems, or hydroacoustic instruments &mdash; from sub-scale private holders. At a 5 to 6 times EBITDA target price typical for sub-$50-million private deals, $12 million deploys to roughly $2 million of incremental run-rate EBITDA. Comparable: <a href="https://finance.yahoo.com/quote/GEOS/" target="_blank">Geospace Technologies</a>&rsquo;s 2018 to 2024 product-line bolt-ons that took its enterprise value from roughly $90 million to $190 million on the same niche-roll-up logic.</p>
+    </div>
+  </div>
+  <p style="margin-top:10px;">The commercial lever is mechanically available at the next quarterly release. The other three are gated on Capps acting on the M&amp;A intent he has signaled for four consecutive quarters; he has built the financing rails &mdash; the HSBC Singapore trade-finance facility signed March 17, 2026 (fiscal 2026 10-K subsequent events), the ATM capacity, the unencumbered real estate &mdash; but no transaction has been announced.</p>
+
+  <h2>What it is worth</h2>
+  <table class="calc">
+    <thead><tr><th>Two-year scenario</th><th>FY28 EBITDA</th><th>Multiple</th><th>Enterprise value</th><th>Share price</th><th>Return per year</th></tr></thead>
+    <tbody>
+      <tr><td>Bear &mdash; FY27 down year, no re-rate, ATM re-tapped</td><td>$3M</td><td>9.0x</td><td>$27M</td><td>$4.40</td><td>&minus;20%</td></tr>
+      <tr class="total"><td>Base &mdash; aftermarket disclosed, no deal, $5M EBITDA</td><td>$5M</td><td>9.5x</td><td>$48M</td><td>$7.20</td><td>+2%</td></tr>
+      <tr><td>Bull &mdash; one $12M deal closes, aftermarket disclosed</td><td>$7M</td><td>10.5x</td><td>$74M</td><td>$10.05</td><td>+21%</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:11.5px; color:var(--slate);">Share price = (enterprise value + $18 million net cash) divided by 9.09 million shares in base and bull; the bull case&rsquo;s $12 million of deal cash is converted into the incremental EBITDA already captured in its enterprise value, so net cash is held at $18 million rather than double-counted. Bear assumes the remaining $13.3 million ATM capacity is fully drawn at $7 per share to fund the cash burn of a down year &mdash; taking the share count to 11.0 million while net cash stays near $18 million as proceeds are consumed. The base case requires only the disclosure shift and a stabilized aftermarket print; it does not require a transaction. The bull case requires Capps to act on the M&amp;A intent that has now been articulated for four consecutive earnings calls.</p>
+
+  <h2>What would have to go wrong</h2>
+  <ol class="risks">
+    <li>If any one of the four 10%-plus customers (each $4.8 to $7.4 million of fiscal 2026 revenue per the <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000926423&type=10-K" target="_blank">fiscal 2026 10-K revenue-concentration note</a>) does not renew aftermarket service in fiscal 2027, the recurring-revenue base falls by $4 to $7 million &mdash; 10% to 17% of total revenue &mdash; and the aftermarket-as-annuity arithmetic that supports the current enterprise value breaks. Backlog of $13.9 million at January 31, 2026 is also concentrated in these same names.</li>
+    <li>If the at-the-market program is re-engaged before any acquisition is announced, the remaining $13.3 million of issuance capacity (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000926423&type=10-K" target="_blank">fiscal 2026 10-K, Note on equity</a>) adds roughly 1.3 million shares at $10 or 1.9 million shares at $7 &mdash; 14% to 21% dilution &mdash; with no offsetting earning power, since management has not committed to a defined use of proceeds beyond &ldquo;the opportunity to move quickly should we be able to bring a couple of these opportunities to fruition&rdquo; (Capps, Q3 fiscal 2026 call, December 10, 2025).</li>
+    <li>If the chief executive, who is 71 with no disclosed successor in the <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000926423&type=DEF+14A" target="_blank">May 30, 2025 proxy statement</a>, steps back before a transaction closes, the M&amp;A optionality that motivates the bull case lapses; the value defaults to the aftermarket-only base case. Internal Revenue Code Section 382 separately caps annual usage of the NOL at roughly 3% of pre-change equity value, or on the order of $1.8 million per year, after any 50%-plus ownership change &mdash; so the carryforward is realizable only over a multi-year window and is worth materially less than face in any reverse-merger structure. (The Section 382 limitation is our own estimate; the 10-K discloses neither a Section 382 analysis nor a single federal NOL figure, only that the carryforwards are &ldquo;subject to limitation and future expiration&rdquo; behind a $27.2 million deferred-tax valuation allowance.)</li>
+  </ol>
+
+  <h2>What would confirm it</h2>
+  <p>Three observations across the next four quarterly filings would, taken together, confirm the case &mdash; or, failing, dismantle it cleanly. First, the next quarterly release (fiscal 2027 first-quarter 10-Q, June 2026) breaks out aftermarket revenue as a disclosed line, or the corresponding earnings-call deck does so in a way the next analyst can quote. Second, at least one of the four top customers renews a multi-year service-and-spares contract that is disclosed by name, lifting the customer concentration from a risk factor to a contracted backlog. Third, Capps either signs the first product-line acquisition he has been pitching across the December 2024, April 2025, December 2025, and April 2026 calls &mdash; on his stated &ldquo;close to what we do now&rdquo; criterion &mdash; or returns the cash through a buyback at or near the current price. Each is observable in a public filing or call. Whether the disclosed aftermarket annuity is enough on its own, and whether Capps acts on the M&amp;A intent in the time he has left as chief executive, is a judgment the reader can make from the same documents we did.</p>
+
+  <div class="sources">
+    <strong>Sources:</strong>
+    <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000926423&type=10-K" target="_blank">Fiscal 2026 10-K</a> (filed April 20, 2026) &middot;
+    <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000926423&type=10-Q" target="_blank">Q3 fiscal 2026 10-Q</a> (filed December 11, 2025) &middot;
+    <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000926423&type=DEF+14A" target="_blank">2025 proxy statement</a> (May 30, 2025) &middot;
+    <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000926423&type=8-K" target="_blank">8-K event filings</a> &middot;
+    Q4 fiscal 2026 earnings call transcript, April 16, 2026 (internal: <code>data/dossiers/mind/transcripts/2026-Q4.txt</code>) &middot;
+    Q3 fiscal 2026 earnings call transcript, December 10, 2025 (internal: <code>data/dossiers/mind/transcripts/2026-Q3.txt</code>) &middot;
+    <a href="https://finance.yahoo.com/quote/MIND/" target="_blank">Yahoo Finance quote page</a>
+  </div>
+
+</div>
+
+</body>
+</html>

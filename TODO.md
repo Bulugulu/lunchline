@@ -8,7 +8,7 @@ For analytical workstreams (per-candidate work after selection), see `docs/metho
 
 ## Decisions blocking other work
 
-- [ ] **Company selection** — four viable candidates (CDLX, NRDY, SCOR, AENT). All landed 2.65-2.95 post-adversarial under calibration mode; framework-discrimination diagnostic (FAST control) confirmed this band reflects pool homogeneity, not framework failure. Findings-mode confirmed the four survivors and ruled out THRY (SEC investigation hidden from calls) and BZFD (Allen 51% control closed 2 days before deadline). Next step: pitch tournament across the four.
+- [ ] **Company selection — TOURNAMENT READY (next action is the user's).** 11 verified one-page memos built in `mockups/pitches/` (bracket index at `mockups/pitches/index.html`): CDLX, NRDY, SCOR, AENT + UPLD, IZEA, RSSS, UONE, MIND, ACCS, SWAG. All numbers audited against SEC filings/XBRL (see CHANGELOG 2026-05-29). **Next step: user reviews each memo, attacks the theses, picks a company.** Post-audit thesis standing — clean/intact: **RSSS (cleanest), UPLD, SWAG, AENT**; weakened on verification: **CDLX** (BofA was disclosed in an 8-K), **MIND** (aftermarket mix already disclosed; NOL overstated), **IZEA** (only $0.7M EBITDA → capital-return story); caveated: **SCOR** (per-share overstated on share count), **UONE** (IRR needs a live 2031-bond price).
 - [ ] **FMP API key** — `fetch_fmp.py` works but `/v4/price-target` and competitor-comps endpoints likely require the paid Starter tier ($14/mo). Without it, consensus price target and competitor metrics endpoints will fail. Decide: pay for one month, or skip the sell-side-consensus signal.
 - [ ] **Friendly-transaction framework treatment (deferred)** — DOMO/BBGI/ANGI are founder-controlled (DEAL_BREAKER per current logic) BUT have active strategic reviews. That's a founder-led-sale setup, conceptually different from hostile-PE-attack. Decision deferred — we have 4 viable candidates under the standard framework; only revisit if the pitch tournament collapses to <2 survivors.
 
@@ -28,7 +28,7 @@ Per `docs/public-company-pitch.md` § Selection Process, the picking methodology
 - Killed: EXFY (VT standstill), KPLT (closed deal), LPSN (closed deal), BBGI (founder 92% Class B), SKLZ (founder 87% Class B), TTGT (post-merger), THRY (SEC subpoena), BZFD (Allen 51% control)
 - Viable: CDLX, NRDY
 
-**Layer 2 structural exclusion — still to evaluate (21):** DRCT, CETX, UONE, CISO, IZEA, ZDGE, ACCS, SWAG, SURG, GIFT, SNAL, GAME, MIND, HIT, CNVS, CTM, RSSS, FLNT, UPLD, XBP, BKKT. Build dossier + run voting + deal status checks on each.
+**Layer 2 structural exclusion — 21 evaluated 2026-05-29 (DONE).** Triage table: `data/research/layer2_triage_2026-05-28.md`. 16 survived; 5 killed: ZDGE/SNAL/HIT (super-voting founder lockdown), GIFT (TakeOut7 merger), BKKT (NewCo merger closed). Findings-mode run on all 16. Promoted to the memo bracket: UPLD, IZEA, RSSS, UONE, MIND, ACCS, SWAG. Documented as findings-mode passes (distressed/blocked, no memo): DRCT, CISO, SURG, CETX, XBP, CTM, FLNT, CNVS, GAME.
 
 **Known viable externals (not in the 42):** SCOR, AENT — slipped through the screen due to industry classification edge cases. Both meet $10-500M EV / US-listed criteria. Include in tournament as documented additions.
 
@@ -126,6 +126,10 @@ Ruled out (findings-mode dispositions):
 ### Deck pipeline
 
 - [ ] **HTML → python-pptx export** — wire mockups/ Direction 1 HTML to a python-pptx renderer that consumes the operating model as source of truth.
+
+### Memo template (now built)
+
+- [x] **Voice research + memo template + principles doc (DONE 2026-05-28).** `docs/memo-voice.md` (Buffett/Marks/Einhorn exemplars + skeleton), `docs/memo-principles.md` (project checklist), `mockups/pitches/option-a-scroll.html` (canonical AENT memo demonstrating the voice). Future per-candidate memos should fork the template and rewrite content; structure stays.
 
 ---
 

@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RSSS — Investment Memo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  :root {
+    --navy: #0A2540; --ink: #111; --paper: #FFF; --slate: #6B7280;
+    --rule: #E5E7EB; --rule-soft: #F1F3F5; --red: #C8102E; --tint: #FEF7F7;
+    --link: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #d0d5dc; font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink); font-feature-settings: "tnum" 1;
+    line-height: 1.55;
+  }
+  a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--link); }
+  a:hover { border-bottom-style: solid; }
+
+  .topbar { max-width: 880px; margin: 24px auto 16px; padding: 0 24px;
+    display: flex; justify-content: space-between; font-size: 12px; color: #555; }
+  .page { max-width: 880px; margin: 0 auto 60px; background: var(--paper);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10); padding: 48px 64px; }
+
+  /* HEADER */
+  .firm { font-size: 11px; letter-spacing: 0.2em; color: var(--navy);
+    font-weight: 700; text-transform: uppercase; }
+  .meta-row { display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 2px solid var(--navy); padding-bottom: 10px; margin-bottom: 22px; }
+  .meta-row .date { font-size: 11px; color: var(--slate); letter-spacing: 0.08em; text-transform: uppercase; }
+  .ticker { font-size: 12px; letter-spacing: 0.22em; color: var(--red); font-weight: 700; margin-bottom: 4px; }
+  .ticker a { color: var(--red); border-bottom: none; }
+  .name { font-size: 28px; font-weight: 500; color: var(--navy);
+    letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 14px; }
+
+  /* HEADLINE THESIS */
+  .headline { font-size: 15px; line-height: 1.55; color: var(--ink);
+    background: var(--tint); border-left: 3px solid var(--red);
+    padding: 14px 18px; margin: 0 0 22px; }
+  .headline .lbl { font-size: 9px; letter-spacing: 0.16em;
+    color: var(--red); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .headline p { margin: 0; }
+
+  /* KPI STRIP */
+  .kpi-strip { display: grid; grid-template-columns: repeat(6, 1fr);
+    gap: 12px; margin-bottom: 24px; }
+  .kpi { border-top: 2px solid var(--navy); padding-top: 7px; }
+  .kpi .lbl { font-size: 9px; letter-spacing: 0.1em; color: var(--slate);
+    text-transform: uppercase; font-weight: 600; margin-bottom: 3px; }
+  .kpi .val { font-size: 17px; font-weight: 600; color: var(--ink);
+    font-variant-numeric: tabular-nums; line-height: 1; }
+  .kpi .sub { font-size: 10px; color: var(--slate); margin-top: 3px; line-height: 1.3; }
+
+  /* SECTIONS */
+  h2 { font-size: 11px; letter-spacing: 0.18em; color: var(--slate);
+    text-transform: uppercase; font-weight: 700; margin: 24px 0 8px;
+    border-bottom: 1px solid var(--rule); padding-bottom: 4px; }
+  p { font-size: 13.5px; line-height: 1.65; margin: 0 0 10px; }
+  p:last-child { margin-bottom: 0; }
+
+  /* VALUE CREATION 2x2 */
+  .vcp { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+  .vcp-cell { border: 1px solid var(--rule); padding: 12px 14px; }
+  .vcp-cell .lever { font-size: 9px; letter-spacing: 0.14em;
+    color: var(--navy); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .vcp-cell p { font-size: 12.5px; line-height: 1.55; margin: 0; }
+
+  /* IRR TABLE */
+  table.calc { width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 10px 0; }
+  table.calc th, table.calc td { padding: 7px 11px;
+    border-bottom: 1px solid var(--rule-soft);
+    font-variant-numeric: tabular-nums; }
+  table.calc th { background: var(--navy); color: white;
+    text-align: right; font-size: 10px; letter-spacing: 0.08em;
+    text-transform: uppercase; font-weight: 600; }
+  table.calc td { text-align: right; }
+  table.calc th:first-child, table.calc td:first-child { text-align: left; }
+  table.calc td:first-child { font-weight: 500; }
+  table.calc tr.total td { background: var(--tint); font-weight: 700; color: var(--navy); }
+
+  /* RISKS as numbered */
+  .risks { padding-left: 20px; margin: 6px 0 0; }
+  .risks li { font-size: 13px; line-height: 1.6; margin-bottom: 8px; }
+  .risks li:last-child { margin-bottom: 0; }
+  .risks li strong { color: var(--ink); }
+
+  /* SOURCES */
+  .sources { font-size: 11px; line-height: 1.55; color: var(--slate);
+    margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--rule); }
+  .sources strong { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span><strong>Research Solutions</strong> — voice/structure per <code>docs/memo-voice.md</code></span>
+  <span><a href="index.html">← layout options</a></span>
+</div>
+
+<div class="page">
+
+  <div class="firm">Lunchline Partners · Case Study</div>
+  <div class="meta-row">
+    <div></div>
+    <div class="date">May 28, 2026</div>
+  </div>
+
+  <div class="ticker"><a href="https://finance.yahoo.com/quote/RSSS/" target="_blank">NASDAQ : RSSS</a></div>
+  <h1 class="name">Research Solutions, Inc.</h1>
+
+  <div class="headline">
+    <div class="lbl">Thesis</div>
+    <p>Research Solutions trades at 1.3 times trailing revenue on the Yahoo industry tag "Software-Application," a screen that frames the business by the consolidated single-digit topline. The disclosed segment underneath is a different business: scientific, technical, and medical (STM) vertical software-as-a-service (SaaS) at 88% gross margin growing 14% year over year (<a href="https://www.sec.gov/Archives/edgar/data/1690080/000110465925110966/0001104659-25-110966-index.htm" target="_blank">Q2 FY26 results press release, February 12, 2026</a>), with a measured (weighted) Rule-of-40 of 34 for fiscal 2025, progressing toward 40 (Q4 FY25 earnings call, August 19, 2025 — management's weighted formula, not a figure disclosed in the 10-K). The STM SaaS comp set — <a href="https://finance.yahoo.com/quote/CLVT/" target="_blank">Clarivate</a> and <a href="https://finance.yahoo.com/quote/VEEV/" target="_blank">Veeva</a> — trades at 3 to 8 times revenue. The judgment hands to the reader: if the segment compounds for another four quarters at the disclosed rate, the consolidated print and the comp set lift together.</p>
+  </div>
+
+  <div class="kpi-strip">
+    <div class="kpi"><div class="lbl">Share price</div><div class="val">$2.20</div><div class="sub">May 28, 2026</div></div>
+    <div class="kpi"><div class="lbl">Enterprise value</div><div class="val">$64M</div><div class="sub">$74M equity − $12M cash + earn-out; no bank debt</div></div>
+    <div class="kpi"><div class="lbl">Revenue (TTM)</div><div class="val">$48.7M</div><div class="sub">TTM to Mar 2026; Platform +14% YoY in Q2 FY26</div></div>
+    <div class="kpi"><div class="lbl">Platform ARR</div><div class="val">$21.8M</div><div class="sub">88% gross margin, Q2 FY26</div></div>
+    <div class="kpi"><div class="lbl">Free cash flow</div><div class="val">$5.4M</div><div class="sub">$12M cash, zero debt</div></div>
+    <div class="kpi"><div class="lbl">Analysts</div><div class="val">3</div><div class="sub">All microcap boutiques</div></div>
+  </div>
+
+  <h2>The business</h2>
+  <p>Research Solutions generated $48.7 million of revenue in the trailing twelve months ended March 2026 (per the <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001690080&type=10-Q" target="_blank">quarterly report filed May 15, 2026</a>; the company reported $49.1 million in fiscal 2025, ended June 30) by selling scientific, technical, and medical (STM) research software to roughly 1,321 corporate, academic, and government customers — pharmaceutical companies, contract research organizations, university libraries, and federal agencies that need licensed access to peer-reviewed journal articles. Two product lines: the Platforms segment (Article Galaxy entitlement management, Scite citation analysis, Resolute.ai discovery, ResolutePro) sold as annual subscriptions at 88% gross margin, and the Transactions segment, which is single-article delivery to the same customers at 24% gross margin (Q2 FY26 results press release, February 12, 2026). The chief executive, Roy Olivier, joined as president in 2018 and became CEO and chairman; before Research Solutions he ran two prior microcap software companies. The most useful fact about how the business makes money: the Platforms segment grew to $21.8 million of annual recurring revenue (ARR) in the December 2025 quarter at an 88% gross margin, against a $30 million Transactions line that earns one-quarter of that on every dollar (Q2 FY26 results press release, February 12, 2026).</p>
+
+  <h2>Why this is a non-obvious pick</h2>
+  <p>By Lunchline's three tests, the situation is all three. <strong>Messy:</strong> the consolidated revenue print fell 1.0% in the December 2025 quarter (<a href="https://www.sec.gov/Archives/edgar/data/1690080/000110465926015157/0001104659-26-015157-index.htm" target="_blank">Q2 FY26 10-Q, filed February 13, 2026</a>: total revenue $11.79M vs $11.91M), the chief financial officer departed between November 2025 and February 2026 leaving an interim in the seat, the Scite acquisition earn-out runs through May 2027 with roughly $1.3 million per quarter of mandatory cash plus ~243,000 shares issued each quarter (the two payments in the December 2025 quarter together totaled $2.6 million cash and ~487,000 shares — Q2 FY26 earnings call, February 12, 2026), and the company switched auditors from Weinberg & Company (eighteen years) to Wipfli LLP for the fiscal 2025 audit (<a href="https://www.sec.gov/Archives/edgar/data/1690080/000110465925091644/0001104659-25-091644-index.htm" target="_blank">FY2025 10-K, filed September 19, 2025</a>, Item 9). <strong>Mispriced:</strong> the Yahoo Finance industry tag is "Software-Application," which routes the company into screens that compare its consolidated 1.0%-decline topline to high-growth horizontal SaaS at 20% to 30% growth; the relevant comp set is vertical SaaS for regulated industries (Veeva, Clarivate), where 14% segment ARR growth at 88% gross margin earns 3 to 8 times revenue rather than 1.3 times. <strong>Under-followed:</strong> three analysts cover the stock — Lake Street, Maxim, and Roth, all microcap-specialty boutiques (per <a href="https://finance.yahoo.com/quote/RSSS/analysis/" target="_blank">Yahoo analyst summary, May 2026</a>); no bulge-bracket bank has initiated; daily dollar volume is roughly $144,000 (65,606 share three-month average per <a href="https://finance.yahoo.com/quote/RSSS/" target="_blank">Yahoo Finance quote page</a> at $2.20), below the threshold at which any fund managing more than $50 million can build a position.</p>
+
+  <h2>What the market sees</h2>
+  <p>Three analysts cover the stock — Lake Street, Maxim Group, and Roth Capital — all microcap boutiques with price targets between $3.50 and $4.00 against the May 28, 2026 close of $2.20 (per the <a href="https://finance.yahoo.com/quote/RSSS/analysis/" target="_blank">Yahoo Finance analyst summary</a>). In May 2026, Lake Street and Maxim both lowered targets from $5.00 to $4.00. The stock trades at 1.3 times trailing revenue and roughly 12 times trailing earnings before interest, taxes, depreciation, and amortization (EBITDA), against horizontal software peers at 4 to 8 times revenue and STM information-services peers (Clarivate, Wiley) at 2 to 4 times revenue. The implication that is priced in the multiple: consolidated revenue is flat to down, the legacy Transactions line is in secular decline, the business-to-consumer (B2C) Scite subscriber funnel is softening (Q2 FY26 results press release, February 12, 2026), and generative AI tools will displace the platform's "find me an article" use case. At 1.3 times revenue the market is paying for a stagnant information-services business, not for a SaaS compounder.</p>
+
+  <h2>What we see</h2>
+  <p>The consolidated print obscures a segment-level fact disclosed in the same release: Platforms revenue grew 13.6% year over year in the December 2025 quarter at an 88% gross margin (management framed it as "roughly 14%"; ARR grew 14% to $21.8M), while Transactions revenue fell 10.2% — and management attributed roughly 60% of that decline to one named customer churn event with the remainder concentrated in two more (Q1 FY26 earnings call transcript, November 13, 2025; Q2 FY26 results press release, February 12, 2026). The 14% segment growth includes a sales motion the financial statements do not show as a line item: the Scite individual subscriber base — sold at twenty dollars per month — is being used as a paid lead-generation funnel into business-to-business (B2B) enterprise contracts of $50,000 to $200,000. On the November 13, 2025 first-quarter call, the chief executive stated that a year earlier the B2C-sourced B2B pipeline was around $50,000; at the end of the September 2025 quarter it was more than $1 million — a twenty-fold increase in twelve months. One pharmaceutical customer is running more than one million calls per year against the company's application programming interface (API) for citation and full-text data, a usage-priced contract structure that prices like infrastructure rather than per-seat software (Q2 FY26 earnings call transcript, February 12, 2026). The peer pattern is direct: Veeva Systems, the regulated-industry vertical SaaS comp, re-rated from 4 to 15 times revenue between 2018 and 2021 once its measured Rule-of-40 crossed 40 (per <a href="https://finance.yahoo.com/quote/VEEV/key-statistics/" target="_blank">Yahoo Finance VEEV key statistics</a> and prior-year filings). Research Solutions reported a Rule-of-40 of 34 for fiscal 2025 and guided to continued progression toward 40 (Q4 FY25 earnings call, August 19, 2025).</p>
+  <p>The market environment supports the company-specific case. Two of the three largest publishers in the STM market — Wiley and Springer Nature — have announced multi-hundred-million-dollar generative-AI content licensing deals in 2024 and 2025 (<a href="https://newsroom.wiley.com/press-releases/news-details/2024/Wiley-Reports-Q1-Fiscal-2025-Results/default.aspx" target="_blank">Wiley Q1 FY25 press release, September 5, 2024</a>; <a href="https://group.springernature.com/gp/group/media/press-releases/" target="_blank">Springer Nature press releases, 2024-2025</a>), confirming that publisher-controlled content has become a paid input to large language models rather than a casualty of them. Research Solutions sits between those publishers and their downstream commercial customers as a rights and entitlements layer; the same disclosure pattern that creates publisher AI revenue creates demand for the company's RightsDel product, which lets corporate customers "purchase the rights to use AI with all of that publisher's content" (Q1 FY26 earnings call, November 13, 2025).<!-- UNVERIFIED: exact "launched in the September 2025 quarter" timing not confirmed in filings/transcripts; product is described on the Nov 13, 2025 (Q1 FY26) call. --></p>
+
+  <h2>What management says versus what the filings disclose</h2>
+  <p>On the February 12, 2026 second-quarter call, management reported a net increase of 47 platform deployments year over year and $560,000 of incremental ARR — "the highest organic second quarter in company history" (Q2 FY26 earnings call, February 12, 2026) — and the chief executive framed the company as artificial-intelligence infrastructure: "Type 1 is software humans click on. If all you do is automate a task, then AI is a threat. Type 2 is software bots use. These are functions that are unique like curated data, data behind paywalls. Our company started by having unique access to the world's peer-reviewed scientific content." The fiscal 2025 10-K (filed September 19, 2025) discloses the same facts in technical language and adds one the calls do not quantify: the business runs a gross churn rate in the low single digits and a net churn rate "in the high single digit range, each as a percentage of revenue" — meaning net revenue retention (NRR) sits in the low 90s, below the 100% threshold that triggers premium SaaS multiples. The same 10-K Risk Factors section acknowledges that generative AI is both an opportunity and a competitive threat. The contrast cuts the same way the rest of the file does: management understates the favorable mechanics (the Platforms segment growth, the B2C-funded enterprise pipeline) and the filing discloses the binding constraint (sub-100% NRR) in plain language. The multiple reflects neither.</p>
+
+  <h2>What an operator-investor would do</h2>
+  <div class="vcp">
+    <div class="vcp-cell">
+      <div class="lever">Commercial</div>
+      <p>Move the standard contract for the top fifty corporate customers from per-seat licensing to usage-based API pricing. One pharmaceutical customer already runs more than one million API calls per year (Q2 FY26 earnings call, February 12, 2026); each $1 million of Transactions revenue migrated to Platforms-pricing converts a 24%-margin dollar into an 88%-margin dollar, $0.64 of incremental gross profit. Comparable: <a href="https://finance.yahoo.com/quote/TWLO/" target="_blank">Twilio's</a> 2016-to-2021 move from per-minute to API-platform pricing.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Operations</div>
+      <p>Formalize and disclose the business-to-consumer to business-to-business sourcing funnel as a named pipeline metric. Management has stated the pipeline grew twenty-fold to over $1 million in twelve months (Q1 FY26 earnings call, November 13, 2025) but it does not appear in the financial statements. Naming the metric in the 10-K and the quarterly release makes the customer-acquisition mechanism legible to the institutional reader who currently sees only the consolidated topline.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Capital structure</div>
+      <p>Use the $12.1 million of cash and the undrawn $500,000 PNC revolver (FY2025 10-K, filed September 19, 2025) to fund the remaining cash portion of the Scite earn-out through May 2027 (the FY2025 10-K carries the total contingent earn-out liability at $14.0 million fair value — $7.4 million current, $6.7 million long-term — of which roughly 62% is payable in cash and the balance in stock) from operating cash flow rather than future raises, and refinance the revolver — which matures April 15, 2026 — into a $25 million asset-based facility to fund the next acquisition without stock issuance.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Mergers and acquisitions</div>
+      <p>Add one tuck-in per year in adjacent STM workflow at $5 million to $10 million per deal. The December 2023 Scite acquisition ($7.3 million cash, plus contingent earn-out — the FY2025 10-K reports $25.9 million total consideration for ResoluteAI and Scite combined, including $9 million of contingent) now generates roughly $6.4 million of B2C ARR plus the B2B funnel above. Comparable: <a href="https://finance.yahoo.com/quote/VEEV/" target="_blank">Veeva Systems'</a> 2010-to-2014 build through small life-sciences workflow tuck-ins.</p>
+    </div>
+  </div>
+  <p style="margin-top:10px;">The first three of these are partially under way. The investment thesis is that the segment-level execution they have already produced is not yet in the price.</p>
+
+  <h2>What it is worth</h2>
+  <table class="calc">
+    <thead><tr><th>Three-year scenario</th><th>FY2029 revenue</th><th>EV/revenue</th><th>Enterprise value</th><th>Share price</th><th>Return per year</th></tr></thead>
+    <tbody>
+      <tr><td>Bear — no re-rate, flat revenue</td><td>$49M</td><td>1.3x</td><td>$64M</td><td>$2.17</td><td>0%</td></tr>
+      <tr class="total"><td>Base — re-rate to 2.0x, 8% revenue growth, Rule-of-40 = 38</td><td>$61M</td><td>2.0x</td><td>$122M</td><td>$3.83</td><td>+20%</td></tr>
+      <tr><td>Bull — re-rate to 3.5x, 14% growth, Rule-of-40 = 42</td><td>$72M</td><td>3.5x</td><td>$252M</td><td>$7.54</td><td>+51%</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:11.5px; color:var(--slate);">Share price = (enterprise value + $12 million cash) divided by 35 million diluted shares, which assumes the remaining Scite earn-out shares (~1.5 million through May 2027) are issued. Bear case holds the current 1.3x revenue multiple and assumes Platforms growth exactly offsets Transactions decline. Base case assumes Rule-of-40 clears 38 and the multiple lifts to the bottom of the STM SaaS band. Bull case assumes Rule-of-40 clears 42 and the multiple lifts to the Clarivate range; the constraint on the bull case is net revenue retention clearing 100%, which is not yet disclosed.</p>
+
+  <h2>What would have to go wrong</h2>
+  <ol class="risks">
+    <li>If net revenue retention, currently disclosed as net churn "in the high single digits as a percentage of revenue" (FY2025 10-K, filed September 19, 2025), does not clear 100% by fiscal 2027, the SaaS comp multiple does not apply and the base case re-rate to 2.0 times revenue does not happen. This is the single load-bearing risk; the bull case at 3.5 times revenue requires NRR above 110%.</li>
+    <li>If Transactions revenue declines more than 10% year over year for two consecutive quarters — versus 6.8% in the September 2025 quarter and 10.2% in the December 2025 quarter (<a href="https://www.sec.gov/Archives/edgar/data/1690080/000110465925112438/0001104659-25-112438-index.htm" target="_blank">Q1</a> and <a href="https://www.sec.gov/Archives/edgar/data/1690080/000110465926015157/0001104659-26-015157-index.htm" target="_blank">Q2</a> FY26 10-Qs) — the consolidated topline turns negative on a trailing basis and the Platforms growth no longer offsets, breaking the Rule-of-40 progression to 40.</li>
+    <li>If the chief executive cannot close the first material acquisition by the end of fiscal 2027 — having promised "one or more deals in FY '26" on the August 19, 2025 fourth-quarter call and then walked it back on the November 13, 2025 first-quarter call to "nothing closing by the end of the year" — the capital-return optionality on the $12 million of cash converts to a discount rather than a premium.</li>
+  </ol>
+
+  <h2>What would confirm it</h2>
+  <p>Three observations over the next four quarterly filings would, taken together, confirm the case — or, if they fail, dismantle it cleanly. First, the Platforms segment reports ARR growth at or above 14% for two more quarters at an 88% gross margin, lifting the segment past 50% of consolidated revenue (currently 42% per the Q1 FY26 earnings call, November 13, 2025). Second, the 10-K filed in September 2026 discloses a formal net revenue retention figure — and if disclosed, the number clears 95%, with a stated path to 100%. Third, at least one additional studio-equivalent partnership is announced for the RightsDel product, on the path the chief executive described on the November 13, 2025 call: "in which customers can purchase the rights to use AI with all of that publisher's content." Each observation is verifiable from public filings; none requires private channel checks. Whether 14% segment growth at 88% gross margin behind a 91% NRR is worth 2 times revenue or 3.5 times revenue is the judgment the reader makes from the same disclosures we did.</p>
+
+  <div class="sources">
+    <strong>Sources:</strong> <a href="https://www.sec.gov/Archives/edgar/data/1690080/000110465925091644/0001104659-25-091644-index.htm" target="_blank">FY2025 10-K</a> (September 19, 2025) · <a href="https://www.sec.gov/Archives/edgar/data/1690080/000110465926015157/0001104659-26-015157-index.htm" target="_blank">Q2 FY26 10-Q</a> (February 13, 2026) · <a href="https://www.sec.gov/Archives/edgar/data/1690080/000110465925110966/0001104659-25-110966-index.htm" target="_blank">Q1 FY26 results 8-K</a> (November 13, 2025) · <a href="https://www.sec.gov/Archives/edgar/data/1690080/000110465925092928/0001104659-25-092928-index.htm" target="_blank">2025 proxy statement</a> · Q2 FY26 earnings call transcript (internal: <code>data/dossiers/rsss/transcripts/2026-Q2.txt</code>) · Q1 FY26 earnings call transcript (internal: <code>data/dossiers/rsss/transcripts/2026-Q1.txt</code>) · Q4 FY25 earnings call transcript (internal: <code>data/dossiers/rsss/transcripts/2025-Q4.txt</code>) · <a href="https://finance.yahoo.com/quote/RSSS/" target="_blank">Yahoo Finance quote page</a>
+  </div>
+
+</div>
+
+</body>
+</html>
