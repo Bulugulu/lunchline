@@ -1,5 +1,14 @@
-# Large data files (keep scripts, not raw data — everything in data/ is reproducible)
-data/
+# Large/reproducible data is ignored (raw dossiers, universe CSVs, triage logs — regenerable).
+# EXCEPTION: track the small, expensive-to-reproduce per-ticker research outputs so future
+# sessions/clones reuse them (per CLAUDE.md "No hardcoded benchmarks" convention).
+data/*
+!data/research/
+data/research/*
+!data/research/*/
+data/research/*/*
+!data/research/*/model.md
+!data/research/*/peer_benchmarks.csv
+!data/research/*/peer_notes.md
 
 # Scratch / working files (agent-extracted filing text, throwaway)
 tmp/

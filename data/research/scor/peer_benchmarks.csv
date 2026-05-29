@@ -1,0 +1,11 @@
+peer_ticker,peer_name,inclusion,ev_ebitda,ev_revenue,ev_gross_profit,ev_fcf,revenue_growth_pct,gross_margin,ebitda_margin,fcf_margin,as_of_date,source,notes
+SCOR,"comScore, Inc.",subject,22.14,0.61,1.51,242.5,-0.5,40.6,,0.3,2026-05-28,yfinance,
+NXST,"Nexstar Media Group, Inc.",primary,12.24,3.48,6.25,26.77,13.1,55.6,,13.0,2026-05-28,manual,
+TTD,"The Trade Desk, Inc.",primary,13.38,3.2,4.11,16.69,11.8,77.8,,19.2,2026-05-28,manual,
+CRTO,Criteo S.A.,primary,2.49,0.38,0.71,4.06,-5.9,54.0,,9.4,2026-05-28,manual,
+DV,"DoubleVerify Holdings, Inc.",primary,10.53,1.84,2.24,10.71,9.6,82.2,,17.2,2026-05-28,manual,
+MGNI,"Magnite, Inc.",primary,14.82,2.98,4.71,1415.08,5.5,63.4,,0.2,2026-05-28,manual,
+IAS,Integral Ad Science Holding Cor,primary,15.42,2.76,3.57,12.71,15.6,77.4,,21.7,2026-05-28,manual,
+APPS,"Digital Turbine, Inc.",primary,10.72,2.01,4.14,46.6,19.6,48.6,,4.3,2026-05-28,manual,
+DSP,Viant Technology Inc.,primary,8.06,0.73,1.62,10.33,25.3,45.1,,7.1,2026-05-28,manual,
+PUBM,"PubMatic, Inc.",primary,-284.24,1.46,2.31,7.76,-2.0,63.2,,18.8,2026-05-28,manual,

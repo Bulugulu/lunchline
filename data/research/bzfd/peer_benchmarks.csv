@@ -1,0 +1,6 @@
+peer_ticker,peer_name,inclusion,ev_ebitda,ev_revenue,ev_gross_profit,ev_fcf,revenue_growth_pct,gross_margin,ebitda_margin,fcf_margin,as_of_date,source,notes
+BZFD,"BuzzFeed, Inc.",subject,-11.97,0.77,1.92,,-12.4,40.3,,-6.1,2026-05-28,yfinance,
+IAC,IAC Inc.,primary,21.93,1.56,2.35,99.1,-12.2,66.5,,1.6,2026-05-28,manual,
+MGNI,"Magnite, Inc.",primary,14.82,2.98,4.71,1415.08,5.5,63.4,,0.2,2026-05-28,manual,
+IZEA,"IZEA Worldwide, Inc.",primary,-8.21,0.62,1.28,,-17.5,48.2,,-18.5,2026-05-28,manual,
+DLPN,"Dolphin Entertainment, Inc.",primary,,,,,5.2,,,,2026-05-28,manual,

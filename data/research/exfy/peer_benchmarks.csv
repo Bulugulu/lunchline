@@ -1,0 +1,11 @@
+peer_ticker,peer_name,inclusion,ev_ebitda,ev_revenue,ev_gross_profit,ev_fcf,revenue_growth_pct,gross_margin,ebitda_margin,fcf_margin,as_of_date,source,notes
+EXFY,"Expensify, Inc.",subject,-2.75,0.35,0.71,2.73,-5.8,49.6,,12.8,2026-05-28,yfinance,
+SAP,SAP  SE,primary,17.31,5.38,7.3,24.66,6.0,73.7,,21.8,2026-05-28,manual,
+PCTY,Paylocity Holding Corporation,primary,13.84,3.28,4.73,15.42,10.5,69.4,,21.3,2026-05-28,manual,
+BILL,"BILL Holdings, Inc.",primary,94.72,1.98,2.37,18.9,13.5,83.7,,10.5,2026-05-28,manual,
+NCNO,"nCino, Inc.",primary,32.9,3.27,5.38,13.44,5.9,60.8,,24.3,2026-05-28,manual,
+DOMO,"Domo, Inc.",primary,-8.01,0.84,1.12,6.6,1.1,75.0,,12.7,2026-05-28,manual,
+KPLT,"Katapult Holdings, Inc.",primary,0.54,0.36,1.41,0.57,9.8,25.5,,63.6,2026-05-28,manual,
+LPSN,"LivePerson, Inc.",primary,25.29,1.35,1.88,,-12.0,71.7,,-8.3,2026-05-28,manual,
+UPLD,"Upland Software, Inc.",primary,7.08,1.76,2.31,9.72,-23.5,75.9,,18.1,2026-05-28,manual,
+EGAN,eGain Corporation,primary,11.04,1.26,1.71,11.84,7.1,73.6,,10.6,2026-05-28,manual,
