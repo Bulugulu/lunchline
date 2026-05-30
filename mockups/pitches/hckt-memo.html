@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HCKT — Investment Memo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  :root {
+    --navy: #0A2540; --ink: #111; --paper: #FFF; --slate: #6B7280;
+    --rule: #E5E7EB; --rule-soft: #F1F3F5; --red: #C8102E; --tint: #FEF7F7;
+    --link: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #d0d5dc; font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink); font-feature-settings: "tnum" 1;
+    line-height: 1.55;
+  }
+  a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--link); }
+  a:hover { border-bottom-style: solid; }
+
+  .topbar { max-width: 880px; margin: 24px auto 16px; padding: 0 24px;
+    display: flex; justify-content: space-between; font-size: 12px; color: #555; }
+  .page { max-width: 880px; margin: 0 auto 60px; background: var(--paper);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10); padding: 48px 64px; }
+
+  /* HEADER */
+  .firm { font-size: 11px; letter-spacing: 0.2em; color: var(--navy);
+    font-weight: 700; text-transform: uppercase; }
+  .meta-row { display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 2px solid var(--navy); padding-bottom: 10px; margin-bottom: 22px; }
+  .meta-row .date { font-size: 11px; color: var(--slate); letter-spacing: 0.08em; text-transform: uppercase; }
+  .ticker { font-size: 12px; letter-spacing: 0.22em; color: var(--red); font-weight: 700; margin-bottom: 4px; }
+  .ticker a { color: var(--red); border-bottom: none; }
+  .name { font-size: 28px; font-weight: 500; color: var(--navy);
+    letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 14px; }
+
+  /* HEADLINE THESIS */
+  .headline { font-size: 15px; line-height: 1.55; color: var(--ink);
+    background: var(--tint); border-left: 3px solid var(--red);
+    padding: 14px 18px; margin: 0 0 22px; }
+  .headline .lbl { font-size: 9px; letter-spacing: 0.16em;
+    color: var(--red); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .headline p { margin: 0; }
+
+  /* KPI STRIP */
+  .kpi-strip { display: grid; grid-template-columns: repeat(6, 1fr);
+    gap: 12px; margin-bottom: 24px; }
+  .kpi { border-top: 2px solid var(--navy); padding-top: 7px; }
+  .kpi .lbl { font-size: 9px; letter-spacing: 0.1em; color: var(--slate);
+    text-transform: uppercase; font-weight: 600; margin-bottom: 3px; }
+  .kpi .val { font-size: 17px; font-weight: 600; color: var(--ink);
+    font-variant-numeric: tabular-nums; line-height: 1; }
+  .kpi .sub { font-size: 10px; color: var(--slate); margin-top: 3px; line-height: 1.3; }
+
+  /* SECTIONS */
+  h2 { font-size: 11px; letter-spacing: 0.18em; color: var(--slate);
+    text-transform: uppercase; font-weight: 700; margin: 24px 0 8px;
+    border-bottom: 1px solid var(--rule); padding-bottom: 4px; }
+  p { font-size: 13.5px; line-height: 1.65; margin: 0 0 10px; }
+  p:last-child { margin-bottom: 0; }
+
+  /* VALUE CREATION 2x2 */
+  .vcp { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+  .vcp-cell { border: 1px solid var(--rule); padding: 12px 14px; }
+  .vcp-cell .lever { font-size: 9px; letter-spacing: 0.14em;
+    color: var(--navy); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+  .vcp-cell p { font-size: 12.5px; line-height: 1.55; margin: 0; }
+
+  /* IRR TABLE */
+  table.calc { width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 10px 0; }
+  table.calc th, table.calc td { padding: 7px 11px;
+    border-bottom: 1px solid var(--rule-soft);
+    font-variant-numeric: tabular-nums; }
+  table.calc th { background: var(--navy); color: white;
+    text-align: right; font-size: 10px; letter-spacing: 0.08em;
+    text-transform: uppercase; font-weight: 600; }
+  table.calc td { text-align: right; }
+  table.calc th:first-child, table.calc td:first-child { text-align: left; }
+  table.calc td:first-child { font-weight: 500; }
+  table.calc tr.total td { background: var(--tint); font-weight: 700; color: var(--navy); }
+
+  /* RISKS as numbered */
+  .risks { padding-left: 20px; margin: 6px 0 0; }
+  .risks li { font-size: 13px; line-height: 1.6; margin-bottom: 8px; }
+  .risks li:last-child { margin-bottom: 0; }
+  .risks li strong { color: var(--ink); }
+
+  /* SOURCES */
+  .sources { font-size: 11px; line-height: 1.55; color: var(--slate);
+    margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--rule); }
+  .sources strong { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span><strong>Candidate memo</strong> — HCKT · voice/structure per <code>docs/memo-voice.md</code>, model per <code>data/research/hckt/model.md</code></span>
+  <span>Lunchline Partners</span>
+</div>
+
+<div class="page">
+
+  <div class="firm">Lunchline Partners · Case Study</div>
+  <div class="meta-row">
+    <div></div>
+    <div class="date">May 29, 2026</div>
+  </div>
+
+  <div class="ticker"><a href="https://finance.yahoo.com/quote/HCKT/" target="_blank">NASDAQ : HCKT</a></div>
+  <h1 class="name">The Hackett Group, Inc.</h1>
+
+  <div class="headline">
+    <div class="lbl">Thesis</div>
+    <p>The Hackett Group trades at about six times earnings before interest, taxes, depreciation, and amortization (EBITDA) — the multiple the market pays for a commoditizing technology-services body shop. The bear case says artificial intelligence will hollow out exactly what Hackett sells: clients will ask a large language model for the benchmarking and advice they used to pay consultants for. We spent the work trying to confirm that fear and the filings say the opposite. Hackett's own AI tools <em>raised</em> project margins by roughly 500 basis points last quarter and let it <em>cut</em> headcount; the "margin collapse" the screens react to is almost entirely a one-time, non-cash stock award, while operating cash flow never moved off $40 million. This is an AI <strong>beneficiary</strong> priced for AI <strong>fear</strong>. If the revenue air-pocket inflects on the timeline management has guided — the third quarter of fiscal 2026 — the stock re-rates from the six-times body-shop multiple toward the nine-to-thirteen-times multiple its advisory peers earn. Base case ≈ $14.50 against today's $11.61; the honest catch is that the catalyst is a single, dated, binary print and there is no asset floor underneath it.</p>
+  </div>
+
+  <div class="kpi-strip">
+    <div class="kpi"><div class="lbl">Share price</div><div class="val">$11.61</div><div class="sub">May 29, 2026 · −54% in 12 mo</div></div>
+    <div class="kpi"><div class="lbl">Enterprise value</div><div class="val">$365M</div><div class="sub">$292M equity + $73M net debt</div></div>
+    <div class="kpi"><div class="lbl">Revenue (FY25)</div><div class="val">$306M</div><div class="sub">−2.6%; −11.6% latest qtr</div></div>
+    <div class="kpi"><div class="lbl">Adj. EBITDA</div><div class="val">~$60M</div><div class="sub">~20% margin; $32M free cash flow</div></div>
+    <div class="kpi"><div class="lbl">Valuation</div><div class="val">6.1x</div><div class="sub">EV/EBITDA · advisory peers 9–13x</div></div>
+    <div class="kpi"><div class="lbl">Analysts</div><div class="val">3</div><div class="sub">All Buy · targets $16–20 · 4.2% yield</div></div>
+  </div>
+
+  <h2>The business</h2>
+  <p>The Hackett Group is a Miami-based intellectual-property and consulting firm that helps large enterprises run their back-office functions — finance, procurement, human resources, information technology, supply chain — better than their peers. Its asset is data: more than 28,400 benchmarking studies built over three decades that measure how work is <em>actually</em> executed inside companies, which it now packages into generative-AI platforms (AI XPLR, ZBrain, the AIXelerator). It earned $305.6 million of revenue in fiscal 2025 (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HCKT&type=10-K" target="_blank">annual report filed February 27, 2026</a>) across three segments: Global Strategy &amp; Business Transformation (55% of revenue, the benchmarking-and-advisory core, carrying a 30% segment margin), Oracle Solutions (24%), and SAP Solutions (21%, the enterprise-software implementation work). It is a single share class, one vote per share; insiders own 12.5% and institutions 86.5% (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HCKT&type=DEF+14A" target="_blank">2026 proxy statement</a>). The financial fingerprint that matters: roughly $40 million of operating cash flow and $32 million of free cash flow (operating cash flow less the money spent on equipment) in fiscal 2025, against a $292 million market value — a 11% free-cash-flow yield on a business the market is treating as melting.</p>
+
+  <h2>Why this is a non-obvious pick</h2>
+  <p>By Lunchline's three tests, the situation is all three. <strong>Messy:</strong> the reported operating margin fell from 16.6% to 7.7% in a single year, the trailing price-to-earnings ratio looks like a stretched 25 times, revenue shrank 11.6% in the latest quarter, and net debt <em>rose</em> because the company borrowed $40 million to buy back its own stock — every screen for a deteriorating business trips. <strong>Mispriced:</strong> none of that is cash decay. Adjusted EBITDA held near 20% of revenue all year and operating cash flow stayed at $40.3 million; the margin "collapse" is a one-time, non-cash stock-compensation charge (more below). The stock fell 54% in twelve months — from $26 to $11.61 — compressing the multiple to about six times EBITDA, the multiple of a body shop, on a business that is 55% benchmarking-and-advisory intellectual property. <strong>Under-followed:</strong> three analysts cover it, all rate it Buy with price targets of $16 to $20 (against $11.61), no bulge-bracket bank has initiated, and the intellectual-property segment that defines the company is buried inside a "consulting" line that quantitative screens read as commoditizing.</p>
+
+  <h2>What the market sees</h2>
+  <p>The market sees a generic information-technology consultancy whose revenue is falling and whose margins just halved, sitting in a corner of the market — back-office advisory — that everyone now assumes artificial intelligence will eat first. So it pays the body-shop multiple: at $11.61 the enterprise is valued at about 6.1 times adjusted EBITDA and 7.7 times management's adjusted earnings per share — versus the 9-to-13-times range that advisory-and-research peers such as <a href="https://finance.yahoo.com/quote/CRAI/" target="_blank">CRA International</a>, <a href="https://finance.yahoo.com/quote/HURN/" target="_blank">Huron Consulting</a>, and <a href="https://finance.yahoo.com/quote/ICFI/" target="_blank">ICF International</a> command.<!-- UNVERIFIED-LIVE: advisory peer EV/EBITDA band (9-13x) persisted in data/research/hckt/peer_benchmarks.csv as of 2026-05-29 (stockanalysis.com). Confirm against a live source before publication. --> The single belief embedded in that gap: that Hackett's benchmarking data and executive advice are about to be disintermediated by a chatbot, and the recent revenue decline is the leading edge of it.</p>
+
+  <h2>What we see</h2>
+  <p>We tried to validate that belief from the filings and the earnings calls, and it runs the other way on every testable point. <strong>First, the margin "collapse" is an accounting optic, not cash deterioration.</strong> Reported operating income fell from $44.6 million to $23.5 million, but the segment reconciliation (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HCKT&type=10-K" target="_blank">fiscal 2025 10-K, Note 15</a>) shows total segment profit was essentially flat ($89.4 million to $83.6 million). The entire incremental drag sits in corporate items, dominated by a 2024 executive "stock-price-award program" that front-loaded $16.8 million of non-cash stock compensation into fiscal 2025 (up from $5.7 million the year before). Operating cash flow stayed at $40.3 million; free cash flow was $32.4 million. The "16% margin that became 8%" the screens react to is a one-time, non-cash charge that mostly runs off by fiscal 2027 — the higher tranches of that same award are now far out of the money at $11.61, so the charge falls on its own.</p>
+  <p><strong>Second, artificial intelligence is raising Hackett's delivery margins, not eroding them.</strong> On the first-quarter fiscal 2026 call management reported that "project margins in our U.S. Strategy &amp; Business Transformation Group increased by approximately 500 basis points through the leverage of our XT and XPLR platforms," and that it had cut consultant headcount from 1,332 to 1,247 <em>because</em> its own AI made consultants more productive. The benchmarking data is the moat, not the casualty: a generic large language model does not have <em>your</em> company's as-executed process data, and management's repeated argument — "the limiting factor is not foundational LLM capability; it is critical detailed workflow intelligence" — is that AI value is <em>gated</em> on exactly the proprietary asset Hackett owns. That is the opposite of disintermediation.</p>
+  <p><strong>Third — and this is what disciplines the call — the revenue decline is real and unresolved.</strong> Revenue fell 2.6% in fiscal 2025 and 11.6% in the first quarter of fiscal 2026, with the advisory core down 15% and Oracle down 24%, on what management calls "elongated client decision cycles due to AI ROI uncertainty." In plain terms: the same AI transition that is the long-term opportunity is freezing near-term demand as clients pause to figure out what to buy. The whole bull case rests on that pause ending. Management has staked the inflection on the third quarter of fiscal 2026, telling investors adjusted earnings per share should exceed the prior-year quarter even on flat revenue. If revenue does not turn by then, the body-shop multiple is correct and this is dead money — which is why the position must be sized for a real loss, not an asset-backed one.</p>
+
+  <h2>What management says versus what the filings disclose</h2>
+  <p>On the calls, management tells an AI-tailwind story — the 500-basis-point margin gain, competitive wins it attributes to the OneStream and AIXelerator platforms, an IBM global go-to-market partnership, two unsolicited inbound calls from large cloud providers asking it to demonstrate its capability. The filings corroborate the cash side of that story cold: stable segment profit, $40 million of operating cash flow, a 24%-recurring advisory base, a maintained dividend, and a December 2025 buyback in which the company paid $20.29 a share — 75% above today's price — to retire 7% of its stock in a Dutch-auction tender (<a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HCKT&type=10-Q" target="_blank">first-quarter fiscal 2026 10-Q, treasury-stock note</a>).</p>
+  <p>The filings also disclose one fact the calls underplay, and it cuts in the investor's favor. The reported tax rate jumped to 40.7% in fiscal 2025, which on its face looks like another thing going wrong. The tax note (10-K, Note 9) explains it: the rate is inflated because the same one-time executive stock award is non-deductible under Section 162(m) of the tax code. In other words, even the scary-looking tax rate traces back to the one-time charge, not to the business — cash taxes paid were $13.1 million on $21.8 million of pre-tax income, and management guides the normalized rate back to about 26%. The screens see a falling margin, a falling top line, and a rising tax rate, and price all three as deterioration. Two of the three are the same one-time, non-cash item viewed from different angles.</p>
+
+  <h2>What an operator-investor would do</h2>
+  <div class="vcp">
+    <div class="vcp-cell">
+      <div class="lever">Commercial</div>
+      <p>Convert the AI-platform proof points into revenue. The +500-basis-point margin gain and the platform-driven competitive wins are real; the lever is to scale them through the IBM global go-to-market partnership and grow the 24% recurring advisory base — the sticky revenue that earns a higher multiple. The catalyst the whole thesis turns on is the third-quarter fiscal 2026 inflection management has already guided to.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Operations</div>
+      <p>Let the $16.8 million one-time stock award run off — only about $7.1 million is left, over roughly 1.7 years — and the reported operating margin mechanically recovers toward the ~20% adjusted level, reversing the optics-driven de-rate without a single new sale. Finish the AI-enabled headcount rightsizing; transition charges are already fading to about $0.5 million a quarter.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Capital structure</div>
+      <p>The company put its money where this memo's mouth is, buying 7% of itself at $20.29. The candor note: fiscal 2025 capital return — $12.9 million of dividends plus $69.1 million of buybacks, $82 million total — far exceeded the $32.4 million of free cash flow and was funded by drawing the revolver. Sustainable buybacks are closer to free cash flow less the dividend, roughly $18–20 million a year — enough to offset stock-comp dilution, not to shrink the share count without re-levering. With no asset floor, leverage discipline matters.</p>
+    </div>
+    <div class="vcp-cell">
+      <div class="lever">Mergers and acquisitions</div>
+      <p>Hackett is itself a clean target — a proprietary, three-decade benchmarking dataset plus a working enterprise-AI orchestration platform and a trusted brand among chief executives, at six times EBITDA, single share class, no control block. The comparable: <a href="https://www.perficient.com/" target="_blank">Perficient</a>, an enterprise-software implementer, was taken private by EQT at roughly 12 times EBITDA in 2024. A strategic or private-equity buyer paying even nine to ten times for the intellectual property is a clean re-rate path.</p>
+    </div>
+  </div>
+  <p style="margin-top:10px;">The first two levers are already under way and cost nothing to forecast — they are accounting and operating mechanics, not new wins. The investment thesis is that the cash earning power they protect is not in the price.</p>
+
+  <h2>What it is worth</h2>
+  <table class="calc">
+    <thead><tr><th>Three-year scenario</th><th>FY2029 EBITDA</th><th>Multiple</th><th>Enterprise value</th><th>Share price</th><th>Return per year</th></tr></thead>
+    <tbody>
+      <tr><td>Bear (40%) — revenue keeps falling, body-shop multiple sticks</td><td>$48M</td><td>6.0x</td><td>$288M</td><td>$8.50</td><td>−10%</td></tr>
+      <tr class="total"><td>Base (45%) — Q3-FY26 inflection lands, partial re-rate</td><td>$60M</td><td>8.0x</td><td>$480M</td><td>$16.00</td><td>+11%</td></tr>
+      <tr><td>Bull (15%) — platform re-accelerates revenue, or strategic take-out</td><td>$68M</td><td>10.5x</td><td>$714M</td><td>$25.00</td><td>+29%</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:11.5px; color:var(--slate);">Share price = (enterprise value − $73 million net debt) divided by 25.18 million shares; net debt and share count held roughly flat because sustainable buybacks only offset stock-compensation dilution. Probability-weighted three-year fair value ≈ $14.28, about +7% a year in price and ~+11% including the 4.2% dividend. <strong>There is no asset floor.</strong> Unlike a net-cash name, this is a net-debt, goodwill-heavy business: the bear is a genuine earnings-multiple drawdown to roughly $8.50 (−27%), not a balance-sheet floor. The asymmetry is favorable but it is a "show-me" asymmetry, not a margin-of-safety one — size accordingly.</p>
+
+  <h2>What would have to go wrong</h2>
+  <ol class="risks">
+    <li><strong>The revenue decline is secular, not cyclical.</strong> If the Global Strategy &amp; Business Transformation segment keeps shrinking and clients really are replacing paid advisory with in-house large language models — rather than pausing to digest the AI transition — then the body-shop multiple is correct and the re-rate never comes. This is the one question the filings cannot settle; only the third-quarter fiscal 2026 print, or primary research into why clients are or are not renewing, resolves it. The thesis is genuinely binary on that catalyst.</li>
+    <li><strong>There is no balance-sheet floor.</strong> Net debt is about $73 million and goodwill about $90 million, so a bear outcome is a real ~27% drawdown to roughly $8.50, not the asset-protected downside a net-cash company offers. If the inflection slips and the multiple stays at six times, the stock is dead money near $8–11.</li>
+    <li><strong>The AI platforms may be delivery tools dressed as a software story.</strong> Hackett discloses no recurring-revenue dollars, seat counts, or attach rates for AI XPLR or ZBrain — only the qualitative "+500 basis points." If those platforms are internal productivity tools rather than a growing software line, the margin benefit is real but the revenue re-acceleration that drives the bull case does not arrive, and the stock settles at the base, not above it.</li>
+  </ol>
+
+  <h2>What would confirm it</h2>
+  <p>Three observations over the next two quarterly filings would confirm the case — or dismantle it cleanly. First, and decisively, the third-quarter fiscal 2026 print (reported around November 2026): adjusted earnings per share exceed the prior-year quarter and total revenue stops falling, the inflection management has explicitly staked its credibility on. Second, the adjusted EBITDA margin holds at or above 20% as the one-time stock award runs off — the cash earning power the screens are missing shows through in the reported numbers. Third, the IBM go-to-market partnership and the cloud-provider inbounds convert into disclosed bookings rather than remaining press releases. Each is testable from public filings. Whether the revenue pause is digestion or disintermediation is the whole question, and a single quarter will largely answer it.</p>
+
+  <div class="sources">
+    <strong>Sources:</strong> <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HCKT&type=10-K" target="_blank">FY2025 10-K</a> (February 27, 2026) · <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HCKT&type=10-Q" target="_blank">Q1 FY2026 10-Q</a> (May 6, 2026) · <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HCKT&type=DEF+14A" target="_blank">2026 proxy statement</a> · Q1 FY2026 earnings call transcript (internal: <code>data/dossiers/hckt/transcripts/2026-Q1.txt</code>) · full valuation build: <code>data/research/hckt/model.md</code> (v2, lead-reviewed) · peer multiples: <code>data/research/hckt/peer_benchmarks.csv</code> · <a href="https://finance.yahoo.com/quote/HCKT/" target="_blank">Yahoo Finance quote page</a>
+  </div>
+
+</div>
+
+</body>
+</html>

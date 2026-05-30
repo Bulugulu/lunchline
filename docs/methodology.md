@@ -54,6 +54,28 @@ This is the organizing step — it runs *before* the bull-case findings, and the
 
 ---
 
+## Value lenses & financial-condition tests (Graham/Buffett discipline) — added 2026-05-30
+
+The Deep Flow's intrinsic-value work (SOTP + DCF) estimates what a business is *worth*. These lenses cross-check that from the classic value-investing angles and — the point the SOTP/DCF can miss — test **downside safety on a static basis.** Run all five on every candidate alongside the DCF:
+
+1. **Earnings Power Value (EPV — Graham/Greenwald, no growth):** normalized NOPAT ÷ WACC, − net debt. Answers "what is it worth if it never grows again?" Price below EPV = growth is free; price above = you're paying for growth.
+2. **Reverse DCF:** solve the current EV for the implied perpetual FCF growth (g ≈ WACC − FCF/EV). Names the market's embedded expectation so we can judge whether it's beatable.
+3. **Owner-earnings yield (Buffett):** normalized FCF ÷ market cap — the cash-on-equity return if nothing changes.
+4. **Graham asset / net-net floor:** net current assets (and cash) vs. all liabilities — is there a balance-sheet floor under the equity at all.
+5. **Graham "strong financial condition" test (Defensive Investor):** **(a) current ratio (current assets ÷ current liabilities) ≥ 2.0**, and **(b) long-term debt ≤ working capital (net current assets = current assets − current liabilities).** A *static balance-sheet safety screen*, independent of earning power — a business can throw off strong cash flow and still fail it (a services firm that has borrowed against future cash rather than holding net current assets). A pass is a real margin of safety; a fail flags that the downside is carried by earning power alone, not the balance sheet.
+
+Treat 4–5 as **safety** checks, not value estimates: they don't say what a business is worth, they say how much the balance sheet protects you if the thesis is wrong. This is exactly the USNA-vs-HCKT contrast: **USNA** — net cash + a saleable Hiya stake ≈ the entire market cap, so the downside is asset-backed; **HCKT** — current ratio 1.88× and long-term debt ($78.8M) more than double working capital ($38.2M), so it **fails** the test and the discount has no asset floor. Same ~+9% base IRR, opposite downside protection — and the financial-condition test is the cleanest single way to show it.
+
+## Model workbook (`<ticker>_model.xlsx`) build conventions — added 2026-05-30
+
+The Excel deliverable rendered from `model.md` (reference template: `data/research/hckt/HCKT_model.xlsx`, builder `scripts/build_hckt_xlsx.py`) must carry, beyond the DCF / SOTP / scenario / sensitivity tabs:
+
+1. **Net financial debt tested against assets — not just netted into EV.** Include the Graham "strong financial condition" test (current ratio ≥ 2.0; long-term debt ≤ working capital) so downside *balance-sheet* protection is explicit, not implied. This is what separates two names at the same IRR (USNA passes the spirit; HCKT fails it → no floor).
+2. **A Peers tab** — the comp set and the actual EV/EBITDA, EV/Rev, growth and margin figures behind every multiple used in the SOTP/value lenses, sourced and dated (read live from `peer_benchmarks.csv`). No multiple appears in the model without its comp visible.
+3. **An Assumptions tab** — every *judgment* input (as opposed to cited/market-observable) gets a row: the value, its tier, and the logic/math behind it. **WACC in particular is built bottom-up from CAPM** (rf, beta, ERP, size premium → cost of equity; after-tax cost of debt; market-value weights → mechanical WACC) with any conservatism overlay shown as an explicit separate line — never a single hard-coded discount-rate cell.
+
+**Rule:** a reviewer should be able to trace every number to one of — a filing line-item (cited), a market observable, a visible peer comp, or a documented judgment with its construction shown. No orphan inputs. Tier each assumption: *cited · market-observable · normalized · judgment · scenario-judgment.*
+
 ## Six Core Lessons
 
 ### 1. Operating model first, deck second
