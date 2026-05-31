@@ -2,6 +2,24 @@
 
 All notable changes to the Lunchline Partners case study project.
 
+## 2026-05-30 (later) — Searched beyond the five finalists; selected ARTW as the case-study build; built the deck + Excel model
+
+After USNA/HCKT, ran a broader hunt and pivoted the thesis from public-mispricing to **take-private-and-operate**, landing on **Art's-Way Manufacturing (ARTW)** as the deck/model build target.
+
+**Screening infrastructure.** Re-ran the all-sector screen and built a richer comparison than cheapness alone for the ~69 untouched operating candidates: enriched with **operating margin vs. industry, institutional-ownership trend, and float**; then layered **search-fund acquirability signals** (owner-dependence, under-professionalization, no-M&A-history, underinvested-growth, succession) and an **industry macro tailwind/headwind + fragmentation** read; rendered as a sortable HTML board (`scripts/build_catalog_html.py`; catalog CSVs/HTML gitignored, regenerable). Emergent finding: cheap + under-followed + high-quality + clean + actionable is a near-empty set — the best take-private setups (PNRG, GENC, FONR) are usually already resolved by insiders.
+
+**Two more deep-flows (both passes):** **HOUR** (Hour Loop) — un-actionable Amazon reseller; corrected bottoms-up DCF ~$0.34–0.50 vs the $1.91 quote on a no-price-discovery 5% float. **INTG** (InterGroup) — briefed and passed; its value is a hotel cap-rate call, i.e., real-estate/asset valuation outside the operating-analysis edge (`feedback_prefer_operating_not_asset_plays`).
+
+**ARTW carve-out deep-flow (v2.1, lead-reviewed)** — `data/research/artw/model.md`. Thesis: acquire ARTW, wind down the loss-making farm-equipment segment, own Art's-Way Scientific (modular biocontainment/research + animal-biosecurity buildings, ~17% op margin, backlog +103% YoY). Depth reversed the "free gem" hope: net debt + a large ag-inventory balance imply the modular business at ~6–9× standalone EBITDA inside the ~$20M EV (fair, not free); FY25 "profit" is an ERC mirage (real op income $0.3M, OCF −$0.9M). Recentered base FV ~$2.46 (−4% vs $2.58); the return lives in the operator value-creation plan + the bull; a take-private at a FONR-style 31.5% premium is underwater on the base (0.73× MOIC). Real asset floor (passes both Graham tests). Catalyst entirely family-gated (McConnell 51.5%). Most original output: the **two-leg policy hedge** (NIH-funded research labs vs USDA-funded animal biosecurity). Lead-review fixes: tightened an optimistic ag-disposal mark (v1 $8.9M → $7.72M; base FV $2.69 → $2.46) and reconciled the bull EV up to the workbook's $22.6M ($4.88 FV / $2.64 weighted / 1.44× bull MOIC).
+
+**Case-study deliverables built on ARTW (the working pick):**
+- **Excel model** — `scripts/build_artw_xlsx.py` builds the 10-tab `ARTW_model.xlsx` (Summary, SegmentP&L+ERC, SOTP, two-leg ModularDCF, TwoLeg, Scenarios+MOIC, ValueLenses, Graham, Peers, Assumptions/WACC), live formulas, following the HCKT workbook conventions (.xlsx gitignored; regenerable).
+- **Pitch deck** — `mockups/pitches/artw-deck.html`, 12 slides + AI appendix, Direction-1 design. Iterated heavily on voice/clarity: rewrote from an activist-pitch register into the **Buffett objective-underwriting voice** (no selling words, no em-dashes); **de-glossed standard finance terms** for the sophisticated Lunchline audience (context only for business/industry specifics); **restructured to the case's required slide order** (Business Overview with customers/geography/history; End Market with a sourced TAM range + fragmentation; the four value-creation buckets); reframed the thesis as the **operator play** (sell the farm line, fund + scale modular; price is fair for the status quo, not for the modular growth an owner could unlock); added **active-hyperlink citations**; verified each pass with a no-context cold-reader audit. Status: improving but **not yet final**.
+
+**New standing rules to memory:** `feedback_memo_voice` (Buffett voice, savvy audience / no finance-101 glosses, no em-dashes, tight > long, active hyperlinks), `feedback_search_fund_acquirability_signals`, `feedback_prefer_operating_not_asset_plays`, `feedback_candidate_screening_columns`. Committed + pushed as `9c16871`.
+
+**Next:** iterate the ARTW deck to final shape → review `ARTW_model.xlsx` → build the one-page written memo (`option-a-scroll` companion) → populate `docs/prompt-log.md` to back the AI-disclosure appendix.
+
 ## 2026-05-30 — HCKT deep-dive (value lenses + decline autopsy + financial-condition test) → passed over as the case-study pick
 
 Pressure-tested HCKT (the stronger finalist on the *quality* of the variant) and decided **not** to use it as the case study. Built a live, formula-driven Excel model — `data/research/hckt/HCKT_model.xlsx` (builder `scripts/build_hckt_xlsx.py`) — and added Graham/Buffett value lenses plus a call-by-call decline autopsy:
