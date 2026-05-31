@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Art's-Way Manufacturing (ARTW) · Part 1 Investment Pitch</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  :root {
+    --navy: #0A2540;
+    --ink: #111111;
+    --paper: #FFFFFF;
+    --slate: #6B7280;
+    --rule: #E5E7EB;
+    --rule-soft: #F1F3F5;
+    --red: #C8102E;
+    --tint: #FEF7F7;
+    --green: #1F4D3F;
+    --link: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px;
+    background: #d0d5dc;
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink);
+    font-feature-settings: "tnum" 1, "ss01" 1;
+  }
+  .topbar {
+    max-width: 1280px;
+    margin: 0 auto 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #555;
+  }
+  .topbar a { color: var(--link); text-decoration: none; }
+  .slide {
+    width: 1280px;
+    height: 720px;
+    background: var(--paper);
+    margin: 0 auto 32px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    position: relative;
+    padding: 44px 60px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .firm { font-size: 11px; color: var(--navy); letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; }
+  .slide-meta { display: flex; justify-content: space-between; align-items: baseline; }
+  .slide-num { font-size: 11px; color: var(--slate); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; }
+  .headline {
+    font-size: 25px; font-weight: 500; line-height: 1.2; color: var(--navy);
+    margin: 20px 0 5px; max-width: 96%; letter-spacing: -0.015em;
+  }
+  .subhead { font-size: 13px; color: var(--slate); font-weight: 400; margin-bottom: 16px; line-height: 1.45; max-width: 94%; }
+  .rule { height: 1px; background: var(--rule); margin: 0 0 18px; }
+  .footer {
+    border-top: 1px solid var(--rule); padding-top: 9px; font-size: 8px;
+    color: var(--slate); line-height: 1.5; margin-top: auto;
+  }
+  .footer .src { font-weight: 700; color: var(--ink); margin-right: 4px; }
+  .footer a { color: var(--slate); text-decoration: underline; }
+
+  /* COVER */
+  .slide-cover { padding: 52px 60px; justify-content: space-between; }
+  .cover-top { display: flex; justify-content: space-between; align-items: baseline; }
+  .cover-wordmark { font-size: 13px; letter-spacing: 0.22em; color: var(--navy); font-weight: 700; text-transform: uppercase; }
+  .cover-context { font-size: 11px; letter-spacing: 0.14em; color: var(--slate); text-transform: uppercase; }
+  .cover-rule { height: 2px; background: var(--navy); margin-top: 12px; }
+  .cover-main { display: flex; flex-direction: column; flex-grow: 1; justify-content: center; padding: 28px 0; }
+  .cover-ticker { font-size: 12px; letter-spacing: 0.2em; color: var(--red); font-weight: 700; text-transform: uppercase; margin-bottom: 16px; }
+  .cover-name { font-size: 62px; font-weight: 500; color: var(--navy); letter-spacing: -0.03em; line-height: 1.0; margin: 0 0 22px; }
+  .cover-tagline { font-size: 21px; font-weight: 400; color: var(--ink); max-width: 84%; line-height: 1.4; }
+  .cover-tagline .em { color: var(--red); font-weight: 500; }
+  .cover-context-line { font-size: 13px; color: var(--slate); margin-top: 18px; max-width: 80%; line-height: 1.5; }
+  .cover-bottom { display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid var(--rule); padding-top: 14px; font-size: 12px; letter-spacing: 0.05em; color: var(--slate); }
+  .cover-bottom strong { color: var(--ink); font-weight: 600; }
+
+  /* KPI STRIP */
+  .kpi-strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; margin-bottom: 22px; }
+  .kpi-tile { border-top: 2px solid var(--navy); padding-top: 10px; }
+  .kpi-tile .label { font-size: 9px; letter-spacing: 0.1em; color: var(--slate); text-transform: uppercase; font-weight: 600; margin-bottom: 6px; }
+  .kpi-tile .val { font-size: 22px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; letter-spacing: -0.015em; line-height: 1; }
+  .kpi-tile .delta { font-size: 10px; color: var(--slate); margin-top: 5px; font-variant-numeric: tabular-nums; line-height: 1.3; }
+  .kpi-tile .delta.pos { color: var(--green); font-weight: 600; }
+  .kpi-tile .delta.neg { color: var(--red); font-weight: 600; }
+
+  .dash-body { display: grid; grid-template-columns: 1.35fr 1fr; gap: 40px; flex-grow: 1; }
+  .dash-section { display: flex; flex-direction: column; }
+  .dash-title { font-size: 10px; letter-spacing: 0.14em; color: var(--slate); text-transform: uppercase; font-weight: 600; margin-bottom: 12px; }
+  .concentration { background: var(--tint); border-left: 3px solid var(--red); padding: 12px 16px; font-size: 12px; line-height: 1.5; margin-top: 14px; }
+  .concentration .label { font-size: 9px; letter-spacing: 0.15em; color: var(--red); text-transform: uppercase; font-weight: 700; margin-bottom: 4px; }
+  .concentration strong { color: var(--ink); }
+
+  /* GENERIC TWO-COL BODY */
+  .body { flex-grow: 1; display: flex; gap: 36px; }
+  .col-main { flex: 1.4; }
+  .col-side { flex: 1; }
+
+  /* VARIANT BOX */
+  .variant { background: #F8FAFC; border-left: 3px solid var(--red); padding: 14px 18px; margin-bottom: 18px; font-size: 13px; line-height: 1.55; }
+  .variant .label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); font-weight: 700; margin-bottom: 5px; }
+  .variant strong { color: var(--ink); font-weight: 600; }
+
+  .pillars { list-style: none; padding: 0; margin: 0; }
+  .pillar { display: flex; gap: 14px; margin-bottom: 14px; font-size: 13px; line-height: 1.45; }
+  .pillar-num { font-size: 13px; color: var(--navy); font-weight: 700; flex-shrink: 0; width: 22px; }
+  .pillar-text strong { color: var(--ink); font-weight: 600; }
+  .pillar-text .proof { color: var(--slate); display: block; margin-top: 2px; font-size: 12px; }
+
+  .compare { border: 1px solid var(--rule); font-size: 12px; }
+  .compare-head { background: var(--navy); color: white; padding: 8px 12px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; }
+  .compare table { width: 100%; border-collapse: collapse; }
+  .compare td, .compare th { padding: 8px 12px; border-bottom: 1px solid var(--rule); text-align: right; font-variant-numeric: tabular-nums; }
+  .compare th:first-child, .compare td:first-child { text-align: left; font-weight: 500; color: var(--slate); }
+  .compare tr:last-child td { border-bottom: none; background: var(--tint); font-weight: 600; color: var(--red); }
+
+  /* RISK TABLE */
+  .risk-table { width: 100%; border-collapse: collapse; font-size: 11.5px; }
+  .risk-table thead th { padding: 9px 12px 9px 0; text-align: left; font-size: 9px; letter-spacing: 0.12em; color: var(--slate); text-transform: uppercase; font-weight: 600; border-bottom: 2px solid var(--navy); vertical-align: bottom; }
+  .risk-table tbody td { padding: 11px 12px 11px 0; border-bottom: 1px solid var(--rule); vertical-align: top; line-height: 1.42; }
+  .risk-table tbody td:first-child { font-weight: 600; color: var(--navy); padding-right: 16px; }
+  .risk-table .sev { font-weight: 700; font-size: 9.5px; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
+  .risk-table .sev.high { color: var(--red); }
+  .risk-table .sev.med { color: var(--slate); }
+  .risk-table .kill { color: var(--slate); }
+  .risk-table tbody tr:last-child td { border-bottom: none; }
+
+  /* VCP BRIDGE */
+  .bridge-wrap { flex-grow: 1; display: flex; flex-direction: column; }
+  .levers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 14px; }
+  .lever { border-top: 2px solid var(--navy); padding-top: 9px; font-size: 11px; line-height: 1.4; }
+  .lever .lname { font-weight: 600; color: var(--navy); margin-bottom: 4px; font-size: 12px; }
+  .lever .lmeta { font-size: 9px; color: var(--slate); margin-top: 6px; letter-spacing: 0.04em; text-transform: uppercase; font-weight: 600; }
+  .lever .proof { color: var(--slate); font-size: 10.5px; display:block; margin-top: 4px; font-style: italic; }
+  .lever .bucket { font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); font-weight: 700; margin-bottom: 3px; }
+
+  /* GENERIC TABLES */
+  table.data { width: 100%; border-collapse: collapse; font-size: 12px; }
+  table.data th { padding: 7px 10px; border-bottom: 2px solid var(--navy); text-align: right; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--slate); }
+  table.data td { padding: 7px 10px; border-bottom: 1px solid var(--rule-soft); text-align: right; font-variant-numeric: tabular-nums; }
+  table.data th:first-child, table.data td:first-child { text-align: left; }
+  table.data td:first-child { font-weight: 500; }
+  table.data tr.hl td { background: var(--tint); font-weight: 600; color: var(--navy); }
+  table.data tr.hl td.red { color: var(--red); }
+
+  .callout-box { background: var(--tint); border-left: 3px solid var(--red); padding: 11px 15px; font-size: 11.5px; line-height: 1.5; }
+  .callout-box .label { font-size: 9px; letter-spacing: 0.14em; color: var(--red); text-transform: uppercase; font-weight: 700; margin-bottom: 4px; }
+  .callout-box strong { color: var(--ink); }
+
+  .navy-box { background: #F8FAFC; border-left: 3px solid var(--navy); padding: 11px 15px; font-size: 11.5px; line-height: 1.5; }
+  .navy-box .label { font-size: 9px; letter-spacing: 0.14em; color: var(--navy); text-transform: uppercase; font-weight: 700; margin-bottom: 4px; }
+  .navy-box strong { color: var(--ink); }
+
+  .two-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; flex-grow: 1; }
+  .three-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 22px; flex-grow: 1; }
+
+  /* TIMELINE */
+  .timeline { display: flex; gap: 0; margin-top: 6px; }
+  .tl-item { flex: 1; position: relative; padding: 0 6px; }
+  .tl-item .yr { font-size: 12px; font-weight: 700; color: var(--navy); }
+  .tl-item .ev { font-size: 9.5px; color: var(--slate); line-height: 1.35; margin-top: 3px; }
+  .tl-bar { height: 2px; background: var(--rule); margin: 8px 0 8px; position: relative; }
+  .tl-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--navy); position: absolute; left: 6px; top: -3px; }
+
+  /* APPENDIX */
+  .appx-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; flex-grow: 1; font-size: 12px; line-height: 1.55; }
+  .appx-grid h3 { font-size: 10px; letter-spacing: 0.14em; color: var(--navy); text-transform: uppercase; font-weight: 700; margin: 0 0 8px; border-bottom: 1px solid var(--rule); padding-bottom: 4px; }
+  .appx-grid ul { margin: 0 0 16px; padding-left: 16px; }
+  .appx-grid li { margin-bottom: 6px; }
+  .appx-grid p { font-size: 12px; line-height: 1.55; margin: 0 0 10px; }
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div><strong>Part 1 · Investment Pitch Deck</strong> · Art's-Way Manufacturing (ARTW) · Direction 1 (Institutional Classic) · content per <code>data/research/artw/model.md</code> (v2.1, lead-reviewed)</div>
+    <div>Lunchline Partners</div>
+  </div>
+
+  <!-- ============ SLIDE 1 · COVER ============ -->
+  <div class="slide slide-cover">
+    <div>
+      <div class="cover-top">
+        <div class="cover-wordmark">Lunchline Partners</div>
+        <div class="cover-context">Investment Pitch · May 2026</div>
+      </div>
+      <div class="cover-rule"></div>
+    </div>
+    <div class="cover-main">
+      <div class="cover-ticker">NASDAQ: ARTW</div>
+      <h1 class="cover-name">Art's-Way Manufacturing</h1>
+      <div class="cover-tagline">A declining farm-equipment maker hides a growing, <span class="em">17%-margin builder of research and animal-biosecurity laboratories</span>.</div>
+    </div>
+    <div class="cover-bottom">
+      <div><strong>Aviv Sheriff</strong> · Lunchline Partners Case Study</div>
+      <div>01 / 13</div>
+    </div>
+  </div>
+
+  <!-- ============ SLIDE 2 · BUSINESS OVERVIEW I ============ -->
+  <div class="slide">
+    <div class="slide-meta">
+      <span class="firm">Art's-Way Manufacturing · ARTW</span>
+      <span class="slide-num">02 / 13 · Business Overview</span>
+    </div>
+    <h1 class="headline">Two segments are moving in opposite directions: farm equipment is shrinking and losing money, while the building segment grows every year at a 17% operating margin.</h1>
+    <div class="subhead">Agricultural Products sells farm equipment through about 500 independent dealers and lost money in each of the last two years. Art's-Way Scientific designs and builds custom research and animal-biosecurity laboratories direct to the end user, and has grown sales every year. The two earn very differently and sell through different channels.</div>
+    <div class="rule"></div>
+    <div class="kpi-strip">
+      <div class="kpi-tile"><div class="label">Sales (FY25)</div><div class="val">$23.0M</div><div class="delta neg">−6.2% vs prior year</div></div>
+      <div class="kpi-tile"><div class="label">Enterprise value</div><div class="val">$19.8M</div><div class="delta">$13.4M equity + $6.4M net debt</div></div>
+      <div class="kpi-tile"><div class="label">Whole-company op. margin</div><div class="val">1.3%</div><div class="delta">a 17% business averaged with a loss-maker</div></div>
+      <div class="kpi-tile"><div class="label">Building backlog (Feb 2026)</div><div class="val">$4.9M</div><div class="delta pos">+103% vs prior year</div></div>
+      <div class="kpi-tile"><div class="label">Wall Street analysts</div><div class="val">0</div><div class="delta">no published research</div></div>
+      <div class="kpi-tile"><div class="label">Family voting control</div><div class="val">51.5%</div><div class="delta">McConnell holds 46.7% himself</div></div>
+    </div>
+    <div class="dash-body">
+      <div class="dash-section">
+        <div class="dash-title">Segment sales ($M, left) and operating margin (%, right), FY21–FY25</div>
+        <!-- DUAL-AXIS: bars = sales (left axis), lines = operating margin (right axis) -->
+        <!-- Left axis 0-25 over y190..30 (6.4px/$M). Right axis -15%..+25% over y190..30 (4px/pt; 0% at y130) -->
+        <svg width="100%" viewBox="0 0 470 235" style="margin-top:2px;">
+          <!-- gridlines -->
+          <line x1="40" y1="190" x2="430" y2="190" stroke="#E5E7EB" stroke-width="1"/>
+          <line x1="40" y1="130" x2="430" y2="130" stroke="#F1F3F5" stroke-width="1"/>
+          <line x1="40" y1="30" x2="430" y2="30" stroke="#F1F3F5" stroke-width="1"/>
+          <!-- LEFT axis ($M) -->
+          <text x="34" y="34" font-size="8" fill="#6B7280" text-anchor="end">25</text>
+          <text x="34" y="113" font-size="8" fill="#6B7280" text-anchor="end">12.5</text>
+          <text x="34" y="193" font-size="8" fill="#6B7280" text-anchor="end">0</text>
+          <text x="40" y="20" font-size="8" fill="#6B7280" font-weight="600">$M sales</text>
+          <!-- RIGHT axis (%) 0% at y130, +25% at y30 (4px/pt), -15% at y190 -->
+          <text x="436" y="34" font-size="8" fill="#6B7280" text-anchor="start">+25%</text>
+          <text x="436" y="133" font-size="8" fill="#6B7280" text-anchor="start">0%</text>
+          <text x="436" y="193" font-size="8" fill="#6B7280" text-anchor="start">−15%</text>
+          <!-- 5 year groups, x centers: 78,148,218,288,358 ; bar width 22, paired -->
+          <!-- SALES BARS: farm (red) + buildings (navy). px = $M * 6.4 from baseline y190 -->
+          <!-- Farm sales 16.8,20.9,22.5,14.7,12.7 -> h108,134,144,94,82 -->
+          <rect x="62" y="82"  width="20" height="108" fill="#C8102E" opacity="0.85"/>
+          <rect x="132" y="56" width="20" height="134" fill="#C8102E" opacity="0.85"/>
+          <rect x="202" y="46" width="20" height="144" fill="#C8102E" opacity="0.85"/>
+          <rect x="272" y="96" width="20" height="94"  fill="#C8102E" opacity="0.85"/>
+          <rect x="342" y="108" width="20" height="82"  fill="#C8102E" opacity="0.85"/>
+          <!-- Buildings sales 5.7,4.7,7.8,9.8,10.2 -> h36,30,50,63,65 -->
+          <rect x="84" y="154"  width="20" height="36" fill="#0A2540"/>
+          <rect x="154" y="160" width="20" height="30" fill="#0A2540"/>
+          <rect x="224" y="140" width="20" height="50" fill="#0A2540"/>
+          <rect x="294" y="127" width="20" height="63" fill="#0A2540"/>
+          <rect x="364" y="125" width="20" height="65" fill="#0A2540"/>
+          <!-- MARGIN LINES (right axis): 0% at y130, 4px/pt. Buildings margin +1.3,-12.7,+11.1,+20.0,+17.1 ; y=130-4*pt -->
+          <!-- buildings: +1.3->125, -12.7->181, +11.1->86, +20.0->50, +17.1->62 -->
+          <polyline points="94,125 164,181 234,86 304,50 374,62" fill="none" stroke="#1F4D3F" stroke-width="2"/>
+          <circle cx="94" cy="125" r="3" fill="#1F4D3F"/><circle cx="164" cy="181" r="3" fill="#1F4D3F"/><circle cx="234" cy="86" r="3" fill="#1F4D3F"/><circle cx="304" cy="50" r="3" fill="#1F4D3F"/><circle cx="374" cy="62" r="3" fill="#1F4D3F"/>
+          <text x="304" y="44" font-size="9" fill="#1F4D3F" text-anchor="middle" font-weight="600">+20%</text>
+          <text x="374" y="74" font-size="9" fill="#1F4D3F" text-anchor="middle" font-weight="600">+17%</text>
+          <!-- farm margin: FY21~+5,FY22~-3,FY23+3.0,FY24-10.3,FY25-11.5 -> y110,142,118,171,176 -->
+          <polyline points="72,110 142,142 212,118 282,171 352,176" fill="none" stroke="#C8102E" stroke-width="2" stroke-dasharray="4,2"/>
+          <circle cx="72" cy="110" r="3" fill="#C8102E"/><circle cx="142" cy="142" r="3" fill="#C8102E"/><circle cx="212" cy="118" r="3" fill="#C8102E"/><circle cx="282" cy="171" r="3" fill="#C8102E"/><circle cx="352" cy="176" r="3" fill="#C8102E"/>
+          <text x="352" y="188" font-size="9" fill="#C8102E" text-anchor="middle" font-weight="600">−11%</text>
+          <!-- x labels -->
+          <text x="78" y="204" font-size="9" fill="#6B7280" text-anchor="middle">FY21</text>
+          <text x="148" y="204" font-size="9" fill="#6B7280" text-anchor="middle">FY22</text>
+          <text x="218" y="204" font-size="9" fill="#6B7280" text-anchor="middle">FY23</text>
+          <text x="288" y="204" font-size="9" fill="#6B7280" text-anchor="middle">FY24</text>
+          <text x="358" y="204" font-size="9" fill="#6B7280" text-anchor="middle">FY25</text>
+          <text x="235" y="216" font-size="8" fill="#9CA3AF" text-anchor="middle">FY21–22 include the since-divested Tools unit; not fully comparable.</text>
+          <!-- legend -->
+          <rect x="60" y="226" width="10" height="8" fill="#C8102E" opacity="0.85"/><text x="74" y="233" font-size="8.5" fill="#111">Farm sales</text>
+          <rect x="150" y="226" width="10" height="8" fill="#0A2540"/><text x="164" y="233" font-size="8.5" fill="#111">Building sales</text>
+          <line x1="246" y1="230" x2="262" y2="230" stroke="#1F4D3F" stroke-width="2"/><text x="266" y="233" font-size="8.5" fill="#111">Bldg margin</text>
+          <line x1="346" y1="230" x2="362" y2="230" stroke="#C8102E" stroke-width="2" stroke-dasharray="4,2"/><text x="366" y="233" font-size="8.5" fill="#111">Farm margin</text>
+        </svg>
+      </div>
+      <div class="dash-section">
+        <div class="dash-title">FY25 by segment: sales, operating profit, assets</div>
+        <table class="data" style="font-size:11.5px;">
+          <tr><th></th><th>Sales</th><th>Op. profit</th><th>Assets</th></tr>
+          <tr><td>Buildings (Scientific)</td><td>$10.2M</td><td style="color:var(--green);font-weight:600;">+$1.75M</td><td>$3.3M</td></tr>
+          <tr><td>Farm equipment</td><td>$12.7M</td><td style="color:var(--red);font-weight:600;">−$1.46M</td><td>$19.2M</td></tr>
+          <tr class="hl"><td>Whole company</td><td>$23.0M</td><td>+$0.29M</td><td>$22.5M</td></tr>
+        </table>
+        <div style="font-size:11px;color:var(--slate);line-height:1.5;margin-top:12px;">
+          <strong style="color:var(--ink);">How each earns.</strong> Farm equipment sells through ~500 independent dealers across 48 states, 7 Canadian provinces, Australia, Japan, and the UK; exports were just 4.0% of FY25 sales, so the business is ~96% domestic. The building segment sells custom labs direct to the end user, and also offers a lease option it has not pushed.
+        </div>
+        <div class="concentration">
+          <div class="label">Almost no professional investors study it</div>
+          Zero Wall Street analysts publish research, and institutions own about <strong>7%</strong> of the shares. The company is too small and too thinly traded for most funds, so its two-segment story goes largely unexamined.
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="src">Sources:</span> <a href="https://www.sec.gov/Archives/edgar/data/7623/000143774926003904/artw20251130_10k.htm">ARTW FY2025 10-K</a> (Statements of Operations, Note 17 Segments; ~500 dealers / geography Item 1; exports 4.0%); <a href="https://www.sec.gov/Archives/edgar/data/7623/000143774923003620/artw20221130_10k.htm">FY2022 10-K</a> (FY21–22 segment data) · 2026 DEF 14A (ownership) · yfinance coverage/float snapshot 2026-05-30.
+    </div>
+  </div>
+
+  <!-- ============ SLIDE 3 · BUSINESS OVERVIEW II — CUSTOMERS, GEOGRAPHY, HISTORY ============ -->
+  <div class="slide">
+    <div class="slide-meta">
+      <span class="firm">Art's-Way Manufacturing · ARTW</span>
+      <span class="slide-num">03 / 13 · Business Overview</span>
+    </div>
+    <h1 class="headline">The building segment serves marquee research institutions from two Iowa plants, with no customer over 10% of sales and a 70-year operating history behind it.</h1>
+    <div class="subhead">The customer list reads like a who's-who of life-science research; the company has built more than 150 of these facilities since launching the unit in 2006.</div>
+    <div class="rule"></div>
+    <div class="body">
+      <div class="col-main">
+        <div class="navy-box" style="margin-bottom:12px;">
+          <div class="label">Customers</div>
+          The FY2025 largest customer was about <strong>9% of consolidated revenue, with none over 10%</strong>. Named modular clients include <strong>UC Davis, MD Anderson, ADM, SAIC, the New Iberia Research Center, Honeywell, the Stowers Institute, and Stanford</strong>. Farm-equipment customers are grain and livestock producers reached through the dealer network.
+        </div>
+        <div class="navy-box">
+          <div class="label">Geography</div>
+          Two plants, both in Iowa: <strong>Armstrong</strong> (headquarters and farm equipment, ~249,000 sq ft) and <strong>Monona</strong> (Art's-Way Scientific modular labs, built 2007, ~50,000 sq ft).
+        </div>
+        <div class="callout-box" style="margin-top:12px;">
+          <div class="label">Earnings quality: FY25 profit was a one-time credit</div>
+          ARTW reported $1.04M of net income in FY25, but <strong>$1.51M of that was an Employee Retention Credit</strong>, a one-time pandemic-era payroll-tax refund that will not repeat. Strip it out and the company was roughly break-even before tax. The clean earning power is the building segment's $1.75M operating profit, against the farm segment's $1.46M loss.
+        </div>
+      </div>
+      <div class="col-side">
+        <div class="dash-title">A 70-year history of refocusing</div>
+        <table class="data" style="font-size:11px;">
+          <tr><td><strong>1956</strong></td><td style="text-align:left;font-weight:400;">Founded by farmer Arthur Luscombe in Dolliver, Iowa</td></tr>
+          <tr><td><strong>1974</strong></td><td style="text-align:left;font-weight:400;">Initial public offering</td></tr>
+          <tr><td><strong>2002</strong></td><td style="text-align:left;font-weight:400;">J. Ward McConnell Jr. becomes Chairman; start of family control</td></tr>
+          <tr><td><strong>2006</strong></td><td style="text-align:left;font-weight:400;">Art's-Way Scientific (modular labs) created</td></tr>
+          <tr><td><strong>2013</strong></td><td style="text-align:left;font-weight:400;">Acquired Ohio Metal (Tools segment)</td></tr>
+          <tr><td><strong>2016</strong></td><td style="text-align:left;font-weight:400;">Discontinued the Vessels segment</td></tr>
+          <tr><td><strong>2023</strong></td><td style="text-align:left;font-weight:400;">Ceased the Tools segment</td></tr>
+          <tr><td><strong>Oct 2024</strong></td><td style="text-align:left;font-weight:400;">Sold Tools real estate for $1.8M; Marc McConnell becomes President &amp; CEO</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="src">Sources:</span> <a href="https://www.sec.gov/Archives/edgar/data/7623/000143774926003904/artw20251130_10k.htm">ARTW FY2025 10-K</a> (customer concentration ~9%, none &gt;10%; properties Armstrong/Monona; ERC by segment MD&amp;A) · <a href="https://www.sec.gov/Archives/edgar/data/7623/000143774925004172/artw20241130_10k.htm">FY2024 10-K</a> (FY24 customers ~17% / ~15%) · <a href="https://artsway-scientific.com/about/case-studies/">Art's-Way Scientific case studies</a> (named clients) · <a href="https://artsway-mfg.com/history/">company history</a>.
+    </div>
+  </div>
+
+  <!-- ============ SLIDE 4 · END MARKET ============ -->
+  <div class="slide">
+    <div class="slide-meta">
+      <span class="firm">Art's-Way Manufacturing · ARTW</span>
+      <span class="slide-num">04 / 13 · End Market</span>
+    </div>
+    <h1 class="headline">The building segment sells into a fragmented niche of a ~$16.5–25.6B US modular market growing 7–8% a year.</h1>
+    <div class="subhead">Within that broad market, the two legs sit in their own sub-markets: a ~$4.3B US modular cleanroom market for research labs, and a slice of US agricultural building construction for animal biosecurity. The two draw on separate federal budgets, so a slowdown in one can be offset by the other.</div>
+    <div class="rule"></div>
+    <div class="body">
+      <div class="col-main">
+        <div class="dash-title">Market size, top down: the broad market and the two sub-markets it sells into</div>
+        <table class="data" style="font-size:11px;">
+          <tr><th>Market</th><th>Size (2024)</th><th>Growth</th></tr>
+          <tr><td>US modular construction (broad context)</td><td>$16.5–25.6B</td><td>~7–8%/yr</td></tr>
+          <tr><td>&nbsp;&nbsp;↳ US modular cleanroom (research labs)</td><td>$4.3B</td><td>~6.9%/yr</td></tr>
+          <tr><td>&nbsp;&nbsp;↳ US ag building (animal biosecurity)</td><td>no clean $ TAM</td><td>steel ag bldg ~5%/yr</td></tr>
+        </table>
+        <div style="font-size:9.5px;color:var(--slate);line-height:1.45;margin-top:5px;">Cleanroom is the addressable market for the research-lab work; broader cleanroom construction is forecast to ~$11.7B by 2030. For animal biosecurity there is no clean published US dollar TAM, so we frame it honestly as a slice of ag building construction, with live demand pulled by USDA's $1B avian-flu program.</div>
+        <div class="two-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;flex-grow:0;margin-top:12px;">
+          <div class="navy-box" style="border-left-color:var(--navy);">
+            <div class="label">Research laboratories (~60%)</div>
+            <div style="margin:6px 0;font-size:11px;line-height:1.5;">Custom $1M–$5M buildings: high-containment BSL-3 labs (rated for dangerous pathogens) and vivariums (buildings for housing research animals). Buyers: NIH-funded universities, drug companies, government public-health labs. Sub-market: ~$4.3B US modular cleanrooms.</div>
+          </div>
+          <div class="callout-box" style="border-left-color:var(--green);">
+            <div class="label" style="color:var(--green);">Animal-biosecurity buildings (~40%)</div>
+            <div style="margin:6px 0;font-size:11px;line-height:1.5;">Buildings that keep disease out of swine, livestock, and poultry operations. This leg grew ARTW's farm-building sales by <strong>$1.355M in FY25</strong>. Sub-market: a slice of US ag building construction (~5%/yr).</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-side">
+        <div class="dash-title">How federal budgets reach this business</div>
+        <div class="navy-box" style="margin-bottom:10px;">
+          <div class="label">Research side: federal science budgets</div>
+          <div style="font-size:11px;line-height:1.5;">NIH, USDA research, and public-health budgets fund the work through <strong>ARTW's clients</strong>: universities, government labs, and pharma use grant and capital budgets to build the vivariums and containment labs ARTW makes. Caveat: that funding climate is uncertain, but the proposed 15% cap on university research overhead was enjoined (First Circuit, Jan 6, 2026), so it is uncertainty, not an enacted cut.</div>
+        </div>
+        <div class="callout-box" style="border-left-color:var(--green);">
+          <div class="label" style="color:var(--green);">Animal side: USDA's $1B avian-flu program</div>
+          <div style="font-size:11px;line-height:1.5;">$500M is for on-farm biosecurity, cost-shared up to 75%. That money reaches ARTW through <strong>farmers</strong> who use the cost-share, and through disease-control rules that drive demand for biosecure animal buildings.</div>
+        </div>
+        <div style="font-size:9.5px;color:var(--slate);line-height:1.45;margin-top:8px;">The mechanism in both cases: federal money → clients' capital budgets → building purchases. The two budgets are unrelated, so the legs do not move together.</div>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="src">Sources:</span> US modular construction ~$16.5–25.6B (2024), ~7–8% CAGR: <a href="https://www.technavio.com/report/us-modular-construction-market-analysis">Technavio</a>, <a href="https://www.marketresearchfuture.com/reports/us-modular-construction-market-16305">Market Research Future</a> · US modular cleanroom ~$4.3B (2024), ~6.9%/yr, ~$11.7B by 2030: <a href="https://www.gminsights.com/industry-analysis/cleanroom-construction-market">GM Insights</a> · steel ag building ~5%/yr: <a href="https://www.metalconstructionnews.com/articles/agricultural-building-industry-growth-change-and-metal">Metal Construction News</a> · NIH 15% cap enjoined: <a href="https://www.hklaw.com/en/insights/publications/2026/01/the-nih-proposed-15-percent-indirect-cost-rate-cap-is-out-for-now">Holland &amp; Knight, Jan 2026</a> · USDA $1B HPAI: <a href="https://www.usda.gov/about-usda/news/press-releases/2025/02/26/usda-invests-1-billion-combat-avian-flu-and-reduce-egg-prices">USDA, 2025-02-26</a> · <a href="https://www.sec.gov/Archives/edgar/data/7623/000143774926003904/artw20251130_10k.htm">ARTW FY2025 10-K</a> (+$1,355K ag-building sales).
+    </div>
+  </div>
+
+  <!-- ============ SLIDE 5 · COMPETITIVE POSITIONING ============ -->
+  <div class="slide">
+    <div class="slide-meta">
+      <span class="firm">Art's-Way Manufacturing · ARTW</span>
+      <span class="slide-num">05 / 13 · Competitive Positioning</span>
+    </div>
+    <h1 class="headline">Art's-Way builds a specialized lab in about six months, against two to five years for conventional construction.</h1>
+    <div class="subhead">Customers who need a containment lab quickly pay for delivery in roughly six months rather than waiting years for an on-site build. That speed, plus the engineering to meet containment codes, is why the segment earns 17% where general modular builders earn about 7%.</div>
+    <div class="rule"></div>
+    <div class="body">
+      <div class="col-main">
+        <ul class="pillars">
+          <li class="pillar"><div class="pillar-num">01</div><div class="pillar-text"><strong>A record of finished, specialized buildings.</strong><span class="proof">More than 20 vivariums, more than 15 BSL-3 containment labs, and over 150 buildings delivered, for buyers including UC Davis, MD Anderson, ADM, and the Stowers Institute.</span></div></li>
+          <li class="pillar"><div class="pillar-num">02</div><div class="pillar-text"><strong>Speed is the real difference.</strong><span class="proof">Delivery in about six months versus two to five years for a conventional design-and-build project. That matters most to research labs on a deadline and to farms responding to a live disease outbreak.</span></div></li>
+          <li class="pillar"><div class="pillar-num">03</div><div class="pillar-text"><strong>Meeting containment codes is hard to copy.</strong><span class="proof">The 10-K lists the barriers to entry: containment engineering, trained labor, access to the bidding process, and existing customer relationships. The real biocontainment-modular competitors are CERTEK and Germfree; WillScot and BOXX (formerly Vanguard) are modular-leasing businesses, not custom-lab fabricators.</span></div></li>
+        </ul>
+      </div>
+      <div class="col-side">
+        <div class="dash-title">Operating margin: this segment versus general modular builders</div>
+        <!-- margin comparison -->
+        <svg width="100%" viewBox="0 0 300 150">
+          <text x="0" y="14" font-size="10" fill="#6B7280">Art's-Way Scientific (buildings)</text>
+          <rect x="0" y="22" width="222" height="22" fill="#0A2540"/>
+          <text x="228" y="38" font-size="13" fill="#0A2540" font-weight="700">17.1%</text>
+          <text x="0" y="74" font-size="10" fill="#6B7280">Typical general modular builder</text>
+          <rect x="0" y="82" width="91" height="22" fill="#E5E7EB"/>
+          <text x="97" y="98" font-size="13" fill="#6B7280" font-weight="700">~7%</text>
+          <text x="0" y="135" font-size="9" fill="#6B7280">The roughly 10-point gap reflects specialized work,</text>
+          <text x="0" y="146" font-size="9" fill="#6B7280">not low-bid commodity building.</text>
+        </svg>
+        <div class="callout-box" style="margin-top:8px;">
+          <div class="label">What the margin supports for value</div>
+          The speed and containment expertise support about 7–9× operating earnings, in line with Fonar Corporation (Nasdaq: FONR), a small, family-controlled, healthcare-adjacent company taken private by its own CEO in December 2025 at roughly 7–9×. It does not earn the 12–14× of a leasing business like WillScot, because it does not collect recurring rent.
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="src">Sources:</span> <a href="https://www.sec.gov/Archives/edgar/data/7623/000143774926003904/artw20251130_10k.htm">ARTW FY2025 10-K</a> Item 1 (customers, delivery speed, barriers to entry), Note 17 (17.1% modular operating margin) · construction-modular ~7% weighted EBITDA margin: <a href="https://www.mckinsey.com/industries/engineering-construction-and-building-materials/our-insights/putting-the-pieces-together-unlocking-success-in-modular-construction">McKinsey</a> · biocontainment comps <a href="https://certek-usa.com/products/laboratories/modular/">CERTEK</a>, <a href="https://www.germfree.com/facilities-equipment/facilities/modular-laboratories/">Germfree</a> · peer set: <code>data/research/artw/peer_benchmarks.csv</code> / <code>peer_notes.md</code>.
+    </div>
+  </div>
+
+  <!-- ============ SLIDE 6 · INVESTMENT THESIS I ============ -->
+  <div class="slide">
+    <div class="slide-meta">
+      <span class="firm">Art's-Way Manufacturing · ARTW</span>
+      <span class="slide-num">06 / 13 · Investment Thesis</span>
+    </div>
+    <h1 class="headline">This is an operator play: a declining farm-equipment business bolted to a high-value building business, where the price reflects the company as it runs today, not the growth a focused owner could unlock.</h1>
+    <div class="subhead">The thesis is not that the market has misread a screen. It is that an owner could divest the loss-making farm segment, put capital and focus behind the building segment, and grow it. At $2.58 the stock is priced fairly for the status quo, so the return is one an owner creates.</div>
+    <div class="rule"></div>
+    <div class="body">
+      <div class="col-main">
+        <ul class="pillars">
+          <li class="pillar"><div class="pillar-num">01</div><div class="pillar-text"><strong>Farm equipment is a declining, cash-consuming legacy to divest.</strong><span class="proof">Sales fell to $12.7M and the segment lost money two years running (−$1.46M in FY25). It ties up $19.2M of assets, mostly aged inventory, and is the source of the company's negative operating cash flow.</span></div></li>
+          <li class="pillar"><div class="pillar-num">02</div><div class="pillar-text"><strong>The building business is the high-value asset to invest behind and scale.</strong><span class="proof">Sales rose every year, $7.8M → $9.8M → $10.2M, at a 17% operating margin on just $3.3M of assets, and backlog was up 103% as of February 2026. It deserves capital and focus the conglomerate denies it.</span></div></li>
+          <li class="pillar"><div class="pillar-num">03</div><div class="pillar-text"><strong>Today's price reflects the status quo, not the growth a focused owner could create.</strong><span class="proof">At about book value, the price assumes the business as run today. Assets also protect the downside: current ratio 2.30×, long-term debt $2.73M below working capital $8.34M (both safety tests pass), net current assets ~$1.08/share.</span></div></li>
+        </ul>
+      </div>
+      <div class="col-side">
+        <div class="compare">
+          <div class="compare-head">Priced for today, not for the modular growth</div>
+          <table>
+            <tr><th></th><th>Implied by price</th><th>Our base</th></tr>
+            <tr><td>Built-in growth forever</td><td>~7%</td><td>~3–5%</td></tr>
+            <tr><td>Building value, × op. earnings</td><td>~7.8×</td><td>7.0×</td></tr>
+            <tr><td>Fair value per share</td><td>$2.58</td><td>$2.46</td></tr>
+            <tr><td>Above / below price</td><td>n/a</td><td>−4%</td></tr>
+          </table>
+        </div>
+        <div class="callout-box" style="margin-top:14px;">
+          <div class="label">Fairly priced as-is; the return is created operationally</div>
+          The price already assumes the building business compounds at about 7% a year. So there is no bargain to buy. The return is the growth a focused owner adds on top, by shedding the farm drag and scaling the building business, not a re-rating of what exists today.
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="src">Sources:</span> <a href="https://www.sec.gov/Archives/edgar/data/7623/000143774926003904/artw20251130_10k.htm">ARTW FY2025 10-K</a> (segment Note 17, backlog Item 1) · reverse-DCF &amp; SOTP build: <code>data/research/artw/model.md</code> §1, §3, §7 (v2.1, lead-reviewed) · 2026 DEF 14A (coverage/ownership).
+    </div>
+  </div>
+
+  <!-- ============ SLIDE 7 · INVESTMENT THESIS II — WHERE THE RETURN COMES FROM ============ -->
+  <div class="slide">
+    <div class="slide-meta">
+      <span class="firm">Art's-Way Manufacturing · ARTW</span>
+      <span class="slide-num">07 / 13 · Investment Thesis (cont.)</span>
+    </div>
+    <h1 class="headline">The building business is priced about fairly today, so the return is one an owner creates by improving it, not by buying it cheaply.</h1>
+    <div class="subhead">Subtract a realistic value for the farm assets from the $19.8M enterprise value, and the building business is left at about 7.8 times operating earnings, roughly fair. That is the honest center of the thesis.</div>
+    <div class="rule"></div>
+    <div class="body">
+      <div class="col-main">
+        <div class="dash-title">After subtracting the farm assets, what is the building business priced at today?</div>
+        <table class="data">
+          <tr><th>If the farm assets are worth…</th><th>Net farm value</th><th>Leaves building business at</th><th>× op. earnings</th></tr>
+          <tr><td>More (sold as a going concern)</td><td>$10.4M</td><td>$9.4M</td><td>~6.0×</td></tr>
+          <tr class="hl"><td>Base (orderly wind-down)</td><td>$7.7M</td><td>$12.1M</td><td class="red">~7.8×</td></tr>
+          <tr><td>Less (forced liquidation)</td><td>$5.5M</td><td>$14.3M</td><td>~9.2×</td></tr>
+        </table>
+        <div style="font-size:9.5px;color:var(--slate);line-height:1.5;margin-top:6px;">The $12.1M the price implies for the building business in the base case matches our own discounted-cash-flow estimate.</div>
+        <div class="callout-box" style="margin-top:14px;">
+          <div class="label">Fairly priced, not free</div>
+          On a realistic farm-asset value, the building business is already priced at about <strong>6 to 9 times operating earnings, roughly 7.8× in the base case</strong>. It does not come free: the company carries <strong>$6.4M of net debt</strong> and a large farm-inventory balance that recovers only at a discount.
+        </div>
+      </div>
+      <div class="col-side">
+        <div class="navy-box" style="margin-bottom:14px;">
+          <div class="label">Where the return comes from</div>
+          From an owner, not a cheap entry price: divest the farm segment, run the building business on its own, and grow it. The next slides lay out those steps and what they could be worth.
+        </div>
+        <div class="callout-box">
+          <div class="label">The catalyst is family-gated</div>
+          None of it happens unless the McConnell family agrees, and no plan has been announced. The path exists: FONR shows a family take-private clears at ~7–9× plus a ~31% premium. But the timing is not in an outside investor's hands.
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="src">Sources:</span> SOTP reverse-build &amp; ag-disposal recovery haircuts (60% inventory / 95% AR / 40% PP&amp;E base, re-centered in v2 review): <code>data/research/artw/model.md</code> §1d, §7 · <a href="https://www.sec.gov/Archives/edgar/data/7623/000143774926003904/artw20251130_10k.htm">ARTW FY2025 10-K</a> balance sheet (net debt $6.41M, inventory $11.71M) · reverse-DCF (EV $19.8M ⇒ ~7% perpetual growth).
+    </div>
+  </div>
+
+  <!-- ============ SLIDE 8 · RISKS ============ -->
+  <div class="slide">
+    <div class="slide-meta">
+      <span class="firm">Art's-Way Manufacturing · ARTW</span>
+      <span class="slide-num">08 / 13 · Investment Risks</span>
+    </div>
+    <h1 class="headline">The main risk is ownership, not operations: one family controls 51.5% of the vote, and there is no sale process underway.</h1>
+    <div class="subhead">No value-improving step happens unless the controlling family chooses it, and none has been announced. Risks are ordered by likelihood and impact.</div>
+    <div class="rule"></div>
+    <table class="risk-table">
+      <thead><tr><th style="width:22%;">Risk</th><th style="width:13%;">Likelihood × impact</th><th style="width:33%;">What limits it</th><th style="width:32%;">What would prove the risk real</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Nothing happens without the family</td>
+          <td><span class="sev high">High × High</span></td>
+          <td>The family controls 51.5% of the vote, so no outside buyer can force a deal; any separation must be agreed with them. FONR, a comparable family-controlled company, was taken private by its own CEO in December 2025, so the path exists.</td>
+          <td class="kill">The family signals no strategic action and keeps the farm segment indefinitely (no relevant ownership or event filings).</td>
+        </tr>
+        <tr>
+          <td>The 60/40 split between the two legs is an estimate</td>
+          <td><span class="sev high">Med × High</span></td>
+          <td>Inferred from one disclosed figure ($1.355M of farm-building growth); the second-largest swing factor in the valuation. Management or investor-relations calls would confirm it.</td>
+          <td class="kill">Disclosure shows the research-lab leg is materially smaller or lower-margin than the 60% assumption.</td>
+        </tr>
+        <tr>
+          <td>Selling the farm assets raises less than assumed</td>
+          <td><span class="sev med">Med × Med</span></td>
+          <td>Farm assets are valued at a discount (60% of cost for aged inventory in the base case), and proceeds repay debt rather than count as a windfall. ARTW exited Tools (2023–24) and Vessels (2016) before.</td>
+          <td class="kill">Inventory sells below the 50% liquidation mark, and the revolving credit line cannot be repaid from proceeds.</td>
+        </tr>
+        <tr>
+          <td>The bird-flu spending was a one-time spike</td>
+          <td><span class="sev med">Med × Med</span></td>
+          <td>The 49% FY25 jump in farm-building sales is modeled as not repeating, reverting to 2–3% growth. Longer-term growth is expected from research labs, not farm biosecurity.</td>
+          <td class="kill">The $500M USDA cost-share is not renewed, and farm-building sales fall back below the FY24 level.</td>
+        </tr>
+        <tr>
+          <td>Orders are lumpy and the sales effort is thin</td>
+          <td><span class="sev med">Med × Med</span></td>
+          <td>The 103% backlog gives about six months of visibility, and the plan is to add sales staff. One customer was 9% of company-wide sales.</td>
+          <td class="kill">The building segment's operating margin stays below 12% for a full year, or backlog falls below about $2.5M.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="footer">
+      <span class="src">Sources:</span> 2026 DEF 14A ownership (McConnell 46.7% / group 51.5%) · <code>check_voting_structure.py ARTW</code> (hostile deal structurally impossible) · <a href="https://www.sec.gov/Archives/edgar/data/7623/000143774926003904/artw20251130_10k.htm">ARTW FY2025 10-K</a> (leg-split data floor; one customer 9%; president part-time; Tools/Vessels divestiture precedent Note 1) · kill criteria: <code>model.md</code> §9.
+    </div>
+  </div>
+
+  <!-- ============ SLIDE 9 · VALUE CREATION I — WATERFALL + FOUR BUCKETS ============ -->
+  <div class="slide">
+    <div class="slide-meta">
+      <span class="firm">Art's-Way Manufacturing · ARTW</span>
+      <span class="slide-num">09 / 13 · Value Creation Plan</span>
+    </div>
+    <h1 class="headline">An owner could roughly double the building segment's value through four levers, one in each of the case's four categories.</h1>
+    <div class="subhead">On its own today the building business is worth about $12.1M; if the four levers all work, about $22.6M. The bars break down the $10.5M gap. Allocations are estimated; endpoints and total match the valuation model.</div>
+    <div class="rule"></div>
+    <div class="bridge-wrap">
+      <!-- WATERFALL: building EV base 12.1 -> bull 22.6 ; gap 10.5 split: growth +3.5, margin +2.5, re-rate +3.0, roll-up +1.5 -->
+      <svg width="100%" viewBox="0 0 1140 250" style="margin-bottom:4px;">
+        <line x1="40" y1="210" x2="1130" y2="210" stroke="#E5E7EB" stroke-width="1"/>
+        <!-- y scale: 7px per $1M, baseline 210 -->
+        <text x="34" y="214" font-size="9" fill="#6B7280" text-anchor="end">0</text>
+        <text x="34" y="140" font-size="9" fill="#6B7280" text-anchor="end">10</text>
+        <text x="34" y="70" font-size="9" fill="#6B7280" text-anchor="end">20</text>
+        <text x="34" y="42" font-size="9" fill="#6B7280" text-anchor="end">$M value</text>
+
+        <!-- Bar 1: base building value 12.1 -> h85 top 125 -->
+        <rect x="70" y="125" width="120" height="85" fill="#0A2540"/>
+        <text x="130" y="117" font-size="11" fill="#111" text-anchor="middle" font-weight="700">$12.1M</text>
+        <text x="130" y="228" font-size="10" fill="#6B7280" text-anchor="middle">Building business today,</text>
+        <text x="130" y="240" font-size="9" fill="#6B7280" text-anchor="middle">on its own</text>
+
+        <!-- Step 1: grow sales +3.5 -> 25px from 125 up to 100 -->
+        <rect x="240" y="100" width="120" height="25" fill="#C8102E"/>
+        <line x1="190" y1="125" x2="240" y2="125" stroke="#9CA3AF" stroke-width="1" stroke-dasharray="3,2"/>
+        <text x="300" y="92" font-size="10" fill="#C8102E" text-anchor="middle" font-weight="600">+$3.5M</text>
+        <text x="300" y="228" font-size="9.5" fill="#6B7280" text-anchor="middle">Commercial:</text>
+        <text x="300" y="240" font-size="9.5" fill="#6B7280" text-anchor="middle">grow sales</text>
+
+        <!-- Step 2: improve margin +2.5 -> 18px from 100 to 82 -->
+        <rect x="410" y="82" width="120" height="18" fill="#C8102E"/>
+        <line x1="360" y1="100" x2="410" y2="100" stroke="#9CA3AF" stroke-width="1" stroke-dasharray="3,2"/>
+        <text x="470" y="74" font-size="10" fill="#C8102E" text-anchor="middle" font-weight="600">+$2.5M</text>
+        <text x="470" y="228" font-size="9.5" fill="#6B7280" text-anchor="middle">Operations:</text>
+        <text x="470" y="240" font-size="9.5" fill="#6B7280" text-anchor="middle">recurring revenue</text>
+
+        <!-- Step 3: capital re-rate +3.0 -> 21px from 82 to 61 -->
+        <rect x="580" y="61" width="120" height="21" fill="#C8102E"/>
+        <line x1="530" y1="82" x2="580" y2="82" stroke="#9CA3AF" stroke-width="1" stroke-dasharray="3,2"/>
+        <text x="640" y="53" font-size="10" fill="#C8102E" text-anchor="middle" font-weight="600">+$3.0M</text>
+        <text x="640" y="228" font-size="9.5" fill="#6B7280" text-anchor="middle">Capital structure:</text>
+        <text x="640" y="240" font-size="9.5" fill="#6B7280" text-anchor="middle">divest farm, re-rate</text>
+
+        <!-- Step 4: M&A roll-up +1.5 -> 11px from 61 to 50 -->
+        <rect x="750" y="50" width="120" height="11" fill="#C8102E"/>
+        <line x1="700" y1="61" x2="750" y2="61" stroke="#9CA3AF" stroke-width="1" stroke-dasharray="3,2"/>
+        <text x="810" y="42" font-size="10" fill="#C8102E" text-anchor="middle" font-weight="600">+$1.5M</text>
+        <text x="810" y="228" font-size="9.5" fill="#6B7280" text-anchor="middle">M&amp;A: roll up</text>
+        <text x="810" y="240" font-size="9.5" fill="#6B7280" text-anchor="middle">the niche</text>
+
+        <!-- Target: bull building value 22.6 -> h160 top 50 -->
+        <rect x="920" y="50" width="120" height="160" fill="#1F4D3F"/>
+        <line x1="870" y1="50" x2="920" y2="50" stroke="#9CA3AF" stroke-width="1" stroke-dasharray="3,2"/>
+        <text x="980" y="42" font-size="11" fill="#1F4D3F" text-anchor="middle" font-weight="700">$22.6M</text>
+        <text x="980" y="228" font-size="10" fill="#6B7280" text-anchor="middle">Building business</text>
+        <text x="980" y="240" font-size="9" fill="#6B7280" text-anchor="middle">if all four work</text>
+      </svg>
+    </div>
+    <div class="levers" style="grid-template-columns:repeat(4,1fr);margin-top:6px;">
+      <div class="lever">
+        <div class="bucket">Commercial</div>
+        <div class="lname">Professionalize sales</div>
+        Backlog more than doubled on ~$97,000 of advertising; the constraint is sales effort, not demand. The president went part-time and the sales director was not replaced. Add a business-development manager.
+      </div>
+      <div class="lever">
+        <div class="bucket">Operations</div>
+        <div class="lname">Add recurring monitoring</div>
+        Offer ongoing containment monitoring (the connected sensors these labs must keep recertified) and add fabrication capacity. Recurring service revenue earns a higher multiple than one-time project work.
+      </div>
+      <div class="lever">
+        <div class="bucket">Capital structure</div>
+        <div class="lname">Divest farm, retire debt</div>
+        Wind down the farm segment, sell ~$8–10M of inventory and the plant, retire the revolver. That removes the cash drain and lets the building business re-rate as a clean platform.
+      </div>
+      <div class="lever">
+        <div class="bucket">Mergers &amp; acquisitions</div>
+        <div class="lname">Roll up the niche</div>
+        The fragmented biocontainment niche (CERTEK, Germfree) is rollable. ARTW has only ever divested, never bought within modular, an untapped lever to add scale and service revenue.
+      </div>
+    </div>
+    <div class="footer">
+      <span class="src">Sources:</span> Step allocations of the base-to-bull building-segment value gap ($12.1M → $22.6M) from the scenario build in <code>data/research/artw/model.md</code> §1–§3 and the value-creation plan §8 · <a href="https://www.sec.gov/Archives/edgar/data/7623/000143774926003904/artw20251130_10k.htm">ARTW FY2025 10-K</a> (advertising ~$97K, president part-time / sales director MD&amp;A; backlog +103% Item 1).
+    </div>
+  </div>
+
+  <!-- ============ SLIDE 10 · VALUE CREATION II — NAMED LEVERS + SEQUENCING ============ -->
+  <div class="slide">
+    <div class="slide-meta">
+      <span class="firm">Art's-Way Manufacturing · ARTW</span>
+      <span class="slide-num">10 / 13 · Value Creation Plan</span>
+    </div>
+    <h1 class="headline">Each lever has a specific action, evidence it can work, and a place in the sequence.</h1>
+    <div class="subhead">Growth needs no new factories; the plan adds a sales team and a recurring monitoring service the owner has called "Liberate the Lab."</div>
+    <div class="rule"></div>
+    <div class="levers" style="grid-template-columns:repeat(4,1fr);">
+      <div class="lever">
+        <div class="bucket">Capital structure</div>
+        <div class="lname">01 · Separate the farm segment</div>
+        Wind down the loss-making farm-equipment segment in an orderly way; sell ~$8M–$10M of inventory and the plant; use proceeds to repay debt and stop the cash drain.
+        <span class="proof">Evidence: ARTW exited Tools (ceased 2023; real estate sold for $1.8M Oct 2024) and Vessels (2016).</span>
+        <div class="lmeta">Owner: Board / CEO · 100 days–Year 1</div>
+      </div>
+      <div class="lever">
+        <div class="bucket">Commercial</div>
+        <div class="lname">02 · Build a real sales team</div>
+        The sales effort is thin: the president is part-time and the sales director was not replaced. Add a business-development manager to convert demand into orders.
+        <span class="proof">Evidence: backlog rose 103% on ~$97,000 of advertising, so the limit is sales capacity, not demand.</span>
+        <div class="lmeta">Owner: CEO · Year 1</div>
+      </div>
+      <div class="lever">
+        <div class="bucket">Operations</div>
+        <div class="lname">03 · Add recurring monitoring</div>
+        Offer ongoing containment monitoring, the connected sensors these labs must keep recertified. Partner first, then acquire the capability.
+        <span class="proof">Evidence: Tecniplast, XiltriX, and Elemental already monitor these facilities; service revenue earns a higher multiple.</span>
+        <div class="lmeta">Owner: CEO / Corp. Dev. · Years 1–3</div>
+      </div>
+      <div class="lever">
+        <div class="bucket">M&amp;A</div>
+        <div class="lname">04 · Buy small competitors</div>
+        Acquire small lab and containment builders (CERTEK, Germfree) to add scale and service revenue, push the unused lease option, and widen the customer base beyond NIH-funded buyers.
+        <span class="proof">Evidence: WillScot built its value through fleet acquisitions; ARTW has only ever sold divisions, never bought one here.</span>
+        <div class="lmeta">Owner: Corp. Dev. · Years 2–3</div>
+      </div>
+    </div>
+    <div style="margin-top:16px;display:grid;grid-template-columns:2.6fr 1fr;gap:24px;flex-grow:1;">
+      <div>
+        <div class="dash-title">Order of events</div>
+        <table class="data" style="font-size:11.5px;">
+          <tr><th>First 100 days</th><th>Year 1</th><th>Years 2–3</th><th>End state</th></tr>
+          <tr>
+            <td style="font-weight:400;">Agree the separation with the family; stop farm capital spending; plan the inventory sale.</td>
+            <td>Wind down the farm segment and repay debt; hire a sales manager; sign a first monitoring partnership.</td>
+            <td>Acquire monitoring and service capability; make a first small acquisition; add private and government research buyers.</td>
+            <td>A focused building business with about $13M–$15M of sales, a recurring service line, valued at about 10× earnings.</td>
+          </tr>
+        </table>
+      </div>
+      <div class="callout-box" style="align-self:start;">
+        <div class="label">Who would do this</div>
+        These steps assume an owner with control. The realistic version keeps the McConnell family and the current president, whose customer relationships are central to both the building business and the monitoring service.
+      </div>
+    </div>
+    <div class="footer">
+      <span class="src">Sources:</span> <a href="https://www.sec.gov/Archives/edgar/data/7623/000143774926003904/artw20251130_10k.htm">ARTW FY2025 10-K</a>: Note 1 (Tools ceased 2023 / Vessels 2016 divestitures), MD&amp;A (president part-time, sales director not replaced; advertising ~$97K), Item 1 (lease option; backlog +103%) · monitoring vendors: Tecniplast, XiltriX, Elemental · value-creation build: <code>model.md</code> §8.
+    </div>
+  </div>
+
+  <!-- ============ SLIDE 11 · VALUE CREATION III — PAYOFF / MOIC ============ -->
+  <div class="slide">
+    <div class="slide-meta">
+      <span class="firm">Art's-Way Manufacturing · ARTW</span>
+      <span class="slide-num">11 / 13 · Value Creation Plan · Payoff</span>
+    </div>
+    <h1 class="headline">On base-case assumptions the deal roughly breaks even; the return depends on the optimistic case, so an owner must believe the plan before paying a control premium.</h1>
+    <div class="subhead">A controlling stake costs a premium over market. At the 31.5% premium paid for FONR, the buy-in is $3.39 per share. The bars show MOIC, the multiple of invested capital, how many times the money comes back. Below 1.0× is a loss.</div>
+    <div class="rule"></div>
+    <div class="body">
+      <div class="col-main">
+        <div class="dash-title">Money returned per dollar invested, buying in at $3.39 per share</div>
+        <!-- MOIC bars -->
+        <svg width="100%" viewBox="0 0 540 215">
+          <line x1="40" y1="170" x2="535" y2="170" stroke="#E5E7EB" stroke-width="1"/>
+          <line x1="40" y1="78" x2="535" y2="78" stroke="#F1F3F5" stroke-width="1" stroke-dasharray="3,3"/>
+          <text x="34" y="174" font-size="9" fill="#6B7280" text-anchor="end">0×</text>
+          <text x="34" y="82" font-size="9" fill="#6B7280" text-anchor="end">1.0× (money back)</text>
+          <!-- scale 92px per 1.0x ; bear 0.31 ->28.5, base 0.73 ->67, bull 1.44 ->132 -->
+          <rect x="90" y="142" width="90" height="28" fill="#C8102E"/>
+          <text x="135" y="134" font-size="12" fill="#C8102E" text-anchor="middle" font-weight="700">0.31×</text>
+          <text x="135" y="188" font-size="10" fill="#6B7280" text-anchor="middle">Bear case</text>
+          <text x="135" y="201" font-size="9" fill="#6B7280" text-anchor="middle">(large loss)</text>
+
+          <rect x="245" y="103" width="90" height="67" fill="#C8102E" opacity="0.65"/>
+          <text x="290" y="95" font-size="12" fill="#C8102E" text-anchor="middle" font-weight="700">0.73×</text>
+          <text x="290" y="188" font-size="10" fill="#6B7280" text-anchor="middle">Base case</text>
+          <text x="290" y="201" font-size="9" fill="#6B7280" text-anchor="middle">(below break-even)</text>
+
+          <rect x="400" y="38" width="90" height="132" fill="#1F4D3F"/>
+          <text x="445" y="30" font-size="12" fill="#1F4D3F" text-anchor="middle" font-weight="700">1.44×</text>
+          <text x="445" y="188" font-size="10" fill="#6B7280" text-anchor="middle">Optimistic case</text>
+          <text x="445" y="201" font-size="9" fill="#6B7280" text-anchor="middle">(the deal works)</text>
+        </svg>
+      </div>
+      <div class="col-side">
+        <div class="callout-box" style="margin-bottom:14px;">
+          <div class="label">What the chart says</div>
+          At a normal control premium, the base case returns less than the money put in. The deal works only in the optimistic case, where the building business converts the doubled backlog into sales, reaches about 10× earnings as a focused business, and starts acquiring small competitors.
+        </div>
+        <div class="navy-box">
+          <div class="label">The single fact that decides it</div>
+          The split between the two legs and how durable the growth is. If research-lab demand holds and farm-biosecurity orders repeat, the optimistic case is live. If the 49% jump was a one-time response to bird flu and research stays cautious, the base case of $2.46, below the price, is the ceiling.
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="src">Sources:</span> FONR precedent: CEO-led take-private at $19.00/sh, 31.5% premium, ~7–9× operating earnings, <a href="https://www.sec.gov/Archives/edgar/data/0000355019/000173112225001734/fonar_exhibit-99.htm">FONR 8-K / DEFA14A 2025-12-23</a> · return math (base 0.73×, optimistic 1.44× on bull FV $4.88, bear 0.31×): <code>data/research/artw/model.md</code> §3 · <code>peer_benchmarks.csv</code>.
+    </div>
+  </div>
+
+  <!-- ============ SLIDE 12 · FINANCIAL REVIEW ============ -->
+  <div class="slide">
+    <div class="slide-meta">
+      <span class="firm">Art's-Way Manufacturing · ARTW</span>
+      <span class="slide-num">12 / 13 · Financial Review</span>
+    </div>
+    <h1 class="headline">Estimated fair value is about $2.46 to $2.64 per share, close to today's $2.58, with the downside protected by assets and the upside in the optimistic case.</h1>
+    <div class="subhead">The estimate values each business separately and adds them, cross-checked with a discounted cash flow on the building segment. Farm assets are valued at recovery. Both balance-sheet safety tests pass. FY21–22 include the since-divested Tools unit and are not fully comparable.</div>
+    <div class="rule"></div>
+    <div class="body" style="gap:30px;">
+      <div class="col-main" style="flex:1.25;">
+        <div class="dash-title">Estimated fair value per share, against the $2.58 price</div>
+        <!-- scenario bars -->
+        <svg width="100%" viewBox="0 0 480 175">
+          <line x1="40" y1="145" x2="478" y2="145" stroke="#E5E7EB" stroke-width="1"/>
+          <!-- price reference line at 2.58 ; scale 27px per $1 ; price line y = 145 - 2.58*27 = 75.3 -->
+          <line x1="40" y1="75" x2="478" y2="75" stroke="#C8102E" stroke-width="1" stroke-dasharray="4,3"/>
+          <text x="478" y="71" font-size="9" fill="#C8102E" text-anchor="end" font-weight="600">price $2.58</text>
+          <!-- bear 1.04 -> h28 ; base 2.46 -> h66 ; bull 4.88 -> h132 top13 ; pw 2.64 ->h71 top74 -->
+          <rect x="70" y="117" width="70" height="28" fill="#C8102E"/>
+          <text x="105" y="109" font-size="11" fill="#C8102E" text-anchor="middle" font-weight="700">$1.04</text>
+          <text x="105" y="160" font-size="10" fill="#6B7280" text-anchor="middle">Bear (30%)</text>
+          <text x="105" y="172" font-size="8.5" fill="#6B7280" text-anchor="middle">−60%</text>
+
+          <rect x="175" y="79" width="70" height="66" fill="#0A2540"/>
+          <text x="210" y="71" font-size="11" fill="#0A2540" text-anchor="middle" font-weight="700">$2.46</text>
+          <text x="210" y="160" font-size="10" fill="#6B7280" text-anchor="middle">Base (45%)</text>
+          <text x="210" y="172" font-size="8.5" fill="#6B7280" text-anchor="middle">−4%</text>
+
+          <rect x="280" y="13" width="70" height="132" fill="#1F4D3F"/>
+          <text x="315" y="8" font-size="11" fill="#1F4D3F" text-anchor="middle" font-weight="700">$4.88</text>
+          <text x="315" y="160" font-size="10" fill="#6B7280" text-anchor="middle">Optimistic (25%)</text>
+          <text x="315" y="172" font-size="8.5" fill="#6B7280" text-anchor="middle">+89%</text>
+
+          <rect x="385" y="74" width="70" height="71" fill="#6B7280"/>
+          <text x="420" y="66" font-size="11" fill="#111" text-anchor="middle" font-weight="700">$2.64</text>
+          <text x="420" y="160" font-size="10" fill="#6B7280" text-anchor="middle">Weighted</text>
+          <text x="420" y="172" font-size="8.5" fill="#6B7280" text-anchor="middle">+2%</text>
+        </svg>
+        <div class="dash-title" style="margin-top:8px;">5-year segment history ($M); FY21–22 include the divested Tools unit</div>
+        <table class="data" style="font-size:10px;">
+          <tr><th></th><th>FY21</th><th>FY22</th><th>FY23</th><th>FY24</th><th>FY25</th></tr>
+          <tr><td>Farm sales</td><td>16.8</td><td>20.9</td><td>22.5</td><td>14.7</td><td>12.7</td></tr>
+          <tr><td>Building sales</td><td>5.7</td><td>4.7</td><td>7.8</td><td>9.8</td><td>10.2</td></tr>
+          <tr><td>Building op. profit</td><td>+0.07</td><td>−0.60</td><td>+0.87</td><td>+1.97</td><td>+1.75</td></tr>
+        </table>
+      </div>
+      <div class="col-side" style="flex:1;">
+        <div class="dash-title">How the base case adds up ($M)</div>
+        <table class="data" style="font-size:11px;">
+          <tr><td>Building business, on its own</td><td>$11.5</td></tr>
+          <tr><td>+ Farm assets, after selling</td><td>$7.7</td></tr>
+          <tr><td>− Net debt</td><td>($6.4)</td></tr>
+          <tr class="hl"><td>= Equity, or $2.46/sh</td><td>$12.8</td></tr>
+        </table>
+        <div style="font-size:9px;color:var(--slate);line-height:1.45;margin-top:6px;">Building value is the average of our two methods ($11.5M); the discounted-cash-flow estimate alone is $12.1M.</div>
+        <div class="dash-title" style="margin-top:10px;">What comparable businesses are worth</div>
+        <table class="data" style="font-size:10px;">
+          <tr><th>Reference</th><th>× earnings</th></tr>
+          <tr><td>FONR take-private (Dec 2025)</td><td>7–9×</td></tr>
+          <tr><td>Typical construction firm</td><td>~10×</td></tr>
+          <tr><td>WillScot (leasing, a ceiling)</td><td>11.7–14.5×</td></tr>
+          <tr class="hl"><td>Used here: bear/base/bull</td><td>5/7/10×</td></tr>
+        </table>
+        <div class="callout-box" style="margin-top:10px;">
+          <div class="label">Assets protect the downside; Graham floor holds</div>
+          Current ratio <strong>2.30×</strong> and long-term debt $2.73M below working capital $8.34M, so it passes both tests. Net current assets are $1.08 per share and book value $2.57 ≈ the price. Buying in at a 31.5% premium returns 0.73× in the base case, 1.44× in the optimistic case.
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="src">Sources:</span> Full deep-flow valuation build (SOTP, scenario DCF on cash taxes, sensitivity, Graham tests): <code>data/research/artw/model.md</code> §1–§5 (v2.1, lead-reviewed) · <a href="https://www.sec.gov/Archives/edgar/data/7623/000143774926003904/artw20251130_10k.htm">ARTW FY2025 10-K</a> (segment Note 17, balance sheet, cash-flow) · <a href="https://www.sec.gov/Archives/edgar/data/7623/000143774923003620/artw20221130_10k.htm">FY2022 10-K</a> (FY21–22 segment history) · peer multiples <code>peer_benchmarks.csv</code>; FONR / WSC / construction per peer notes.
+    </div>
+  </div>
+
+  <!-- ============ SLIDE 13 · AI DISCLOSURE APPENDIX ============ -->
+  <div class="slide">
+    <div class="slide-meta">
+      <span class="firm">Art's-Way Manufacturing · ARTW</span>
+      <span class="slide-num">13 / 13 · Appendix · AI Disclosure</span>
+    </div>
+    <h1 class="headline">AI accelerated the research; every number was rebuilt from the original company filings and is independently checkable.</h1>
+    <div class="subhead">The full running log of prompts and outcomes is in <code>docs/prompt-log.md</code>, disclosed as the case brief requires.</div>
+    <div class="rule"></div>
+    <div class="appx-grid">
+      <div>
+        <h3>Tools used</h3>
+        <ul>
+          <li><strong>Claude Code (Claude Opus):</strong> screening, filing extraction, the valuation build, and this deck.</li>
+          <li><strong>A repeatable set of Python scripts:</strong> <code>screen_companies.py</code>, <code>fetch_edgar.py</code>, <code>framework_screen.py</code>, <code>valuation.py</code> (public market data plus SEC filings).</li>
+          <li><strong>Ownership and deal-status checks:</strong> <code>check_voting_structure.py</code>, <code>check_deal_status.py</code>.</li>
+          <li><strong>Separate review agents:</strong> independent research, peer selection, and critique of drafts.</li>
+        </ul>
+        <h3>Where AI helped</h3>
+        <ul>
+          <li>Scanning a wide universe of small companies to surface Art's-Way for closer study.</li>
+          <li>Rebuilding the segment history, the one-time credit, and the cash-flow detail directly from the annual report.</li>
+          <li>Running a build-then-review loop that moved the conclusion from a hopeful "buy it cheap" read to the sober "fairly priced, the return is operational" answer in this deck.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Where review corrected the AI</h3>
+        <ul>
+          <li><strong>Caught a number tuned to the price.</strong> An early draft valued the farm assets generously enough to land fair value at exactly the $2.58 price. Review reset that to a defensible recovery, moving the base case to $2.46, slightly below the price.</li>
+          <li><strong>Corrected the policy claim to the filings.</strong> A claimed "enacted 40% research cut" was wrong: the proposed 15% cap on research overhead was enjoined, and the injunction upheld by the First Circuit in January 2026. The climate is cautious, not a confirmed cut.</li>
+          <li><strong>Flagged the estimate openly.</strong> The 60/40 split between the two legs is inferred from one disclosed figure and labeled as the key open question.</li>
+        </ul>
+        <h3>What the filings cannot settle</h3>
+        <ul>
+          <li>The split between the two legs, the age of the farm inventory, and the family's intentions are not disclosed. Each would require primary research, such as management calls or customer checks.</li>
+          <li>Comparable-company values and the current share price should be re-checked against a live source before this is published.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="src">Sources:</span> <code>docs/prompt-log.md</code> (full prompt log) · <code>data/research/artw/model.md</code> v2.1 changelog (review iterations) · <code>CLAUDE.md</code> working conventions (AI disclosure, no-hardcoded-benchmarks, verification &amp; citation discipline).
+    </div>
+  </div>
+
+</body>
+</html>
