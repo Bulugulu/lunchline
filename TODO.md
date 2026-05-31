@@ -6,6 +6,17 @@ Working backlog for the Lunchline Partners case study. Newest at top within each
 
 ---
 
+## Part 2 — AI-enabled market mapping (ACTIVE, started 2026-05-31)
+
+Direction locked via brainstorming (detail: `docs/market-mapping.md`). End market = **boutique retained executive search**, single legacy vertical, **Northeast-corridor** anchor. The vertical is **not assumed** — Phase 1 of the methodology is an AI-driven down-select across Healthcare/Life-Sci, Education/EdTech, Legal/Prof-services, Financial-services (Approach A).
+
+- [ ] Confirm Approach A + the four-vertical shortlist with Aviv.
+- [ ] Detail + get approval on the design: project-plan phases/timeline/milestones; the 4 vendor-stack categories (Market Research, Company Research/Sourcing, CRM, Outbound); the human-vs-automation funnel map.
+- [ ] Run the lightweight research pass feeding the Phase-1 vertical down-select.
+- [ ] Write the spec to `docs/superpowers/specs/`, then build the deliverable.
+
+---
+
 ## Decisions blocking other work
 
 - [ ] **Company selection — NARROWING TO A FINALIST (all-sector, non-SaaS, deep-flow only).** Direction: **AVOID SaaS** (small SaaS needs a proprietary-data or regulated-niche moat — `feedback_saas_moat_filter`); sector is an end-stage tiebreaker, not a universe filter (`feedback_sector_not_universe_filter`).

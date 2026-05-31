@@ -2,6 +2,16 @@
 
 All notable changes to the Lunchline Partners case study project.
 
+## 2026-05-31 — Started Part 2 (AI-enabled market mapping); locked direction via brainstorming
+
+Opened the second deliverable (Part 2: AI-Enabled Market Mapping and Sourcing Strategy), which had been "Not Started." Ran a structured brainstorming pass with Aviv and locked the direction (full detail in `docs/market-mapping.md`):
+
+- **End market = boutique RETAINED executive search**, on the case's approved list (knowledge-services), single-vertical, with an **East Coast / Northeast-corridor geographic anchor** (Aviv's call: source where there's local presence). Niche staffing and the AI/ML-talent vertical were both considered and rejected (commoditized / "fad" market, fuzzy skills, weak succession supply).
+- **Key reframe (Aviv's):** do *not* pre-assume the vertical. The **first workstream of the AI sourcing methodology is itself the vertical down-select** across a shortlist of legacy Northeast knowledge-services verticals (Healthcare/Life-Sciences, Education/EdTech, Legal/Professional services, Financial services), scored on fragmentation, succession supply, AI-resistance, data availability, local target density, fee economics, and operator-edge fit. This turns the case constraint ("pick one market") into the thesis: *the methodology selects the market.*
+- Settled on **Approach A** (vertical-selection-as-Phase-1, then commit) over B (parallel-map-all) and C (vertical-agnostic playbook).
+
+**Next:** confirm Approach A + the four-vertical shortlist; detail the design (project-plan phases/timeline/milestones, the 4 vendor-stack categories, human-vs-automation funnel map) for section-by-section approval; run the lightweight research pass feeding the Phase-1 down-select; write the spec; then build.
+
 ## 2026-05-30 (later) — Searched beyond the five finalists; selected ARTW as the case-study build; built the deck + Excel model
 
 After USNA/HCKT, ran a broader hunt and pivoted the thesis from public-mispricing to **take-private-and-operate**, landing on **Art's-Way Manufacturing (ARTW)** as the deck/model build target.
