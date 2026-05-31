@@ -2,6 +2,17 @@
 
 All notable changes to the Lunchline Partners case study project.
 
+## 2026-05-31 (deck cleanup + IoT/monitoring research) — simplified the End Market slide; reframed the recurring-monitoring lever to a defensible opportunity
+
+Narrative-clarity pass on `mockups/pitches/artw-deck.html` plus a hypothesis-test on the monitoring lever.
+
+- **Slide 4 (End Market) simplified** — the federal-funding narrative was a distraction on a market-size slide. **Removed** the "two unrelated federal budgets" hedge panel and the NIH 15%-cap injunction caveat; **rebalanced to a single column** (market-size table + the two leg boxes, vertically centered, wider). Trimmed the now-orphaned NIH-cap (Holland &amp; Knight) and USDA-HPAI citations from the footer.
+- **Equipment-vs-buildings clarification (deck-wide)** — stopped calling the animal-biosecurity leg "farm-building." It's part of the modular building business you **keep** (Art's-Way Scientific), not the farm **equipment** you sell (Agricultural Products). Both legs now labeled "% of the building business"; the biosecurity box says so explicitly. Cover + slide-6 closing tightened "sell the farm assets" → "sell off the farm equipment." Removed a duplicated sentence in slide-6 pillar 3.
+- **IoT/monitoring hypothesis researched** (subagent → `data/research/artw/iot_monitoring_research.md`). Tested "add IoT/monitoring → high-margin, high-growth, recurring-revenue re-rate." **Verdict: PARTIALLY TRUE — right industry, wrong owner.** The need is real, recurring, and legally mandated (Federal Select Agent Program ≥annual recertification; EU GMP Annex 1 continuous monitoring), and the serving players run ~20% margins on subscriptions — **but** the white space is already taken by direct competitor **Germfree** (ships a 21 CFR Part 11 EMS + 24/7 monitoring), a ~$2M attach is too small to re-rate a ~$23M micro-cap's multiple, and ARTW has no software/IoT capability. Credible route = **partner/white-label, not build.**
+- **Reframed the slide-8 monitoring lever** to the defensible-but-bullish version (Aviv's call: frame as opportunity, build on the modular foothold). "Attach recurring monitoring" — installed base + legally-mandated monitoring/recertification, via R&D build **or** white-labeling an existing platform, for a higher-margin recurring tail. **Dropped the unsupported "earns a higher multiple"** claim; kept the +$2.5M bull bar (the waterfall is the "if all levers work" case). Added Select Agent / EU GMP Annex 1 + research-file citations.
+- **Left open:** right-sizing the +$2.5M monitoring bar in `model.md` (model change, deferred); whether to acknowledge the Germfree monitoring gap on slide 5 (competitive positioning).
+- `iot_monitoring_research.md` is gitignored by `data/research/*/*`; force-added here for session portability like `model.md`.
+
 ## 2026-05-31 (deck build-out) — ARTW pitch refined to 11 slides; biocontainment comp → 8× multiple
 
 Iterated `mockups/pitches/artw-deck.html` from the v3 model into a tight 11-slide pitch and refined the modular multiple with fresh comp research.
