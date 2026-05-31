@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Part 2 · Vendor Stack — AI-Native Sourcing Tools (2026)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  :root {
+    --navy: #0A2540;
+    --ink: #111111;
+    --paper: #FFFFFF;
+    --slate: #6B7280;
+    --rule: #E5E7EB;
+    --rule-soft: #F1F3F5;
+    --red: #C8102E;
+    --tint: #FEF7F7;
+    --green: #1F4D3F;
+    --green-tint: #EAF3EF;
+    --amber: #B45309;
+    --link: #2563eb;
+    --grid: #EEF1F4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 24px 80px;
+    background: #d0d5dc;
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink);
+    font-feature-settings: "tnum" 1, "ss01" 1;
+  }
+  .sheet {
+    max-width: 1040px; margin: 0 auto; background: var(--paper);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12); padding: 56px 64px 64px;
+  }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .firm { font-size: 11px; color: var(--navy); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; }
+  .doc-meta { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid var(--navy); padding-bottom: 12px; }
+  .doc-meta .status { font-size: 11px; color: var(--slate); letter-spacing: 0.1em; text-transform: uppercase; }
+  h1 { font-size: 32px; font-weight: 600; color: var(--navy); letter-spacing: -0.02em; line-height: 1.12; margin: 28px 0 8px; }
+  .lede { font-size: 15px; color: var(--ink); line-height: 1.55; max-width: 94%; margin: 0 0 8px; }
+
+  h2 { font-size: 12px; font-weight: 700; color: var(--navy); letter-spacing: 0.14em; text-transform: uppercase; margin: 46px 0 4px; }
+  h2 .n { color: var(--red); margin-right: 10px; }
+  .sec-sub { font-size: 13px; color: var(--slate); line-height: 1.5; margin: 0 0 16px; max-width: 92%; }
+  .rule { height: 1px; background: var(--rule); margin: 6px 0 20px; }
+
+  /* PRINCIPLES */
+  .principles { list-style: none; counter-reset: p; padding: 0; margin: 10px 0 0; }
+  .principles li { counter-increment: p; position: relative; padding-left: 34px; margin-bottom: 15px; font-size: 14px; line-height: 1.55; }
+  .principles li:before { content: counter(p); position: absolute; left: 0; top: 1px; font-weight: 700; color: var(--red); font-size: 12px; border: 1.5px solid var(--red); border-radius: 50%; width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; }
+  .principles strong { color: var(--navy); font-weight: 600; }
+
+  /* SUMMARY TABLE */
+  .summary { width: 100%; border-collapse: collapse; font-size: 12.5px; margin-top: 6px; }
+  .summary thead th { padding: 9px 12px 9px 0; text-align: left; font-size: 9px; letter-spacing: 0.1em; color: var(--slate); text-transform: uppercase; font-weight: 600; border-bottom: 2px solid var(--navy); vertical-align: bottom; }
+  .summary thead th.cost { text-align: right; }
+  .summary tbody td { padding: 12px 12px 12px 0; border-bottom: 1px solid var(--rule); vertical-align: top; line-height: 1.4; }
+  .summary tbody td.cat { font-weight: 700; color: var(--navy); white-space: nowrap; }
+  .summary tbody td.cost { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+  .summary .pick { font-weight: 600; color: var(--ink); }
+  .summary .verdict { font-size: 11px; color: var(--slate); }
+  .summary tfoot td { padding: 11px 12px 11px 0; font-weight: 700; color: var(--navy); border-top: 2px solid var(--navy); }
+  .summary tfoot td.cost { text-align: right; color: var(--red); font-variant-numeric: tabular-nums; font-size: 15px; }
+  .takeaway { font-size: 14px; line-height: 1.55; color: var(--ink); margin: 6px 0 18px; max-width: 94%; }
+  .takeaway strong { color: var(--navy); font-weight: 600; }
+  .not-used { margin-top: 18px; font-size: 11.5px; color: var(--slate); line-height: 1.75; border-top: 1px solid var(--rule); padding-top: 12px; }
+  .not-used .nu-label { display: inline-block; font-weight: 700; color: var(--red); text-transform: uppercase; letter-spacing: 0.1em; font-size: 9px; margin-right: 8px; }
+  .not-used strong { color: var(--ink); font-weight: 600; }
+
+  /* CATEGORY BLOCK */
+  .cat-head { display: flex; align-items: baseline; gap: 12px; margin: 42px 0 2px; }
+  .cat-head .num { font-size: 13px; font-weight: 700; color: var(--red); }
+  .cat-head .title { font-size: 18px; font-weight: 600; color: var(--navy); letter-spacing: -0.01em; }
+  .cat-head .build { margin-left: auto; font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--slate); }
+
+  /* RECOMMENDATION (up front) */
+  .rec-lead { background: var(--green-tint); border-left: 3px solid var(--green); padding: 13px 17px; margin: 12px 0 4px; font-size: 13.5px; line-height: 1.55; border-radius: 0 3px 3px 0; }
+  .rec-lead .label { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--green); font-weight: 700; margin-bottom: 5px; }
+  .rec-lead strong { color: var(--ink); font-weight: 600; }
+  .rec-lead .why { color: var(--slate); }
+
+  .vendors { width: 100%; border-collapse: collapse; font-size: 12.5px; margin-top: 14px; }
+  .vendors thead th { padding: 8px 12px 8px 0; text-align: left; font-size: 9px; letter-spacing: 0.1em; color: var(--slate); text-transform: uppercase; font-weight: 600; border-bottom: 1px solid var(--rule); }
+  .vendors thead th.c { text-align: center; width: 64px; }
+  .vendors thead th.v { text-align: center; width: 96px; }
+  .vendors tbody td { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--rule-soft); vertical-align: top; line-height: 1.42; }
+  .vendors tbody td.name { font-weight: 600; color: var(--navy); white-space: nowrap; }
+  .vendors tbody td.price { font-variant-numeric: tabular-nums; color: var(--ink); white-space: nowrap; }
+  .vendors tbody td.mcp { text-align: center; }
+  .vendors tbody td.rec { text-align: center; }
+  .pill { font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; padding: 3px 8px; border-radius: 3px; white-space: nowrap; }
+  .pill.buy { color: var(--green); background: var(--green-tint); }
+  .pill.thin { color: var(--amber); background: #FdF3E6; }
+  .pill.skip { color: var(--slate); background: var(--rule-soft); }
+  .yes { color: var(--green); font-weight: 700; }
+  .no { color: var(--slate); font-weight: 700; }
+  .partial { color: var(--amber); font-weight: 700; }
+
+  /* STACK */
+  .stack { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 6px; }
+  .stack thead th { padding: 9px 12px 9px 0; text-align: left; font-size: 9px; letter-spacing: 0.1em; color: var(--slate); text-transform: uppercase; font-weight: 600; border-bottom: 2px solid var(--navy); }
+  .stack thead th.cost { text-align: right; }
+  .stack tbody td { padding: 11px 12px 11px 0; border-bottom: 1px solid var(--rule); vertical-align: top; line-height: 1.4; }
+  .stack tbody td.cat { font-weight: 700; color: var(--navy); white-space: nowrap; }
+  .stack tbody td.cost { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+  .stack tfoot td { padding: 12px 12px 12px 0; font-weight: 700; color: var(--navy); border-top: 2px solid var(--navy); }
+  .stack tfoot td.cost { text-align: right; color: var(--red); font-variant-numeric: tabular-nums; font-size: 15px; }
+  .compare-line { font-size: 12px; color: var(--slate); margin-top: 10px; }
+  .compare-line strong { color: var(--red); }
+
+  /* MCP SPINE */
+  .spine { border: 1px solid var(--rule); border-radius: 4px; padding: 24px; margin-top: 8px; background: #FAFBFC; }
+  .hub { text-align: center; margin-bottom: 18px; }
+  .hub .core { display: inline-block; background: var(--navy); color: #fff; font-weight: 600; font-size: 14px; padding: 12px 26px; border-radius: 4px; letter-spacing: 0.01em; }
+  .hub .core .sub { display: block; font-size: 10px; color: #9DB6D6; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 3px; }
+  .chips { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .chip { border: 1px solid var(--rule); background: #fff; border-radius: 4px; padding: 11px 13px; font-size: 12px; }
+  .chip .ct { font-weight: 600; color: var(--navy); }
+  .chip .cm { font-size: 10px; letter-spacing: 0.04em; text-transform: uppercase; font-weight: 700; margin-top: 4px; }
+  .chip .cm.mcp { color: var(--green); }
+  .chip .cm.api { color: var(--amber); }
+  .chip .cd { font-size: 11px; color: var(--slate); margin-top: 3px; line-height: 1.35; }
+
+  /* SIGNALS */
+  .signals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 8px; }
+  .signal { border-top: 2px solid var(--red); padding-top: 12px; }
+  .signal .st { font-size: 13px; font-weight: 600; color: var(--navy); line-height: 1.3; margin-bottom: 6px; }
+  .signal .sd { font-size: 12px; color: var(--slate); line-height: 1.45; }
+
+  .flag { background: var(--tint); border-left: 3px solid var(--red); padding: 14px 18px; margin-top: 8px; font-size: 13px; line-height: 1.55; }
+  .flag .label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); font-weight: 700; margin-bottom: 5px; }
+  .flag strong { color: var(--ink); font-weight: 600; }
+
+  .footer { border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 14px; font-size: 10px; color: var(--slate); line-height: 1.7; }
+  .footer strong { color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="doc-meta">
+    <span class="firm">Lunchline Partners · Part 2</span>
+    <span class="status">Vendor Stack · 2026-05-31</span>
+  </div>
+
+  <h1>The AI-native sourcing stack</h1>
+  <p class="lede">The 2026 tooling for a lean, AI-fluent searcher acquiring a boutique executive-search firm. Four categories — market research, sourcing, CRM, outbound — selected against three principles.</p>
+
+  <!-- ============ PRINCIPLES ============ -->
+  <h2><span class="n">01</span>Guiding principles</h2>
+  <div class="rule"></div>
+  <ul class="principles">
+    <li><strong>One agent runs everything.</strong> Every tool is chosen so its data and operations feed a single AI agent that aggregates, processes, and acts on them. The priority is a tool exposing an MCP server or open API the agent can call directly.</li>
+    <li><strong>Differentiated data.</strong> We pay only for sources that give a differentiated, alpha-generating view. Commodity data that every buyer already has is used at its free tier, or skipped.</li>
+    <li><strong>Fit to the search.</strong> Data sources are matched to this specific search — executive search, owner-operated firms, demand-driven screening — rather than generic, off-the-shelf market subscriptions.</li>
+  </ul>
+
+  <!-- ============ EXEC SUMMARY ============ -->
+  <h2><span class="n">02</span>Executive summary</h2>
+  <div class="rule"></div>
+  <p class="takeaway">Four AI-native layers — each free or cheap, each feeding one agent — cover the full funnel from research to logged call for <strong>~$575–950/mo all-in</strong>, against <strong>$15,000–120,000+/yr per category</strong> for the institutional equivalent.</p>
+  <table class="summary">
+    <thead><tr><th>Category</th><th>Recommended pick</th><th>Approach</th><th class="cost">~ / mo</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="cat">Market Research</td>
+        <td><span class="pick">BLS / Census / FRED + Revelio + IBISWorld (free)</span><div class="verdict">demand-fit score per firm: hiring × industry × geography</div></td>
+        <td>Free data, fed to the agent</td>
+        <td class="cost">$0</td>
+      </tr>
+      <tr>
+        <td class="cat">Company Sourcing</td>
+        <td><span class="pick">Clay (core) + Apollo (own-key); Grata optional</span><div class="verdict">discovery is free; Apollo buys verified emails + deliverability</div></td>
+        <td>Build-led, discovery free</td>
+        <td class="cost">$264–574</td>
+      </tr>
+      <tr>
+        <td class="cat">CRM + capture</td>
+        <td><span class="pick">Attio + Granola (Meet) + OpenPhone (phone)</span><div class="verdict">agent maintains the pipeline; calls auto-transcribed into the record</div></td>
+        <td>Buy cheap, AI-native</td>
+        <td class="cost">$37–96</td>
+      </tr>
+      <tr>
+        <td class="cat">Outbound</td>
+        <td><span class="pick">Smartlead + HeyReach + Handwrytten</span><div class="verdict">rent the sending rails; the agent and Clay write the messages</div></td>
+        <td>Rent sending, build personalization</td>
+        <td class="cost">~$272</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr><td colspan="3">All-in recurring <span style="font-weight:400;color:var(--slate)">(excludes optional Grata rental)</span></td><td class="cost">~$575–950</td></tr>
+    </tfoot>
+  </table>
+  <div class="not-used">
+    <span class="nu-label">Considered, not used</span>
+    <strong>PitchBook / Statista</strong> — market-data subscriptions, not the demand signals we need · <strong>LinkedIn Talent Insights</strong> (~$6–20k/yr) — priced for recruiters, no API · <strong>ZoomInfo</strong> ($15–40k/yr) — enterprise contact database, redundant with free discovery · <strong>Kaspr</strong> — EU database, weak US data, CNIL fine · <strong>Affinity / 4Degrees</strong> — fund-grade CRM pricing · <strong>Instantly</strong> — high-volume email, overkill at ~190 touches/mo.
+  </div>
+
+  <!-- ============ CATEGORY PROFILES ============ -->
+  <h2><span class="n">03</span>Category profiles</h2>
+  <p class="sec-sub">Each category leads with the recommendation, then the comparison. Agent column: <span class="yes">●</span> ships an MCP server · <span class="partial">◐</span> open API only · <span class="no">○</span> closed or manual.</p>
+
+  <!-- ---- A. Market Research ---- -->
+  <div class="cat-head">
+    <span class="num">A</span><span class="title">Market Research</span><span class="build">Job · measure demand under each firm's book</span>
+  </div>
+  <div class="rec-lead">
+    <div class="label">Recommendation</div>
+    <strong>The free stack: BLS / Census / FRED for demand signals, Revelio's free RPLS for workforce data, and IBISWorld for underlying-industry growth.</strong>
+    <span class="why">All free and API-accessible, so the agent computes a demand-fit score per firm — its functions × industries × metros against rising or falling demand — at $0. The paid feeds (Revelio full $85,000/yr, LinkedIn Talent Insights ~$6,000–20,000/yr) are priced for institutions and skipped.</span>
+  </div>
+  <table class="vendors">
+    <thead><tr><th>Vendor</th><th>What it measures</th><th>2026 price</th><th class="c">Agent</th><th class="v">Verdict</th></tr></thead>
+    <tbody>
+      <tr><td class="name"><a href="https://www.bls.gov/developers/">BLS / Census / FRED</a></td><td>Hiring (JOLTS), occupation &amp; industry growth projections, employment by industry × metro</td><td class="price">Free, public APIs</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
+      <tr><td class="name"><a href="https://www.reveliolabs.com/public-labor-statistics/">Revelio Labs</a></td><td>Headcount, hiring &amp; attrition by role × industry × geography</td><td class="price">Free RPLS · $85,000/yr paid</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill thin">Free tier</span></td></tr>
+      <tr><td class="name"><a href="https://searchfunder.com/post/now-every-searchfunder-member-can-access-ibisworld">IBISWorld</a></td><td>Underlying-industry growth and the Executive Search 5670 report (fragmented, no firm &gt;5%)</td><td class="price">$0 via Searchfunder</td><td class="mcp"><span class="no">○</span></td><td class="rec"><span class="pill thin">One-time read</span></td></tr>
+    </tbody>
+  </table>
+
+  <!-- ---- B. Company Sourcing ---- -->
+  <div class="cat-head">
+    <span class="num">B</span><span class="title">Company Research / Sourcing</span><span class="build">Job · build and score the target universe</span>
+  </div>
+  <div class="rec-lead">
+    <div class="label">Recommendation</div>
+    <strong>Clay ($185–495/mo) is the core — orchestration, AI enrichment, and personalization, feeding the agent. Discovery is free: industry directories (AESC, Hunt Scanlon, BlueSteps) plus Google Maps and LinkedIn, scraped and structured by Claygent. The one paid contact tool is Apollo ($79/mo, own-key into Clay) for verified personal emails and email verification, cancelled once the list is enriched.</strong>
+    <span class="why">Executive-search firms are web-visible — websites, named partners, LinkedIn, directories — so the universe is self-sourceable for free; a permanent database seat ($10,000–100,000/yr) is not justified. Office phones and addresses come free from websites and Maps; only the verified personal email is worth paying for, mainly to protect email deliverability. <strong>What we get per firm:</strong> name, site, location, practice/industry mix, partner names, ~headcount, emails, AI-inferred owner and succession flags. <strong>What we don't get:</strong> audited financials or confirmed sale-intent — those come from inference and the call.</span>
+  </div>
+  <table class="vendors">
+    <thead><tr><th>Vendor</th><th>What it is</th><th>2026 price</th><th class="c">Agent</th><th class="v">Verdict</th></tr></thead>
+    <tbody>
+      <tr><td class="name"><a href="https://www.clay.com/pricing">Clay</a></td><td>Orchestration + AI enrichment + personalization; wraps providers (incl. Apollo via own-key). Owns no target database</td><td class="price">$185 / $495 per mo</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
+      <tr><td class="name"><a href="https://www.apollo.io/pricing">Apollo.io</a></td><td>Verified personal emails + verification via own-key into Clay; for deliverability, not discovery. API needs the Professional tier</td><td class="price">$79/mo (Professional)</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
+      <tr><td class="name"><a href="https://grata.com/pricing">Grata</a></td><td>Discovery accelerator only. Revenue/headcount are estimates; contacts thin below ~10 people; built for mid-market, not micro</td><td class="price">~$10,000–100,000/yr</td><td class="mcp"><span class="partial">◐</span></td><td class="rec"><span class="pill thin">Optional</span></td></tr>
+      <tr><td class="name"><a href="https://www.uplead.com/apollo-vs-zoominfo/">ZoomInfo</a></td><td>Enterprise contact database; accurate but priced and built for large sales teams — Apollo via Clay covers our need for far less</td><td class="price">$15,000–40,000/yr</td><td class="mcp"><span class="partial">◐</span></td><td class="rec"><span class="pill skip">Not used</span></td></tr>
+    </tbody>
+  </table>
+  <p class="sec-sub" style="margin-top:10px; font-size:12px;">Bench: for one-click reveal on a few high-value partners, a free LinkedIn extension (Lusha's free tier, better US data than Kaspr). Manual, outside the agent pipeline.</p>
+
+  <!-- ---- C. CRM ---- -->
+  <div class="cat-head">
+    <span class="num">C</span><span class="title">CRM</span><span class="build">Job · system of record + conversation log</span>
+  </div>
+  <div class="rec-lead">
+    <div class="label">Recommendation</div>
+    <strong>Attio (free to $59/seat/mo).</strong>
+    <span class="why">It is AI-native and ships an MCP server with write access, so the agent reads and maintains the pipeline directly rather than the searcher updating records by hand. Affinity (~$2,000–2,700/seat/yr) has better automatic email capture but is priced for funds. HubSpot's free tier is the fallback if Attio is dropped.</span>
+  </div>
+  <table class="vendors">
+    <thead><tr><th>Vendor</th><th>What it is</th><th>2026 price</th><th class="c">Agent</th><th class="v">Verdict</th></tr></thead>
+    <tbody>
+      <tr><td class="name"><a href="https://docs.attio.com/mcp/overview">Attio</a></td><td>AI-native CRM; first-class MCP with write access, so an agent maintains the pipeline</td><td class="price">$0 – $59/seat/mo</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
+      <tr><td class="name"><a href="https://developer.affinity.co/pages/mcp/introduction">Affinity</a></td><td>Category leader; best automatic email capture; MCP read/write but gated to top tiers</td><td class="price">~$2,000–2,700/seat/yr</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill skip">Skip</span></td></tr>
+      <tr><td class="name"><a href="https://www.hubspot.com/products/crm/starter">HubSpot</a></td><td>Generic CRM; free tier works, but AI and automation are paid</td><td class="price">$0 / $20 per mo</td><td class="mcp"><span class="partial">◐</span></td><td class="rec"><span class="pill thin">Fallback</span></td></tr>
+    </tbody>
+  </table>
+
+  <p class="takeaway" style="font-size:13px; margin:28px 0 2px;"><strong style="color:var(--navy);">Conversation capture</strong> — part of the system of record: every qualifying call and Google Meet transcribed straight into the repo for the agent.</p>
+  <div class="rec-lead">
+    <div class="label">Recommendation</div>
+    <strong>Granola Business ($14/mo) for Google Meet — bot-less, native Windows, transcripts pulled via its MCP server — paired with OpenPhone / Quo Business ($23/mo) for phone calls, which transcribes every call and pushes a webhook to the repo. ~$37/mo.</strong>
+    <span class="why">No single bot-less tool captures both Meet on Windows and cell calls, so the two legs split. Both feed one ingestion endpoint (n8n/Zapier) that drops the transcript into the record and triggers the agent to summarize, extract next steps, and update the pipeline. Routing owner calls through the OpenPhone softphone is more reliable than recording a cell call, and it doubles as the phone-outreach channel. Disclose recording at the top of every call (treat as all-party consent).</span>
+  </div>
+  <table class="vendors">
+    <thead><tr><th>Vendor</th><th>What it is</th><th>2026 price</th><th class="c">Agent</th><th class="v">Verdict</th></tr></thead>
+    <tbody>
+      <tr><td class="name"><a href="https://www.granola.ai/pricing">Granola</a></td><td>Google Meet via system audio, no bot; native Windows; MCP transcript access on Business tier</td><td class="price">$14/user/mo</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
+      <tr><td class="name"><a href="https://www.openphone.com/product/api">OpenPhone / Quo</a></td><td>Softphone with native call transcription; call-transcript webhook pushes JSON to the repo; also the phone-outreach channel</td><td class="price">$23/user/mo</td><td class="mcp"><span class="partial">◐</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
+      <tr><td class="name"><a href="https://docs.fireflies.ai/getting-started/mcp-configuration">Fireflies</a></td><td>Meet + strongest webhook/MCP, but a recorder bot joins the call — less ideal for sensitive owner calls</td><td class="price">$10/user/mo</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill thin">Alternative</span></td></tr>
+    </tbody>
+  </table>
+  <p class="sec-sub" style="margin-top:10px; font-size:12px;">Recording disclosure: US law ranges from one-party to all-party consent (CA, FL, WA, IL, PA, MA and others). Disclose and get a "yes" at the top of every owner call.</p>
+
+  <!-- ---- D. Outbound ---- -->
+  <div class="cat-head">
+    <span class="num">D</span><span class="title">Outbound</span><span class="build">Job · reach owners and earn the reply</span>
+  </div>
+  <div class="rec-lead">
+    <div class="label">Recommendation</div>
+    <strong>Rent the sending infrastructure and build the personalization: Smartlead ($94/mo) for email deliverability, HeyReach ($79/mo) for LinkedIn, Handwrytten (~$99/mo) for pen-and-ink mail; a Claude agent with Clay writes the per-owner message.</strong>
+    <span class="why">Deliverability is fragile and worth renting; personalization and orchestration are where the agent adds value. The ≥10% reply target only holds across channels, so LinkedIn and mail carry it, with email as reinforcement. Smartlead's 116-tool MCP and HeyReach's MCP let one agent run all of it.</span>
+  </div>
+  <table class="vendors">
+    <thead><tr><th>Vendor</th><th>What it is</th><th>2026 price</th><th class="c">Agent</th><th class="v">Verdict</th></tr></thead>
+    <tbody>
+      <tr><td class="name"><a href="https://www.smartlead.ai/blog/build-ai-outbound-agent-smartlead-mcp">Smartlead</a></td><td>Email sending: warmup, inbox rotation, deliverability; 116-tool MCP server</td><td class="price">$94/mo (Pro)</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
+      <tr><td class="name"><a href="https://www.heyreach.io/pricing">HeyReach</a></td><td>LinkedIn automation with MCP — the channel where older firm owners actually reply</td><td class="price">$79/mo</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
+      <tr><td class="name"><a href="https://www.handwrytten.com/pricing/">Handwrytten</a></td><td>Real pen-and-ink mail via API — the highest-signal channel in searcher accounts</td><td class="price">~$99/mo + per card</td><td class="mcp"><span class="partial">◐</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ MCP SPINE ============ -->
+  <h2><span class="n">04</span>The architecture — one agent, MCP spine</h2>
+  <div class="spine">
+    <div class="hub"><span class="core">Claude agent<span class="sub">orchestration via MCP and API</span></span></div>
+    <div class="chips">
+      <div class="chip"><div class="ct">BLS / Revelio</div><div class="cm api">API ◐</div><div class="cd">demand signals → fit score</div></div>
+      <div class="chip"><div class="ct">Attio CRM</div><div class="cm mcp">MCP ● read + write</div><div class="cd">agent maintains pipeline</div></div>
+      <div class="chip"><div class="ct">Smartlead</div><div class="cm mcp">MCP ● 116 tools</div><div class="cd">email send + warmup</div></div>
+      <div class="chip"><div class="ct">HeyReach</div><div class="cm mcp">MCP ●</div><div class="cd">LinkedIn outreach</div></div>
+      <div class="chip"><div class="ct">Apollo (own-key)</div><div class="cm api">API ◐</div><div class="cd">verified emails + phones</div></div>
+      <div class="chip"><div class="ct">Clay</div><div class="cm api">enrich + draft ◐</div><div class="cd">per-owner personalization</div></div>
+      <div class="chip"><div class="ct">Granola / OpenPhone</div><div class="cm mcp">MCP / webhook ●</div><div class="cd">call + meeting transcripts</div></div>
+    </div>
+  </div>
+
+  <!-- ============ RECOMMENDED STACK ============ -->
+  <h2><span class="n">05</span>The recommended lean stack</h2>
+  <div class="rule"></div>
+  <table class="stack">
+    <thead><tr><th>Category</th><th>Tools</th><th class="cost">Recurring / mo</th></tr></thead>
+    <tbody>
+      <tr><td class="cat">Market Research</td><td>BLS / Census / FRED + Indeed Hiring Lab + Revelio RPLS + IBISWorld (all free)</td><td class="cost">$0</td></tr>
+      <tr><td class="cat">Company Sourcing</td><td>Clay $185–495 + Apollo $79 (own-key) <span style="color:var(--slate)">— discovery free via directories + Claygent; Grata optional</span></td><td class="cost">$264–574</td></tr>
+      <tr><td class="cat">CRM + capture</td><td>Attio (free–$59) + Granola Business $14 + OpenPhone/Quo $23 <span style="color:var(--slate)">(OpenPhone also the phone channel)</span></td><td class="cost">$37–96</td></tr>
+      <tr><td class="cat">Outbound</td><td>Smartlead $94 + HeyReach $79 + Handwrytten ~$99 <span style="color:var(--slate)">(Clay shared)</span></td><td class="cost">~$272</td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td colspan="2">All-in recurring &nbsp;<span style="font-weight:400;color:var(--slate)">excluding the temporary sourcing-database rental</span></td><td class="cost">~$575–950</td></tr>
+    </tfoot>
+  </table>
+  <p class="compare-line">The institutional equivalent runs <strong>$15,000–120,000+ per year, per category</strong> (Revelio $85,000/yr · LinkedIn Talent Insights ~$6,000–20,000/yr · Affinity ~$2,000/seat · enterprise sourcing databases $10,000–100,000/yr). The lean AI-native stack does the same work for roughly 1–2% of that cost.</p>
+
+  <!-- ============ 2026 SIGNALS ============ -->
+  <h2><span class="n">06</span>Three 2026 signals</h2>
+  <div class="signals">
+    <div class="signal"><div class="st">Grata and SourceScrub are now one company</div><div class="sd">Datasite acquired both and is merging them (Aug 2025). The hedge of buying both for coverage is gone and pricing leverage drops, which strengthens the build-it-yourself case. <a href="https://www.datasite.com/en/company/news/datasite-to-merge-sourcescrub-and-grata-expanding-private-market-intelligence-solutions">Source</a></div></div>
+    <div class="signal"><div class="st">IBISWorld is $0 through Searchfunder</div><div class="sd">Searchfunder negotiated free, unlimited IBISWorld access for its members; the Executive Search 5670 report is included. <span style="color:var(--amber);font-weight:600">Announced 2020, expanded Jan 2023 — re-confirm it is still live.</span> <a href="https://searchfunder.com/post/now-every-searchfunder-member-can-access-ibisworld">Source</a></div></div>
+    <div class="signal"><div class="st">Clay re-priced down in March 2026</div><div class="sd">Data costs cut 50–90%, collapsed to $185 and $495 tiers — the AI-personalization layer got materially cheaper. <a href="https://www.cleanlist.ai/blog/2026-03-12-clay-pricing-changes-2026">Source</a></div></div>
+  </div>
+
+  <!-- ============ FLAG ============ -->
+  <h2><span class="n">07</span>One caution that feeds the next deliverable</h2>
+  <div class="flag">
+    <div class="label">Reply-rate reality</div>
+    <strong>The ≥10% reply KPI holds only as a multi-channel number.</strong> Cold email alone runs ~3.4% across platforms; a searcher who closed a deal reported 2–4% on email. Reaching 10% means leading with LinkedIn (30%+ connection acceptance) and pen-and-ink mail (the highest-signal channel), with email as reinforcement. This sets up the <strong>human-vs-automation map</strong>: the agent runs the top of the funnel and all logistics, while a human owns every reply and call. Convincing a 60-year-old founder to sell is a trust-dependent sale, and the ETA community is wary of over-automating it.
+  </div>
+
+  <div class="footer">
+    <strong>Pricing note:</strong> Where pricing is sales-gated (Grata, Inven, 4Degrees, Affinity, LinkedIn Talent Insights, Lightcast paid), figures are third-party estimates labeled as such — confirm with live quotes. AI-vendor pricing changes monthly; re-verify at point of use. <strong>Sources:</strong> per-vendor links inline. Research compiled via parallel category agents over Searchfunder, vendor documentation, and ETA community sources. Part 2 deliverable 2 of 3 (project plan → vendor stack → human-vs-automation map). Lunchline Partners case study · Aviv Sheriff · 2026-05-31.
+  </div>
+
+</div>
+</body>
+</html>

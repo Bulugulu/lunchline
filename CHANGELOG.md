@@ -2,6 +2,16 @@
 
 All notable changes to the Lunchline Partners case study project.
 
+## 2026-05-31 (Part 2 build) — Project plan + AI-native vendor stack (HTML working docs)
+
+Built the first two Part-2 deliverables as standalone HTML working docs (Direction-1 design system), iterating section-by-section with Aviv. **Scope note:** this build worked the **executive-search end market directly and broadly** — the Phase-1 vertical down-select from `docs/market-mapping.md` (Approach A) was set aside; reconcile or record as a deliberate scope change.
+
+- **Project plan** (`mockups/pitches/part2-project-plan.html`): 12-month acquisition search as a funnel. KPI = close in 12 months (vs 18–30 traditional); funnel worked backward from 1 deal → ~1,500 sourced leads at 10% reply, with reply-rate sensitivity (5/10/15% → 3,000/1,500/1,000). CSS Gantt simplified to 4 continuous, overlapping workstreams (sourcing+research, outreach, LOI/negotiations, due diligence) after correcting the wrong "map the whole universe upfront" assumption — sourcing runs continuously at ~190/mo. Milestone gates included.
+- **Vendor stack** (`mockups/pitches/part2-vendor-stack.html`): four categories on three guiding principles (one agent via MCP/API; differentiated/alpha data; fit to the search). Each leads with a recommendation + a 3-vendor comparison + agent-readiness marks. Picks: **Market Research** = free labor-market data (BLS/Census/FRED + Revelio RPLS + IBISWorld), reframed from "industry reports" to demand-signal analysis (per-firm demand-fit score); **Sourcing** = Clay (orchestration + AI enrichment, owns no DB) + Apollo $79 own-key-into-Clay, discovery free via directories + Claygent, Grata optional / ZoomInfo not used; **CRM** = Attio (MCP read+write) + conversation capture (Granola for Meet + OpenPhone for phone → transcripts to the repo); **Outbound** = Smartlead + HeyReach + Handwrytten, agent+Clay write the messages. All-in **~$575–950/mo** vs $15k–120k+/yr institutional. Exec summary + "considered, not used" strip + MCP-spine diagram.
+- **Research persisted** to `data/research/part2-vendors/` (6 sourced reports + README) via parallel category agents + targeted follow-ups. Key corrections surfaced: Apollo API is the **$79 Professional** tier (not $49); Grata data thins below ~10 employees (built for mid-market); Kaspr is EU-weak with a €240k CNIL fine — bench it.
+
+**Next:** pressure-test **Outbound** (channel necessity, build-vs-buy sending, LinkedIn-automation risk, ~190/mo argues for fewer tools); then build deliverable 3, the **human-vs-automation map**.
+
 ## 2026-05-31 (deck cleanup + IoT/monitoring research) — simplified the End Market slide; reframed the recurring-monitoring lever to a defensible opportunity
 
 Narrative-clarity pass on `mockups/pitches/artw-deck.html` plus a hypothesis-test on the monitoring lever.

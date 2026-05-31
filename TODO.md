@@ -6,14 +6,18 @@ Working backlog for the Lunchline Partners case study. Newest at top within each
 
 ---
 
-## Part 2 — AI-enabled market mapping (ACTIVE, started 2026-05-31)
+## Part 2 — AI-enabled market mapping (ACTIVE, building since 2026-05-31)
 
-Direction locked via brainstorming (detail: `docs/market-mapping.md`). End market = **boutique retained executive search**, single legacy vertical, **Northeast-corridor** anchor. The vertical is **not assumed** — Phase 1 of the methodology is an AI-driven down-select across Healthcare/Life-Sci, Education/EdTech, Legal/Prof-services, Financial-services (Approach A).
+End market worked **directly = executive search, sourced broadly**; 12-month acquisition-search framing. **Scope change to reconcile:** the Phase-1 vertical down-select in `docs/market-mapping.md` (Approach A) was **set aside** for this build — either restore it or formally record the change to "executive search, sourced broadly." Working HTML docs in `mockups/pitches/`; research in `data/research/part2-vendors/`.
 
-- [ ] Confirm Approach A + the four-vertical shortlist with Aviv.
-- [ ] Detail + get approval on the design: project-plan phases/timeline/milestones; the 4 vendor-stack categories (Market Research, Company Research/Sourcing, CRM, Outbound); the human-vs-automation funnel map.
-- [ ] Run the lightweight research pass feeding the Phase-1 vertical down-select.
-- [ ] Write the spec to `docs/superpowers/specs/`, then build the deliverable.
+Deliverables (3): project plan ✓ · vendor stack ✓ · human-vs-automation map ☐.
+
+- [x] **Project plan** — `part2-project-plan.html` (12-mo funnel; backward-from-1-deal math → ~1,500 leads @ 10% reply; 4-workstream Gantt; milestone gates).
+- [x] **Vendor stack** — `part2-vendor-stack.html` (Market Research / Sourcing / CRM+capture / Outbound; recommendation + 3-vendor comparison each; ~$575–950/mo all-in). Sourced research + README in `data/research/part2-vendors/`.
+- [ ] **Outbound — pressure-test (NEXT):** channel necessity (drop mail/LinkedIn to top targets only?), build-vs-buy the email sending (renting deliverability vs self-host), LinkedIn-automation account risk, and that ~190/mo low volume argues for fewer tools.
+- [ ] **Human-vs-automation map** (deliverable 3) — agent owns research/enrichment/drafting/capture-ingestion/pipeline; human owns the live conversations (auto-transcribed back via Granola/OpenPhone).
+- [ ] **Reconcile with `docs/market-mapping.md`** — restore the Phase-1 vertical down-select or document the scope change.
+- [ ] Required appendix: AI prompt log / tools used / where AI helped or hurt (shared with Part 1; `docs/prompt-log.md`).
 
 ---
 
