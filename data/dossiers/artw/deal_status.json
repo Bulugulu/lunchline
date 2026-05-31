@@ -1,0 +1,18 @@
+{
+  "ticker": "ARTW",
+  "recency_cutoff": "2024-06-09",
+  "n_8ks_scanned": 12,
+  "signals": {
+    "definitive_hits": [],
+    "closed_hits": [],
+    "exploring_hits": [],
+    "tender_offer_hits": [],
+    "acquirer_signals": []
+  },
+  "news_signals": [],
+  "status": "NONE",
+  "risk_level": "LOW",
+  "reasoning": [
+    "No deal signals in 8-Ks or news within trailing 24 months."
+  ]
+}

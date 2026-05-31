@@ -10,6 +10,27 @@ data/research/*/*
 !data/research/*/peer_benchmarks.csv
 !data/research/*/peer_notes.md
 
+# --- Portability + selection-traceability exceptions (committed) ---
+# Excel deliverable for the chosen company
+!data/research/artw/ARTW_model.xlsx
+# Candidate-screening catalogs (the trail that scored & selected ARTW)
+!data/screening/
+# The screen ARTW came out of, and the raw all-sector universe above it
+!data/framework_filtered.csv
+!data/universe_raw_allsector_full.csv
+# SEC filings for the CHOSEN company only (filings + XBRL + extracted text)
+!data/edgar/
+data/edgar/*
+!data/edgar/artw/
+# ARTW dossier: keep only the unique coverage/deal-gate metadata (skip the
+# ~20MB filings duplicate already captured under data/edgar/artw/)
+!data/dossiers/
+data/dossiers/*
+!data/dossiers/artw/
+data/dossiers/artw/*
+!data/dossiers/artw/analyst.json
+!data/dossiers/artw/deal_status.json
+
 # Scratch / working files (agent-extracted filing text, throwaway)
 tmp/
 

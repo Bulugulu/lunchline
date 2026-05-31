@@ -1,0 +1,1607 @@
+ 
+ artw20241130_10k.htm 
+ 0000007623 
+ ARTS WAY MANUFACTURING CO INC 
+ false 
+ --11-30 
+ FY 
+ 2024 
+ 108,636 
+ 32,137 
+ 0.01 
+ 0.01 
+ 500,000 
+ 500,000 
+ 0 
+ 0 
+ 0 
+ 0 
+ 0.01 
+ 0.01 
+ 9,500,000 
+ 9,500,000 
+ 5,149,173 
+ 5,106,922 
+ 112,714 
+ 94,256 
+ 3 
+ 2 
+ 1 
+ 3 
+ 40 
+ http://fasb.org/us-gaap/2024#OtherAssetsNoncurrent 
+ http://fasb.org/us-gaap/2024#OtherAssetsNoncurrent 
+ http://fasb.org/us-gaap/2024#AccruedLiabilitiesCurrent 
+ http://fasb.org/us-gaap/2024#AccruedLiabilitiesCurrent 
+ http://fasb.org/us-gaap/2024#OtherAssetsNoncurrent 
+ http://fasb.org/us-gaap/2024#OtherAssetsNoncurrent 
+ 2,466,000 
+ 4 
+ http://fasb.org/us-gaap/2024#Revenues 
+ 1 
+ http://www.artsway-mfg.com/20241130#WallStreetJournalRateMember 
+ 150,000 
+ 19,648 
+ 19,648 
+ 7.00 
+ 7.00 
+ October 1, 2037 
+ October 1, 2037 
+ 2,972 
+ 2,972 
+ 7.00 
+ 7.00 
+ May 15, 2027 
+ May 15, 2027 
+ 731 
+ 731 
+ 3.75 
+ 3.75 
+ December 18, 2022 
+ December 18, 2022 
+ June 18, 2050 
+ June 18, 2050 
+ 731 
+ 731 
+ 3.75 
+ 3.75 
+ December 18, 2022 
+ December 18, 2022 
+ June 18, 2050 
+ June 18, 2050 
+ 731 
+ 731 
+ 3.75 
+ 3.75 
+ December 24, 2022 
+ December 24, 2022 
+ June 24, 2050 
+ June 24, 2050 
+ 0 
+ 0 
+ 0 
+ 0 
+ false 
+ false 
+ false 
+ false 
+ FY 2024 capital expenditures include finance leased assets of $39,000 in the Agricultural Products segment. 
+ FY 2022 capital expenditures include $166,000 of finance leased assets. 
+ FY 2023 capital expenditures include finance leased assets of $118,000 in the Agricultural Products segment and $17,000 in the Modular Buildings segment. 
+ 0000007623 2023-12-01 2024-11-30 
+ iso4217:USD 
+ 0000007623 2024-05-31 
+ xbrli:shares 
+ 0000007623 2025-02-04 
+ thunderdome:item 
+ 0000007623 2024-11-30 
+ 0000007623 2023-11-30 
+ iso4217:USD xbrli:shares 
+ 0000007623 2022-12-01 2023-11-30 
+ 0000007623 us-gaap:CommonStockMember 2022-11-30 
+ 0000007623 us-gaap:AdditionalPaidInCapitalMember 2022-11-30 
+ 0000007623 us-gaap:RetainedEarningsMember 2022-11-30 
+ 0000007623 us-gaap:TreasuryStockCommonMember 2022-11-30 
+ 0000007623 2022-11-30 
+ 0000007623 us-gaap:CommonStockMember 2022-12-01 2023-11-30 
+ 0000007623 us-gaap:AdditionalPaidInCapitalMember 2022-12-01 2023-11-30 
+ 0000007623 us-gaap:RetainedEarningsMember 2022-12-01 2023-11-30 
+ 0000007623 us-gaap:TreasuryStockCommonMember 2022-12-01 2023-11-30 
+ 0000007623 us-gaap:CommonStockMember 2023-11-30 
+ 0000007623 us-gaap:AdditionalPaidInCapitalMember 2023-11-30 
+ 0000007623 us-gaap:RetainedEarningsMember 2023-11-30 
+ 0000007623 us-gaap:TreasuryStockCommonMember 2023-11-30 
+ 0000007623 us-gaap:CommonStockMember 2023-12-01 2024-11-30 
+ 0000007623 us-gaap:AdditionalPaidInCapitalMember 2023-12-01 2024-11-30 
+ 0000007623 us-gaap:RetainedEarningsMember 2023-12-01 2024-11-30 
+ 0000007623 us-gaap:TreasuryStockCommonMember 2023-12-01 2024-11-30 
+ 0000007623 us-gaap:CommonStockMember 2024-11-30 
+ 0000007623 us-gaap:AdditionalPaidInCapitalMember 2024-11-30 
+ 0000007623 us-gaap:RetainedEarningsMember 2024-11-30 
+ 0000007623 us-gaap:TreasuryStockCommonMember 2024-11-30 
+ xbrli:pure 
+ 0000007623 2023-12-01 2024-08-30 
+ 0000007623 us-gaap:SalesRevenueNetMember us-gaap:CustomerConcentrationRiskMember 2023-11-01 2024-11-30 
+ 0000007623 us-gaap:SalesRevenueNetMember us-gaap:CustomerConcentrationRiskMember artw:OneCustomerMember 2023-11-01 2024-11-30 
+ 0000007623 us-gaap:SalesRevenueNetMember us-gaap:CustomerConcentrationRiskMember artw:CustomerTwoMember 2023-11-01 2024-11-30 
+ 0000007623 us-gaap:SalesRevenueNetMember us-gaap:CustomerConcentrationRiskMember 2022-12-01 2023-11-30 
+ 0000007623 us-gaap:SalesRevenueNetMember us-gaap:CustomerConcentrationRiskMember artw:OneCustomerMember 2022-12-01 2023-11-30 
+ 0000007623 artw:AgriculturalProductsFloorplanProgramMember 2024-11-30 
+ 0000007623 artw:AgriculturalProductsFloorplanProgramMember 2023-11-30 
+ utr:Y 
+ 0000007623 srt:MinimumMember 2024-11-30 
+ 0000007623 srt:MaximumMember 2024-11-30 
+ utr:M 
+ 0000007623 us-gaap:ProductMember 2023-12-01 2024-11-30 
+ 0000007623 us-gaap:ProductMember 2022-12-01 2023-11-30 
+ 0000007623 artw:FarmEquipmentMember artw:AgriculturalProductsMember 2023-12-01 2024-11-30 
+ 0000007623 artw:FarmEquipmentMember artw:ModularBuildingsMember 2023-12-01 2024-11-30 
+ 0000007623 artw:FarmEquipmentMember 2023-12-01 2024-11-30 
+ 0000007623 artw:FarmEquipmentServicePartsMember artw:AgriculturalProductsMember 2023-12-01 2024-11-30 
+ 0000007623 artw:FarmEquipmentServicePartsMember artw:ModularBuildingsMember 2023-12-01 2024-11-30 
+ 0000007623 artw:FarmEquipmentServicePartsMember 2023-12-01 2024-11-30 
+ 0000007623 artw:ModularBuildingsMember artw:AgriculturalProductsMember 2023-12-01 2024-11-30 
+ 0000007623 artw:ModularBuildingsMember artw:ModularBuildingsMember 2023-12-01 2024-11-30 
+ 0000007623 artw:ModularBuildingsMember 2023-12-01 2024-11-30 
+ 0000007623 artw:ModularBuildingsLeaseIncomeMember artw:AgriculturalProductsMember 2023-12-01 2024-11-30 
+ 0000007623 artw:ModularBuildingsLeaseIncomeMember artw:ModularBuildingsMember 2023-12-01 2024-11-30 
+ 0000007623 artw:ModularBuildingsLeaseIncomeMember 2023-12-01 2024-11-30 
+ 0000007623 us-gaap:ProductAndServiceOtherMember artw:AgriculturalProductsMember 2023-12-01 2024-11-30 
+ 0000007623 us-gaap:ProductAndServiceOtherMember artw:ModularBuildingsMember 2023-12-01 2024-11-30 
+ 0000007623 us-gaap:ProductAndServiceOtherMember 2023-12-01 2024-11-30 
+ 0000007623 artw:AgriculturalProductsMember 2023-12-01 2024-11-30 
+ 0000007623 artw:ModularBuildingsMember 2023-12-01 2024-11-30 
+ 0000007623 artw:FarmEquipmentMember artw:AgriculturalProductsMember 2022-12-01 2023-11-30 
+ 0000007623 artw:FarmEquipmentMember artw:ModularBuildingsMember 2022-12-01 2023-11-30 
+ 0000007623 artw:FarmEquipmentMember 2022-12-01 2023-11-30 
+ 0000007623 artw:FarmEquipmentServicePartsMember artw:AgriculturalProductsMember 2022-12-01 2023-11-30 
+ 0000007623 artw:FarmEquipmentServicePartsMember artw:ModularBuildingsMember 2022-12-01 2023-11-30 
+ 0000007623 artw:FarmEquipmentServicePartsMember 2022-12-01 2023-11-30 
+ 0000007623 artw:ModularBuildingsMember artw:AgriculturalProductsMember 2022-12-01 2023-11-30 
+ 0000007623 artw:ModularBuildingsMember artw:ModularBuildingsMember 2022-12-01 2023-11-30 
+ 0000007623 artw:ModularBuildingsMember 2022-12-01 2023-11-30 
+ 0000007623 artw:ModularBuildingsLeaseIncomeMember artw:AgriculturalProductsMember 2022-12-01 2023-11-30 
+ 0000007623 artw:ModularBuildingsLeaseIncomeMember artw:ModularBuildingsMember 2022-12-01 2023-11-30 
+ 0000007623 artw:ModularBuildingsLeaseIncomeMember 2022-12-01 2023-11-30 
+ 0000007623 us-gaap:ProductAndServiceOtherMember artw:AgriculturalProductsMember 2022-12-01 2023-11-30 
+ 0000007623 us-gaap:ProductAndServiceOtherMember artw:ModularBuildingsMember 2022-12-01 2023-11-30 
+ 0000007623 us-gaap:ProductAndServiceOtherMember 2022-12-01 2023-11-30 
+ 0000007623 artw:AgriculturalProductsMember 2022-12-01 2023-11-30 
+ 0000007623 artw:ModularBuildingsMember 2022-12-01 2023-11-30 
+ 0000007623 2022-12-01 
+ 0000007623 us-gaap:OtherCurrentAssetsMember artw:InternalUseSoftwareMember 2024-11-30 
+ 0000007623 us-gaap:OtherCurrentAssetsMember artw:InternalUseSoftwareMember 2023-11-30 
+ 0000007623 artw:InternalUseSoftwareMember us-gaap:OperatingExpenseMember artw:NoncapitalizedImplementationCostsMember 2023-12-01 2024-11-30 
+ 0000007623 artw:InternalUseSoftwareMember us-gaap:OperatingExpenseMember artw:NoncapitalizedImplementationCostsMember 2022-12-01 2023-11-30 
+ 0000007623 us-gaap:SegmentDiscontinuedOperationsMember artw:ToolsMember 2024-10-31 
+ 0000007623 us-gaap:SegmentDiscontinuedOperationsMember artw:ToolsMember 2024-10-01 2024-10-31 
+ 0000007623 us-gaap:SegmentDiscontinuedOperationsMember 2023-11-30 
+ 0000007623 us-gaap:SegmentDiscontinuedOperationsMember 2023-12-01 2024-11-30 
+ 0000007623 us-gaap:SegmentDiscontinuedOperationsMember 2022-12-01 2023-11-30 
+ 0000007623 us-gaap:SegmentDiscontinuedOperationsMember artw:ToolsMember 2023-12-01 2024-11-30 
+ 0000007623 us-gaap:SegmentDiscontinuedOperationsMember artw:ToolsMember 2022-12-01 2023-11-30 
+ 0000007623 us-gaap:SegmentDiscontinuedOperationsMember artw:ToolsMember 2024-11-30 
+ 0000007623 us-gaap:SegmentDiscontinuedOperationsMember artw:ToolsMember 2023-11-30 
+ 0000007623 us-gaap:LandMember 2024-11-30 
+ 0000007623 us-gaap:LandMember 2023-11-30 
+ 0000007623 us-gaap:BuildingAndBuildingImprovementsMember 2024-11-30 
+ 0000007623 us-gaap:BuildingAndBuildingImprovementsMember 2023-11-30 
+ 0000007623 us-gaap:ConstructionInProgressMember 2024-11-30 
+ 0000007623 us-gaap:ConstructionInProgressMember 2023-11-30 
+ 0000007623 us-gaap:MachineryAndEquipmentMember 2024-11-30 
+ 0000007623 us-gaap:MachineryAndEquipmentMember 2023-11-30 
+ 0000007623 us-gaap:VehiclesMember 2024-11-30 
+ 0000007623 us-gaap:VehiclesMember 2023-11-30 
+ 0000007623 us-gaap:FurnitureAndFixturesMember 2024-11-30 
+ 0000007623 us-gaap:FurnitureAndFixturesMember 2023-11-30 
+ 0000007623 artw:ModularBuildingsMember 2024-11-30 
+ 0000007623 artw:ModularBuildingsMember 2023-11-30 
+ 0000007623 artw:LeasedBuildingsMember artw:ModularBuildingsMember 2024-11-30 
+ 0000007623 artw:ModularBuildingsMember 2022-12-01 2023-11-30 
+ 0000007623 us-gaap:RevolvingCreditFacilityMember artw:BankMidwestMember 2024-11-30 
+ 0000007623 artw:BankMidwestMember 2024-11-30 
+ 0000007623 us-gaap:RevolvingCreditFacilityMember artw:BankMidwestMember 2023-12-01 2024-11-30 
+ 0000007623 artw:TermLoanDueOctober2037Member artw:BankMidwestMember 2024-11-30 
+ 0000007623 artw:TermLoanDueOctober2037Member artw:BankMidwestMember 2024-11-30 
+ 0000007623 artw:TermLoanDueOctober2037Member artw:BankMidwestMember 2023-12-01 2024-11-30 
+ 0000007623 artw:UnitedStatesDepartmentOfAgricultureMember artw:TermLoanDueOctober2037Member artw:BankMidwestMember 2023-12-01 2024-11-30 
+ 0000007623 artw:JWardMcconnellJrMember artw:TermLoanDueOctober2037Member artw:BankMidwestMember 2023-12-01 2024-11-30 
+ 0000007623 artw:TermLoanDueOctober2037Member artw:BankMidwestMember 2024-10-23 2024-10-23 
+ 0000007623 artw:RoofTermLoanMember artw:BankMidwestMember 2022-05-17 
+ 0000007623 artw:RoofTermLoanMember artw:BankMidwestMember 2024-10-23 2024-10-23 
+ 0000007623 artw:BankMidwestMember 2017-09-28 2017-09-28 
+ 0000007623 artw:BankMidwestMember srt:MinimumMember 2017-09-28 2017-09-28 
+ 0000007623 artw:BankMidwestMember 2023-12-01 2024-11-30 
+ 0000007623 artw:EIDLAssistanceProgramLoanOneMember 2020-06-18 2020-06-18 
+ 0000007623 artw:EIDLAssistanceProgramLoanThreeMember 2020-06-24 2020-06-24 
+ 0000007623 artw:EconomicInjuryDistasterLoanAssistanceProgramMember 2020-06-24 
+ 0000007623 artw:EIDLAssistanceProgramLoanTwoMember 2020-06-24 2020-06-24 
+ 0000007623 artw:EconomicInjuryDistasterLoanAssistanceProgramMember 2020-06-24 2020-06-24 
+ 0000007623 artw:TermLoanDueOctober2037Member 2023-12-01 2024-11-30 
+ 0000007623 artw:TermLoanDueOctober2037Member 2022-12-01 2023-11-30 
+ 0000007623 artw:TermLoanDueOctober2037Member 2024-11-30 
+ 0000007623 artw:TermLoanDueOctober2037Member 2023-11-30 
+ 0000007623 artw:BankMidwestLoan2Member 2023-12-01 2024-11-30 
+ 0000007623 artw:BankMidwestLoan2Member 2022-12-01 2023-11-30 
+ 0000007623 artw:BankMidwestLoan2Member 2024-11-30 
+ 0000007623 artw:BankMidwestLoan2Member 2023-11-30 
+ 0000007623 artw:SBALoanOneMember 2023-12-01 2024-11-30 
+ 0000007623 artw:SBALoanOneMember 2022-12-01 2023-11-30 
+ 0000007623 artw:SBALoanOneMember 2024-11-30 
+ 0000007623 artw:SBALoanOneMember 2023-11-30 
+ 0000007623 artw:SBALoanTwoMember 2023-12-01 2024-11-30 
+ 0000007623 artw:SBALoanTwoMember 2022-12-01 2023-11-30 
+ 0000007623 artw:SBALoanTwoMember 2024-11-30 
+ 0000007623 artw:SBALoanTwoMember 2023-11-30 
+ 0000007623 artw:SBALoanThreeMember 2023-12-01 2024-11-30 
+ 0000007623 artw:SBALoanThreeMember 2022-12-01 2023-11-30 
+ 0000007623 artw:SBALoanThreeMember 2024-11-30 
+ 0000007623 artw:SBALoanThreeMember 2023-11-30 
+ 0000007623 us-gaap:RelatedPartyMember 2023-12-01 2024-11-30 
+ 0000007623 us-gaap:RelatedPartyMember 2022-12-01 2023-11-30 
+ 0000007623 us-gaap:RelatedPartyMember 2024-11-30 
+ 0000007623 us-gaap:RelatedPartyMember 2023-11-30 
+ 0000007623 artw:The2020PlanMember 2020-02-25 2020-02-25 
+ 0000007623 artw:The2011PlanMember 2020-02-25 
+ 0000007623 artw:NonQualifiedStockUnitsToNonEmployeeDirectorsAnnuallyOrUponElectionMember 2020-02-25 
+ 0000007623 artw:NonqualifiedStockUnitsToNonemployeeDirectorsQuarterlyMember 2020-02-25 2020-02-25 
+ 0000007623 srt:DirectorMember artw:VestingImmediatelyMember 2023-12-01 2024-11-30 
+ 0000007623 srt:DirectorMember artw:VestingImmediatelyMember 2022-12-01 2023-11-30 
+ 0000007623 artw:EmployeesDirectorsAndConsultantsMember artw:AwardsWithThreeyearVestingMember 2023-12-01 2024-11-30 
+ 0000007623 artw:EmployeesDirectorsAndConsultantsMember artw:AwardsWithThreeyearVestingMember 2022-12-01 2023-11-30 
+ 0000007623 2024-09-01 2024-11-30 
+ 0000007623 us-gaap:OperatingSegmentsMember artw:AgriculturalProductsMember 2023-12-01 2024-11-30 
+ 0000007623 us-gaap:OperatingSegmentsMember artw:ModularBuildingsMember 2023-12-01 2024-11-30 
+ 0000007623 us-gaap:OperatingSegmentsMember 2023-12-01 2024-11-30 
+ 0000007623 us-gaap:OperatingSegmentsMember artw:AgriculturalProductsMember 2024-11-30 
+ 0000007623 us-gaap:OperatingSegmentsMember artw:ModularBuildingsMember 2024-11-30 
+ 0000007623 us-gaap:OperatingSegmentsMember 2024-11-30 
+ 0000007623 us-gaap:OperatingSegmentsMember artw:AgriculturalProductsMember 2022-12-01 2023-11-30 
+ 0000007623 us-gaap:OperatingSegmentsMember artw:ModularBuildingsMember 2022-12-01 2023-11-30 
+ 0000007623 us-gaap:OperatingSegmentsMember 2022-12-01 2023-11-30 
+ 0000007623 us-gaap:OperatingSegmentsMember artw:AgriculturalProductsMember 2023-11-30 
+ 0000007623 us-gaap:OperatingSegmentsMember artw:ModularBuildingsMember 2023-11-30 
+ 0000007623 us-gaap:OperatingSegmentsMember 2023-11-30 
+ 0000007623 us-gaap:OperatingSegmentsMember artw:ToolsMember 2023-11-30 
+ FORM 10-K 
+ Table of Contents 
+ UNITED STATES SECURITIES AND EXCHANGE COMMISSION 
+ Washington, D.C. 20549 
+ FORM 10-K 
+ &#9746; ANNUAL REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934 
+ For the fiscal year ended November 30, 2024 
+ &#9744; TRANSITION REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934 
+ For the transition period from ___________ to ____________ 
+ Commission file number 000-5131 
+ ART &#8217; S-WAY MANUFACTURING CO., INC. 
+ (Exact name of registrant as specified in its charter) 
+ Delaware 42-0920725 
+ (State or other jurisdiction of incorporation or organization) (I.R.S. Employer Identification No.) 
+ P.O. Box 288 
+ 5556 Highway 9 
+ Armstrong , Iowa 50514 
+ (Address of principal executive offices, including zip code) 
+ ( 712 ) 864-3131 
+ (Registrant&#8217;s telephone number, including area code) 
+ Securities registered pursuant to Section 12(b) of the Act: 
+ Title of each class Trading Symbol(s) Name of each exchange on which registered 
+ Common stock $.01 par value ARTW The Nasdaq Stock Market LLC 
+ Securities registered pursuant to Section 12(g) of the Act: 
+ None 
+ Indicate by check mark if the registrant is a well-known seasoned issuer, as defined in Rule 405 of the Securities Act. &#9744; Yes &#9746; No 
+ Indicate by check mark if the registrant is not required to file reports pursuant to Section 13 or Section 15(d) of the Act. &#9744; Yes &#9746; No 
+ Indicate by check mark whether the registrant (1) has filed all reports required to be filed by Section 13 or 15(d) of the Securities Exchange Act of 1934 during the preceding 12 months (or for such shorter period that the registrant was required to file such reports), and (2) has been subject to such filing requirements for the past 90 days. &#9746; Yes &#9744; No 
+ Indicate by check mark whether the registrant has submitted electronically every Interactive Data File required to be submitted pursuant to Rule 405 of Regulation S-T (&#167; 232.405 of this chapter) during the preceding 12 months (or for such shorter period that the registrant was required to submit such files). &#9746; Yes &#9744; No 
+ Table of Contents 
+ Indicate by check mark whether the registrant is a large accelerated filer, an accelerated filer, a non-accelerated filer, smaller reporting company, or an emerging growth company. See the definitions of &#8220;large accelerated filer,&#8221; &#8220;accelerated filer,&#8221; &#8220;smaller reporting company,&#8221; and &#8220;emerging growth company&#8221; in Rule 12b-2 of the Exchange Act. 
+ Large accelerated filer &#9744; Accelerated filer &#9744; 
+ Non-accelerated filer &#9746; Smaller reporting company &#9746; 
+ Emerging growth company &#9744; 
+ If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. &#9744; 
+ Indicated by check mark whether the registrant has filed a report on and attestation to its management&#8217;s assessment of the effectiveness of its internal control over financial reporting under Section 404(b) of the Sarbanes-Oxley Act (15 U.S.C. 7262(b)) by the registered public accounting firm that prepared or issued its audit report. &#9744; 
+ If securities are registered pursuant to Section 12(b) of the Act, indicate by check mark whether the financial statements of the registrant included in the filing reflect the correction of an error to previously issued financial statements. &#9744; 
+ Indicate by check mark whether any of those error corrections are restatements that required a recovery analysis of incentive-based compensation received by any of the registrant&#8217;s executive officers during the relevant recovery period pursuant to &#167;240.10D-1(b). &#9744; 
+ Indicate by check mark whether the registrant is a shell company (as defined in Rule 12b-2 of the Act). Yes &#9744; No &#9746; 
+ The aggregate market value of the voting and non-voting common equity held by non-affiliates as of the last business day of the registrant&#8217;s most recently completed second fiscal quarter, based on the closing sale price on May 31, 2024 as reported on the Nasdaq Stock Market LLC ($1.74 per share), was approximately $ 4,154,977 . 
+ As of February 4, 2025 there were 5,082,459 shares of the registrant&#8217;s common stock outstanding. 
+ DOCUMENTS INCORPORATED BY REFERENCE 
+ Portions of the definitive proxy statement for the registrant&#8217;s 2025 Annual Meeting of Stockholders to be filed within 120 days of November 30, 2024 are incorporated by reference into Part III of this Annual Report on Form 10-K. 
+ Table of Contents 
+ Art &#8217; s-Way Manufacturing Co., Inc. 
+ Index to Annual Report on Form 10-K 
+ Page 
+ Part I 
+ Item 1. BUSINESS 
+ 2 
+ Item 1A. RISK FACTORS 
+ 6 
+ Item 1B. UNRESOLVED STAFF COMMENTS 
+ 6 
+ Item 1C. CYBERSECURITY 
+ 6 
+ Item 2. PROPERTIES 
+ 6 
+ Item 3. LEGAL PROCEEDINGS 
+ 6 
+ Item 4. MINE SAFETY DISCLOSURES 
+ 6 
+ Part II 
+ Item 5. MARKET FOR REGISTRANT&#8217;S COMMON EQUITY, RELATED STOCKHOLDER MATTERS AND ISSUER PURCHASES OF EQUITY SECURITIES 
+ 7 
+ Item 6. [RESERVED] 
+ 7 
+ Item 7. MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS 
+ 7 
+ Item 7A. QUANTITATIVE AND QUALITATIVE DISCLOSURES ABOUT MARKET RISK 
+ 12 
+ Item 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA 
+ 13 
+ Item 9. CHANGES IN AND DISAGREEMENTS WITH ACCOUNTANTS ON ACCOUNTING AND FINANCIAL DISCLOSURE 
+ 39 
+ Item 9A. CONTROLS AND PROCEDURES 
+ 39 
+ Item 9B. OTHER INFORMATION 
+ 39 
+ Item 9C. DISCLOSURE REGARDING FOREIGN JURISDICTIONS THAT PREVENT INSPECTIONS 
+ 39 
+ Part III 
+ Item 10. DIRECTORS, EXECUTIVE OFFICERS AND CORPORATE GOVERNANCE 
+ 40 
+ Item 11. EXECUTIVE COMPENSATION 
+ 40 
+ Item 12. SECURITY OWNERSHIP OF CERTAIN BENEFICIAL OWNERS AND MANAGEMENT AND RELATED STOCKHOLDER MATTERS 
+ 40 
+ Item 13. CERTAIN RELATIONSHIPS AND RELATED TRANSACTIONS, AND DIRECTOR INDEPENDENCE 
+ 40 
+ Item 14. PRINCIPAL ACCOUNTANT FEES AND SERVICES 
+ 40 
+ Part IV 
+ Item 15. EXHIBITS AND FINANCIAL STATEMENT SCHEDULES 
+ 41 
+ Table of Contents 
+ FORWARD LOOKING STATEMENTS 
+ This Annual Report on Form 10-K (this &#8220;report&#8221;) may contain forward-looking statements that reflect future events, future business, industry and other conditions, our future performance, and our plans and expectations for future operations and actions. In some cases forward-looking statements may be identified by the use of words such as &#8220;may,&#8221; &#8220;should,&#8221; &#8220;anticipate,&#8221; &#8220;believe,&#8221; &#8220;expect,&#8221; &#8220;plan,&#8221; &#8220;future,&#8221; &#8220;intend,&#8221; &#8220;could,&#8221; &#8220;estimate,&#8221; &#8220;predict,&#8221; &#8220;hope,&#8221; &#8220;potential,&#8221; &#8220;continue", "foresee,"&#8221; or the negative of these terms or other similar expressions. Forward-looking statements in this report generally relate to: our business condition and results of operations; our expectations regarding our warranty costs and order backlog; our beliefs regarding the sufficiency of working capital and cash flows; our expectations regarding our continued ability to renew or obtain financing on reasonable terms when necessary as well as our continued positive relationship with our creditors and lenders; the impact of recently issued accounting pronouncements; our intentions and beliefs relating to our costs, product developments and business strategies; our expectations concerning our continued expansion into international markets; our expectations with respect to government spending and programs that may directly or indirectly be used to purchase our products; our beliefs concerning our ability to attract and maintain an adequate workforce in a competitive labor market; our expected operating and financial results; our expectations on expense savings due to recent layoffs, strategic terminations, and our early retirement program; our beliefs concerning the effects of, and costs of compliance with government regulations; our expectations concerning our primary capital and cash flow needs; our expectations of, and the timing for, receipt of any proceeds from our Employee Retention Credit ("ERC"); our beliefs regarding competitive factors and our competitive strengths; our expectations regarding our capabilities and demand for our products; our predictions regarding the impact of seasonality; our beliefs regarding the impact of the farming industry on our business; our beliefs regarding our internal controls over financial reporting; and our intentions for paying dividends. Many of these forward-looking statements are located in this report under &#8220;Item 1. BUSINESS&#8221; and &#8220;Item 7. MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS,&#8221; but they may appear in other sections as well. 
+ You should read this report thoroughly with the understanding that our actual results may differ materially from those set forth in the forward-looking statements for many reasons, including events beyond our control and assumptions that prove to be inaccurate or unfounded. We cannot provide any assurance with respect to our future performance or results. Our actual results or actions could and likely will differ materially from those anticipated in the forward-looking statements for many reasons, including, but not limited to, the impact of changes in credit markets on our ability to continue to obtain financing on reasonable terms; our ability to repay current debt, continue to meet debt obligations and comply with financial covenants; obstacles related to liquidation of product lines; the effect of inflation, interest rate fluctuations and general economic conditions, including consumer and governmental spending, on the demand for our products and the cost of our supplies and materials; fluctuations in seasonal demand and our production cycle; the ability of our suppliers to meet our demands for raw materials and component parts; our original equipment manufacturer customers&#8217; decisions regarding supply chain structure, inventory levels, and overall business conditions; fluctuations in the price of raw materials, especially steel; our ability to predict and meet the demands of each market in which our segments operate; a decrease in demand for our products in international markets; the existence and outcome of product liability claims and other ordinary course litigation; changes in environmental, health and safety regulations and employment laws; our ability to fill open positions within the Company and retain our key employees; the cost of complying with laws, regulations, and standards relating to corporate governance and public disclosure, and the demand such compliance places on management&#8217;s time; and other factors described in this report and from time to time in our other reports filed with the Securities and Exchange Commission. We do not intend to update the forward-looking statements contained in this report other than as required by law. We caution investors not to put undue reliance on any forward-looking statements, which speak only as of the date of this report. This report and the documents that we reference in this report and have filed as exhibits should be read completely and with the understanding that our actual future results may be materially different from what we currently expect. We qualify all of our forward-looking statements by these cautionary statements. 
+ 1
+ Table of Contents 
+ PART I 
+ Item 1. BUSINESS . 
+ General 
+ Art&#8217;s-Way Manufacturing Co., Inc., a Delaware corporation (&#8220;we,&#8221; &#8220;us,&#8221; &#8220;our,&#8221; and the &#8220;Company&#8221;), began operations as a farm equipment manufacturer in 1956. Since that time, we have become a worldwide manufacturer of agricultural equipment and specialized modular science and agricultural buildings. Our principal manufacturing plant and corporate headquarters is located in Armstrong, Iowa. 
+ We have organized our business into two operating segments. Management separately evaluates the financial results of each segment because each is a strategic business unit offering different products and requiring different technology and marketing strategies. Our Agricultural Products segment manufactures and distributes farm equipment under the Art&#8217;s-Way name. Our Modular Buildings segment manufactures modular buildings for various uses, commonly animal containment and research laboratories, through our wholly owned subsidiary, Art&#8217;s-Way Scientific, Inc., an Iowa corporation. During the third quarter of fiscal 2023, the Company ceased operations of its Tools business, which was reported in discontinued operations for the twelve months ended November 30, 2023. The remaining components of the Tools segment were prior to the twelve months ended November 30, 2024. For detailed financial information relating to segment reporting, see Note 18 &#8220;Segment Information&#8221; to our financial statements in &#8220;Item 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA&#8221; of this report. 
+ Corporate information about Art&#8217;s-Way can be found on our website, http://www.artsway-mfg.com/, while information on our agriculture products can be found on http://www.artsway.com/ . The information contained on our website or available by hyperlink from our website is not a part of this report and is not incorporated into this report or any other documents we file with, or furnish to, the Securities and Exchange Commission (the "SEC"). 
+ We are subject to the reporting requirements of the Securities Exchange Act of 1934, as amended (the &#8220;Exchange Act&#8221;). The Exchange Act requires us to file periodic reports, proxy statements and other information with the &#8220;SEC&#8221;. The SEC maintains a website that contains reports, proxy and information statements, and other information regarding issuers that file electronically with the SEC. These materials may be obtained electronically by accessing the SEC&#8217;s website at http://www.sec.gov. 
+ Business of Our Segments 
+ Agricultural Products 
+ Our Agricultural Products segment, which accounted for 59.9% of our net revenue in the 2024 fiscal year and 74.2% of our net revenue in the 2023 fiscal year, is located primarily in Armstrong, Iowa. This segment manufactures a variety of specialized farm machinery under our own label, including portable and stationary animal feed processing equipment and related attachments used to mill and mix feed grains into custom animal feed rations; a line of forage equipment consisting of forage boxes, bale processors, running gear, and dump boxes; a line of manure spreaders; sugar beet harvesting equipment; and a line of dirt work equipment. We sell our labeled products through independent farm equipment dealers throughout the United States, Australia, Canada, Japan and the United Kingdom. We also provide after-market service parts that are available to keep our branded equipment operating to the satisfaction of the end user of our products. 
+ Modular Buildings 
+ Our Modular Buildings segment, which accounted for 40.1% of our net revenue in the 2024 fiscal year and 25.8% of our net revenue in the 2023 fiscal year, is located in Monona, Iowa. This segment produces, sells and leases modular buildings, which are custom-designed to meet the specific research needs of our customers. The buildings we commonly produce range from basic swine buildings to complex containment research laboratories. Our focus is providing research facilities for academic research institutions, government research and diagnostic centers, public health institutions and private research and pharmaceutical companies, as those are our primary market sectors. We provide services from start to finish by designing, manufacturing, delivering and installing these facilities to meet customers&#8217; critical requirements. In addition to selling these facilities, we also offer a lease option to customers in need of temporary facilities. 
+ 2
+ Table of Contents 
+ Our Principal Agricultural Products 
+ Arthur Luscombe built the first power take-off powered grinder mixer on his farm near Dolliver, Iowa. The product&#8217;s ability to tackle even the most demanding workload made it an overwhelming success &#8211; and secured Luscombe&#8217;s reputation as a farmer, entrepreneur and independent thinker who did things his way. Over the years our Agricultural Products segment has grown through developing several new products and with acquisitions. We take pride in our manure spreaders, forage equipment, bale processors, dirt work equipment, sugar beet harvesting equipment and feed mills. We provide limited original equipment manufacturer, or OEM, parts to some of the industry&#8217;s leading manufacturers. 
+ Feed mills. There&#8217;s no one better than Art&#8217;s Way when it comes to processing feed. Stationary mills for livestock feeding or breweries, portable units for small operations and large grinder mixers for the modern feeding operation have our customers&#8217; backs day in and day out. Hammer mills provide faster processing and easily changing micron size or roller mills offer more consistency. We offer the most complete lineup of equipment in feed processing. 
+ Manure spreaders. The X Series spreaders have a unique vertical beater placement combined with guillotine slop gate controls to create the best spread pattern in the industry. Flared sides and densilite flooring provide easy loading and material movement. Backed by our limited lifetime warranty on the apron chain, customers can depend on this rugged machine. The upgraded rate control option powered by Raven is the only unit in the industry to have completely automatic spreading capabilities with apron speed and slop gate control. 
+ Forage. The 2100 series are user-friendly forage boxes in different lengths and unload configurations. It is the only box in its class to offer 100% in-cab controls. Tube side stakes and corrugated sides give users confidence when side-by-side with competitor models. The 9016-HD High Dump cart boasts the largest capacity in the industry at 40,000 pounds. 
+ Bale processors. Spread large round or square bales in the same machine attached to a skid steer, telehandler, or tractor with the patented TOP-SPREAD loader mounted spreader. The compact size fits into barns and alleyways and is easy to maneuver. On a construction site, cover roadsides or fresh seeding quickly from the seat of a skid steer. 
+ Dirt work equipment . Level out and shape fields with the single blade or folding land planes featuring our patented floating hitch design. Reduce erosion by eliminating water pockets, furrows, and implement scars in the field. Shape yards or work sites with standard or rear steer graders that follow closely behind the tractor for leveling in smaller spaces. 
+ Sugar beet harvesting equipment. We are proud to offer the best sugar beet cleaning in the industry during muddy harvest conditions with our patented grab roll bed. Our 12-row harvester has been improved with an automatic leveling system add-on for consistent digging across the field. The defoliator cleanly removes the leaves off the beets prior to digging them up for harvest. The leaves are incorporated back into the soil to provide nutrients for next year&#8217;s crop. 
+ Product Distribution and Markets 
+ We distribute goods for our Agricultural Products segment primarily through a network of approximately 500 U.S. and Canadian independent dealers, as well as overseas dealers in Australia, Japan and the United Kingdom, whose customers require specialized agricultural machinery. We have sales representation in 48 states and seven Canadian provinces. Our dealers sell our products to various agricultural and commercial customers. We also maintain a local sales force in our Armstrong, Iowa facility to provide oversight services for our distribution network, communicate with end users, and recruit and train dealers on the uses of our products. Our local service parts staff is available to help customers and dealers with their service parts needs. Our Modular Buildings segment typically sells products customized to the end-users' requirements directly to the end-user. 
+ We currently export products to nine foreign countries. We have been shipping grinder mixers abroad since 2006 and have exported portable rollermills as well. We continue to strengthen these relationships and intend to develop new international markets. Our international sales accounted for 3.3% of consolidated sales during the 2024 fiscal year compared to 3.1% in the 2023 fiscal year. 
+ 3
+ Table of Contents 
+ Backlog. The Company&#8217;s backlog of orders varies on a daily basis. The Company&#8217;s Agricultural Products segment had a net backlog of approximately $3,486,000 as of February 4, 2025 compared to $4,364,000 on February 4, 2024. The overall agriculture economy remained stagnant for our fall early order program after three years of increased demand. High interest rates and low commodity prices are still affecting demand as we roll into fiscal 2025, however, we have seen better than expected demand for our grinder mixers. The Company&#8217;s Modular Buildings segment had approximately $2,393,000 of backlog as of February 4, 2025, compared to $6,170,000 on that date in 2024. The Modular Buildings segment has strong leads in the engineering phase that we expect to go under contract and become part of our project backlog, which could drive similar revenue results to fiscal 2024. The Company expects that its order backlogs will continue to fluctuate as orders are received, filled, or canceled, and, due to dealer discount arrangements it may enter into from time to time. Accordingly, these figures are not necessarily indicative of future revenue. 
+ Recent Product Developments 
+ In 2024, we focused on cost reductions to improve pricing competitiveness of our manure spreader product line and to boost margin of our highest demanded grinder mixer products. We finished the development of a chicken litter variation for our manure spreaders and a sonar leveling system for our defoliators. We expect continued focus on increasing margins on our current product lines and new developments that make our products more useful for our customers. 
+ Our Modular Buildings segment completed projects based on customer specifications and did not engage in specific product development during the 2024 fiscal year. 
+ Competition 
+ Each of our segments have competitive strengths described below. In addition to individual competitive strengths, the barrier to entry for competitors in our industries is high. 
+ Agricultural Products 
+ Our Agricultural Products segment competes in a highly competitive agricultural equipment industry. We compete with larger manufacturers and suppliers that have broader product offerings and significant resources at their disposal; however, we believe that our competitive strengths allow us to compete effectively in our market. 
+ Management believes that grain and livestock producers, as well as those who provide services to grain and livestock operations, are the primary purchasers of agricultural equipment. Many factors influence a buyer&#8217;s choice for agricultural equipment. Any one or all factors may be determinative, but they include brand loyalty, the relationship with dealers, product quality and performance, product innovation, product availability, parts and warranty programs, price, and customer service. 
+ While our larger competitors may have resources greater than ours, we believe we compete effectively in the farm equipment industry by serving smaller markets in specific product areas rather than directly competing with larger competitors across an extensive range of products. Our Agricultural Products segment caters to niche markets in the agricultural industry. We do not have a direct competitor that has the same product offerings that we do. Instead, each of our product lines competes with similar products of many other manufacturers. Some of our product lines face greater competition than others, but we believe that our products are competitively priced with greater diversity than most competitor product lines. Other companies produce feed processing equipment, sugar beet harvesting and defoliating equipment, grinders, and other products similar to ours; therefore, we focus on providing the best product available at a reasonable price. Overall, we believe our products are competitively priced with above average quality and performance, in a market where price, product performance, and quality are principal elements. 
+ In addition, in order to capitalize on brand recognition for our Agricultural Products segment, we have numerous product lines produced under our own label. We also provide aftermarket service parts which are available to keep our branded and OEM-produced equipment operating to the satisfaction of the customer. We sell products to customers in the United States and nine foreign countries through a network of approximately 500 independent dealers in the United States and Canada, as well as overseas dealers in Australia, Japan and the United Kingdom. 
+ 4
+ Table of Contents 
+ We believe that our competitive pricing, product quality and performance, network of worldwide and domestic distributors, and strong market share for many of our products allow us to compete effectively in the agricultural products market. 
+ Modular Buildings 
+ We expect continued competition from our Modular Buildings segment&#8217;s existing competitors, which include conventional design/build firms, as well as competition from new entrants into the modular building market. To some extent, we believe barriers to entry in the modular building industry limit the competition we face in the industry. Barriers to entry in the market consist primarily of access to capital, access to a qualified labor pool, and the bidding process that accompanies many jobs in the health and education markets. Despite these barriers, manufacturers who have a skilled work force and adequate production facilities could adapt their manufacturing facilities to produce modular structures. 
+ We believe the competitive strength of our Modular Buildings segment is our ability to design and produce high-tech modular buildings more quickly than conventional design/build firms. Conventional design/build construction may take two to five years, while our modular laboratories can be delivered in as little as six months. As one of the few companies in the industry to supply turnkey modular buildings and laboratories, we believe we provide high-quality buildings at reasonable prices that meet our customers&#8217; time, flexibility, and security expectations. 
+ Raw Materials, Principal Suppliers, and Customers 
+ Raw materials for our various segments are acquired from domestic and foreign sources and normally are readily available. We rely on foreign suppliers and foreign markets for materials and components for some of our products. However, these suppliers are not principal suppliers, and there are alternative sources for these materials. 
+ We do not typically rely on sales to one customer or a small group of customers. During the 2024 fiscal year, one customer accounted for just more than 17% consolidated net revenues from continuing operations and another approximately 15% of consolidated revenues. 
+ Intellectual Property 
+ We maintain manufacturing rights on several products, which cover unique aspects of design. We also have trademarks covering product identification. We believe our trademarks and licenses help us to retain existing business and secure new relationships with customers. The duration of these rights ranges from 5 to 10 years, with options for renewal. We currently have no pending applications for intellectual property rights. 
+ We have a licensing and royalty agreement with Spreader, LLC to produce a loader mounted spreader in exchange for royalty payments until December 2026. 
+ Government Relationships and Regulations; Environmental Compliance 
+ Our Modular Buildings segment must design, manufacture, and install its modular buildings in accordance with state building codes, and we have been able to achieve the code standards in all instances. In addition, we are subject to various federal, state, and local laws and regulations pertaining to environmental protection and the discharge of materials into the environment. We do not expect that the cost of complying with these regulations will have a material impact on our consolidated results of operations, financial position, or cash flows. 
+ Employees 
+ As of November 30, 2024, we employed 68 employees in our Agricultural Products segment including one on a part-time basis, and 22 employees in our Modular Buildings segment, two on a part-time basis. These numbers do not necessarily represent peak employment during the 2024 fiscal year. 
+ 5
+ Table of Contents 
+ Item 1A. RISK FACTORS. 
+ As a smaller reporting company, we are not required to provide disclosure pursuant to this Item. 
+ Item 1B. UNRESOLVED STAFF COMMENTS. 
+ As a smaller reporting company, we are not required to provide disclosure pursuant to this Item. 
+ Item 1C. CYBERSECURITY. 
+ We have a multi-layered approach to assess, identify and manage material risks from cybersecurity threats. This approach includes a wide variety of mechanisms, controls, technologies, methods, systems, and other processes that are designed to prevent, detect, or mitigate data loss, theft, misuse, unauthorized access, or other cybersecurity incidents or vulnerabilities affecting the data. 
+ The data includes confidential, proprietary, and business and personal information that we collect, process, store, and transmit as part of our business, including on behalf of third parties. We also use systems and processes designed to reduce the impact of a cybersecurity incident at a third-party vendor or customer. Additionally, we use processes to oversee and identify material risks from cybersecurity threats associated with our use of third-party technology and systems, including technology and systems we use for encryption and authentication; employee email; content delivery to customers; back-office support; and other functions. 
+ As part of our risk management process, we conduct regular application security assessments to identify vulnerabilities within our IT infrastructure. These assessments include both automated scans and manual reviews by our cybersecurity team. Threat intelligence feeds and security reports are continuously monitored, with the goal of staying ahead of emerging threats. In the event of a cybersecurity incident, we maintain incident response plans that are utilized when incidents are detected. We require employees with access to information systems, including all corporate employees, to undertake data protection and cybersecurity training and compliance programs annually along with random internal phishing campaigns. 
+ We are led by our Director of IT, who is responsible for implementing and maintaining centralized cybersecurity and data protection practices in close coordination with our senior leadership team. We also engage assessors, consultants, or other third parties to assist with assessing, identifying, and managing cybersecurity risks. Our cybersecurity risks and associated mitigations are evaluated by senior leadership and routinely by our Board of Directors. 
+ Our Director of IT, who has extensive cybersecurity knowledge and skills gained from over 10 years of work experience in various information technology roles, heads the team responsible for implementing and maintaining cybersecurity and data protection practices and reports directly to the Chief Financial Officer. 
+ As of the date of this report, we have not encountered any risks from cybersecurity threats that have materially affected or are reasonably likely to materially affect the Company, including its business strategy, results of operations, or financial condition. Cybersecurity threats are continually evolving, and no assurances can be given that our risk management systems and processes will fully mitigate all cybersecurity threats and risks. 
+ Item 2. PROPERTIES. 
+ Our executive offices, as well as the primary production and warehousing facilities for our Agricultural Products segment, are located in Armstrong, Iowa. These facilities were constructed after 1965 and remain in fair condition. The facilities in Armstrong contain approximately 249,000 square feet of usable space. We have engaged in several building improvement projects during the last several years including most recently updating our office spaces and employee break room in 2021, new shop and office boilers and roofing improvements in 2022 and remodeling our production facility bathrooms in fiscal 2023. In addition, we own approximately 30 acres of land west of Armstrong, on which the factory and inventory storage space is situated for our Agricultural Products segment. 
+ Our facility in Monona, Iowa was constructed by us in 2007, and houses the manufacturing for our Modular Buildings segment. The facility was custom-designed to meet our production needs. It has approximately 50,000 square feet of usable space and accommodates a sprinkler system and crane. We own a second building to the east with approximately 12,000 square feet of space, which is used as our weld shop for building frames. 
+ All of our owned real property is subject to mortgages granted to Bank Midwest as security for our long-term debt and our line of credit. See &#8220;Item 7. MANAGEMENT&#8217;S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS &#8211; Liquidity and Capital Resources&#8221; for more information. 
+ Item 3. LEGAL PROCEEDINGS. 
+ From time to time in the ordinary course of business, we may be named as a defendant in legal proceedings incidental to the business, including without limitation, workers&#8217; compensation claims, tort claims, or contractual disputes. We are not currently involved in any material legal proceedings, directly or indirectly, and we are not aware of any claims pending or threatened against us or any of the directors that could result in the commencement of material legal proceedings. 
+ Item 4. MINE SAFETY DISCLOSURES. 
+ Not applicable. 
+ 6
+ Table of Contents 
+ PART II 
+ Item 5. MARKET FOR REGISTRANT &#8217; S COMMON EQUITY, RELATED STOCKHOLDER MATTERS AND ISSUER PURCHASES OF EQUITY SECURITIES . &#8217; 
+ Market Information 
+ Our common stock trades on the Nasdaq Stock Market LLC under the symbol &#8220;ARTW.&#8221; 
+ Stockholders 
+ We have two classes of stock, undesignated preferred stock and $0.01 par value common stock. No shares of preferred stock have been issued or are outstanding. As of January 16, 2025 we had 70 common stock stockholders of record, which number does not include stockholders who hold our common stock in street name. 
+ Dividends 
+ We did not pay a dividend during the 2024 or 2023 fiscal years. We expect that the payment of and the amount of any future dividends will depend on our financial condition at that time. 
+ Unregistered Sales of Equity Securities 
+ None. 
+ Purchases of Equity Securities by the Company 
+ There were no purchases of common stock by the Company made in the fourth quarter of fiscal 2024. 
+ Equity Compensation Plans 
+ For information on our equity compensation plans, refer to Item 12, &#8220;SECURITY OWNERSHIP OF CERTAIN BENEFICIAL OWNERS AND MANAGEMENT AND RELATED STOCKHOLDER MATTERS.&#8221; 
+ Item 6. {RESERVED} 
+ Item 7. MANAGEMENT &#8217; S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS. 
+ The following discussion, which focuses on our results of operations, contains forward-looking information and statements. Actual events or results may differ materially from those indicated or anticipated, as discussed in the section entitled &#8220; Forward Looking Statements. &#8221; The following discussion of our financial condition and results of operations should also be read in conjunction with our financial statements and notes to financial statements contained in &#8220; Item 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA &#8221; of this report. 
+ Financial Condition 
+ Our Agricultural Products segment saw a 34.7% decline in revenue in fiscal 2024 due to suppressed commodity prices, high borrowing rates and saturated inventory levels. Our Modular Buildings segment increased revenues by 25.9% and recorded strong profitability. Our consolidated revenues from continued operations decreased 19.1% year on year, and we had $461,000 of operating income from continuing operations for the fiscal year ended November 30, 2024. 
+ We finished the year ended November 30, 2024 with approximately $94,000 of consolidated net loss from continued operations, $307,000 of net income and saw our working capital increase by approximately $802,000. 
+ We expect to have access to capital as needed throughout fiscal 2025 from the collection of receivables, sale of inventory and the expected receipt of approximately $1.2 million of gross proceeds from a filed Employee Retention Credit or ERC. Due to the timing of filing an ERC claim after the IRS announced a moratorium on processing applications, and uncertainty surrounding the nature and timing of the claim approval and subsequent payment process, recognition of the claim is deferred until payment is received. Accordingly, the claim has not been recorded in receivables, assets, or income. On November 30, 2024 we had $3,571,563 available on our line of credit and $930,036 of excess collateral towards our borrowing base. Our working capital remained strong at approximately $6,492,000 in fiscal 2024 with a current ratio of 1.98. Our banking relationship remains positive, and we expect it to only strengthen as our balance sheet continues to improve through the retirement of debt. We believe that our current cash and financing arrangements will provide sufficient cash to finance operations for the next 12 months. We expect to continue to rely on cash from financing activities to supplement our cash flows from operations in order to meet our liquidity and capital expenditure needs in the near future. 
+ 7
+ Table of Contents 
+ Critical Accounting Policies 
+ Our significant accounting policies are described in Note 1 &#8220;Summary of Significant Accounting Policies&#8221; to our financial statements in &#8220;Item 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA&#8221; of this report. Critical accounting policies are those that we believe are both important to the portrayal of our financial condition and results of operations and require our most difficult, subjective or complex judgments, often as a result of the need to make estimates about the effect of matters that are inherently uncertain. 
+ We believe that the following represents the most critical accounting policies and estimates used in the preparation of our consolidated financial statements. 
+ Inventories 
+ Inventories are stated at the lower of cost or net realizable value, and cost is determined using the standard costing method, which approximates costs determined on the first-in, first-out basis. Management monitors the carrying value of inventories using inventory control and review processes that include, but are not limited to, sales forecast review, inventory status reports, and inventory reduction programs. We record inventory write downs to net realizable value based on expected usage information for raw materials and historical selling trends for finished goods. If the assumptions made by management do not occur, we may need to record additional write downs. 
+ Revenue Recognition 
+ In accordance with Accounting Standards Codification, or ASC, 606, revenue is measured based on consideration specified in a contract with a customer and recognized when we satisfy the performance obligation specified in each contract. 
+ Our revenues primarily result from contracts with customers. The major sources of revenue for the Agricultural Products segment are farm equipment and service parts related to farm equipment. The Agricultural Products segment generally executes short-term contracts that contain a single performance obligation &#8211; the delivery of product to the common carrier. We recognize revenue for the production and sale of farm equipment and service parts upon shipment of the goods. Shipment of the goods is the point in time when risk of ownership and title pass to the customer. All sales are made to authorized dealers whose application for dealer status has been approved and who have been informed of general sales policies. Any changes in our terms are documented in the most recently published price lists. Pricing is fixed and determinable according to our published equipment and parts price lists. Title to all equipment and parts sold pass to the customer upon delivery to the carrier and is not subject to a customer acceptance provision. Proof of the passing of title is documented by the signing of the delivery receipt by a representative of the carrier. Post shipment obligations are limited to any claim with respect to the condition of the equipment or parts. The Agricultural Products segments typically require payment in full 30 days after the ship date. To take advantage of program discounts, some customers pay deposits up front. Any deposits received are considered unearned revenue and increase contract liabilities. 
+ In certain circumstances, upon the customer&#8217;s written request, we may recognize revenue when production is complete, and the goods are ready for shipment. At the customer&#8217;s request, we will bill the customer upon completing all performance obligations, but before shipment. The customer dictates that we ship the goods per its direction from our manufacturing facility, as is customary with this type of agreement, in order to minimize shipping costs. The written agreement with the customer specifies that the goods will be delivered on a schedule to be determined by the customer, with a final specified delivery date, and that we will segregate the goods from our inventory, such that they are not available to fill other orders. This agreement also specifies that the customer is required to purchase all goods manufactured under this agreement. Title of the goods will pass to the customer when the goods are complete and ready for shipment, per the customer agreement. At the transfer of title, all risks of ownership have passed to the customer, and the customer agrees to maintain insurance on the manufactured items that have not yet been shipped. We have operated using bill and hold agreements with certain customers for many years, with consistent satisfactory results for both the customers and us. The credit terms on this agreement are consistent with the credit terms on other sales. All risks of loss are shouldered by the customer, and there are no exceptions to the customer&#8217;s commitment to accept and pay for these manufactured goods. Revenues recognized when goods were ready for shipment in fiscal 2024 were approximately $1,073,000 com p ared to $3,110 ,000 in fiscal 2023. 
+ 8
+ Table of Contents 
+ The Modular Buildings segment is in the construction industry with its major source of revenue arising from modular building sales. Sales of modular buildings are generally recognized using input methods to measure progress towards the satisfaction of a performance obligation using the percentage of completion method. Revenue and gross profit are recognized as work is performed based on the relationship between actual costs incurred and total estimated costs at completion. Contract costs consist of direct costs on contracts, including labor, materials, and amounts payable to subcontractors and those indirect costs related to contract performance, such as equipment costs, insurance and employee benefits. Contract cost is recorded as incurred, and revisions in contract revenues and cost estimates are reflected in the accounting period when known. Provisions for estimated losses on uncompleted contracts are made in the period in which such losses are determined. Contract losses are recognized when current estimates of total contract revenue and contract cost indicate a loss. Estimated contract costs include any and all costs appropriately allocable to the contract. The provision for these contract losses will be the excess of estimated contract costs over estimated contract revenues. Changes in job performance, job conditions and estimated profitability, including those changes arising from contract change orders, penalty provisions and final contract settlements may result in revisions to costs and income and are recognized in the period in which the revisions are determined. We use significant judgements in determining estimated contract costs and completion percentages throughout the life of the project. Stock modular building sales also occur and are recognized at a point in time when the performance obligation is fulfilled through substantial completion. Substantial completion is achieved through customer acceptance of the completed building. The Modular Buildings segment executes contracts with customers that can be short- or long-term in nature. These contracts can have multiple performance obligations and revenue from these can be recognized over time or at a point in time depending on the nature of the contracts. Payment terms for the Modular Buildings segment vary by contract, but typically utilize money down and progress payments throughout the life of the contract. The payment terms of the Modular Buildings segment have the most impact on our contract receivables, contract assets and contract liabilities. Project invoicing from the Modular Buildings segment increases contract receivables and has an effect on contract liabilities through billings in excess of costs, estimated gross profit and customer deposits. The balance of contract assets is typically made up of the balance of costs and estimated gross profit in excess of billings. Costs and profit in excess of amounts billed are classified as current assets and billings in excess of cost and profit are classified as current liabilities. 
+ The Agricultural Products segment offers variable consideration in the form of discounts depending on participation in yearly early order programs. This variable consideration is allocated to the transaction price of all products in a sales arrangement and is not contingent on future outcomes. The Agricultural Products segment does not offer rebates or credits. The Modular Buildings segment does not offer discounts, rebates or credits. 
+ Our returns policy allows for new and saleable parts to be returned, subject to inspection and a restocking charge, which is included in net sales. Whole goods are not returnable. Shipping costs charged to customers are included in net sales. Freight costs incurred are included in cost of goods sold. Customer deposits consist of advance payments from customers, in the form of cash, for revenue to be recognized in the following year. 
+ For information on product warranty as it applies to ASC 606, refer to Note 9 &#8220;Product Warranty&#8221; contained in our financial statements in &#8220;Item 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA&#8221; of this report. 
+ Results of Operations 
+ Fiscal Year Ended November 30, 2024 Compared to Fiscal Year Ended November 30, 2023 
+ Our consolidated net sales from continuing operations totaled $24,499,000 for the 2024 fiscal year, which represents a 19.1% decrease from our consolidated net sales of $30,281,000 for the 2023 fiscal year. We increased revenue in our Modular Buildings segment while our Agricultural Products segment was met with difficult market conditions in fiscal 2024. Our consolidated gross profit as a percentage of net sales increased to 29.8% in the 2024 fiscal year compared to 28.3% of net sales in the 2023 fiscal year. Our consolidated operating expenses from continuing operations decreased by 2.9%, from $7,053,000 in the 2023 fiscal year to $6,849,000 in the 2024 fiscal year. The majority of our corporate general and administrative expenses are borne by our Agricultural Products segment, including costs associated with being a public company. The Agricultural Products segment represented $5,665,000 of our total consolidated operating expenses, while our Modular Buildings segment represented $1,184,000. 
+ Our consolidated operating income from continuing operations for the 2024 fiscal year was $461,000 compared to operating income of $1,531,000 for the 2023 fiscal year. Our Agricultural Products segment had an operating loss of $1,510,000, and our Modular Buildings segment had operating income of $1,971,000. 
+ 9
+ Table of Contents 
+ Consolidated net income for the 2024 fiscal year was $307,000 compared to net income of $267,000 in the 2023 fiscal year. 
+ Our effective tax rate for the 2024 and 2023 fiscal years was 30.3% and 29.9%, respectively. 
+ Agricultural Products. Our Agricultural Products segment&#8217;s net sales for the 2024 fiscal year were $14,663,000 compared to $22,467,000 during the 2023 fiscal year, a decrease of $7,804,000, or 34.7%. Commodity prices in the agricultural market dropped below five-year averages in fiscal 2024, which lead to a strong decrease in demand for our products. This demand decrease was not isolated to our company, instigating mass layoffs and major production cuts in fiscal 2024 for many in our industry. Another factor in the sales decrease was the amount of inventory on dealer lots at the end of fiscal 2023. Many dealers were oversaturated with inventory related to excess demand in 2023 from high commodity prices and supply chains' inability to keep up. This turned drastically in the first quarter of fiscal 2024, as increasing interest rates and declining commodity prices decreased expected net farm income. 
+ Gross profit percentage in the Agricultural Products segment for the 2024 fiscal year was 28.3% compared to 29.3% for the 2023 fiscal year. We continued to see inflationary pressure in fiscal 2024. Steel prices rose through the summer of fiscal 2024 but leveled off and dropped near the end of the year. We continued to see price increases from insurance groups and other manufacturing expense companies, which lead to an increase in our overhead costs. We attribute these factors and overall sales decrease to the drop in gross profit percentage. We put a focus on cost reductions on two of our highest volume products in fiscal 2024, which we expect to bear fruit in fiscal 2025. 
+ Our Agricultural Products segment&#8217;s operating expenses for the 2024 fiscal year were $5,665,000 compared to $5,920,000 for the 2023 fiscal year, a decrease of $255,000, or 4.3%. A large share of the operating expense decrease is related to our selling expenses, most notably, commission expense, for which we saw a decrease of $418,000 due to the large sales decrease and the hiring of an inside salesperson. Some of this decrease was offset with added salary for the inside salesperson and travel expense. Our general and administrative expenses increased approximately $333,000 from fiscal 2023. The increase is due to $186,000 of additional salary expense due to wage increases and from the hiring of a HR manager at the end of fiscal 2023 along with a $48,000 increase in computer contract expense related to an enterprise resource planning or ERP conversion that we completed in August of 2023. We also paid out approximately $201,000 in early retirement benefits to employees in the spring of fiscal 2024 in order to drop our headcount to align with our lessened demand. We estimate the early retirement will save us $263,000 in wages and benefits annually moving forward. In addition to early retirement, we also enacted layoffs and strategic terminations that are expected to cut approximately $750,000 of operating expenses annually. Our engineering expenses decreased approximately $166,000 from fiscal 2023 due to a reduction in headcount in our engineering department. We expect the engineering headcount reduction to be temporary, as we recognize the strategic value in new product development and continued product improvement. Total loss from operations for our Agricultural Products segment during the 2024 fiscal year was $1,510,000 compared to operating income of $664,000 for the 2023 fiscal year. The sudden deterioration of the agricultural markets in fiscal 2024 was the primary driver for the decline in operating income from fiscal 2023. We reacted quickly when we identified adverse market conditions early on in fiscal 2024, and began right-sizing operations and overhead expenses to facilitate better performance in fiscal 2025. 
+ Modular Buildings. Our Modular Buildings segment&#8217;s net sales for the 2024 fiscal year were $9,836,000 compared to $7,814,000 for the 2023 fiscal year, an increase of $2,022,000, or 25.9%. While our agricultural products building sales suffered under the same adverse market conditions of our Agricultural Products segment, we saw increased demand in the research markets for our modular products, which led to a 124% increase in research sales. Our Modular Building segment's gross profit percentage for the 2024 fiscal year was 32.1% compared to 25.6% during the 2023 fiscal year. Our project performance in fiscal 2024 exceeded expectations as our workforce was consistently under budget on production disciplines. We are also historically more efficient when our shop is busy and perform better on research projects as we often have more contingency built in than traditional ag modulars. Operating expenses for the 2024 fiscal year were $1,184,000 compared to $1,133,000 for the 2023 fiscal year, an increase of $51,000, or 4.5%. This increase is primarily due to increased bonus payout for excellent fiscal 2024 performance. Total income from operations from our Modular Buildings segment during the 2024 fiscal year was $1,971,000 compared to operating income of $867,000 in the 2023 fiscal year. Our project management team continued to build on fiscal 2023 strides to increase profitability on projects and to provide better service to our customers. This focus translated to some of the best results we have seen in this operating segment and we believe our sales funnel leading into fiscal 2025 can deliver similar performance. 
+ Discontinued Operations. On June 7, 2023 we announced we would be discontinuing our Tools segment with the last day of normal operations occurring on July 14, 2023. Just over a year later, on October 21, 2024, we completed the sale of the remaining real estate associated with our Tools segment for $1,800,000. The assets and liabilities of this segment were gone prior to November 30, 2024 and will no longer report discontinued operations in our current year financials moving forward. Our discontinued operations generated approximately $1,271,000 from operating, investing and financing activities mainly related to closing activities and the sale of real estate. Our Tools segment reported net income of $402,000 for the twelve months ended November 30, 2024 compared to net loss of $496,000 in the same period of fiscal 2023. 
+ 10
+ Table of Contents 
+ Trends and Uncertainties 
+ We are subject to a number of trends and uncertainties that may affect our short-term or long-term liquidity, sales revenues, and operations. Similar to other farm equipment manufacturers, we are affected by items unique to the farm industry, including fluctuations in farm income resulting from changes in commodity prices, crop damage caused by weather and insects, government farm programs, interest rate fluctuations, and other unpredictable variables. Other uncertainties include our OEM customers and the decisions they make regarding their current supply chain structure, inventory levels, and overall business conditions. Management believes that our business is dependent on the farming industry for the bulk of our sales revenues. As such, our business tends to reap the benefits of increases in farm net income, as farmers tend to purchase equipment in lucrative times and forgo purchases in less profitable years. Direct government payment over the past few years and costs of agricultural production are increasing; further increases in the value of production will benefit our business, while any future decreases in the value of production will decrease farm net income and may negatively affect our financial results. 
+ As with other farm equipment manufacturers, we depend on our network of dealers to influence customers&#8217; decisions, and dealer influence is often more persuasive than a manufacturer&#8217;s reputation or the price of the product. 
+ Seasonality 
+ Sales of our agricultural products are seasonal; however, we have tried to decrease the impact of this seasonality through the development of beet harvesting machinery, as the peak periods for these products occur at different times. 
+ Our modular building sales are somewhat seasonal, and we believe that this is due to the budgeting and funding cycles of the universities that commonly purchase our modular buildings. We believe that this cycle can be offset by building backlogs of inventory, by increasing sales to other public and private sectors and by creating repeatable business opportunities. 
+ Liquidity and Capital Resources 
+ Our main source of funds during the 2024 fiscal year was cash generated by operating activities of approximately $2,869,000. We utilized favorable billing schedules in our Modular Buildings segment to generate approximately $1,654,000 in positive cash flow for our fiscal 2024 projects. We also generated approximately $983,000 of cash from the collection of extended term and other outstanding receivables at fiscal 2023 year end, predominately from our Agricultural Products segment. We were also able to reduce our inventory level in fiscal 2024 from higher than normal inventory level at the end of fiscal 2023, to generate approximately $551,000 of positive cash. We expect to be able to continue to decrease inventory in fiscal 2025 to provide positive cash. Our net loss plus noncash adjustment items also provided approximately $1,358,000 in cash in fiscal 2024. Our discontinued operations provided approximately $1,271,000 in positive cash flow primarily from the sale of our remaining real estate. Our largest uses of cash in fiscal 2024 were the payment of accounts payable, purchases of property, plant, and equipment, and retirement of debt, including the payoff of our roof loan and a large decrease in our operating line of credit. We expect our primary capital needs for fiscal 2025 to be operating expenses and continued retirement of debt. We expect our operating expenses to be down significantly in fiscal 2025 as we have right-sized our staff for incoming demand. We expect to use available cash or financing in fiscal 2025 to acquire equipment that we identify as improving efficiency in our manufacturing process. We will be focused on increasing efficiency and margin gains to make the most out of our expected sales in fiscal 2025. We expect to receive approximately $1,200,000 of net proceeds from the Employee Retention Credit in fiscal 2025. Due to the timing of filing an ERC claim after the IRS announced a moratorium on processing applications, and uncertainty surrounding the nature and timing of the claim approval and subsequent payment process, recognition of the claim is deferred until payment is received. Accordingly the claim has not been recorded in receivables, assets, or income. 
+ We have a Bank Midwest credit facility consisting of a $5,500,000 revolving line of credit, pursuant to which we had borrowed $1,928,437, with $3,571,563 remaining, as of November 30, 2024, and one term loan, which had an outstanding principal balance of $1,779,877 as of November 30, 2024. The revolving line of credit is being used for working capital purposes. We also have two Economic Injury Disaster Loans provided by the U.S. Small Business Administration with an aggregate principal balance of $315,089 as of November 30, 2024. 
+ Our loans require us to comply with various covenants, including maintaining certain financial ratios and obtaining prior written consent from Bank Midwest for any investment in, acquisition of, or guaranty relating to another business or entity. We were in compliance with covenants in place under the Bank Midwest loans as of November 30, 2024. 
+ 11
+ Table of Contents 
+ For additional information about our financing activities, please refer to Note 10 &#8220;Loan and Credit Agreements&#8221; to our financial statements in &#8220;Item 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA&#8221; of this report. 
+ The following table represents our working capital and current ratio as of the end of the past two fiscal years: 
+ November 30, 2024 
+ November 30, 2023 
+ Current Assets 
+ $ 
+ 13,124,309 
+ $ 
+ 15,085,494 
+ Current Liabilities 
+ 6,632,493 
+ 9,395,023 
+ Working Capital 
+ $ 
+ 6,491,816 
+ $ 
+ 5,690,471 
+ Current Ratio 
+ 1.98 
+ 1.61 
+ We believe that our current cash and financing arrangements will provide sufficient cash to finance operations for the next 12 months. We expect to continue to rely on cash from financing activities to supplement our cash flows from operations in order to meet our liquidity and capital expenditure needs in the near future. We expect to continue to be able to procure financing upon reasonable terms. 
+ Item 7A. QUANTITATIVE AND QUALITATIVE DISCLOSURES ABOUT MARKET RISK. 
+ As a smaller reporting company, we are not required to provide disclosure pursuant to this Item. 
+ 12
+ Table of Contents 
+ Item 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA. 
+ Report of Independent Registered Public Accounting Firm 
+ To the Board of Directors and Stockholders Art's-Way Manufacturing Co., Inc. Armstrong, Iowa 
+ Opinion on the Financial Statements 
+ We have audited the accompanying consolidated balance sheets of Art's-Way Manufacturing Co., Inc. and Subsidiaries (the &#8220;Company&#8221;) as of November 30, 2024 and 2023, and the related consolidated statements of operations, stockholders&#8217; equity, and cash flows, for the years then ended, and the related notes (collectively referred to as the &#8220;financial statements&#8221;). In our opinion, the financial statements present fairly, in all material respects, the financial position of the Company as of November 30, 2024 and 2023, and the results of its operations and its cash flows for the years then ended, in conformity with accounting principles generally accepted in the United States of America. 
+ Basis for Opinion 
+ These financial statements are the responsibility of the Company&#8217;s management. Our responsibility is to express an opinion on these financial statements based on our audits. We are a public accounting firm registered with the Public Company Accounting Oversight Board (United States) ("PCAOB") and are required to be independent with respect to the Company in accordance with the U.S. federal securities laws and the applicable rules and regulations of the Securities and Exchange Commission and the PCAOB. 
+ We conducted our audits in accordance with the standards of the PCAOB. Those standards require that we plan and perform the audit to obtain reasonable assurance about whether the financial statements are free of material misstatement, whether due to error or fraud. The Company is not required to have, nor were we engaged to perform, an audit of its internal control over financial reporting. As part of our audits we are required to obtain an understanding of internal control over financial reporting but not for the purpose of expressing an opinion on the effectiveness of the Company&#8217;s internal control over financial reporting. Accordingly, we express no such opinion. 
+ Our audits included performing procedures to assess the risk of material misstatement of the financial statements, whether due to error or fraud, and performing procedures that respond to those risks. Such procedures included examining, on a test basis, evidence regarding the amounts and disclosures in the financial statements. Our audits also included evaluating the accounting principles used and significant estimates made by management, as well as evaluating the overall presentation of the financial statements. We believe that our audits provide a reasonable basis for our opinion. 
+ 13
+ Table of Contents 
+ Critical Audit Matter 
+ The critical audit matter communicated below is a matter arising from the current period audit of the financial statements that was communicated or required to be communicated to the audit committee and that: (1) relate to accounts or disclosures that are material to the financial statements and (2) involved especially challenging, subjective or complex judgments. The communication of critical audit matters does not alter in any way our opinion on the financial statements, taken as a whole, and we are not, by communicating the critical audit matters below, providing a separate opinion on the critical audit matter or on the accounts or disclosures to which it relates. 
+ Valuation of Inventories 
+ As discussed in Note 4 to the Company&#8217;s financial statements, the gross inventories balance was $11,984,915, and the balance net of reserves was $10,327,913 as of November 30, 2024. The Company values its inventories at the lower of cost or net realizable value, with cost being determined using the standard costing method, which approximates first-in, first-out costing method. The Company adjusts the value of inventory for slow-moving and obsolete inventory based on expected future usage of raw materials and finished goods. 
+ We identified the valuation of inventories as a critical audit matter. The principal considerations for our determination that performing procedures relating to valuation of inventories is a critical audit matter are the significant assumptions and complex judgments by management when determining the future salability of the inventory and its net realizable value. These assumptions and judgments include the assessment of the net realizable value by inventory category considering retention periods, future usage, and market demand for products, which in turn led to a high degree of auditor judgment, subjectivity, and effort in performing procedures and evaluating audit evidence related to management&#8217;s methods, calculations, and assumptions. 
+ The primary procedures we performed to address this critical audit matter included: 
+ &#9679; Gaining an understanding of management&#8217;s processes, controls, and methodology to develop the estimates. 
+ &#9679; Evaluating the reasonableness of assumptions used by management in forming the forecasted inventory usage and future salability, including examining historical accuracy of the Company&#8217;s prior estimates by considering subsequent sales and write-off activity. 
+ &#9679; Testing the completeness, accuracy, and relevance of the underlying data used in management&#8217;s estimate. 
+ &#9679; Testing the mathematical accuracy and computation related to the application of the methodology to specific inventory items and categories. 
+ /s/ Eide Bailly LLP 
+ We have served as the Company&#8217;s auditor since 2006. 
+ Denver, Colorado 
+ February 18, 2025 
+ 14
+ Table of Contents 
+ ART &#8217; S-WAY MANUFACTURING CO., INC. 
+ Consolidated Balance Sheets 
+ November 30, 2024 November 30, 2023 
+ Assets 
+ Current assets: 
+ Cash $ 1,860 $ 4,014 
+ Accounts receivable-customers, net of allowance for expected credit losses of $ 108,636 and net of allowance for doubtful accounts of $ 32,137 in 2024 and 2023, respectively 2,372,876 3,432,216 
+ Inventories, net 10,327,913 11,031,362 
+ Cost and profit in excess of billings 213,195 289,282 
+ Other current assets 208,465 296,662 
+ Current assets of discontinued operations - 31,958 
+ Total current assets 13,124,309 15,085,494 
+ Property, plant, and equipment, net 5,150,870 5,060,595 
+ Assets held for lease, net 89,033 145,494 
+ Deferred income taxes, net 2,440,297 2,503,213 
+ Other assets 436,175 583,752 
+ Other assets of discontinued operations - 1,023,566 
+ Total assets $ 21,240,684 $ 24,402,114 
+ Liabilities and Stockholders&#8217; Equity 
+ Current liabilities: 
+ Accounts payable $ 944,448 $ 2,256,502 
+ Customer deposits 180,597 416,044 
+ Billings in excess of cost and profit 1,929,151 351,289 
+ Income taxes payable 5,500 5,000 
+ Accrued expenses 1,303,718 1,399,232 
+ Line of credit 1,928,437 4,413,520 
+ Current portion of finance lease liabilities 220,908 257,454 
+ Current portion of long-term debt 119,734 109,193 
+ Current liabilities of discontinued operations - 186,789 
+ Total current liabilities 6,632,493 9,395,023 
+ Long-term liabilities 
+ Long-term portion of operating lease liabilities 4,700 13,774 
+ Long-term portion of finance lease liabilities 534,436 722,200 
+ Long-term debt, excluding current portion 1,975,232 2,629,862 
+ Total liabilities 9,146,861 12,760,859 
+ Commitments and Contingencies (Notes 8, 9, 10 and 17) 
+ Stockholders&#8217; equity: 
+ Undesignated preferred stock - $ 0.01 par value. Authorized 500,000 shares in 2024 and 2023; issued and outstanding 0 shares in 2024 and 2023. - - 
+ Common stock &#8211; $ 0.01 par value. Authorized 9,500,000 shares in 2024 and 2023; issued 5,149,173 in 2024 and 5,106,922 in 2023 51,492 51,069 
+ Additional paid-in capital 5,020,849 4,838,425 
+ Retained earnings 7,328,628 7,021,253 
+ Treasury stock, at cost ( 112,714 shares in 2024 and 94,256 shares in 2023) ( 307,146 ) ( 269,492 ) 
+ Total stockholders&#8217; equity 12,093,823 11,641,255 
+ Total liabilities and stockholders&#8217; equity $ 21,240,684 $ 24,402,114 
+ See accompanying Report of Independent Registered Public Accounting Firm and notes to consolidated financial statements. 
+ 15
+ Table of Contents 
+ ART &#8217; S-WAY MANUFACTURING CO., INC. 
+ Consolidated Statements of Operations 
+ Years Ended 
+ November 30, 2024 
+ November 30, 2023 
+ Sales 
+ $ 
+ 24,499,371 
+ $ 
+ 30,280,957 
+ Cost of goods sold 
+ 17,189,506 
+ 21,697,075 
+ Gross profit 
+ 7,309,865 
+ 8,583,882 
+ Expenses: 
+ Engineering 
+ 432,587 
+ 598,065 
+ Selling 
+ 1,635,166 
+ 2,132,101 
+ General and administrative 
+ 4,781,415 
+ 4,322,475 
+ Total expenses 
+ 6,849,168 
+ 7,052,641 
+ Income from operations 
+ 460,697 
+ 1,531,241 
+ Other income (expense): 
+ Interest expense 
+ ( 599,396 
+ ) 
+ ( 590,005 
+ ) 
+ Other 
+ 3,208 
+ 147,512 
+ Total other income (expense) 
+ ( 596,188 
+ ) 
+ ( 442,493 
+ ) 
+ Income (loss) from continuing operations before income taxes 
+ ( 135,491 
+ ) 
+ 1,088,748 
+ Income tax expense (benefit) 
+ ( 41,025 
+ ) 
+ 325,959 
+ Income (loss) from continuing operations 
+ ( 94,466 
+ ) 
+ 762,789 
+ Discontinued Operations 
+ Income (loss) from discontinued operations before income taxes 
+ 517,171 
+ ( 708,313 
+ ) 
+ Income tax expense (benefit) 
+ 115,330 
+ ( 212,493 
+ ) 
+ Income (loss) on discontinued operations 
+ 401,841 
+ ( 495,820 
+ ) 
+ Net Income 
+ $ 
+ 307,375 
+ $ 
+ 266,969 
+ Net income (loss) per share - Basic: 
+ Continuing Operations 
+ $ 
+ ( 0.02 
+ ) 
+ $ 
+ 0.15 
+ Discontinued Operations 
+ 0.08 
+ ( 0.10 
+ ) 
+ Net income per share 
+ $ 
+ 0.06 
+ $ 
+ 0.05 
+ Net income (loss) per share - Diluted: 
+ Continuing Operations 
+ $ 
+ ( 0.02 
+ ) 
+ $ 
+ 0.15 
+ Discontinued Operations 
+ 0.08 
+ ( 0.10 
+ ) 
+ Net income per share 
+ $ 
+ 0.06 
+ $ 
+ 0.05 
+ Weighted average outstanding shares used to compute basic net income per share 
+ 5,052,167 
+ 5,002,238 
+ Weighted average outstanding shares used to compute diluted net income per share 
+ 5,052,167 
+ 5,002,238 
+ See accompanying Report of Independent Registered Public Accounting Firm and notes to consolidated financial statements. 
+ 16
+ Table of Contents 
+ ART &#8217; S-WAY MANUFACTURING CO., INC. 
+ Consolidated Statements of Stockholders' Equity 
+ Years Ended November 30, 2024 and 2023 
+ Common Stock 
+ Additional 
+ Treasury Stock 
+ Number of 
+ paid-in 
+ Retained 
+ Number of 
+ shares 
+ Par value 
+ capital 
+ earnings 
+ shares 
+ Amount 
+ Total 
+ Balance, November 30, 2022 
+ 5,013,671 
+ 50,137 
+ 4,547,172 
+ 6,754,284 
+ 64,574 
+ ( 200,956 
+ ) 
+ 11,150,637 
+ Stock based compensation 
+ 93,251 
+ 932 
+ 291,253 
+ - 
+ 29,682 
+ ( 68,536 
+ ) 
+ 223,649 
+ Net Income 
+ - 
+ - 
+ - 
+ 266,969 
+ - 
+ - 
+ 266,969 
+ Balance, November 30, 2023 
+ 5,106,922 
+ 51,069 
+ 4,838,425 
+ 7,021,253 
+ 94,256 
+ ( 269,492 
+ ) 
+ 11,641,255 
+ Stock based compensation 
+ 42,251 
+ 423 
+ 182,424 
+ 18,458 
+ ( 37,654 
+ ) 
+ 145,193 
+ Net Income 
+ - 
+ - 
+ - 
+ 307,375 
+ - 
+ - 
+ 307,375 
+ Balance, November 30, 2024 
+ 5,149,173 
+ 51,492 
+ 5,020,849 
+ 7,328,628 
+ 112,714 
+ ( 307,146 
+ ) 
+ 12,093,823 
+ See accompanying Report of Independent Registered Public Accounting Firm and notes to consolidated financial statements. 
+ 17
+ Table of Contents 
+ ART &#8217; S-WAY MANUFACTURING CO., INC. 
+ Consolidated Statements of Cash Flows 
+ Twelve Months Ended 
+ November 30, 2024 
+ November 30, 2023 
+ Cash flows from operations: 
+ Net income (loss) from continuing operations 
+ $ 
+ ( 94,466 
+ ) 
+ $ 
+ 762,789 
+ Net income (loss) from discontinued operations 
+ $ 
+ 401,841 
+ $ 
+ ( 495,820 
+ ) 
+ Adjustments to reconcile net income (loss) to net cash provided by (used in) operating activities: 
+ Stock based compensation 
+ 182,847 
+ 292,185 
+ Increase (decrease) in obsolete inventory reserves 
+ 152,902 
+ ( 126,707 
+ ) 
+ Gain on disposal of property, plant, and equipment 
+ ( 5,300 
+ ) 
+ ( 92,495 
+ ) 
+ Depreciation and amortization expense 
+ 868,004 
+ 774,365 
+ Amortization of cloud computing implementation costs 
+ 121,819 
+ 30,455 
+ Increase (decrease) in allowance for expected credit losses - accounts receivable 
+ 76,499 
+ ( 1,151 
+ ) 
+ Deferred income taxes 
+ 62,916 
+ 102,182 
+ Changes in assets and liabilities: 
+ (Increase) decrease in: 
+ Accounts receivable 
+ 982,841 
+ ( 964,275 
+ ) 
+ Inventories 
+ 550,547 
+ ( 1,297,947 
+ ) 
+ Other assets 
+ ( 33,644 
+ ) 
+ 44,117 
+ Increase (decrease) in: 
+ Accounts payable 
+ ( 1,312,054 
+ ) 
+ ( 253,961 
+ ) 
+ Contracts in progress, net 
+ 1,653,949 
+ 184,872 
+ Customer deposits 
+ ( 235,447 
+ ) 
+ ( 409,369 
+ ) 
+ Income taxes payable 
+ 500 
+ 1,500 
+ Accrued expenses 
+ ( 95,934 
+ ) 
+ 237,471 
+ Net cash provided by (used in) operating activities - continuing operations 
+ 2,875,979 
+ ( 715,969 
+ ) 
+ Net cash provided by operating activities - discontinued operations 
+ ( 249,279 
+ ) 
+ 660,775 
+ Net cash provided by (used in) operating activities 
+ 2,626,700 
+ ( 55,194 
+ ) 
+ Cash flows from investing activities: 
+ Purchases of property, plant, and equipment 
+ ( 724,679 
+ ) 
+ ( 841,784 
+ ) 
+ Net proceeds from sale of assets 
+ 5,300 
+ 286,815 
+ Net cash used in investing activities - continuing operations 
+ ( 719,379 
+ ) 
+ ( 554,969 
+ ) 
+ Net cash provided by investing activities - discontinued operations 
+ 1,680,453 
+ 101,457 
+ Net cash provided by (used in) investing activities 
+ 961,074 
+ ( 453,512 
+ ) 
+ Cash flows from financing activities: 
+ Net change in line of credit 
+ ( 2,485,083 
+ ) 
+ 489,020 
+ Proceeds from finance lease obligations 
+ - 
+ 397,536 
+ Principal payments on finance lease obligations 
+ ( 262,503 
+ ) 
+ ( 184,881 
+ ) 
+ Repayment of term debt 
+ ( 644,089 
+ ) 
+ ( 99,136 
+ ) 
+ Repurchases of common stock 
+ ( 37,654 
+ ) 
+ ( 68,536 
+ ) 
+ Net cash provided by (used in) financing activities - continuing operations 
+ ( 3,429,329 
+ ) 
+ 534,003 
+ Net cash used in financing activities - discontinued operations 
+ ( 160,599 
+ ) 
+ ( 26,338 
+ ) 
+ Net cash provided by (used in) financing activities 
+ ( 3,589,928 
+ ) 
+ 507,665 
+ Net decrease in cash 
+ ( 2,154 
+ ) 
+ ( 1,041 
+ ) 
+ Cash at beginning of period 
+ 4,014 
+ 5,055 
+ Cash at end of period 
+ $ 
+ 1,860 
+ $ 
+ 4,014 
+ Supplemental disclosures of cash flow information: 
+ Cash paid during the period for: 
+ Interest 
+ $ 
+ 601,680 
+ $ 
+ 606,747 
+ Income taxes 
+ 6,309 
+ 3,646 
+ Supplemental disclosures of non-cash investing and financing activities: 
+ Right-of-use (ROU) assets acquired (included in other assets) 
+ $ 
+ 38,912 
+ $ 
+ 134,544 
+ Amortization of operating lease ROU assets (included in other assets) 
+ $ 
+ 8,653 
+ $ 
+ 12,375 
+ See accompanying Report of Independent Registered Public Accounting Firm and notes to consolidated financial statements. 
+ 18
+ Table of Contents 
+ Art&#8217;s-Way Manufacturing Co., Inc. 
+ Notes to Consolidated Financial Statements 
+ ( 1 ) Summary of Significant Accounting Policies 
+ (a) Nature of Business 
+ Art&#8217;s-Way Manufacturing Co., Inc. (the &#8220;Company&#8221;) is primarily engaged in the fabrication and sale of specialized farm machinery in the agricultural sector of the United States. Primary product offerings include portable and stationary animal feed processing equipment; hay and forage equipment; sugar beet harvesting equipment; dirt work equipment and manure spreaders. The Company sells its labeled products through independent farm equipment dealers throughout the United States, Australia, Canada, Japan, and the United Kingdom. The Company also provides after-market service parts that are available to keep its branded and OEM-produced equipment operating to the satisfaction of the end user of the Company&#8217;s products. 
+ The Company&#8217;s Modular Buildings segment is primarily engaged in the construction of modular laboratories and animal housing facilities through the Company&#8217;s wholly owned subsidiary, Art&#8217;s-Way Scientific, Inc. Buildings commonly produced range from basic swine buildings to complex containment research laboratories. This segment also provides services relating to the design, manufacturing, delivery, installation, and renting of the building units that it produces. 
+ During the third quarter of fiscal 2023, the Company ceased operations of its Tools business, Ohio Metal Working Products/Art's-Way, Inc., which in previous periods, was reported in the consolidated financial statements as the Company's third operating segment. The assets of the Tools segment were disposed of in the fourth quarter of fiscal 2024. 
+ (b) Principles of Consolidation 
+ The consolidated financial statements include the accounts of Art&#8217;s-Way Manufacturing Co., Inc. and its wholly owned subsidiaries for the 2024 fiscal year, which includes Art&#8217;s-Way Scientific, Inc. and Ohio Metal Working Products/Art&#8217;s-Way, Inc., which is presented separately as a discontinued operation for all periods presented. All inter-company accounts and transactions are eliminated in consolidation. 
+ (c) Cash Concentration 
+ The Company maintains several different accounts at one bank, and balances in these accounts could periodically exceed the federally insured limits. However, management believes the risk of loss to be low. 
+ (d) Customer Concentration 
+ During the 2024 fiscal year, the Company had two customers accounting for more than 10% of consolidated revenues from continuing operations, at approximately 17 % and 15 % each, while in the 2023 fiscal year, one customer accounted for approximately 12 % of consolidated revenues from continuing operations. 
+ (e) Allowance for Credit Losses 
+ The Company uses aging categories to estimate expected credit losses on trade receivables beginning with the fiscal year starting December 1, 2023. The Company considers the following in its analysis: historical loss experience, forward-looking macroeconomic factors, company credit risk including previous delinquencies, disputed amounts, and the intent and ability to pay. The Company's typical credit terms are Net 30, however, it does offer terms up to 360 days on floor plan units. The Company would consider trade receivables greater than 30 days past due, but is not required to disclose past due receivables with an original term less than one year. The Company performs additional analysis monthly on amounts over 90 days past due to determine collectability. The Company has assigned expected credit loss percentages based on where the asset falls in the aging schedule. The Company's actual credit losses have been low compared to historical allowance estimates. The Company has considered the current interest rate environment and the recent decline in the agricultural commodity market and believes its method of estimating a higher than historical loss percentage to be an adequate estimate of actual expected losses. The Company foresees increased credit risk over the next year or so until inventory on dealer lots starts to decline, interest rates drop and farm income strengthens. 
+ The Company carries contract assets related to its Modular Buildings segment in the form of costs and profit in excess of billings. These contract assets are typically converted to trade receivables in 30 to 90 days, depending on contract terms, and due 30 days or less from the billing date. Because these contract assets are typically converted to receivables and collected in less than a year, consideration for these contract assets has been included in the expected credit loss model for trade receivables. 
+ The Company began offering floorplan terms in its Agricultural Products segment during its fall 2021 early order program to incentivize customers to stock farm equipment on their lots during the 2022 fiscal year and continued to offer this program for fiscal 2024 . Floorplan terms allow customers to pay the Company at the earliest of retail date or 360 days. The Company had approximately $ 1,073,000 in accounts receivable at November 30, 2024 that was part of its floorplan program on extended terms compared to $ 3,110,000 for the year ended November 30, 2023 . 
+ For the fiscal year ended November 30, 2023, accounts receivable were carried at original invoice amount less an estimate made for doubtful accounts based on a review of all outstanding amounts on a monthly basis. Management determined the allowance for doubtful accounts by identifying troubled accounts and by using historical experience applied to an aging of accounts. Accounts receivable were written-off when deemed uncollectible. Recoveries of accounts receivable previously written-off were recorded when received. Accounts receivable were generally considered past due 60 days past invoice date, with the exception of international sales which primarily are sold with 180 day terms backed by export insurance. 
+ 19 
+ Table of Contents 
+ (f) Inventories 
+ Inventories are stated at the lower of cost or net realizable value, and cost is determined using the standard costing method which approximates costs determined on the first -in, first -out basis. Management monitors the carrying value of inventories using inventory control and review processes that include, but are not limited to, sales forecast review, inventory status reports, and inventory reduction programs. The Company records inventory write downs to net realizable value based on expected usage information for raw materials and historical selling trends for finished goods. Additional write downs may be necessary if the assumptions made by management do not occur. 
+ (g) Property, Plant, and Equipment 
+ Property, plant, and equipment are recorded at cost. Depreciation of plant and equipment is provided using the straight-line method, based on the estimated useful lives of the assets which range from three to forty years. 
+ Property, plant, and equipment are reviewed for impairment whenever events or changes in circumstances indicate that the carrying amount of the assets might not be recoverable. Conditions that would necessitate an impairment assessment include a significant decline in the observable market value of an asset, a significant change in the extent or manner in which an asset is used, or any other significant adverse change that would indicate that the carrying amount of an asset or group of assets may not be recoverable. 
+ For property, plant, and equipment used in operations, including lease assets and assets held for lease, impairment losses are only recorded if the asset&#8217;s carrying amount is not recoverable through its undiscounted, probability-weighted future cash flows. We measure the impairment loss based on the difference between the carrying amount and estimated fair value. 
+ (h) Leases 
+ Lessee. The Company determines if an arrangement is a lease at inception of a contract. The nature of the Company&#8217;s leases at this time is shop machinery and office equipment, mainly copiers, with terms of 12 to 60 months. Operating and finance leases are included in other assets as lease right-of-use (&#8220;ROU&#8221;) assets on the Consolidated Balance Sheets while current operating lease liabilities are included in accrued expenses. The short-term portion of finance leases along with long-term portions of operating and finance lease liabilities are presented on the face of the Consolidated Balance Sheets. 
+ ROU assets represent the Company&#8217;s right to use an underlying asset for the lease term and lease liabilities represent the Company&#8217;s obligation to make lease payments arising from the lease. ROU assets and liabilities are recognized at the commencement date based on the present value payments over the lease term. As most of the Company&#8217;s leases do not provide an implicit rate, the Company generally uses its incremental borrowing rate based on the estimated rate of interest for collateralized borrowing over a similar term of the lease payments at commencement date. The lease terms may include options to extend or terminate the lease when it is reasonably certain that the Company will exercise that option. Operating lease expense for lease payments is recognized on a straight-line basis over the lease term while finance lease ROU assets are amortized on a straight-line basis and interest expense is recorded over the lease term. 
+ The Company has copier lease agreements with lease and non-lease components and has elected the practical expedient not to separate lease and non-lease components for this asset class. The Company has also elected not to recognize lease liabilities and ROU assets for leases with an initial term of twelve months or less. The Company recognizes variable costs that depend on usage in profit or loss as they are incurred. 
+ 20 
+ Table of Contents 
+ The components of operating leases on the Consolidated Balance Sheets at November 30, 2024 and November 30, 2023 were as follows: 
+ November 30, 2024 November 30, 2023 
+ Operating lease right-of-use assets ( other assets ) $ 13,774 $ 22,427 
+ Current portion of operating lease liabilities ( accrued expenses ) $ 9,074 $ 8,653 
+ Long-term portion of operating lease liabilities 4,700 13,774 
+ Total operating lease liabilities $ 13,774 $ 22,427 
+ The Company's continuing operations recorded $ 10,199 of operating lease expense in the year ended November 30, 2024 compared to $ 17,459 in the same period of fiscal 2023 , including variable costs tied to usage. The Company&#8217;s operating leases carry a weighted average lease term of 18 months and have a weighted average discount rate of 4.75 %. 
+ Future maturities of operating lease liabilities as of November 30, 2024 are as follows: 
+ Year Ending November 30, 
+ 2025 9,532 
+ 2026 4,765 
+ Total lease payments 14,297 
+ Less imputed interest ( 523 ) 
+ Total operating lease liabilities 13,774 
+ The components of finance leases on the Consolidated Balance Sheets on November 30, 2024 and November 30, 2023 were as follows: 
+ November 30, 2024 November 30, 2023 
+ Finance lease right-of-use assets (net of amortization in other assets ) $ 377,753 $ 511,367 
+ $ 377,753 $ 511,367 
+ Current portion of finance lease liabilities $ 220,908 $ 257,454 
+ Long-term portion of finance lease liabilities 534,436 722,200 
+ Total finance lease liabilities $ 755,344 $ 979,654 
+ The Company received grant funds from the Iowa Economic Development&#8217;s Manufacturing 4.0 program in prior years for the purchase of assets. These funds have reduced the right-of-use asset account for the proceeds and will reduce amortization over the life of the asset. 
+ Future maturities of finance lease liabilities as of November 30, 2024 are as follows: 
+ Year Ending November 30, 
+ 2025 $ 256,747 
+ 2026 255,163 
+ 2027 222,241 
+ 2028 90,962 
+ 2029 5,588 
+ Total lease payments 830,701 
+ Less imputed interest ( 75,357 ) 
+ Total finance lease liabilities $ 755,344 
+ The weighted average lease term of the Company&#8217;s finance leases are 40 months while the weighted average rate of finance leases is 5.43 %. The Company's continuing operations incurred $ 171,830 of amortization expense from ROU assets related to finance leases in fiscal 2024 compared to $ 129,891 in fiscal 2023 . 
+ Lessor. The Company's lessor arrangements primarily include contracts for temporary building rentals or permanent building financing for our Modular Buildings segment. The Company classifies its leases at inception as operating, direct financing or sales-type leases. A lease is classified as a sales-type lease if at least one of the following criteria is met: ( 1 ) the lease transfers ownership of the underlying asset to the lessee, ( 2 ) the lease grants the lessee an option to purchase the underlying asset that the lessee is reasonably certain to exercise, ( 3 ) the lease term is for a major part of the remaining economic life of the underlying asset, ( 4 ) the present value of the sum of the lease payments equals or exceeds substantially all of the fair value of the underlying assets, or ( 5 ) the underlying asset is of such a specialized nature that it is expected to have no alternative use to the lessor at the end of the lease term. Furthermore, when none of the above criteria is met, a lease is classified as a direct financing lease if both of the following criteria are met: ( 1 ) the present value of the sum of the lease payments and any residual value guaranteed by the lessee that is not already reflected in the lease payments equals or exceeds the fair value of the underlying asset and ( 2 ) it is probable that the lessor will collect the lease payments plus any amount necessary to satisfy a residual value guarantee. A lease is classified as an operating lease if it does not qualify as a sales-type or direct financing lease. Currently, the Company classifies all of its lessor arrangements as operating leases. 
+ See Note 7, "Assets Held for Lease," for more information. 
+ 21 
+ Table of Contents 
+ (i) Income Taxes 
+ Income taxes are accounted for under the asset and liability method. Deferred tax assets and liabilities are recognized for the estimated future tax consequences attributable to differences between the financial statement carrying amounts of existing assets and liabilities and their respective tax basis and operating losses. Deferred tax assets and liabilities are measured using enacted tax rates in effect for the year in which those temporary differences are expected to be recovered or settled. The effect on deferred tax assets and liabilities of a change in tax rates is recognized in income in the period that includes the enactment date. In assessing the realizability of deferred tax assets, management considers whether it is more likely than not that some portion or all of the deferred tax assets will not be realized. The ultimate realization of deferred tax assets is entirely dependent upon the generation of future taxable income during the periods in which those temporary differences become deductible. Management considers the scheduled reversals of deferred tax liabilities, projected future taxable income, and tax planning strategies in making this assessment. 
+ The Company classifies interest and penalties to be paid on an underpayment of taxes as income tax expense. The Company files income tax returns in the U.S. federal jurisdiction and various states and previously in Canada. The Company is no longer subject to Canadian, U.S. federal or state income tax examinations by tax authorities for years ended before November 30, 2021. 
+ (j) Revenue Recognition 
+ The Company&#8217;s revenues primarily result from contracts with customers. The major sources of revenue for the Agricultural Products segment are farm equipment and service parts related to farm equipment. The Agricultural Products segment generally executes short-term contracts that contain a single performance obligation &#8211; the delivery of product to the common carrier. The Company recognizes revenue for the production and sale of farm equipment and service parts upon shipment of the goods. Risk of ownership and title pass to the customer upon shipment of the goods. All sales are made to authorized dealers whose application for dealer status has been approved and who have been informed of general sales policies. Any changes in the Company&#8217;s terms are documented in the most recently published price lists. Pricing is fixed and determinable according to the Company&#8217;s published equipment and parts price lists. Title to all equipment and parts sold passes to the customer upon delivery to the carrier and is not subject to a customer acceptance provision. Proof of the passing of title is documented and retained by the Company. Post shipment obligations are limited to any claim with respect to the condition of the equipment or parts. The Agricultural Products segment typically requires payment in full 30 days after the ship date. To take advantage of program discounts, some customers pay deposits up front. Any deposits received increase contract liabilities. 
+ In certain circumstances, upon the customer&#8217;s written request, the Company may recognize revenue when production is complete, and the goods are ready for shipment. At the customer&#8217;s request, the Company will bill the customer upon completing all performance obligations, but before shipment. The customer dictates that the Company ship the goods per the customer&#8217;s direction from the Company&#8217;s manufacturing facility, as is customary with this type of agreement, in order to minimize shipping costs. The written agreement with the customer specifies that the goods will be delivered on a schedule to be determined by the customer, with a final specified delivery date, and that the Company will segregate the goods from its inventory, such that they are not available to fill other orders. This agreement also specifies that the customer is required to purchase all goods manufactured under this agreement. Title of the goods will pass to the customer when the goods are complete and ready for shipment, per the customer agreement. At the transfer of title, all risks of ownership have passed to the customer, and the customer agrees to maintain insurance on the manufactured items that have not yet been shipped. The Company has operated using bill and hold agreements with certain customers for many years, with consistent satisfactory results for both the customer and the Company. The credit terms on these agreements are consistent with the credit terms on all other sales. All risks of loss are shouldered by the customer, and there are no exceptions to the customer&#8217;s commitment to accept and pay for these manufactured goods. Revenues recognized at the completion of production in the 2024 and 2023 fiscal years were approximately $ 1,073,000 and $ 3,110,000 respectively. 
+ 22 
+ Table of Contents 
+ The Modular Buildings segment is in the construction industry with its major source of revenue arising from modular building sales. Sales of modular buildings are generally recognized using input methods to measure progress towards the satisfaction of a performance obligation using the percentage of completion method. Revenue and gross profit are recognized as work is performed based on the relationship between actual costs incurred and total estimated costs at completion. Contract costs consist of direct costs on contracts, including labor, materials, amounts payable to subcontractors and those indirect costs related to contract performance, such as equipment costs, insurance and employee benefits. Contract cost is recorded as incurred, and revisions in contract revenues and cost estimates are reflected in the accounting period when known. Provisions for estimated losses on uncompleted contracts are made in the period in which such losses are determined. Contract losses are recognized when current estimates of total contract revenue and contract cost indicate a loss. Estimated contract costs include any and all costs appropriately allocable to the contract. The provision for these contract losses will be the excess of estimated contract costs over estimated contract revenues. Changes in job performance, job conditions and estimated profitability, including those changes arising from contract change orders, penalty provisions and final contract settlements may result in revisions to costs and income and are recognized in the period in which the revisions are determined. The Company uses significant judgements in determining estimated contract costs and completion percentages throughout the life of the project. Stock modular building sales also occur and are recognized at a point in time when the performance obligation is fulfilled through substantial completion. Substantial completion is achieved through customer acceptance of the completed building. The Modular Buildings segment executes contracts with customers that can be short- or long-term in nature. These contracts can have multiple performance obligations and revenue from these can be recognized over time or at a point in time depending on the nature of the contracts. Payment terms for the Modular Buildings segment vary by contract, but typically utilize money down and progress payments throughout the life of the contract. The payment terms of the Modular Buildings segment have the most impact on the Company&#8217;s contract receivables, contract assets and contract liabilities. Project invoicing from the Modular Buildings segment increases contract receivables and has an effect on contract liabilities through billings in excess of costs, estimated gross profit and customer deposits. The balance of contract assets is typically made up of the balance of costs and estimated gross profit in excess of billings. Costs and profit in excess of amounts billed are classified as current assets and billings in excess of cost and profit are classified as current liabilities. 
+ The Agricultural Products segment offers variable consideration in the form of discounts depending on participation in yearly early order programs. This variable consideration is allocated to the transaction price of all products in a sales arrangement and is not contingent on future outcomes. The Agricultural Products segment does not offer rebates or credits. The Modular Buildings segment does not offer discounts, rebates or credits. 
+ The Company&#8217;s returns policy allows for new and saleable parts to be returned, subject to inspection and a restocking charge, which is included in net sales. Whole goods are not returnable. Shipping costs charged to customers are included in net sales. Freight costs incurred are included in cost of goods sold. Customer deposits consist of advance payments from customers, in the form of cash, for revenue to be recognized in the following year. 
+ For information on product warranty as it applies to ASC 606, refer to Note 9, &#8220;Product Warranty.&#8221; 
+ (k) Disaggregation of Revenue 
+ The following table displays revenue by reportable segment from external customers, disaggregated by major source. The Company believes disaggregating by these categories depicts how the nature, amount, timing, and uncertainty of revenue and cash flows are affected by economic factors. 
+ Twelve Months Ended November 30, 2024 
+ Agricultural Modular Buildings Total 
+ Farm equipment $ 12,404,000 $ - $ 12,404,000 
+ Farm equipment service parts 1,947,000 - 1,947,000 
+ Modular buildings - 9,386,000 9,386,000 
+ Modular building lease income - 203,000 203,000 
+ Other 312,000 247,000 559,000 
+ $ 14,663,000 $ 9,836,000 $ 24,499,000 
+ Twelve Months Ended November 30, 2023 
+ Agricultural Modular Buildings Total 
+ Farm equipment $ 19,188,000 $ - $ 19,188,000 
+ Farm equipment service parts 2,886,000 - 2,886,000 
+ Modular buildings - 7,590,000 7,590,000 
+ Modular building lease income - 112,000 112,000 
+ Other 393,000 112,000 505,000 
+ $ 22,467,000 $ 7,814,000 $ 30,281,000 
+ 23 
+ Table of Contents 
+ The Company began offering floorplan terms in its Agricultural Products segment during its Fall 2021 early order program to incentivize customers to stock farm equipment on their lots during the 2022 fiscal year and continued to offer this program for fiscal 2024 . Floorplan terms allow customers to pay the Company at the earliest of retail date or 360 days. This program has an effect on the timing of the Company&#8217;s fiscal 2024 cash flows compared with historical cash flows. 
+ (l) Contract Receivables, Contract Assets and Contract Liabilities 
+ The following table provides information about contract receivables, contract assets, and contract liabilities from contracts with customers included on the Consolidated Balance Sheets. 
+ November 30, 2024 November 30, 2023 
+ Receivables $ 2,373,000 $ 3,432,000 
+ Assets 213,000 289,000 
+ Liabilities 2,110,000 767,000 
+ The amount of revenue recognized in fiscal year 2024 that was included in a contract liability at November 30, 2023 was approximately $ 692,000 compared to $ 1,153,000 for the prior year. The beginning balance of contract receivables, assets and liabilities at December 1, 2022 were $2,466,000; $ 451,000 and $ 1,153,000 , respectively. The change in contract receivables reflected above results from contract billings for all three segments as performance obligations are met. The decrease in contract assets on November 30, 2024 is due to progress on construction contracts and the reduction of construction costs in excess of billings in the Modular Buildings segment. Contract liabilities include customer deposits and billings in excess of cost and profit on the consolidated balance sheets. Contract receivables decreased during fiscal 2024 as extended term receivables from 2024 were collected. Contract liabilities increased due to scheduled project billing in the Modular Buildings segment to maintain positive cash flow. 
+ The Company will utilize the practical expedient exception for these contracts and will report only on performance obligations greater than one year. As of November 30, 2024 , and November 30, 2023 , the Company has no performance obligations with an original expected duration greater than one year. 
+ (m) Software Development Costs 
+ The Company capitalizes costs related to software developed or obtained for internal use in accordance with ASC 350 - 40, Internal-Use Software (&#8220;ASC 350 - 40&#8221; ). The following illustrates the various stages and related processes of computer software development in accordance with ASC 350 - 40: 
+ Preliminary project stage: (a) conceptual formulation of alternatives; (b) evaluation of alternatives; (c) determination of existence of needed technology; and (d) final selection of alternatives. Internal and external costs incurred during the preliminary project stage are expensed as incurred. 
+ Application development stage: (a) design of chosen path, including software configuration and software interfaces; (b) coding; installation to hardware; and (c) testing, including parallel processing phase. Internal and external costs incurred to develop internal-use computer software during the application development stage are capitalized. Data conversion costs are expensed as incurred. 
+ Post-implementation-operation stage: (a) training; and (b) application maintenance. Internal and external costs incurred during the post-implementation-operation stage are expensed as incurred. 
+ Certain costs incurred are considered enhancements, or modifications to existing internal-use software that result in additional functionality. Enhancements normally require new software specifications and may also require a change to all or part of the existing software specifications. When this additional functionality is determinable, the related costs are capitalized. Otherwise, costs are expensed as incurred. Capitalization of internal-use software costs ceases when a computer software project is substantially complete and ready for its intended use. 
+ The Company moved to an updated cloud-based version of its QAD enterprise resource planning system in the third fiscal quarter of 2023. Since the software is a cloud computing arrangement, the Company accounts for the software as a service contract while the costs related to implementation still fall under ASC 350 - 40 for internal use software and are capitalized. Because the agreement is considered a service contract, the implementation costs are amortized over the original service contract period and any automatic renewal period and are included in operating costs with the service contract. The Company had approximately $ 61,000 of capitalized costs in other current assets on November 30, 2024 to be amortized as operating expense over the service agreement period through May 31, 2025, compared to $ 183,000 on November 30, 2023 . The Company amortized approximately $ 122,000 of implementation costs in the twelve months ended November 30, 2024 . compared to $ 30,000 in the twelve months ended November 30, 2023 . The Company expensed approximately $ 58,000 of non-capitalizable implementation costs for the twelve months ended November 30, 2023 . 
+ 24 
+ Table of Contents 
+ (m) Research and Development 
+ Research and development costs are expensed when incurred. Such costs approximated $ 216,000 and $ 204,000 for the 2024 and 2023 fiscal years, respectively. Research and development costs are included in engineering expenses on the Consolidated Statements of Operations. 
+ (n ) Advertising 
+ Advertising costs are expensed when incurred. Such costs approximated $ 153,000 and $ 229,000 for the 2024 and 2023 fiscal years, respectively. Advertising costs are included in selling expenses on the Consolidated Statements of Operations. 
+ (o) Net Income Per Share of Common Stock 
+ Basic net income per share has been computed on the basis of the weighted average number of shares of common stock outstanding. Diluted net income per share of common stock has been computed on the basis of the weighted average number of shares outstanding plus equivalent shares of common stock assuming exercise of stock options. Potential shares of common stock that have an anti-dilutive effect (i.e., those that increase income per share or decrease loss per share) are excluded from the calculation of diluted net income per share of common stock. 
+ Basic and diluted net income per common share have been computed based on the following as of November 30, 2024 and 2023 : 
+ For the Twelve Months Ended 
+ November 30, 2024 November 30, 2023 
+ Numerator for basic and diluted net income per share: 
+ Net income (loss) from continuing operations $ ( 94,466 ) $ 762,789 
+ Net income (loss) from discontinued operations 401,841 ( 495,820 ) 
+ Net Income $ 307,375 $ 266,969 
+ Denominator: 
+ For basic net income per share - weighted average common shares outstanding 5,052,167 5,002,238 
+ Effect of dilutive stock options - - 
+ For diluted net income per share - weighted average common shares outstanding 5,052,167 5,002,238 
+ Net income (loss) per share - Basic: 
+ Continuing Operations $ ( 0.02 ) $ 0.15 
+ Discontinued Operations 0.08 ( 0.10 ) 
+ Net income per share $ 0.06 $ 0.05 
+ Net income (loss) per share - Diluted: 
+ Continuing Operations $ ( 0.02 ) $ 0.15 
+ Discontinued Operations 0.08 ( 0.10 ) 
+ Net income per share $ 0.06 $ 0.05 
+ (p) Stock-Based Compensation 
+ Stock-based compensation expense reflects the fair value of stock-based awards measured at the grant date and recognized over the relevant vesting period. The Company estimates the fair value of each stock-based award on the measurement date using the Black-Scholes option valuation model which incorporates assumptions as to stock price volatility, the expected life of the options, risk-free interest rate and dividend yield. Restricted stock is valued at market value at the date of grant. 
+ 25 
+ Table of Contents 
+ (q) Use of Estimates 
+ Management has made a number of estimates and assumptions related to the reported amount of assets and liabilities, reported amount of revenues and expenses, and the disclosure of contingent assets and liabilities to prepare these financial statements in conformity with generally accepted accounting principles. Actual results could differ from those estimates. 
+ (r) Recently Issued Accounting Pronouncements 
+ Recently Adopted Pronouncements 
+ Measurement of Credit Losses on Financial Instruments In June 2016, the Financial Accounting Standards Board, or FASB, issued Accounting Standards Update, or ASU, 2016 - 13, &#8220;Measurement of Credit Losses on Financial Instruments.&#8221; ASU 2016 - 13 added a current expected credit loss (&#8220;CECL&#8221;) impairment model to U.S. Generally Accepted Accounting Principles, or GAAP, that is based on expected losses rather than incurred losses. Modified retrospective adoption was required with any cumulative-effect adjustment recorded to retained earnings as of the beginning of the period of adoption. ASU 2016 - 13 was effective for smaller reporting entities for fiscal years beginning after December 15, 2022, including interim periods within the year of adoption. Early adoption was permitted for fiscal years beginning after December 15, 2018, including interim periods within those fiscal years. The Company adopted ASU 2016 - 13 in the first quarter of fiscal 2024. The Company did not make a cumulative-effect adjustment to retained earnings. The application of the CECL impairment model did not have a significant impact on the Company's allowance for uncollectible amounts for accounts receivable. 
+ Accounting Pronouncements Not Yet Adopted 
+ In October 2023, Financial Accounting Standards Board (the &#8220;FASB&#8221;) issued Accounting Standards Update (&#8220;ASU&#8221;) 2023 - 06, Disclosure Improvements (&#8220;ASU 2023 - 06&#8221; ), to clarify or improve disclosure and presentation requirements of a variety of topics and align the requirements in the FASB ASC with the SEC&#8217;s regulations. The amendments in ASU 2023 - 06 will become effective on the date the related disclosures are removed from Regulation S- X or Regulation S-K by the SEC, and will no longer be effective if the SEC has not removed the applicable disclosure requirement by June 30, 2027. Early adoption is prohibited. We are currently evaluating the impact of ASU 2023 - 06 on the Company's consolidated financial statements and disclosures. 
+ In November 2023, the FASB issued ASU 2023 - 07, &#8220;Segment Reporting - Improvements to Reportable Segment Disclosures.&#8221; ASU 2023 - 07 adds enhanced disclosures about significant segment expenses, clarifies circumstances in which an entity can disclose multiple segment measures of profit and loss and provides new segment disclosure requirements for entities with a single reportable segment. ASU 2023 - 07 is effective for fiscal years beginning after December 15, 2023, and interim periods within fiscal years beginning after December 15, 2024. Early adoption is permitted. An entity will be required to recast any changes to segment information for prior periods presented. The Company will adopt ASU 2023 - 07 in fiscal 2025. The Company does not expect the application ASU 2023 - 07 to have a significant impact on segment disclosures. 
+ In December 2023, the FASB issued ASU 2023 - 09, "Income Taxes (Topic 740 ): Improvements to Income Tax Disclosures". The standard requires disaggregated information about a reporting entity&#8217;s effective tax rate reconciliation as well as information on income taxes paid. The requirements will be effective for annual periods beginning after December 15, 2024. The guidance will be applied on a prospective basis with the option to apply the standard retrospectively. Early adoption is permitted. The Company is currently evaluating the potential effect that the updated standard will have on its financial statement disclosures. 
+ 26 
+ Table of Contents 
+ ( 2 ) Discontinued Operations 
+ On June 7, 2023, the Company announced that it would be discontinuing the operations of its Tools segment in order to focus its efforts and resources on the business segments that have historically been more successful and that are expected to present greater opportunities for meaningful long-term stockholder returns. A large portion of this segment's assets were disposed of in the 3rd quarter of fiscal 2023. The primary asset of this business, the real estate, was sold in October of 2024 for $ 1,800,000 . The Company recorded a gain on the disposal of the real estate of $ 683,685 included in income (loss) from discontinued operations before income taxes on the Consolidated Statements of Operations. The Company's net book value of the asset at the time of sale was $ 996,768 and the Company paid $ 119,547 in closing costs including real estate agent commission, legal fees and property taxes. The Company's assets and liabilities from this segment were gone prior to November 30, 2024. The cessation of operations and liquidation of the Tools segment represented a strategic shift for the Company. In accordance with ASC Topic 360, the Company presented Tools as discontinued operations for all periods in this report. 
+ The components of discontinued operations in the accompanying Consolidated Balance Sheets are as follows: 
+ November 30, 2023 
+ Inventory $ 18,013 
+ Other current assets 13,945 
+ Current assets of discontinued operations $ 31,958 
+ November 30, 2023 
+ Property, plant, and equipment, net $ 1,023,566 
+ Other assets - 
+ Other assets of discontinued operations $ 1,023,566 
+ November 30, 2023 
+ Accounts payable $ 3,539 
+ Current portion of long-term debt 160,599 
+ Other current liabilities 22,651 
+ Current liabilities of discontinued operations $ 186,789 
+ 27 
+ Table of Contents 
+ The components of discontinued operations in the accompanying Consolidated Statement of Operations are as follows: 
+ Tools 
+ Twelve Months Ended 
+ November 30, 2024 November 30, 2023 
+ Sales $ - $ 2,030,714 
+ Cost of goods sold 108,618 2,122,287 
+ Gross profit (loss) ( 108,618 ) ( 91,573 ) 
+ Expenses: 
+ Engineering - - 
+ Selling 253 156,682 
+ General and administrative 9,012 413,857 
+ Total expenses 9,265 570,539 
+ Loss from operations ( 117,883 ) ( 662,112 ) 
+ Other income (expense): 
+ Interest expense ( 49,188 ) ( 61,516 ) 
+ Gain (loss) on disposal of real estate 683,685 - 
+ Other 558 15,315 
+ Total other income (expense) 635,055 ( 46,201 ) 
+ Income (loss) before income taxes 517,172 ( 708,313 ) 
+ Income tax expense (benefit) 115,330 ( 212,493 ) 
+ Net income (loss) $ 401,842 $ ( 495,820 ) 
+ The reportable segment information of discontinued operations is as follows: 
+ Tools 
+ Twelve Months Ended 
+ November 30, 2024 November 30, 2023 
+ Revenue from external customers $ - $ 2,031,000 
+ Gross Profit $ ( 109,000 ) $ ( 92,000 ) 
+ Income (loss) from operations $ ( 118,000 ) $ ( 662,000 ) 
+ Income (loss) before tax $ 517,000 $ ( 708,000 ) 
+ Total Assets $ - $ 1,056,000 
+ Capital expenditures $ - $ 16,000 
+ Depreciation & Amortization $ 27,000 $ 135,000 
+ 28 
+ Table of Contents 
+ ( 3 ) Accounts Receivable 
+ Accounts receivable are shown net of allowances for expected credit losses. Expected losses are recorded in administrative expense at the time of receivable recognition. 
+ A summary of the Company&#8217;s activity in the allowance for expected credit losses is as follows: 
+ Twelve Months Ended (Continuing operations) 
+ November 30, 2024 
+ Balance, beginning $ 32,137 
+ Provision charged to expense 67,170 
+ Less amounts (charged-off) recovered 9,329 
+ Balance, ending $ 108,636 
+ A summary of the Company&#8217;s activity in the allowance for doubtful accounts under legacy U.S. GAAP is as follows: 
+ Twelve Months Ended (Continuing operations) 
+ November 30, 2023 
+ Balance, beginning $ 33,288 
+ Provision charged to expense ( 1,151 ) 
+ Less amounts charged-off - 
+ Balance, ending $ 32,137 
+ ( 4 ) Inventories 
+ Major classes of inventory are: 
+ November 30, 2024 November 30, 2023 
+ Raw materials $ 7,882,271 $ 8,860,296 
+ Work in process 160,209 281,760 
+ Finished goods 3,942,435 3,472,354 
+ Total Gross Inventory $ 11,984,915 $ 12,614,410 
+ Less: Reserves ( 1,657,002 ) ( 1,583,048 ) 
+ Net Inventory $ 10,327,913 $ 11,031,362 
+ ( 5 ) Contracts in Progress 
+ Amounts included in the consolidated financial statements related to uncompleted contracts are as follows: 
+ Cost and Profit in Billings in Excess of 
+ Excess of Billings Costs and Profit 
+ November 30, 2024 
+ Costs $ 594,420 $ 5,561,121 
+ Estimated earnings 208,112 2,688,242 
+ 802,532 8,249,363 
+ Less: amounts billed ( 589,337 ) ( 10,178,514 ) 
+ $ 213,195 $ ( 1,929,151 ) 
+ November 30, 2023 
+ Costs $ 839,161 $ 3,228,941 
+ Estimated earnings 299,230 1,421,112 
+ 1,138,391 4,650,053 
+ Less: amounts billed ( 849,109 ) ( 5,001,342 ) 
+ $ 289,282 $ ( 351,289 ) 
+ The amounts billed on long-term contracts are due 30 days from invoice date. All amounts billed are expected to be collected within the next 12 months. Retainage included in accounts receivable was $ 0 and $ 28,082 as of November 30, 2024 and 2023 , respectively. 
+ 29 
+ Table of Contents 
+ ( 6 ) Property, Plant, and Equipment 
+ Major classes of property, plant, and equipment are: 
+ November 30, 2024 November 30, 2023 
+ Land $ 70,503 $ 70,503 
+ Buildings and improvements 7,419,101 7,332,416 
+ Construction in Progress 86,284 - 
+ Manufacturing machinery and equipment 10,821,463 10,386,044 
+ Trucks and automobiles 569,852 576,704 
+ Furniture and fixtures 115,059 115,059 
+ 19,082,262 18,480,726 
+ Less accumulated depreciation ( 13,931,392 ) ( 13,420,131 ) 
+ Property, plant and equipment $ 5,150,870 $ 5,060,595 
+ Depreciation and amortization expense for continuing operations totaled $ 868,004 and $ 774,365 for the 2024 and 2023 fiscal years, respectively. These totals include amortization of right-of-use assets on finance leases as discussed in Note 1 &#8220;Summary of Significant Accounting Policies&#8221; section (h) &#8220;Leases&#8221; above. 
+ ( 7 ) Assets Held for Lease 
+ Major components of assets held for lease are: 
+ November 30, 2024 November 30, 2023 
+ Modular Buildings $ 89,033 $ 145,494 
+ Total assets held for lease $ 89,033 $ 145,494 
+ The Company&#8217;s Modular Buildings segment enters into leasing arrangements with customers from time-to-time. The Company had four buildings in assets held for lease for the years ending November 30, 2024 and November 30, 2023 . 
+ Two modular buildings were sold in fiscal 2023 for $ 278,915 . The Company recognized a gain on the sale of assets held for lease of approximately of $ 114,156 in fiscal 2023 . 
+ Rents recognized in sales were related to the leasing of modular buildings as a part of the normal course of business operations of the Modular Buildings segment. There were $ 203,388 of rents recognized from assets held for lease included in sales on the Consolidated Statements of Operations during the 2024 fiscal year compared to $ 111,669 in the 2023 fiscal year. 
+ The future minimum lease receipts from assets held for lease on November 30, 2024 are as follows: 
+ Year Ending November 30, Amount 
+ 2025 $ 79,720 
+ Total $ 79,720 
+ 30 
+ Table of Contents 
+ ( 8 ) Accrued Expenses 
+ Major components of accrued expenses are: 
+ November 30, 2024 November 30, 2023 
+ Accrued salaries, wages, and commissions $ 803,662 $ 805,908 
+ Accrued warranty expense 225,186 295,113 
+ Other 274,870 298,211 
+ $ 1,303,718 $ 1,399,232 
+ ( 9 ) Product Warranty 
+ The Company offers warranties of various lengths to its customers depending on the specific product and terms of the customer purchase agreement. The average length of the warranty period is one year from the date of purchase. The Company&#8217;s warranties require it to repair or replace defective products during the warranty period at no cost to the customer. Product warranty is included in the price of the product and provides assurance that the product will function in accordance with agreed-upon specifications. It does not represent a separate performance obligation under ASC 606. The Company records a liability for estimated costs that may be incurred under its warranties. The costs are estimated based on historical experience and any specific warranty issues that have been identified. Although historical warranty costs have been within expectations, there can be no assurance that future warranty costs will not exceed historical amounts. The Company periodically assesses the adequacy of its recorded warranty liability and adjusts the balance as necessary. 
+ Changes in the Company&#8217;s product warranty liability included in accrued expenses for the 2024 and 2023 fiscal years are as follows: 
+ For the Twelve Months Ended 
+ November 30, 2024 November 30, 2023 
+ Balance, beginning $ 295,113 $ 192,301 
+ Settlements / adjustments ( 400,739 ) ( 330,951 ) 
+ Warranties issued 330,812 433,763 
+ Balance, ending $ 225,186 $ 295,113 
+ 31 
+ Table of Contents 
+ ( 10 ) Loan and Credit Agreements 
+ Bank Midwest Revolving Lines of Credit and Term Loans 
+ The Company maintains a $ 5,500,000 revolving line of credit (the &#8220;Line of Credit&#8221;) with Bank Midwest. On November 30, 2024 , the balance of the Line of Credit was $ 1,928,437 with $ 3,571,563 remaining available, as may be limited by the borrowing base calculation. The Line of Credit borrowing base is an amount equal to 75 % of accounts receivable balances (discounted for aged receivables), plus 50 % of net inventory, less any outstanding loan balance on the Line of Credit. On November 30, 2024 , the Line of Credit was not limited by the borrowing base calculation. Any unpaid principal amount borrowed on the Line of Credit accrues interest at a floating rate per annum equal to 0.75 % above the Wall Street Journal rate published in the money rates section of the Wall Street Journal. The interest rate floor is set at 4.25 % per annum and the current interest rate is 8.25 % per annum. The Line of Credit was most recently renewed on March 4, 2024. The Line of Credit matures on March 30, 2025 and requires monthly interest-only payments. The Line of Credit is governed by the terms of a Promissory Note, dated March 4, 2024, entered into between the Company and Bank Midwest. 
+ The Company carries a $ 2,600,000 term loan with Bank Midwest due October 1, 2037 ( the &#8220;Term Loan&#8221;). The Term Loan accrues interest at a rate of 7.00 %. The interest rate may only be adjusted by Bank Midwest once every five years. Monthly payments of $ 19,648 in principal and interest are required on the Term Loan. The Term Loan is also guaranteed by the United States Department of Agriculture (&#8220;USDA&#8221;), which required an upfront guarantee fee of $ 62,400 and requires an annual fee of 0.5 % of the unpaid balance. As part of the USDA guarantee requirements, shareholders owning more than 20% are required to personally guarantee a portion of the Term Loan, in an amount equal to their stock ownership percentage. The J. Ward McConnell Jr. Living Trust, the estate of the former Vice Chairman of the Board of Directors and a shareholder owning more than 20 % of the Company&#8217;s outstanding stock, is guaranteeing approximately 38 % of the Term Loan, for an annual fee of 2 % of the personally guaranteed amount. The initial guarantee fee will be amortized over the life of the Term Loan, and the annual fees and personally guaranteed amounts are expensed monthly. The Term Loan is governed by the terms of a Promissory Note, dated September 28, 2017, entered into between the Company and Bank Midwest. The Company made a $ 209,836 principal payment on the term loan on October 23, 2024 after receiving proceeds from the sale of the Ohio real estate. 
+ 32 
+ Table of Contents 
+ The Company previously carried a Roof Term Loan (the &#8220;Roof Term Loan&#8221;) of $ 350,000 with Bank Midwest entered into on May 17, 2022 with a maturity date of May 15, 2027. The Roof Term Loan&#8217;s principal balance of $ 325,789 was paid off on October 23, 2024 with proceeds received from the sale of the Ohio real estate associated with the Company's discontinued Tools segment. 
+ In connection with the Line of Credit, the Company, Art&#8217;s-Way Scientific, Inc. and Ohio Metal Working Products/Art&#8217;s-Way Inc. each entered into a Commercial Security Agreement with Bank Midwest, dated September 28, 2017, pursuant to which each granted to Bank Midwest a first priority security interest in certain inventory, equipment, accounts, chattel paper, instruments, letters of credit and other assets to secure the obligations of the Company under the line of credit. Each of Art&#8217;s-Way Scientific, Inc. and Ohio Metal Working Products/Art&#8217;s-Way Inc. also agreed to guarantee the obligations of the Company pursuant to the Line of Credit, as set forth in Commercial Guaranties, each dated September 28, 2017. The Ohio Metal Working Products/Art's-Way Inc.'s mortgage, commercial security agreements and commercial guaranties were released upon sale of the Ohio real estate associated with the Company's discontinued Tools segment in October of 2024. 
+ The Term Loan is secured by a mortgage on the Company&#8217;s Armstrong, Iowa and Monona, Iowa properties. Each mortgage is governed by the terms of a separate Mortgage, dated September 28, 2017, and each property is also subject to a separate Assignment of Rents, dated September 28, 2017. 
+ If the Company or its subsidiaries (as guarantors pursuant to the Commercial Guaranties) commits an event of default with respect to the promissory notes and fails or is unable to cure that default, Bank Midwest may immediately terminate its obligation, if any, to make additional loans to the Company and may accelerate the Company&#8217;s obligations under the promissory notes. Bank Midwest shall also have all other rights and remedies for default provided by the Uniform Commercial Code, as well as any other applicable law and the various loan agreements. In addition, in an event of default, Bank Midwest may foreclose on the mortgaged property. 
+ Compliance with Bank Midwest covenants is measured annually on November 30 with the exception of the Company's working capital requirement, which is measured monthly. The terms of the Bank Midwest loan agreements require the Company to maintain a minimum of $ 4,000,000 of monthly working capital. The Company is also required to maintain a minimum debt service coverage ratio of 1.25 , with a 0.10 tolerance. The Company also must receive bank approval for purchases or sales of equipment over $ 100,000 annually and maintain reasonable salaries and owner compensation. The Company received the necessary approvals for purchases of equipment over $ 100,000 for the twelve months ended November 30, 2024 . The Company was in compliance with all covenants of Bank Midwest loans as of November 30, 2024 . The next measurement date is November 30, 2025 for all covenants except the monthly working capital requirement. 
+ SBA Economic Injury Disaster Loans 
+ In June of 2020, the Company executed the standard loan documents required for securing loans offered by the U.S. Small Business Administration under its Economic Injury Disaster Loan (&#8220;EIDL&#8221;) assistance program in light of the impact of the COVID- 19 pandemic on the Company&#8217;s business. Two loans were executed on June 18, 2020 with principal amounts of $ 150,000 each, with a third loan being executed on June 24, 2020 with a principal amount of $150,000. Proceeds from these EIDLs were used for working capital purposes. Interest accrues at the rate of 3.75 % per annum and will accrue from the date of inception. Installment payments, including principal and interest, are due monthly beginning December 18, 2022 ( thirty months from the date of the EIDLs) and December 24, 2022 in the amount of $ 731 per EIDL. The balance of principal and interest is payable 30 years from the date of the EIDL. The EIDLs are secured by a security interest on all of the Company&#8217;s assets. Each EIDL is governed by the terms of a separate Promissory Note, dated either June 18, 2020 or June 24, 2020, as applicable, entered into by the Company or the applicable subsidiary. The Company paid off the EIDL related to the Tools segment on November 22, 2024 after receiving proceeds from the Ohio real estate sale. 
+ 33 
+ Table of Contents 
+ A summary of the Company&#8217;s term debt is as follows: 
+ November 30, 2024 November 30, 2023 
+ Bank Midwest loan payable in monthly installments of $ 19,648 including interest at 7.00% , due October 1, 2037 1,779,877 2,080,718 
+ Bank Midwest loan payable in monthly installments of $ 2,972 including interest at 7.00% , due May 15, 2027 - 336,858 
+ U.S. Small Business Administration loan payable in monthly installments of $ 731 including interest at 3.75% beginning December 18, 2022 , due June 18, 2050 157,304 160,583 
+ U.S. Small Business Administration loan payable in monthly installments of $ 731 including interest at 3.75% beginning December 18, 2022 , due June 18, 2050 - 160,599 
+ U.S. Small Business Administration loan payable in monthly installments of $ 731 including interest at 3.75% beginning December 24, 2022 , due June 24, 2050 157,785 160,896 
+ Total term debt $ 2,094,966 $ 2,899,654 
+ Less term debt of discontinued operations $ - 160,599 
+ Term debt, continuing operations 2,094,966 2,739,055 
+ Less current portion of term debt 119,734 109,193 
+ Term debt, excluding current portion $ 1,975,232 $ 2,629,862 
+ A summary of the minimum maturities of term debt follows for the years ending November 30: 
+ Year Amount 
+ 2025 $ 119,734 
+ 2026 127,462 
+ 2027 136,596 
+ 2028 146,078 
+ 2029 156,874 
+ 2030 and thereafter 1,408,222 
+ $ 2,094,966 
+ ( 11 ) Related Party Transactions 
+ During the 2024 and 2023 fiscal years, the Company did not recognize any revenues from transactions with a related party, and no amounts in accounts receivable balances were due from a related party. From time to time, the Company purchases various supplies from related parties, which are companies in which Marc McConnell, the Company's Chairman, President and Chief Executive Officer, has an ownership interest and also serves as President. J. Ward McConnell Jr.&#8217;s estate, the J. Ward McConnell, Jr. Living Trust, is paid a monthly fee to guarantee a portion of the Company&#8217;s term debt in accordance with the USDA guarantee obtained on the Company&#8217;s term debt. In the 2024 fiscal year, the Company recognized $ 15,193 of expense for transactions with related parties, compared to $ 16,102 in the 2023 fiscal year. As of November 30, 2024 , accrued expenses contained a balance of $ 1,153 owed to a related party compared to $ 1,339 on November 30, 2023 . 
+ ( 12 ) Employee Benefit Plans 
+ The Company sponsors a defined contribution 401 (k) savings plan which covers substantially all full-time employees who meet eligibility requirements. Participating employees may contribute as salary reductions any amount of their compensation up to the limit prescribed by the Internal Revenue Code. The Company makes a 50 % matching contribution to employees up to 3 % of eligible compensation. The Company's continuing operations recognized an expense of $ 115,447 and $ 112,297 related to this plan during the 2024 and 2023 fiscal years, respectively. 
+ 34 
+ Table of Contents 
+ ( 13 ) Equity Incentive Plan 
+ On February 25, 2020, the Board of Directors of the Company (the &#8220;Board&#8221;) authorized and approved the Art&#8217;s-Way Manufacturing Co., Inc. 2020 Equity Incentive Plan (the &#8220;2020 Plan&#8221;). The 2020 Plan was approved by the stockholders on April 30, 2020. The 2020 Plan replaced the Art&#8217;s-Way Manufacturing Co., Inc. 2011 Equity Incentive Plan (the &#8220;2011 Plan&#8221;) and added an additional 500,000 shares to the number of shares reserved for issuance pursuant to equity awards. No further awards will be made under the 2011 Plan or other prior plans. Awards to directors and executive officers under the 2020 Plan are governed by the forms of agreement approved by the Board. Stock options or other awards granted prior to February 25, 2020 are governed by the applicable prior plan and the forms of agreement adopted thereunder. 
+ The 2020 Plan permits the plan administrator to award nonqualified stock options, incentive stock options, restricted stock awards, restricted stock units, performance awards, and stock appreciation rights to employees (including officers), directors, and consultants. During each of fiscal years 2024 and 2023, directors were automatically granted restricted stock awards of 1,000 shares of fully vested common stock annually or initially upon their election to the Board and another 1,000 shares of fully vested common stock on the last business day of each fiscal quarter pursuant to a Board approved director compensation policy. 
+ Shares issued under the 2020 Plan for the years ended November 30, 2024 and 2023 are as follows: 
+ For the Twelve Months Ended 
+ November 30, 2024 November 30, 2023 
+ Shares issued to directors (immediate vesting) 25,000 25,000 
+ Shares issued to directors, employees, and consultants (three-year vesting) 69,000 82,250 
+ Unvested shares forfeit upon termination ( 51,749 ) ( 13,999 ) 
+ Net shares issued 42,251 93,251 
+ Book and tax stock-based compensation expense for the years ended November 30, 2024 and 2023 are as follows: 
+ For the Twelve Months Ended 
+ November 30, 2024 November 30, 2023 
+ Stock-based compensation expense 182,847 292,185 
+ Treasury share repurchase expense ( 37,654 ) ( 68,536 ) 
+ Stock-based compensation expense net of treasury repurchases 145,193 223,649 
+ For the Twelve Months Ended 
+ November 30, 2024 November 30, 2023 
+ Tax deductions from stock-based compensation expense 202,557 232,723 
+ Stock-based compensation expense reflects the fair value of stock-based awards measured at the grant date and recognized over the relevant vesting period. The Company estimates the fair value of each stock-based option award on the measurement date using the Black-Scholes option valuation model which incorporates assumptions as to stock price volatility, the expected life of the options, risk-free interest rate, and dividend yield. Expected volatility is based on historical volatility of the Company&#8217;s stock and other factors. The Company uses historical option exercise and termination data to estimate the expected term the options are expected to be outstanding. The risk-free rate is based on the U.S. Treasury yield curve in effect at the time of grant. The expected dividend yield is calculated using historical dividend amounts and the stock price at the option issuance date. No stock options were granted during the years ended November 30, 2024 or 2023 . 
+ 35 
+ Table of Contents 
+ The following is a summary of activity under the plans as of November 30, 2024 and 2023 , and changes during the years then ended: 
+ 2024 Option Activity 
+ Weighted Average 
+ Weighted Average Remaining Aggregate 
+ Options Shares Exercise Price Contractual Term Intrinsic Value 
+ Options O/S at beginning of period 8,000 $ 5.43 
+ Granted - $ - 
+ Exercised - $ - - 
+ Options Expired or Forfeited ( 4,000 ) $ 6.15 
+ Options O/S at end of Period 4,000 $ 4.70 0.39 - 
+ Options Exer. at end of the Period 4,000 $ 4.70 0.39 - 
+ 2023 Option Activity 
+ Weighted Average 
+ Weighted Average Remaining Aggregate 
+ Options Shares Exercise Price Contractual Term Intrinsic Value 
+ Options O/S at beginning of period 12,000 $ 5.75 
+ Granted - $ - 
+ Exercised - $ - - 
+ Options Expired or Forfeited ( 4,000 ) $ 6.40 
+ Options O/S at end of Period 8,000 $ 5.43 0.90 - 
+ Options Exer. at end of the Period 8,000 $ 5.43 0.90 - 
+ 36 
+ Table of Contents 
+ ( 15 ) Income Taxes 
+ Total income tax expense for the 2024 and 2023 fiscal years consists of the following: 
+ November 30, 2024 November 30, 2023 
+ Current expense $ 11,389 $ 11,284 
+ Deferred expense 62,916 102,182 
+ Total income tax expense 74,305 113,466 
+ Income tax expense (benefit) - discontinued operations 115,330 ( 212,493 ) 
+ Income tax expense (benefit) - continuing operations $ ( 41,025 ) $ 325,959 
+ The reconciliation of the statutory Federal income tax rate is as follows: 
+ November 30, 2024 November 30, 2023 
+ Statutory federal income tax rate 21.0 % 21.0 % 
+ State taxes (net of federal) 4.5 4.9 
+ Permanent Differences and Other 4.8 4.0 
+ 30.3 % 29.9 % 
+ The primary driver for the increase in effective tax rate was due to add backs for taxable grants. 
+ Tax effects of temporary differences that give rise to significant portions of the deferred tax assets (liabilities) on November 30, 2024 and 2023 are presented as approximate amounts below: 
+ November 30 
+ 2024 2023 
+ Deferred tax assets 
+ Accrued expenses $ 87,153 $ 106,356 
+ Inventory capitalization 142,471 155,705 
+ NOL and tax credit carryforward 1,653,212 1,773,588 
+ Asset reserves 591,025 539,848 
+ Total deferred tax assets $ 2,473,861 $ 2,575,497 
+ Deferred tax liabilities 
+ Property, plant, and equipment $ ( 33,564 ) $ ( 72,284 ) 
+ Total deferred tax liabilities $ ( 33,564 ) $ ( 72,284 ) 
+ Net deferred tax assets (liabilities) $ 2,440,297 $ 2,503,213 
+ In assessing the realizability of deferred tax assets, management considers whether it is more likely than not that some portion or all of the deferred tax assets will not be realized. The ultimate realization of deferred tax assets is dependent upon the generation of future taxable income during the periods in which those temporary differences become deductible. The Company's 2023 tax return included net operating losses (NOL) carryovers amounting to approximately $ 2,473,000 and tax credit carryforward amounting to approximately $ 109,000 for its U.S. operations that will expire on November 30, 2036, 2037, 2038, 2039 and 2040. The Company also carried over another $ 4,995,000 of net operating losses that can be carried forward indefinitely. Management expects to consume approximately $ 116,000 of NOLs for the 2024 tax year and believes that the Company will be able to utilize the remaining U.S. net operating losses and credits before their expiration. 
+ 37 
+ Table of Contents 
+ ( 16 ) Disclosures About the Fair Value of Financial Instruments 
+ The fair value of a financial instrument is defined as the amount at which the instrument could be exchanged in a current transaction between willing parties. On November 30, 2024 and November 30, 2023 , the carrying amount approximated fair value for cash, accounts receivable, operating and finance leases, accounts payable, notes payable to bank, and other current and long-term liabilities. The carrying amounts of current assets and liabilities approximate fair value because of the short maturity of these instruments. The fair value of the Company&#8217;s term loans payable also approximates recorded value because the interest rates charged under the loan terms are not substantially different from current interest rates. 
+ ( 17 ) Litigation and Contingencies 
+ Various legal actions and claims can arise in the normal course of business that may be pending against the Company. In the opinion of management, the Company has recorded adequate provisions, if any, in the accompanying financial statements for any pending legal actions and other claims. 
+ ( 18 ) Segment Information 
+ There are two reportable segments: Agricultural Products and Modular Buildings. The Agricultural Products segment fabricates and sells farming products as well as replacement parts for these products in the United States and worldwide. The Modular Buildings segment produces modular buildings for animal containment and various laboratory uses. 
+ The accounting policies applied to determine the segment information are the same as those described in the summary of significant accounting policies. Management evaluates the performance of each segment based on profit or loss from operations before income taxes. 
+ Approximate financial information with respect to the reportable segments is as follows. 
+ Twelve Months Ended November 30, 2024 
+ Agricultural Products Modular Buildings Consolidated 
+ Revenue from external customers $ 14,663,000 $ 9,836,000 $ 24,499,000 
+ Gross profit $ 4,155,000 $ 3,155,000 $ 7,310,000 
+ Income (loss) from operations $ ( 1,510,000 ) $ 1,971,000 $ 461,000 
+ Income (loss) before tax $ ( 2,065,000 ) $ 1,930,000 $ ( 135,000 ) 
+ Total Assets $ 18,372,000 $ 2,869,000 $ 21,241,000 
+ Capital expenditures (1) $ 587,000 $ 176,000 $ 763,000 
+ Depreciation & Amortization $ 617,000 $ 251,000 $ 868,000 
+ Twelve Months Ended November 30, 2023 
+ Agricultural Products Modular Buildings Consolidated 
+ Revenue from external customers $ 22,467,000 $ 7,814,000 $ 30,281,000 
+ Gross profit $ 6,584,000 $ 2,000,000 $ 8,584,000 
+ Income (loss) from operations $ 664,000 $ 867,000 $ 1,531,000 
+ Income (loss) before tax $ 140,000 $ 949,000 $ 1,089,000 
+ Total Assets $ 20,754,000 $ 2,593,000 $ 23,347,000 
+ Capital expenditures (2) $ 781,000 $ 195,000 $ 976,000 
+ Depreciation & Amortization $ 521,000 $ 284,000 $ 805,000 
+ ( 1 ) FY 2024 capital expenditures include finance leased assets of $ 39,000 in the Agricultural Products segment. 
+ ( 2 ) FY 2023 capital expenditures include finance leased assets of $ 118,000 in the Agricultural Products segment and $ 17,000 in the Modular Buildings segment. 
+ ( 19 ) Subsequent Events 
+ Management evaluated all other activity of the Company and concluded that no subsequent events have occurred that would require recognition in the consolidated financial statements or disclosure in the notes to the consolidated financial statements. 
+ 38 
+ Table of Contents 
+ Item 9. CHANGES IN AND DISAGREEMENTS WITH ACCOUNTANTS ON ACCOUNTING AND FINANCIAL DISCLOSURE . 
+ None. 
+ Item 9A. CONTROLS AND PROCEDURES . 
+ Evaluation of Disclosure Controls and Procedures 
+ The persons serving as our principal executive officer and principal financial officer have evaluated the effectiveness of our disclosure controls and procedures, as defined in Rule 13a-15(e) and Rule 15d-15(e) promulgated under the Securities Exchange Act of 1934, as amended (the &#8220;Exchange Act&#8221;), as of the end of the period subject to this report. Based on this evaluation, the persons serving as our principal executive officer and principal financial officer concluded that our disclosure controls and procedures were effective as of November 30, 2024. Our management has concluded that the consolidated financial statements included in this report present fairly, in all material respects, our financial position, results of operations and cash flows for the periods presented in conformity with accounting principles generally accepted in the United States. 
+ Management &#8217; s Report on Internal Control over Financial Reporting 
+ Our management is responsible for establishing and maintaining adequate internal control over financial reporting, as such term is defined in Rules 13a-15(f) and 15d-15(f) promulgated under the Exchange Act. Internal control over financial reporting is a process designed to provide reasonable assurance regarding the reliability of financial reporting and the preparation of financial statements for external purposes in accordance with generally accepted accounting principles. Under the supervision and with the participation of management, including the persons serving as our principal executive officer and principal financial officer, we conducted an evaluation of the effectiveness of our internal control over financial reporting based on the framework in Internal Control &#8212; Integrated Framework (2013) issued by the Committee of Sponsoring Organizations of the Treadway Commission (&#8220;COSO&#8221;). Based on this evaluation, management has concluded that our internal control over financial reporting was effective as of November 30, 2024. 
+ This report does not include an attestation report of our independent registered public accounting firm regarding internal control over financial reporting. Management&#8217;s report was not subject to attestation by our independent registered public accounting firm pursuant to rules of the SEC that permit us to provide only management&#8217;s report in this report. 
+ Limitations on Controls 
+ Our management, including the persons serving as our principal executive officer and principal financial officer, does not expect that our disclosure controls or our internal control over financial reporting will prevent or detect all errors and all fraud. A control system, no matter how well designed and operated, can provide only reasonable, not absolute, assurance that the control system&#8217;s objectives will be met. Internal control over financial reporting is a process that involves human diligence and compliance and is subject to lapses in judgment and breakdowns resulting from human failures. In addition, the design of any system of controls is based in part on certain assumptions about the likelihood of future events, and controls may become inadequate if conditions change. There can be no assurance that any design will succeed in achieving its stated goals under all potential future conditions. 
+ Changes to Internal Control Over Financial Reporting 
+ There were no changes in our internal control over financial reporting that occurred during the three months ended November 30, 2024 that have materially affected, or are reasonably likely to materially affect, our internal control over financial reporting. 
+ Item 9B. OTHER INFORMATION. 
+ Insider Trading Arrangements . During the quarter ended November 30, 2024, none of our directors or officers (as defined in Rule 16a - 1 (f) under the Exchange Act) adopted, modified or terminated a &#8220;Rule 10b5 - 1 trading arrangement&#8221; or a &#8220;non-Rule 10b5 - 1 trading arrangement&#8221; (as such terms are defined in Item 408 of Regulation S-K). 
+ Item 9C. DISCOLSURE REGARDING FOREIGN JURISDICTIONS THAT PREVENT INSPECTIONS. 
+ Not applicable. 
+ 39
+ Table of Contents 
+ PART III 
+ Item 10. DIRECTORS, EXECUTIVE OFFICERS AND CORPORATE GOVERNANCE . 
+ The information required by Item 10 is incorporated by reference to the sections entitled &#8220;Questions and Answers about the 2025 Annual Meeting and Voting,&#8221; &#8220;Election of Directors,&#8221; &#8220;Delinquent Section 16(a) Reports,&#8221; &#8220;Corporate Governance,&#8221; and &#8220;Executive Officers&#8221; in our definitive proxy statement relating to our 2025 Annual Meeting of Stockholders. 
+ Item 11. EXECUTIVE COMPENSATION . 
+ The information required by Item 11 is incorporated by reference to the sections entitled &#8220;Executive Compensation&#8221; and &#8220;Director Compensation&#8221; in our definitive proxy statement relating to our 2025 Annual Meeting of Stockholders. 
+ Item 12. SECURITY OWNERSHIP OF CERTAIN BENEFICIAL OWNERS AND MANAGEMENT AND RELATED STOCKHOLDER MATTERS . 
+ The information required by Item 12 is incorporated by reference to the sections entitled &#8220;Security Ownership of Principal Stockholders,&#8221; &#8220;Security Ownership of Directors and Management&#8221; and &#8220;Equity Compensation Plan Information&#8221; in our definitive proxy statement relating to our 2025 Annual Meeting of Stockholders. 
+ Item 13. CERTAIN RELATIONSHIPS AND RELATED TRANSACTIONS, AND DIRECTOR INDEPENDENCE . 
+ The information required by Item 13 is incorporated by reference to the sections entitled &#8220;Corporate Governance&#8221; and &#8220;Certain Transactions and Business Relationships&#8221; in our definitive proxy statement relating to our 2025 Annual Meeting of Stockholders. 
+ Item 14. PRINCIPAL ACCOUNTANT FEES AND SERVICES 
+ The information required by Item 14 is incorporated by reference to the section entitled &#8220;Independent Registered Public Accountant Firm&#8221; in our definitive proxy statement relating to our 2025 Annual Meeting of Stockholders. 
+ 40
+ Table of Contents 
+ PART IV 
+ Item 15. EXHIBITS, AND FINANCIAL STATEMENT SCHEDULES . 
+ (A) 
+ Financial Statements. The following financial statements are included in &#8220;Item 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA&#8221; of this report: 
+ Report of Eide Bailly, LLP (PCAOB ID 286 ) on Consolidated Financial Statements as of November 30, 2024 and 2023 
+ Consolidated Balance Sheets as of November 30, 2024 and 2023 
+ Consolidated Statements of Operations for each of the years ended November 30, 2024 and 2023 
+ Consolidated Statements of Stockholders&#8217; Equity for each of the years ended November 30, 2024 and 2023 
+ Consolidated Statements of Cash Flows for each of the years ended November 30, 2024 and 2023 
+ Notes to Consolidated Financial Statements 
+ (B) Financial Statement Schedules. 
+ Not applicable. 
+ (C) Exhibits. 
+ Exhibit No. 
+ Description 
+ 3.1 
+ Conformed Certificate of Incorporation of Art&#8217;s-Way Manufacturing Co., Inc. &#8211; incorporated by reference to Exhibit 3.1 to the Company&#8217;s Annual Report on Form 10-K for the fiscal year ended November 30, 2020. 
+ 3.2 
+ Conformed Bylaws of Art&#8217;s-Way Manufacturing Co., Inc.&#8211; incorporated by reference to Exhibit 3.2 to the Company&#8217;s Annual Report on Form 10-K for the fiscal year ended November 30, 2020. 
+ 4.1 
+ Description of the Registrant&#8217;s Securities Registered Pursuant to Section 12 of the Securities Exchange Act of 1934 &#8211; incorporated by reference to Exhibit 4.1 to the Company&#8217;s Annual Report on Form 10-K for the fiscal year ended November 30, 2019 . 
+ 10.1* 
+ Art&#8217;s-Way Manufacturing Co., Inc. 2020 Equity Incentive Plan (incorporated by reference to Exhibit 10.1 to the Company's Current Report on Form 8-K filed May 4, 2020). 
+ 10.2* 
+ Form of Restricted Stock Agreement under 2020 Equity Incentive Plan (incorporated by reference to Exhibit 10.2 to the Company's Current Report on Form 8-K filed May 4, 2020). 
+ 10.3* 
+ Form of Restricted Stock Unit Agreement under 2020 Equity Incentive Plan (incorporated by reference to Exhibit 10.3 to the Company's Current Report on Form 8-K filed May 4, 2020). 
+ 10.4* 
+ Form of Incentive Stock Option Award under 2020 Equity Incentive Plan (incorporated by reference to Exhibit 10.4 to the Company's Current Report on Form 8-K filed May 4, 2020). 
+ 10.5* 
+ Form of Non-Qualified Option Award under 2020 Equity Incentive Plan (incorporated by reference to Exhibit 10.5 to the Company's Current Report on Form 8-K filed May 4, 2020). 
+ 10.6* 
+ Employment Agreement between the Company and Michael Woods, dated February 1, 2020 &#8211; incorporated by reference to Exhibit 10.1 to the Company&#8217;s Current Report on Form 8-K filed February 3, 2020. 
+ 41
+ Table of Contents 
+ 10.7 
+ Promissory Note, between Bank Midwest and Art's-Way Manufacturing Co., Inc. dated March 4, 2024 - incorporated by reference to Exhibit 10.1 to Company's Quarterly report on Form 10-Q filed April 11, 2024. 
+ 10.8 
+ Promissory Note, between Bank Midwest and Art&#8217;s-Way Manufacturing Co., Inc., dated September 28, 2017 &#8211; incorporated by reference to Exhibit 10.2 to the Company&#8217;s Current Report on Form 8-K filed October 2, 2017. 
+ 10.9 
+ Promissory Note (Term Loan), between Bank Midwest and Art&#8217;s-Way Manufacturing Co., Inc., dated May 17, 2022 &#8211; incorporated by reference Exhibit 10.2 to the Company&#8217;s Current Report on Form 8-K filed May 23, 2022. 
+ 10.10 
+ Change in Terms Agreement between the Company and Bank Midwest, dated March 29, 2023 &#8211; incorporated by reference to Exhibit 10.2 to the Company&#8217;s Quarterly Report on Form 10-Q filed July 13, 2023. 
+ 10.11 
+ Promissory Note, between Bank Midwest and Art's-Way Manufacturing Co., Inc. dated August 30, 2023 - incorporated by reference to Exhibit 10.1 to the Company's Quarterly Report on Form 10-Q filed October 13, 2023. 
+ 10.12 
+ Change in Terms Agreement between the Company and Bank Midwest, dated November 29, 2023 &#8211; incorporated by reference to Exhibit 1.01 to the Company&#8217;s Current Report on Form 8-K filed December 4, 2023. 
+ 10.13 
+ Commercial Guaranty, by Ohio Metal Working Products/Art&#8217;s-Way Inc., dated September 28, 2017 - incorporated by reference to Exhibit 10.4 to the Company&#8217;s Current Report on Form 8-K filed October 2, 2017 
+ 10.14 
+ Commercial Guaranty, by Art&#8217;s-Way Scientific Inc., dated September 28, 2017 &#8211; incorporated by reference to Exhibit 10.5 to the Company&#8217;s Current Report on Form 8-K filed October 2, 2017. 
+ 10.15 
+ Commercial Security Agreement, between Bank Midwest and Art&#8217;s-Way Manufacturing Co., Inc., dated September 28, 2017 &#8211; incorporated by reference to Exhibit 10.6 to the Company&#8217;s Current Report on Form 8-K filed October 2, 2017. 
+ 10.16 
+ Commercial Security Agreement, between Bank Midwest and Ohio Metal Working Products/Art&#8217;s-Way Inc., dated September 28, 2017 &#8211; incorporated by reference to Exhibit 10.7 to the Company&#8217;s Current Report on Form 8-K filed October 2, 2017. 
+ 10.17 
+ Commercial Security Agreement, between Bank Midwest and Art&#8217;s-Way Scientific Inc., dated September 28, 2017 &#8211; incorporated by reference to Exhibit 10.8 to the Company&#8217;s Current Report on Form 8-K filed October 2, 2017. 
+ 10.18 
+ Open-End Mortgage (3620 Progress Street NE, Canton, OH 44705), by Ohio Metal Working Products/Art&#8217;s-Way Inc., dated September 28, 2017 &#8211; incorporated by reference to Exhibit 10.10 to the Company&#8217;s Current Report on Form 8-K filed October 2, 2017. 
+ 10.19 
+ Mortgage (5556 Highway 9 and 203 West Oak Street, Armstrong & Monona, Iowa, 50514/55215), by Art&#8217;s-Way Manufacturing Co., Inc., dated September 28, 2017 &#8211; incorporated by reference to Exhibit 10.11 to the Company&#8217;s Current Report on Form 8-K filed October 2, 2017. 
+ 10.20 
+ Modification of Mortgage (3620 Progress Street NE, Canton, OH 44705), by Ohio Metal Working Products/Art&#8217;s-Way Inc., dated March 30, 2018 &#8211; incorporated by reference to Exhibit 10.2 to the Company&#8217;s Quarterly Report on Form 10-Q filed April 2, 2018. 
+ 10.21 
+ Assignment of Rents (3620 Progress Street NE, Canton, OH 44705), by Ohio Metal Working Products/Art&#8217;s-Way Inc., dated September 28, 2017 &#8211; incorporated by reference to Exhibit 10.13 to the Company&#8217;s Current Report on Form 8-K filed October 2, 2017. 
+ 10.22 
+ Assignment of Rents (5556 Highway 9 and 203 West Oak Street, Armstrong & Monona, Iowa, 50514/55215), by Art&#8217;s-Way Manufacturing Co., Inc., dated September 28, 2017 &#8211; incorporated by reference to Exhibit 10.15 to the Company&#8217;s Current Report on Form 8-K filed October 2, 2017. 
+ 10.23 
+ Promissory Note, between the U.S. Small Business Administration and Art&#8217;s-Way Scientific Inc., dated June 18, 2020 &#8211; incorporated by reference to Exhibit 10.5 to the Company&#8217;s Quarterly Report on Form 10-Q for the quarter filed July 10, 2020. 
+ 42
+ Table of Contents 
+ 10.24 
+ Promissory Note, between the U.S. Small Business Administration and Ohio Metal Working Products/Art&#8217;s-Way, dated June 18, 2020 &#8211; incorporated by reference to Exhibit 10.6 to the Company&#8217;s Quarterly Report on Form 10-Q filed July 10, 2020 
+ 10.25 
+ Promissory Note, between the U.S. Small Business Administration and Art&#8217;s-Way Manufacturing Co., Inc., dated June 24, 2020 &#8211; incorporated by reference to Exhibit 10.7 to the Company&#8217;s Quarterly Report on Form 10-Q filed July 10, 2020 . 
+ 10.26* 
+ Employment Agreement between the Company and David A. King, effective March 30, 2020 - incorporated by reference to Exhibit 10.2 to the Company's Quarterly Report on Form 10-Q for the quarter ended February 29, 2020 
+ 10.27* 
+ Separation Agreement and General Release, between the Company and David A. King, dated October 1, 2024 - incorporated by reference to Exhibit 10.1 to the Company's Current Report on Form 8-K filed October 4, 2024. 
+ 10.28 
+ Commercial/Industrial Real Estate Purchase Agreement (Canton, OH property), between Ohio Metal Working Products/Art's-Way Inc., dated August 2,2024 - incorporated by reference to Exhibit 1.01 to the Company's Current Report on Form 8-K filed August 7, 2024. 
+ 19.1 
+ ARTW Insider Trading Policy - filed herewith 
+ 21.1 
+ List of Subsidiaries &#8211; filed herewith. 
+ 23.1 
+ Consent of independent registered public accounting firm &#8211; filed herewith. 
+ 24.1 
+ Power of Attorney (included on the &#8220;Signatures&#8221; page of this Annual Report on Form 10-K). 
+ 31.1 
+ Certificate pursuant to 17 CFR 240 13(a)-14(a) &#8211; filed herewith. 
+ 31.2 
+ Certificate pursuant to 17 CFR 240 13(a)-14(a) &#8211; filed herewith. 
+ 32.1 
+ Certificate pursuant to 18 U.S.C. Section 1350 &#8211; furnished herewith. 
+ 32.2 
+ Certificate pursuant to 18 U.S.C. Section 1350 &#8211; furnished herewith. 
+ 97.1 
+ Art's-Way Manufacturing Co., Inc. Clawback Policy - filed herewith. 
+ 101 
+ The following materials from this report, formatted in iXBRL (Inline Extensible Business Reporting Language) are filed herewith: (i) consolidated balance sheets, (ii) consolidated statement of operations, (iii) consolidated statements of cash flows, and (iv) the notes to the condensed consolidated financial statements. 
+ 104 
+ Cover Page Interactive Data File (formatted as Inline XBRL and contained in Exhibit 101) 
+ (*) Indicates a management contract or compensatory plan or arrangement. 
+ Item 16. FORM 10-K SUMMARY. 
+ Registrants may voluntarily include a summary of information required by Form 10-K under this Item 16. We have elected not to include such summary information. 
+ 43
+ Table of Contents 
+ SIGNATURES 
+ Pursuant to the requirements of Section 13 or 15(d) of the Securities Exchange Act of 1934, the registrant has duly caused this report to be signed on its behalf by the undersigned, thereunto duly authorized. 
+ ART&#8217;S-WAY MANUFACTURING CO., INC. 
+ Date: 
+ February 18, 2025 
+ By: /s/ Marc H. McConnell 
+ Marc H. McConnell, Chairman, President and Chief Executive Officer 
+ POWER OF ATTORNEY 
+ Each person whose signature appears below appoints Marc H. McConnell his true and lawful attorney-in-fact and agent, with full power of substitution and resubstitution, for him and in his name, place and stead, in any and all capacities, to sign any or all amendments to this Annual Report on Form 10-K and to file the same, with all exhibits thereto, and other documents in connection therewith, with the Securities and Exchange Commission, granting unto said attorney-in-fact and agent, full power and authority to do and perform each and every act and thing requisite and necessary to be done in and about the premises, as fully to all intents and purposes as he might or could do in person, hereby ratifying and confirming all said attorney-in-fact and agent, or her substitute or substitutes, may lawfully do or cause to be done by virtue thereof. 
+ Pursuant to the requirements of the Securities Exchange Act of 1934, this report has been signed below by the following persons on behalf of the registrant and in the capacities and on the dates indicated. 
+ Date: February 18, 2025 
+ /s/ Marc H. McConnell 
+ Marc H. McConnell, Chairman, President and Chief Executive Officer (Principal Executive Officer) 
+ Date: February 18, 2025 
+ /s/ Michael W. Woods 
+ Michael W. Woods, Chief Financial Officer (Principal Financial Officer and Principal Accounting Officer) 
+ Date: February 18, 2025 
+ /s/ Thomas E. Buffamante 
+ Thomas E. Buffamante, Director 
+ Date: February 18, 2025 
+ /s/ Randall C. Ramsey 
+ Randall C. Ramsey, Director 
+ Date: February 18, 2025 
+ /s/ Matthew N. Westendorf 
+ Matthew N. Westendorf, Director 
+ Date: February 18, 2025 
+ /s/ David A. White 
+ David A. White, Director 
+ 44

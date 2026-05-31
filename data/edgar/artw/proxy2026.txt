@@ -1,0 +1,1324 @@
+ 
+ artw20260306_def14a.htm 
+ false 
+ 0000007623 
+ DEF 14A 
+ 0000007623 2024-12-01 2025-11-30 
+ iso4217:USD 
+ 0000007623 ecd:EqtyAwrdsAdjsMember ecd:NonPeoNeoMember 2022-12-01 2023-11-30 
+ 0000007623 ecd:DvddsOrOthrErngsPdOnEqtyAwrdsNtOthrwsRflctdInTtlCompForCvrdYrMember ecd:NonPeoNeoMember 2022-12-01 2023-11-30 
+ 0000007623 ecd:FrValAsOfPrrYrEndOfEqtyAwrdsGrntdInPrrYrsFldVstngCondsDrngCvrdYrMember ecd:NonPeoNeoMember 2022-12-01 2023-11-30 
+ 0000007623 ecd:ChngInFrValAsOfVstngDtOfPrrYrEqtyAwrdsVstdInCvrdYrMember ecd:NonPeoNeoMember 2022-12-01 2023-11-30 
+ 0000007623 ecd:VstngDtFrValOfEqtyAwrdsGrntdAndVstdInCvrdYrMember ecd:NonPeoNeoMember 2022-12-01 2023-11-30 
+ 0000007623 ecd:ChngInFrValOfOutsdngAndUnvstdEqtyAwrdsGrntdInPrrYrsMember ecd:NonPeoNeoMember 2022-12-01 2023-11-30 
+ 0000007623 ecd:YrEndFrValOfEqtyAwrdsGrntdInCvrdYrOutsdngAndUnvstdMember ecd:NonPeoNeoMember 2022-12-01 2023-11-30 
+ 0000007623 ecd:EqtyAwrdsAdjsMember ecd:NonPeoNeoMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:DvddsOrOthrErngsPdOnEqtyAwrdsNtOthrwsRflctdInTtlCompForCvrdYrMember ecd:NonPeoNeoMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:FrValAsOfPrrYrEndOfEqtyAwrdsGrntdInPrrYrsFldVstngCondsDrngCvrdYrMember ecd:NonPeoNeoMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:ChngInFrValAsOfVstngDtOfPrrYrEqtyAwrdsVstdInCvrdYrMember ecd:NonPeoNeoMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:VstngDtFrValOfEqtyAwrdsGrntdAndVstdInCvrdYrMember ecd:NonPeoNeoMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:ChngInFrValOfOutsdngAndUnvstdEqtyAwrdsGrntdInPrrYrsMember ecd:NonPeoNeoMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:YrEndFrValOfEqtyAwrdsGrntdInCvrdYrOutsdngAndUnvstdMember ecd:NonPeoNeoMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:EqtyAwrdsAdjsMember ecd:NonPeoNeoMember 2024-12-01 2025-11-30 
+ 0000007623 ecd:DvddsOrOthrErngsPdOnEqtyAwrdsNtOthrwsRflctdInTtlCompForCvrdYrMember ecd:NonPeoNeoMember 2024-12-01 2025-11-30 
+ 0000007623 ecd:FrValAsOfPrrYrEndOfEqtyAwrdsGrntdInPrrYrsFldVstngCondsDrngCvrdYrMember ecd:NonPeoNeoMember 2024-12-01 2025-11-30 
+ 0000007623 ecd:ChngInFrValAsOfVstngDtOfPrrYrEqtyAwrdsVstdInCvrdYrMember ecd:NonPeoNeoMember 2024-12-01 2025-11-30 
+ 0000007623 ecd:VstngDtFrValOfEqtyAwrdsGrntdAndVstdInCvrdYrMember ecd:NonPeoNeoMember 2024-12-01 2025-11-30 
+ 0000007623 ecd:ChngInFrValOfOutsdngAndUnvstdEqtyAwrdsGrntdInPrrYrsMember ecd:NonPeoNeoMember 2024-12-01 2025-11-30 
+ 0000007623 ecd:YrEndFrValOfEqtyAwrdsGrntdInCvrdYrOutsdngAndUnvstdMember ecd:NonPeoNeoMember 2024-12-01 2025-11-30 
+ 0000007623 2022-12-01 2023-11-30 
+ 0000007623 ecd:EqtyAwrdsInSummryCompstnTblForAplblYrMember ecd:NonPeoNeoMember 2022-12-01 2023-11-30 
+ 0000007623 2023-12-01 2024-11-30 
+ 0000007623 ecd:EqtyAwrdsInSummryCompstnTblForAplblYrMember ecd:NonPeoNeoMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:EqtyAwrdsInSummryCompstnTblForAplblYrMember ecd:NonPeoNeoMember 2024-12-01 2025-11-30 
+ 0000007623 ecd:EqtyAwrdsAdjsMember ecd:PeoMember artw:MarcMcConnellMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:DvddsOrOthrErngsPdOnEqtyAwrdsNtOthrwsRflctdInTtlCompForCvrdYrMember ecd:PeoMember artw:MarcMcConnellMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:FrValAsOfPrrYrEndOfEqtyAwrdsGrntdInPrrYrsFldVstngCondsDrngCvrdYrMember ecd:PeoMember artw:MarcMcConnellMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:ChngInFrValAsOfVstngDtOfPrrYrEqtyAwrdsVstdInCvrdYrMember ecd:PeoMember artw:MarcMcConnellMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:VstngDtFrValOfEqtyAwrdsGrntdAndVstdInCvrdYrMember ecd:PeoMember artw:MarcMcConnellMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:ChngInFrValOfOutsdngAndUnvstdEqtyAwrdsGrntdInPrrYrsMember ecd:PeoMember artw:MarcMcConnellMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:YrEndFrValOfEqtyAwrdsGrntdInCvrdYrOutsdngAndUnvstdMember ecd:PeoMember artw:MarcMcConnellMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:EqtyAwrdsAdjsMember ecd:PeoMember artw:MarcMcConnellMember 2024-12-01 2025-11-30 
+ 0000007623 ecd:DvddsOrOthrErngsPdOnEqtyAwrdsNtOthrwsRflctdInTtlCompForCvrdYrMember ecd:PeoMember artw:MarcMcConnellMember 2024-12-01 2025-11-30 
+ 0000007623 ecd:FrValAsOfPrrYrEndOfEqtyAwrdsGrntdInPrrYrsFldVstngCondsDrngCvrdYrMember ecd:PeoMember artw:MarcMcConnellMember 2024-12-01 2025-11-30 
+ 0000007623 ecd:ChngInFrValAsOfVstngDtOfPrrYrEqtyAwrdsVstdInCvrdYrMember ecd:PeoMember artw:MarcMcConnellMember 2024-12-01 2025-11-30 
+ 0000007623 ecd:VstngDtFrValOfEqtyAwrdsGrntdAndVstdInCvrdYrMember ecd:PeoMember artw:MarcMcConnellMember 2024-12-01 2025-11-30 
+ 0000007623 ecd:ChngInFrValOfOutsdngAndUnvstdEqtyAwrdsGrntdInPrrYrsMember ecd:PeoMember artw:MarcMcConnellMember 2024-12-01 2025-11-30 
+ 0000007623 ecd:YrEndFrValOfEqtyAwrdsGrntdInCvrdYrOutsdngAndUnvstdMember ecd:PeoMember artw:MarcMcConnellMember 2024-12-01 2025-11-30 
+ 0000007623 artw:MarcMcConnellMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:EqtyAwrdsInSummryCompstnTblForAplblYrMember ecd:PeoMember artw:MarcMcConnellMember 2023-12-01 2024-11-30 
+ 0000007623 artw:MarcMcConnellMember 2024-12-01 2025-11-30 
+ 0000007623 ecd:EqtyAwrdsInSummryCompstnTblForAplblYrMember ecd:PeoMember artw:MarcMcConnellMember 2024-12-01 2025-11-30 
+ 0000007623 ecd:EqtyAwrdsAdjsMember ecd:PeoMember artw:DavidKingMember 2022-12-01 2023-11-30 
+ 0000007623 ecd:DvddsOrOthrErngsPdOnEqtyAwrdsNtOthrwsRflctdInTtlCompForCvrdYrMember ecd:PeoMember artw:DavidKingMember 2022-12-01 2023-11-30 
+ 0000007623 ecd:FrValAsOfPrrYrEndOfEqtyAwrdsGrntdInPrrYrsFldVstngCondsDrngCvrdYrMember ecd:PeoMember artw:DavidKingMember 2022-12-01 2023-11-30 
+ 0000007623 ecd:ChngInFrValAsOfVstngDtOfPrrYrEqtyAwrdsVstdInCvrdYrMember ecd:PeoMember artw:DavidKingMember 2022-12-01 2023-11-30 
+ 0000007623 ecd:VstngDtFrValOfEqtyAwrdsGrntdAndVstdInCvrdYrMember ecd:PeoMember artw:DavidKingMember 2022-12-01 2023-11-30 
+ 0000007623 ecd:ChngInFrValOfOutsdngAndUnvstdEqtyAwrdsGrntdInPrrYrsMember ecd:PeoMember artw:DavidKingMember 2022-12-01 2023-11-30 
+ 0000007623 ecd:YrEndFrValOfEqtyAwrdsGrntdInCvrdYrOutsdngAndUnvstdMember ecd:PeoMember artw:DavidKingMember 2022-12-01 2023-11-30 
+ 0000007623 ecd:EqtyAwrdsAdjsMember ecd:PeoMember artw:DavidKingMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:DvddsOrOthrErngsPdOnEqtyAwrdsNtOthrwsRflctdInTtlCompForCvrdYrMember ecd:PeoMember artw:DavidKingMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:FrValAsOfPrrYrEndOfEqtyAwrdsGrntdInPrrYrsFldVstngCondsDrngCvrdYrMember ecd:PeoMember artw:DavidKingMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:ChngInFrValAsOfVstngDtOfPrrYrEqtyAwrdsVstdInCvrdYrMember ecd:PeoMember artw:DavidKingMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:VstngDtFrValOfEqtyAwrdsGrntdAndVstdInCvrdYrMember ecd:PeoMember artw:DavidKingMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:ChngInFrValOfOutsdngAndUnvstdEqtyAwrdsGrntdInPrrYrsMember ecd:PeoMember artw:DavidKingMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:YrEndFrValOfEqtyAwrdsGrntdInCvrdYrOutsdngAndUnvstdMember ecd:PeoMember artw:DavidKingMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:EqtyAwrdsAdjsMember ecd:PeoMember artw:DavidKingMember 2024-12-01 2025-11-30 
+ 0000007623 ecd:DvddsOrOthrErngsPdOnEqtyAwrdsNtOthrwsRflctdInTtlCompForCvrdYrMember ecd:PeoMember artw:DavidKingMember 2024-12-01 2025-11-30 
+ 0000007623 ecd:FrValAsOfPrrYrEndOfEqtyAwrdsGrntdInPrrYrsFldVstngCondsDrngCvrdYrMember ecd:PeoMember artw:DavidKingMember 2024-12-01 2025-11-30 
+ 0000007623 ecd:ChngInFrValAsOfVstngDtOfPrrYrEqtyAwrdsVstdInCvrdYrMember ecd:PeoMember artw:DavidKingMember 2024-12-01 2025-11-30 
+ 0000007623 ecd:VstngDtFrValOfEqtyAwrdsGrntdAndVstdInCvrdYrMember ecd:PeoMember artw:DavidKingMember 2024-12-01 2025-11-30 
+ 0000007623 ecd:ChngInFrValOfOutsdngAndUnvstdEqtyAwrdsGrntdInPrrYrsMember ecd:PeoMember artw:DavidKingMember 2024-12-01 2025-11-30 
+ 0000007623 ecd:YrEndFrValOfEqtyAwrdsGrntdInCvrdYrOutsdngAndUnvstdMember ecd:PeoMember artw:DavidKingMember 2024-12-01 2025-11-30 
+ 0000007623 artw:DavidKingMember 2022-12-01 2023-11-30 
+ 0000007623 ecd:EqtyAwrdsInSummryCompstnTblForAplblYrMember ecd:PeoMember artw:DavidKingMember 2022-12-01 2023-11-30 
+ 0000007623 artw:DavidKingMember 2023-12-01 2024-11-30 
+ 0000007623 ecd:EqtyAwrdsInSummryCompstnTblForAplblYrMember ecd:PeoMember artw:DavidKingMember 2023-12-01 2024-11-30 
+ thunderdome:item 
+ 0000007623 2024-10-04 2025-11-30 
+ 0000007623 2022-12-01 2024-10-01 
+ 0000007623 artw:MarcMcConnellMember 2022-12-01 2023-11-30 
+ 0000007623 artw:DavidKingMember 2024-12-01 2025-11-30 
+ 0000007623 2025-01-01 2025-12-31 
+ 0000007623 2025-12-31 2024-12-01 2025-11-30 
+ UNITED STATES 
+ SECURITIES AND EXCHANGE COMMISSION 
+ Washington, D.C. 20549 
+ SCHEDULE 14A 
+ Proxy Statement Pursuant to Section 14(a) of 
+ the Securities Exchange Act of 1934 
+ (Amendment No. ___ ) 
+ Filed by the Registrant &#9746; 
+ Filed by a Party other than the Registrant &#9744; 
+ Check the appropriate box: 
+ &#9744; 
+ Preliminary Proxy Statement 
+ &#9744; 
+ Confidential, for Use of the Commission Only (as permitted by Rule 14a-6(e)(2)) 
+ &#9746; 
+ Definitive Proxy Statement 
+ &#9744; 
+ Definitive Additional Materials 
+ &#9744; 
+ Soliciting Material Pursuant to &#167;240.14a-12 
+ ART&#8217;S-WAY MANUFACTURING CO., INC. 
+ (Name of Registrant as Specified In Its Charter) 
+ (Name of Person(s) Filing Proxy Statement, if other than the Registrant) 
+ Payment of Filing Fee (Check the appropriate box): 
+ &#9746; 
+ No fee required. 
+ &#9744; 
+ Fee paid previously with preliminary materials. 
+ &#9744; 
+ Fee computed on table in exhibit required by Item 25(b) per Exchange Act Rules 14a-6(i)(1) and 0-11. 
+ ART &#8217; S-WAY MANUFACTURING CO., INC. 
+ 5556 Highway 9 
+ Armstrong, Iowa, 50514-0288 
+ Ph: (712) 208-8467 
+ NOTICE OF ANNUAL MEETING OF STOCKHOLDERS 
+ TO BE HELD ON TUESDAY, APRIL 21, 2026 
+ To our Stockholders: 
+ The 2026 Annual Meeting of the Stockholders (the &#8220;2026 Annual Meeting&#8221;) of Art&#8217;s-Way Manufacturing Co., Inc. (the &#8220;Company&#8221;) will be held on Tuesday, April 21, 2026, at the offices of the Company located at 5556 Highway 9, Armstrong, Iowa, 50514-0288. Registration for the 2026 Annual Meeting will begin at 9:30 a.m. Central Daylight Time (&#8220;CDT&#8221;). The 2026 Annual Meeting will commence at approximately 10:00 a.m. CDT. The Company is also offering its stockholders the ability to attend the 2026 Annual Meeting remotely, via teleconference. To attend the 2026 Annual Meeting via teleconference, please call 1-866-895-5510 and enter a passcode of 409589. The purposes of the 2026 Annual Meeting are to: 
+ (1) 
+ Consider and vote upon the election of five nominees to the Company&#8217;s Board of Directors, to serve until the next annual meeting of stockholders and until such time as their successors are elected and qualified, or until their earlier resignation or removal; 
+ (2) 
+ Consider and vote upon the ratification of the appointment of Eide Bailly LLP as the Company&#8217;s independent registered public accounting firm for the fiscal year ending November 30, 2026; 
+ (3) 
+ Consider and vote upon an amendment to the Company&#8217;s 2020 Equity Incentive Plan to increase the number of shares reserved thereunder by 500,000 shares; and 
+ (4) 
+ Consider and vote upon, on a non-binding, advisory basis, a proposal to approve the Company&#8217;s named executive officer compensation. 
+ Any action may be taken on any one of the foregoing proposals at the 2026 Annual Meeting on the date specified above, or on any date or dates to which the 2026 Annual Meeting may be adjourned. The Board of Directors is not aware of any other business to come before the 2026 Annual Meeting. The foregoing proposals are described more fully in the enclosed proxy statement (the &#8220;Proxy Statement&#8221;). If you have any questions regarding the information contained in the Proxy Statement or submission of your proxy for the 2026 Annual Meeting or if you would like directions to the 2026 Annual Meeting, please call the Company at (712) 208-8467. 
+ Only stockholders listed on the Company&#8217;s records at the close of business on Thursday, March 5, 2026, the record date set by the Board of Directors for the 2026 Annual Meeting, are entitled to notice of the 2026 Annual Meeting and to vote at the 2026 Annual Meeting and any adjournments thereof. The stock transfer books of the Company will not be closed. 
+ All stockholders are cordially invited to attend the 2026 Annual Meeting in person or via teleconference. In-person voting will not be available if you attend the 2026 Annual Meeting via teleconference . Therefore, to ensure the presence of a quorum, the Board of Directors requests all stockholders of record to promptly vote your shares by proxy, whether or not you plan to attend the 2026 Annual Meeting. The proxy is revocable and will not be used if a stockholder attends and votes at the 2026 Annual Meeting in person or otherwise provides notice of revocation. You may vote by proxy over the telephone or the Internet as instructed in the accompanying proxy statement. If you received a proxy card or voting instruction card by mail, you may submit your proxy card or voting instruction card by completing, signing, dating and mailing your proxy card or voting instruction card in the envelope provided. 
+ By order of the Board of Directors, 
+ /s/ Marc H. McConnell 
+ Chairman, President and CEO 
+ Armstrong, Iowa 
+ March 12, 2026 
+ IMPORTANT: THE PROMPT RETURN OF PROXIES WILL SAVE THE COMPANY THE EXPENSE OF FURTHER REQUESTS FOR PROXIES IN ORDER TO ENSURE A QUORUM. 
+ Proxy Statement 
+ 2026 Annual Meeting of Stockholders 
+ Tuesday, April 21, 2026 
+ 10:00 a.m. CDT 
+ This proxy statement (the &#8220;Proxy Statement&#8221;) is furnished in connection with the solicitation of proxies by the Board of Directors (the &#8220;Board&#8221;) of Art&#8217;s-Way Manufacturing Co., Inc., a Delaware corporation (the &#8220;Company,&#8221; &#8220;we,&#8221; &#8220;us,&#8221; or &#8220;our&#8221;), for use at the 2026 Annual Meeting of Stockholders of the Company to be held on Tuesday, April 21, 2026 (the &#8220;2026 Annual Meeting&#8221;), and at any adjournment thereof. The 2026 Annual Meeting will be held at the offices of the Company located at 5556 Highway 9, Armstrong, Iowa, 50514-0288. Registration for the 2026 Annual Meeting will begin at approximately 9:30 a.m. Central Daylight Time (&#8220;CDT&#8221;). The 2026 Annual Meeting will commence at approximately 10:00 a.m. CDT. This solicitation is being made by mail; however, the Company may also use its officers, directors, and employees (without providing them with additional compensation) to solicit proxies from stockholders in person, by telephone, electronically, or by letter. Distribution of this Proxy Statement and the proxy card via U.S. Mail is scheduled to begin on or about March 12, 2026. 
+ Important Notice Regarding the Availability of Proxy Materials 
+ for the Annual Meeting of Stockholders to be Held on April 21, 2026: 
+ The Notice, Proxy Statement, Form of Proxy Card, and Annual Report on Form 10-K are available at 
+ http://www.artsway-mfg.com/financials-and-filings/ 
+ QUESTIONS AND ANSWERS ABOUT THE 2026 ANNUAL MEETING AND VOTING 
+ Q: 
+ Why did I receive this Proxy Statement? 
+ A: 
+ We are soliciting your proxy for the 2026 Annual Meeting because you owned of record one or more shares of common stock of the Company at the close of business on Thursday, March 5, 2026, the record date for the 2026 Annual Meeting, and are therefore entitled to vote at the 2026 Annual Meeting. 
+ Q: 
+ What is a proxy? 
+ A: 
+ A proxy is your legal designation of another person or persons (the &#8220;proxy&#8221; or &#8220;proxies,&#8221; respectively) to vote on your behalf. By completing and returning the enclosed proxy card or by voting via the Internet or telephone, you are giving Marc H. McConnell and Matthew Westendorf, the proxies, the authority to vote your shares of common stock at the 2026 Annual Meeting in the manner you indicate. If you sign and return your proxy card, but do not give direction with respect to any nominee or other proposal, the proxies will vote your shares as recommended by the Board. The proxies are authorized to vote in their discretion if other matters are properly submitted at the 2026 Annual Meeting or any adjournments thereof. 
+ Q: 
+ When and where is the 2026 Annual Meeting? 
+ A: 
+ The 2026 Annual Meeting will be held on Tuesday, April 21, 2026 at the offices of the Company located at 5556 Highway 9, Armstrong, Iowa, 50514-0288. Registration for the meeting will begin at approximately 9:30 a.m. CDT. The 2026 Annual Meeting will commence at approximately 10:00 a.m. CDT. The Company is also offering its stockholders the ability to attend the 2026 Annual Meeting remotely, via teleconference. To attend the 2026 Annual Meeting via teleconference, please call 1-866-895-5510 and enter a passcode of 409589. In-person voting will not be available if you attend the 2026 Annual Meeting via teleconference . 
+ 1 
+ Q: 
+ What am I voting on? 
+ A: 
+ You are voting on the following matters: 
+ &#8226; 
+ Proposal 1 &#8211; The election of the five director nominees named in this Proxy Statement; 
+ &#8226; 
+ Proposal 2 &#8211; The ratification of the appointment of Eide Bailly LLP as the Company&#8217;s independent registered public accounting firm for the fiscal year ending November 30, 2026 (&#8220;fiscal year 2026&#8221;); 
+ &#8226; 
+ Proposal 3 &#8211; The approval of an amendment to the Company&#8217;s 2020 Equity Incentive Plan to increase the number of shares reserved thereunder by 500,000 shares; and 
+ &#8226; 
+ Proposal 4 &#8211; The approval, on a non-binding, advisory basis, of the Company&#8217;s named executive officer compensation. 
+ Q: 
+ What does the Board recommend? 
+ A: 
+ The Board recommends a vote: 
+ &#8226; 
+ FOR &#8211; the election of the five director nominees named in this Proxy Statement; 
+ &#8226; 
+ FOR &#8211; the ratification of the appointment of Eide Bailly LLP as the Company&#8217;s independent registered public accounting firm for fiscal year 2026; 
+ &#8226; 
+ FOR &#8211; the approval of an amendment to the Company&#8217;s 2020 Equity Incentive Plan to increase the number of shares reserved thereunder by 500,000 shares; and 
+ &#8226; 
+ FOR &#8211; the approval, on a non-binding, advisory basis, of the Company&#8217;s named executive officer compensation. 
+ Q: 
+ How many votes do I have? 
+ A: 
+ On any matter that may properly come before the 2026 Annual Meeting, each stockholder entitled to vote thereon will have one vote for each share of common stock owned of record by such stockholder as of the close of business on Thursday, March 5, 2026. 
+ Q: 
+ How many shares of common stock may vote at the 2026 Annual Meeting? 
+ A: 
+ At the close of business on March 5, 2026, there were 5,184,084 shares of common stock outstanding. This means that there may be 5,184,084 votes on any matter presented at the 2026 Annual Meeting. 
+ 2 
+ Q: 
+ What vote is required to approve each of the Proposals? 
+ A: 
+ Proposal 1 - Election of Directors - With respect to the election of directors, the five nominees receiving the greatest number of votes cast relative to the votes cast for the other nominees will be elected, regardless of whether an individual nominee receives votes from a majority of the quorum of shares represented (in person or by proxy) at the 2026 Annual Meeting and entitled to vote on the proposal. Although directors are elected by plurality vote, the presence (in person or by proxy) of a quorum is required for the election of directors. 
+ Proposal 2 - Independent Registered Public Accounting Firm - Provided a quorum is present (in person or by proxy), the affirmative vote of the holders of a majority of the shares of common stock represented at the 2026 Annual Meeting (whether in person or by proxy) and entitled to vote on the proposal will result in the stockholders&#8217; ratification of the appointment of Eide Bailly LLP as the Company&#8217;s independent registered public accounting firm for fiscal year 2026. 
+ Proposal 3 - Approval of an amendment to the Company &#8217; s 2020 Equity Incentive Plan to increase the number of shares reserved thereunder by 500,000 shares - Provided a quorum is present (in person or by proxy), the affirmative vote of the holders of a majority of the shares of common stock represented at the 2026 Annual Meeting (whether in person or by proxy) and entitled to vote on the proposal will result in the stockholders&#8217; approval of the amendment to the Company&#8217;s 2020 Equity Incentive Plan to increase the number of shares reserved thereunder by 500,000 shares. 
+ Proposal 4 - Approval, on a Non-Binding, Advisory Basis, of the Company &#8217; s Named Executive Officer Compensation - Provided a quorum is present (in person or by proxy), the affirmative vote of the holders of a majority of the shares of common stock represented at the 2026 Annual Meeting (whether in person or by proxy) and entitled to vote on the proposal will result in the approval of the compensation of our named executive officers. However, this is an advisory vote, which means that the result of the vote is not binding on the Company, the Board or the Compensation Committee. To the extent there is any significant vote against the Company&#8217;s named executive officer compensation as disclosed in this Proxy Statement, the Compensation Committee will evaluate whether any actions are necessary to address the concerns of stockholders. 
+ Q: 
+ Do stockholders have cumulative voting rights? 
+ A: 
+ Stockholders do not have cumulative voting rights with respect to the election of directors or any other matter, which means a stockholder cannot multiply the number of shares owned of record by such stockholder by the number of director positions being voted upon and then cast a number of votes equal to such total for only one nominee. Instead, stockholders will only be able to cast one vote per share owned of record for each director nominee (up to five nominees) at the 2026 Annual Meeting. Accordingly, a holder of 100 shares will only be able to cast 100 votes for each of the five nominees (or any lesser number of nominees, as desired) and will not be able to cast 500 votes for a single nominee (or distribute votes in any other manner). 
+ Q: 
+ What constitutes a quorum? 
+ A: 
+ Transaction of business may occur at the 2026 Annual Meeting if a quorum is present. The presence in person or by proxy of stockholders holding at least a majority of the issued and outstanding shares of common stock is required to constitute a quorum. On March 5, 2026, the Company had 5,182,084 shares of common stock issued and outstanding and, therefore, the presence of 2,591,043 shares will constitute a quorum for the transaction of business at the 2026 Annual Meeting. If you submit a proxy or vote in person at the meeting, your shares will be counted in determining whether a quorum is present at the 2026 Annual Meeting. Broker non-votes and abstentions are also counted for the purpose of determining a quorum, as discussed below. 
+ 3 
+ Q: 
+ What is the effect of abstentions and withhold votes? 
+ A: 
+ You may either vote FOR or WITHHOLD authority to vote for each director nominee (Proposal 1). If you withhold authority to vote on any or all nominees, your vote will have no effect on the outcome of the election. You may vote FOR, AGAINST or ABSTAIN on the ratification of Eide Bailly LLP as the Company&#8217;s independent registered public accounting firm for fiscal year 2026 (Proposal 2), the amendment to the Company&#8217;s 2020 Equity Incentive Plan to increase the number of shares reserved thereunder by 500,000 shares (Proposal 3), and the non-binding, advisory vote to approve named executive officer compensation (Proposal 4). If you abstain from voting on any of these proposals, your shares will be deemed present but will not be deemed to have voted in favor of the proposal. An abstention therefore has the same effect as a vote against the proposal. 
+ If you sign and submit your proxy card without voting instructions, your shares will be voted FOR each director nominee and FOR Proposals 2, 3, and 4. 
+ Q: 
+ What is the effect of broker non-votes? 
+ A: 
+ Shares that are held by brokers in &#8220;street name&#8221; may be voted by the broker on &#8220;routine&#8221; matters, such as ratification of Eide Bailly LLP as our independent registered public accounting firm for fiscal year 2026 (Proposal 2). To vote on &#8220;non-routine&#8221; matters, the broker must obtain stockholder direction. When the broker does not vote the shares, the broker&#8217;s abstention is referred to as a &#8220;broker non-vote.&#8221; 
+ Broker non-votes will be considered present for quorum purposes at the 2026 Annual Meeting. Brokers do not have discretion to vote shares for the election of directors (Proposal 1), for the amendment to the Company&#8217;s 2020 Equity Incentive Plan to increase the number of shares reserved thereunder by 500,000 shares (Proposal 3), for the non-binding, advisory vote to approve named executive officer compensation (Proposal 4), or for any other non-routine matters that may be brought before the 2026 Annual Meeting. Accordingly, if your shares are held in street name and you do not submit voting instructions to your broker, your shares will not be voted for these proposals. Broker non-votes in connection with the election of directors are not deemed &#8220;votes cast,&#8221; and, since directors are elected by a plurality of votes cast, will have no effect on the election. The shares underlying broker non-votes in connection with Proposals 3 and 4 will not be deemed entitled to vote and, therefore, these broker non-votes will have no effect on the outcome of this proposal. 
+ If you do not provide voting instructions, brokers will have discretion to vote on the ratification of Eide Bailly LLP as the Company&#8217;s independent registered public accounting firm for fiscal year 2026. 
+ For any other business matters that may be brought before the 2026 Annual Meeting, the affirmative vote of a majority of the shares of the Company&#8217;s common stock present in person or by proxy at the 2026 Annual Meeting and entitled to vote on the matter is required to pass the proposal. Broker non-votes will be counted as present for quorum purposes at the 2026 Annual Meeting but will not be considered entitled to vote on non-routine matters and will therefore not be treated as affirmative or opposing votes. 
+ Q: 
+ How do I vote my shares? 
+ A: 
+ If you are a stockholder of record, you may vote your shares of common stock at the 2026 Annual Meeting using any of the following methods: 
+ &#8226; 
+ By proxy card. The enclosed proxy card is a means by which a stockholder may authorize the voting of such stockholder&#8217;s shares of common stock at the 2026 Annual Meeting. The shares of common stock represented by each properly executed proxy card will be voted at the 2026 Annual Meeting in accordance with the stockholder&#8217;s directions. The Company urges you to specify your choices by marking the appropriate boxes on the enclosed proxy card. After you have marked your choices, please sign and date the proxy card and return the proxy card in the enclosed envelope. If you sign and return the proxy card without specifying your choices, your shares will be voted FOR the five director nominees identified in Proposal 1; and FOR each of Proposal 2, Proposal 3, and Proposal 4. 
+ 4 
+ &#8226; 
+ Over the Internet. To vote by proxy over the Internet, go to http://www.proxyvote.com. Please have available the 16-Digit Control Number from the enclosed proxy card. Your vote must be received by 11:59 p.m., Eastern Daylight Time (10:59 p.m., CDT) on April 20, 2026, to be counted. We are providing Internet proxy voting to allow you to vote your shares via proxy online, with procedures designed to ensure the authenticity and correctness of your proxy vote instructions. However, please be aware that you must bear any costs associated with your Internet access, such as usage charges from Internet access providers and telephone companies. 
+ &#8226; 
+ By telephone. To vote by proxy over the telephone, dial toll-free 1-800-690-6903 and follow the recorded instructions. Please have available the 16-Digit Control Number from the enclosed proxy card. Your vote must be received by 11:59 p.m., Eastern Daylight Time (10:59 p.m., CDT) on Monday, April 20, 2026, to be counted. 
+ &#8226; 
+ In person at the 2026 Annual Meeting. All stockholders of record as of March 5, 2026 may vote in person at the 2026 Annual Meeting. Even if you plan to attend the 2026 Annual Meeting, we recommend that you submit your proxy card ahead of time or vote over the Internet so that your vote can be counted if you later decide not to attend. In-person voting will not be available if you attend the 2026 Annual Meeting via teleconference. 
+ If you are a &#8220;street name&#8221; holder (i.e., your shares are held in the name of a broker, bank, trust, or other nominee as a custodian and this Proxy Statement and the accompanying Notice were forwarded to you by that organization), rather than a &#8220;stockholder of record,&#8221; you have the right to direct your custodian how to vote your shares by completing the voting instruction form provided by your custodian. Since a beneficial owner is not the stockholder of record, you may not vote your shares in person at the 2026 Annual Meeting unless you obtain a &#8220;legal proxy&#8221; from the broker, bank, trustee, or nominee that holds your shares giving you the right to vote the shares at the meeting. 
+ Q: 
+ Can I change my vote after I have mailed in my proxy card or voted over the Internet or by telephone? 
+ A: 
+ Proxies solicited by the Board may be revoked at any time prior to the 2026 Annual Meeting. No specific form of revocation is required. Stockholders of record may revoke your proxy by: 
+ &#8226; 
+ Voting in person at the 2026 Annual Meeting; 
+ &#8226; 
+ Returning a later-dated signed proxy card; 
+ &#8226; 
+ Submitting a new vote by telephone or Internet; or 
+ &#8226; 
+ Giving personal or written notice of the revocation to the Company&#8217;s Chief Financial Officer, Michael Woods, at the commencement of the 2026 Annual Meeting. 
+ If your shares are held in &#8220;street name&#8221; through a broker, bank, trustee, or other nominee, you will need to contact that custodian if you wish to change your voting instructions. 
+ 5 
+ Q: 
+ How will my shares be voted if I do not specify how they should be voted or if I vote for too few or too many choices on the proxy card? 
+ A: 
+ If you are a record holder and do not mark any choices for the election of directors on the proxy card, then the proxies solicited by the Board will be voted FOR the five nominees recommended for election by the Board. You may wish to vote for less than five director nominees. In such case, your shares will only be voted for the director nominee(s) you have selected. If you mark contradicting choices on the proxy card, such as both FOR and WITHHOLD for a director nominee, your shares will not be voted with respect to the director nominee for which you marked contradicting choices. 
+ If you are a record holder and do not mark a choice with respect to the approval of any proposal other than the election of directors, then the proxies solicited by the Board will be voted FOR each of Proposal 2, Proposal 3, and Proposal 4. If you mark contradicting choices on your proxy card, such as a mark both FOR and AGAINST the approval of a proposal, then your shares will not be counted either for or against the proposal for which you have marked contradicting choices. 
+ If you are a street name holder and do not submit specific voting instructions to your custodian, the organization that holds your shares may generally vote your shares with respect to &#8220;routine&#8221; items, but not with respect to &#8220;non-routine&#8221; items. On non-routine items for which you do not submit specific voting instructions, the shares will be treated as &#8220;broker non-votes.&#8221; The effect of broker non-votes is explained above in response to the question &#8220;What is the effect of broker non-votes?&#8221; 
+ Q: 
+ Who can attend the 2026 Annual Meeting? 
+ A: 
+ All stockholders of record as of the close of business on March 5, 2026, may attend the 2026 Annual Meeting. If you are a street name holder, we may request proof of your beneficial ownership as of the record date, such as an account statement, a copy of the voting instruction card provided by your custodian, a &#8220;legal proxy&#8221; provided by your custodian, or other similar evidence of ownership. 
+ Q: 
+ What is the record date for the 2026 Annual Meeting? 
+ A: 
+ The Board has fixed Thursday, March 5, 2026, as the record date. 
+ Q: 
+ Who will count the votes? 
+ A: 
+ All proxies submitted to the Company will be tabulated by Broadridge, a master tabulator service company. All shares voted by stockholders of record present in person at the 2026 Annual Meeting will be tabulated by our Chief Financial Officer. 
+ Q: 
+ Who is paying for this proxy solicitation? 
+ A: 
+ The entire cost of this proxy solicitation will be borne by the Company. The cost will include the cost of supplying necessary additional copies of the solicitation materials for beneficial owners of shares held of record by brokers, dealers, banks and voting trustees and their nominees and, upon request, the reasonable expenses of such record holders for completing the mailing of such materials to such beneficial owners. Our directors, executive officers and employees may, without compensation other than their regular remuneration, solicit proxies personally, by telephone, or electronically via the Internet. 
+ 6 
+ Q: 
+ How do I nominate a candidate for election as a director at next year &#8217; s annual meeting? 
+ A: 
+ You may recommend a candidate for nomination by the Board at next year&#8217;s annual meeting by following the procedures explained below in this Proxy Statement under the caption &#8220;CORPORATE GOVERNANCE &#8211; Nominating and Governance Committee &#8211; Selection of Director Nominees&#8221; and contained in the rules and regulations of the Securities and Exchange Commission (the &#8220;SEC&#8221;). You may directly nominate a candidate for election at next year&#8217;s annual meeting by following the procedures explained below in response to the question &#8220;When are stockholder proposals and director nominations due for next year&#8217;s annual meeting?&#8221; 
+ Q: 
+ What is a stockholder proposal? 
+ A: 
+ A stockholder proposal is your recommendation or requirement that the Company and/or the Board take action, which you intend to present at a meeting of the stockholders. Your proposal should state as clearly as possible the course of action that you believe the Company should follow. If your proposal is included in the Company&#8217;s proxy statement, then the Company must also provide the means for stockholders to vote on the matter via the proxy card. The deadlines and procedures for submitting stockholder proposals for next year&#8217;s annual meeting are explained in the following question and answer. The Company reserves the right to reject, rule out of order, or take appropriate action with respect to any proposal that does not comply with these and other applicable requirements. 
+ Q: 
+ When are stockholder proposals and director nominations due for the next year &#8217; s annual meeting? 
+ A: 
+ In order to be considered for inclusion in next year&#8217;s proxy statement, stockholder proposals must be submitted in writing to the Company no later than November 12, 2027 (approximately 120 days prior to the one-year anniversary of the date this Proxy Statement was first mailed to stockholders of record). The Company suggests that proposals for next year&#8217;s annual meeting be submitted by certified mail, return receipt requested. The proposal must be in accordance with the provisions of Rule 14a-8 promulgated by the SEC under the Securities Exchange Act of 1934, as amended (the "Exchange Act"). 
+ Stockholders who intend to present a proposal or director nomination at next year&#8217;s annual meeting without including such proposal or nomination in the Company&#8217;s proxy statement must, pursuant to the Company&#8217;s Bylaws, deliver to the Company notice of such proposal no earlier than January 21, 2027 (approximately 90 days prior to the one year anniversary of the 2026 Annual Meeting) and no later than February 20, 2027 (approximately 60 days prior to the one year anniversary of the 2026 Annual Meeting). The Company reserves the right to reject, rule out of order, or take appropriate action with respect to any proposal that does not comply with these and other applicable requirements. 
+ If a stockholder proposal intended to be submitted at next year&#8217;s annual meeting does not comply, as determined in the Chairman&#8217;s discretion, with the timeframes and other procedures established by the Company&#8217;s Bylaws, the proposal will be disregarded. 
+ 7 
+ Q: 
+ I reside at the same address as another stockholder. How do I receive my own copy of the proxy materials? 
+ A: 
+ The SEC has adopted rules that permit companies and brokers, banks and other nominees to satisfy the delivery requirements for proxy statements and annual reports, with respect to two or more stockholders sharing the same address and who do not participate in electronic delivery of proxy materials, by delivering a single copy of such documents addressed to those stockholders. This process, which is commonly referred to as &#8220;householding,&#8221; potentially means extra convenience for stockholders and cost savings for companies. 
+ Brokers, banks and other nominees may be &#8220;householding&#8221; Company proxy materials. This means that only one copy of the proxy materials may have been sent to multiple stockholders in a household. If, at any time, you no longer wish to participate in householding and would prefer to receive a separate proxy statement and annual report from the other stockholder(s) sharing your address, please: (i) notify your broker, bank or other nominee, (ii) direct your written request to our Chief Financial Officer, Art&#8217;s-Way Manufacturing Co., Inc., 5556 Highway 9, Armstrong, Iowa, 50514-0288, or (iii) contact us at (712) 208-8467. The Company will undertake to deliver promptly, upon any such oral or written request, a separate copy of the proxy materials to a stockholder at a shared address to which a single copy of these documents was delivered. Stockholders who currently receive multiple copies of proxy materials at their address and would like to request householding of their communications should notify their broker, bank or other nominee, or contact us at the above address or phone number. 
+ PROPOSALS TO BE VOTED UPON 
+ PROPOSAL 1 
+ ELECTION OF DIRECTORS 
+ What am I voting on? The Company&#8217;s Board is asking our stockholders to elect each of the five director nominees named in this Proxy Statement to hold office until the 2027 Annual Meeting of Stockholders and until their successors are elected and qualified or until their earlier resignation or removal. 
+ Board Recommendation: FOR the election of each of the five director nominees. 
+ Required Vote: The five director nominees with the greatest number of shares voted FOR the director nominee will be elected. 
+ Voting procedures and the method by which votes will be counted, including the treatment and effect of abstentions and broker non-votes, are more fully described above in the section titled &#8220;QUESTIONS AND ANSWERS ABOUT THE 2026 ANNUAL MEETING AND VOTING.&#8221; 
+ Five members of the Board will be elected at the 2026 Annual Meeting to hold office until the 2027 annual meeting of stockholders and until their successors are elected and qualified or until their earlier resignation or removal. The Company has no reason to believe that any of the director nominees named below will be unable or unwilling to serve as director if elected. Each of the director nominees named below are each currently serving as a member of the Board. 
+ The five nominees receiving the greatest number of affirmative votes cast will be elected as directors. Proxies cannot be voted for a greater number of persons than the number of nominees named. Except as otherwise directed on the proxy cards, the proxies will vote all valid proxies for the five nominees identified below. If for any reason any nominee withdraws or is unable to serve as director (neither of which is expected at this time), the shares represented by all valid proxies will be voted for the election of a substitute nominee recommended by the Board or the Board may reduce the size of the Board. 
+ 8 
+ Nominees for Election as Directors at the 2026 Annual Meeting 
+ The Board has recommended the following persons as nominees for election as directors at the 2026 Annual Meeting: 
+ Nominee Name 
+ Age (as of 
+ 2026 Annual Meeting) 
+ Year First Became 
+ a Director 
+ Marc H. McConnell 
+ 47 
+ 2001 
+ Thomas E. Buffamante 
+ 73 
+ 2003 
+ David A. White 
+ 73 
+ 2016 
+ Matthew N. Westendorf 
+ 55 
+ 2021 
+ Randall C. Ramsey 
+ 63 
+ 2022 
+ Certain biographical information relating to each of the director nominees is set forth below: 
+ MARC H. McCONNELL, Chairman, Director, President and Chief Executive Officer . In addition to his roles with the Company, Mr. McConnell is currently the President of Bauer Corporation and McConnell Holdings, Inc. Mr. McConnell previously served as the Chairman of the Board, Chairman of the Audit Committee, and Chairman of the Executive Committee of Integrated Financial Holdings, Inc., a financial holding company headquartered in Raleigh, North Carolina. Mr. McConnell had served as a director of Integrated Financial Holdings, Inc. and/or its subsidiary bank, West Town Bank & Trust, since 2009. Effective October 1, 2024, Mr. McConnell was appointed to the board of directors of Capital Bancorp, Inc. following the merger of Integrated Financial Holdings, Inc. with and into Capital Bancorp, Inc. Mr. McConnell also serves on the board of directors of Capital Bank, N.A., which is a wholly owned subsidiary of Capital Bancorp, Inc. with its main office in Rockville, Maryland. Capital Bancorp, Inc. is a Nasdaq-listed company with a class of securities registered pursuant to Section 12 of the Exchange Act. From May 2019 until August 2024, Mr. McConnell served as a director of Dogwood State Bank, a North Carolina state-chartered bank with its main office in Raleigh, North Carolina. Mr. McConnell has served as a director of the American Ladder Institute since 2004 and served as its President from 2006 to 2010. Mr. McConnell was also named a director of the Farm Equipment Manufacturers Association in October 2007, served as its President from 2013 to 2014 and served as its Treasurer from October 2015 to October 2016. Mr. McConnell was appointed to our Board in July 2001 and served as Vice Chairman of the Board from January 2008 to April 2015, at which time he became our Chairman. He currently resides in Raleigh, North Carolina. Among other attributes, skills, and qualifications, the Board believes that Mr. McConnell&#8217;s involvement and experience in the farm equipment manufacturing industry, particularly in leadership positions with similarly situated companies, contribute to his ability to understand the challenges and opportunities facing the Company and to guide its long-term strategies. 
+ THOMAS E. BUFFAMANTE, Director . Mr. Buffamante is a Certified Public Accountant and Director of Buffamante Whipple Buttafaro, P.C., where he has been a director and stockholder since 1981. Mr. Buffamante has been a director of the Company since 2003, was appointed to our Audit Committee in 2011, and has served as the Chairman of the Audit Committee since April 2012. He currently resides in Great Valley, New York. Among other attributes, skills, and qualifications, the Board believes that Mr. Buffamante is qualified to serve as a director in light of his ability to understand generally accepted accounting principles, internal control over financial reporting, and disclosure controls and procedures, his experience in analyzing and evaluating financial statements, and his ability to provide oversight with regard to tax filings, tax accruals, and other tax matters. 
+ DAVID A. WHITE, Director . Mr. White is a corporate director and currently the General Partner of First Call Services LLC, a private holding company and advisory firm. He has held a number of senior financial and operating positions with John Labatt Limited, Lawson Mardon Group Inc., and Laidlaw Inc., and was Chief Executive Officer of American Student Transportation Partners, a provider of student transportation services, Chief Executive Officer of TransCare Inc., a medical transportation company, and President and Chief Operating Officer of Student Transportation of America, formerly a TSX-listed company. He also served on the board of directors for Ag Growth International Inc., a Toronto Stock Exchange-listed farm equipment manufacturer. Mr. White has been a Canadian Charted Accountant since 1978, he holds a BA from the University of Western Ontario and an MBA from the University of Toronto, and in 2013 he received the ICD.D designation from the Institute of Corporate Directors. Mr. White was appointed to the Board in December 2016 and currently serves as a member of the Audit and Chair of the Compensation Committees. Among other attributes, skills, and qualifications, the Board believes that Mr. White is qualified to serve as a director in light of his involvement and experience in the farm equipment manufacturing industry, board experience, his ability to understand generally accepted accounting principles, internal control over financial reporting, and disclosure controls and procedures, his experience in analyzing and evaluating financial statements, and management experience. 
+ 9 
+ MATTHEW N. WESTENDORF, Director . Mr. Westendorf is the current President of Westendorf Manufacturing Co., Inc., a manufacturing of front-end loaders located in Onawa, Iowa, a position he has held since 2006. He previously served on the executive board of the Farm Equipment Manufacturers Association from 2014-2023 (President 2021) and on the board of directors of Jack Rabbit Manufacturing until 2024. Mr. Westendorf was appointed to our Board in April 2021. Among other attributes, skills, and qualifications, the Board believes that Mr. Westendorf&#8217;s experience running a manufacturing company allows him to provide insight into the Company&#8217;s operations and strategic direction. 
+ RANDALL C. RAMSEY, Director . Mr. Ramsey is the founder and former president of Jarrett Bay Boatworks, a position he held from 1986 to 2022. Mr. Ramsey is currently the vice president of operations of Safe Harbor Jarrett Bay. He is also a former principal of Bluewater Yacht Sales, a company formed through the merger of Jarrett Bay Yacht Sales and Bluewater Yacht Sales in 2012. Mr. Ramsey serves on the board of governors for the University of North Carolina System and was a past Vice Chair (2018-2019) and Chairman (2019-2024). He has served on the Big Rock Blue Marlin Tournament's board since 1987, serving as President for two terms and is on the boards of other private companies. His past board memberships include the North Carolina Manufacturer's Association and the American Boat Builders & Repairers Association, as well as serving as a director for federally and state-regulated financial institutions. Mr. Ramsey previously served as President of The North Carolina State University Student Aid Association and is a past member of the North Carolina State University Board of Trustees. Mr. Ramsey was appointed to our Board in April 2022. Among other attributes, skills and qualifications, the Board believes that Mr. Ramsey&#8217;s vast business experience in leadership and business operations provides insight into the future growth and strategic directions of the Company. 
+ PROPOSAL 2 
+ RATIFICATION OF INDEPENDENT REGISTERED PUBLIC ACCOUNTING FIRM 
+ What am I voting on? The Board is asking our stockholders to ratify its selection of Eide Bailly LLP as our independent registered public accounting firm for the fiscal year ending November 30, 2026. 
+ Voting Recommendation: FOR the ratification of our independent registered public accounting firm. 
+ Vote Required: Ratification requires an affirmative vote of the majority of shares present in person or represented by proxy and entitled to vote. 
+ Voting procedures and the method by which votes will be counted, including the treatment and effect of abstentions and broker non-votes, are more fully described above in the section titled &#8220;QUESTIONS AND ANSWERS ABOUT THE 2026 ANNUAL MEETING AND VOTING.&#8221; 
+ The Board, acting on the recommendation of the Audit Committee, has selected Eide Bailly LLP as the Company&#8217;s independent registered public accounting firm for fiscal year 2026. Eide Bailly LLP has been the Company&#8217;s independent registered public accounting firm since July 2006. Eide Bailly LLP has advised the Company that it has no relationship to the Company except that of independent registered public accounting firm. A representative of Eide Bailly LLP is expected to be present at the 2026 Annual Meeting. Such representative will have an opportunity to make a statement if the representative desires to do so and will be available to respond to appropriate questions regarding audit of the financial statements. 
+ 10 
+ Audit Fees 
+ The following table presents fees for professional services billed by Eide Bailly LLP to the Company for the audit of the Company&#8217;s annual financial statements, the review of the Company&#8217;s interim financial statements, and related services for the fiscal years ended November 30, 2025 and November 30, 2024. 
+ Category 
+ Fiscal Year 
+ Fees ($) 
+ Audit Fees (1) 
+ 2025 
+ 146,000 
+ 2024 
+ 147,175 
+ Audit-Related Fees (2) 
+ 2025 
+ - 
+ 2024 
+ - 
+ Tax Fees (3) 
+ 2025 
+ 23,000 
+ 2024 
+ 23,625 
+ All Other Fees 
+ 2025 
+ - 
+ 2024 
+ - 
+ (1) 
+ Audit fees represent fees billed for each of the last two fiscal years for professional services provided for the audit of the Company&#8217;s annual financial statements and review of the Company&#8217;s quarterly financial statements in connection with the filing of current and periodic reports. The Company has been billed $112,613 of the estimated $146,000 in connection with the 2025 fiscal year end audit. 
+ (2) 
+ Audit-related fees represent fees for assurance and related services that are reasonably related to the performance of the audit or review of the Company&#8217;s financial statements. 
+ (3) 
+ Tax fees represent fees billed for each of the last two fiscal years for tax compliance, tax advice and tax planning, which included preparation of tax returns. 2026 is an estimate based on the engagement letter as these services are not yet completed. 
+ Audit Committee Pre-Approval Policies and Procedures 
+ The Audit Committee pre-approved the engagement of Eide Bailly LLP as the Company&#8217;s principal independent registered public accounting firm to perform audit services for the Company. The Audit Committee pre-approves all auditing services and permitted non-audit services, including the fees and terms of those services, to be performed for the Company by its independent registered public accounting firm prior to engagement. One hundred percent of the services referenced above were pre-approved by our Audit Committee. 
+ PROPOSAL 3 
+ APPROVAL OF AN AMENDMENT TO THE COMPANY &#8217; S 2020 EQUITY INCENTIVE PLAN 
+ What am I voting on? The Board is asking our stockholders to approve an amendment to the Company&#8217;s 2020 Equity Incentive Plan to increase the number of shares reserved thereunder by 500,000 shares. 
+ Voting Recommendation: FOR the approval of the amendment to the Company&#8217;s 2020 Equity Incentive Plan. 
+ Vote Required: Ratification requires an affirmative vote of the majority of shares present in person or represented by proxy and entitled to vote. 
+ Voting procedures and the method by which votes will be counted, including the treatment and effect of abstentions and broker non-votes, are more fully described above in the section titled &#8220;QUESTIONS AND ANSWERS ABOUT THE 2026 ANNUAL MEETING AND VOTING.&#8221; 
+ On February 25, 2020, the Company&#8217;s Board adopted the 2020 Equity Incentive Plan (the &#8220;2020 Plan&#8221;), which was approved by the stockholders on April 30, 2020. Pursuant to the 2020 Plan, we may grant shares of our common stock as long-term equity incentives in the form of incentive stock options, nonqualified stock options, restricted stock awards, restricted stock units, performance awards, or stock appreciation rights to our employees, consultants, and directors, or collectively, participants. We believe that the effective use of long-term equity incentives is essential to attract, motivate, and retain employees and other service providers, to further align participants&#8217; interests with those of our stockholders, and to provide participants incentive compensation opportunities that are competitive with those offered by other companies in the same industry and locations as ours. 
+ 11 
+ On February 13, 2026, the Board approved an amendment to the 2020 Plan to increase the authorized number of shares of the Company&#8217;s common stock reserved for issuance thereunder by 500,000 shares (the &#8220;2020 Plan Amendment&#8221;), subject to stockholder approval. If approved by our stockholders, following the 2020 Plan Amendment, the number of shares of common stock for which awards may be granted under the 2020 Plan would be (i) 1,000,000 shares (previously 500,000 shares), plus (ii) up to 56,000 shares that were subject to outstanding awards under the Company&#8217;s 2011 Equity Incentive Plan (the &#8220;2011 Plan&#8221;), as of the effective date of the 2020 Plan, that are subsequently cancelled, terminate unearned, expire, are forfeited, or lapse for any reason and (iii) up to 42,015 shares authorized under the 2011 Plan that were not subject to outstanding awards under the 2011 Plan, as of the effective date of the 2020 Plan. 
+ As of March 1, 2026, of the 598,015 shares of the Company&#8217;s common stock reserved for issuance under the 2020 Plan, 62,179 shares remained available for future grant. 
+ The Board believes that the 2020 Plan Amendment is necessary to allow the Company to continue to attract and retain the highest caliber of non-employee directors, employees and other service providers, link incentive awards to Company performance, encourage employee ownership in the Company and align the interests of non-employee directors, employees and other service providers with those of the Company&#8217;s stockholders. The 2020 Plan Amendment will allow the Company to continue to provide a variety of equity awards as part of the Company&#8217;s compensation program, an important tool for motivating, attracting and retaining talented non-employee directors, employees and other service providers and for creating stockholder value. It supports the Company&#8217;s balanced approach to employee compensation, wherein the Company uses a mix of components, including equity awards, to facilitate management decisions that favor longer-term stability. Without approval of the 2020 Plan Amendment, the Board believes that the Company&#8217;s ability to attract and retain qualified directors, employees and service providers will be impaired. 
+ Summary of the 2020 Plan 
+ The following is a summary of the principal features of the 2020 Plan, which assumes the 2020 Plan Amendment is approved by the Company&#8217;s stockholders. This summary is qualified in its entirety by reference to the complete text of the 2020 Plan and the 2020 Plan Amendment. 
+ Principal Features of the 2020 Plan 
+ Description 
+ Share Reserve: 
+ 1,098,015 shares of common stock 
+ Award Types: 
+ &#9679; Incentive and nonqualified stock options 
+ &#9679; Restricted stock awards 
+ &#9679; Restricted stock units 
+ &#9679; Performance awards 
+ &#9679; Stock appreciation rights 
+ Vesting: 
+ All equity awards are subject to a minimum one year vesting period, except that awards relating to not more than 5% of the total shares authorized under the 2020 Plan may contain terms that do not meet this minimum vesting period. 
+ Repricing: 
+ Repricing of outstanding stock awards is not permitted without the approval of our stockholders, except for certain proportionate capitalization adjustments as set forth in the 2020 Plan. 
+ Term: 
+ The Administrator (as defined below) may grant awards pursuant to the 2020 Plan until it is discontinued or terminated. However, ISOs may only be granted prior to February 24, 2030, which is the tenth anniversary of the date our Board initially approved the 2020 Plan. 
+ 12 
+ Administration. The 2020 Plan is administered by the Board of Directors or a committee of the Board consisting of at least one director. However, if required for compliance with Rule 16b-3 under the Exchange Act, any such committee shall consist of two or more directors, all of whom shall be a &#8220;non-employee director.&#8221; The Board of Directors of the Company has delegated the administration of the 2020 Plan to the Compensation Committee. The Board and the Compensation Committee are collectively referred to in the 2020 Plan as the &#8220;Administrator.&#8221; 
+ The Administrator may delegate to one or more Committees and/or sub-Committees, or to one or more officers of the Company and/or its Affiliates, or to one or more agents and/or advisors, such administrative duties or powers as it may deem advisable. The Administrator or any Committees or individuals to whom it has delegated duties or powers as aforesaid may employ one or more individuals to render advice with respect to any responsibility of the Administrator or such Committees or individuals may have under the 2020 Plan. 
+ The Administrator will have all of the powers vested in it under the provisions of the 2020 Plan, including, but not limited to, exclusive authority to determine, in its sole discretion, whether an award will be granted; the individuals to whom, and the time or times at which, awards will be granted; the number of shares subject to each award; the exercise price of options granted; and the performance criteria, if any, and any other terms and conditions of each award. The Administrator has full power and authority to administer and interpret the 2020 Plan, to make and amend rules, regulations and guidelines for administering the 2020 Plan, to prescribe the form and conditions of the respective agreements evidencing each award (which may vary from participant to participant), to amend or revise agreements evidencing any award (to the extent the amended terms would be permitted by the 2020 Plan and provided that no such revision or amendment, except as is authorized in Section 15 of the 2020 Plan may impair the terms and conditions of any award that is outstanding on the date of such revision or amendment to the material detriment of the participant in the absence of the consent of the participant), and to make all other determinations necessary or advisable for the administration of the 2020 Plan (including to correct any defect, omission or inconsistency in the 2020 Plan or any agreement, to the extent permitted by law and the 2020 Plan). The Administrator&#8217;s interpretation of the 2020 Plan, and all actions taken and determinations made by the Administrator pursuant to the power vested in it under the 2020 Plan are conclusive and binding on all parties concerned. 
+ Available Shares. If approved by our stockholders, following the 2020 Plan Amendment, the number of shares of common stock for which awards may be granted under the 2020 Plan would be (i) 1,000,000 shares (previously 500,000 shares), plus (ii) up to 56,000 shares that were subject to outstanding awards under the Company&#8217;s 2011 Equity Incentive Plan (the &#8220;2011 Plan&#8221;), as of the effective date of the 2020 Plan, that are subsequently cancelled, terminate unearned, expire, are forfeited, or lapse for any reason and (iii) up to 42,015 shares authorized under the 2011 Plan that were not subject to outstanding awards under the 2011 Plan, as of the effective date of the 2020 Plan. 
+ The following shares of common stock will not reduce the share authorization and will continue to be reserved and available for awards granted pursuant to the 2020 Plan: (i) all or any portion of any outstanding restricted stock award or restricted stock unit that expires or is forfeited for any reason, or that is terminated prior to the vesting or lapsing of the risks of forfeiture on such award, and (ii) shares of common stock covered by an award to the extent the award is settled in cash; provided, however, that the full number of shares of common stock subject to a stock appreciation right will reduce the share authorization, whether such stock appreciation right is settled in cash or shares of common stock. Any shares of common stock withheld to satisfy tax withholding obligations on an award, shares of common stock withheld to pay the exercise price of an option, and shares of common stock subject to a broker-assisted cashless exercise of an option will reduce the share authorization. The 2020 Plan expressly prohibits the Company from &#8220;recycling&#8221; of shares by adding back to the number of shares authorized for issuance under the 2020 Plan shares repurchased by the Company using stock option exercise proceeds. 
+ The Administrator will adjust the number of shares and share limits described above in the case of a stock dividend, recapitalization, stock split, reverse stock split, reorganization, merger, consolidation, split-off, repurchase or exchange of shares, or other similar corporate transaction where such an adjustment is necessary to prevent dilution or enlargement of the benefits available under the 2020 Plan. Any adjustment determination made by the Administrator will be final, binding and conclusive. 
+ Eligibility and Types of Awards. Any employee, director, or consultant may participate in the 2020 Plan; provided, however, that only employees are eligible to receive Incentive Stock Options. As of the date of this proxy statement, approximately 95 employees, four non-employee directors, and zero consultants are eligible to participate in the 2020 Plan. 
+ 13 
+ The 2020 Plan provides that the Administrator may grant awards to eligible participants in any of the following forms, subject to such terms, conditions and provisions as the Administrator may determine to be necessary or desirable: 
+ &#9679; 
+ stock options, including both incentive stock options (&#8220;ISOs&#8221;) and non-qualified stock options; 
+ &#9679; 
+ stock appreciation rights (&#8220;SARs&#8221;); 
+ &#9679; 
+ restricted stock; 
+ &#9679; 
+ restricted stock units; and 
+ &#9679; 
+ performance awards. 
+ Stock Options. Options may either be incentive stock options, which are specifically designated as such for purposes of compliance with Section 422 of the Internal Revenue Code (the &#8220;Code&#8221;), or non-qualified stock options. Options vest as determined by the Administrator, subject to applicable performance objectives and statutory limitations regarding the maximum term of ISOs and the maximum value of ISOs that may vest in one year. The exercise price of each share subject to an ISO will be equal to or greater than the fair market value of a share on the date of the grant of the ISO, except in the case of an ISO grant to a stockholder who owns stock possessing more than 10% of the total combined voting power of all classes of stock of the Company or its parent or any subsidiary, the exercise price will be equal to or greater than 110% of the fair market value of a share on the grant date. Non-qualified stock options vest as determined by the Administrator, subject to applicable performance objectives and statutory limitations regarding the maximum term of non-qualified stock options. The exercise price of each share subject to a non-qualified stock option will be determined by the Administrator at the time of grant but must be equal to or greater than the fair market value of a share on the date of grant. 
+ Restricted Stock Awards. Restricted stock awards consist of shares granted to a participant that are subject to one or more risks of forfeiture. Restricted stock awards may be subject to risk of forfeiture based on the passage of time or the satisfaction of other criteria, such as continued employment or Company performance. 
+ Restricted Stock Units. Restricted stock units consist of a right to receive shares (or cash, in the Administrator&#8217;s discretion) on one or more vesting dates in the future. The vesting dates may be based on the passage of time or the satisfaction of other criteria, such as continued employment or Company performance. 
+ Performance Awards. Performance awards, which may be denominated in cash or shares, are earned upon achievement of performance objectives during a performance period established by the Administrator. 
+ Stock Appreciation Rights. A stock appreciation right may be granted independent of or in tandem with a previously or contemporaneously granted stock option, as determined by the Administrator. Generally, upon exercise of a stock appreciation right, the recipient will receive cash, shares of Company stock, or a combination of cash and stock, with a value equal to the excess of: (i) the fair market value of a specified number of shares of Company stock on the date of the exercise, over (ii) a specified exercise price. Stock appreciation rights vest as determined by the Administrator, subject to applicable performance objectives and statutory limitations regarding the maximum term of stock appreciation rights. 
+ Performance-Based Compensation. The Administrator may issue awards with performance criteria, which criteria may include: (i) revenue or net sales, (ii) operating income, (iii) net income (before or after taxes), (iv) earnings per share, (v) earnings before or after taxes, interest, depreciation, amortization and/or stock compensation expense, (vi) gross profit margin, (vii) return measures (including, but not limited to, return on invested capital, assets, capital, equity, sales), (viii) increase in revenue or net sales, (ix) operating expense ratios, (x) operating expense targets, (xi) productivity ratios, (xii) gross or operating margins, (xiii) cash flow (including, but not limited to, operating cash flow, free cash flow, cash flow return on equity and cash flow return on investment), (xiv) working capital targets, (xv) capital expenditures, (xvi) share price (including, but not limited to, growth measures and total shareholder return), (xvii) appreciation in the fair market value or book value of the common stock, (xviii) debt to equity ratio or debt levels, (xix) market share, in all cases including, if selected by the Administrator, threshold, target and maximum levels, (xx) operational targets, or (xxi) any other performance metric deemed appropriate by the Administrator. These performance objectives may be used to measure the performance of the Company as a whole or the performance of any business unit or any combination thereof as the Administrator may determine, or any of the specified performance objectives may be compared to the performance of a group of competitor or peer companies, as the Administrator may determine. Further, the Administrator may also determine performance objectives on a GAAP or non-GAAP basis. 
+ 14 
+ Rights as Stockholders. Recipients of restricted stock awards will have the right to vote such shares upon their issuance, even if prior to the date when such shares have vested or all risks of forfeiture have lapsed. Otherwise, recipients of equity awards authorized under the 2020 Plan are not generally entitled to any rights as stockholders with respect to any shares covered by the award until the date of issuance of the underlying shares of common stock (in the case of stock options, SARs, restricted stock units and performance awards) or the date that the risks of forfeiture related to such shares has lapsed (in the case of restricted stock awards). Further, the 2020 Plan expressly provides that a recipient is not entitled to receive any dividends or dividend equivalents attributable to the underlying shares of common stock prior to the time that both the underlying shares of common stock have been issued and have vested (in the case of stock options, SARs and performance awards) or are no longer subject to risk of forfeiture (in the case of restricted stock awards). All rights to any dividends or dividend equivalents payable with respect to shares of common stock covered by an award that are forfeited will also be forfeited. 
+ Change of Control. Unless otherwise provided in the terms of an award, upon a change of control of the Company, as defined in the 2020 Plan, the Administrator may provide for one or more of the following: (i) the acceleration of the exercisability, vesting, or lapse of the risks of forfeiture of any or all awards (or portions thereof); (ii) the complete termination of the 2020 Plan and the cancellation of any or all awards (or portions thereof) that have not been exercised, have not vested, or remain subject to risks of forfeiture, as applicable in each case as of the effective date of the change of control; (iii) that the entity succeeding the Company by reason of such change of control, or the parent of such entity, must assume or continue any or all awards (or portions thereof) outstanding immediately prior to the change of control or substitute for any or all such awards (or portions thereof) a substantially equivalent award with respect to the securities of such successor entity, as determined in accordance with applicable laws and regulations; or (iv) that participants holding outstanding awards will become entitled to receive, with respect to each share of common stock subject to such award (whether vested or unvested, as determined by the Administrator pursuant to the 2020 Plan) as of the effective date of any such change of control, cash in amount equal to (1) for participants holding options or stock appreciation rights, the excess of the fair market value of such common stock on the date immediately preceding the effective date of such change of control over the exercise price per share of options or stock appreciation rights, or (2) for participants holding awards other than options or stock appreciation rights, the fair market value of such common stock on the date immediately preceding the effective date of such change of control. The Administrator need not take the same action with respect to all awards (or portions thereof) or with respect to all participants. 
+ Clawback Policy. All awards under the 2020 Plan will be subject to reduction, forfeiture or recoupment to the extent necessary to comply with any applicable clawback, forfeiture or other similar policy adopted by the Board and as in effect from time to time or applicable law. Further, to the extent that a participant receives any amount in excess of the amount that the participant should otherwise have received under the terms of an award for any reason (including, without limitation, by reason of a financial restatement, mistake in calculations or other administrative error), the participant may be required to repay any such excess amount to the Company. 
+ Plan Amendments. The Board may from time to time, insofar as permitted by law, suspend or discontinue the 2020 Plan or revise or amend it in any respect. However, except to the extent required by applicable law or regulation or as except as provided under the 2020 Plan itself, the Board may not, without stockholder approval, revise or amend the 2020 Plan to (i) materially increase the number of shares subject to the 2020 Plan, (ii) change the designation of participants, including the class of employees, eligible to receive awards, (iii) decrease the price at which options or stock appreciation rights may be granted, (iv) cancel, regrant, repurchase for cash, or replace options or stock appreciation rights that have an exercise price in excess of the fair market value of the common stock with other awards, or amend the terms of outstanding options or stock appreciation rights to reduce their exercise price, (v) materially increase the benefits accruing to participants under the 2020 Plan, or (vi) make any modification that will cause incentive stock options to fail to meet the requirements of Section 422 of the Code. Further, without stockholder approval, the terms of any outstanding Award may not be amended to reduce the exercise price of any outstanding stock option or SAR or cancel any outstanding stock option or SAR in exchange for cash, other awards or stock options or SARs with an exercise price that is less than the exercise price of the original stock option or SAR. 
+ 15 
+ Summary of Federal Income Tax Consequences of the 2020 Plan 
+ Nonqualified Stock Options. Generally, an optionee will not recognize any taxable income on the date a non-qualified stock option is granted pursuant to the 2020 Plan, so long as (a) the exercise price is not less than the fair market value of the stock on the date of grant, and (b) the non-qualified stock option (and not the underlying stock) at such time does not have a readily ascertainable fair market value (as defined in Treasury Regulations under the Code). Upon exercise of the option, however, the optionee must recognize, in the year of exercise, compensation taxable as ordinary income in an amount equal to the difference between the option price and the fair market value of Company common stock on the date of exercise. If the optionee is an employee, such ordinary income amount will be subject to income tax withholding and payroll taxes. Upon the sale of the shares, any resulting gain or loss will be treated as capital gain or loss. The Company generally will (subject to the requirement of reasonableness, the provisions of Section 162(m) of the Code, and the satisfaction of a tax reporting obligation) be entitled to an income tax deduction in its fiscal year in which non-qualified stock options are exercised equal to the amount of ordinary income recognized by those optionees exercising options. 
+ Incentive Stock Options. ISOs granted under the 2020 Plan are intended to qualify for favorable tax treatment under Section 422 of the Code. Under Section 422, an optionee recognizes no compensation that is taxable as ordinary income when the option is granted. Further, the optionee generally will not recognize any compensation that is taxable as ordinary income when the option is exercised if he or she has at all times from the date of the option&#8217;s grant until three months before the date of exercise been an employee of the Company. The excess of the fair market value of the shares on the date of exercise over the option price is, however, includable in the optionee&#8217;s income for alternative minimum tax purposes and may be subject to an alternative minimum tax which is paid if such tax exceeds the regular tax for the year. The Company generally is not entitled to any income tax deduction upon the grant or exercise of an incentive stock option. 
+ If the optionee disposes of the shares purchased pursuant to an ISO more than two years after the date of grant and more than one year after the exercise of the option (the required statutory &#8220;holding period&#8221;), (a) the optionee will recognize long-term capital gain or loss, as the case may be, equal to the difference between the selling price and the option price; and (b) the Company will not be entitled to a deduction with respect to the shares of stock so issued. If the holding period requirements are not met, any gain realized upon disposition will be taxed as ordinary income to the extent of the excess of the lesser of (i) the excess of the fair market value of the shares at the time of exercise over the option price, and (ii) the gain on the sale. Also in that case, the Company will (subject to the requirement of reasonableness, the provisions of Section 162(m) of the Code, and the satisfaction of a tax reporting obligation) be entitled to a deduction in the year of disposition in an amount equal to the ordinary income recognized by the participant. Any additional gain will be taxed as short-term or long-term capital gain depending upon the holding period for the stock. A sale for less than the option price results in a capital loss. 
+ Restricted Stock Awards. Generally, no income is taxable to the recipient of a restricted stock award in the year that the award is granted. Instead, the recipient will recognize compensation taxable as ordinary income equal to the fair market value of the shares in the year in which the risks of forfeiture restrictions lapse, minus the cash consideration (if any) paid for such shares. Alternatively, if a recipient makes an election under Section 83(b) of the Code, the recipient will, in the year that the restricted stock award is granted, recognize compensation taxable as ordinary income equal to the fair market value of the shares on the date of the award, minus the cash consideration (if any) paid for such shares. If the recipient is an employee, such ordinary income will be subject to income tax withholding and payroll taxes. The Company normally will (subject to the requirement of reasonableness, the provisions of Section 162(m) of the Code, and the satisfaction of a tax reporting obligation) be entitled to a corresponding deduction equal to the amount of compensation the recipient is required to recognize as ordinary taxable income. 
+ Restricted Stock Units. A recipient of restricted stock units will generally not recognize taxable income upon an award of restricted stock units. The receipt will recognize compensation taxable as ordinary income in an amount equal to the fair market value of the shares (or the amount of cash) distributed to settle the restricted stock units on the settlement date(s). If the recipient is an employee, such ordinary income will be subject to income tax withholding and payroll taxes. The Company normally will (subject to the requirement of reasonableness, the provisions of Section 162(m) of the Code, and the satisfaction of a tax reporting obligation) be entitled to a corresponding deduction at the time of settlement, equal to the amount of compensation the recipient is required to recognize as ordinary taxable income. 
+ 16 
+ Performance Awards. A recipient of performance awards will recognize compensation taxable as ordinary income equal to the value of the shares of Company common stock or the cash received, as the case may be, in the year that the recipient receives payment. If the recipient is an employee, such ordinary income will be subject to income tax withholding and payroll taxes. The Company normally will (subject to the requirement of reasonableness, the provisions of Section 162(m) of the Code, and the satisfaction of a tax reporting obligation) be entitled to a deduction equal to the amount of compensation the recipient is required to recognize as ordinary taxable income. 
+ Stock Appreciation Rights. Generally, a recipient of a stock appreciation right will recognize compensation taxable as ordinary income equal to the value of the shares of Company common stock or the cash received in the year that the stock appreciation right is exercised. If the recipient is an employee, such ordinary income will be subject to income tax withholding and payroll taxes. The Company normally will (subject to the requirement of reasonableness, the provisions of Section 162(m) of the Code, and the satisfaction of a tax reporting obligation) be entitled to a corresponding deduction equal to the amount of compensation the recipient is required to recognize as ordinary taxable income and must comply with applicable tax withholding requirements. 
+ Section 409A of the Code. Most awards under the 2020 Plan will be designed to be exempt from the requirements of Section 409A of the Code. Depending in part on particular award terms and conditions, certain awards under the 2020 Plan may, however, be considered non-qualified deferred compensation subject to the requirements of Section 409A. If an award under the 2020 Plan is subject to but fails to satisfy the requirements of Section 409A, the recipient of that award may recognize ordinary income on the amounts deferred under the award, to the extent vested, which may be before prior to the time when the compensation is actually or constructively received. Also, if an award that is subject to Section 409A fails to comply with the requirements of Section 409A, Section 409A imposes an additional 20% tax on compensation recognized as ordinary income, as well as interest on such deferred compensation. 
+ Impact of Section 162(m) and other Limitations on Tax Deductibility of Awards Under the 2020 Plan. Section 162(m) of the Code limits the deductibility for federal income tax purposes of certain compensation paid to any of our covered employees in excess of $1 million. For purposes of Section 162(m), the term &#8220;covered employee&#8221; generally includes our chief executive officer, our chief financial officer, our three other most highly compensated officers, any individual who was a covered employee for any taxable year beginning after December 31, 2016, and, for any taxable year beginning after December 31, 2026, the next five highest-compensated employees. Compensation attributable to awards under the 2020 Plan either on its own or when combined with all other types of compensation received by a covered employee from the Company, may cause this limitation to be exceeded in any particular year. 
+ The foregoing is only a summary of the effect of current U.S. federal income taxation with respect to the grant and exercise of awards under the 2020 Plan. It does not purport to be complete and does not discuss the tax consequences of an individual &#8217; s death or the provisions of the income tax laws of any municipality, state or foreign country in which any eligible individual may reside. Plan participants should consult with their own tax advisors with respect to the tax consequences inherent in the ownership or exercise of the awards, and the ownership and disposition of any underlying securities. 
+ New Plan Benefits 
+ Future grants under the 2020 Plan will be made at the discretion of the Administrator and, accordingly, are not yet determinable. In addition, benefits under the 2020 Plan will depend on a number of factors, including the fair market value of the Company&#8217;s common stock on future dates and the exercise decisions made by grantees. Consequently, it is not possible to determine the benefits that might be received in the future by participants under the 2020 Plan. 
+ For more information, see &#8220;Executive Compensation,&#8221; &#8220;Director Compensation,&#8221; and &#8220;Equity Compensation Plan Information&#8221; below. 
+ Other Information 
+ Other than as a result of their right to participate in the 2020 Plan, no person who was a director or executive officer of the Company in the year ended November 30, 2025 or who is a nominee for director at the Annual Meeting, or any associate of theirs, has any substantial interest in this proposal. 
+ 17 
+ PROPOSAL 4 
+ APPROVAL, ON A NON-BINDING, ADVISORY BASIS, OF NAMED EXECUTIVE OFFICER COMPENSATION 
+ What am I voting on? The Board is asking our stockholders to approve, on a non-binding, advisory basis, the compensation of the Company&#8217;s named executive officers disclosed in this Proxy Statement. 
+ Voting Recommendation: FOR the approval of the compensation of the named executive officers. 
+ Vote Required: Approval requires an affirmative vote of the majority of shares present in person or represented by proxy and entitled to vote. 
+ Voting procedures and the method by which votes will be counted, including the treatment and effect of abstentions and broker non-votes, are more fully described above in the section titled &#8220;QUESTIONS AND ANSWERS ABOUT THE 2026 ANNUAL MEETING AND VOTING.&#8221; 
+ The Dodd-Frank Wall Street Reform and Consumer Protection Act and Section 14A of the Exchange Act require that the Company provide its stockholders with the opportunity to vote to approve, on a non-binding, advisory basis, the compensation of our named executive officers as disclosed in this Proxy Statement in accordance with the compensation disclosure rules of the SEC. In accordance with the preference of our stockholders, as expressed in a non-binding, advisory vote on the frequency of votes on named executive officer compensation at our 2025 Annual Meeting of Stockholders, the Company previously determined to hold annual votes on the approval of compensation of the Company&#8217;s named executive officers. 
+ We seek to closely align the interests of our named executive officers with the interests of our stockholders. We designed our compensation program to reward our named executive officers for individual performance and contributions to our overall business objectives and for achieving and surpassing the financial goals set by our Compensation Committee and our Board. 
+ The vote on this resolution is not intended to address any specific element of compensation. Instead, the vote relates to the overall compensation of our named executive officers, as described in this Proxy Statement, in accordance with the compensation disclosure rules of the SEC. 
+ Accordingly, we ask our stockholders to approve the following resolution at the 2026 Annual Meeting: 
+ &#8220;RESOLVED, that the Company&#8217;s stockholders approve, on an advisory basis, the compensation of the named executive officers, as disclosed in the Company&#8217;s Proxy Statement for the 2026 Annual Meeting of Stockholders pursuant to the compensation disclosure rules of the Securities and Exchange Commission, including the summary compensation table and the other related tables and disclosure.&#8221; 
+ While the Board and the Compensation Committee intend to carefully consider the results of this vote when making future decisions regarding the compensation of our named executive officers, this vote is not binding on the Company or the Board and is advisory in nature. To the extent there is any significant vote against the compensation of our named executive officers, the Board and the Compensation Committee will evaluate what actions may be necessary to address our stockholders&#8217; concerns. 
+ 18 
+ OTHER INFORMATION 
+ CORPORATE GOVERNANCE 
+ Our Board currently has five members: Thomas E. Buffamante, Randall C. Ramsey, David A. White, Matthew N. Westendorf and Marc H. McConnell. Pursuant to the Company&#8217;s Bylaws, the Board has set the size of the Board at five directors as of the 2026 Annual Meeting. 
+ All of our current directors are &#8220;independent&#8221; within the definition provided by Nasdaq Rule 5605, with the exception of Marc McConnell. The Board has determined that Marc McConnell is not independent because he is an officer of the Company serving in the role of President and Chief Executive Officer. 
+ The Board held four formal meetings during the fiscal year ended November 30, 2025 (&#8220;fiscal year 2025&#8221;) and three impromptu update calls. Each director attended in person or via teleconference 100% of the total number of Board meetings held while the director served during fiscal year 2025 and the total number of meetings held by all committees of the Board on which the director served during fiscal year 2025, with the exception of Matt Westendorf, who missed three audit committee meetings. The Board encourages all directors to attend the Company&#8217;s annual meeting of stockholders but does not have a formal attendance policy. The Company&#8217;s last annual meeting of stockholders held on April 23, 2025 was attended in person or via teleconference by each of the directors who were serving at that time. 
+ The Board has an Audit Committee and a Compensation Committee. The Board as a whole functions as the Company&#8217;s Nominating and Governance Committee, although director nominees are recommended by our independent directors without participation of the non-independent directors. 
+ The Board &#8217; s Role in Risk Oversight 
+ Management has the responsibility to manage risk and bring to the Board&#8217;s attention the most material risks to the Company. The Board has oversight responsibility of the processes established to report and monitor systems for material risks applicable to the Company. The Audit Committee provides oversight of management with respect to enterprise-wide risk management, which focuses primarily on risks relating to commodity pricing (such as steel), the Company&#8217;s ability to maintain appropriate levels of credit and insurance coverage, and financial and accounting, legal and compliance risks, including oversight of inventory accounting, revenue recognition, and other internal controls over financial reporting. In addition, the Compensation Committee considers risks related to the attraction and retention of talent and risks relating to the design of compensation programs and arrangements. The Compensation Committee reviews compensation and benefits plans affecting all employees, including the executive officers. We have determined that it is not reasonably likely that our compensation and benefit plans create risks that would have a material adverse effect on the Company. The full Board considers strategic risks and opportunities and regularly receives detailed reports from management and the committees with respect to their areas of responsibility for risk oversight. 
+ Board Leadership Structure 
+ Our Chairman, Marc McConnell, also serves in the role of President and Chief Executive Officer. Given (i) Mr. McConnell&#8217;s long tenure with, and institutional knowledge, of the Company, (ii) the Company&#8217;s small size relative to other publicly traded companies, and (iii) the Company&#8217;s ongoing efforts to control costs, the Company determined this leadership structure was in the Company&#8217;s best interest, rather than separating the roles of chairman of the board and principal executive officer. 
+ Because the Board has determined that Mr. McConnell does not satisfy the definition of &#8220;independence&#8221; as set forth in Nasdaq Rule 5605, the Board appointed Randall C. Ramsey to serve as &#8220;presiding director&#8221; over all executive sessions of independent directors that are required under Nasdaq rules. Mr. Ramsey has served in the presiding director role since 2025. 
+ Code of Ethics 
+ The Company has adopted a Code of Ethics (the &#8220;Code&#8221;), which is applicable to all directors, officers and employees of the Company. The Code covers all areas of professional conduct, including customer and supplier relationships, conflicts of interest, insider trading, confidential information, accuracy of company records, public disclosures, contact with government officials, and workplace behavior. It requires strict adherence to all laws and regulations applicable to our business. Persons who are subject to the Code are required to bring any violations and suspected violations of the Code to the Company&#8217;s attention, through their supervisor, management, outside legal counsel, or confidential communication with the Chairman of the Audit Committee. 
+ 19 
+ The Code of Ethics is posted to our website at http://www.artsway-mfg.com/corporate-governance/. We intend to include on our website, within the time period required by Form 8-K, any amendment to, or waiver from, a provision of our Code of Ethics that applies to our principal executive officer, principal financial officer, principal accounting officer, controller, or persons performing similar functions, that relates to any element of the Code of Ethics definition enumerated in Item 406(b) of Regulation S-K. 
+ Audit Committee 
+ The principal functions of the Audit Committee are to evaluate and review the Company&#8217;s financial reporting process and systems of internal controls. The Audit Committee evaluates the independence of the Company&#8217;s independent registered public accounting firm, recommends selection of the Company&#8217;s independent registered public accounting firm to the Board, approves fees to be paid to our independent registered public accounting firm, and reviews the Company&#8217;s financial statements with management and the independent registered public accounting firm. The Audit Committee has recommended to the Board the appointment of Eide Bailly LLP to serve as the Company&#8217;s independent registered public accounting firm for fiscal year 2026. 
+ The Audit Committee operates under a written charter, which is available on our website at http://www.artsway-mfg.com/corporate-governance/. Under the charter, the Audit Committee must consist of not less than three members of the Board and its composition must otherwise satisfy Nasdaq requirements applicable to audit committees. During fiscal year 2025, the members of the Audit Committee were: Thomas E. Buffamante (Chairman), Matthew Westendorf and David A. White. Messrs. Buffamante, Westendorf and White will continue to serve as members of the Audit Committee in fiscal year 2026. The Board has determined that all current and proposed members of the Audit Committee are independent under the definition of &#8220;independence&#8221; provided by Nasdaq Rule 5605 and Rule 10A-3 of the Exchange Act. The Board has also determined that Mr. Buffamante and Mr. White are each an &#8220;audit committee financial expert&#8221; as defined by applicable SEC regulations, and that all members of the Audit Committee are financially literate as required by Nasdaq Rule 5605. The Audit Committee held five meetings during fiscal year 2025 (including a pre-audit planning meeting). 
+ Report of the Audit Committee 
+ The following report of the Audit Committee shall not be deemed to be filed with the SEC or incorporated by reference in any previous or future documents filed by the Company with the SEC under the Securities Act of 1933 or the Exchange Act, except to the extent that the Company specifically incorporates the reference in any such document. 
+ The Audit Committee reviews the Company&#8217;s financial reporting process on behalf of the Board. Management has the primary responsibility for the financial statements and the reporting process. The Company&#8217;s independent registered public accounting firm is responsible for performing an independent audit of the Company&#8217;s financial statements and expressing an opinion on the conformity of the audited financial statements to generally accepted accounting principles. 
+ The members of the Audit Committee have reviewed and discussed with management the Company&#8217;s audited financial statements as of and for the fiscal year ended November 30, 2025. The members of the Audit Committee have discussed with Eide Bailly LLP, the Company&#8217;s independent registered public accounting firm, the matters required to be discussed by the applicable requirements of the Public Company Accounting Oversight Board and the Securities and Exchange Commission. The members of the Audit Committee have received and reviewed the written disclosures and the letter required by applicable requirements of the Public Company Accounting Oversight Board regarding communications with the audit committee concerning independence, and the members of the Audit Committee have discussed with Eide Bailly LLP their independence from management and the Company. The members of the Audit Committee have considered whether the provision of services by Eide Bailly LLP referred to above not related to the audit of the financial statements and the reviews of the interim financial statements included in the Company&#8217;s Forms 10-Q are compatible with maintaining Eide Bailly LLP&#8217;s independence, and have determined that they are compatible and do not impact Eide Bailly LLP&#8217;s independence. 
+ 20 
+ Based on the reviews and discussions referred to above, the Audit Committee recommended to the Board that the audited financial statements referred to above should be included in our Annual Report on Form 10-K accompanying this Proxy Statement and filed with the SEC for the fiscal year ended November 30, 2025. 
+ Audit Committee 
+ Thomas E. Buffamante, Chairman 
+ Matthew N. Westendorf 
+ David A. White 
+ Compensation Committee 
+ During fiscal year 2025, the members of the Compensation Committee were David A. White (Chairman), Thomas E. Buffamante and Matthew Westendorf. Messrs. Buffamante, Westendorf and White will serve as members of the Compensation Committee for fiscal year 2026. The Board has determined that all current and proposed members of the Compensation Committee are independent within the definition of &#8220;independence&#8221; provided by Nasdaq Rule 5605 and Rule 10C-1 of the Exchange Act. The Compensation Committee operates under a written charter, which is available on our website at http://www.artsway-mfg.com/corporate-govemance/. Under the charter, the Compensation Committee must consist of two or more members of the Board, and each member must meet applicable Nasdaq independence standards. 
+ The Board has authorized the Compensation Committee to review and advise management on a broad range of compensation policies, such as salary ranges and incentive programs for employees, although the Company&#8217;s Chief Executive Officer is responsible for establishing specific terms of compensation for Company employees who are not subject to Section 16 of the Exchange Act. The Compensation Committee reviews and makes recommendations to the Board as to the compensation of those Company employees who are subject to Section 16 of the Exchange Act, which includes the Chief Executive Officer and Chief Financial Officer. The Board retains the authority to set director compensation, each based on the Compensation Committee&#8217;s recommendations. Marc McConnell does not participate in the discussion or approval of the payments he receives from the Company as compensation for services he provides as the Company&#8217;s President, Chief Executive Officer, and Chairman of the Board. 
+ Although the Board administers the Company&#8217;s equity incentive plans, the Compensation Committee remains responsible for recommending to the Board any equity awards to the Company&#8217;s Chairman, Chief Executive Officer and the Chief Financial Officer, and the Board may delegate to the Compensation Committee additional administrative duties for the equity incentive plans in the future. Neither the Compensation Committee nor the Board engages compensation consultants to assist in determining or recommending the amount or form of compensation for executive officers or directors. Executive officers do not have any role in determining or recommending the amount or form of executive officer or director compensation. The Compensation Committee may delegate its responsibilities to subcommittees to the extent permitted by applicable laws and regulations; however, such subcommittees are not permitted to have decision-making authority and are required to report regularly to the full Compensation Committee. The Compensation Committee had one meeting during fiscal year 2025. 
+ Nominating and Governance Committee 
+ The Board as a whole performs the functions of a Nominating and Governance Committee, with only our independent directors participating in the recommendation to our full Board regarding director nominees. The Board has determined that each of our directors is independent under the definition of &#8220;independence&#8221; provided by Nasdaq Rule 5605, with the exception of Marc McConnell for the reasons identified above. Because a majority of our directors are independent, the Board does not deem it necessary to have a separate Nominating and Governance Committee. In accordance with Nasdaq requirements, all five of the director nominees for the 2026 Annual Meeting were recommended by a majority of the independent directors without participation of the non-independent director. The Board met once during fiscal year 2025 for the purpose of evaluating candidates for director nominees. 
+ 21 
+ The principal purpose of the Board, acting as the Nominating and Governance Committee, is to identify and evaluate qualified individuals for membership on the Board. The Board annually considers the size, composition and needs of the Board in evaluating director candidates and recommends director nominees for election at each annual meeting of stockholders. The Board operates as the Nominating and Governance Committee pursuant to a written charter, which is available on our website at http://www.artsway-mfg.com/corporate-governance/. 
+ Selection of Director Nominees 
+ In selecting nominees for directors, the Board, acting as the Nominating and Governance Committee, will consider all candidates submitted, including incumbent Board members, based upon the qualifications of the candidates, the business and financial experience of the candidates, the experience of the candidates serving on public company boards of directors, and other skill sets deemed appropriate by the Board to enact the mission and business purposes of the Company. Our Criteria and Policies for Director Nominations (the &#8220;Nominations Policies&#8221;) were adopted by the Board, acting as the Nominating and Governance Committee, and are included in the Nominating and Governance Committee Charter. The Nominations Policies specify that directors must have certain minimum qualifications, including the ability to read and understand basic financial statements, familiarity with the Company&#8217;s business and industry, high moral character and mature judgment and the ability to work collegially with others. 
+ Diversity is also a factor in evaluating director nominees. The Board values the benefits that diversity can bring and seeks to maintain a Board comprised of talented and dedicated directors. The Nominations Policies do not restrict the criteria that the Board may consider when evaluating diversity. The Board typically considers diversity of experience, skill, geographic representation and background as factors in the selection of new director nominees, with the goal of assembling a board of directors with complementary skill sets and viewpoints. The Board has not adopted a standalone diversity policy at this time. Nominees are not discriminated against on the basis of race, religion, national origin, sexual orientation, disability or any other basis proscribed by law. 
+ Currently, the Company does not engage any third parties, for a fee or otherwise, to identify or evaluate potential nominees. The Board will consider director candidates recommended by holders of the Company&#8217;s common stock on the same basis as any other candidate submitted for consideration as a nominee. No nominations for candidates were received from any holders of common stock for the 2026 Annual Meeting. 
+ In order for a candidate to be considered for nomination by the Board, a stockholder must submit to the attention of the Chief Executive Officer of the Company a written recommendation that contains the following information: 
+ (1) 
+ the full name and address of the stockholder or group submitting the recommendation; 
+ (2) 
+ the number of shares of common stock of the Company owned by the stockholder or group submitting the recommendation, and the date such shares were acquired; 
+ (3) 
+ the full name and address of the director nominee; 
+ (4) 
+ the age of the director nominee; 
+ (5) 
+ a five-year business history of the director nominee; 
+ (6) 
+ the amount of common stock of the Company owned by the director nominee; 
+ (7) 
+ whether the director nominee can read and understand basic financial statements; 
+ (8) 
+ the director nominee&#8217;s other board memberships, if any; 
+ (9) 
+ any family relationships between the director nominee and any executive officer or current director of the Company; 
+ (10) 
+ any business transactions between the director nominee or the candidate&#8217;s business and the Company; 
+ (11) 
+ a written consent of the director nominee to be named in the Company&#8217;s proxy statement and to serve as a director if elected; and 
+ (12) 
+ a written consent of the stockholder or group to be named in the Company&#8217;s proxy statement. 
+ Additionally, any holder of common stock nominating a candidate is encouraged to set forth any other qualifications which such stockholder believes the candidate has to serve as director of the Company and the reasons why the stockholder believes the candidate should be elected to the Board. The Board may require the stockholder or nominee to furnish additional information to evaluate the nominee&#8217;s suitability. In the event a stockholder does not comply with the nomination process described in this Proxy Statement, the proposed nomination may be declared defective and disregarded. 
+ 22 
+ Pursuant to the Company&#8217;s Bylaws, stockholders who intend to present a floor proposal or director nomination at the 2027 Annual Meeting of Stockholders without including such proposal or nomination in the Company&#8217;s proxy statement must deliver to the Company notice of such proposal no earlier than January 21, 2027 (approximately 90 days prior to the one year anniversary of the 2026 Annual Meeting) and no later than February 20, 2027 (approximately 60 days prior to the one year anniversary of the 2026 Annual Meeting); provided, however, that in the event that the date of the 2027 annual meeting is advanced by more than thirty (30) days or delayed by more than sixty (60) days from such anniversary date, notice by the stockholder to be timely must be so delivered not earlier than the ninetieth (90th) day prior to such annual meeting and not later than the close of business on the later of the sixtieth (60th) day prior to such annual meeting or the tenth (10th) day following the day on which public announcement of the date of such meeting is first made. The Company reserves the right to reject, rule out of order, or take appropriate action with respect to any proposal that does not comply with these and other applicable requirements. 
+ In addition to satisfying the requirements under our Bylaws, to comply with the universal proxy rules, a person who intends to solicit proxies in support of director nominees other than the Company&#8217;s nominees must provide notice to the Company that sets forth the information required by Rule 14a-19(b) under the Exchange Act, including a statement that such person intends to solicit the holders of shares representing at least 67% of the voting power of the Company&#8217;s shares entitled to vote in the election of directors in support of director nominees other than the Company&#8217;s nominees. 
+ For additional information regarding stockholder proposals, please see the above response to the question &#8220;When are stockholder proposals and director nominations due for next year&#8217;s annual meeting?&#8221; 
+ Anti-Hedging Policy 
+ While we have not adopted a written anti-hedging policy, our directors and named executive officers have confirmed that they have not engaged in transactions to hedge or offset decreases in the market value of our common stock, including short-selling, put or call options, forward sale or purchase contracts, equity swaps, and exchange funds. 
+ Policy Prohibiting Insider Trading and Related Procedures 
+ We have adopted an insider trading policy governing the purchase, sale, and other dispositions of our securities by directors, officers, and employees. The Company does not transact in its own securities if it is aware of material nonpublic information about the Company. We believe our insider trading policies and procedures are reasonably designed to promote compliance with insider trading laws, rules, and regulations, and Nasdaq listing standards. A copy of the insider trading policy is filed as Exhibit 19.1 to our Annual Report on Form 10-K for the fiscal year ended November 30, 2025. 
+ SECURITY HOLDER COMMUNICATIONS TO THE BOARD OF DIRECTORS 
+ Any holder of common stock wishing to communicate with the Board about any matter involving the business or operations of the Company should send the communication, in written form, to the Chief Executive Officer of the Company at the Company&#8217;s principal place of business at 5556 Highway 9, Armstrong, Iowa, 50514-0288. The Chief Executive Officer of the Company will promptly send the communication to each member of the Board or, if applicable, specified individual directors. 
+ 23 
+ SECURITY OWNERSHIP OF DIRECTORS, EXECUTIVE OFFICES AND PRINCIPAL STOCKHOLDERS 
+ The following table shows certain information with respect to the Company&#8217;s common stock beneficially owned by current directors, director nominees, and executive officers of the Company as of March 5, 2026, as well as the name and address of the persons known to the Company who beneficially own more than 5% of the issued and outstanding shares of common stock of the Company as of March 5, 2026. The shares shown as beneficially owned include shares that executive officers, directors, and director nominees are entitled to acquire pursuant to outstanding stock options exercisable within 60 days of March 5, 2026. Unless otherwise provided, the address of each of the executive officers, directors, and director nominees listed below is c/o Art&#8217;s-Way Manufacturing Co., Inc., 5556 Highway 9, Armstrong, Iowa, 50514-0288. 
+ Name of Beneficial Owner 
+ Position 
+ Amount and Nature of 
+ Beneficial Ownership 
+ (1) 
+ Percent 
+ of 
+ Class (2) 
+ 5% Stockholders 
+ McConnell Legacy Investments LLC (3) 
+ Stockholder 
+ 2,149,819 
+ (3) 
+ 41.5 
+ % 
+ Larry M. Walther 
+ Stockholder 
+ 300,000 
+ (4) 
+ 5.8 
+ % 
+ Directors and Officers 
+ Thomas E. Buffamante 
+ Director 
+ 60,000 
+ (5) 
+ 1.2 
+ % 
+ Marc H. McConnell 
+ Chairman, President and CEO 
+ 2,417,899 
+ (6) 
+ 46.7 
+ % 
+ Randall C. Ramsey 
+ Director 
+ 74,709 
+ 1.4 
+ % 
+ Matthew Westendorf 
+ Director 
+ 28,000 
+ * 
+ David A. White 
+ Director 
+ 47,000 
+ (7) 
+ * 
+ Michael Woods 
+ Chief Financial Officer 
+ 41,999 
+ * 
+ Directors and Executive Officers as a Group (6 individuals) 
+ 2,669,607 
+ 51.5 
+ % 
+ * Less than 1% 
+ (1) 
+ Number reported indicates shares and is determined in accordance with SEC rules and generally includes holding, voting and investment power with respect to the securities. Unless otherwise noted, the stockholders listed in the table have sole voting and investment power with respect to the shares indicated. 
+ (2) 
+ Based on 5,182,084 shares issued and outstanding as of March 5, 2026. 
+ (3) 
+ Marc McConnell is the managing member of McConnell Legacy Investments LLC and has voting control of the securities held by such entity. 
+ (4) 
+ Based on a Schedule 13G filed with the SEC on February 17, 2026. 
+ (5) 
+ Includes 7,000 shares held individually and 53,000 shares held jointly with spouse. 
+ (6) 
+ Includes 252,500 shares of common stock held by Mr. McConnell; 2,149,819 shares held by McConnell Legacy Investments LLC, of which Mr. McConnell is the managing member and holds voting control; 10,000 shares of common stock held indirectly by Mr. McConnell&#8217;s children; and 5,580 shares of common stock held in individual retirement accounts, over which Mr. McConnell has voting and dispositive power. 
+ (7) 
+ Shares are owned jointly with spouse. 
+ EXECUTIVE OFFICERS 
+ Marc H. McConnell began serving as our President and Chief Executive Officer on October 4, 2024. Mr. McConnell&#8217;s biography is contained in this Proxy Statement under the caption &#8220;ELECTION OF DIRECTORS &#8211; Nominees for Election as Directors at the 2026 Annual Meeting.&#8221; 
+ Michael Woods , age 39 (as of annual meeting date), is currently serving as our Chief Financial Officer, a position he has held since February 1, 2020. Mr. Woods joined the Company in April 2016 and served as a Senior Staff Accountant and as the Controller until his promotion to Vice President of Finance in January 2019. Mr. Woods began his career in 2012 with Brinkman & Reed, CPAs in Estherville, IA as a Staff Accountant where he performed compilations, reviews, audits and tax consulting services. After three years in public accounting, he spent a year and a half as a Senior Staff Accountant with XPO Logistics (formerly Norbert Dentressangle) in Clive, Iowa. Mr. Woods received Bachelor of Science Degrees in Accounting and Finance from Iowa State University and has been a Certified Public Accountant since October of 2013. Mr. Woods is also a Certified Valuation Analyst as governed by the National Association of Certified Valuators and Analysts since June of 2023. 
+ 24 
+ EXECUTIVE COMPENSATION 
+ The compensation philosophy of the Company is to provide a compensation package to executive officers that will maximize long-term stockholder value. The components of executive officer compensation are base salary, cash incentive compensation and equity awards. 
+ The Company&#8217;s policy is to pay base salaries that are at, or near, the average base salary for similar companies. The Compensation Committee annually determines whether to recommend to the Board salary increases for the Company&#8217;s executive officers, which recommendation is based on current salaries and individual and Company performance during the past year. Other components of officer compensation are generally also reviewed annually. 
+ The Board has an incentive compensation pool and incentive compensation plans for the President, Chief Executive Officer, and Chairman of the Board, and Chief Financial Officer, and certain other key employees. The objectives and the target incentive compensation thresholds and gradations pursuant to the pool and plans are based on an analysis of market data conducted by the Compensation Committee, along with consideration of the Company&#8217;s circumstances and opportunities. They reflect the belief of the Board and Compensation Committee that defined annual incentives should be closely aligned with financial performance and opportunities for long-term growth. 
+ The relevant objectives for fiscal year 2025 pertaining to the Chief Executive Officer and Chief Financial Officer were achievement of EBITDA targets for fiscal year 2025 and defined strategic company objectives. Mr. McConnell received no incentive compensation related to 2025 objectives while Michael Woods received $15,835. In addition to the incentive compensation, the Board also approved discretionary bonuses to Marc McConnell in the amount of $35,000, in recognition of shaping the Company&#8217;s long-term strategic vision, and to Michael Woods in the amount of $19,165, in recognition of process improvements and additional leadership responsibilities. 
+ The relevant objectives for fiscal year 2026 pertaining to the President, Chief Executive Officer and Chairman of the Board and Chief Financial Officer are related to EBITDA targets, defined strategic company objectives and continued debt retirement. Achievement of the objectives shall be determined in the Board&#8217;s discretion following the conclusion of fiscal year 2026. 
+ Equity awards have historically been the third component of the Company&#8217;s compensation package for executive officers. Equity awards such as restricted stock are awarded to provide long-term incentives to align the objectives of executive officers with the interests of stockholders in maximizing long-term growth. Equity awards typically vest over three years. 
+ The Company also has a 401(k) Savings Plan that covers substantially all full-time employees, including executive officers. Participating employees contribute to the 401(k) Savings Plan through salary reductions. The Company contributes a discretionary percentage of the 401(k) Savings Plan participants&#8217; salary deferrals. The Company typically matches 50% of a participant&#8217;s contribution for every 1% that the participant contributes, up to 3% of the participant&#8217;s salary. Management of the 401(k) Savings Plan assets is currently vested with Transamerica. Vesting of participants&#8217; company match is 20% per year of employment until 100% vested after six years. 
+ Employment of Marc H. McConnell 
+ Mr. McConnell was appointed to the role of President and Chief Executive Officer of the Company on October 4, 2024 in addition to his role as the Chairman of the Company&#8217;s board of directors. During fiscal year 2025, Mr. McConnell had a base salary of $283,250 in connection with his service as President, Chief Executive Officer and Chairman of the Board. In addition, Mr. McConnell also received an annual car allowance of $12,000 and office stipend of $15,000. On January 24, 2025, he received 20,000 shares of restricted stock for which risks of forfeiture lapsed as to 6,666 shares on January 24, 2026 and will lapse as to 6,667 shares on each of January 24, 2027 and January 24, 2028. During fiscal year 2025, Mr. McConnell also received 7,000 shares of fully vested restricted stock in connection with his board service under the director compensation policy in place during fiscal year 2025, which provided for a stock award of 1,000 shares at the end of each fiscal quarter and an additional 3,000 shares upon his re-election to the Company&#8217;s board of directors at last year&#8217;s annual meeting of stockholders. 
+ 25 
+ Employment of Michael W. Woods 
+ Mr. Woods&#8217;s employment as Chief Financial Officer is governed by an employment agreement entered into as of February 1, 2020. Mr. Woods&#8217; base salary for the 2025 fiscal year was $158,346. Mr. Woods is also eligible to receive incentive compensation, including cash bonuses and equity awards, in the exclusive discretion of the Board (or a committee authorized by the Board), and to participate in any and all other employee benefit plans that are generally available to the Company&#8217;s employees. 
+ Mr. Woods&#8217;s employment agreement may be terminated at any time by either party. If the agreement is terminated by the Company without cause (as defined in the Agreement), the Company may be required to pay up to 8 weeks of compensation and benefits to Mr. Woods, in exchange for his release of any and all claims against the Company and his compliance with the non-competition and non-solicitation provisions of the agreement. The agreement also contains confidentiality and assignment of inventions provisions that survive the termination of the agreement for an indefinite period. 
+ On January 24, 2025, the Board granted Mr. Woods 10,000 shares of restricted stock for which the risks of forfeiture lapse as to 3,334 shares on January 24, 2026, and as to 3,333 shares on each of January 24, 2027 and January 24, 2028. Mr. Wood&#8217;s restricted stock awards are governed by the 2020 Equity Incentive Plan and the Company&#8217;s form of restricted stock award agreement. 
+ 2025 Say on Pay Results 
+ At our Annual Meeting held on April 23, 2025, our stockholders had the opportunity to cast a non-binding advisory vote on the compensation of our named executive officers and approximately 95% of the shares present and entitled to vote on the proposal (excluding, for clarity, broker note-votes) approved our named executive officers&#8217; compensation. The Board and the Compensation Committee welcomed this feedback and intend to continue their practice of linking Company performance with executive compensation decisions in order to maximize long-term stockholder value. 
+ Executive Compensation Clawback Policy 
+ The Board has adopted a Clawback Policy intended to comply with the clawback rules adopted by the SEC pursuant to Section 10D and Rule 10D-1 of the Exchange Act, and the related Nasdaq listing requirements (together, the &#8220;Clawback Rules&#8221;). The Clawback Policy requires the Company to recover reasonably promptly any erroneously awarded incentive-based compensation received by current and former executive officers (as defined in the Clawback Policy) of the Company in the event that the Company is required to prepare an accounting restatement, in accordance with the Clawback Rules. The recovery of such compensation applies regardless of whether an executive officer engaged in misconduct or otherwise caused or contributed to the requirement of an accounting restatement. Under the Clawback Policy, the Company may recoup from current or former executive officers erroneously awarded incentive-based compensation received within a look-back period of the three completed fiscal years preceding the date on which the Company is required to prepare an accounting restatement. A copy of the policy was filed as Exhibit 97.1 to our Annual Report on Form 10-K for the fiscal year ended November 30, 2024. 
+ Policies and Practices Related to Stock Option Grants 
+ The following discussion of the timing of option awards in relation to the disclosure of material nonpublic information is provided as required by Item 402(x) of SEC Regulation S-K. The Company does not have a written policy regarding the timing of option awards in relation to the disclosure of material nonpublic information. The Company has not issued stock options since 2015 and it is not currently a major part of its compensation strategy. The Board's schedule for determining when to grant options occurs annually at a compensation committee meeting typically in January. The Compensation Committee does not take material nonpublic information into account when determining the timing and terms of option awards. The Company has not timed the disclosure of material nonpublic information to affect the value of executive compensation. 
+ 26 
+ Summary Compensation Table 
+ The following table sets forth all compensation paid or payable by the Company during the last two fiscal years to the Company&#8217;s named executive officers. 
+ Name and Position 
+ Fiscal 
+ Year 
+ Salary 
+ ($) 
+ Bonus ($) 
+ (1) 
+ Stock 
+ Awards 
+ ($) 
+ (2) 
+ All 
+ Other 
+ Compensation ($) 
+ (3) (4) 
+ Total 
+ ($) 
+ Marc McConnell 
+ 2025 
+ 271,087 
+ 35,000 
+ 49,690 
+ 25,962 
+ 381,739 
+ Chairman, President and Chief Executive Officer 
+ 2024 
+ - 
+ 30,000 
+ 51,870 
+ 267,500 
+ 349,370 
+ Michael Woods 
+ 2025 
+ 157,382 
+ 35,000 
+ 18,000 
+ 4,722 
+ 215,104 
+ Chief Financial Officer 
+ 2024 
+ 151,698 
+ 35,000 
+ 21,200 
+ 4,551 
+ 212,449 
+ (1) 
+ Represents discretionary bonuses awarded for respective fiscal year performance. 
+ (2) 
+ Represents the grant date fair value of restricted stock awarded during the fiscal years ended November 30, 2025 and November 30, 2024, in accordance with Financial Accounting Standards Board Accounting Standards Codification Topic 718, Compensation - Stock Compensation. Please refer to Note 13 of the financial statements included in our Form 10-K for fiscal year 2025 for a discussion of the assumptions made in the valuation of restricted stock awards. For Mr. McConnell, includes (i) 5,000 and 7,000 shares of fully vested restricted stock granted in 2024 and 2025, respectively, under the Company&#8217;s director compensation policy in effect during the fiscal years 2024 and 2025, and (ii) a restricted stock award, subject to a three-year vesting schedule, of 20,000 shares awarded during each of fiscal year 2024 and 2025. For Mr. Woods, 10,000 shares granted as a restricted stock award in each of fiscal 2024 and 2025, subject to a three-year vesting schedule. 
+ (3) 
+ All other compensation includes Company 401(k) match for Mr. Woods. 
+ (4) 
+ Included in the &#8220;All Other Compensation&#8221; column for Mr. McConnell are aggregate payments of $267,500 under a cash retainer (paid in monthly installments) in connection with his board service as Chairman of the Board during the fiscal year 2024. For fiscal year 2025, this amount includes $11,539 for car allowance and $14,423 for office stipend paid in biweekly installments to Mr. McConnell. 
+ Outstanding Equity Awards at 2025 Fiscal Year-End 
+ The following table sets forth the number of shares underlying outstanding equity awards as of November 30, 2025 and additional information relating to such awards: 
+ STOCK AWARDS 
+ Name 
+ Number of 
+ Shares or 
+ Units 
+ of Stock 
+ that 
+ Have Not 
+ Vested (#) 
+ Market Value 
+ of Shares or 
+ Units that 
+ Have Not 
+ Vested ($) (1) 
+ Marc McConnell 
+ 8,333 (2) 
+ 19,666 
+ 13,333 (3) 
+ 31,466 
+ 20,000 (4) 
+ 47,200 
+ Michael Woods 
+ 2,333 (5) 
+ 5,506 
+ 6,666 (6) 
+ 15,732 
+ 10,000 (7) 
+ 23,600 
+ (1) 
+ Market value of shares of stock that have not vested computed based on closing market price of $2.36 on November 28, 2025 (last trading day prior to 2025 fiscal year end). 
+ 27 
+ (2) 
+ Risks of forfeiture for these shares of restricted stock lapsed as to 8,333 shares on January 26, 2026. 
+ (3) 
+ Risks of forfeiture for these shares of restricted stock lapsed as to 6,667 shares on February 7, 2026 and will lapse as to 6,666 shares on February 7, 2027. 
+ (4) 
+ Risks of forfeiture for these shares of restricted stock lapsed as to 6,667 shares on each of January 24, 2026 and January 24, 2027 and will lapse as to 6,666 shares on January 24, 2028. 
+ (5) 
+ Risks of forfeiture for these shares of restricted stock lapsed as to 2,333 shares on January 26, 2026. 
+ (6) 
+ Risks of forfeiture for these shares of restricted stock lapsed as to 3,333 shares on each February 7, 2026 and February 7, 2027. 
+ (7) 
+ Risks of forfeiture for these shares of restricted stock lapsed as to 3,334 shares on January 24, 2026 and will lapse as to 3,333 shares on each of January 24, 2027 and January 24, 2028. 
+ DIRECTOR COMPENSATION 
+ The Company maintains a written director compensation policy. During fiscal year 2025, each director, other than the Chairman of the Board, was entitled to receive a $24,000 cash retainer for service as a director during the fiscal year, with no committee or attendance fees pursuant to this policy. The Chairmen of the Audit Committee and the Compensation Committee were each entitled to receive an additional cash retainer of $4,000 per fiscal year. 
+ Director retainers are paid quarterly in installments and are prorated to reflect a director who serves for less than a full fiscal year. Directors may, in accordance with certain timing parameters determined by the Board, elect to receive fully vested restricted common stock in lieu of the aforementioned cash retainers. Any such stock shall be issued under the Company&#8217;s 2020 Equity Incentive Plan or, if determined by the Board, an applicable successor plan approved by the Company&#8217;s stockholders. In addition, each director is reimbursed for out-of-pocket expenses to attend all Board meetings and perform other services as a Board member. Director compensation is reviewed annually, and adjustments may be adopted by the Board. 
+ The Company&#8217;s director compensation policy in place during fiscal year 2025 also provided for annual grants of 3,000 shares of fully vested restricted shares of Company common stock on the date of each annual meeting and for quarterly grants of 1,000 shares of fully vested restricted shares of Company common stock on the last day of each fiscal quarter. In fiscal year 2025, the annual director restricted shares grant was made on April 24, 2025 to the directors elected to the Board at the 2025 Annual Meeting of Stockholders. 
+ Director Compensation Table for Fiscal Year 2025 
+ The following table sets forth the compensation received by our directors for fiscal year 2025. Director compensation for Mr. McConnell, who is also a named executive officer, is omitted from the table below, as such compensation for is fully reflected in the Summary Compensation Table above for our named executive officers. 
+ Director Name 
+ Fees Earned or 
+ Paid in Cash ($) 
+ Stock Awards 
+ ($) (1) 
+ Option Awards ($) (2) 
+ Total ($) 
+ Thomas E. Buffamante 
+ 28,000 
+ 13,690 
+ - 
+ 41,690 
+ Randall C. Ramsey 
+ 24,000 
+ 13,690 
+ - 
+ 37,690 
+ Matthew Westendorf 
+ 24,000 
+ 13,690 
+ - 
+ 37,690 
+ David A. White 
+ 28,000 
+ 13,690 
+ - 
+ 41,690 
+ 28 
+ (1) 
+ Represents the grant date fair value of equity-based compensation for 7,000 shares of fully-vested restricted stock granted pursuant to the Company&#8217;s director compensation policy in effect during fiscal year 2025 at the grant date fair value of: $1.64 per share for grants of 1,000 shares made February 28, 2025; $1.58 per share for grants of 3,000 shares made April 24, 2025; $1.80 per share for grants of 1,000 shares made May 31, 2025, $3.15 per share for grants of 1,000 shares made August 31, 2025, and $2.36 per share for grants of 1,000 shares made November 30, 2024, in accordance with Financial Accounting Standards Board&#8217;s Accounting Standards Codification (ASC) Topic 718, Compensation - Stock Compensation. Please refer to Note 13 of the financial statements included in our Form 10-K for fiscal year 2025 for a discussion of the assumptions made in the valuation of restricted stock awards. 
+ (2) 
+ No option awards were granted to directors in fiscal year 2025. At the end of fiscal year 2025 there were no option awards outstanding for any director. 
+ EQUITY COMPENSATION PLAN INFORMATION 
+ The following table provides information concerning the Art&#8217;s-Way Manufacturing Co., Inc. 2011 Equity Incentive Plan and the Art&#8217;s-Way Manufacturing Co., Inc. 2020 Equity Incentive Plan as of November 30, 2025. 
+ Number of 
+ securities to be 
+ issued upon 
+ exercise of 
+ outstanding 
+ options 
+ Weighted average 
+ exercise price of 
+ outstanding 
+ options 
+ Number of 
+ securities 
+ remaining 
+ available for 
+ future issuance 
+ under equity 
+ compensation 
+ plans (excluding 
+ securities 
+ reflected in 
+ column (a)) 
+ (a) 
+ (b) 
+ (c) 
+ Equity compensation plans approved by security holders 
+ - 
+ - 
+ 132,429 
+ Equity compensation plans not approved by security holders 
+ - 
+ N/A 
+ - 
+ Totals 
+ - 
+ - 
+ 132,429 
+ 29 
+ PAY VERSUS PERFORMANCE 
+ As required by Section 953(a) of the Dodd-Frank Wall Street Reform and Consumer Protection Act and Item 402(v) of Regulation S-K, the Company is providing the following information about the relationship between executive compensation actually paid and certain financial performance of the Company. 
+ Pay Versus Performance Table 
+ Fiscal 
+ Year 
+ Ended 
+ November 30: 
+ Summary 
+ compensation 
+ table total for 
+ David King 
+ (1) 
+ ($) 
+ Summary 
+ compensation 
+ total table for 
+ Marc 
+ McConnell 
+ (2) 
+ ($) 
+ Compensation 
+ actually paid 
+ to David King 
+ (3) 
+ ($) 
+ Compensation 
+ actually paid 
+ to Marc 
+ McConnell 
+ (4) 
+ ($) 
+ Average 
+ summary 
+ compensation 
+ table total for 
+ non-PEO 
+ named 
+ executive 
+ officers (5) 
+ ($) 
+ Average 
+ compensation 
+ actually paid 
+ to 
+ non-PEO 
+ named 
+ executive 
+ officers (6) 
+ ($) 
+ Value of 
+ initial fixed 
+ $100 
+ investment 
+ based on: 
+ Total 
+ shareholder 
+ return (7) 
+ ($) 
+ Net 
+ Income 
+ (8) 
+ ($) 
+ 2025 
+ - 
+ 381,739 
+ - 
+ 425,957 
+ 215,104 
+ 233,787 
+ 138.82 
+ 1,034,899 
+ 2024 
+ 342,004 
+ 349,370 
+ 248,573 
+ 328,367 
+ 212,449 
+ 205,149 
+ 82.52 
+ 307,375 
+ 2023 
+ 390,267 
+ - 
+ 388,501 
+ - 
+ 169,134 
+ 169,697 
+ 57.91 
+ 266,969 
+ (1) 
+ Mr. King served as the Company&#8217;s principal executive officer, or PEO, during the 2023 fiscal year and during the 2024 fiscal year until his termination of employment on October 1, 2024. 
+ (2) 
+ Mr. McConnell served as the Company&#8217;s PEO during fiscal year 2025 and during fiscal year 2024 for the period between October 4, 2024 - November 30, 2024. He did not serve as the Company&#8217;s PEO during any portion of the 2023 fiscal year. 
+ (3) 
+ The dollar amounts reported in this column for Mr. King represent the amounts of &#8220;compensation actually paid&#8221; to Mr. King, as computed in accordance with Item 402(v) of Regulation S-K, during the 2023 and 2024 fiscal years. The dollar amounts do not reflect the actual amount of compensation earned by or paid to Mr. King during the applicable year. In accordance with the requirements of Item 402(v) of Regulation S-K, the following adjustments were made to Mr. King&#8217;s total compensation for each year to determine the compensation actually paid: 
+ Fiscal Year 
+ Ended 
+ November 30: 
+ Reported 
+ Summary 
+ Compensation 
+ Table Total 
+ for Mr. King 
+ ($) 
+ Reported 
+ Value of Equity 
+ Awards(a) 
+ ($) 
+ Equity 
+ Awards 
+ Adjustments(b) 
+ ($) 
+ Compensation 
+ Actually Paid to 
+ Mr. King 
+ ($) 
+ 2024 
+ 342,004 
+ ( 42,400 ) 
+ ( 51,031 ) 
+ 248,573 
+ 2023 
+ 390,267 
+ ( 64,250 ) 
+ 62,484 
+ 388,501 
+ (a) 
+ The grant date fair value of equity awards represents the total of the amounts reported in the &#8220;Awards&#8221; column in the Summary Compensation Table for the applicable year. 
+ (b) 
+ The equity award adjustments for each applicable year include the addition (or subtraction, as applicable) of the following: (i) addition of the year-end fair value of any equity awards granted in the applicable year that are outstanding and unvested as of the end of the year; (ii) addition of the amount of change as of the end of the applicable year (from the end of the prior fiscal year) in fair value of any awards granted in prior years that are outstanding and unvested as of the end of the applicable year; (iii) for awards that are granted and vest in same applicable year, addition of the fair value as of the vesting date; (iv) for awards granted in prior years that vest in the applicable year, addition of the amount equal to the change as of the vesting date (from the end of the prior fiscal year) in fair value; (v) for awards granted in prior years that are determined to fail to meet the applicable vesting conditions during the applicable year, a deduction for the amount equal to the fair value at the end of the prior fiscal year; and (vi) addition of the dollar value of any dividends or other earnings paid on stock or option awards in the applicable year prior to the vesting date that are not otherwise reflected in the fair value of such award or included in any other component of total compensation for the applicable year. The valuation assumptions used to calculate fair values did not materially differ from those disclosed at the time of grant. The amounts deducted or added in calculating the equity award adjustments are as follows: 
+ 30 
+ Fiscal Year 
+ Ended 
+ November 30: 
+ Year 
+ End 
+ Fair 
+ Value 
+ of Equity 
+ Awards 
+ ($) 
+ Year over 
+ Year Change 
+ in 
+ Fair Value of 
+ Outstanding 
+ and Unvested 
+ Equity 
+ Awards 
+ ($) 
+ Fair Value as 
+ of 
+ Vesting Date of 
+ Equity Awards 
+ Granted 
+ and Vested 
+ in the Year 
+ ($) 
+ Year over 
+ Year Change 
+ in 
+ Fair Value of 
+ Equity Awards 
+ Granted in 
+ Prior Years 
+ that Vested 
+ in the Year 
+ ($) 
+ Fair Value 
+ at the End 
+ of the Prior Year 
+ of Equity 
+ Awards 
+ that Failed to 
+ Meet Vesting 
+ Conditions 
+ in the Year 
+ ($) 
+ Fair Value of 
+ Dividends or other 
+ Earnings Paid on 
+ Stock or Option 
+ Awards not 
+ Otherwise 
+ Reflected 
+ in Fair Value 
+ or Total 
+ Compensation 
+ ($) 
+ Total 
+ Equity 
+ Award 
+ Adjustments 
+ ($) 
+ 2025 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ 2024 
+ - 
+ - 
+ - 
+ 467 
+ ( 51,498 ) 
+ - 
+ ( 51,031 ) 
+ 2023 
+ 51,500 
+ 2,567 
+ - 
+ 8,417 
+ - 
+ - 
+ 62,484 
+ (4) 
+ The dollar amounts reported in this column for Mr. McConnell represent the amount of &#8220;compensation actually paid&#8221; to Mr. McConnell, as computed in accordance with Item 402(v) of Regulation S-K, during the 2025 and 2024 fiscal years. The dollar amounts do not reflect the actual amount of compensation earned by or paid to Mr. McConnell during the applicable year. In accordance with the requirements of Item 402(v) of Regulation S-K, the following adjustments were made to Mr. McConnell&#8217;s total compensation for the 2025 and 2024 fiscal years to determine the compensation actually paid: 
+ Fiscal Year 
+ Ended 
+ November 30: 
+ Reported 
+ Summary 
+ Compensation 
+ Table Total 
+ for Mr. McConnell 
+ ($) 
+ Reported 
+ Value of Equity 
+ Awards(a) 
+ ($) 
+ Equity 
+ Awards 
+ Adjustments(b) 
+ ($) 
+ Compensation 
+ Actually Paid to 
+ Mr. McConnell 
+ ($) 
+ 2025 
+ 381,739 
+ ( 49,690 ) 
+ 93,908 
+ 425,957 
+ 2024 
+ 349,370 
+ ( 51,870 ) 
+ 30,867 
+ 328,367 
+ (a) 
+ The grant date fair value of equity awards represents the total of the amounts reported in the &#8220;Awards&#8221; column in the Summary Compensation Table for the year. 
+ (b) 
+ The equity award adjustments for each applicable year include the addition (or subtraction, as applicable) of the following: (i) addition of the year-end fair value of any equity awards granted in the applicable year that are outstanding and unvested as of the end of the year; (ii) addition of the amount of change as of the end of the applicable year (from the end of the prior fiscal year) in fair value of any awards granted in prior years that are outstanding and unvested as of the end of the applicable year; (iii) for awards that are granted and vest in same applicable year, addition of the fair value as of the vesting date; (iv) for awards granted in prior years that vest in the applicable year, addition of the amount equal to the change as of the vesting date (from the end of the prior fiscal year) in fair value; (v) for awards granted in prior years that are determined to fail to meet the applicable vesting conditions during the applicable year, a deduction for the amount equal to the fair value at the end of the prior fiscal year; and (vi) addition of the dollar value of any dividends or other earnings paid on stock or option awards in the applicable year prior to the vesting date that are not otherwise reflected in the fair value of such award or included in any other component of total compensation for the applicable year. The valuation assumptions used to calculate fair values did not materially differ from those disclosed at the time of grant. The amounts deducted or added in calculating the equity award adjustments are as follows: 
+ 31 
+ Fiscal Year 
+ Ended 
+ November 30: 
+ Year 
+ End 
+ Fair 
+ Value 
+ of Equity 
+ Awards 
+ ($) 
+ Year over 
+ Year Change 
+ in 
+ Fair Value of 
+ Outstanding 
+ and Unvested 
+ Equity 
+ Awards 
+ ($) 
+ Fair Value as 
+ of 
+ Vesting Date of 
+ Equity Awards 
+ Granted 
+ and Vested 
+ in the Year 
+ ($) 
+ Year over 
+ Year Change 
+ in 
+ Fair Value of 
+ Equity Awards 
+ Granted in 
+ Prior Years 
+ that Vested 
+ in the Year 
+ ($) 
+ Fair Value 
+ at the End 
+ of the Prior Year 
+ of Equity 
+ Awards 
+ that Failed to 
+ Meet Vesting 
+ Conditions 
+ in the Year 
+ ($) 
+ Fair Value of 
+ Dividends or other 
+ Earnings Paid on 
+ Stock or Option 
+ Awards not 
+ Otherwise 
+ Reflected 
+ in Fair Value 
+ or Total 
+ Compensation 
+ ($) 
+ Total 
+ Equity 
+ Award 
+ Adjustments 
+ ($) 
+ 2025 
+ 47,200 
+ 17,134 
+ 13,690 
+ 15,884 
+ - 
+ - 
+ 93,908 
+ 2024 
+ 34,000 
+ ( 3,600 ) 
+ 9,470 
+ 467 
+ - 
+ - 
+ 30,867 
+ (5) 
+ The dollar amounts reported in this column represent the amounts reported for our named executive officers, or NEOs (excluding each person serving as our PEO in the applicable fiscal year) in the &#8220;Total&#8221; column of the Summary Compensation Table in each applicable year. The only NEO (excluding our PEO(s)) included for purposes of calculating the amounts in each applicable year was Michael Woods, our Chief Financial Officer, who was the only NEO (other than our PEO(s)) during each fiscal year. 
+ (6) 
+ The dollar amounts reported in this column represent the amounts of &#8220;compensation actually paid&#8221; to the NEO (excluding each person serving as our PEO in the applicable fiscal year), as computed in accordance with Item 402(v) of Regulation S-K. The dollar amounts do not reflect the actual average amount of compensation earned by or paid to the NEO (excluding our PEO(s)) during the applicable year. In accordance with the requirements of Item 402(v) of Regulation S-K, the following adjustments were made to average total compensation for the NEO (excluding our PEO(s)) for each year to determine the compensation actually paid, using the same methodology described above in Note (3): 
+ Fiscal Year 
+ Ended 
+ November 30: 
+ Reported 
+ Summary 
+ Compensation 
+ Table Total 
+ for Non-PEO 
+ NEO 
+ ($) 
+ Reported 
+ Value of 
+ Equity Awards(a) 
+ ($) 
+ Equity 
+ Awards 
+ Adjustments(b) 
+ ($) 
+ Compensation 
+ Actually Paid 
+ to Non-PEO 
+ NEO 
+ ($) 
+ 2025 
+ 215,104 
+ ( 18,000 ) 
+ 36,683 
+ 233,787 
+ 2024 
+ 212,449 
+ ( 21,200 ) 
+ 13,900 
+ 205,149 
+ 2023 
+ 169,134 
+ ( 17,9900 
+ 18,553 
+ 169,697 
+ (a) 
+ The grant date fair value of equity awards represents the total of the amounts reported in the &#8220;Awards&#8221; column in the Summary Compensation Table for the applicable year. 
+ 32 
+ (b)The equity award adjustments for each applicable year include the addition (or subtraction, as applicable) of the following: (i) addition of the year-end fair value of any equity awards granted in the applicable year that are outstanding and unvested as of the end of the year; (ii) addition of the amount of change as of the end of the applicable year (from the end of the prior fiscal year) in fair value of any awards granted in prior years that are outstanding and unvested as of the end of the applicable year; (iii) for awards that are granted and vest in same applicable year, addition of the fair value as of the vesting date; (iv) for awards granted in prior years that vest in the applicable year, addition of the amount equal to the change as of the vesting date (from the end of the prior fiscal year) in fair value; (v) for awards granted in prior years that are determined to fail to meet the applicable vesting conditions during the applicable year, a deduction for the amount equal to the fair value at the end of the prior fiscal year; and (vi) addition of the dollar value of any dividends or other earnings paid on stock or option awards in the applicable year prior to the vesting date that are not otherwise reflected in the fair value of such award or included in any other component of total compensation for the applicable year. The valuation assumptions used to calculate fair values did not materially differ from those disclosed at the time of grant. The amounts deducted or added in calculating the equity award adjustments are as follows: 
+ Fiscal Year 
+ Ended 
+ November 30: 
+ Year 
+ End 
+ Fair 
+ Value 
+ of Equity 
+ Awards 
+ ($) 
+ Year Over 
+ Year 
+ Change in 
+ Fair Value of 
+ Outstanding 
+ and 
+ Unvested 
+ Equity Awards 
+ ($) 
+ Fair 
+ Value as 
+ of 
+ Vesting 
+ Date 
+ of Equity 
+ Awards 
+ Granted 
+ and 
+ Vested 
+ in the 
+ Year 
+ ($) 
+ Year over 
+ Year 
+ Change in 
+ Fair Value 
+ of 
+ Equity 
+ Awards 
+ Granted in 
+ Prior 
+ Years that 
+ Vested 
+ in the Year 
+ ($) 
+ Fair Value 
+ at the End of 
+ the 
+ Prior Year of 
+ Equity 
+ Awards 
+ that 
+ Failed to Meet 
+ Vesting 
+ Conditions 
+ in the Year 
+ ($) 
+ Value of 
+ Dividends or 
+ other 
+ Earnings Paid on 
+ Stock or Option 
+ Awards not 
+ Otherwise Reflected 
+ in Fair Value or 
+ Total Compensation 
+ ($) 
+ Total 
+ Equity 
+ Award 
+ Adjustments 
+ ($) 
+ 2025 
+ 23,600 
+ 6,599 
+ - 
+ 6,484 
+ - 
+ - 
+ 36,683 
+ 2024 
+ 17,000 
+ ( 3,240 ) 
+ - 
+ 140 
+ - 
+ - 
+ 13,900 
+ 2023 
+ 14,420 
+ 770 
+ - 
+ 3,363 
+ - 
+ - 
+ 18,553 
+ (7) 
+ Cumulative total shareholder return (Cumulative TSR) is calculated by dividing (i) the sum of (A) the cumulative amount of dividends for the measurement period, assuming dividend reinvestment, and (B) the difference between the Company&#8217;s share price at the end and the beginning of the measurement period, by (ii) the Company&#8217;s share price at the beginning of the measurement period. 
+ (8) 
+ The dollar amounts reported represent the amount of net income reflected in the Company&#8217;s audited financial statements for the applicable year. 
+ Analysis of the Information Presented in the Pay versus Performance Table 
+ In accordance with Item 402(v) of Regulation S-K, we are providing the following descriptions of the relationships between information presented in the Pay Versus Performance table above. 
+ 33 
+ Compensation Actually Paid and Cumulative TSR 
+ The following graphs set forth the relationship between Compensation Actually Paid to our PEO (and with respect to fiscal year 2024, both our PEOs during that year), the Compensation Actually Paid to our Non-PEO NEO, and the Company&#8217;s cumulative TSR over the three most recently completed fiscal years. 
+ 34 
+ Compensation Actually Paid and Net Income 
+ The following graphs set forth the relationship between Compensation Actually Paid to our PEO (and with respect to fiscal year 2024, both our PEOs during that year), the Compensation Actually Paid to our Non-PEO NEO, and the Company&#8217;s net income over the three most recently completed fiscal years. 
+ 35 
+ DELINQUENT SECTION 16(a) REPORTS 
+ Section 16(a) of the Exchange Act requires our executive officers and directors, and persons who own more than 10% of our common stock, to file reports regarding ownership of, and transactions in, our securities with the Securities and Exchange Commission and to provide us with copies of those filings. To the Company&#8217;s knowledge, based solely on a review of the copies of such reports furnished to the Company and written representations that no other reports were required, during the fiscal year ended November 30, 2025, all such filing requirements applicable to the Company&#8217;s directors, executive officers and greater than 10% beneficial owners were complied with, except with respect to a Form 4 covering one transaction for each member of the Company&#8217;s Board of Directors, which was filed late. These Form 4 reports pertained to shares granted to each member of the Board of Directors on November 30, 2025 pursuant to the Company&#8217;s director compensation policy. 
+ 36 
+ CERTAIN TRANSACTIONS AND BUSINESS RELATIONSHIPS 
+ The Board is responsible for reviewing and approving all related party transactions as defined under Item 404 of Regulation S-K. Other than as described below, since the beginning of our fiscal year 2025, there have been no transactions or series of transactions to which we were a participant or will be a participant in which: 
+ &#8226; 
+ the amounts involved exceeded the lesser of $120,000 or one percent of the average of our total assets at year-end for our last two completed fiscal years; and 
+ &#8226; 
+ a director, executive officer, beneficial owner of more than 5% of any class of our voting securities or any member of their immediate family had or will have a direct or indirect material interest. 
+ McConnell Legacy Investments LLC is our largest shareholder and partially owned by a trust under the terms of which our President, Chief Executive Officer and Chairman of the Board, Marc McConnell, has voting power over shares of the Company&#8217;s common stock. The trust is providing a guarantee of approximately 38% of the balance of our $2,600,000 term loan from Bank Midwest, as required by the United States Department of Agriculture in connection with its guarantee of the same loan. In exchange, the trust receives a fee of 2% of the personally guaranteed amount. For fiscal years 2024 and 2025, the fee paid to the guarantor was $15,193 and $13,098, respectively. 
+ OTHER INFORMATION 
+ Management knows of no other matters that may be brought before the 2026 Annual Meeting. If any other matters are presented at the meeting on which a vote may properly be taken, the persons named as proxy holders on the enclosed proxy card will vote thereon in accordance with their discretion and best judgment. 
+ ANNUAL REPORT AND FINANCIAL STATEMENTS 
+ The Company&#8217;s Form 10-K, including the Company&#8217;s financial statements and the notes thereto for the fiscal year ended November 30, 2025, accompanies the delivery of this Proxy Statement. 
+ We will provide a copy of exhibits to the Form 10-K upon written request and payment of specified fees. The written request for such Form 10-K and/or exhibits should be directed to Marc McConnell, President, Chief Executive Officer and Chairman of Art &#8217; s-Way Manufacturing Co., Inc., 5556 Highway 9, Armstrong, Iowa, 50514-0288. Such request must set forth a good faith representation that the requesting party was a holder of record or a beneficial owner of common stock of the Company on March 5, 2026. The Form 10-K complete with exhibits and the Proxy Statement are also available at no cost through the EDGAR database available from the SEC &#8217; s website (www.sec.gov) and on our website at http://www.artsway-mfg.com/investor-relations/. 
+ 37 

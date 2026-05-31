@@ -1,0 +1,70 @@
+{
+  "recommendationKey": "none",
+  "recommendationMean": null,
+  "numberOfAnalystOpinions": null,
+  "targetMeanPrice": null,
+  "targetMedianPrice": null,
+  "targetLowPrice": null,
+  "targetHighPrice": null,
+  "currentPrice": 2.58,
+  "analyst_price_targets": {
+    "current": 2.58
+  },
+  "revenue_estimate": [
+    {
+      "period": "0q",
+      "avg": 0,
+      "low": 0,
+      "high": 0,
+      "numberOfAnalysts": 0
+    },
+    {
+      "period": "+1q",
+      "avg": 0,
+      "low": 0,
+      "high": 0,
+      "numberOfAnalysts": 0
+    },
+    {
+      "period": "0y",
+      "avg": 0,
+      "low": 0,
+      "high": 0,
+      "numberOfAnalysts": 0
+    },
+    {
+      "period": "+1y",
+      "avg": 0,
+      "low": 0,
+      "high": 0,
+      "numberOfAnalysts": 0
+    }
+  ],
+  "growth_estimates": [
+    {
+      "period": "0q",
+      "stockTrend": NaN,
+      "indexTrend": 0.2572
+    },
+    {
+      "period": "+1q",
+      "stockTrend": NaN,
+      "indexTrend": 0.20040001
+    },
+    {
+      "period": "0y",
+      "stockTrend": NaN,
+      "indexTrend": 0.22629999
+    },
+    {
+      "period": "+1y",
+      "stockTrend": NaN,
+      "indexTrend": 0.16469999
+    },
+    {
+      "period": "LTG",
+      "stockTrend": NaN,
+      "indexTrend": 0.122
+    }
+  ]
+}
