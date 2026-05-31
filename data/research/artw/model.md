@@ -106,7 +106,7 @@ The FY25 consolidated **OCF was −$0.904M**. Decomposing the working-capital sw
 The carve-out value = **(Modular standalone EV) + (net Ag disposal proceeds) − (net debt at close)**. Ag disposal proceeds and net debt are netted together because the revolver funds ag inventory.
 
 ### 1a. Modular (Art's-Way Scientific) standalone EV
-Standalone EBITDA = segment EBITDA $2.002M (op $1.751M + D&A $0.251M) **less ~$0.45M incremental standalone corporate/public-company cost** (only ~$0.18M corporate was allocated to modular in the segment table; a standalone registrant carries more) = **~$1.55M base standalone EBITDA** *(normalized)*. Multiples from `peer_benchmarks.csv` (project-based builder, FONR ~7–9× as the base anchor, WSC's 11.7–14.5× leasing multiple as an explicit unreachable ceiling):
+Standalone EBITDA = segment EBITDA $2.002M (op $1.751M + D&A $0.251M) **less ~$0.45M incremental standalone corporate/public-company cost** (only ~$0.18M corporate was allocated to modular in the segment table; a standalone registrant carries more) = **~$1.55M base standalone EBITDA** *(normalized)*. Multiples from `peer_benchmarks.csv` (project-based builder; **anchored on the construction-sector median ~10.3× discounted for lumpiness/scale/no-recurring**, with WSC's 11.7–14.5× leasing multiple as an explicit unreachable ceiling; **FONR removed as a non-industry comp — see `peer_notes.md`**):
 
 | Scenario | EBITDA used | EV/EBITDA | **Modular EV** | EV/rev cross-check |
 |---|---|---|---|---|
@@ -261,7 +261,7 @@ WACC built for a micro-cap, project-based, illiquid, single-plant business (CAPM
 | Lever | Action | Comp-proven / precedent |
 |---|---|---|
 | **Divest/wind down Ag** | Orderly exit of the loss-making farm-equipment segment; redeploy ~$8–10M of trapped ag inventory + plant to retire the revolver and fund modular capacity. | **Internal precedent:** ARTW divested **Tools (2015)** and **Vessels (2016)** to refocus, and sold Tools real estate for $1.8M (2024). The playbook is proven inside this company. |
-| **Re-rate modular standalone** | Surface Art's-Way Scientific as a clean, ~17%-margin, growing biocontainment platform — a stand-alone story a buyer/market can multiple at 7–10× instead of burying it in a microcap conglomerate. | FONR ~7–9× EBITDA take-out; construction median ~10×. |
+| **Re-rate modular standalone** | Surface Art's-Way Scientific as a clean, ~17%-margin, growing biocontainment platform — a stand-alone story a buyer/market can multiple at 7–10× instead of burying it in a microcap conglomerate. | Construction-sector median ~10×; private biocontainment specialists (CERTEK/Germfree) support a premium to generic builders. |
 | **Diversify research-lab buyers off NIH** | Lean into **private pharma, biodefense/DoD, and private diagnostics** (already named customers) to de-risk the academic/NIH-budget headwind. | 10-K already names pharma + gov diagnostic + xenotransplant/cancer-research clients (p.379, 494). |
 | **Capitalize on the USDA biosecurity window** | Press the animal-biosecurity leg while the $500M USDA cost-share (75%) is live; lock multi-year framework/repeatable contracts to smooth the lumpiness. | USDA Feb-2025 $1B HPAI plan; FY25 +49% ag-building proof. |
 | **Roll up the fragmented niche** | The **untapped lever**: ARTW has *never* rolled up within modular (only divested). Tuck in small biocontainment/lab fabricators (CERTEK-type) to add scale + recurring service/lease revenue and lift the multiple toward WSC's leasing model. | WSC built its multiple via lease-fleet roll-up; ARTW already offers a lease option (p.379) — under-exploited. |
@@ -321,3 +321,70 @@ The data wall, and what would close it:
 **Call:** **FAIRLY-TO-MODESTLY OVERVALUED on the standalone base, with the entire return in the bull case + a friendly-carve-out call option.** Not a mispriced free asset (the USNA setup); not a value trap (it passes the asset-floor tests and the modular business is real and growing). **The honest position: there is no margin of safety at $2.58 on the base case — you are paying slightly above standalone fair value for a decent micro-cap, compensated only by (a) the bull tail (+83%) if the modular re-rate + two-leg growth show up, (b) a hard balance-sheet floor, and (c) the family-gated carve-out option.** The risk/reward is *asymmetric to the upside in payoff* but **negative in expectancy on the base** — you need conviction in the bull, not just the floor, to underwrite it. **The single fact that decides it:** the **leg-level split and the durability of the modular growth** (data floor, §10) — if research-lab is more resilient and ag-bio more repeatable than the lumpy history suggests, the bull is live; if the FY25 ag-building +49% was a one-time HPAI spike and research stays chilled, the base ($2.46, *below* the price) is the ceiling and the deal doesn't clear a buyer's premium.
 
 **Was the depth worth it?** Yes — and the v2 review proved it twice over. v1 prevented a false "free gem" conclusion; the reviewer's ag-disposal push then caught that v1's base had been *tuned to the quote* ($2.58 exactly) by an over-generous 70% inventory recovery, and recentering to a defensible 60%/40% mark moved the base from "+4% fairly valued" to "**−4%, modestly rich**" — flipping the honest read from "fair" to "fair-to-rich, bull-only." The SOTP's netting of ag disposal against net debt, the ERC normalization, the reverse-DCF (growth already priced), the OCF-attribution check (the cash sink is ag, not modular — §A6), and the FONR acquisition math each independently pushed the verdict away from "cheap." The thesis survives only as a **bull-case + optionality** case, not a **mispricing** case.
+
+---
+
+# v3 — Control-basis recalibration + search-fund LBO returns (2026-05-31)
+
+> **Premise (per case brief + Aviv's search-fund intent):** this is an **operator-acquirer / search-fund acquisition** — buy control of ARTW in a friendly negotiated deal, wind down Ag, operate Modular standalone. v3 (a) recalibrates the intrinsic to the **control / take-private basis** (v2.1's discount rate and cost structure were implicitly built from a *marketable-minority / public-company* lens), and (b) adds the **levered search-fund returns** the brief requires.
+>
+> **Discipline guardrail:** the v2.1 inputs the reviewer disciplined are **NOT re-tuned** — the **ag-disposal recovery ($7.7M base)** and the **growth / margin / exit-multiple scenario paths** are unchanged. v3 changes only: (i) the **discount rate**, (ii) the **standalone cost add-back**, (iii) **near-term cash taxes**, and (iv) incorporates newly-surfaced **filing facts**. Supporting research files: `wacc_research.md`, `filing_review.md`, `acquisition_premium_comps.md`.
+>
+> **Comp-set note (v3 — FONR removed):** **FONR (Fonar Corp) is removed as a reference.** It is a diagnostic-imaging (MRI) micro-cap with **no end-market or business-model overlap** with a specialty modular builder — it appeared in v1/v2 only because it was a separately-screened name we happened to analyze, **not an industry comp.** v3 anchors the **multiple** on industry references (construction-sector median ~10.3× discounted for lumpiness/scale, WSC leasing ceiling, private biocontainment specialists — `peer_notes.md`) and the **acquisition premium** on the **controlled-company freeze-out literature** (Subramanian 7–18%; `acquisition_premium_comps.md`), **not** on FONR. **All v2 references below to FONR / the "31.5% premium" / the "$3.39 buy-in" / the "FONR template" are superseded** by this note and by §v3d (the search-fund LBO uses a ~10% premium grounded in the freeze-out comps).
+
+## v3a. Three premise-consistent recalibrations (each defensible; none re-tunes ag/growth)
+
+1. **WACC 13.5% → 12.5%** (range 11.5–14.0%). A *control* buyer of the whole operating business does not bear the **security-illiquidity slice** of v2.1's 3–4% "size/illiquidity" premium (that compensates a *trapped marketable-minority* holder). Genuine single-plant + ~9% customer-concentration + lumpy-revenue risk **stays**, flooring at ~11.5%. Sourced build-up in `wacc_research.md` (Kroll ERP 5.0%; CRSP 10th-decile size premium 4.7% haircut to ~3.0% because the smallest *listed* firms are disproportionately distressed; normalized rf). **13.5% becomes the bear WACC; 15% a distressed-proxy stress.** *(Lead sign-off item — the single biggest swing.)* Note: the **LBO sponsor's 20–25% IRR hurdle is a levered-equity hurdle, NOT the WACC** — it is ~12.5% unlevered geared up; the two are reconciled in §v3d, not conflated.
+2. **Standalone corporate-cost add-back $0.45M → $0.30M.** A take-private eliminates public-company cost (SEC filings, listing, IR, public-co audit) — §10 #3 flagged this as upside. Standalone modular EBITDA $1.55M → **$1.70M**; DCF EBITDA margin → ~16.6% (also reconciles the prior v2.1 inconsistency between the DCF's 16% margin and the multiple leg's $1.55M / 15.2%).
+3. **Near-term cash taxes ~0% for ~3 yrs (NOL/DTA).** `filing_review.md` quantified **~$7.1M gross federal NOL (~$5.0M indefinite), no valuation allowance**. BUT a control acquisition triggers a **§382 limitation** capping annual usage — so we do **not** claim the full shield; a modest 3-yr holiday is appropriately conservative.
+
+**Ag disposal unchanged at $7.7M base** (reviewer-disciplined). New floor evidence (§v3c) argues it is, if anything, *conservative* — treated as optionality, not a base change.
+
+## v3b. Recalibrated intrinsic (consistent set; WACC base 12.5 / bull 11.5 / bear 14.0)
+
+| | DCF EV | mult EV | Blend | Equity | **FV basic** | FV fully-diluted† | vs $2.58 |
+|---|---|---|---|---|---|---|---|
+| Bear | $6.2M | $7.0M | $6.6M | $5.7M | **$1.10** | $1.00 | −57% |
+| **Base** | $14.5M | $13.6M | $14.0M | $15.3M | **$2.95** | $2.70 | **+14% / +5%** |
+| Bull | $24.8M | $21.0M | $22.9M | $26.9M | **$5.19** | $4.74 | +101% |
+| **Prob-weighted (30/45/25)** | | | | | **$2.96** | $2.70 | **+15% / +5%** |
+
+†Fully-diluted = 5.684M shares (the +500K equity plan, §v3c). Base flips from **v2.1 −4% to v3 +14% basic / +5% diluted**; prob-weighted **$2.96 / $2.70** (v2.1 $2.64). **Verdict shifts from "modestly overvalued" to "fairly-to-modestly UNDERvalued on a control basis, with a strengthened asset floor."**
+
+> **v3.1 (2026-05-31) — base modular multiple 7× → 8×.** Per `biocontainment_comps.md`, the standalone modular multiple is re-anchored from 7× to **8×**: the closest project-based proxy (Limbach's pre-recurring era) traded **~9.5×**, the construction-sector median is ~10×, and ARTW's ~17% margin earns a niche premium — but project-based economics (no recurring/leasing revenue) cap it **below** the ~9.5–10× proxies, so 8× is the defensible point (range 6–9×). Multiple-leg modular EV $11.9M → **$13.6M**; blend $13.2M → **$14.0M**; **base FV $2.80 → $2.95 basic / $2.70 diluted (+14% / +5%)**. Bull (10×) and bear (5×) unchanged. The LBO *base-case* exit also moves 7× → 8× (base MOIC 1.73× → ~1.9× / ~14%); the deck's plan-executed payoff is unchanged (it uses the 10× bull exit).
+
+## v3c. Newly-surfaced filing facts (`filing_review.md`) and treatment
+
+- **Q1 FY26 clean, ERC-free beat** (post-dates v2.1): sales $6.64M (+29%), NI +$196K, **both segments profitable**, ag GM 34.5%, management calls ag a "recovery." → v2.1's "ag losing ~$1.5M / ex-ERC break-even" base is **stale & conservative**. **Reframe Ag as "low-return, capital-heavy, cyclical" — NOT "declining/dying"** (deck + thesis language must change; a judge can check the Q1 10-Q). Treated as *confirming momentum*, **not** license to re-tune the base (one seasonal quarter).
+- **Refi done:** revolver renewed to **Mar-2027**, repriced SOFR+2.60% (~6.27% vs 6.75%), +$1.5M headroom; term loans 6.25%. → **Removes the liquidity/revolver risk** (delete that risk from the deck).
+- **NOLs ~$7.1M gross fed (~$5.0M indefinite), no VA; §382 caps post-change usage** → supports the *modest* holiday in §v3a #3.
+- **Asset floor stronger than shown:** land carried **$70,503**; plants 66% depreciated; 2024 Tools real-estate sale ~**1.8× book**; inventory already carries a **$2.39M reserve** (auditor's sole Critical Audit Matter); **$3.28M sticky ag service-parts** stream. → Reinforces downside protection; ag mark conservative.
+- **New offsets:** **+500K-share equity plan (~9.6% dilution overhang)** → carried via the fully-diluted FV column; **solar capex** ~$1.05M new USDA-backed debt, ~$155K/yr savings (≈ net-neutral; net debt held at $6.4M with this note).
+- **Supportive:** new **5.8% outside holder** (Walther, 13G); **no insider selling**; clean related-party (only ~$13K USDA guarantee fee to the McConnell trust); bill-and-hold revenue → $0 (QoE positive). No pension/OPEB/goodwill/litigation/off-balance-sheet.
+
+## v3d. Search-fund LBO returns (the brief's required returns model)
+
+**Structure (search-fund standard):** friendly buyout at a **low premium (~10%; comps support 7–18%** for a controlled-company, no-competing-bidder deal — `acquisition_premium_comps.md`), funded by **ABL** (ag inventory + AR borrowing base) + **SBA 7(a) term** + **family seller note** + **sponsor equity**. The **ag liquidation ($7.7M base) repays the ABL in Year 1** — a one-time delever. 5-yr hold; exit on modular EBITDA × multiple.
+
+**Sources & uses** (entry $2.84/sh, 10% premium; total uses ~$21.6M): equity purchase $14.7M + refinance existing net debt $6.4M + fees $0.4M.
+
+**Leverage is the binding downside lever** — bear survival vs. bull IRR trade-off (5-yr hold; MOIC counts interim FCF accumulated to exit; debt repaid via ag liquidation Y1 + modular FCF sweep):
+
+| Entry debt (lev) | Sponsor equity | **Bear** (MOIC / IRR) | **Base** (MOIC / IRR) | **Bull** (MOIC / IRR) |
+|---|---|---|---|---|
+| $14.5M (67%) | $7.0M | **wiped out (−0.2×)** | 2.01× / 15% | 5.40× / 40% |
+| $12.0M (55%) | $9.6M | 0.19× / −28% | 1.84× / 13% | 4.29× / 34% |
+| **$10.0M (46%) — recommended** | $11.6M | **0.39× / −17%** | **1.73× / 12%** | **3.73× / 30%** |
+| $8.0M (37%) | $13.6M | 0.53× / −12% | 1.64× / 10% | 3.34× / 27% |
+
+**Downside coverage at close:** bear-liquidation collateral ~$14.7M (ag inventory $4.8M @50% + AR $1.4M @85% + PP&E $1.6M @35% + modular floor $7.0M) covers entry debt up to ~$10–12M at ~1.0–1.5× → **lenders whole, no forced sale / bankruptcy.**
+
+**Honest read.** ARTW is an **asymmetric, asset-protected search acquisition** whose upside scales with the modular re-rate:
+- **The base earns a real return (~1.7× / ~12% IRR)** — not mere capital preservation. The driver is the **de-levered, cash-generative modular business** (it throws off ~$4.5M of cumulative FCF over the hold once the ag liquidation + early FCF retire the acquisition debt by ~Year 2). *(Corrects an earlier cut that dropped post-repayment FCF and understated the base at ~1.1×.)*
+- **The bull pays ~3.7× / ~30% IRR** (modular grows + re-rates to ~10×) — search-fund-attractive.
+- **The bear is a real but *bounded* loss (~0.4× / −17% IRR at $10M leverage), not a wipeout** — downside protection is at the **debt level** (collateral covers ≤~$10–12M → lenders whole, no forced sale); equity still takes a loss, but the assets prevent catastrophe.
+- **Entry price + leverage discipline are the #1 controllables.** Over-levering (>~55%) converts the bear into an equity wipeout → cap leverage ~$10M (≤~50%). A disciplined (low-premium) entry widens the whole distribution.
+
+## v3e. Verdict (v3)
+
+**A defensible, asymmetric search acquisition.** On a control basis ARTW is **fairly-to-modestly undervalued** (base +14% basic / +5% diluted at an 8× modular multiple; prob-weighted +15% / +5%), with a **strengthened, well-evidenced asset floor** and a **de-risked balance sheet** (refi). As a *levered* search deal at disciplined ~$10M leverage: **bear ~0.4× / −17% (bounded, debt-collateral-covered), base ~1.7× / 12%, bull ~3.7× / 30%** — a genuinely asymmetric, asset-protected return where the **base already earns a real ~12% IRR** from the de-levered modular cash flow and the **upside scales with the modular re-rate**. **The pitch is strongest if (i) entry is disciplined (low premium, at/below intrinsic), (ii) leverage is capped ~$10M so the bear stays a bounded, debt-covered loss rather than a wipeout, and (iii) we build conviction in the modular leg — which requires closing the leg-split data floor (§10 #1) via primary research.** Fits Lunchline's search-fund lens: buy a hidden-gem operating business at an asset-protected entry, fix capital allocation, and re-rate it.

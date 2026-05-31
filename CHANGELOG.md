@@ -2,6 +2,30 @@
 
 All notable changes to the Lunchline Partners case study project.
 
+## 2026-05-31 (deck build-out) — ARTW pitch refined to 11 slides; biocontainment comp → 8× multiple
+
+Iterated `mockups/pitches/artw-deck.html` from the v3 model into a tight 11-slide pitch and refined the modular multiple with fresh comp research.
+
+- **Reference-deck study + critique** (Einhorn Vitesco, Sandell Brookdale, Greenlight St. Joe/Solvay → `data/research/artw/reference_decks/`). Lesson: pitch decks make a single-conviction case; scenarios stay in the model, not on the slides.
+- **Structure:** reordered to Business Overview I/II → End Market → Competitive → Thesis → Risks → VCP(×2) → Financial → Appendix; **cut the redundant 2nd thesis slide**; **consolidated VCP to 2 slides** (levers+waterfall; sequence+payoff). **Removed all bear/base/bull framing from the deck** (single case; full sensitivity in the model + Risks slide carries the bear arguments).
+- **Visuals/conciseness:** real client logos (favicon service); a 70-year history timeline; "what we build" / four-phase / equity-bridge visuals; dropped slide-2's right panel; one topic per slide; titles ≤10 words.
+- **Writing audit** (subagent → `deck_writing_audit.md`): Buffett-plain voice — killed "marquee," imperative tricolon headlines → number-first, split em-dashes, translated jargon (re-rate/platform/playbook/drag/policy hedge/mitigant).
+- **Recurring monitoring** recategorized Operations → **R&D / new product**.
+- **Biocontainment comp research** (subagent → `biocontainment_comps.md`): no public pure-play; best proxy Limbach project-era ~9.5×; Exyte confirms ARTW's margin edge is the niche, not cleanroom-build generally. **Re-anchored modular multiple 7× → 8×** (range 6–9×), flowed through `model.md` §v3.1, `ARTW_model.xlsx`, and the deck: **base FV $2.80 → $2.95 basic / $2.70 diluted (+14% / +5%)**; bull/bear unchanged.
+- Rendering verified via Playwright (11 slides, no overflow). New research files are gitignored by `data/research/*/*` and force-added here for session portability.
+
+## 2026-05-31 (later) — ARTW v3 control-basis recalibration + search-fund LBO returns; reframed the deck; removed FONR as a comp
+
+Reworked the ARTW pitch from a passive long into the **search-fund / operator-acquisition** framing the case implies (Aviv's search-fund intent; buy control, divest ag, operate modular). Key moves:
+
+- **Reference decks studied** (`data/research/artw/reference_decks/`, gitignored): Greenlight St. Joe/Vitesco/Solvay, Sandell Brookdale, from 10xebitda.com. Lesson applied: pitch decks present a **single conviction narrative** (Brookdale's only "scenario" is an upside cap-rate matrix; Einhorn refutes the bear, never models it) — so full bear/base/bull + leverage scenarios live in the **model**, while the **deck** leads with conviction + an asset-floor downside and the Risks slide carries the bear arguments.
+- **`model.md` v3** (v2.1 preserved): control-basis recalibration — **WACC 13.5%→12.5%** (sourced; strip the minority-illiquidity slice for a control buyer), **standalone corp-cost $0.45M→$0.30M** (take-private removes public-co cost), **~3-yr NOL/DTA cash-tax holiday** (§382-capped). Ag-disposal and growth/margin paths **unchanged** (no re-tuning). Base FV **$2.46→$2.80 basic / $2.55 diluted** (+8% / −1%); prob-weighted **$2.89 / $2.63**. Verdict flips from "modestly overvalued" to "fairly-to-modestly undervalued, asset-floor-protected."
+- **Two subagents:** WACC research (`wacc_research.md` — 12.5% base, range 11.5–14.0%; LBO IRR hurdle ≠ WACC) and a filings review (`filing_review.md`) that surfaced **Q1 FY26 clean beat (both segments profitable, ag "recovery"), refi to 2027, NOLs ~$7.1M, hidden real estate (land at $70k book), a $2.39M inventory reserve already taken, and a +500K-share (~9.6%) dilution overhang.**
+- **Search-fund LBO returns model** added to `ARTW_model.xlsx` (v3_Summary, LBO_Returns formula-driven, LBO_Sensitivity; verified via formula evaluation). At recommended ~$10M (≤50%) leverage, ~10% entry: **bear 0.39× / −17%, base 1.73× / 12%, bull 3.73× / 30%** (counts interim FCF). Downside protected at the **debt** level (collateral coverage); over-levering >55% wipes the bear. Also fixed three latent `#NAME?` note-cell defects in the v2 sheets.
+- **FONR (Fonar) removed as a comp** across `model.md`, `peer_notes.md`, `peer_benchmarks.csv` (→ excluded), `acquisition_premium_comps.md`, the xlsx Peers sheet, and the deck. It is a diagnostic-imaging micro-cap with no overlap — a separately-screened name, not an industry comp. Multiple now anchored on **construction-sector median ~10.3× / WSC leasing ceiling / private biocontainment specialists**; acquisition premium on the **controlled-company freeze-out literature** (Subramanian 7–18%; `acquisition_premium_comps.md`), not FONR's 31.5%.
+- **Deck reframed** (`mockups/pitches/artw-deck.html`): operator-acquisition cover + thesis; ag relabeled "cyclical/low-return" (not "declining" — Q1 FY26 printed +29% and a profit); slide 11 MOIC chart rebuilt to the **search-fund equity returns + asset-floor** framing (no more 3-losing-bars); slide 12 to v3 numbers + FONR-free comp table; Risks slide reframed to "3 things that kill the trade" + added the dilution overhang + noted the refi. **Rendering verified via Playwright (no clipping/overflow).**
+- Supporting research files (`wacc_research.md`, `filing_review.md`, `acquisition_premium_comps.md`) are **gitignored** by `data/research/*/*`; `git add -f` if they should travel with the repo like `model.md`.
+
 ## 2026-05-31 — Started Part 2 (AI-enabled market mapping); locked direction via brainstorming
 
 Opened the second deliverable (Part 2: AI-Enabled Market Mapping and Sourcing Strategy), which had been "Not Started." Ran a structured brainstorming pass with Aviv and locked the direction (full detail in `docs/market-mapping.md`):
