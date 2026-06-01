@@ -388,3 +388,54 @@ The data wall, and what would close it:
 ## v3e. Verdict (v3)
 
 **A defensible, asymmetric search acquisition.** On a control basis ARTW is **fairly-to-modestly undervalued** (base +14% basic / +5% diluted at an 8× modular multiple; prob-weighted +15% / +5%), with a **strengthened, well-evidenced asset floor** and a **de-risked balance sheet** (refi). As a *levered* search deal at disciplined ~$10M leverage: **bear ~0.4× / −17% (bounded, debt-collateral-covered), base ~1.7× / 12%, bull ~3.7× / 30%** — a genuinely asymmetric, asset-protected return where the **base already earns a real ~12% IRR** from the de-levered modular cash flow and the **upside scales with the modular re-rate**. **The pitch is strongest if (i) entry is disciplined (low premium, at/below intrinsic), (ii) leverage is capped ~$10M so the bear stays a bounded, debt-covered loss rather than a wipeout, and (iii) we build conviction in the modular leg — which requires closing the leg-split data floor (§10 #1) via primary research.** Fits Lunchline's search-fund lens: buy a hidden-gem operating business at an asset-protected entry, fix capital allocation, and re-rate it.
+
+---
+
+# v4 — Bottom-up value-creation build (operator-driver model, benchmarked) (2026-05-31)
+
+> **Why this section:** the v3 upside was expressed top-down (fit the four levers into the base→bull intrinsic gap). Per lead direction the value creation is re-derived **bottom-up** — each operator lever modeled as its effect on the revenue/margin drivers, benchmarked (not assumed), then run through EBITDA × multiple, with the multiple compounding on the *grown* EBITDA. The result is uncapped by construction; it is then **disciplined back** for the deck (§v4e) because a value-creation bridge is assumption-stacked and the deck's credibility rests on restraint.
+
+## v4a. Benchmarked drivers (base / bull, sourced)
+
+| Driver | Base | Bull | Anchor |
+|---|---|---|---|
+| Modular revenue CAGR, do-nothing (founder-led) | +2–3% | +3–4% | GDP-ish; capacity-capped; backlog normalizes |
+| Modular revenue CAGR, **with sales engine** | **+6–8%** | **+10–12%** | CSO Insights win-rate +15–25% rel.; lower-mid-market professionalization 200–400 bps op-return; demand-constrained conversion (backlog +103% on $97K ad, part-time pres, no sales dir) |
+| Blended operating margin (up-market mix + monitoring) | 17% → ~19% | 17% → ~21% (cap ~22%) | BSL-3/GMP ~2–3× the $/sq ft of vivariums (Cushman/CBRE); capped by Exyte ~7%-at-scale cleanroom-EPC reality |
+| High-end revenue mix | 60% → ~68% | 60% → ~75% | installed-base attach 33–80% (Entytle/McKinsey); leg-split is the §10 data floor |
+| Monitoring recurring revenue | +$1.0M | +$2.0M | §A6 / `iot_monitoring_research.md` § re-analysis ($0.9 / $3.0 / $7.5M EV) |
+| Exit EV/EBITDA multiple | 8× | 10× (cond. 11–12× only if recurring tail contracted) | `biocontainment_comps.md` |
+| Loaded commercial investment | ~$0.45M/yr | ~$0.55M/yr | VP/Head of Sales + BD + CRM/marketing (industrial, $10M co.) |
+
+**Key reframe (the honest baseline):** the v3b *base* growth path (+8/+6/+5%) **already implicitly credits the sales engine** — the true *do-nothing* organic path is ~+2–3%. So the sales engine is not free upside stacked on the base; it is *what produces* the base. The federal biodefense pocket is being **cut** in FY26 (BARDA −$361M), so the up-market case leans on **pharma/GMP + private research + the 6-month speed moat**, not NIH/BARDA expansion.
+
+## v4b. The build (5-yr hold, Art's-Way Scientific standalone)
+
+```
+ENTRY (today, control basis):  Rev $10.2M × 17.1% = $1.75M EBITDA × 8× = $14.0M EV   [= SOTP / slide 10]
+
+BASE EXIT (yr5):  Rev $10.2M @ 7% CAGR = $14.4M + monitoring $1.0M = $15.4M
+                  × ~19% margin = $2.9M EBITDA × 8× (held)          = ~$23M EV
+BULL EXIT (yr5):  Rev $10.2M @ 11% CAGR = $17.2M + monitoring $2.0M = $19.2M
+                  × ~21% margin = $4.0M EBITDA × 10×                 = ~$40M EV
+```
+
+**Bull value-creation bridge (entry → bull exit, +$26M):**
+- EBITDA growth $1.75M → $4.0M (+$2.25M) at the entry 8× = **+$18M**, of which grow-volume (sales engine) ≈ +$9M · move-up-market (margin) ≈ +$5M · monitoring (recurring) ≈ +$4M
+- multiple re-rate 8× → 10×, **on the grown $4.0M EBITDA** = **+$8M**  ← the compounding: the 2-turn re-rate is worth $8M *because it applies to the grown EBITDA*, vs ~$3.5M on the entry EBITDA
+- = **~$40M exit EV.** Roll-up (M&A) is further upside, not in the bridge.
+
+## v4c. Reconciliation (this build ties the deck together)
+- Entry EV $14.0M = §v3b base / slide-10 SOTP building value. ✓
+- Bull exit EV ~$40M ≈ slide-9 bull exit **equity** $43M (deleveraged). ✓
+- Base exit EV ~$23M ≈ slide-9 base exit equity ~$20M (deleveraged). ✓
+- Slides 8 (plan), 9 (returns), 10 (entry value) now sit on one consistent 5-yr-exit spine.
+
+## v4d. Honest caveats (why the deck shows a disciplined slice, not the $40M)
+1. **A value-creation bridge stacks four favorable drivers and multiplies them** — coherent, but probabilistically thin; sharp readers discount bridges on sight.
+2. **The multiple re-rate (+$8M, ~30% of the bull) is the weakest, highest-leverage bar** — multiple expansion is the least reliable PE return source and is *not* an operator action; it is partly circular with the "valued on its own" claim. Sized smallest on the deck and flagged as a market call.
+3. **The up-market margin driver sits on the §10 data floor** — the leg split (research vs ag-bio) and by-leg margins are undisclosed; the mix lever is an estimate on an estimate. Flagged on the slide.
+4. **It risks the deck's edge.** The deep-flow verdict is "asset-protected, asymmetric, disciplined, base ~12%." That sobriety *is* the credibility; a $40M/30% hero-bridge dilutes it.
+
+## v4e. Deck treatment (the disciplined slice that ships)
+Slide 8 stays in **intrinsic-today** terms (base $14.0M → bull $22.9M, ties to slide 10), **base-anchored**, with four operator levers — **grow sales · move up-market · recurring monitoring · re-rate** — where the three EBITDA-builders lead and the **re-rate is the smallest, explicitly-caveated bar** ("a market call, not an operator action"). The full bottom-up build above is the backbone; slide 9 owns the levered returns. Net: the rigor and the benchmarks are kept; the hero number is not spent.

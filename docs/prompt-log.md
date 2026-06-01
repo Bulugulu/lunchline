@@ -2,6 +2,20 @@
 
 Running log of AI interactions for the Lunchline Partners case study.
 
+## Scope of this log
+
+Reconstructed from the full Claude Code session transcripts for this project (**~524 user prompts across 2026-05-28 → 2026-06-01**, pulled via the Motif CLI). Sessions 1–6 are the detailed early entries (data pipeline, screening framework, memo system). **Sessions 7+ summarize the analytical core** — the multi-agent scoring calibration, its retirement in favour of the Deep Flow, the candidate tournament, the ARTW selection and build, and the deck iteration — which the earlier log did not capture.
+
+| Phase | Dates | What | Outcome |
+|---|---|---|---|
+| Infra & screening | 5/28 | Reproducible data pipeline; all-sector framework screen | 57 cheap, profitable, under-followed names |
+| Multi-agent scoring | 5/28 | 5 specialists + adversarial reviewer + light model; calibrated on EXFY & SCOR | Worked, but judged to manufacture false precision → **retired** |
+| Memo system & audit | 5/29 | Buffett-voice guide; 11 one-page memos; numbers-verification pass | Every memo had ≥1 wrong load-bearing number; lesson encoded |
+| The Deep Flow | 5/29–5/30 | Full SOTP + DCF + Porter + sensitivity + VCP per name; agent-builds → lead-reviews | USNA, HCKT, AENT, MIND, SWAG, HOUR deep-flowed |
+| ARTW build | 5/30 | Selected ARTW as an operator carve-out; deck + Excel model | Asset-protected, asymmetric search-acquisition thesis |
+| Deck iteration | 5/30–6/1 | Voice, cold-reader audits, bottom-up value model, risks, AI disclosure | The current deck |
+| Part 2 | 5/31 | AI market-mapping: project plan + vendor stack | In progress |
+
 ## Session 1: Project Setup & Initial Screening (2026-05-26)
 
 ### Prompt 1: Project Initialization & Company Screening
@@ -158,3 +172,47 @@ Running log of AI interactions for the Lunchline Partners case study.
 **Key outputs:** Four repeatable failure modes documented (data-vendor aggregate fields, non-GAAP inherited not sourced, conflation of similar-magnitude figures, period/share-count slips). Thesis-altering corrections on CDLX, MIND, SCOR, IZEA, UONE; RSSS/UPLD/SWAG/AENT survived clean. Lesson encoded in `docs/memo-principles.md`.
 **Where AI helped:** The verification pass is the most valuable single step in the session — it caught errors that read as plausible and would have survived a human read-through.
 **Where AI may have gaps / lesson:** LLM agents will state a confident specific number that is wrong; treat any agent-produced figure as unverified until checked against the primary filing. yfinance `enterpriseValue`/`marketCap`/`freeCashFlow` are especially unreliable for dual-class/earnout/preferred structures — compute from the balance sheet instead.
+
+---
+
+# Sessions 7–13 — summarized from transcripts (2026-05-28 → 2026-06-01)
+
+The entries below are condensed (representative prompts + outcomes), not per-prompt verbatim.
+
+## Session 7: Multi-agent scoring calibration (2026-05-28)
+**Tool:** Claude Code (Opus) + parallel subagents
+**Representative prompts:** "Compare a 7/7 with a 3/7"; "how would we run the weighted criterion scoring?"; "split into multiple subagents for greater task-focus and objectivity?"; "ignore my own expertise at this phase… add an adversarial 7th pass… using solid investment logic"; then the per-dimension specialist prompts and the adversarial-reviewer prompts for **EXFY** and **SCOR**.
+**What ran:** A scoring pipeline — 5 dimension specialists (messiness, value-creation, data, contrarianism, PE-realism) + an adversarial reviewer + a lightweight returns model — plus voting-structure and deal-status detectors. Calibrated on EXFY (rescaled 3.35/5; detector caught an 84.7% voting-trust deal-breaker) and SCOR (the adversarial pass caught that a reported $103.9M "net income" was a non-cash recap gain, plus a covenant waiver — devastating).
+**Where AI helped:** The adversarial reviewer and the voting/deal-status detectors caught structural deal-breakers (super-voting trusts, mid-deal targets like LPSN/KPLT) the specialists missed.
+**Where AI fell short:** The numeric scoring produced **false precision** — confident 1–5 scores that didn't survive scrutiny. This directly motivated retiring the scoring approach (Session 10).
+
+## Session 8: Pipeline consolidation & cleanup (2026-05-28)
+**Representative prompts:** "review what we've done… any files we should clean up that are now redundant? duplications? is claude.md clean and routing clearly?"; "double-check each part is safe to delete… don't delete reports"; "the pipeline shouldn't be in claude.md, route to a separate file"; "commit+push".
+**What ran:** De-duplicated docs/workflows, moved the pipeline spec out of CLAUDE.md into its own routed doc, committed. Ran findings/specialist passes on CDLX, NRDY, FAST (diagnostic), THRY.
+**Where AI helped:** Fast, careful repo hygiene with safety checks before deletes.
+
+## Session 9: Memo voice, one-page memos & the numbers audit (2026-05-29)
+*(Detailed in Session 6 above — Buffett/Marks/Einhorn voice guide, 11 one-page HTML memos, then a per-memo verification pass that found a wrong load-bearing number in every memo.)* The key disclosure: **memo-drafting agents fabricated plausible figures**; only the audit caught them.
+
+## Session 10: Retiring scoring → the Deep Flow & candidate tournament (2026-05-29 → 05-30)
+**Representative prompts:** "How are we picking from the 42?"; "is there an overall SaaS valuation decline due to AI?" (RSSS); the skeptical-analyst **USNA** deep-flow prompt, then "I'm the reviewing lead; we iterate until we've extracted everything the filings allow"; "continue analyzing more companies using the deep flow"; the **AENT** deep-flow prompt; "why did the stock collapse 54%… did we look at the earnings calls?"; "this model's EV is the stock is worth $12.76 vs $11.61?"; "help me pick a new stock we haven't touched out of the 57"; "enrich the catalog with owner-dependence / key-man / acquirability signals" (with the correction: "don't override our previous methodology — enrich it").
+**What ran:** The 6-criterion scoring was **retired** (it had called USNA a value trap; the Deep Flow reversed then disciplined that). Full Deep Flows (SOTP + driver model + DCF on cash taxes + Porter + sensitivity + VCP + kill criteria) on USNA, HCKT, AENT, MIND, SWAG, HOUR. Catalog enriched with search-fund acquirability signals. Industry-structure research on coffee (JVA), footwear (WEYS), ACU.
+**Where AI helped:** The agent-builds → lead-reviews loop extracted far more from the filings than a single pass; the USNA reversal showed the depth was worth it.
+**Where AI fell short:** Needed the lead to repeatedly re-anchor it (e.g., "don't override the methodology, enrich it") — without a method in mind, the volume of analysis drifts.
+
+## Session 11: ARTW selection, deep flow & first build (2026-05-30)
+**Representative prompts:** "Tell me about ARTW"; "let's do our deep dive analysis on this"; "explain the demand/conversion math — do we have actual metrics on whether there was demand they couldn't meet?"; the filings-comb prompt for demand-constrained evidence in the modular segment; "let's build the slide deck and the excel model"; then the workbook-builder and deck-builder agent prompts.
+**What ran:** ARTW chosen as a take-private-and-operate carve-out. Combed filings for the demand-constraint signal (backlog +103%, thin commercial org). Built `ARTW_model.xlsx` and the Part-1 HTML deck.
+**Where AI helped:** Surfaced ARTW from the untouched screen and assembled the carve-out package quickly.
+
+## Session 12: Deck voice iteration + portability (2026-05-30 → 05-31)
+**Representative prompts:** Feedback "did you use the Buffett style? it feels too salesy… more concise, more to-the-point, avoid marketing language"; the no-context cold-reader audit prompts; "rewrite for voice and clarity, keep the design system"; "no need to explain concepts inline like 'operating margin' — assume savvy readers"; "you reintroduced em-dashes — remove them"; slide-specific line edits; gather company facts each with an active source URL; then "log to changelog… continue from a new session"; git-ignore questions to get ARTW data + the screening catalog onto the laptop; "everything on remote?".
+**What ran:** Multiple voice rewrites verified by cold-reader subagents; em-dash purges; sourcing pass; un-ignored the research/catalog for portability; commit+push.
+**Where AI helped:** Cold-reader audit subagents gave honest outside-eye feedback on clarity.
+**Where AI fell short:** Repeatedly reintroduced banned patterns (em-dashes, salesy phrasing, finance-101 glosses) until given explicit examples of "good."
+
+## Session 13: Bottom-up value model + deck polish + this log (2026-05-31 → 06-01)
+**Representative prompts:** rebase the value-creation waterfall to the control basis and the model; re-judge the monitoring lever ("I don't agree with your take… the question is upsell + industry structure, not whether someone's already doing it"); "model the operational path bottom-up… these compound with the multiple… don't cap it top-down"; "critique the approach and help me decide if we should use it at all"; tighten the risks slide ("reframe 'what limits it' as mitigations… really concise"); make the AI disclosure concise (three sections); "use Motif to get the real transcripts and produce a summarized prompt report."
+**What ran:** Rebased the waterfall ($14.0M → $22.9M, control basis); an independent agent reversed the dismissive monitoring take (→ installed-base annuity, ~$7B fragmented services market); built a **benchmarked bottom-up value-creation model** (sales engine, up-market mix, monitoring, multiple compounding) in `model.md §v4`, then — after a self-critique flagged it as an assumption-stacked hero-bridge — **disciplined it back** for the deck (base-anchored, re-rate de-emphasized). Rebuilt the risks slide around the value-creation levers; rewrote this AI-disclosure appendix; swept em-dashes; pulled the transcripts via Motif to reconstruct this log.
+**Where AI helped:** Independent research agents (monitoring industry structure, sales-effectiveness benchmarks) produced sourced driver assumptions; a self-critique caught the bottom-up model overreaching before it shipped.
+**Where AI fell short:** The first monitoring pass over-indexed on "a competitor already does it" and lost the bigger upsell/industry-structure question — corrected only after the lead pushed back. Pattern confirmed: AI needs strict control, iteration, and examples of "what good looks like" to be net-positive.
