@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Part 2 · AI-Enabled Market Mapping &amp; Sourcing · Executive Search</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  :root {
+    --navy: #0A2540;
+    --ink: #111111;
+    --paper: #FFFFFF;
+    --slate: #6B7280;
+    --rule: #E5E7EB;
+    --rule-soft: #F1F3F5;
+    --red: #C8102E;
+    --tint: #FEF7F7;
+    --green: #1F4D3F;
+    --green-tint: #EAF3EF;
+    --amber: #B45309;
+    --link: #2563eb;
+    --bar: #0A2540;
+    --bar-soft: #9DB0C4;
+    --grid: #EEF1F4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 32px;
+    background: #d0d5dc;
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink);
+    font-feature-settings: "tnum" 1, "ss01" 1;
+  }
+  .topbar { max-width: 1280px; margin: 0 auto 24px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #555; }
+  .topbar a { color: var(--link); text-decoration: none; }
+  .topbar code { font-size: 12px; }
+  .slide {
+    width: 1280px; height: 720px; background: var(--paper);
+    margin: 0 auto 32px; box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    position: relative; padding: 44px 60px; display: flex; flex-direction: column; overflow: hidden;
+  }
+  a { color: var(--link); text-decoration: none; }
+  .firm { font-size: 11px; color: var(--navy); letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; }
+  .slide-meta { display: flex; justify-content: space-between; align-items: baseline; }
+  .slide-num { font-size: 11px; color: var(--slate); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; }
+  .headline { font-size: 25px; font-weight: 500; line-height: 1.2; color: var(--navy); margin: 20px 0 5px; max-width: 96%; letter-spacing: -0.015em; }
+  .subhead { font-size: 13px; color: var(--slate); font-weight: 400; margin-bottom: 16px; line-height: 1.45; max-width: 94%; }
+  .rule { height: 1px; background: var(--rule); margin: 0 0 18px; }
+  .footer { border-top: 1px solid var(--rule); padding-top: 9px; font-size: 8px; color: var(--slate); line-height: 1.5; margin-top: auto; }
+  .footer .src { font-weight: 700; color: var(--ink); margin-right: 4px; }
+  .footer a { color: var(--slate); text-decoration: underline; }
+  .dash-title { font-size: 10px; letter-spacing: 0.14em; color: var(--slate); text-transform: uppercase; font-weight: 600; margin-bottom: 12px; }
+  .body { flex-grow: 1; display: flex; gap: 36px; }
+  .col-main { flex: 1.4; }
+  .col-side { flex: 1; }
+
+  /* COVER */
+  .slide-cover { padding: 52px 60px; justify-content: space-between; }
+  .cover-top { display: flex; justify-content: space-between; align-items: baseline; }
+  .cover-wordmark { font-size: 13px; letter-spacing: 0.22em; color: var(--navy); font-weight: 700; text-transform: uppercase; }
+  .cover-context { font-size: 11px; letter-spacing: 0.14em; color: var(--slate); text-transform: uppercase; }
+  .cover-rule { height: 2px; background: var(--navy); margin-top: 12px; }
+  .cover-main { display: flex; flex-direction: column; flex-grow: 1; justify-content: center; padding: 28px 0; }
+  .cover-ticker { font-size: 12px; letter-spacing: 0.2em; color: var(--red); font-weight: 700; text-transform: uppercase; margin-bottom: 16px; }
+  .cover-name { font-size: 58px; font-weight: 500; color: var(--navy); letter-spacing: -0.03em; line-height: 1.0; margin: 0 0 22px; }
+  .cover-tagline { font-size: 20px; font-weight: 400; color: var(--ink); max-width: 86%; line-height: 1.4; }
+  .cover-tagline .em { color: var(--red); font-weight: 500; }
+  .cover-bottom { display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid var(--rule); padding-top: 14px; font-size: 12px; letter-spacing: 0.05em; color: var(--slate); }
+  .cover-bottom strong { color: var(--ink); font-weight: 600; }
+
+  /* KPI STRIP */
+  .kpi-strip { display: grid; gap: 18px; margin: 6px 0 20px; }
+  .kpi-tile { border-top: 2px solid var(--navy); padding-top: 11px; }
+  .kpi-tile.accent { border-top-color: var(--red); }
+  .kpi-tile .label { font-size: 9px; letter-spacing: 0.1em; color: var(--slate); text-transform: uppercase; font-weight: 600; margin-bottom: 7px; }
+  .kpi-tile .val { font-size: 30px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; letter-spacing: -0.02em; line-height: 1; }
+  .kpi-tile.accent .val { color: var(--red); }
+  .kpi-tile .val .u { font-size: 14px; color: var(--slate); font-weight: 500; }
+  .kpi-tile .note { font-size: 11px; color: var(--slate); margin-top: 8px; line-height: 1.4; }
+
+  /* PILLARS */
+  .pillars { list-style: none; padding: 0; margin: 0; }
+  .pillar { display: flex; gap: 14px; margin-bottom: 16px; font-size: 13.5px; line-height: 1.45; }
+  .pillar-num { font-size: 13px; color: var(--red); font-weight: 700; flex-shrink: 0; width: 22px; }
+  .pillar-text strong { color: var(--ink); font-weight: 600; }
+  .pillar-text .proof { color: var(--slate); display: block; margin-top: 3px; font-size: 12.5px; }
+
+  /* PRINCIPLES (numbered circles) */
+  .principles { list-style: none; counter-reset: p; padding: 0; margin: 10px 0 0; }
+  .principles li { counter-increment: p; position: relative; padding-left: 38px; margin-bottom: 20px; font-size: 14px; line-height: 1.55; }
+  .principles li:before { content: counter(p); position: absolute; left: 0; top: 1px; font-weight: 700; color: var(--red); font-size: 12px; border: 1.5px solid var(--red); border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; }
+  .principles strong { color: var(--navy); font-weight: 600; }
+
+  /* FUNNEL */
+  .funnel { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 2px; }
+  .funnel thead th { padding: 9px 12px 9px 0; text-align: left; font-size: 9px; letter-spacing: 0.12em; color: var(--slate); text-transform: uppercase; font-weight: 600; border-bottom: 2px solid var(--navy); }
+  .funnel thead th.num { text-align: right; }
+  .funnel tbody td { padding: 11px 12px 11px 0; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+  .funnel tbody td.stage { font-weight: 600; color: var(--navy); }
+  .funnel tbody td.conv { color: var(--slate); font-variant-numeric: tabular-nums; }
+  .funnel tbody td.num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; font-size: 16px; }
+  .funnel .bar-cell { width: 42%; }
+  .fbar { height: 18px; background: var(--bar); border-radius: 2px; }
+  .funnel tbody tr.top td { background: var(--tint); }
+  .funnel tbody tr.top td.stage, .funnel tbody tr.top td.num { color: var(--red); }
+  .funnel tbody tr.deal td.num, .funnel tbody tr.deal td.stage { color: var(--green); }
+
+  /* CALLOUT + bullets */
+  .callout { background: #F8FAFC; border-left: 3px solid var(--red); padding: 16px 20px; font-size: 13px; line-height: 1.55; }
+  .callout .label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); font-weight: 700; margin-bottom: 5px; }
+  .callout ul { margin: 9px 0 0; padding: 0; list-style: none; }
+  .callout li { position: relative; padding-left: 18px; font-size: 13px; line-height: 1.55; margin-bottom: 7px; color: var(--ink); }
+  .callout li:last-child { margin-bottom: 0; }
+  .callout li:before { content: ""; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; background: var(--red); border-radius: 50%; }
+  .callout li strong { color: var(--navy); font-weight: 600; }
+  .callout .src { font-size: 11px; color: var(--slate); margin-top: 10px; }
+
+  /* GANTT */
+  .gantt { margin-top: 4px; border: 1px solid var(--rule); }
+  .gantt-row { display: grid; grid-template-columns: 230px repeat(12, 1fr); align-items: center; border-bottom: 1px solid var(--grid); }
+  .gantt-row:last-child { border-bottom: none; }
+  .gantt-head { background: var(--navy); }
+  .gantt-head .gcell { color: #cbd5e1; font-size: 10px; font-weight: 600; text-align: center; letter-spacing: 0.04em; padding: 10px 0; border-left: 1px solid rgba(255,255,255,0.10); }
+  .gantt-head .glabel { color: #fff; }
+  .glabel { font-size: 12.5px; font-weight: 600; color: var(--navy); padding: 12px 14px; line-height: 1.25; }
+  .glabel .gsub { display: block; font-size: 10px; color: var(--slate); font-weight: 500; margin-top: 2px; }
+  .gtrack { grid-column: 2 / -1; position: relative; height: 44px; display: grid; grid-template-columns: repeat(12, 1fr); }
+  .gtrack .gcol { border-left: 1px solid var(--grid); }
+  .gtrack .gcol:first-child { border-left: none; }
+  .gbar { position: absolute; top: 11px; height: 22px; border-radius: 3px; background: var(--bar); display: flex; align-items: center; }
+  .gbar.soft { background: var(--bar-soft); }
+  .gbar.red { background: var(--red); }
+  .gbar .gtxt { font-size: 9.5px; color: #fff; font-weight: 600; padding: 0 8px; white-space: nowrap; letter-spacing: 0.02em; }
+  .gmile { position: absolute; top: 8px; font-size: 16px; line-height: 1; }
+  .cadence-row { display: grid; grid-template-columns: 230px repeat(12, 1fr); background: var(--rule-soft); border-top: 1px solid var(--rule); }
+  .cadence-row .glabel { font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--slate); padding: 9px 14px; }
+  .cadence-row .ccell { font-size: 10.5px; text-align: center; font-variant-numeric: tabular-nums; color: var(--ink); font-weight: 600; padding: 9px 0; border-left: 1px solid var(--grid); }
+  .legend { display: flex; gap: 24px; margin-top: 14px; font-size: 11px; color: var(--slate); }
+  .legend .sw { display: inline-block; width: 22px; height: 10px; border-radius: 2px; margin-right: 7px; vertical-align: middle; }
+
+  /* MILESTONES */
+  .mile { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 2px; }
+  .mile thead th { padding: 10px 12px 10px 0; text-align: left; font-size: 9px; letter-spacing: 0.12em; color: var(--slate); text-transform: uppercase; font-weight: 600; border-bottom: 2px solid var(--navy); }
+  .mile tbody td { padding: 14px 12px 14px 0; border-bottom: 1px solid var(--rule); vertical-align: top; line-height: 1.45; }
+  .mile tbody td.mo { font-weight: 700; color: var(--red); white-space: nowrap; width: 80px; }
+  .mile tbody tr.gate td { background: var(--tint); }
+  .mile tbody td strong { color: var(--ink); font-weight: 600; }
+
+  /* SUMMARY TABLE */
+  .summary { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 2px; }
+  .summary thead th { padding: 10px 14px 10px 0; text-align: left; font-size: 9px; letter-spacing: 0.1em; color: var(--slate); text-transform: uppercase; font-weight: 600; border-bottom: 2px solid var(--navy); }
+  .summary thead th.cost { text-align: right; }
+  .summary tbody td { padding: 14px 14px 14px 0; border-bottom: 1px solid var(--rule); vertical-align: top; line-height: 1.4; }
+  .summary tbody td.cat { font-weight: 700; color: var(--navy); white-space: nowrap; }
+  .summary tbody td.cost { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+  .summary .pick { font-weight: 600; color: var(--ink); }
+  .summary tfoot td { padding: 13px 14px 13px 0; font-weight: 700; color: var(--navy); border-top: 2px solid var(--navy); }
+  .summary tfoot td.cost { text-align: right; color: var(--red); font-variant-numeric: tabular-nums; font-size: 16px; }
+
+  /* REC-LEAD + bullets */
+  .rec-lead { background: var(--green-tint); border-left: 3px solid var(--green); padding: 14px 18px; font-size: 13.5px; line-height: 1.5; }
+  .rec-lead .label { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--green); font-weight: 700; margin-bottom: 6px; }
+  .rec-lead strong { color: var(--ink); font-weight: 600; }
+  .rec-lead ul.pts { list-style: none; margin: 10px 0 0; padding: 0; }
+  .rec-lead ul.pts li { position: relative; padding-left: 16px; font-size: 12.5px; line-height: 1.5; margin-bottom: 7px; color: var(--ink); }
+  .rec-lead ul.pts li:last-child { margin-bottom: 0; }
+  .rec-lead ul.pts li:before { content: ""; position: absolute; left: 0; top: 7px; width: 5px; height: 5px; background: var(--green); border-radius: 50%; }
+  .rec-lead ul.pts strong { color: var(--navy); font-weight: 600; }
+
+  /* VENDORS TABLE */
+  .vendors { width: 100%; border-collapse: collapse; font-size: 12.5px; margin-top: 4px; }
+  .vendors thead th { padding: 8px 12px 8px 0; text-align: left; font-size: 9px; letter-spacing: 0.1em; color: var(--slate); text-transform: uppercase; font-weight: 600; border-bottom: 1px solid var(--rule); }
+  .vendors thead th.c { text-align: center; width: 56px; }
+  .vendors thead th.v { text-align: center; width: 104px; }
+  .vendors tbody td { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--rule-soft); vertical-align: top; line-height: 1.4; }
+  .vendors tbody td.name { font-weight: 600; color: var(--navy); white-space: nowrap; }
+  .vendors tbody td.price { font-variant-numeric: tabular-nums; color: var(--ink); white-space: nowrap; }
+  .vendors tbody td.mcp, .vendors tbody td.rec { text-align: center; }
+  .pill { font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; padding: 3px 8px; border-radius: 3px; white-space: nowrap; }
+  .pill.buy { color: var(--green); background: var(--green-tint); }
+  .pill.thin { color: var(--amber); background: #FdF3E6; }
+  .pill.skip { color: var(--slate); background: var(--rule-soft); }
+  .yes { color: var(--green); font-weight: 700; }
+  .no { color: var(--slate); font-weight: 700; }
+  .partial { color: var(--amber); font-weight: 700; }
+
+  /* SIGNALS (3-col) */
+  .signals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 4px; }
+  .signal { border-top: 2px solid var(--red); padding-top: 14px; }
+  .signal .st { font-size: 14px; font-weight: 600; color: var(--navy); line-height: 1.3; margin-bottom: 7px; }
+  .signal .sd { font-size: 12.5px; color: var(--slate); line-height: 1.5; }
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div><strong>Part 2 · Market Mapping &amp; Sourcing Strategy</strong> · End market: executive search · Direction 1 · content per <code>part2-project-plan.html</code> + <code>part2-vendor-stack.html</code></div>
+    <div>Lunchline Partners</div>
+  </div>
+
+  <!-- ============ 01 · COVER ============ -->
+  <div class="slide slide-cover">
+    <div>
+      <div class="cover-top">
+        <div class="cover-wordmark">Lunchline Partners</div>
+        <div class="cover-context">Part 2 · Market Mapping &amp; Sourcing · May 2026</div>
+      </div>
+      <div class="cover-rule"></div>
+    </div>
+    <div class="cover-main">
+      <div class="cover-ticker">AI-Enabled Market Mapping &amp; Sourcing</div>
+      <h1 class="cover-name">Acquiring an executive<br>search firm</h1>
+      <div class="cover-tagline">A 12-month, AI-leveraged search for a boutique executive-search firm. <span class="em">A lean tool stack does the volume work; a human owns every relationship.</span></div>
+    </div>
+    <div class="cover-bottom">
+      <div><strong>Aviv Sheriff</strong> · Lunchline Partners Case Study</div>
+      <div>01 / 13</div>
+    </div>
+  </div>
+
+  <!-- ============ 02 · TARGETS ============ -->
+  <div class="slide">
+    <div class="slide-meta"><span class="firm">Part 2 · Executive Search</span><span class="slide-num">02 / 13 · The mandate</span></div>
+    <h1 class="headline">A 12-month search to acquire an executive search firm.</h1>
+    <div class="subhead">Run as a funnel with an explicit target at every stage, so results and accountability are measurable from the first month.</div>
+    <div class="rule"></div>
+    <div class="kpi-strip" style="grid-template-columns:repeat(4,1fr);">
+      <div class="kpi-tile accent">
+        <div class="label">Time to close</div>
+        <div class="val">12 <span class="u">months</span></div>
+        <div class="note">Signed &amp; closed acquisition vs. an 18&ndash;30 month traditional search.</div>
+      </div>
+      <div class="kpi-tile">
+        <div class="label">Reply rate target</div>
+        <div class="val">~20<span class="u">%</span></div>
+        <div class="note">Blended multi-channel response. High by design on a small, high-value universe.</div>
+      </div>
+      <div class="kpi-tile">
+        <div class="label">Sourcing cadence</div>
+        <div class="val">~75<span class="u">/mo</span></div>
+        <div class="note">About 18 well-researched firms a week. Quality over volume.</div>
+      </div>
+      <div class="kpi-tile">
+        <div class="label">Outcome</div>
+        <div class="val">1 <span class="u">deal</span></div>
+        <div class="note">One acquisition that fits the buy-box, financed and closed.</div>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:8px;">
+      <div class="label">Why targets</div>
+      Setting an explicit number for each stage of the pipeline gives us something to manage against. It sharpens both results and accountability, and it turns a vague "keep looking" into a measurable engine with a known break point at every step.
+    </div>
+    <div class="footer"><span class="src">Note:</span> Targets are the operating plan; the funnel and calendar that follow derive every number from this one deal worked backward.</div>
+  </div>
+
+  <!-- ============ 03 · THE FUNNEL ============ -->
+  <div class="slide">
+    <div class="slide-meta"><span class="firm">Part 2 · Executive Search</span><span class="slide-num">03 / 13 · The funnel</span></div>
+    <h1 class="headline">The funnel, worked backward from one deal.</h1>
+    <div class="subhead">At a ~20% blended reply rate, about 750 contacted firms produce the single close.</div>
+    <div class="rule"></div>
+    <table class="funnel">
+      <thead><tr><th>Funnel stage</th><th>Conversion to next</th><th class="bar-cell"></th><th class="num">Count needed</th></tr></thead>
+      <tbody>
+        <tr class="top"><td class="stage">Sourced &amp; contacted firm</td><td class="conv">20%</td><td class="bar-cell"><div class="fbar" style="width:100%"></div></td><td class="num">~750</td></tr>
+        <tr><td class="stage">Reply</td><td class="conv">50%</td><td class="bar-cell"><div class="fbar" style="width:20%"></div></td><td class="num">150</td></tr>
+        <tr><td class="stage">Qualified intro call</td><td class="conv">20%</td><td class="bar-cell"><div class="fbar" style="width:10%"></div></td><td class="num">75</td></tr>
+        <tr><td class="stage">Deep dive / mgmt meeting (IOI)</td><td class="conv">33%</td><td class="bar-cell"><div class="fbar" style="width:2%"></div></td><td class="num">15</td></tr>
+        <tr><td class="stage">LOI submitted</td><td class="conv">40%</td><td class="bar-cell"><div class="fbar" style="width:0.7%"></div></td><td class="num">5</td></tr>
+        <tr><td class="stage">LOI accepted (exclusivity)</td><td class="conv">50%</td><td class="bar-cell"><div class="fbar" style="width:0.3%"></div></td><td class="num">2</td></tr>
+        <tr class="deal"><td class="stage">Closed deal</td><td class="conv"></td><td class="bar-cell"><div class="fbar" style="width:0.15%; background:var(--green)"></div></td><td class="num">1</td></tr>
+      </tbody>
+    </table>
+    <div class="footer"><span class="src">Source:</span> Conversion benchmarks per <a href="https://www.gsb.stanford.edu/faculty-research/case-studies/2024-search-fund-study">Stanford GSB</a> / HBS search-fund studies.</div>
+  </div>
+
+  <!-- ============ 05 · TAM ============ -->
+  <div class="slide">
+    <div class="slide-meta"><span class="firm">Part 2 · Executive Search</span><span class="slide-num">04 / 13 · Total addressable market</span></div>
+    <h1 class="headline">The universe is small, so conversion matters more than volume.</h1>
+    <div class="subhead">Contacting ~750 firms means engaging most of the right-fit universe, which is why the outreach must be high-quality, not high-volume.</div>
+    <div class="rule"></div>
+    <div class="body">
+      <div class="col-main">
+        <div class="dash-title">From the whole industry down to the right-fit pool</div>
+        <svg width="100%" viewBox="0 0 480 220" style="margin-top:6px;">
+          <rect x="0" y="14" width="460" height="40" fill="#0A2540"/>
+          <text x="12" y="39" font-size="13" fill="#fff" font-weight="600">~2,500&ndash;3,500 employer search firms (US)</text>
+          <rect x="0" y="86" width="200" height="40" fill="#6B7280"/>
+          <text x="12" y="111" font-size="13" fill="#fff" font-weight="600">~500&ndash;1,000 retained boutiques</text>
+          <rect x="0" y="158" width="92" height="40" fill="#C8102E"/>
+          <text x="12" y="183" font-size="12" fill="#fff" font-weight="600">~hundreds NE</text>
+          <text x="210" y="183" font-size="11" fill="#6B7280">$1&ndash;10M EBITDA, owner-operated, Northeast-anchored</text>
+        </svg>
+      </div>
+      <div class="col-side">
+        <div class="callout">
+          <div class="label">Total addressable market</div>
+          <ul>
+            <li>~2,500&ndash;3,500 employer executive-search firms in the US.</li>
+            <li>Filter to retained boutiques at $1&ndash;10M EBITDA: <strong>~500&ndash;1,000 nationally</strong>, a few hundred in the Northeast.</li>
+            <li>Because the universe is small, reaching the target LOIs and a close depends on a high conversion rate, not volume: the ~20% reply target is what carries the funnel.</li>
+          </ul>
+          <div class="src">Sources: <a href="https://www.ibisworld.com/united-states/number-of-businesses/executive-search-recruiters/5670/">IBISWorld</a>, <a href="https://siccode.com/naics-code/561312/executive-search-services">Census / SICCODE</a>, <a href="https://www.aesc.org/about-aesc/">AESC</a>.</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span class="src">Note:</span> A small universe means reaching the target LOIs and a close depends on conversion, not volume.</div>
+  </div>
+
+  <!-- ============ 06 · CALENDAR ============ -->
+  <div class="slide">
+    <div class="slide-meta"><span class="firm">Part 2 · Executive Search</span><span class="slide-num">05 / 13 · The calendar</span></div>
+    <h1 class="headline">Twelve months, four workstreams, sourcing never stops.</h1>
+    <div class="subhead">Sourcing runs continuously, even while LOIs are out, so the pipeline never goes cold if a deal falls through.</div>
+    <div class="rule"></div>
+    <div class="gantt">
+      <div class="gantt-row gantt-head">
+        <div class="glabel">Workstream</div>
+        <div class="gcell">M1</div><div class="gcell">M2</div><div class="gcell">M3</div><div class="gcell">M4</div><div class="gcell">M5</div><div class="gcell">M6</div><div class="gcell">M7</div><div class="gcell">M8</div><div class="gcell">M9</div><div class="gcell">M10</div><div class="gcell">M11</div><div class="gcell">M12</div>
+      </div>
+      <div class="gantt-row">
+        <div class="glabel">1 · Sourcing + research<span class="gsub">Continuous · ~75 firms/mo</span></div>
+        <div class="gtrack"><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div>
+          <div class="gbar" style="left:0%; width:83.33%"><span class="gtxt">runs continuously, even while LOIs are out</span></div></div>
+      </div>
+      <div class="gantt-row">
+        <div class="glabel">2 · Outreach<span class="gsub">Contact, reply, qualifying calls</span></div>
+        <div class="gtrack"><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div>
+          <div class="gbar" style="left:8.33%; width:75%"><span class="gtxt">20% reply &rarr; ~75 qualified calls</span></div></div>
+      </div>
+      <div class="gantt-row">
+        <div class="glabel">3 · LOI / negotiations<span class="gsub">Deep dives, IOIs, 2&ndash;3 LOIs in parallel</span></div>
+        <div class="gtrack"><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div>
+          <div class="gbar soft" style="left:33.33%; width:58.33%"><span class="gtxt">~5 LOIs</span></div></div>
+      </div>
+      <div class="gantt-row">
+        <div class="glabel">4 · Due diligence<span class="gsub">QoE, legal, financing &rarr; close</span></div>
+        <div class="gtrack"><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div>
+          <div class="gbar red" style="left:58.33%; width:41.67%"><span class="gtxt">lead deal</span></div>
+          <div class="gmile" style="left:96.5%; color:var(--green)">&#9733;</div></div>
+      </div>
+      <div class="cadence-row">
+        <div class="glabel">Sourcing / mo</div>
+        <div class="ccell">40</div><div class="ccell">80</div><div class="ccell">80</div><div class="ccell">80</div><div class="ccell">80</div><div class="ccell">80</div><div class="ccell">80</div><div class="ccell">80</div><div class="ccell">80</div><div class="ccell">70</div><div class="ccell">&#9660;</div><div class="ccell">&mdash;</div>
+      </div>
+    </div>
+    <div class="legend">
+      <span><span class="sw" style="background:var(--bar)"></span>Continuous pipeline</span>
+      <span><span class="sw" style="background:var(--bar-soft)"></span>Deal execution</span>
+      <span><span class="sw" style="background:var(--red)"></span>Close-out</span>
+      <span><span style="color:var(--green); font-size:14px;">&#9733;</span> Close (M12)</span>
+    </div>
+    <div class="footer"><span class="src">Note:</span> Monthly sourcing cadence sums to ~750 firms, the full addressable universe engaged over the search.</div>
+  </div>
+
+  <!-- ============ 07 · MILESTONES ============ -->
+  <div class="slide">
+    <div class="slide-meta"><span class="firm">Part 2 · Executive Search</span><span class="slide-num">06 / 13 · Milestone gates</span></div>
+    <h1 class="headline">Four gates keep the search honest.</h1>
+    <div class="subhead">Each gate maps to one of the three things that actually decide the outcome: the reply rate, the firms sourced, and the first LOI.</div>
+    <div class="rule"></div>
+    <table class="mile">
+      <thead><tr><th>Month</th><th>Milestone (gate)</th></tr></thead>
+      <tbody>
+        <tr class="gate"><td class="mo">M3</td><td><strong>Reply rate measured against the ~20% target.</strong> Outreach engine running; if replies lag the bar, fix targeting and messaging before working further down the list.</td></tr>
+        <tr class="gate"><td class="mo">M6</td><td><strong>~375 firms contacted, roughly half the addressable universe engaged.</strong> Pace check on sourcing volume.</td></tr>
+        <tr class="gate"><td class="mo">M7</td><td><strong>First LOI submitted.</strong> The key signal that the funnel is converting to live deals.</td></tr>
+        <tr class="gate"><td class="mo">M12</td><td><strong>&#9733; Close. Acquisition complete.</strong></td></tr>
+      </tbody>
+    </table>
+    <div class="footer"><span class="src">Source:</span> Pace expectations per <a href="https://www.gsb.stanford.edu/faculty-research/case-studies/2024-search-fund-study">Stanford GSB</a> / HBS search-fund studies.</div>
+  </div>
+
+  <!-- ============ 08 · STACK PRINCIPLES ============ -->
+  <div class="slide">
+    <div class="slide-meta"><span class="firm">Part 2 · The tooling</span><span class="slide-num">07 / 13 · Sourcing stack</span></div>
+    <h1 class="headline">The stack: one agent, differentiated data, fit to the search.</h1>
+    <div class="subhead">An AI-native tool stack where every tool feeds a single coding agent, for about $430 to $800 a month all-in.</div>
+    <div class="rule"></div>
+    <ul class="principles">
+      <li><strong>One agent runs everything.</strong> Every tool is chosen so its data and operations feed a single coding agent (Claude Code, Codex, or Cursor) that aggregates, processes, and acts on them. The priority is a tool exposing an MCP server or open API the agent can call directly.</li>
+      <li><strong>Differentiated data.</strong> When we spend, we prioritize sources that give us a view other buyers don't already have. Commodity data is used at its free tier, or skipped.</li>
+      <li><strong>Fit to the search.</strong> Sources are matched to this specific search (executive search, owner-operated firms, demand-driven screening) rather than generic market subscriptions.</li>
+    </ul>
+    <div class="footer"><span class="src">Note:</span> Four layers follow, market research, sourcing, CRM and capture, and outbound, each leading with the recommendation, then the comparison.</div>
+  </div>
+
+  <!-- ============ 09 · STACK AT A GLANCE ============ -->
+  <div class="slide">
+    <div class="slide-meta"><span class="firm">Part 2 · The tooling</span><span class="slide-num">08 / 13 · Stack at a glance</span></div>
+    <h1 class="headline">Four layers, about $430 to $800 a month, all feeding one agent.</h1>
+    <div class="subhead">Each layer is free or cheap and AI-native, covering the funnel from research to a logged call.</div>
+    <div class="rule"></div>
+    <table class="summary">
+      <thead><tr><th>Category</th><th>Recommended pick</th><th>Approach</th><th class="cost">~ / mo</th></tr></thead>
+      <tbody>
+        <tr><td class="cat">Market Research</td><td><span class="pick">BLS / Census / FRED + Revelio + IBISWorld (free)</span></td><td>Free data, fed to the agent</td><td class="cost">$0</td></tr>
+        <tr><td class="cat">Company Sourcing</td><td><span class="pick">Clay (core) + Apollo (own-key); Grata optional</span></td><td>Build-led, discovery free</td><td class="cost">$264&ndash;574</td></tr>
+        <tr><td class="cat">CRM + capture</td><td><span class="pick">Attio + Granola (Meet) + OpenPhone (phone)</span></td><td>Buy cheap, AI-native</td><td class="cost">$37&ndash;96</td></tr>
+        <tr><td class="cat">Outbound</td><td><span class="pick">Superhuman + Handwrytten</span></td><td>Two tools, send as a person</td><td class="cost">~$132</td></tr>
+      </tbody>
+      <tfoot><tr><td colspan="3">All-in recurring</td><td class="cost">~$430&ndash;800</td></tr></tfoot>
+    </table>
+    <div class="footer"><span class="src">Agent column (next slides):</span> <span class="yes">&#9679;</span> ships an MCP server · <span class="partial">&#9680;</span> open API only · <span class="no">&#9675;</span> closed or manual.</div>
+  </div>
+
+  <!-- ============ 10 · MARKET RESEARCH ============ -->
+  <div class="slide">
+    <div class="slide-meta"><span class="firm">Part 2 · The tooling</span><span class="slide-num">09 / 13 · A · Market Research</span></div>
+    <h1 class="headline">Measure demand under each firm's book, for free.</h1>
+    <div class="subhead">Free government and labor data, fed to the agent to score demand under each target firm.</div>
+    <div class="rule"></div>
+    <div class="body">
+      <div class="col-main">
+        <table class="vendors">
+          <thead><tr><th>Vendor</th><th>What it measures</th><th>2026 price</th><th class="c">Agent</th><th class="v">Verdict</th></tr></thead>
+          <tbody>
+            <tr><td class="name"><a href="https://www.bls.gov/developers/">BLS / Census / FRED</a></td><td>Hiring (JOLTS), occupation &amp; industry growth, employment by industry &times; metro</td><td class="price">Free APIs</td><td class="mcp"><span class="yes">&#9679;</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
+            <tr><td class="name"><a href="https://www.reveliolabs.com/public-labor-statistics/">Revelio Labs</a></td><td>Headcount, hiring &amp; attrition by role &times; industry &times; geography</td><td class="price">Free RPLS</td><td class="mcp"><span class="yes">&#9679;</span></td><td class="rec"><span class="pill thin">Free tier</span></td></tr>
+            <tr><td class="name"><a href="https://searchfunder.com/post/now-every-searchfunder-member-can-access-ibisworld">IBISWorld</a></td><td>Underlying-industry growth + the Executive Search report</td><td class="price">$0 via Searchfunder</td><td class="mcp"><span class="no">&#9675;</span></td><td class="rec"><span class="pill thin">One-time read</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-side">
+        <div class="rec-lead">
+          <div class="label">Recommendation</div>
+          <strong>Free government data. No paid feeds.</strong>
+          <ul class="pts">
+            <li><strong>BLS, Census, FRED:</strong> hiring and industry-growth signals through public APIs.</li>
+            <li><strong>Revelio</strong>'s free tier covers workforce data.</li>
+            <li><strong>IBISWorld</strong> is free because Searchfunder gives members unlimited access, including the Executive Search report.</li>
+            <li>The agent scores demand under each firm at $0. Paid feeds ($6k to $85k a year) are built for institutions.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span class="src">Sources:</span> per-vendor links inline. Pricing is 2026; re-verify at point of use.</div>
+  </div>
+
+  <!-- ============ 11 · COMPANY SOURCING ============ -->
+  <div class="slide">
+    <div class="slide-meta"><span class="firm">Part 2 · The tooling</span><span class="slide-num">10 / 13 · B · Company Sourcing</span></div>
+    <h1 class="headline">Build and score the target universe, mostly for free.</h1>
+    <div class="subhead">Search firms are public, so the list is self-sourced; the agent enriches it and we pay only for verified emails.</div>
+    <div class="rule"></div>
+    <div class="body">
+      <div class="col-main">
+        <table class="vendors">
+          <thead><tr><th>Vendor</th><th>What it is</th><th>2026 price</th><th class="c">Agent</th><th class="v">Verdict</th></tr></thead>
+          <tbody>
+            <tr><td class="name"><a href="https://www.clay.com/pricing">Clay</a></td><td>Orchestration + AI enrichment + personalization; wraps providers. Owns no target database</td><td class="price">$185 / $495</td><td class="mcp"><span class="yes">&#9679;</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
+            <tr><td class="name"><a href="https://www.apollo.io/pricing">Apollo.io</a></td><td>Verified personal emails via own-key into Clay; for deliverability, not discovery</td><td class="price">$79/mo</td><td class="mcp"><span class="yes">&#9679;</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
+            <tr><td class="name"><a href="https://grata.com/pricing">Grata</a></td><td>Discovery accelerator; estimates only, thin below ~10 people, built for mid-market</td><td class="price">~$10k&ndash;100k/yr</td><td class="mcp"><span class="partial">&#9680;</span></td><td class="rec"><span class="pill thin">Optional</span></td></tr>
+            <tr><td class="name"><a href="https://www.uplead.com/apollo-vs-zoominfo/">ZoomInfo</a></td><td>Enterprise contact database; priced for large sales teams</td><td class="price">$15k&ndash;40k/yr</td><td class="mcp"><span class="partial">&#9680;</span></td><td class="rec"><span class="pill skip">Not used</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-side">
+        <div class="rec-lead">
+          <div class="label">Recommendation</div>
+          <strong>Clay for the build ($185 to $495/mo). Apollo for emails ($79/mo).</strong>
+          <ul class="pts">
+            <li>Search firms are public: websites, named partners, LinkedIn, directories.</li>
+            <li><strong>Clay</strong> scrapes and structures it, and Claygent enriches each firm.</li>
+            <li><strong>Apollo</strong> buys verified emails to protect deliverability, then cancels once the list is enriched.</li>
+            <li>Per firm we get the site, partners, headcount, emails, and inferred succession flags.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span class="src">Sources:</span> per-vendor links inline. Pricing is 2026; sales-gated figures are estimates.</div>
+  </div>
+
+  <!-- ============ 12 · CRM + CAPTURE ============ -->
+  <div class="slide">
+    <div class="slide-meta"><span class="firm">Part 2 · The tooling</span><span class="slide-num">11 / 13 · C · CRM + capture</span></div>
+    <h1 class="headline">A system of record the agent maintains, and a log of every call.</h1>
+    <div class="subhead">An AI-native CRM plus bot-less transcription, so each conversation lands in the record automatically.</div>
+    <div class="rule"></div>
+    <div class="body">
+      <div class="col-main">
+        <table class="vendors">
+          <thead><tr><th>Vendor</th><th>What it is</th><th>2026 price</th><th class="c">Agent</th><th class="v">Verdict</th></tr></thead>
+          <tbody>
+            <tr><td class="name"><a href="https://docs.attio.com/mcp/overview">Attio</a></td><td>AI-native CRM; MCP with write access, so the agent maintains the pipeline</td><td class="price">$0&ndash;59/seat</td><td class="mcp"><span class="yes">&#9679;</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
+            <tr><td class="name"><a href="https://www.granola.ai/pricing">Granola</a></td><td>Google Meet via system audio, no bot; native Windows; MCP transcripts</td><td class="price">$14/mo</td><td class="mcp"><span class="yes">&#9679;</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
+            <tr><td class="name"><a href="https://www.openphone.com/product/api">OpenPhone / Quo</a></td><td>Softphone with native call transcription; webhook pushes the transcript to the repo</td><td class="price">$23/mo</td><td class="mcp"><span class="partial">&#9680;</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
+            <tr><td class="name"><a href="https://developer.affinity.co/pages/mcp/introduction">Affinity</a></td><td>Best automatic email capture, but priced for funds</td><td class="price">~$2k/seat/yr</td><td class="mcp"><span class="yes">&#9679;</span></td><td class="rec"><span class="pill skip">Skip</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-side">
+        <div class="rec-lead">
+          <div class="label">Recommendation</div>
+          <strong>Attio (free to $59/seat), with Granola and OpenPhone for capture. About $37/mo for capture.</strong>
+          <ul class="pts">
+            <li><strong>Attio</strong>'s MCP write access lets the agent maintain the pipeline, not the searcher.</li>
+            <li><strong>Granola</strong> records Meet on Windows with no bot; <strong>OpenPhone</strong> transcribes every call.</li>
+            <li>Both feed one endpoint; the agent summarizes, pulls next steps, and updates the pipeline.</li>
+            <li>Disclose recording at the top of every call, and treat it as all-party consent.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span class="src">Sources:</span> per-vendor links inline. Recording-consent law ranges one-party to all-party; disclose on every owner call.</div>
+  </div>
+
+  <!-- ============ 13 · OUTBOUND ============ -->
+  <div class="slide">
+    <div class="slide-meta"><span class="firm">Part 2 · The tooling</span><span class="slide-num">12 / 13 · D · Outbound</span></div>
+    <h1 class="headline">Reach owners and earn the reply, with two tools.</h1>
+    <div class="subhead">Send from your real domain as a credible individual, not through cold-email volume infrastructure.</div>
+    <div class="rule"></div>
+    <div class="body">
+      <div class="col-main">
+        <table class="vendors">
+          <thead><tr><th>Vendor</th><th>Channel · what it is</th><th>2026 price</th><th class="c">Agent</th><th class="v">Verdict</th></tr></thead>
+          <tbody>
+            <tr><td class="name"><a href="https://superhuman.com/plans">Superhuman</a></td><td>Email · AI 1:1 client; read + link tracking, follow-up reminders; real inbox</td><td class="price">~$33/mo</td><td class="mcp"><span class="no">&#9675;</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
+            <tr><td class="name"><a href="https://www.handwrytten.com/pricing/">Handwrytten</a></td><td>Mail · real pen-and-ink cards via API; the channel founders open</td><td class="price">~$99/mo</td><td class="mcp"><span class="partial">&#9680;</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
+            <tr><td class="name"><a href="https://knowledge.apollo.io/hc/en-us/articles/4409127806093-Link-Your-Mailbox-to-Apollo">Apollo sequences</a></td><td>Email · automated follow-up cadence from your own mailbox; already owned</td><td class="price">$0 marginal</td><td class="mcp"><span class="partial">&#9680;</span></td><td class="rec"><span class="pill thin">Optional</span></td></tr>
+            <tr><td class="name"><a href="https://www.devcommx.com/blogs/instantly-vs-smartlead-vs-lemlist-2026">Smartlead / Instantly</a></td><td>Email · volume cold-send infrastructure; the wrong fit at ~190/mo</td><td class="price">$94/mo</td><td class="mcp"><span class="yes">&#9679;</span></td><td class="rec"><span class="pill skip">Not used</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-side">
+        <div class="rec-lead">
+          <div class="label">Recommendation</div>
+          <strong>Two tools: Superhuman ($33/mo) for email, Handwrytten ($99/mo) for cards.</strong>
+          <ul class="pts">
+            <li><strong>Superhuman</strong> sends from your real domain with tracking, AI drafting, and follow-up reminders.</li>
+            <li><strong>Handwrytten</strong> sends a real pen-and-ink card, the channel a founder who ignores email will still open.</li>
+            <li>LinkedIn is sent by hand, and phone runs on the OpenPhone line. Neither needs a new tool.</li>
+            <li>Measure replies, not opens: Apple's privacy change makes open-rates meaningless.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span class="src">Sources:</span> per-vendor links inline. Pricing is 2026; re-verify at point of use.</div>
+  </div>
+
+  <!-- ============ 14 · HUMAN vs AI ============ -->
+  <div class="slide">
+    <div class="slide-meta"><span class="firm">Part 2 · Operating model</span><span class="slide-num">13 / 13 · Human vs. AI</span></div>
+    <h1 class="headline">AI accelerates the work; a human owns the relationship.</h1>
+    <div class="subhead">The stack buys leverage, not autonomy. Work starts hybrid and automates further as the library of good examples grows.</div>
+    <div class="rule"></div>
+    <div class="signals" style="margin-bottom:18px;">
+      <div class="signal"><div class="st">AI cannot replace the relationship</div><div class="sd">Every personalized touch, the emails and notes that go out and every call, is written or edited and sent by a human.</div></div>
+      <div class="signal"><div class="st">AI accelerates the team</div><div class="sd">Research, enrichment, drafting, scoring, scheduling, transcription, and pipeline hygiene: the volume work that frees the searcher for owners.</div></div>
+      <div class="signal"><div class="st">AI is only as good as its controls</div><div class="sd">Output reflects the goals and examples we set, so it needs iteration and feedback before it earns more autonomy.</div></div>
+    </div>
+    <table class="summary" style="font-size:12.5px;">
+      <thead><tr><th>Funnel stage</th><th>Human owns</th><th>AI accelerates</th><th>Mode</th></tr></thead>
+      <tbody>
+        <tr><td class="cat">Sourcing &amp; research</td><td>Approves the universe and the judgment calls</td><td>Discovers, enriches, scores, compiles dossiers</td><td><span class="pill buy">AI-led</span></td></tr>
+        <tr><td class="cat">Outreach: email, notes, cards</td><td>Writes or edits and approves every message</td><td>Drafts a first pass from the owner's dossier</td><td><span class="pill" style="color:var(--red);background:var(--tint);">Human-led</span></td></tr>
+        <tr><td class="cat">The conversation: calls, meetings</td><td>Every call and meeting, start to finish</td><td>Transcribes and summarizes after, pulls next steps</td><td><span class="pill" style="color:var(--red);background:var(--tint);">Human-only</span></td></tr>
+        <tr><td class="cat">Pipeline &amp; follow-up</td><td>Sets priorities and the next move</td><td>Maintains the CRM, schedules, surfaces reminders</td><td><span class="pill buy">AI-led</span></td></tr>
+      </tbody>
+    </table>
+    <div class="footer"><span class="src">Principle:</span> The high-stakes touches stay human at every stage. What changes over time is how much the searcher has to check around them.</div>
+  </div>
+
+</body>
+</html>

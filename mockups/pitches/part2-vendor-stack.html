@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Part 2 · Vendor Stack — AI-Native Sourcing Tools (2026)</title>
+<title>Part 2 · Vendor Stack · AI-Native Sourcing Tools (2026)</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
   :root {
@@ -79,6 +79,11 @@
   .rec-lead .label { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--green); font-weight: 700; margin-bottom: 5px; }
   .rec-lead strong { color: var(--ink); font-weight: 600; }
   .rec-lead .why { color: var(--slate); }
+  .rec-lead ul.pts { list-style: none; margin: 10px 0 0; padding: 0; }
+  .rec-lead ul.pts li { position: relative; padding-left: 16px; font-size: 12.5px; line-height: 1.5; margin-bottom: 6px; color: var(--ink); }
+  .rec-lead ul.pts li:last-child { margin-bottom: 0; }
+  .rec-lead ul.pts li:before { content: ""; position: absolute; left: 0; top: 7px; width: 5px; height: 5px; background: var(--green); border-radius: 50%; }
+  .rec-lead ul.pts strong { color: var(--navy); font-weight: 600; }
 
   .vendors { width: 100%; border-collapse: collapse; font-size: 12.5px; margin-top: 14px; }
   .vendors thead th { padding: 8px 12px 8px 0; text-align: left; font-size: 9px; letter-spacing: 0.1em; color: var(--slate); text-transform: uppercase; font-weight: 600; border-bottom: 1px solid var(--rule); }
@@ -145,57 +150,53 @@
   </div>
 
   <h1>The AI-native sourcing stack</h1>
-  <p class="lede">The 2026 tooling for a lean, AI-fluent searcher acquiring a boutique executive-search firm. Four categories — market research, sourcing, CRM, outbound — selected against three principles.</p>
+  <p class="lede">The 2026 tooling for a lean, AI-fluent searcher acquiring a boutique executive-search firm. Four categories (market research, sourcing, CRM, and outbound), selected against three principles.</p>
 
   <!-- ============ PRINCIPLES ============ -->
   <h2><span class="n">01</span>Guiding principles</h2>
   <div class="rule"></div>
   <ul class="principles">
-    <li><strong>One agent runs everything.</strong> Every tool is chosen so its data and operations feed a single AI agent that aggregates, processes, and acts on them. The priority is a tool exposing an MCP server or open API the agent can call directly.</li>
-    <li><strong>Differentiated data.</strong> We pay only for sources that give a differentiated, alpha-generating view. Commodity data that every buyer already has is used at its free tier, or skipped.</li>
-    <li><strong>Fit to the search.</strong> Data sources are matched to this specific search — executive search, owner-operated firms, demand-driven screening — rather than generic, off-the-shelf market subscriptions.</li>
+    <li><strong>One agent runs everything.</strong> Every tool is chosen so its data and operations feed a single coding agent (Claude Code, Codex, or Cursor) that aggregates, processes, and acts on them. The priority is a tool exposing an MCP server or open API the agent can call directly.</li>
+    <li><strong>Differentiated data.</strong> When we spend, we prioritize sources that give us a view other buyers don't already have. Commodity data is used at its free tier, or skipped.</li>
+    <li><strong>Fit to the search.</strong> Sources are matched to this specific search (executive search, owner-operated firms, demand-driven screening) rather than generic market subscriptions.</li>
   </ul>
 
   <!-- ============ EXEC SUMMARY ============ -->
   <h2><span class="n">02</span>Executive summary</h2>
   <div class="rule"></div>
-  <p class="takeaway">Four AI-native layers — each free or cheap, each feeding one agent — cover the full funnel from research to logged call for <strong>~$575–950/mo all-in</strong>, against <strong>$15,000–120,000+/yr per category</strong> for the institutional equivalent.</p>
+  <p class="takeaway">Four layers, each free or cheap, each feeding one agent. Together they cover the funnel from research to logged call for <strong>~$430–800/mo all-in</strong>.</p>
   <table class="summary">
     <thead><tr><th>Category</th><th>Recommended pick</th><th>Approach</th><th class="cost">~ / mo</th></tr></thead>
     <tbody>
       <tr>
         <td class="cat">Market Research</td>
-        <td><span class="pick">BLS / Census / FRED + Revelio + IBISWorld (free)</span><div class="verdict">demand-fit score per firm: hiring × industry × geography</div></td>
+        <td><span class="pick">BLS / Census / FRED + Revelio + IBISWorld (free)</span></td>
         <td>Free data, fed to the agent</td>
         <td class="cost">$0</td>
       </tr>
       <tr>
         <td class="cat">Company Sourcing</td>
-        <td><span class="pick">Clay (core) + Apollo (own-key); Grata optional</span><div class="verdict">discovery is free; Apollo buys verified emails + deliverability</div></td>
+        <td><span class="pick">Clay (core) + Apollo (own-key); Grata optional</span></td>
         <td>Build-led, discovery free</td>
         <td class="cost">$264–574</td>
       </tr>
       <tr>
         <td class="cat">CRM + capture</td>
-        <td><span class="pick">Attio + Granola (Meet) + OpenPhone (phone)</span><div class="verdict">agent maintains the pipeline; calls auto-transcribed into the record</div></td>
+        <td><span class="pick">Attio + Granola (Meet) + OpenPhone (phone)</span></td>
         <td>Buy cheap, AI-native</td>
         <td class="cost">$37–96</td>
       </tr>
       <tr>
         <td class="cat">Outbound</td>
-        <td><span class="pick">Smartlead + HeyReach + Handwrytten</span><div class="verdict">rent the sending rails; the agent and Clay write the messages</div></td>
-        <td>Rent sending, build personalization</td>
-        <td class="cost">~$272</td>
+        <td><span class="pick">Superhuman + Handwrytten</span></td>
+        <td>Two tools, send as a person</td>
+        <td class="cost">~$132</td>
       </tr>
     </tbody>
     <tfoot>
-      <tr><td colspan="3">All-in recurring <span style="font-weight:400;color:var(--slate)">(excludes optional Grata rental)</span></td><td class="cost">~$575–950</td></tr>
+      <tr><td colspan="3">All-in recurring</td><td class="cost">~$430–800</td></tr>
     </tfoot>
   </table>
-  <div class="not-used">
-    <span class="nu-label">Considered, not used</span>
-    <strong>PitchBook / Statista</strong> — market-data subscriptions, not the demand signals we need · <strong>LinkedIn Talent Insights</strong> (~$6–20k/yr) — priced for recruiters, no API · <strong>ZoomInfo</strong> ($15–40k/yr) — enterprise contact database, redundant with free discovery · <strong>Kaspr</strong> — EU database, weak US data, CNIL fine · <strong>Affinity / 4Degrees</strong> — fund-grade CRM pricing · <strong>Instantly</strong> — high-volume email, overkill at ~190 touches/mo.
-  </div>
 
   <!-- ============ CATEGORY PROFILES ============ -->
   <h2><span class="n">03</span>Category profiles</h2>
@@ -207,8 +208,13 @@
   </div>
   <div class="rec-lead">
     <div class="label">Recommendation</div>
-    <strong>The free stack: BLS / Census / FRED for demand signals, Revelio's free RPLS for workforce data, and IBISWorld for underlying-industry growth.</strong>
-    <span class="why">All free and API-accessible, so the agent computes a demand-fit score per firm — its functions × industries × metros against rising or falling demand — at $0. The paid feeds (Revelio full $85,000/yr, LinkedIn Talent Insights ~$6,000–20,000/yr) are priced for institutions and skipped.</span>
+    <strong>Free government data. No paid feeds.</strong>
+    <ul class="pts">
+      <li><strong>BLS, Census, FRED:</strong> hiring and industry-growth signals through public APIs.</li>
+      <li><strong>Revelio</strong>'s free tier covers workforce data.</li>
+      <li><strong>IBISWorld</strong> is free because Searchfunder gives its members unlimited access, including the Executive Search industry report.</li>
+      <li>The agent scores demand under each firm at $0. Paid feeds ($6k to $85k a year) are built for institutions, so we skip them.</li>
+    </ul>
   </div>
   <table class="vendors">
     <thead><tr><th>Vendor</th><th>What it measures</th><th>2026 price</th><th class="c">Agent</th><th class="v">Verdict</th></tr></thead>
@@ -225,19 +231,23 @@
   </div>
   <div class="rec-lead">
     <div class="label">Recommendation</div>
-    <strong>Clay ($185–495/mo) is the core — orchestration, AI enrichment, and personalization, feeding the agent. Discovery is free: industry directories (AESC, Hunt Scanlon, BlueSteps) plus Google Maps and LinkedIn, scraped and structured by Claygent. The one paid contact tool is Apollo ($79/mo, own-key into Clay) for verified personal emails and email verification, cancelled once the list is enriched.</strong>
-    <span class="why">Executive-search firms are web-visible — websites, named partners, LinkedIn, directories — so the universe is self-sourceable for free; a permanent database seat ($10,000–100,000/yr) is not justified. Office phones and addresses come free from websites and Maps; only the verified personal email is worth paying for, mainly to protect email deliverability. <strong>What we get per firm:</strong> name, site, location, practice/industry mix, partner names, ~headcount, emails, AI-inferred owner and succession flags. <strong>What we don't get:</strong> audited financials or confirmed sale-intent — those come from inference and the call.</span>
+    <strong>Clay for the build ($185 to $495/mo). Apollo for emails ($79/mo).</strong>
+    <ul class="pts">
+      <li>Search firms are public: websites, named partners, LinkedIn, directories.</li>
+      <li><strong>Clay</strong> scrapes and structures it, and Claygent enriches each firm.</li>
+      <li><strong>Apollo</strong> buys verified emails to protect deliverability, then cancels once the list is enriched.</li>
+      <li>Per firm we get the site, partners, headcount, emails, and inferred succession flags. Financials and sale intent come from the call.</li>
+    </ul>
   </div>
   <table class="vendors">
     <thead><tr><th>Vendor</th><th>What it is</th><th>2026 price</th><th class="c">Agent</th><th class="v">Verdict</th></tr></thead>
     <tbody>
       <tr><td class="name"><a href="https://www.clay.com/pricing">Clay</a></td><td>Orchestration + AI enrichment + personalization; wraps providers (incl. Apollo via own-key). Owns no target database</td><td class="price">$185 / $495 per mo</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
-      <tr><td class="name"><a href="https://www.apollo.io/pricing">Apollo.io</a></td><td>Verified personal emails + verification via own-key into Clay; for deliverability, not discovery. API needs the Professional tier</td><td class="price">$79/mo (Professional)</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
+      <tr><td class="name"><a href="https://www.apollo.io/pricing">Apollo.io</a></td><td>Verified personal emails + verification via own-key into Clay; for deliverability, not discovery</td><td class="price">$79/mo (Professional)</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
       <tr><td class="name"><a href="https://grata.com/pricing">Grata</a></td><td>Discovery accelerator only. Revenue/headcount are estimates; contacts thin below ~10 people; built for mid-market, not micro</td><td class="price">~$10,000–100,000/yr</td><td class="mcp"><span class="partial">◐</span></td><td class="rec"><span class="pill thin">Optional</span></td></tr>
-      <tr><td class="name"><a href="https://www.uplead.com/apollo-vs-zoominfo/">ZoomInfo</a></td><td>Enterprise contact database; accurate but priced and built for large sales teams — Apollo via Clay covers our need for far less</td><td class="price">$15,000–40,000/yr</td><td class="mcp"><span class="partial">◐</span></td><td class="rec"><span class="pill skip">Not used</span></td></tr>
+      <tr><td class="name"><a href="https://www.uplead.com/apollo-vs-zoominfo/">ZoomInfo</a></td><td>Enterprise contact database. Accurate, but priced and built for large sales teams; Apollo via Clay covers our need for far less</td><td class="price">$15,000–40,000/yr</td><td class="mcp"><span class="partial">◐</span></td><td class="rec"><span class="pill skip">Not used</span></td></tr>
     </tbody>
   </table>
-  <p class="sec-sub" style="margin-top:10px; font-size:12px;">Bench: for one-click reveal on a few high-value partners, a free LinkedIn extension (Lusha's free tier, better US data than Kaspr). Manual, outside the agent pipeline.</p>
 
   <!-- ---- C. CRM ---- -->
   <div class="cat-head">
@@ -246,29 +256,38 @@
   <div class="rec-lead">
     <div class="label">Recommendation</div>
     <strong>Attio (free to $59/seat/mo).</strong>
-    <span class="why">It is AI-native and ships an MCP server with write access, so the agent reads and maintains the pipeline directly rather than the searcher updating records by hand. Affinity (~$2,000–2,700/seat/yr) has better automatic email capture but is priced for funds. HubSpot's free tier is the fallback if Attio is dropped.</span>
+    <ul class="pts">
+      <li>Ships an MCP server with write access, so the agent maintains the pipeline instead of the searcher updating records by hand.</li>
+      <li><strong>Affinity</strong> captures email better but is priced for funds ($2,000+/seat/yr).</li>
+      <li><strong>HubSpot</strong>'s free tier is the fallback if Attio is dropped.</li>
+    </ul>
   </div>
   <table class="vendors">
     <thead><tr><th>Vendor</th><th>What it is</th><th>2026 price</th><th class="c">Agent</th><th class="v">Verdict</th></tr></thead>
     <tbody>
       <tr><td class="name"><a href="https://docs.attio.com/mcp/overview">Attio</a></td><td>AI-native CRM; first-class MCP with write access, so an agent maintains the pipeline</td><td class="price">$0 – $59/seat/mo</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
-      <tr><td class="name"><a href="https://developer.affinity.co/pages/mcp/introduction">Affinity</a></td><td>Category leader; best automatic email capture; MCP read/write but gated to top tiers</td><td class="price">~$2,000–2,700/seat/yr</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill skip">Skip</span></td></tr>
+      <tr><td class="name"><a href="https://developer.affinity.co/pages/mcp/introduction">Affinity</a></td><td>Strong automatic email capture; MCP read/write, but gated to top tiers</td><td class="price">~$2,000–2,700/seat/yr</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill skip">Skip</span></td></tr>
       <tr><td class="name"><a href="https://www.hubspot.com/products/crm/starter">HubSpot</a></td><td>Generic CRM; free tier works, but AI and automation are paid</td><td class="price">$0 / $20 per mo</td><td class="mcp"><span class="partial">◐</span></td><td class="rec"><span class="pill thin">Fallback</span></td></tr>
     </tbody>
   </table>
 
-  <p class="takeaway" style="font-size:13px; margin:28px 0 2px;"><strong style="color:var(--navy);">Conversation capture</strong> — part of the system of record: every qualifying call and Google Meet transcribed straight into the repo for the agent.</p>
+  <p class="takeaway" style="font-size:13px; margin:28px 0 2px;"><strong style="color:var(--navy);">Conversation capture.</strong> Part of the system of record: every qualifying call and Google Meet transcribed straight into the repo for the agent.</p>
   <div class="rec-lead">
     <div class="label">Recommendation</div>
-    <strong>Granola Business ($14/mo) for Google Meet — bot-less, native Windows, transcripts pulled via its MCP server — paired with OpenPhone / Quo Business ($23/mo) for phone calls, which transcribes every call and pushes a webhook to the repo. ~$37/mo.</strong>
-    <span class="why">No single bot-less tool captures both Meet on Windows and cell calls, so the two legs split. Both feed one ingestion endpoint (n8n/Zapier) that drops the transcript into the record and triggers the agent to summarize, extract next steps, and update the pipeline. Routing owner calls through the OpenPhone softphone is more reliable than recording a cell call, and it doubles as the phone-outreach channel. Disclose recording at the top of every call (treat as all-party consent).</span>
+    <strong>Granola for Meet ($14/mo) and OpenPhone for calls ($23/mo). About $37/mo.</strong>
+    <ul class="pts">
+      <li><strong>Granola</strong> records Meet on Windows with no bot; <strong>OpenPhone</strong> transcribes every call and pushes a webhook.</li>
+      <li>No single bot-less tool captures both Meet on Windows and cell calls, so the two legs split.</li>
+      <li>Both feed one endpoint that drops the transcript into the record, then the agent summarizes, pulls next steps, and updates the pipeline.</li>
+      <li>Disclose recording at the top of every call, and treat it as all-party consent.</li>
+    </ul>
   </div>
   <table class="vendors">
     <thead><tr><th>Vendor</th><th>What it is</th><th>2026 price</th><th class="c">Agent</th><th class="v">Verdict</th></tr></thead>
     <tbody>
       <tr><td class="name"><a href="https://www.granola.ai/pricing">Granola</a></td><td>Google Meet via system audio, no bot; native Windows; MCP transcript access on Business tier</td><td class="price">$14/user/mo</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
       <tr><td class="name"><a href="https://www.openphone.com/product/api">OpenPhone / Quo</a></td><td>Softphone with native call transcription; call-transcript webhook pushes JSON to the repo; also the phone-outreach channel</td><td class="price">$23/user/mo</td><td class="mcp"><span class="partial">◐</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
-      <tr><td class="name"><a href="https://docs.fireflies.ai/getting-started/mcp-configuration">Fireflies</a></td><td>Meet + strongest webhook/MCP, but a recorder bot joins the call — less ideal for sensitive owner calls</td><td class="price">$10/user/mo</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill thin">Alternative</span></td></tr>
+      <tr><td class="name"><a href="https://docs.fireflies.ai/getting-started/mcp-configuration">Fireflies</a></td><td>Meet, with strong webhook and MCP support, but a recorder bot joins the call, so it is less suited to sensitive owner calls</td><td class="price">$10/user/mo</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill thin">Alternative</span></td></tr>
     </tbody>
   </table>
   <p class="sec-sub" style="margin-top:10px; font-size:12px;">Recording disclosure: US law ranges from one-party to all-party consent (CA, FL, WA, IL, PA, MA and others). Disclose and get a "yes" at the top of every owner call.</p>
@@ -279,67 +298,49 @@
   </div>
   <div class="rec-lead">
     <div class="label">Recommendation</div>
-    <strong>Rent the sending infrastructure and build the personalization: Smartlead ($94/mo) for email deliverability, HeyReach ($79/mo) for LinkedIn, Handwrytten (~$99/mo) for pen-and-ink mail; a Claude agent with Clay writes the per-owner message.</strong>
-    <span class="why">Deliverability is fragile and worth renting; personalization and orchestration are where the agent adds value. The ≥10% reply target only holds across channels, so LinkedIn and mail carry it, with email as reinforcement. Smartlead's 116-tool MCP and HeyReach's MCP let one agent run all of it.</span>
+    <strong>Two tools: Superhuman ($33/mo) for email, Handwrytten (~$99/mo) for cards.</strong>
+    <ul class="pts">
+      <li><strong>Superhuman</strong> sends from your real domain with read and link tracking, AI drafting, and follow-up reminders.</li>
+      <li><strong>Handwrytten</strong> sends a real pen-and-ink card, the channel a founder who ignores email will still open.</li>
+      <li>LinkedIn is sent by hand, and the phone runs on the OpenPhone line you already have. Neither needs a new tool.</li>
+      <li>At ten sends a day you aren't a volume sender, so cold-email relays don't fit. Measure replies, not opens: Apple's privacy change makes open-rates meaningless, so the ≥10% KPI is a reply number.</li>
+    </ul>
   </div>
   <table class="vendors">
-    <thead><tr><th>Vendor</th><th>What it is</th><th>2026 price</th><th class="c">Agent</th><th class="v">Verdict</th></tr></thead>
+    <thead><tr><th>Vendor</th><th>Channel · what it is</th><th>2026 price</th><th class="c">Agent</th><th class="v">Verdict</th></tr></thead>
     <tbody>
-      <tr><td class="name"><a href="https://www.smartlead.ai/blog/build-ai-outbound-agent-smartlead-mcp">Smartlead</a></td><td>Email sending: warmup, inbox rotation, deliverability; 116-tool MCP server</td><td class="price">$94/mo (Pro)</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
-      <tr><td class="name"><a href="https://www.heyreach.io/pricing">HeyReach</a></td><td>LinkedIn automation with MCP — the channel where older firm owners actually reply</td><td class="price">$79/mo</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
-      <tr><td class="name"><a href="https://www.handwrytten.com/pricing/">Handwrytten</a></td><td>Real pen-and-ink mail via API — the highest-signal channel in searcher accounts</td><td class="price">~$99/mo + per card</td><td class="mcp"><span class="partial">◐</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
+      <tr><td class="name"><a href="https://superhuman.com/plans">Superhuman</a></td><td>Email · AI 1:1 client; read + link tracking, follow-up reminders, send-later; sends from your real inbox</td><td class="price">~$33/mo</td><td class="mcp"><span class="no">○</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
+      <tr><td class="name"><a href="https://www.handwrytten.com/pricing/">Handwrytten</a></td><td>Mail · real pen-and-ink cards via API; the channel founders are most likely to open</td><td class="price">~$99/mo + per card</td><td class="mcp"><span class="partial">◐</span></td><td class="rec"><span class="pill buy">Recommended</span></td></tr>
+      <tr><td class="name"><a href="https://knowledge.apollo.io/hc/en-us/articles/4409127806093-Link-Your-Mailbox-to-Apollo">Apollo sequences</a></td><td>Email · automated follow-up cadence from your own mailbox; already owned for contact data, so free to switch on</td><td class="price">$0 marginal</td><td class="mcp"><span class="partial">◐</span></td><td class="rec"><span class="pill thin">Optional</span></td></tr>
+      <tr><td class="name"><a href="https://www.devcommx.com/blogs/instantly-vs-smartlead-vs-lemlist-2026">Smartlead / Instantly</a></td><td>Email · volume cold-send infrastructure (warmup, inbox rotation, burner domains); the wrong fit at ~190/mo</td><td class="price">$94/mo</td><td class="mcp"><span class="yes">●</span></td><td class="rec"><span class="pill skip">Not used</span></td></tr>
     </tbody>
   </table>
+  <p class="sec-sub" style="margin-top:10px; font-size:12px;">No-cost channels: <strong>LinkedIn</strong> is sent by hand off the target list (the personal account is irreplaceable, so no automation that risks a ban; <a href="https://blog.gojiberry.ai/blog/expandi-vs-waalaxy">Expandi</a> ~$99/mo only if you ever automate). <strong>Phone</strong> runs on the OpenPhone line already in the CRM layer. <strong><a href="https://www.lob.com/pricing">Lob</a></strong>'s free developer tier is on hand for a formal typed letter when a card won't do.</p>
 
-  <!-- ============ MCP SPINE ============ -->
-  <h2><span class="n">04</span>The architecture — one agent, MCP spine</h2>
-  <div class="spine">
-    <div class="hub"><span class="core">Claude agent<span class="sub">orchestration via MCP and API</span></span></div>
-    <div class="chips">
-      <div class="chip"><div class="ct">BLS / Revelio</div><div class="cm api">API ◐</div><div class="cd">demand signals → fit score</div></div>
-      <div class="chip"><div class="ct">Attio CRM</div><div class="cm mcp">MCP ● read + write</div><div class="cd">agent maintains pipeline</div></div>
-      <div class="chip"><div class="ct">Smartlead</div><div class="cm mcp">MCP ● 116 tools</div><div class="cd">email send + warmup</div></div>
-      <div class="chip"><div class="ct">HeyReach</div><div class="cm mcp">MCP ●</div><div class="cd">LinkedIn outreach</div></div>
-      <div class="chip"><div class="ct">Apollo (own-key)</div><div class="cm api">API ◐</div><div class="cd">verified emails + phones</div></div>
-      <div class="chip"><div class="ct">Clay</div><div class="cm api">enrich + draft ◐</div><div class="cd">per-owner personalization</div></div>
-      <div class="chip"><div class="ct">Granola / OpenPhone</div><div class="cm mcp">MCP / webhook ●</div><div class="cd">call + meeting transcripts</div></div>
-    </div>
-  </div>
-
-  <!-- ============ RECOMMENDED STACK ============ -->
-  <h2><span class="n">05</span>The recommended lean stack</h2>
-  <div class="rule"></div>
-  <table class="stack">
-    <thead><tr><th>Category</th><th>Tools</th><th class="cost">Recurring / mo</th></tr></thead>
-    <tbody>
-      <tr><td class="cat">Market Research</td><td>BLS / Census / FRED + Indeed Hiring Lab + Revelio RPLS + IBISWorld (all free)</td><td class="cost">$0</td></tr>
-      <tr><td class="cat">Company Sourcing</td><td>Clay $185–495 + Apollo $79 (own-key) <span style="color:var(--slate)">— discovery free via directories + Claygent; Grata optional</span></td><td class="cost">$264–574</td></tr>
-      <tr><td class="cat">CRM + capture</td><td>Attio (free–$59) + Granola Business $14 + OpenPhone/Quo $23 <span style="color:var(--slate)">(OpenPhone also the phone channel)</span></td><td class="cost">$37–96</td></tr>
-      <tr><td class="cat">Outbound</td><td>Smartlead $94 + HeyReach $79 + Handwrytten ~$99 <span style="color:var(--slate)">(Clay shared)</span></td><td class="cost">~$272</td></tr>
-    </tbody>
-    <tfoot>
-      <tr><td colspan="2">All-in recurring &nbsp;<span style="font-weight:400;color:var(--slate)">excluding the temporary sourcing-database rental</span></td><td class="cost">~$575–950</td></tr>
-    </tfoot>
-  </table>
-  <p class="compare-line">The institutional equivalent runs <strong>$15,000–120,000+ per year, per category</strong> (Revelio $85,000/yr · LinkedIn Talent Insights ~$6,000–20,000/yr · Affinity ~$2,000/seat · enterprise sourcing databases $10,000–100,000/yr). The lean AI-native stack does the same work for roughly 1–2% of that cost.</p>
-
-  <!-- ============ 2026 SIGNALS ============ -->
-  <h2><span class="n">06</span>Three 2026 signals</h2>
+  <!-- ============ HUMAN vs AI ============ -->
+  <h2><span class="n">04</span>Human vs. AI: who does what</h2>
+  <p class="sec-sub">The stack buys leverage, not autonomy. Three principles govern where the agent acts and where a person must, and the balance shifts over time: work starts hybrid and automates further as the library of good examples grows.</p>
   <div class="signals">
-    <div class="signal"><div class="st">Grata and SourceScrub are now one company</div><div class="sd">Datasite acquired both and is merging them (Aug 2025). The hedge of buying both for coverage is gone and pricing leverage drops, which strengthens the build-it-yourself case. <a href="https://www.datasite.com/en/company/news/datasite-to-merge-sourcescrub-and-grata-expanding-private-market-intelligence-solutions">Source</a></div></div>
-    <div class="signal"><div class="st">IBISWorld is $0 through Searchfunder</div><div class="sd">Searchfunder negotiated free, unlimited IBISWorld access for its members; the Executive Search 5670 report is included. <span style="color:var(--amber);font-weight:600">Announced 2020, expanded Jan 2023 — re-confirm it is still live.</span> <a href="https://searchfunder.com/post/now-every-searchfunder-member-can-access-ibisworld">Source</a></div></div>
-    <div class="signal"><div class="st">Clay re-priced down in March 2026</div><div class="sd">Data costs cut 50–90%, collapsed to $185 and $495 tiers — the AI-personalization layer got materially cheaper. <a href="https://www.cleanlist.ai/blog/2026-03-12-clay-pricing-changes-2026">Source</a></div></div>
+    <div class="signal"><div class="st">1 · AI cannot replace the relationship</div><div class="sd">Convincing a founder to sell is a high-stakes, trust-dependent sale. Every personalized touch, the emails and notes that go out and every call, is written or edited and sent by a human.</div></div>
+    <div class="signal"><div class="st">2 · AI accelerates the team</div><div class="sd">Its job is to focus execution: research, enrichment, drafting, scoring, scheduling, transcription, and pipeline hygiene. That is the volume work that frees the searcher to spend their hours on owners.</div></div>
+    <div class="signal"><div class="st">3 · AI is only as good as its controls</div><div class="sd">Output reflects the goals, constraints, and examples we set, so it needs iteration and feedback. Work starts hybrid. As we build a library of what "good" looks like, the agent earns more autonomy on the lower-stakes tasks.</div></div>
   </div>
 
-  <!-- ============ FLAG ============ -->
-  <h2><span class="n">07</span>One caution that feeds the next deliverable</h2>
-  <div class="flag">
-    <div class="label">Reply-rate reality</div>
-    <strong>The ≥10% reply KPI holds only as a multi-channel number.</strong> Cold email alone runs ~3.4% across platforms; a searcher who closed a deal reported 2–4% on email. Reaching 10% means leading with LinkedIn (30%+ connection acceptance) and pen-and-ink mail (the highest-signal channel), with email as reinforcement. This sets up the <strong>human-vs-automation map</strong>: the agent runs the top of the funnel and all logistics, while a human owns every reply and call. Convincing a 60-year-old founder to sell is a trust-dependent sale, and the ETA community is wary of over-automating it.
-  </div>
+  <p class="takeaway" style="margin-top:30px;"><strong style="color:var(--navy);">The funnel, split.</strong> Human-led where it builds trust or takes judgment, AI-led where it is volume or logistics.</p>
+  <table class="summary">
+    <thead><tr><th>Funnel stage</th><th>Human owns</th><th>AI accelerates</th><th>Mode</th></tr></thead>
+    <tbody>
+      <tr><td class="cat">Market &amp; target definition</td><td>Picks the vertical and the screening criteria</td><td>Computes the per-firm demand-fit score from free data</td><td><span class="pill thin">Hybrid</span></td></tr>
+      <tr><td class="cat">Sourcing &amp; list-building</td><td>Approves the final target universe</td><td>Discovers, enriches, dedupes, and scores candidates</td><td><span class="pill buy">AI-led</span></td></tr>
+      <tr><td class="cat">Per-firm research</td><td>Reads the dossier and makes the judgment calls</td><td>Compiles the dossier; infers owner and succession flags</td><td><span class="pill buy">AI-led</span></td></tr>
+      <tr><td class="cat">Outreach: email, notes, cards</td><td>Writes or edits and approves every message</td><td>Drafts a first pass from the owner's dossier</td><td><span class="pill" style="color:var(--red);background:var(--tint);">Human-led</span></td></tr>
+      <tr><td class="cat">The conversation: calls and meetings</td><td>Every call and meeting, start to finish</td><td>Transcribes and summarizes after, and pulls next steps</td><td><span class="pill" style="color:var(--red);background:var(--tint);">Human-only</span></td></tr>
+      <tr><td class="cat">Pipeline &amp; follow-up</td><td>Sets priorities and the next move</td><td>Maintains the CRM, schedules, surfaces reminders</td><td><span class="pill buy">AI-led</span></td></tr>
+    </tbody>
+  </table>
 
   <div class="footer">
-    <strong>Pricing note:</strong> Where pricing is sales-gated (Grata, Inven, 4Degrees, Affinity, LinkedIn Talent Insights, Lightcast paid), figures are third-party estimates labeled as such — confirm with live quotes. AI-vendor pricing changes monthly; re-verify at point of use. <strong>Sources:</strong> per-vendor links inline. Research compiled via parallel category agents over Searchfunder, vendor documentation, and ETA community sources. Part 2 deliverable 2 of 3 (project plan → vendor stack → human-vs-automation map). Lunchline Partners case study · Aviv Sheriff · 2026-05-31.
+    <strong>Sources:</strong> per-vendor links inline. Pricing is 2026; sales-gated figures are third-party estimates, so re-verify at point of use, as AI-vendor pricing changes monthly. Lunchline Partners case study · Aviv Sheriff · 2026-05-31.
   </div>
 
 </div>

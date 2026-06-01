@@ -9,6 +9,9 @@ Source research behind `mockups/pitches/part2-vendor-stack.html`. Compiled 2026-
 - `outbound.md` — Outbound category
 - `followup-grata-apollo-coverage.md` — Grata coverage floor at micro-scale + Apollo-inside-Clay cost mechanics
 - `followup-linkedin-contact-tools.md` — Kaspr vs Lusha vs Wiza vs Apollo for the LinkedIn-native contact layer
+- `outbound-pressuretest.md` — **(2026-05-31) revises the Outbound pick.** Smartlead→Apollo/Superhuman (real-domain paradigm), LinkedIn rework, adds phone, open-rate-tracking caveat. HTML rewrite deferred.
+- `sourcing-channels-and-brokers.md` — **project-plan input, not vendor-stack.** Channel landscape (64% proprietary / 37% broker; 3,000→159→4→1 funnel) + broker/marketplace/referral channels for the sourcing workstream.
+- `exec-search-universe-size.md` — **funnel sanity check.** US exec-search universe ~2,500–3,500 employer firms → retained acquirable boutiques only ~500–1,000 nationally (~hundreds NE). ~3,000 unique leads is NOT realistic → project-plan funnel reframed to ~750 firms at a ~20% blended reply target.
 
 ## Final recommendation (as shipped in the deck)
 
@@ -20,6 +23,8 @@ Guiding principles: (1) every tool feeds one AI agent via MCP/API; (2) pay only 
 | Company Sourcing | Clay (core) + Apollo $79 (own-key into Clay); discovery free via directories + Claygent; Grata optional | $264–574 |
 | CRM | Attio (AI-native, MCP read+write) | $0–59 |
 | Outbound | Smartlead + HeyReach + Handwrytten; agent + Clay write messages | ~$272 |
+
+> **Outbound revised (2026-05-31, shipped to HTML) — two tools only.** Smartlead dropped (wrong paradigm at ~190/mo). New Outbound = **Superhuman ($33, email + tracking + AI) + Handwrytten ($99, real pen-and-ink cards)**. LinkedIn worked by hand; phone on the existing OpenPhone line; Apollo sequences a $0 optional. ~$132/mo; all-in stack now ~$430–800. Open-rate tracking is broken in 2026 (Apple MPP) — judge on replies/clicks. Detail in `outbound-pressuretest.md`.
 
 All-in ~$500–900/mo vs. $15k–120k+/yr per category for the institutional stack.
 
