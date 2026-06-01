@@ -32,6 +32,7 @@ If you only want the finished artifacts, everything is in **[`deliverables/`](de
 
 The pitch wasn't a single guess — it came out of an all-sector screen, a multi-candidate tournament, and a deep per-company valuation process. The reasoning is documented:
 
+- **🔎 [The candidate board](https://raw.githack.com/Bulugulu/lunchline/master/data/screening/operating_catalog_2026-05-30.html)** — the interactive, sortable screen (with enrichment + search-fund signals) that **ARTW was selected from**; nothing filtered out. *(Rendered view via raw.githack; [source HTML](data/screening/operating_catalog_2026-05-30.html).)*
 - **[docs/methodology.md](docs/methodology.md)** — *The Deep Flow*: the SOTP + driver model + DCF (on cash taxes) + Porter's + sensitivity + value-creation-plan process every candidate went through.
 - **[docs/prompt-log.md](docs/prompt-log.md)** — the AI workflow in seven phases (also the appendix PDF above).
 - **[docs/case-overview.md](docs/case-overview.md)** — the original brief and deliverables.
