@@ -4,4 +4,10 @@ requests>=2.31
 beautifulsoup4>=4.12
 numpy>=1.26
 matplotlib>=3.8
-openpyxl>=3.0  # builds the .xlsx returns models (scripts/build_*_xlsx.py)
+openpyxl>=3.0  # builds the .xlsx returns models (scripts/rebuild_artw_v3.py)
+
+# Deck / appendix rendering (scripts/build_deck_artifacts.py, build_promptlog_pdf.py)
+playwright>=1.40   # headless Chromium; run: python -m playwright install chromium
+python-pptx>=0.6   # HTML-slide screenshots -> .pptx
+Pillow>=10.0       # image assembly for the PDF export
+markdown>=3.4      # prompt-log markdown -> styled HTML -> PDF
